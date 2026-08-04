@@ -1,0 +1,18 @@
+{
+  "cycle": "WF-162",
+  "task": "Freelancer Profile Optimizer and Lead-Gap Research",
+  "persona": "Freelance developer running an independent practice through Upwork and Fiverr",
+  "models_evaluated": [
+    "A",
+    "B",
+    "C"
+  ],
+  "overall_ratings": {
+    "A": 5,
+    "B": 2,
+    "C": 4
+  },
+  "ranking_best_to_worst": "A > C > B",
+  "best_overall": "A",
+  "why_top_model_is_best_and_what_separates_the_others": "See final-comparison.md in this round folder for the full evidence-based paragraph per model."
+}

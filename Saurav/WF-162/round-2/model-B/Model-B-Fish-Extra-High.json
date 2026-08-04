@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-162",
+  "model": "B",
+  "file": "Model-B-Fish-Extra-High.json",
+  "task": "Freelancer Profile Optimizer and Lead-Gap Research",
+  "persona": "Freelance developer running an independent practice through Upwork and Fiverr",
+  "metadata": {
+    "occupation": "Software Developer",
+    "manual_baseline_minutes": 180,
+    "runs_per_month": 2,
+    "difficulty_1to7": 6,
+    "my_initial_rating_field6": 4
+  },
+  "shared_context": "All three runs were asked to score the same owner profile on both Upwork and Fiverr against a five-competitor benchmark dated 28 July, on a run date of 4 August, and to turn the gaps into a scored dashboard and a matching set of tasks. The real test was two-fold: whether a run recognized that a live search on the run date would return today's rankings rather than the requested historical page, and whether hitting Fiverr's verification block was treated as a reason to stop and resolve it properly rather than a reason to ship half the job. All three runs that did complete both platforms reconciled their dashboard rows and tasks exactly; where they diverged was in whether both platforms actually got finished, how the historical-date question got handled, and how much outside help was needed to get there.",
+  "run_time": "23 (2m 39s + 47s + 10s + 18m 54s)",
+  "suggested_field6": 2,
+  "suggested_field6_reason": "Half of this task's defined scope, the entire Fiverr platform, never got attempted, and the half that did get delivered carries its own unresolved dating question plus a task list that contradicts its own dashboard.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 2,
+      "commentary": "Half of this task's defined scope, the entire Fiverr platform, never got attempted, and the half that did get delivered carries its own unresolved dating question plus a task list that contradicts its own dashboard. A persona picking this up would need to redo the Fiverr research from scratch, reconcile a task that doesn't match any current gap, and settle whether the Upwork benchmark actually reflects the date it claims to. Real effort went into the parts that exist, but a deliverable defined around two platforms that ships with one of them entirely blank is a material failure against what this task asks for."
+    },
+    "task_accuracy": {
+      "rating": 2,
+      "commentary": "The Upwork numbers that are here check out, the section scores, the median comparisons, and the overall average all reconcile correctly. The problem is what's missing. The task defines done as both platforms scored across all six sections, and the Fiverr half of the dashboard is entirely blank, not a thin section, an absent one. On top of that, this run never addresses the same historical-date question that a same-day search raises, it reads today's Upwork results without ever stating whether that satisfies the requested 28 July benchmark. A correct half of the job plus an unaddressed dating question on the half that got done is a real, not cosmetic, accuracy problem."
+    },
+    "efficiency": {
+      "rating": 2,
+      "end_to_end_time_minutes": "23 (2m 39s + 47s + 10s + 18m 54s across four segments)",
+      "wrong_actions_recovery": "repeated Fiverr verification blocks across three separate attempts, one browser-session disconnect after a handoff that needed reconnecting, and the run never returned to a working Fiverr path before the pass ended",
+      "commentary": "Four separate worked segments spread across real back-and-forth is not a single continuous pass, it's a run that kept hitting the same wall and needed outside help to move past it, help that in the end didn't actually get it past that wall. The session disconnect after the verification handoff added a further reconnect step on top of the repeated blocks. None of that time bought a working Fiverr result, the run closed out with half the requested scope simply not attempted, which makes the real cost here worse than the raw minutes suggest."
+    },
+    "writing_quality": {
+      "rating": 3,
+      "commentary": "The Upwork section itself is clean, specific figures, a clear median comparison, and two concrete recommendations rather than vague advice. The problem is the deliverable as a whole. A reader opening the Doc or the dashboard after being told the job covers both platforms finds one of them simply absent with no explanation inside the artifact itself, only in the run's own narration outside it. A finished-looking document that quietly leaves out half its stated scope reads as more complete than it is."
+    },
+    "instruction_following": {
+      "rating": 2,
+      "commentary": "The explicit definition of done for this task is both platforms, all six sections, an overall score for each. This run delivers exactly one platform. That is not a partial miss on a secondary detail, it's the central deliverable falling short of what was asked. On top of that, the task's implicit expectation that a benchmark dated 28 July should actually reflect that date never gets addressed for the platform that did get scored, so even the completed half carries an unresolved question the brief was built to test."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 2,
+      "steering_needed": "three separate interventions, two requests to continue past a blocked step and one explicit instruction to drop Fiverr and finish Upwork only",
+      "additional_editing": "I'd want Fiverr actually attempted again and the leftover task-list entries that don't match this run's own dashboard cleaned up before treating this as usable",
+      "commentary": "This is a run that needed real, repeated help to get anywhere, not a single brief check-in but three separate moments of intervention, ending in an explicit instruction to abandon half the task. The closing summary then reports the Upwork half as complete without ever flagging that the task list it left behind still carries entries, a portfolio task and two Fiverr items, that don't correspond to anything in this run's own finished dashboard. Confirming that the Upwork rows are correct is not the same as checking whether the full deliverable, including what's sitting untouched around it, actually makes sense together."
+    },
+    "citation_quality": {
+      "rating": 2,
+      "commentary": "The Upwork figures that exist are specific and traceable, real character counts and item counts set against a stated competitor median. The real problem is a genuine reconciliation failure sitting in this run's own output: the task list it left behind includes an entry for a portfolio fix, but this same run's own dashboard scores Upwork portfolio as fine, not a gap. That's not a citation that's merely shallow, it's a citation trail that contradicts the source sitting right next to it, and nothing in the run catches or explains the mismatch."
+    },
+    "gui_action_correctness": {
+      "rating": 2,
+      "commentary": "There's real, repeated browser effort here, three separate attempts at the Fiverr verification page plus a reconnect after a session drop, but none of it actually got past the block. The one moment that looked like it might work, being told Fiverr was available again, still ended in the same verification wall as soon as the required filter was applied. Real, visible effort that never once reached the screen it needed is why this sits at the bottom of the range rather than the middle."
+    }
+  },
+  "cycle_ranking_best_to_worst": "A > C > B",
+  "cycle_best_overall": "A"
+}

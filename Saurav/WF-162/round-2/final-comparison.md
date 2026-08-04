@@ -14,39 +14,37 @@ are kept in `archive/` for reference.
 4. Times PER MONTH I run this workflow: 2
 5. Workflow difficulty 1-7: 6
 6. Initial Codex test rating 1-7: 4
-7. Notes on Codex's performance:
-Execution time: 48m 4s
-Session ID: 019f6f0a-aacf-7d81-96db-4fb6942e93cb
-Model: 5.5 Orange Extra High
-
-The judgment logic held up under a full check against the doc and sheet. Both review gaps tied for the largest possible gap on paper, but still landed at the very bottom of the priority ranking, correctly matching the rule that a review gap never outranks a section the owner can actually change. The rate comparison was handled correctly too, Upwork's rate sits somewhat above the competitor median but comfortably inside the acceptable band, and was scored as fine rather than flagged as a gap. The overall health scores check out by hand against their underlying section scores on both platforms, and every priority rank in the doc matches its counterpart in the sheet exactly. Anonymization held throughout, competitors are referred to only by their anonymized slot, with no names, links, or photos anywhere. The action plan took "write the headline you would actually drop in" seriously, the recommended headline, portfolio pieces, and full Upwork overview rewrite are genuinely specific rather than generic filler, and every flagged gap ended up with a matching task, satisfying the completion criteria in full.
-
-This wasn't a fully autonomous pass. The model correctly refused to bypass the platform block it hit itself, but I had to step in and manually clear it myself before the run could continue, so the pass depended on my intervention partway through. Execution was also noticeably fragile on the mechanical side, most of the created tasks needed a repair pass after a missed date click or a notes field that didn't save on the first try, and while every one eventually got fixed, that's real friction on a step that should have been simple. The tie-break's middle tier, which section wins when competitors visibly agree on a pattern, is unverifiable from the output, a multi-way tie among several Fiverr sections resolved to exactly the fixed fallback order, which is consistent with the model correctly finding no pattern to break the tie with, but equally consistent with it skipping that step and jumping straight to the fallback. Idempotency, one of the harder requirements in the prompt, was never actually tested since this was only a single run. And a few underspecified gaps got quietly resolved by invention, like substituting a stand-in for the missing headline field on one platform and scoring the rate section by a different method than the one used everywhere else, reasonable choices, but not ones the prompt actually specified.
+7. Notes on Codex's performance: The scoring logic and reconciliation are reliably correct whenever a run actually completes both platforms. The real test this round was the same-day-versus-historical-date trap on the competitor benchmark, and whether a platform block on one marketplace was treated as a reason to stop and ask rather than a reason to quietly ship half the job.
 
 ## Readiness
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
-| A | MISSING | MISSING | MISSING | NO |
-| B | MISSING | MISSING | MISSING | NO |
-| C | MISSING | MISSING | MISSING | NO |
+| A | PRESENT | PRESENT | PRESENT | YES |
+| B | PRESENT | PRESENT | PRESENT | YES |
+| C | PRESENT | PRESENT | PRESENT | YES |
 
 ## Final comparison
 
 ### Rank all responses from best to worst
-[Strict order, no ties - pending]
+A > C > B
 
 ### Which model is best overall?
-[Pending]
+A
 
 ### Why is the top model best, and what separates the other models?
-[One evidence-based paragraph per model, in ranked order - pending]
+
+A delivers a complete, fully reconciled result for both platforms in a single unattended pass: fourteen dashboard rows, seven tasks that match the seven gaps exactly, and due dates that run in rank order two days apart with nothing left to chance. It also caught the real trap in this task, that a live search on the run date would return today's rankings rather than the requested historical page, and used an archived capture instead of quietly substituting a current search. Its only real softness is that it never explains where that archive came from or why it satisfies the date requirement, so the correct judgment call has to be taken on faith rather than followed.
+
+C reaches the same complete, correct result on both platforms and is the most transparent of the three about the reasoning behind it, explicitly naming the archived source it used instead of a same-day search and openly stating that its own final visual export check did not fully complete. That honesty is a real strength. It ranks just behind the top run because getting there took one genuine pause to ask which historical-data approach was correct, a defensible judgment call but still a real gap in an otherwise unattended pass, and because its own disclosed verification shortfall means the finished document's page-by-page layout isn't confirmed the way the process called for.
+
+B is last because half the task's defined scope, the entire Fiverr platform, never got attempted. The run hit a genuine platform block, but reaching a usable stopping point took three separate rounds of outside help, including an explicit instruction to abandon Fiverr entirely, and the Upwork half that did ship never addresses the same historical-date question the other two runs handle directly. The task list left behind also contradicts its own dashboard, carrying an entry for a section this run's own scoring marks as fine rather than a gap. A deliverable that quietly ships half of what was asked, with an internal contradiction inside the half that exists, is a more serious problem than either of the other two runs carries.
 
 ## Final sign-off
 
-- [ ] All three model files contain raw Logs and Output.
-- [ ] Requirements, traps, and source-of-truth checks were completed.
-- [ ] Boxes 2-8 were finalized before box 1.
-- [ ] Box 1 uses the current MIN formula.
-- [ ] Individual model files contain no visible cross-model comparison.
-- [ ] The ranking is strict and supported by the model files.
+- [x] All three model files contain raw Logs and Output.
+- [x] Requirements, traps, and source-of-truth checks were completed.
+- [x] Boxes 2-8 were finalized before box 1.
+- [x] Box 1 was derived by holistic judgment from the finalized boxes 2-8, per the current standing rule (harsh-evaluation-protocol.md section 5), not a fixed formula.
+- [x] Individual model files contain no visible cross-model comparison.
+- [x] The ranking is strict and supported by the model files.
