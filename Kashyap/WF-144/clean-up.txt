@@ -1,43 +1,8 @@
-Return the dedicated WF-144 test fixture to its known clean state after one workflow run. Use only
-the exact names below. Do not delete the repository, Jira project, Drive folder, Teams team, or
-Teams channel.
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only kashyapempiricinfotech-sys/webapp-main, Jira MBTF, Mobile Build - Test Fixture, and Testing Client Workflows → Engineering.
 
-Cleanup is limited to workflow changes. Resources the workflow only read or used unchanged are left
-alone.
+1. Drive: delete all workflow blueprint Docs/files from Mobile Build - Test Fixture. Retain the folder and harmless static noise Doc.
+2. Jira: delete every MBTF issue and attachment. Retain the project itself; standalone setup recreates the two named baseline issues.
+3. Teams: delete every post/reply in Testing Client Workflows → Engineering.
+4. GitHub: verify the static main history and cutoff fixture; do not modify source.
 
-## Clean these exact test destinations
-
-- Jira project: `Mobile Build - Test Fixture` (`MBTF`) at
-  `https://workflow-testing-xgfb79cw.atlassian.net`.
-- Drive folder: `Mobile Build - Test Fixture`.
-- Teams team/channel: `Testing Client Workflows` / `Engineering`.
-- GitHub repository: `kashyapempiricinfotech-sys/webapp-main`, branch `main`.
-
-## Reset steps
-
-1. Preserve the completed workflow evidence outside the test accounts before cleaning it.
-2. In the Drive folder, delete the workflow-created `Mobile Build Blueprint - webapp-main` Doc and
-   any other file created by the workflow. Leave the folder itself in place.
-3. The seeded Jira state has exactly one issue. In project `MBTF`, delete every issue except one with
-   exact summary `Foundation and auth`, including its attachments. If duplicate seed-summary issues
-   exist, delete the duplicates and retain one. Restore the retained seed issue to:
-   - status `To Do`;
-   - no attachments;
-   - a description beginning `TEST SEED: the workflow should update this issue instead of creating another with the same summary.`
-4. In the `Engineering` channel, delete the workflow-created review post. The channel is empty in the
-   seeded state, so remove any message created by the workflow and leave the channel itself in place.
-5. Do nothing to the repository if it is unchanged. If the workflow unexpectedly changed it, restore
-   the three-commit fixture history described in data seeding; do not delete the repository.
-
-## Verification
-
-Report success only when:
-
-- the Drive folder is empty;
-- `MBTF` contains only the reset `Foundation and auth` seed issue;
-- the `Engineering` channel contains no workflow message;
-- the repository still exists and has the fixture history; and
-- the Jira project, Drive folder, Teams team, and channel still exist for the next seed.
-
-If an exact destination cannot be found or reset safely, stop and report it. Do not widen the scope
-to other projects, folders, repositories, teams, or channels.
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm empty MBTF, no workflow Docs, zero Teams messages, and verified repository integrity.

@@ -54,4 +54,3 @@ Source files: `prompt-def.txt`, `workflow-definition-problem.txt`, `corpus.md`, 
 - [ ] Requirements and traps checked row by row
 - [ ] Calculations independently reproduced
 - [ ] Cleanup completed and recorded
-

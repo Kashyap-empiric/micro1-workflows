@@ -1,0 +1,112 @@
+Worked for 4m 5s
+
+
+I’m using the GitHub, Google Sheets, and Jira workflows to ground the analysis in the repository, calculate the full fusion sweep, then write the sheet and the narrowly scoped tickets. I’ll keep confirmed corpus gaps separate from retrieval misses throughout.
+
+
+
+
+Used GitHub, Google Drive, and Atlassian Rovo integrations, ran commands
+
+
+The source fixture has 84 query rows, 154 chunks, and RRF k = 60 with ascending chunk-ID tie-breaking. I’ve resolved the target sheet and the SQ Jira project; I’m now calculating directly from the recorded top-10 lists and inspecting the destination headers before any writes.
+
+
+
+
+Used GitHub and Google Drive integrations
+
+
+The sweep has a unique maximum at α = 0.5: 67/84 hybrid hits. BM25 alone has 56/84 and dense alone 31/84. The 12 no-coverage rows comprise eight log-confirmed corpus gaps and four in-corpus retrieval misses (Q033, Q040, Q061, Q081). I’m writing the two grounded ranges now, with category-level recall calculated within each category.
+
+
+
+
+Used GitHub and Google Drive integrations
+
+
+The sheet write succeeded. I’m creating eight corpus-content-gap Tasks—one for each explicit “no answer in corpus” row—and one retrieval recommendation Task. The four in-corpus no-coverage misses remain sheet-only, as requested.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+All nine Jira create calls returned successfully, including the recommendation Task. I’m doing the reconciliation pass now: read back the 84 detail rows and four rollup rows, verify the ticket/query mapping, and inspect the rendered sheet at normal zoom. The Sheets workflow calls for a visual check, so I’m using the Chrome control skill for that final QA.
+
+
+
+
+Used Chrome and the browser, ran a command
+
+
+The summary is clean at 100% zoom. The detail tab’s query text is visibly clipped by its current fixed column width, so the Sheets visual-quality workflow is prompting one narrow layout repair: auto-resize only column B, then re-render and verify the values and ticket reconciliation.
+
+
+
+
+Used Google Drive integration
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Chrome integration
+
+
+
+
+
+The analysis is complete in Hybrid Retrieval Coverage Analysis. I populated all 84 independent rows in Per-Query Detail and the four required rows in Category Summary, then read them back and visually verified the rendered sheet.
+Retrieval outcome
+Method	Hits / 84	Recall@5
+BM25-only	56	66.67%
+Dense-only	31	36.90%
+Hybrid RRF, optimal α = 0.5	67	79.76%
+
+Hybrid improves over dense-only by 116.13% relative:
+\[
+\frac{79.76\%-36.90\%}{36.90\%}=\frac{36}{31}=116.13\%
+\]That clears the 39% relative-improvement bar by 77.13 percentage points. The absolute Recall@5 gain is 42.86 percentage points. Recommendation: retain hybrid retrieval and evaluate α = 0.5 for a controlled, separate shipping decision; do not move to dense-only on this log.
+The RRF implementation used the recipe: k = 60, zero contribution for an absent top-10 side, and ascending chunk ID for exact fused-score ties.
+α	Fused hits / 84	Recall@5
+0.0	31	36.90%
+0.1	41	48.81%
+0.2	41	48.81%
+0.3	41	48.81%
+0.4	41	48.81%
+0.5	67	79.76%
+0.6	62	73.81%
+0.7	62	73.81%
+0.8	62	73.81%
+0.9	63	75.00%
+1.0	56	66.67%
+
+The maximum is unique at α = 0.5.
+Category rollup
+The method recalls below are within each outcome category.
+Category	Count	Share of log	BM25 Recall@5	Dense Recall@5	Hybrid Recall@5
+exact-match	35	41.67%	100.00%	0.00%	85.71%
+semantic	10	11.90%	0.00%	100.00%	100.00%
+mixed	27	32.14%	77.78%	77.78%	100.00%
+no-coverage	12	14.29%	0.00%	0.00%	0.00%
+
+The six hybrid-only rescues were Q027→D140, Q049→D065, Q052→D080, Q064→D095, Q068→D125, and Q079→D110. The six disputed rows—Q010, Q023, Q031, Q034, Q069, and Q084—are explicitly marked disputed in the sheet, with either candidate treated as a hit.
+The 12 no-coverage rows are a retrieval-outcome count, not a corpus-gap count. Eight are confirmed corpus gaps. The other four—Q033, Q040, Q061, and Q081—have acceptable chunks in the corpus but all three evaluated top fives miss; their corpus-gap flag is No, and no content-gap ticket was filed for them. Five BM25-only hits are lost by the optimal fused top five, which is why total hybrid misses are 17 although the no-coverage bucket contains only 12.
+Jira Tasks
+Eight confirmed content gaps reconcile exactly with the sheet’s Corpus Gap? = Yes flags:
+SQ-47 — Q002, HIPAA BAA process
+SQ-48 — Q005, QuickBooks Online integration
+SQ-51 — Q020, deleted-workspace restoration
+SQ-49 — Q024, customer-level legal hold and retention deletion
+SQ-50 — Q032, mobile offline ticket drafting
+SQ-52 — Q044, customer-managed encryption keys
+SQ-53 — Q057, real-time live-chat translation
+SQ-54 — Q058, automatic voice-call transcription
+The single retrieval recommendation is SQ-55, including all three Recall@5 figures, the sweep, related query and chunk IDs, and the recommendation to retain hybrid at the evaluated α = 0.5.
+Sources were the repository’s query log, corpus, and recipe. No production pipeline, live fusion weight, embeddings, index, or corpus content was changed.
+

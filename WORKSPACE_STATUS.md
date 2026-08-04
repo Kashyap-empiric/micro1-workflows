@@ -1,13 +1,14 @@
 # Workspace Status
 
-Last reviewed: 2026-07-31
+Last reviewed: 2026-08-03
 
 This is the working index for the micro1 workflow evaluation workspace. It records the current evidence state, not just whether a folder exists.
 
 ## Snapshot
 
 - 11 workflows across three owners: Hetal, Kashyap, and Saurav.
-- 11 Round 1 folders with the expected four model files, evaluation record, final comparison, and preserved legacy record.
+- 11 Round 1 folders with the expected four model directories, evaluation record, final comparison, and preserved legacy record.
+- All 110 model records use the per-model directory layout: a main model file, external `codexlogs.txt`, and an `output/` directory.
 - 10 workflows have a strict final ranking recorded. WF-158 is still a blank head-to-head template.
 - All 11 evaluation records still contain unfinished run-comparison or closeout placeholders.
 - All 11 workflow folders now contain a task-specific `prompt-def-worksheet.md`; each still needs to be reviewed, completed, and frozen before scoring.
@@ -45,10 +46,36 @@ This is the working index for the micro1 workflow evaluation workspace. It recor
 | WF-187 | B > D > A > C | B |
 | WF-188 | A > D > C > B | A |
 
+## Required model-run layout
+
+Every evaluated model uses its own directory inside the applicable `round-N/` folder. This is required
+for new runs and for any migrated historical model record:
+
+```text
+round-N/
+  model-A/
+    model-A.md
+    codexlogs.txt
+    output/
+  model-B/
+    model-B.md
+    codexlogs.txt
+    output/
+  ...
+```
+
+- `model-<letter>.md` is the main evaluation record. Its `Logs` section links to
+  `[Codex logs](codexlogs.txt)` rather than embedding the transcript.
+- `codexlogs.txt` contains the complete raw Codex transcript for that run, including any captured
+  placeholders when no run has occurred yet.
+- `output/` contains run-specific local artifacts such as screenshots, CSVs, exports, and other durable
+  evidence. References in the main model file must be relative to that directory.
+- Keep `final-comparison.md`, evaluation records, and shared round material at the `round-N/` level.
+
 ## Workspace-level follow-up
 
 1. Resolve WF-158 before treating Round 1 as complete.
 2. Complete the 11 evaluation records, including requirement results, trap results, readiness, and final sign-off.
 3. Review and freeze the 11 new prompt worksheets before the next scoring pass.
-4. Migrate active round files to the current five-file structure, or explicitly mark the existing files as historical format.
+4. Enforce the required per-model directory layout and external-log link for every new or migrated model run.
 5. Add an automated validator for placeholders, file shape, score ordering, readiness, and sign-off.

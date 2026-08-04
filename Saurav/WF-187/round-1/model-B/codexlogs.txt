@@ -1,0 +1,276 @@
+Worked for 5m 6s
+
+
+I’m using the GitHub, Supabase, Google Drive/Sheets, and Teams workflow skills to run this as a controlled weekly audit. I’ll establish the full access gate first, including the exact repository, table, sheet, Jira project, and Teams channel permissions; if any one check fails, I’ll stop before inspecting prompt content or making updates.
+
+
+
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo, and Codex Apps integrations, ran commands
+
+
+The access gate passed: all four GitHub repositories report pull permission; the bounded Supabase read succeeded with 778 rows in the UTC window; the exact Drive Sheet is owned by the connected user in the specified folder; CPG is returned for both create and edit; and Teams preflight says the resolved channel can be posted to directly. I’m freezing the audit at the access-gate timestamp, 2026-07-28 10:29:40 UTC, with the production window 2026-07-21 00:00:00 UTC through 2026-07-28 00:00:00 UTC exclusive.
+
+
+
+
+Used GitHub, Google Drive, and Codex Apps integrations, ran commands, searched the web
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used GitHub, Supabase, and Google Drive integrations, ran commands
+
+
+The pinned trees contain four functional families: support triage, receipt extraction, thread summarization, and a FlutterFlow-only vendor-copy prompt. The production aggregate confirms the backend support deployment is still serving support-v2 while pinned code is support-v3; mobile has no observed traffic. I’m checking each distinct model against current provider documentation now, including the retired Claude target and OpenAI’s native structured-output path.
+
+
+
+
+I’m also using the OpenAI documentation skill for the OpenAI model-pattern portion, so the recommendations and citations come from current official guidance.
+
+
+
+
+Used Codex Apps integration, ran a command, searched the web
+
+
+The Teams connector resolves the three in-window channel posts, but its history and individual fetch responses omit their bodies. I’m switching to the current Chrome session for the duplicate-content check, as requested, before deciding whether to post.
+
+
+
+
+Used Chrome and Codex Apps integrations, ran commands
+
+
+
+
+
+The run is blocked before any external writes.
+The access gate itself passed:
+GitHub: all four repositories returned pull: true.
+Supabase: cahuu-observability was found and a bounded read of public.prompt_invocation_logs succeeded.
+Google Drive: the exact LLM Prompt Drift Report - Cahuu is in the specified folder, and the connected user is its owner.
+Jira: CPG was returned for both create and edit actions.
+Teams: the exact team and channel resolved, and write preflight returned can_post_directly: true.
+What failed was the required duplicate-post review:
+Teams listed three channel posts between 2026-07-21 00:00 UTC and the check time, but returned content: null for the history and empty content for individual message fetches.
+Scoped searches for the Sheet ID, window date, and “Prompt Drift” returned no usable results with query_too_restrictive.
+The Chrome fallback reached the Teams launcher. Clicking Use the web app instead did not open the signed-in channel or reveal the post bodies.
+Because I cannot establish whether one of those posts already links to this Sheet or names this production window, I cannot safely choose between posting and duplicate-skipping. I stopped without updating the Sheet, creating or editing Jira issues, or sending a Teams notification.
+Frozen audit context already resolved:
+Codebase	Pinned default-branch commit
+Python backend	37031bccae0b1470cfb580cebd761e5d4565ab4d
+MERN web app	33bd4ad6d5d453eca6fd2213b47069920d743b89
+Flutter mobile app	f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow export	40987da6088bd838e13164800225f265de525f7b
+
+Production window: 2026-07-21 00:00:00 UTC through 2026-07-28 00:00:00 UTC, end exclusive.
+Please open the signed-in Teams web app in Chrome to Testing Client Workflows → Prompt Drift Alerts, confirm the channel history is visible, and tell me when it is ready. I can then resume the duplicate check and finish the Sheet, Jira, and notification workflow.
+One unrelated but important Supabase advisory surfaced during preflight: public.request_logs and public.llm_call_logs have RLS disabled. The connector classified this as critical. Do not apply the following until the intended access policies are designed, because enabling RLS without policies can block current access:
+ALTER TABLE public.request_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.llm_call_logs ENABLE ROW LEVEL SECURITY;
+See Supabase’s Row Level Security guidance.
+
+
+4:04 PM
+
+
+
+
+
+
+
+Post through the connector
+
+
+
+
+
+
+4:04 PM
+
+
+
+
+
+
+Worked for 4m 42s
+
+
+I’ll use the Teams connector for the actual post, per your direction, and finish the outstanding Sheet and Jira work from the frozen audit. I’ll treat your instruction as an explicit override of the unresolved duplicate-body check, record that override in the Run Log, and preserve the pinned commits and UTC production window.
+
+
+
+
+Used Atlassian Rovo and Google Drive integrations, ran commandsRan Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-drive/SKILL.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/teams/0.1.6/skills/teams-messages/SKILL.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/teams/0.1.6/skills/teams/SKILL.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/SKILL.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-visual-quality.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-live-read-search-safety.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-native-cell-structure.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-batch-update-recipes.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-edit-workflow.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/style-profiles.md'
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Got spreadsheet metadata
+
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+
+
+
+
+
+I’m filling the existing workbook in place: 16 family/platform rows so absent-platform and zero-traffic cases are explicit, 10 model-pattern rows covering every source version, and one Run Log row. Three families meet the Jira threshold—support, receipt, and thread—and the thread web version carries the independent double flag.
+
+
+
+
+Used Google Drive integration
+
+
+The workbook content is in place. No open CPG issue currently covers these families, so I’m creating three unassigned Task issues with the current Sheet row links; the thread ticket will keep wording/output-contract alignment and model lifecycle/API-pattern migration as separate action groups.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+Createjiraissue
+
+
+
+
+
+CPG-30, CPG-31, and CPG-32 were created unassigned in To Do. I’m sending the engineering channel announcement through the connector now with the requested counts and Sheet link.
+
+
+
+
+Used Google Drive and Codex Apps integrationsMicrosoft teams send channel message
+
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+Updated spreadsheet
+
+
+
+
+
+
+
+
+
+
+The connector post succeeded and returned a canonical Teams message link. I’ve replaced the Run Log’s pending state with the send timestamp, message link, ticket keys, and the explicit duplicate-check override; I’m doing the final workbook and ticket verification pass now.
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+The connector readback shows all three tabs populated with no pending placeholder, and Jira creation returned each issue unassigned in To Do. I’m using Chrome only for the required visual Sheet QA, since the Sheets workflow calls for a rendered check after connector edits.
+
+
+
+
+Used Chrome and Google Drive integrations, ran a command
+
+
+
+
+
+The weekly drift run is complete. The Google Sheet drift report has populated Prompt Families, Model Pattern Check, and Run Log tabs, and the Teams engineering notification was sent through the connector.
+Production window: 2026-07-21 00:00:00 UTC through 2026-07-28 00:00:00 UTC, end exclusive
+Families checked: 4
+Meaningfully diverged families: 3 — support, receipt, and thread
+Confirmed deprecated-pattern/model-lifecycle flags: 4 platform versions
+Jira tickets created: 3, all unassigned in To Do
+Family	Jira
+Support triage persona and backend deployment mismatch	CPG-30
+Receipt schema divergence and native Structured Outputs	CPG-31
+Thread summary contract and retired Claude target	CPG-32
+
+The backend support logs showed 412 invocations of support-v2 while pinned code is support-v3, separately from its wording divergence. The MERN thread version is double-flagged: it adds an under-120-word contract and independently targets claude-3-5-sonnet-latest. Anthropic documents the Sonnet 3.5 snapshots as retired and lists claude-sonnet-4-6 as the replacement, while noting partner-platform lifecycle schedules may differ; the exact alias/router and telemetry therefore need investigation. Claude deprecations, Messages API. The backend receipt prompt’s JSON-only instruction is flagged because GPT-4.1 supports strict native Structured Outputs, which OpenAI recommends over JSON mode where possible. GPT-4.1, Structured Outputs.
+Frozen default-branch commits:
+Codebase	SHA
+Python backend	37031bccae0b1470cfb580cebd761e5d4565ab4d
+MERN web app	33bd4ad6d5d453eca6fd2213b47069920d743b89
+Flutter mobile app	f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow export	40987da6088bd838e13164800225f265de525f7b
+
+The Run Log records that prior in-window Teams post bodies were unavailable to the connector, and that you explicitly directed the connector post on continuation. No prompt code was edited or merged.
+Separately, the Supabase preflight returned a critical advisory that public.request_logs and public.llm_call_logs have RLS disabled. That was not changed during this diagnostic run; review access policies before enabling RLS. Supabase RLS guidance.
+

@@ -1,6 +1,6 @@
 # WF-140 Round 2 - Model B
 
-Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
+Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../../docs/scoring/comparative-rerate-addendum.md)
 
 ## Model identity
 
@@ -8,53 +8,62 @@ Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23
 Codex, gpt-5.6-fish, Extra High intelligence
 
 ### Session ID
-[Session ID]
+019fcb1c-1975-73c1-b491-9c88f5c625f4
 
 ## Logs
 
-Raw logs will be saved to `codexlogs.txt` (same folder) once captured - not yet captured.
+[Codex logs](codexlogs.txt)
 
 ## Output
 
-Raw evidence will be saved to `output/` (same folder) once captured - not yet captured.
+Annual spend analysed across all 20 tracker rows: USD 140,340. Total estimated annual saving: USD 56,220, split between USD 53,340 in ticketed opportunities and USD 2,880 recorded on the tracker only. Four Jira tickets filed and assigned to the IT Operations Lead: Asana and Trello to Jira (USD 7,740, both renewals frozen), Slack to Microsoft Teams (USD 34,200, higher risk), Toggl Track to Harvest (USD 6,000, billing risk and frozen), and Dropbox Business to OneDrive (USD 5,400, higher risk). Pipedrive to HubSpot (USD 2,880) recorded on the tracker only. All 20 rows carry a decision and policy reason. Figma, Adobe XD, and Loom left unresolved. A live summary was posted to the finance and ops channel. Five Gmail drafts were created, one per affected department, each with an empty recipient field and a warning that a verified address is required. No subscriptions, licences, or vendors were changed or contacted.
 
 ## 2. Task accuracy, ignoring speed
 
-[Rating and Commentary from the current head-to-head template]
+**Rating:** 5/7
+
+Every figure I checked against the source data lands correctly, including the two deliberately planted boundary cases, the renewal that sits exactly on the freeze cutoff and the quote converted from a foreign currency for the complementary whiteboarding tool. The grouped project management opportunity is tested against the ticket threshold as a combined figure rather than per tool, which is the right read of the policy. Two smaller things keep this off a higher number. The row for the retained CRM standard folds in a forward note about a different tool's outcome rather than staying limited to its own status, and the three excluded tools list themselves as their own consolidation target, which is accurate but leaves that field's meaning slightly ambiguous for a row that was never actually eligible for consolidation.
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
-**End-to-end time (minutes):** [value]
-**Wrong actions / recovery:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 5/7
+**End-to-end time (minutes):** 7
+**Wrong actions / recovery:** none, no failed action or redo anywhere in the run
+**Commentary:** This moved through source review, policy reconciliation, ticket filing, and the sheet write back without a wasted step, and the total time reflects that. The one real drag is a spreadsheet read that happens after the run had already narrated the tracker as updated, which reads as a verification step bolted on at the end rather than folded into the write pass itself. It cost very little time on its own, but it is a real instance of checking work after declaring it done rather than as part of doing it, and that sequencing choice is the honest nit here rather than anything that actually slowed the deliverable down.
 
 ## 4. Writing quality
 
-[Rating and Commentary]
+**Rating:** 4/7
+
+The Gmail drafts read well, each one is written the way a real internal notice would read, naming the tools, the identity numbers, and the required line noting that a verified address is needed, without sounding generated. Two real issues keep the rest of the writing from matching that bar. The channel summary is a single dense paragraph long enough that the interface collapses it behind a toggle that has to be clicked to expand it, which defeats the point of a quick finance and ops update. The Jira ticket bodies lean on compressed policy citations, several section numbers strung together with no separation, that read more like shorthand notes to self than something a stakeholder would want to parse, and together these are why this lands at 4/7.
 
 ## 5. Instruction following
 
-[Rating and Commentary]
+**Rating:** 5/7
+
+Every explicit constraint is honoured, the channel post went out live, every draft has a blank recipient field with the required note, and nothing was cancelled, changed, or contacted. Rows without a policy answer were logged as unresolved instead of guessed. The one place instruction following gets a little loose is the ticket titles themselves, which fold a risk or freeze label directly into the title text in inconsistent formatting, one in full capitals, another as a pair of words separated by a slash, rather than keeping that framing inside the description alongside the tools covered, the tool kept, and the saving, which is what was actually asked to be in a ticket.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
-**Steering needed:** [one short factual clause]
-**Additional editing before I'd use it:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 5/7
+**Steering needed:** none, the run completed unattended start to finish
+**Additional editing before I'd use it:** the one savings figure that only appears inside a single email would need to be sourced or dropped before it goes out
+**Commentary:** It ran the whole task without a single interjection, and its closing message lists specific things it rechecked rather than a blanket claim, the row count held, the savings total matched, the tickets were assigned, and the draft count was right. That is a real check of the content itself, not just confirming actions fired. What it never did is turn that same scrutiny on a number it introduced only once, inside one department email, and that gap in its own review is what keeps this at 5/7 rather than higher.
 
 ## 7. Citation quality
 
-[Rating or N/A and Commentary]
+**Rating:** 4/7
+
+Most of the numbers in this run trace cleanly, the identity counts, the fresh quotes, and the seat arithmetic are all shown inline and I could check every one of them against the source myself. Two real seams pull this down. One department email states a combined savings figure that does not appear anywhere else, not the tracker, not the ticket, not the channel post, so there is nothing to trace it back to beyond working it out again by hand. Separately, the ticket bodies compress several policy section citations onto one line without marking which clause actually drives which number, so confirming the exact basis for a given figure takes more work than it should.
 
 ## 8. GUI action correctness
 
-[Rating or N/A and Commentary]
+**Rating:** 5/7
+
+The gradable part of this is the email drafting itself, which happened on screen, since the sheet, ticket, and channel work went through direct tool calls. Every draft has the correct blank recipient field and the right department targeting, so nothing landed in the wrong place. What I can see on screen is less tidy than the underlying work, several compose windows were left open stacked on each other rather than closed one at a time, and one screenshot shows the drafts list already narrowed by a search filter before all five drafts are visible together in one view, both small but real housekeeping gaps in the final screen state.
 
 ## 1. Overall task success
 
-[Write only after boxes 2-8 are final. Start from Task accuracy, apply evidence-backed caps for
-material failures, and dock one point only when the run takes substantially longer than a comparable
-run because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+**Rating:** 5/7
+
+The deliverable is complete and correct everywhere I could check it against the real source, the tracker, the tickets, the live post, and the drafts all agree with each other and with the policy, and nothing was guessed where the policy was silent. What holds this at 5/7 rather than higher is the one figure that only exists inside a single email with nothing else in the record to confirm it against, plus a channel summary dense enough that it needs to be expanded to be read at all. Neither one changes the underlying recommendations, which are sound and actionable, but a persona relying on this record would have to do a little extra work to trust every number in it.

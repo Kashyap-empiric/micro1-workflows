@@ -1,65 +1,19 @@
-Prepare a complete sample environment for testing a third-party platform research workflow. This setup is only for testing and evaluation. Do not use or modify any production systems, production data, production repositories, or production credentials. Assume a clean, isolated environment — there is no pre-existing Chrome profile or account session to rely on; create or locate every resource below using the available Jira, GitHub, Google Drive/Docs, and Microsoft Teams connectors. Reuse a resource instead of duplicating it whenever one with the exact name already exists.
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
 
-# Round 1 data-seeding controls - third-party research workflow
+Use only:
+- Jira project: TCW
+- GitHub: kashyapempiricinfotech-sys/relayforge-operations-platform
+- Drive folder: RelayForge Research Documentation
+- Teams: testing client workflows → Engineering
 
-Create a fresh fixture for every model run, `R1-A` through `R1-D`, using the exact Jira project,
-repository, Drive folder, and Teams channel named in `prompt-def.txt`. These names override legacy
-examples in this file. Each run begins with the same ticket state, repository snapshot, empty target
-document state, and no matching Teams post. Tag writable artifacts `[RESEARCH-R1-<run>]`.
+All named resources must be unique and test-controlled. Stop on ambiguity rather than substituting another resource.
 
-Include fair traps: two same-priority research tickets that need created-date/key tie-breaks, a linked
-document that is out of scope, a stack fact where repository config overrides documentation, exactly-eight
-candidate selection followed by exactly-five deep evaluations, an open ticket/comment to update, and a
-closed one that must not block a fresh issue. Keep resource IDs, scoring worksheet, and expected result in
-a private manifest; vendor facts remain current official-source research at run time.
+Direct pre-run reset:
+- Empty TCW, then create a deterministic queue: one labelled wf096-baseline-target, To Do, Highest priority Technical Research issue titled Evaluate transactional email provider for RelayForge; a same-priority later-created wf096-baseline-decoy; and a wf096-baseline-history Done issue. The target must contain its fictional transactional-email requirement, direct attachments, in-folder source document, external out-of-scope link, two normal comments, and one stale comment beginning Automated research completed. Do not create workflow comments.
+- Keep every source attachment/document in RelayForge Research Documentation. After the target issue key is known, create exactly one blank stale output Doc titled [TCW] - 3rd Party Research - <TARGET-KEY> - <YYYY-MM-DD>; delete all other Docs with that title prefix. Preserve source documents.
+- Delete all posts/replies in the exact Engineering test channel.
+- Verify the repository default-branch snapshot, README, architecture docs, contributing guide, dependency/configuration files, Dockerfile, CI, and IaC. Preserve the configuration-versus-documentation disagreement; configuration is authoritative. Never modify source.
 
-Create or locate a Jira project named "Atlas Commerce Platform" (key: ATLAS). If a project with that exact name already exists, reuse it instead of creating another one.
+The fixture must remain difficult: the selected issue wins only under priority/created/key tie-breaks; external links are out of scope; the stale Jira comment and stale output Doc must be updated in place; the stack disagreement tests source precedence; vendor selection/research facts remain unknown to the model.
 
-Within that project, create one ticket that the research workflow can pick up:
-
-- Title: "Research: SMS OTP Verification Provider for Checkout Flow"
-- Label: Technical Research
-- Status: To Do (must not be Done, since the workflow filters on Status ≠ Done)
-- Description: "Atlas Commerce needs to add SMS-based OTP verification to the checkout flow to reduce fraudulent orders. We need a recommended third-party provider that fits our current stack, supports high delivery reliability across our target regions, and stays within a reasonable per-message cost for an estimated 10,000 monthly active users."
-- Acceptance Criteria:
-  - A shortlist of five OTP/SMS providers evaluated against our tech stack and requirements.
-  - A clear primary recommendation with supporting comparison data.
-  - An implementation-ready architecture blueprint for the recommended provider.
-- Attachments (create simple fictional placeholder files/links, clearly labeled as sample data):
-  - "OTP-Flow-Requirements.pdf" — one page summarizing functional requirements (send OTP, verify OTP, resend with cooldown, expire after 5 minutes) and a non-functional requirement (99.9% delivery within 30 seconds).
-  - A link to a fictional design file, e.g. "Checkout OTP Screens (Figma) - sample link".
-  - A link to a fictional internal API spec doc, e.g. "Checkout Service API Spec v1 (sample)".
-- Comments (seed two, from fictional teammates):
-  - From "Priya Shah (PM)": "Flagging this as high priority — fraud team wants a decision this sprint."
-  - From "Marco Diaz (Tech Lead)": "We're on Node.js/Express + Postgres, deployed on AWS. Please confirm SDK support for our stack before recommending."
-
-Do not transition this ticket to In Progress or add any further comments yourself — leave it in "To Do" with only the two seed comments above, so the research workflow can perform its own status transition and comment when it runs.
-
-Create or locate a small sample GitHub repository named "atlas-commerce-platform" (or a similarly clearly identifiable sample name). It should contain realistic, minimal project-context artifacts for the workflow to read, all clearly fictional:
-
-- A README.md describing the project overview, frontend framework (React), backend framework (Node.js/Express), database (PostgreSQL), cloud platform (AWS), authentication mechanism (JWT-based session auth), and deployment model (Docker containers on AWS ECS).
-- A docs/architecture/ directory with at least one markdown file describing the existing service architecture.
-- A CONTRIBUTING.md with basic coding style notes (e.g. ESLint/Prettier, conventional commits).
-- A package.json listing representative dependencies (express, react, pg, jsonwebtoken) and a package-lock.json.
-- A Dockerfile.
-- A .github/workflows/ci.yml with a simple build/test pipeline.
-
-Create or locate a Google Drive folder named "Atlas Commerce - Third Party Research". If one already exists with that exact name, reuse it instead of creating a duplicate. Leave it empty — do not pre-create a Google Doc inside it, since the research workflow is responsible for creating (or reusing) its own research document named "Atlas Commerce Platform - 3rd Party Research - ATLAS-<ticket number> - <date>".
-
-Create or locate a Microsoft Teams team named "Atlas Commerce Engineering" with a channel named "engineering-updates". If Microsoft Teams is unavailable, create or locate an equivalent Slack workspace and channel with the same names. Seed the channel with 4-5 short, unrelated historical messages (e.g. standup notes, a deploy notification, a PR merged notice) dated over the past week. None of these seed messages should contain both the ticket key (ATLAS-<ticket number>) and the phrase "Third-Party Research Completed" — that combination must remain absent so the workflow's duplicate-notification check can be exercised honestly on its first real run.
-
-Do not create duplicate resources when matching ones already exist. Reuse existing sample resources whenever possible.
-
-Do not provision cloud infrastructure, production databases, production repositories, billing resources, paid subscriptions, or external integrations beyond the sample resources required for this testing environment. Do not create or expose real credentials, API keys, tokens, PII, or confidential information — use only clearly fictional placeholder values throughout (names, emails, links, prices).
-
-Do not perform any part of the research workflow itself during this setup: do not move the ticket out of "To Do", do not create the Google Doc, do not post to Teams beyond the unrelated seed messages above, and do not research or evaluate any OTP/SMS providers.
-
-Once setup is complete, report back the exact identifiers needed to run the research workflow prompt, so its bracketed placeholders can be filled in:
-
-- Jira project name/key → [Jira project]
-- Ticket key created (e.g. ATLAS-142) and its current status/label
-- GitHub repository name/URL → [github repo]
-- Google Drive folder name/URL → [Google Drive folder] / [Google Doc Folder]
-- Microsoft Teams team + channel (or Slack equivalent) → [Teams channel]
-
-The setup is complete only when the Jira ticket, GitHub repository, Google Drive folder, and Teams channel all exist (or were reused) exactly as described above, and all of the identifiers above have been returned for use as inputs to the separate research workflow prompt.
+When finished, summarize the setup in plain language and confirm the static queue, Drive sources, repository snapshot, and empty Teams state are restored. Report any blocker directly.

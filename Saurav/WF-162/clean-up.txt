@@ -1,14 +1,13 @@
-# Round 1 cleanup - Freelancer profile analysis
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only Freelance Growth, Profile Health Dashboard → Scores, Profile Improvements, Upwork https://www.upwork.com/freelancers/~0124d436cfb83b7122, and Fiverr saurav_empiric.
 
-Clean only `[PROFILE-R1-<run>]` artifacts and restore the controlled snapshots, dashboard, and task list
-to their baseline. Save the final Doc, dashboard/task evidence, and benchmark calculation record first.
+1. Drive: delete Freelance Profile Gap Analysis for 28 July 2026 and other workflow output from Freelance Growth; retain the folder.
+2. Sheet: restore Profile Health Dashboard → Scores to this exact header and four stale rows; delete all other rows and objects:
+   Platform | Section | Owner Value or Count | Competitor Median | Score (out of 10) | Status | Priority Rank
+   Upwork | Headline | 38 characters, no niche keyword | 92 characters, includes niche keyword and years of experience | 3 | gap | 1
+   Fiverr | Overview | 65 words | 170 words | 4 | gap | 2
+   Upwork | Overall | blank | blank | 5.1 | blank | blank
+   Fiverr | Overall | blank | blank | 5.6 | blank | blank
+3. Tasks: reset Profile Improvements to the single incomplete task Upwork fix headline, notes stale placeholder to update in place, due 2026-07-01; delete every other task.
+4. Marketplaces: verify no owner-profile field was edited. Never make a marketplace change during cleanup.
 
-1. Delete the run-created gap-analysis Doc and tagged snapshot/report copies.
-2. Remove run-created tasks carrying the exact tag. For the seeded matching task updated in place, restore
-   its original title, notes, due date, and incomplete state.
-3. Restore the Scores tab from the immutable baseline, including its four stale seed rows, and remove only
-   rows created by the run tag.
-4. Verify zero tagged Docs/tasks/rows remain, baseline profile snapshots and competitor packets are intact,
-   and no marketplace profile was edited. Record reset verification.
-
-Stop if task/row ownership is uncertain. Never modify any live Upwork or Fiverr profile or public competitor data.
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm the four-row Sheet baseline, one stale task, no workflow Doc, and no marketplace edits.

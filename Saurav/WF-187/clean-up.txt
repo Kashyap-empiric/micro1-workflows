@@ -1,16 +1,9 @@
-# Round 1 cleanup - Cross-platform prompt drift
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or any mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only sauravempiricinfotech-sys/cahuu-api-backend, sauravempiricinfotech-sys/cahuu-web-app, sauravempiricinfotech-sys/cahuu-mobile-app, sauravempiricinfotech-sys/cahuu-flutterflow-export, cahuu-observability.prompt_invocation_logs, LLM Prompt Drift Report - Cahuu, Jira CPG, and Prompt Drift Alerts.
 
-Reset only `[DRIFT-R1-<run>]` reports, tickets, comments, and Teams output. Capture all final Sheet/Jira/Teams
-evidence and source references in the evaluation record before cleanup.
+1. Sheet: restore LLM Prompt Drift Report - Cahuu to header-only Prompt Families, Model Pattern Check, and Run Log tabs; remove all output rows, formulas, comments, objects, and added tabs.
+2. Jira: delete every CPG issue and attachment. Retain the project itself; standalone setup recreates its two named baseline tickets.
+3. Teams: delete every post/reply in Prompt Drift Alerts.
+4. Supabase: read-check prompt_invocation_logs only. If a model changed it, stop and report the unresolved source change; do not touch another table or infer missing baseline rows.
+5. GitHub: verify all four static repositories/branches remain unchanged; do not modify prompt source.
 
-1. Delete the run-created report Sheet or restore its tabs to the immutable baseline. Keep frozen repository
-   and Supabase source fixtures unchanged.
-2. Delete new tagged Jira tickets. For seeded open tickets updated in place, restore baseline summary,
-   description, status, and assignee; remove only automated tagged comments. Leave closed history intact.
-3. Delete run-tagged Teams posts and temporary official-guidance snapshots, preserving evaluator evidence
-   outside the model-visible fixture.
-4. Verify no tagged Sheet rows/tickets/comments/posts remain, all four commit SHAs and invocation logs match
-   baseline, and the seeded Jira/Teams state is restored. Log the reset result.
-
-Stop if any item is not exactly matched by tag and baseline ID. Never edit prompt source code or delete
-untagged governance history.
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm the blank report Sheet, empty CPG project, zero Teams messages, and verified sources.

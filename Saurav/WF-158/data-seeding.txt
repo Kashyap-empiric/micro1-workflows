@@ -1,88 +1,16 @@
-# Round 1 data-seeding controls - smart-contract pre-audit
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
 
-Create separate private repositories and output folders for `R1-A` through `R1-D`. Every report and
-email draft carries `[PREAUDIT-R1-<run>]`; no model sees another run's output. Keep file eligibility,
-commit dates, expected scan-cap selection, contract/address mapping, balances, category priority, score
-math, and cleanup selectors in an evaluator-only manifest.
+Use only:
+- GitHub: sauravempiricinfotech-sys/preaudit-fixture-20260717-568de6c, branch preaudit-fixture
+- Contracts path: contracts
+- Drive folder: PreAudit Fixture Reports - 2026-07-17 - 568de6c
+- Gmail test mailbox/recipient: saurav.empiricinfotech@expert.micro1.ai
 
-Make the fixture hard but fair: more than 40 eligible contracts with current and old commit dates,
-test/mock and short-file exclusions, safe control contracts, an unverifiable custom modifier, safe
-unchecked loop arithmetic, user-controlled unchecked arithmetic, and a multi-category function. Include
-one no-deployment contract, one deployed zero-balance contract, and one funded fixture address. Pin an
-OpenZeppelin version with three date-valid public exploit references. Use fixture addresses only.
+Keep the private GitHub branch and public fixture-address metadata as static model inputs. They must retain the hard fixture: 48 Solidity files, two test/mock exclusions, one file under ten lines, more than 40 eligible contracts with cap-forcing commit dates, safe/unsafe controls for each category, an unverifiable modifier, safe/unsafe unchecked arithmetic, a multi-category function, and an explicit OpenZeppelin version. Never deploy, sign, transfer, alter chain state, or expose the evaluator oracle.
 
-Create a dummy test setup for a smart contract automated pre-audit workflow.
+Direct pre-run reset:
+- In the exact Drive folder, retain one blank placeholder Doc named preaudit-fixture-20260717-568de6c Pre-Audit Report - 568de6c - <YYYY-MM-DD>; restore it blank and delete all other workflow report files.
+- Delete every Gmail draft in the dedicated test mailbox. Never send a draft or delete the mailbox.
+- Verify the static repository branch, fixture deployment metadata, and public balances read-only; restore only the named source if a prior model changed it.
 
-First check which connectors/tools are available for:
-- GitHub
-- Google Drive / Google Docs
-- Gmail
-- Chrome browser control
-
-If any are missing, stop and tell me exactly which ones to add. Note: Chrome may be available through a Chrome skill/browser runtime even if there is no tool named chrome.
-
-If all required connectors are available, create this setup:
-
-1. Create a private GitHub repo named:
-   preaudit-fixture-[YYYYMMDD]-[random-short-id]
-
-2. In that repo, create a branch:
-   preaudit-fixture
-
-3. Add a `contracts` folder containing a synthetic Solidity fixture:
-   - 48 total `.sol` files
-   - 2 files under `contracts/test/` or `contracts/mock/` so they should be skipped
-   - 1 file under 10 lines so it should be skipped
-   - More than 40 eligible files so the workflow must cap at 40 and skip older files
-   - Include contracts that intentionally trigger:
-     - Reentrancy
-     - Missing access control
-     - Unchecked low-level call return values
-     - Solidity <0.8.0 integer overflow risk without SafeMath
-     - `unchecked {}` arithmetic using user-controlled values
-     - `tx.origin` authentication
-     - `block.timestamp` gating fund release
-     - Publicly reachable `selfdestruct`
-     - A custom modifier whose safety depends on another contract and cannot be verified locally
-   - Include at least one safe OpenZeppelin `Ownable` / `ReentrancyGuard` example.
-   - Pin OpenZeppelin imports to one explicit version, e.g. `@openzeppelin/contracts@4.9.2`.
-
-4. Add deployment metadata under:
-   deployments/mainnet/addresses.json
-
-   It should include:
-   - network: Ethereum mainnet
-   - block explorer: https://etherscan.io
-   - token price source: https://www.coingecko.com
-   - public Ethereum addresses for the fixture contracts, clearly marked as balance lookup test targets only.
-
-5. Make two commits:
-   - First commit: old filler/archive contracts, dated about 1 month earlier
-   - Second commit: active vulnerable fixture contracts, dated today
-   This is so “40 most recently modified files by last commit date” can be tested.
-
-6. Push the repo to GitHub.
-
-7. Create a Google Drive folder named:
-   PreAudit Fixture Reports - [YYYY-MM-DD] - [short commit hash]
-
-8. Create a blank placeholder Google Doc inside that folder named:
-   [Repo Name] Pre-Audit Report - [short commit hash] - [YYYY-MM-DD]
-
-   This lets the audit workflow test its “overwrite existing report for the same commit hash” behavior.
-
-9. Get my Gmail profile email and use that as the dummy dev lead email. Do not send any email.
-
-When done, return these exact details so I can paste them into the audit prompt:
-- GitHub repo URL
-- GitHub repo full name
-- Branch name
-- Contracts folder path
-- Short commit hash
-- Drive folder name
-- Drive folder URL
-- Placeholder Google Doc name
-- Placeholder Google Doc URL
-- Dev lead email
-- Expected scan counts: total `.sol`, skipped test/mock, skipped under 10 lines, eligible count, scanned count, skipped by cap count
-- Expected vulnerability categories present
+Do not scan contracts, research CVEs, create report content, or draft email during setup. When finished, summarize the setup in plain language and confirm the blank placeholder, zero drafts, and static source checks. Report any blocker directly.

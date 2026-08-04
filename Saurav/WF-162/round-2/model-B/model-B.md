@@ -1,6 +1,6 @@
 # WF-162 Round 2 - Model B
 
-Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
+Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../../docs/scoring/comparative-rerate-addendum.md)
 
 ## Model identity
 
@@ -12,11 +12,11 @@ Codex, gpt-5.6-fish, Extra High intelligence
 
 ## Logs
 
-Raw logs will be saved to `codexlogs.txt` (same folder) once captured - not yet captured.
+[Codex logs](codexlogs.txt)
 
 ## Output
 
-Raw evidence will be saved to `output/` (same folder) once captured - not yet captured.
+[Complete produced artifact content and durable actual values - not yet captured]
 
 ## 2. Task accuracy, ignoring speed
 

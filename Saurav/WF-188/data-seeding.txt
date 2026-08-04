@@ -1,74 +1,74 @@
-# Round 1 data-seeding controls - LLM cost and latency attribution
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or
+require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for
+setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age. If prior output
+remains, perform the named-resource reset below directly, then continue with setup.
 
-Create a fresh immutable code snapshot and cloned observability, Sheets, Jira, and Teams state for every
-run `R1-A` through `R1-D`. Tag output `[COST-R1-<run>]`; keep screened-row counts, token math, pricing
-workbook, ticket decisions, and reset selectors in a private evaluator manifest.
+This is a stable fixture in dedicated test accounts. Do not create a run ID, run manifest, control sheet, setup inventory, production resource, or a second exact-name resource. Exact names define the test boundary.
 
-Seed clean baseline data plus null, zero, and negative latency, duplicate request IDs, code-inconsistent
-provider/model rows, and repeated call sequence rows. Include non-generative embeddings/moderation, dead
-or commented-out code, zero traffic, dependent calls that are not parallelizable, independent calls that
-are, a long uncached Anthropic prompt, and a long automatic-caching provider prompt. Use fixed window
-data so p50, p95, monthly projections, and ticket gates have auditable answers. Seed open and closed
-ticket histories for update-versus-new behavior.
+## Named resources
 
-Create a test-only environment for the Cahuu LLM cost and latency attribution workflow. Do not use production systems, production data, real provider API keys, or real billing credentials. Reuse exact-name resources if they already exist.
-Required resources:
-GitHub repo: sauravempiricinfotech-sys/cahuu-llm-gateway
-Supabase project: cahuu-observability
-Google Drive folder: LLM Cost Attribution Reports - Cahuu
-Google Sheet inside that folder: LLM Cost & Latency Attribution - Cahuu
-Jira project: Cahuu LLM Gateway Ops, key CLGO
-Teams team/channel: Testing Client Workflows / LLM Cost Attribution
-Important: the repo must contain a commit on main with commit timestamp at or before 2026-07-16 09:00 IST. If you cannot create or locate such a commit, stop and report that the workflow cutoff cannot be tested.
-Create the FastAPI repo with:
-app/main.py registering routers with app.include_router(..., prefix=..., tags=[...])
-app/prompts/shared.py with BASE_SYSTEM_PROMPT, at least 1,800 characters
-app/services/llm_clients.py with fake provider wrappers and one clearly fake credential string labeled test-only
-Routes covering:/api/chat/respond: one OpenAI chat call, retry wrapper, plus one commented-out disabled call
-/api/chat/summarize-thread: two dependent OpenAI calls
-/api/docs/summarize: two independent Anthropic calls using long shared prompt, no cache control, no parallelization
-/api/docs/translate: one Gemini call inside asyncio.gather() with a non-LLM coroutine
-/api/support/triage: three dependent Anthropic calls; first uses long shared prompt without cache control
-/api/search/semantic: embeddings only
-/api/moderation/check: moderation only
-/api/onboarding/welcome-email: code exists but zero traffic
+Create a missing item; otherwise retain and reuse the exact item below. Stop and report an ambiguity if an exact-name project, folder, repository, sheet, team, or channel is duplicated.
 
-Seed Supabase with exact tables:
-request_logs(request_id uuid pk, endpoint_path text, status_code int, total_latency_ms int, created_at timestamptz)
-llm_call_logs(log_id uuid pk, request_id uuid fk, call_sequence_number int, provider text, model text, latency_ms int, response_char_length int, created_at timestamptz)
-Seed deterministic rows for 2026-07-09 00:00:00 UTC through 2026-07-15 23:59:59 UTC:
-/api/chat/respond: 70 successful rows plus 4 429 rows; one gpt-4o call each
-/api/chat/summarize-thread: 50 rows; two gpt-4o-mini calls each
-/api/docs/summarize: 55 rows; two claude-sonnet-4-5 calls each; p95 above 8,000ms
-/api/docs/translate: 40 rows; one gemini-2.5-flash call each
-/api/support/triage: 65 rows; one claude-sonnet-4-5 plus two claude-haiku-4-5 calls each; p95 above 8,000ms
-/api/search/semantic: 90 rows; one text-embedding-3-small call each
-/api/moderation/check: 60 rows; one omni-moderation-latest call each
-/api/onboarding/welcome-email: zero rows
-On top of those clean counts, seed a small set of deliberately bad rows so the pre-computation screen has something to catch. The per-endpoint counts above are the rows that should survive the screen, these are extras that a correct run drops back out:
-/api/docs/summarize: 2 extra request_logs rows with total_latency_ms null and one with total_latency_ms negative (-1); their p95 must not move
-/api/support/triage: 1 duplicate request_id already present in its request_logs, and 1 llm_call_logs row logged as provider openai / model gpt-4o even though this endpoint only makes Anthropic calls
-/api/chat/respond: 1 llm_call_logs row with a call_sequence_number that repeats an existing sequence number inside the same request_id
-A correct run flags and sets these aside, keeps the stated 2xx counts intact, and logs the drop count per table in the Run Log. A run that computes straight off the raw rows will report a skewed p95 for summarize or triage and an off monthly projection.
-Create the Google Sheet in advance, because the workflow requires edit access during its initial access check. Add empty tabs with headers:
-Cost By Endpoint
-Cost By Feature
-Pricing Sources
-Run Log
-Create Jira seed tickets:
-Open To Do: [LLM Cost] /api/support/triage
-Closed Done: [LLM Cost] /api/docs/summarize
-Expected workflow behavior:
-Update the open support triage ticket
-Create a fresh docs summarize ticket because the old one is closed
-Do not create tickets for endpoints that are merely expensive/slow without a real caching or parallelization opportunity
-Treat embeddings and moderation as non-generative calls, not billable generative attribution
-Include onboarding in the Sheet with zero volume/cost/latency
-Seed Teams with a few unrelated messages, but none mentioning the July 9-15, 2026 window or linking the target Sheet.
-Final setup report must include:
-GitHub repo URL and fixed commit SHA
-Supabase project name and seeded table confirmation
-Drive folder URL
-Google Sheet URL
-Jira project key and seed ticket keys/statuses
-Teams team/channel confirmation
+- GitHub repository: sauravempiricinfotech-sys/cahuu-llm-gateway, branch main
+- Supabase project: cahuu-observability; tables: request_logs and llm_call_logs
+- Drive folder: LLM Cost Attribution Reports - Cahuu
+- Google Sheet: LLM Cost & Latency Attribution - Cahuu
+- Jira project: Cahuu LLM Gateway Ops, key CLGO
+- Teams: Testing Client Workflows → LLM Cost Attribution
+
+The GitHub fixture and two Supabase tables are static model inputs. The Drive folder and Sheet, Jira project, and Teams channel are reusable destinations. Keep the repository, tables, folder, project, and team/channel between runs.
+
+## Direct pre-run reset
+
+Before evaluating the ready state, reset only output a prior model could have changed:
+
+- Restore LLM Cost & Latency Attribution - Cahuu to the four blank baseline tabs and headers specified below;
+  remove workflow-created rows, formulas, charts, comments, links, formatting, and added tabs, but retain the
+  same Sheet and Drive folder.
+- Ensure the two labelled CLGO baseline issues specified below exist, creating either if missing; restore them
+  to their baseline fields, then delete every other issue and attachment in that exact test project. Retain
+  the project itself.
+- Delete every post and reply in the exact LLM Cost Attribution Teams channel. Retain the team and channel.
+- Do not alter the GitHub repository or Supabase tables during a normal reset. Only repair one of those named
+  sources if it was incorrectly changed by a prior model.
+
+## Stable source fixture
+
+The GitHub main history must contain the canonical private evaluator fixture. The latest commit at or before 2026-07-16 17:05 Asia/Kolkata is the model-facing cutoff; later main commits must be present but out of scope. The cutoff snapshot must require genuine tracing across route modules, router includes, service helpers, and separately loaded prompts. It must contain:
+
+- billable OpenAI Chat Completions or Responses, Anthropic Messages, and Gemini generateContent calls;
+- embeddings and moderation calls to list separately;
+- commented-out code and a feature-flag-off route with generative calls to exclude;
+- an endpoint with no valid traffic;
+- a router whose URL prefix conflicts with its include_router tag;
+- retries around one logical call;
+- one independent two-call route and one output-dependent two-call route;
+- a long repeated Anthropic prompt without explicit caching, and a long OpenAI or Gemini prompt where automatic caching makes it non-actionable;
+- a harmless test-only secret-shaped value whose location, but never value, can be reported.
+
+The named Supabase tables must retain the canonical fictional data for 2026-07-09 00:00:00 through 2026-07-15 23:59:59 UTC. Use a row primary key distinct from request_id so the dataset can include a duplicate request_id. Include clean 2xx and non-2xx records plus, for distinct endpoints, every screening trap in the signed prompt: null, zero, and negative request latency; a duplicate request_id; an llm provider/model inconsistent with code; and a repeated call_sequence_number within one request. Preserve response lengths, call order, and timestamps necessary to test zero traffic, p50/p95, 30/7 monthly projection, cost attribution, and parallelization reasoning.
+
+Do not reset the repository or tables on a normal setup. Verify their canonical state and repair only that named source if a prior model incorrectly changed it. Never alter another repository, branch, or Supabase table.
+
+## Resettable destination baseline
+
+Before the model begins, verify:
+
+- the target Sheet has exactly these four tabs, in this order, with the listed header row and no workflow data rows, formulas, charts, comments, or added tabs:
+  - Cost By Endpoint: Endpoint | Feature | Model(s) | 7d 2xx Requests | Monthly Volume | Prompt Token Method | Est. Tokens / Request | Est. Monthly Cost (USD) | P50 Latency (ms) | P95 Latency (ms) | Opportunity Flags | Ticket / Notes
+  - Cost By Feature: Feature | Endpoints | Monthly Volume | Est. Monthly Cost (USD) | Opportunities
+  - Pricing Sources: Provider | Model | Input Price | Output Price | Official Source | Checked Date | Notes
+  - Run Log: Run Date | Analysis Window | Commit SHA | Status / Exclusions
+- CLGO contains exactly two baseline issues:
+  - open, To Do, unassigned: [LLM Cost] /api/support/triage, labelled wf188-baseline-open; description: WF-188 test baseline: existing open ticket to update in place.
+  - closed, Done, unassigned: [LLM Cost] /api/docs/summarize, labelled wf188-baseline-closed; description: WF-188 test baseline: closed history; it must not block a new ticket.
+  Both baseline issues have no comments or attachments.
+- LLM Cost Attribution contains no posts or replies.
+
+The model-run account needs read access to the repository and tables, edit access to the target Sheet and the CLGO issues, and permission to post to the exact Teams channel. Do not create a report row, Jira ticket, or Teams post during setup.
+
+## Difficulty and isolation
+
+This must remain a performance test rather than a happy path. Keep the code-to-telemetry mismatches, bad rows, source-priority conflicts, cutoff commits, zero-traffic route, false parallelization signal, provider-specific cache distinction, and open-versus-closed ticket history intact. Do not add model-visible expected results, helper formulas, seeded report rows, ticket templates, or channel posts that reveal an answer.
+
+When finished, summarize the setup in plain language and confirm the named resources and ready-state checks. Report any blocker directly.

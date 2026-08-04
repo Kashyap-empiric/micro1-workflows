@@ -16,10 +16,10 @@ This record has three purposes:
 
 This template works alongside:
 
-- `prompt-definition-template.md`
-- `model-testing-blueprint-and-run-comparison.md`
+- `../prompt-authoring/prompt-definition-template.md`
+- `../prompt-authoring/model-testing-blueprint-and-run-comparison.md`
 - `harsh-evaluation-protocol.md`
-- `head-to-head-07-23-template.md`
+- `codex-session-context.md`
 - `voice-and-format-checklist.md`
 
 ---

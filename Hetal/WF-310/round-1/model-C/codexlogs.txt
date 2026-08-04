@@ -1,0 +1,130 @@
+Worked for 8m 49s
+
+
+I’m using the GitHub skill to retrieve the authoritative repo data and the Google Sheets skill for precise tab updates. I’ll use Jira’s issue tools directly for the required tickets, falling back to the logged-in Chrome session only if a connector is unavailable. I’ll first reproduce every top-5 outcome and the full α sweep locally, then write the sheet and create only the confirmed corpus-gap tickets plus the single retrieval recommendation ticket.
+
+
+
+
+Used GitHub, Google Drive, and Atlassian Rovo integrations, ran commands
+
+
+The three source files are now loaded from hetalempiricinfotech-eng/support-rag-eval, and the connectors resolved the exact destinations: the Google Sheet has the two requested tabs, and Jira project “Search Quality” is project key SQ. The fixture contains 84 distinct query rows and declares 8 corpus gaps; I’m now computing the α sweep and checking that those counts reconcile before any writes.
+
+
+
+
+Used Google Drive integration, ran a command
+
+
+The destination sheet already contains an older 84-row analysis, but it lacks the required corpus-gap column and may reflect a different fusion result. The Google Sheets skill’s structure-preservation rules apply here, so I’m preserving the existing table and formatting, adding only the missing field, and replacing the analysis values with the independently recomputed results.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations, ran a command
+
+
+Jira already contains exactly the required ticket set from 22 July: one ticket for each of the 8 confirmed gap queries (SQ-38 through SQ-45) and one hybrid recommendation ticket (SQ-46). I’m treating those as the canonical tickets and will not create duplicates; I’m checking their descriptions against the required query IDs, chunk IDs, finding, and recommended-action fields and will repair any missing fields if necessary.
+
+
+
+
+For the Google Sheets skill’s required visual verification, I’m using the authenticated desktop session only to inspect the rendered tabs after the connector write. This is a read-only QA pass; it won’t alter the sheet or the production retrieval system.
+
+
+
+
+Ran Get-Content -LiteralPath 'C:\Users\Empiric\.codex\plugins\cache\openai-bundled\computer-use\26.721.41059\skills\computer-use\SKILL.md' -Raw
+
+
+
+
+Initialize read-only sheet QA
+
+
+
+
+
+Locate the rendered Google Sheet
+
+
+
+
+
+Select the Chrome window
+
+
+
+
+
+The desktop visual-QA helper stopped because it could not confidently determine Chrome’s current URL, so I’m not issuing further browser input. I’m completing verification through the Google Sheets and Jira connectors instead: exact cell-by-cell readback, formatting checks on the new column, and a final ticket-count reconciliation.
+
+
+
+
+use chrome integration
+
+
+
+
+
+
+4:02 PM
+
+
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+I’ll use the Chrome integration now for the rendered-sheet verification, as requested. The connector calculations and writes are already complete; Chrome will be a read-only check of both tabs and the Jira ticket set.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+
+
+
+Completed and verified in Chrome.
+Open the Google Sheet
+Retrieval results
+Method	Hits	Recall@5
+BM25 only	56/84	66.7%
+Dense only	31/84	36.9%
+Hybrid RRF, α=0.5	67/84	79.8%
+
+Hybrid’s relative improvement over dense-only is 116.1%, clearing the 39% threshold. Recommendation: keep hybrid retrieval at α=0.5 rather than move to dense-only. No production configuration was changed.
+The RRF sweep produced:
+α 0.0–1.0: 36.9%, 48.8%, 48.8%, 48.8%, 48.8%, 79.8%, 73.8%, 73.8%, 73.8%, 75.0%, 66.7%
+Category rollup
+Category	Queries	Share	BM25	Dense	Hybrid
+exact-match	35	41.7%	100.0%	0.0%	85.7%
+semantic	10	11.9%	0.0%	100.0%	100.0%
+mixed	27	32.1%	77.8%	77.8%	100.0%
+no-coverage	12	14.3%	0.0%	0.0%	0.0%
+
+Of the 12 no-coverage queries:
+8 are confirmed corpus gaps.
+4 are retrieval misses with content present: Q033, Q040, Q061, and Q081.
+The Per-Query Detail tab contains all 84 independent rows, including the new Corpus Gap field, 6 disputed-query flags, standalone hits, category, and optimal-hybrid hit.
+Jira reconciliation
+Exactly the required nine tickets already existed, so I retained them without creating duplicates:
+Corpus gaps: SQ-38 through SQ-45, covering Q002, Q005, Q020, Q024, Q032, Q044, Q057, and Q058.
+Retrieval recommendation: SQ-46.
+Chrome showed all nine tickets and both completed sheet tabs; the sheet remains open there. Connector readback found zero cell mismatches.
+

@@ -54,4 +54,3 @@ Source files: `prompt-def.txt`, `workflow-business-problem.txt`, `data-seeding.t
 - [ ] Requirements and traps checked row by row
 - [ ] Outputs and source state independently verified
 - [ ] Cleanup completed and recorded
-

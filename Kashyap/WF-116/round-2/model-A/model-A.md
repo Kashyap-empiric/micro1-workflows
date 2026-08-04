@@ -1,6 +1,6 @@
 # WF-116 Round 2 - Model A
 
-Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
+Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../../docs/scoring/comparative-rerate-addendum.md)
 
 ## Model identity
 
@@ -8,26 +8,15 @@ Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23
 Codex, gpt-5.6-cat, Extra High intelligence
 
 ### Session ID
-019fcbf7-2e9d-7cf2-a3fe-9403906610b6
+[Session ID]
 
 ## Logs
 
-Raw logs saved at `codexlogs.txt` (same folder), referenced here, read in full during the scoring pass.
+[Codex logs](codexlogs.txt)
 
 ## Output
 
-Raw evidence saved at `output/` (same folder), referenced here, transcription and analysis happen
-during the scoring pass once all three models are ready:
-
-- `SCM-76.png` — screenshot
-- `SCM-77.png` — screenshot
-- `SCM-78.png` — screenshot
-- `SCM-79.png` — screenshot
-- `SCM-80.png` — screenshot
-- `SCM-81.png` — screenshot
-- `SCM-82.png` — screenshot
-- `Weekly Attribution Report - June 22, 2026 to June 28, 2026.pdf` — exported document deliverable
-- `teams post.png` — screenshot of a Teams channel post
+[Complete produced artifact content and durable actual values - not yet captured]
 
 ## 2. Task accuracy, ignoring speed
 

@@ -1,0 +1,70 @@
+Worked for 17m 39s
+
+I'm using the GitHub, Supabase, Google Sheets/Drive, Jira, Teams, and Chrome-control workflows because this run spans all six systems. I'll first validate every required permission without reading repository contents, table rows, sheet data, Jira issues, or channel posts; if any check fails, I'll stop exactly as requested.
+
+Ran commands
+
+The access preflight is now running against metadata and permission surfaces only. I'm deliberately not opening code, log rows, spreadsheet cells, Jira issues, or Teams posts until all required rights are confirmed.
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo, and Codex Apps integrations
+
+All required permissions are confirmed: GitHub read, Supabase reads on both named tables, Sheet ownership/editability in the exact folder, Jira create/edit for CLGO, and direct Teams channel posting. I'm proceeding with the pinned-code and data analysis now. The Supabase metadata also surfaced that both log tables have RLS disabled; I'll record that security finding without changing the database.
+
+Used GitHub integration, ran commands
+
+The code snapshot is pinned to commit 827233bbf7ed0da814ba07aad2ab380c3641541d, committed at 11:21:05 UTC (16:51:05 IST) on July 16, latest on main before the 17:05 IST cutoff. Every code read from here onward will use that exact SHA.
+
+Used Supabase integration, ran commands
+
+The repository trace is complete: six billable routes, two non-generative routes, one commented-out OpenAI call excluded, and one test-only hardcoded credential location to disclose without revealing its value. I'm now screening 338 request rows and 533 LLM-call rows before any percentile, volume, or cost calculation.
+
+Used Supabase integration
+
+Screening removed 2 request rows for non-positive latency and 1 LLM-call row for a code-mismatched provider/model; there were no duplicate request IDs or repeated call-sequence numbers. The only genuine parallelization opportunity is /api/docs/summarize, with an estimated median savings of about 3.06 seconds (roughly 46% of its LLM-chain time). The multi-call chat summary and support triage flows are dependency chains, so they are explicitly not parallelization candidates.
+
+Used Google Drive and Supabase integrations, ran a command, searched the web
+
+I'm writing the completed workbook now, preserving the existing tab structure and row formatting. The endpoint table will be ranked by cost, and the report will include call-level attribution, exact static prompt inventory, official pricing sources, non-generative calls, security/exclusion notes, and a provisional run row that I'll finalize after Jira and Teams complete.
+
+Used Google Drive integration, ran a command
+
+The Sheet is fully populated and verified at the cell level. One Jira action is eligible: /api/docs/summarize has p95 latency of 8,490 ms and a genuine two-call parallelization opportunity; the other slow endpoint, /api/support/triage, has only a dependent chain and therefore does not earn a ticket under your rule. I'm checking for an existing open CLGO ticket before creating anything.
+
+Used Atlassian Rovo integration
+
+The qualifying Jira task has been created as CLGO-10, unassigned and in "To Do," with the current metrics and Sheet row link. I'm performing the required Teams duplicate check now; I'll post only if no July 9-15 window update or matching Sheet link already exists.
+
+Used Codex Apps integration
+
+The Teams connector can enumerate the channel posts but is returning empty bodies for the July 16 messages, so it cannot reliably perform the duplicate-content check. Per your fallback instruction, I'm switching only this check to the logged-in Chrome session before deciding whether to post.
+
+Used Chrome integration, ran a command
+
+[User, 11:29 AM] just post the teams message
+
+Read browser guidance
+
+Understood, I'm posting the Teams update now and will record the sent message in the Run Log.
+
+Used Chrome, Google Drive, and Codex Apps integrations
+
+The Teams message was posted successfully. I'm doing the final readback now: the Run Log has been updated with the Jira and Teams links, and I'm verifying the final Sheet status before handing back the run summary.
+
+Used Google Drive integration
+
+Get jira issue
+
+Used Codex Apps integration, ran commands
+
+Weekly run completed.
+Commit: 827233bbf7ed0da814ba07aad2ab380c3641541d
+Window: July 9-15, 2026 UTC
+Estimated monthly generative spend: $18.51
+Actionable opportunities: 1
+Jira tickets: 1, CLGO-10, unassigned and To Do
+Updated Google Sheet
+Posted Teams notification
+/api/docs/summarize earned the ticket: p95 8,490 ms, with two independent calls that could save roughly 3.06 seconds when parallelized. /api/support/triage is slow but its calls are dependent, so it did not qualify.
+Pricing was verified against official OpenAI, Anthropic, and Google sources dated July 28, 2026.
+Security notes recorded in the Sheet: both Supabase log tables have RLS disabled, and a test credential-like value exists at app/services/llm_clients.py:6. Neither was modified.
+

@@ -1,0 +1,89 @@
+Worked for 7m 4s
+
+
+I’ll use the Google Drive/Sheets skills to establish the policy and reconcile the three workbooks, then the Teams and Gmail skills for the approved communications. I’ll use the connected apps where available and the logged-in Chrome session as the fallback. I’ll keep the policy as the decision authority, document any uncovered cases, and verify each write before handing this back.
+
+
+
+
+Used Google Drive integration, ran commands
+
+
+The policy and source sheets are reconciled. The key overrides are the SSO counts, the three quote costs, the fixed EUR conversion, and the named standards. I’m treating each sanctioned category as one consolidation opportunity, so Asana and Trello form a single Project Management opportunity with their row-level savings shown separately. The Design pair and uncategorised Loom cannot be assigned a target under this policy, so I’ll mark them as policy gaps rather than infer one.
+
+
+
+
+Used Atlassian Rovo and Codex Apps integrations
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Four qualifying tasks are now in IT Ops and assigned to the authenticated IT Operations Lead account. I’m writing the row decisions into the tracker’s existing review columns, including the below-threshold Pipedrive record, the frozen items, scope exclusions, complementary tools, and the policy gaps.
+
+
+
+
+Used Google Drive integration
+
+
+The sheet readback confirms all 20 rows now have decisions and reasons. The Sheets workflow requires a native visual check of the changed area, so I’m switching briefly to the Chrome skill to inspect the rendered review columns and adjust only their fit if needed.
+
+
+
+
+Used Chrome and the browser, ran commands
+
+
+The native sheet view shows the review columns wrapping cleanly across the full set of rows. I’m posting the finance-and-ops summary live to the exact Teams channel now, with potential savings separated from current-cycle actionability and the frozen/high-risk items called out.
+
+
+
+
+Used Codex Apps integration
+
+
+The Teams summary is live and read back successfully. I’ll now create one unsent Gmail draft per affected owner group: Marketing, Design, Engineering, Sales, Company-wide, and Client Services as the receiving owner of Harvest. Each will have an empty To field and an explicit verified-address reminder.
+
+
+
+
+Used Gmail integration
+
+
+
+
+
+Completed the quarterly review. The SaaS Subscription Tracker — Subscriptions now has a decision, retained target, estimated saving, Jira/record status, and policy reason for every one of the 20 tool rows in its existing K:O review columns. I preserved the source columns, verified the cell readback, and checked the native rendered sheet.
+Annualised spend analysed is USD 140,340. Policy-quantified potential net annual saving is USD 56,220: USD 53,340 in four Jira opportunities and USD 2,880 recorded on the tracker below the ticket threshold. These are estimates, not booked savings; USD 13,740 of the ticketed amount is freeze-deferred. The unquantified Design policy gap is excluded from the saving total.
+Opportunity	Retained standard	Net annual saving	Record
+Asana + Trello	Jira	$7,740 combined	ITOPS-37
+Slack internal chat	Microsoft Teams	$34,200	ITOPS-38
+Toggl Track	Harvest	$6,000	ITOPS-39
+Dropbox Business	OneDrive	$5,400	ITOPS-40
+Pipedrive	HubSpot	$2,880	Tracker only; below $3,000
+
+The four Tasks are assigned to the authenticated Jira account Hetal M1, as the IT Operations Lead. I treated Asana and Trello as one Project Management category opportunity; their individual tracker-row allocations are $6,240 and $1,500, and Jira's eight spare licences cover their combined five SSO-active users.
+The finance and ops summary is live in the requested Teams channel. It includes spend, saving, ticketed opportunities, the tracker-only item, and a separate higher-risk/timing section.
+The higher-risk calls are:
+Asana and Trello renew in 11 and 14 days, respectively, so both are deferred to next cycle under the 21-day freeze.
+Harvest, the retained Time Tracking standard, renews in 20 days. I conservatively deferred the Toggl-to-Harvest migration/action to next cycle and called out its billable-invoice dependency.
+Slack is the main internal chat with 291 SSO-active users. The policy calculation has 196 users beyond Teams' 95 spare licences, but Teams' policy seat price is zero.
+Dropbox contains an 8 TB design archive; migration integrity, permissions, dependencies, capacity, cutover, and rollback need validation.
+I created six unsent Gmail drafts for Marketing, Design, Engineering, Sales, the Company-wide internal-chat owner, and Client Services as Harvest's receiving owner. Readback confirmed each has the DRAFT label, no To header, and an explicit note that a verified owner address is required before sending. They are available in Gmail Drafts; none was sent.
+The unresolved and excluded calls are explicit on the tracker:
+Figma and Adobe XD: apparent UI-design overlap, but the policy names no Design standard. No target, saving, or ticket was inferred.
+Loom: category is blank and the policy supplies no classification or target.
+ClickUp and Discord: kept out of scope for external/client-facing access.
+Box: kept out of scope for platform-tied legal retention.
+Miro: whiteboarding is complementary to UI design.
+Google Analytics 4 and Mixpanel: web/marketing analytics and in-product event analytics are different jobs.
+No subscription was cancelled, no vendor was contacted, no licence was changed, and no row was deleted.
+
+
+3:22 PM
+

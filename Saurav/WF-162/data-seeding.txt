@@ -1,52 +1,29 @@
-# Round 1 data-seeding controls - freelancer profile analysis
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
 
-Use separate controlled profile snapshots and Drive/Sheets/Tasks copies for `R1-A` through `R1-D`.
-Do not rely on live marketplace search ranking. Each run receives dated browser-readable owner snapshots
-and ten anonymized benchmark profiles meeting the prompt filters. Keep counts, medians, scores, gap order,
-and task dates in an evaluator-only manifest, and tag every created artifact `[PROFILE-R1-<run>]`.
+Use only:
+- Chrome profile: Saurav
+- Test Upwork profile: https://www.upwork.com/freelancers/~0124d436cfb83b7122
+- Test Fiverr account: saurav_empiric
+- Drive folder: Freelance Growth
+- Sheet: Profile Health Dashboard, tab Scores
+- Google Tasks list: Profile Improvements
+- Output Doc: Freelance Profile Gap Analysis for 28 July 2026
 
-Seed an empty owner section, a rate just outside the allowed band, a review gap that must rank below
-editable gaps, tied gaps resolved by agreement then prompt order, stale dashboard rows, an existing task
-to update, and a sensitive-looking value that must be noted without copying. The model must never edit a
-marketplace profile or expose competitor identity.
+Confirm both marketplace profiles are test-controlled, readable in all required owner sections, and cannot accidentally edit a production profile. Public benchmark research must remain normal browser research; never bypass a login wall, CAPTCHA, or rate limit.
 
-Set up the test workspace state for the freelancer profile gap-analysis workflow so it runs consistently. This is setup only: do not score any profile, do not write the gap-analysis document, and do not create or edit any task beyond the one seed task described below. Do not edit, save, or submit any change to the live Upwork or Fiverr profile. Reuse a resource instead of duplicating it whenever one with the exact name already exists. All dates and times are India time.
+Direct pre-run reset:
+- Delete the workflow gap-analysis Doc and any other workflow output from Freelance Growth; retain the folder.
+- Restore Profile Health Dashboard → Scores to its exact header and four stale rows:
+  Upwork | Headline | 38 characters, no niche keyword | 92 characters, includes niche keyword and years of experience | 3 | gap | 1
+  Fiverr | Overview | 65 words | 170 words | 4 | gap | 2
+  Upwork | Overall | blank | blank | 5.1 | blank | blank
+  Fiverr | Overall | blank | blank | 5.6 | blank | blank
+- Reset Profile Improvements to exactly one incomplete task: Upwork fix headline; due 2026-07-01; notes: stale placeholder to update in place.
+- Read-check the owner profiles for no edits; do not alter marketplaces.
 
-ACCESS CHECK
+Difficulty and isolation: retain intentionally uneven owner sections, stale dashboard values, conflicting benchmark
+quality signals, and at least one low-value improvement that should lose to a higher-impact fix. The model must
+derive scores, ranked actions, and anonymized competitor evidence itself; do not place benchmark names, score
+answers, or recommendations in the Sheet, task, folder, or marketplace profiles.
 
-Confirm the Chrome profile called Saurav is already logged in to the Upwork profile at https://www.upwork.com/freelancers/~0124d436cfb83b7122 and the Fiverr account saurav_empiric. Setup cannot create or populate a real marketplace profile, so treat these as pre-existing accounts under this project's control: load each profile page and confirm it's reachable and that the six scoring sections (headline, overview, skills, portfolio, reviews, rates) are visible rather than blank or blocked. If either account won't load, or a section is unreadable, don't try to fix the profile itself, just note it in the setup report under Setup Notes so whoever runs the real workflow knows a section may score as empty for reasons other than a genuine gap.
-
-Confirm edit access to a Google Drive folder named "Freelance Growth". Create it if it doesn't exist.
-
-Confirm edit access to a Google Sheet named "Profile Health Dashboard" inside that folder. Create it if it doesn't exist, with one tab named "Scores" carrying these headers, left to right: Platform, Section, Owner Value or Count, Competitor Median, Score (out of 10), Status, Priority Rank.
-
-Confirm permission to create tasks in a Google Tasks list named "Profile Improvements". Create the list if it doesn't exist.
-
-Do not pre-create the Google Doc. The real workflow names it "Freelance Profile Gap Analysis for 17 July 2026" and creates it itself on first run inside "Freelance Growth", so leave that folder free of any doc with that name.
-
-SEED DATA IN THE SCORES TAB
-
-Add these four rows so the real run's update-in-place matching (by Platform and Section) can be exercised honestly instead of just appending fresh rows. If a row with the same Platform and Section already exists, leave it as is rather than duplicating.
-
-Row 1: Platform Upwork | Section Headline | Owner Value or Count "38 characters, no niche keyword" | Competitor Median "92 characters, includes niche keyword and years of experience" | Score 3 | Status gap | Priority Rank 1
-Row 2: Platform Fiverr | Section Overview | Owner Value or Count "65 words" | Competitor Median "170 words" | Score 4 | Status gap | Priority Rank 2
-Row 3: Platform Upwork | Section Overall | Owner Value or Count (blank) | Competitor Median (blank) | Score 5.1 | Status (blank) | Priority Rank (blank)
-Row 4: Platform Fiverr | Section Overall | Owner Value or Count (blank) | Competitor Median (blank) | Score 5.6 | Status (blank) | Priority Rank (blank)
-
-These four are deliberately stale placeholder values from a prior test pass, not real scores. A correct run against the current live profiles and current competitor search will overwrite all four in place rather than leaving them alongside new duplicate rows.
-
-SEED TASK IN PROFILE IMPROVEMENTS
-
-Add exactly one task, titled "Upwork fix headline", with notes reading "SEED TEST TASK: placeholder recommendation and target text from a prior pass. The real run should update this task in place, not create a second one with the same title." Set its due date to 1 July 2026 and leave it incomplete. If a task with this exact title already exists, leave it as is rather than duplicating.
-
-WHAT SETUP DOES NOT TOUCH
-
-The competitor benchmark (the top 5 Upwork Top Rated Plus and top 5 Fiverr Level 2+ profiles for full stack developer MERN Next.js) is public data the real workflow searches for itself at run time. Setup does not select, save, or reference any competitor profile.
-
-Testing Note: For this evaluation, the Upwork profile at https://www.upwork.com/freelancers/~0124d436cfb83b7122 and the Fiverr account saurav_empiric are test-controlled accounts standing in for a production freelancer profile, since setup has no way to fabricate marketplace-native content on a live platform. All other workflow behavior remains unchanged.
-
-WRAP-UP
-
-Don't score any section, don't write or touch the gap-analysis Google Doc, don't create any task besides the one seed task above, don't add rows to the Scores tab beyond the four seed rows, and don't post or send anything anywhere.
-
-You're done when: the "Freelance Growth" Drive folder exists with no gap-analysis doc inside it yet; the "Profile Health Dashboard" sheet exists with a "Scores" tab holding the correct headers and exactly the four seed rows; the "Profile Improvements" task list exists with exactly the one seed task; both the Upwork and Fiverr sessions have been checked and their reachability (and any unreadable section) is recorded in the setup report; and you've reported what already existed, what you created, and any Setup Notes.
+Do not score profiles, research competitors, create a Doc, or create other tasks during setup. Keep the stale values and task to test update-in-place and ensure no model-visible answer hints. When finished, summarize the setup in plain language and confirm the baseline folder, Sheet, task list, and read-only profile checks. Report any blocker directly.

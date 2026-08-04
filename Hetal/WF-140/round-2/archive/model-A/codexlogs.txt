@@ -1,0 +1,98 @@
+Worked for 9m 46s
+
+
+I’m using the Google Drive/Sheets, Jira, Teams messaging, and Chrome-control workflows because this job spans five live systems and the policy must govern every decision. I’ll first read the rulebook and source sheets, then calculate and write back the decisions, create only policy-qualified Jira tickets, post the live Teams summary, and prepare unsent Gmail drafts with blank recipients.
+
+
+
+
+Loaded tools
+
+
+The spreadsheet workflow requires preserving existing structure and validation when adding decision fields, so I’m reading its edit and cell-structure rules before touching the tracker. I’ll also confirm the exact live-write paths for Teams and Jira before any outbound action.
+
+
+
+
+Used Google Drive integration, loaded tools, read files
+
+
+The policy is now grounded. Key constraints are decisive: SSO counts override self-reported activity, fresh Q3 quotes override tracker cost, listed standards are the only permitted targets, opportunities group by category/target, tickets start at USD 3,000, and renewals within 21 days of 29 July 2026 are frozen but still recorded and ticketed if eligible.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations, ran a command
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+I found five genuine consolidation opportunities worth USD 56,220 annually against USD 140,340 of analysed annualised/quoted spend. Four meet the Jira threshold; the CRM opportunity is USD 2,880 and will be tracker-only. The higher-risk set is Slack→Teams (291-user company-wide migration), Dropbox→OneDrive (8 TB), and Toggl Track→Harvest (the retained platform feeds client billing). The Asana/Trello group is renewal-frozen because both renew inside the 21-day window.
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Used Google Drive and Codex Apps integrations
+
+
+The Teams summary is live, and the four Jira tasks are created and assigned to your authenticated Jira account. Gmail is the only requested connector not installed, so I’m now using the already signed-in Chrome session as instructed; this affects only draft creation, with every recipient field left blank.
+
+
+
+
+Used Chrome integration
+
+
+All five department drafts are saved with blank recipient fields and the explicit verified-address warning in the body. I’m doing one final readback of the Gmail draft list and a visual check of the updated tracker before I wrap up.
+
+
+
+
+Used Chrome integration, ran a command
+
+
+
+
+
+Completed the SaaS consolidation review.
+Annual spend analysed: USD 140,340
+Estimated annual saving: USD 56,220
+Tracker updated for all 20 tools: SaaS Subscription Tracker
+Teams summary posted live: view post
+Jira tasks created and assigned to you:
+ITOPS-43: Slack → Teams, USD 34,200
+ITOPS-41: Asana + Trello → Jira, USD 7,740; renewal-frozen
+ITOPS-42: Toggl Track → Harvest, USD 6,000
+ITOPS-44: Dropbox Business → OneDrive, USD 5,400
+Pipedrive → HubSpot, USD 2,880, was recorded on the tracker only because it falls below the ticket threshold.
+Five Gmail drafts were saved for Marketing, Design, Company-wide, Engineering, and Sales. Every To field is blank and every draft states that a verified address is required.
+Higher-risk opportunities were flagged for Slack’s 291-user migration, Dropbox’s 8 TB archive, and Harvest’s client-billing dependency. Figma, Adobe XD, and Loom were marked unresolved because required policy inputs are missing.
+Nothing was cancelled or sent; no licences or rows were changed or deleted, and no vendors were contacted.

@@ -1,14 +1,8 @@
-# Round 1 cleanup - Multi-touch attribution
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only Marketing Data Warehouse - Solstice Cloud, Weekly Attribution Reports - Solstice Cloud, Jira SCM, and Marketing Attribution Summary.
 
-Clean only `[ATTRIBUTION-R1-<run>]` output and restore the cloned warehouse/output baseline. Preserve final
-calculations, report links, ticket IDs, and Teams evidence in the evaluation record first.
+1. Drive: delete all workflow report Docs/files from Weekly Attribution Reports - Solstice Cloud; retain the folder.
+2. Jira: delete every SCM issue and attachment. Retain the project itself; standalone setup recreates the one named baseline issue.
+3. Teams: delete all posts/replies in Marketing Attribution Summary.
+4. Sheet: restore Run Log to headers only and remove workflow-created tabs/objects. Verify each frozen source tab remains unchanged. If a source tab was changed, stop and report the unresolved source change rather than guessing a source baseline.
 
-1. Delete the tagged Google Doc, tagged Teams post, and run-created Jira issues. For a seeded matching
-   issue updated in place, restore its original fields and status rather than deleting it.
-2. Restore the run's output tabs and Run Log to baseline. Do not alter the frozen source exports, GA4 rows,
-   CRM rows, or FX rates used to seed the next run.
-3. Remove any temporary attribution tables, charts, or exported artifacts carrying the run tag.
-4. Verify no tagged Doc/post/ticket/output remains, the Run Log is empty or baseline-only, and source-tab
-   checksums match the manifest. Record reset verification with time and evaluator name.
-
-Stop on an ambiguous ticket or missing baseline. Never delete broad folder contents or production marketing data.
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm an empty output surface, empty Jira project, zero Teams messages, and frozen source tabs left untouched.

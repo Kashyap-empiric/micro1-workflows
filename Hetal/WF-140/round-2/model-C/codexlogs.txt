@@ -1,0 +1,138 @@
+Worked for 6m 26s
+
+
+I’ll use the connected Google Drive/Sheets and Teams workflows to reconcile the tracker against the policy, SSO report, and renewal quotes, then use Jira and Gmail through available connectors or the logged-in Chrome session where needed. I’ll keep cancellations, vendor contact, license changes, and row deletion out of scope.
+
+
+
+
+Used Atlassian Rovo, Google Drive and Codex Apps integrations, loaded tools, read files, ran commands
+
+
+The policy establishes five sanctioned standards, uses SSO counts over tracker usage, prefers Q3 quotes, groups retirements by category and target, and freezes renewals within 21 calendar days inclusive of 29 July. I’m now reconciling the actual rows and quote/identity inputs before making any writes.
+
+
+
+
+Used Google Drive integration
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Atlassian Rovo and Google Drive integrations
+
+
+The reconciliation yields five genuine opportunities: Asana + Trello → Jira, Slack → Teams, Toggl Track → Harvest, Dropbox Business → OneDrive, and Pipedrive → HubSpot. Four clear the grouped USD 3,000 threshold; Pipedrive is tracker-only. The current annualised/quoted spend across all 20 populated rows is USD 140,340, and estimated savings are USD 56,220. I’ll create the four IT Ops tasks, including freeze and risk constraints, then write the row-level outcomes.
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Updated spreadsheet
+
+
+
+
+
+The four tasks are filed and assigned to the authenticated IT Operations Lead account: ITOPS-53 through ITOPS-56. The tracker write-back now covers all 20 populated rows, including the grouped freeze, retained exclusions, complementary pairings, and unresolved policy gaps. I’ll verify it, post the live Teams summary, and then create the unsent department drafts in Chrome because no Gmail connector is surfaced.
+
+
+
+
+Got spreadsheet cells "'Subscriptions'!K1:O21"
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+
+
+Got spreadsheet range "A1:O21"
+
+
+
+
+
+I’m posting the finance/ops summary live to the resolved “SaaS Consolidation Model Test” channel now. It separates the three policy higher-risk migrations and the renewal-freeze deferrals from the savings total.
+
+
+
+
+Used Chrome and Codex Apps integrations
+
+
+Two drafts are saved with blank recipients. I’m completing the company-wide, Engineering, and Sales drafts with the same verified-address warning and planning-only guardrails.
+
+
+
+
+Used Chrome integration
+
+
+
+
+
+The review is complete as of 29 July 2026, Asia/Kolkata.
+Measure	Result
+Populated tracker rows analysed	20
+Total annualised/quoted spend analysed	USD 140,340
+Total estimated annual saving	USD 56,220
+Ticketed saving	USD 53,340
+Tracker-only saving below threshold	USD 2,880
+
+
+The SaaS Subscription Tracker now has a decision, retain/consolidation target, saving where permitted, Jira or record outcome, and policy reason for every populated row in Subscriptions!K:O. The saving column totals USD 56,220 in the rendered sheet.
+Opportunity	Retain	Net annual saving	Outcome
+Asana + Trello	Jira	USD 7,740	ITOPS-53
+Slack	Microsoft Teams	USD 34,200	ITOPS-54
+Toggl Track	Harvest	USD 6,000	ITOPS-55
+Dropbox Business	OneDrive	USD 5,400	ITOPS-56
+Pipedrive	HubSpot	USD 2,880	Tracker only; below USD 3,000
+
+
+All four Jira tasks are assigned to the authenticated IT Operations Lead account, Hetal M1.
+Higher-risk items were explicitly separated:
+Slack → Teams: company-wide migration involving 291 identity users.
+Dropbox → OneDrive: 8 TB archive.
+Toggl → Harvest: the retained target feeds client billing/invoices.
+Asana and Trello renew within the inclusive 21-day freeze. Harvest renews on 19 August, exactly 21 days after the review. The tracker and relevant tickets state that migration or cancellation action is deferred to the next cycle.
+The live finance/ops summary was posted to SaaS Consolidation Model Test in Microsoft Teams.
+Five unsent drafts are saved in Gmail Drafts, one each for Marketing, Design, Company-wide Communication, Engineering, and Sales. Each deliberately has an empty To field and says a verified owner address is required before sending. No email was sent.
+ClickUp, Discord, and Box were retained as policy exclusions. Miro/UI design and GA4/Mixpanel were treated as complementary. Figma and Adobe XD remain unresolved because the policy does not provide a sanctioned Design target; Loom remains unresolved because its category and target are missing. No target, overlap, or saving was guessed for those rows.
+No subscriptions were cancelled, no licences were changed, no vendors were contacted, and no tracker rows were deleted.
+
+
+10

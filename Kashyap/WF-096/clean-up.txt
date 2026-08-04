@@ -1,16 +1,8 @@
-# Round 1 cleanup - Third-party research workflow
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only Jira project TCW, RelayForge Research Documentation, testing client workflows → Engineering, and kashyapempiricinfotech-sys/relayforge-operations-platform.
 
-Clean only outputs carrying `[RESEARCH-R1-<run>]` and restore the exact pre-run fixture from its manifest.
-Capture links, source log, Jira changes, and final report before cleanup.
+1. Drive: retain every source attachment/document. Delete every Google Doc whose title begins [TCW] - 3rd Party Research -; standalone setup recreates the blank stale output Doc.
+2. Jira: delete every issue, comment, and attachment in TCW. Retain the project itself; standalone setup recreates the deterministic queue.
+3. Teams: delete every post and reply in testing client workflows → Engineering.
+4. GitHub: verify the default-branch source fixture is unchanged; do not modify it.
 
-1. Delete the run-created Google Doc and any run-specific Drive artifact. Do not delete the authorised
-   source folder, repository snapshot, or seeded attachments.
-2. Remove run-tagged Teams posts. Delete new run-tagged Jira issues; for a seeded/open issue updated by the
-   run, restore its baseline summary, description, comments, assignee, and status. Restore the selected
-   seed ticket to its pre-run status and remove only automated tagged comments.
-3. Reset the run's research source-log and temporary snapshots to baseline without altering saved evaluator
-   evidence or public-source archive references.
-4. Verify no tagged Doc, ticket, comment, or Teams post remains and all seed resources exactly match their
-   baseline IDs and fields. Log reset status.
-
-Stop if an item has no exact tag/baseline match. Never delete an untagged research document or Jira issue.
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm empty TCW, retained Drive source inputs, zero Teams messages, and an unchanged source snapshot.

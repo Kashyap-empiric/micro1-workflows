@@ -1,0 +1,355 @@
+Worked for 7m 9s
+
+
+I’ll use the GitHub and Google Sheets workflows to inspect the source data, compute the retrieval outcomes and fusion sweep, then write the analysis and create the Jira tickets. I’ll keep confirmed corpus gaps separate from retrieval misses throughout.
+
+
+
+
+Used Google Drive, GitHub, and Atlassian Rovo integrations, ran commandsRan Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/github/0.1.8-2841cf9749ae/skills/github/SKILL.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/SKILL.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-visual-quality.md'
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-batch-update-recipes.md' in 1s
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-live-read-search-safety.md' in 1s
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/reference-edit-workflow.md' in 1s
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.10/skills/google-sheets/references/style-profiles.md' in 1s
+
+
+
+
+Searched Drive "Hybrid Retrieval Coverage Analysis"
+
+
+
+
+
+Searched repositories
+
+
+
+
+
+Getaccessibleatlassianresources
+
+
+
+
+
+Fetched file
+
+
+
+
+
+Getvisiblejiraprojects
+
+
+
+
+
+Fetched file
+
+
+
+
+
+Fetched file
+
+
+
+
+
+Got spreadsheet metadata
+
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+Fetched file
+
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+
+
+
+
+
+The source fixture has 84 independent query rows, k = 60, and an explicit ascending chunk-ID tie-break for fused scores. The destination already has the requested two tabs and matching headers, so I’m calculating against those exact columns.
+
+
+
+
+Fetched file
+
+
+
+
+
+The sweep has a unique maximum at α = 0.5: 67/84 hits (79.8%). BM25 alone is 56/84 (66.7%), dense alone 31/84 (36.9%), so hybrid improves on dense by 116.1% relative—well above the 39% bar. I’ll write the four category rows to Category Summary!A2:G5 and all 84 query rows to Per-Query Detail!A2:I85, preserving the existing formatting.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations
+
+
+SQ is the Search Quality project and currently has no issues. I’m creating eight separate corpus-content-gap Tasks for the eight log-confirmed gaps, plus one retrieval-recommendation Task. The four in-corpus retrieval misses—Q033, Q040, Q061, and Q081—will remain analysis rows only, with no corpus-gap ticket.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+Createjiraissue
+
+
+
+
+
+The Jira creation batch is still in flight. Once it returns, I’ll reconcile the created keys against the eight Corpus Gap? = Yes rows and verify the populated sheet values and layout.
+
+
+
+
+Jira has not returned the batch result yet, so I’m continuing to wait for the connector response before attempting any reconciliation or retry.
+
+
+
+
+Used Atlassian Rovo and Google Drive integrations
+
+
+Reconciliation found seven gap Tasks plus the recommendation; Q032 was the one missing from the returned Jira state. I’m filing that single missing gap now, then I’ll verify there are eight gap Tasks and one recommendation.
+
+
+
+
+Createjiraissue
+
+
+
+
+
+The missing Q032 Task is now SQ-73. I’m using the computer-use workflow for the Google-rendered visual check required by the Sheets workflow, after a structured reconciliation of the written cells and Jira issues.
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-bundled/computer-use/26.721.41059/skills/computer-use/SKILL.md'
+
+
+
+
+Initialize visual verification
+
+
+
+
+
+Find spreadsheet window
+
+
+
+
+
+The authenticated Chrome session is available. I’ll use the Chrome-control workflow to open the target native Sheet for its visual inspection.
+
+
+
+
+Used Chrome and Google Drive integrations, ran commandsRan Get-Content -Raw -LiteralPath 'C:/Users/Empiric/.codex/plugins/cache/openai-bundled/chrome/26.721.41059/skills/control-chrome/SKILL.md'
+
+
+
+
+Connect to native Sheet
+
+
+
+
+
+Read browser guidance, part 1
+
+
+
+
+
+Read browser guidance, part 2
+
+
+
+
+
+Read browser guidance, part 3
+
+
+
+
+
+Open analysis sheet
+
+
+
+
+
+Inspect Category Summary
+
+
+
+
+
+Locate detail tab
+
+
+
+
+
+Inspect Per-Query Detail
+
+
+
+
+
+Inspect later query rows
+
+
+
+
+
+Refresh detail sheet state
+
+
+
+
+
+Navigate to final rows
+
+
+
+
+
+Inspect final query rows
+
+
+
+
+
+Leave analysis Sheet open
+
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+
+
+
+The analysis is complete in Hybrid Retrieval Coverage Analysis. I populated all 84 independent rows in Per-Query Detail!A2:I85 and the four requested rollup rows in Category Summary!A2:G5. A readback found no per-query mismatches, and the native Google Sheets rendering was visually checked.
+Retrieval recommendation
+Keep hybrid retrieval as the evaluated recommendation, with α = 0.5 for BM25 and 0.5 for dense. This was the unique best point in the requested sweep.
+Method	Hits / 84	Recall@5
+BM25-only	56 / 84	66.7%
+Dense-only	31 / 84	36.9%
+Hybrid RRF, α = 0.5	67 / 84	79.8%
+
+Hybrid’s relative improvement over dense-only is:
+\[
+\frac{79.7619\%-36.9048\%}{36.9048\%}
+=\frac{67-31}{31}
+=116.1\%
+\]That exceeds the 39% relative-improvement threshold by 77.1 percentage points. The recommendation is recorded in SQ-72. No production retrieval setting, index, embedding, or corpus was changed.
+The RRF calculation used k = 60, zero contribution from a retriever when a chunk was absent from its recorded top 10, and ascending chunk ID to break exact fused-score ties, as specified in the retrieval recipe.
+α	Hybrid hits / 84	Recall@5
+0.0	31	36.9%
+0.1	41	48.8%
+0.2	41	48.8%
+0.3	41	48.8%
+0.4	41	48.8%
+0.5	67	79.8%
+0.6	62	73.8%
+0.7	62	73.8%
+0.8	62	73.8%
+0.9	63	75.0%
+1.0	56	66.7%
+
+Category rollup
+The recall columns below use the category’s own query count as denominator; the share column uses all 84 log rows.
+Category	Count	Share of log	BM25 Recall@5	Dense Recall@5	Hybrid Recall@5	Overall optimal α
+exact-match	35	41.7%	100.0%	0.0%	85.7%	0.5
+semantic	10	11.9%	0.0%	100.0%	100.0%	0.5
+mixed	27	32.1%	77.8%	77.8%	100.0%	0.5
+no-coverage	12	14.3%	0.0%	0.0%	0.0%	0.5
+
+The mixed group includes the six hybrid-only recoveries Q027, Q049, Q052, Q064, Q068, and Q079, where neither standalone top 5 hit but α = 0.5 did. It also includes the split-signal dual-truth cases Q046, Q055, Q059, and Q065, where BM25 and dense independently found different acceptable chunks. The six disputed rows Q010, Q023, Q031, Q034, Q069, and Q084 are explicitly marked Disputed? = Yes; either candidate was accepted as a hit without resolving the dispute.
+The 12 no-coverage rows are retrieval misses, not a corpus-gap count. They consist of eight confirmed gaps and four in-corpus misses:
+Confirmed corpus gaps: Q002, Q005, Q020, Q024, Q032, Q044, Q057, Q058.
+Acceptable content exists, but BM25, dense, and optimal hybrid all missed top 5: Q033 (D046/D047), Q040 (D053), Q061 (D053), and Q081 (D031). These have Corpus Gap? = No and received no corpus-gap ticket.
+Jira corpus-content-gap Tasks
+Each Task names the query, explicitly states that there is no acceptable related chunk ID, describes the missing content, and recommends governed content-team authoring and subsequent evaluation.
+Query	Missing content	Ticket
+Q002	HIPAA BAA eligibility, request flow, and plan requirements	SQ-65
+Q005	QuickBooks Online integration setup, permissions, and invoice-sync limits	SQ-66
+Q020	Deleted-workspace restore windows, request authority, and self-service limits	SQ-67
+Q024	Legal-hold scope, permissions, retention interaction, and release	SQ-68
+Q032	Mobile offline drafting and conflict synchronization	SQ-73
+Q044	Customer-managed encryption keys and rotation support	SQ-69
+Q057	Live chat translation availability, languages, and drafting timing	SQ-70
+Q058	Voice-call transcription, consent, languages, and ticket attachment	SQ-71
+
+The final Jira reconciliation is eight corpus-gap Tasks plus exactly one retrieval-recommendation Task. The source classifications and ground truths are from the query log.
+

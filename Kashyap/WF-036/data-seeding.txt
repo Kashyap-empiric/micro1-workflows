@@ -1,39 +1,28 @@
-Use private test-controlled page/profile, mailbox, Teams channel, and cloned content log for every run
-`R1-A` through `R1-D`. Never publish to a public account. Tag post, log row, email, and message
-`[LINKEDIN-R1-<run>]` so cleanup can isolate them.
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age. Use only the named dedicated test accounts.
 
-Freeze a browser-readable permitted-source research snapshot before each run. Include a stale candidate,
-a vendor-only non-substantive item, a cross-source tie resolved by recency, a duplicate recent story, and
-a valid backup topic. Create a separate all-duplicate variant that must fail safely without publishing.
-Keep qualifying ranking, expected draft-ID increment, and fallback target in the evaluator-only manifest.
+Resources:
+- LinkedIn test-controlled page/profile: https://www.linkedin.com/in/kashyap-empiric-b9998641a
+- Google Sheet: Empiric Infotech LinkedIn Content Log
+- Gmail test mailbox: kashyap.empiricinfotech@expert.micro1.ai
+- Teams: testing client workflows → Marketing → linkedin-approvals
+- Chrome profile: kashyap.empiricinfotech@expert.micro1.ai
 
-Set up the test data and workspace state for the Empiric Infotech LinkedIn workflow so it runs consistently. This is setup only: do not generate a post, do not publish to LinkedIn, and do not send any notifications. Do all browser work in the Chrome profile called "kashyap.empiricinfotech@expert.micro1.ai". Google Sheets, Gmail, Microsoft Teams, and LinkedIn are already open and logged in there, so you don't need to authenticate anything. All dates and times are Asia/Kolkata.
+Confirm the LinkedIn target is private/test-controlled and that posts can be deleted. Stop if it is public, production, or cannot be deleted. Confirm Gmail and Teams writes/deletes work in the named test destinations. Never use a different profile, page, mailbox, channel, or research source.
 
-Work through the following:
+Direct pre-run reset:
+- Delete all posts from the exact controlled LinkedIn target.
+- Delete sent Gmail messages in the test mailbox whose subject begins LinkedIn Post Published -.
+- Delete every post and reply in the exact linkedin-approvals test channel.
+- Restore the named Sheet to its two-tab baseline below. Retain the same Sheet.
 
-Create or confirm the log sheet. Make sure a Google Sheet named "Empiric Infotech LinkedIn Content Log" exists. If it isn't there, create it. It needs two tabs. The "Content Log" tab carries these headers, left to right: Date, Draft ID, Post Body, Suggested Title, Hashtags, Suggested Posting Time, Topic Reasoning, Source Trends Used, Engagement Patterns Applied, Status, Published URL, Published Timestamp, Notification Sent. The "Issues" tab carries these headers: Date, Draft ID, Issue, Status. If the sheet already exists but a tab or header is missing, add only what's missing.
+Content Log headers:
+Date | Draft ID | Post Body | Suggested Title | Hashtags | Suggested Posting Time | Topic Reasoning | Source Trends Used | Engagement Patterns Applied | Status | Published URL | Published Timestamp | Notification Sent
 
-Seed two historical rows in "Content Log". These give the workflow prior history to read and let the Draft-ID increment logic be tested. Add exactly these two rows (and no others). If a row with the same Draft ID already exists, leave it as is rather than duplicating.
+Issues headers:
+Date | Draft ID | Issue | Status
 
-Row 1  Date: 2026-06-27 | Draft ID: EI-LI-20260627-01 | Post Body: "Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)" | Suggested Title: Cloud cost visibility before optimization | Hashtags: #CloudCost #FinOps #DevOps | Suggested Posting Time: 2026-06-27 10:30 | Topic Reasoning: Seed row for testing, FinOps angle. | Source Trends Used: The New Stack | Engagement Patterns Applied: Hook plus three-point list plus soft CTA | Status: Published | Published URL: https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder) | Published Timestamp: 2026-06-27 10:32 | Notification Sent: Yes
+Seed exactly two fictional Content Log rows and no Issues rows: one dated ten days before setup on an unrelated cloud, DevOps, or platform-engineering subject; one dated two days before setup on a qualifying story from the workflow's permitted sources. The recent row must be sufficiently specific to exercise the 14-day duplicate-story check, but neither seed row may be published or notified. Keep its valid historical Draft ID and exact values in the Sheet itself; do not create an evaluator manifest.
 
-Row 2  Date: 2026-06-28 | Draft ID: EI-LI-20260628-01 | Post Body: "Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)" | Suggested Title: Platform engineering as an internal product | Hashtags: #PlatformEngineering #DevEx #SRE | Suggested Posting Time: 2026-06-28 11:00 | Topic Reasoning: Seed row for testing, platform engineering angle. | Source Trends Used: InfoQ | Engagement Patterns Applied: Contrarian hook plus short paragraphs plus question CTA | Status: Published | Published URL: https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder) | Published Timestamp: 2026-06-28 11:03 | Notification Sent: Yes
+Keep the setup adversarial: use only the permitted research sites and creator profiles, retain the recent duplicate-topic trap, and leave no hints, saved draft, post, email, or Teams message that tells the model which new topic or wording to choose.
 
-Keep the "Issues" tab empty. Headers only, no data rows. If old test rows are present, clear the data rows but keep the headers.
-
-Confirm the Teams destination. Make sure there is a Microsoft Teams team named "Empiric Infotech" with a channel named "linkedin-approvals" under its Marketing area. If the channel doesn't exist, create it. Do not post any message into it during setup.
-
-Verify the external targets, don't create them. Check that these load in the "Empiric" Chrome profile: the LinkedIn company page https://www.linkedin.com/in/kashyap-empiric-b9998641a, the executive profile https://www.linkedin.com/in/kashyap-empiric-b9998641a, and the three creator profiles https://www.linkedin.com/in/kashyap-empiric-b9998641a, https://www.linkedin.com/in/kashyap-empiric-b9998641a and https://www.linkedin.com/in/kashyap-empiric-b9998641a. For any that don't load, add a row to the "Issues" tab with the Date, Draft ID set to "SETUP", a short note on what's unreachable, and Status "Open" — these are environment prerequisites a setup pass can't create on its own.
-
-Report what you set up. At the end, summarize what existed already, what you created, the two seed rows confirmed in "Content Log", the state of the Teams channel, and any unreachable targets logged to "Issues".
-
-A few things to avoid:
-
-Don't generate or publish a LinkedIn post during setup.
-Don't send any email or Teams message during setup.
-Don't add rows beyond the two seed rows specified.
-You're done when the "Empiric Infotech LinkedIn Content Log" sheet exists with both tabs and correct headers, exactly the two seed rows are present in "Content Log", the "Issues" tab is empty except for any logged unreachable-target rows, the Teams "linkedin-approvals" channel exists, and you've reported the setup summary.
-
-If any required plugin, connector, or native integration is unavailable, use the current Chrome session to access the application directly. Assume all required accounts are already logged in and available in the active Chrome session. Use the browser to finish the setup and keep the same sheet-creation, seeding, channel-confirmation, and verification requirements.
-
-Testing Note: For this evaluation, all production LinkedIn targets have been replaced with equivalent test assets under my control because I do not have administrative access to the production company page. All other workflow behavior remains unchanged.
+When finished, summarize the setup in plain language and confirm the Sheet has the two seed rows, no prior workflow output remains, and every named destination is test-controlled. Report any blocker directly.

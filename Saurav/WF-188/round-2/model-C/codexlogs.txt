@@ -1,0 +1,107 @@
+Worked for 10m 35s
+
+
+I’ll read the attached request, then carry the pipeline through the requested analysis and deliverables.
+
+
+
+
+Read Run the weekly LLM cost and latency attribution pipeline for the Cahuu LLM Gate…
+
+
+
+I’m using the GitHub, Supabase, Google Sheets, Teams, and Chrome-access skills to validate the entire setup first. The request makes that validation a hard gate, so I’ll stop before repository or log analysis if any required access cannot be confirmed.
+
+
+
+
+Used Atlassian Rovo, Google Drive, Supabase, GitHub and Codex Apps integrations, loaded tools, read files
+
+
+The access gate passed: GitHub pull permission is present; both Supabase tables are queryable; the target Sheet is owned by the connected account and is in the named folder; CLGO is visible for both create and edit actions; and Teams preflight says the exact channel can be posted to directly. I’m moving into the pinned-snapshot and screened-log analysis now.
+
+
+
+
+Used GitHub and Supabase integrations, searched the web
+
+
+The pinned source is f4c8b6faed53bda1f3c75f6719a5dcbc731b9904 at 11:21:05 UTC, before the 11:35 UTC cutoff. The first screen set aside 5 of 340 request rows and 3 of 534 call rows; another valid call row is attached to an excluded duplicate request and will not enter cost math. I’m checking provider pricing and cache rules before calculating the rollups.
+
+
+
+
+Used GitHub, Google Drive and Codex Apps integrations, searched the web
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Codex Apps integration
+
+
+The Teams connector resolves the channel and posting rights, but its history payloads are blank for the existing posts. The Chrome fallback is therefore required for the duplicate check; I’ll inspect the signed-in channel there before deciding whether to send or log a skip.
+
+
+
+
+Used Chrome and Codex Apps integrations
+
+
+Two endpoints cross the latency threshold and have actionable findings. /api/docs/summarize has two independent Anthropic calls, while /api/support/triage is a dependent chain with an uncached stable Anthropic classification prompt candidate. CLGO already has an open support ticket to refresh and a closed docs ticket that does not block a fresh one.
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Used Google Drive integration, searched the web
+
+
+The Jira work is in place: CLGO-1 was updated without changing its assignee or status, and a new unassigned To Do task, CLGO-16, was created for docs/summarize. I’m writing the ranked endpoint report, call-level audit trail, feature rollup, pricing sources, non-generative section, and screening methodology into the Sheet.
+
+
+
+
+Used Google Drive, Chrome and Codex Apps integrations, ran a command
+
+
+The channel review found no indexed match for the Sheet ID or July 9–15 window. The channel-history API exposed existing posts with empty bodies, and the Chrome deep link remained at Teams’ launcher, so I’ll record that limitation in the Run Log. With no positive duplicate match, I’m sending the requested channel update now.
+
+
+
+
+Used Google Drive, Chrome and Codex Apps integrations
+
+
+
+
+
+The retrospective weekly attribution run is complete.
+Window: 2026-07-09 00:00:00 through 2026-07-15 23:59:59 UTC
+Pinned main commit: f4c8b6faed53bda1f3c75f6719a5dcbc731b9904, committed at 11:21:05 UTC, before the 17:05 IST / 11:35 UTC cutoff
+Estimated monthly generative spend: $18.5183
+Report: LLM Cost & Latency Attribution - Cahuu
+Jira: CLGO-16 created for /api/docs/summarize; CLGO-1 updated in place for /api/support/triage
+Teams: Channel notification sent
+The primary latency concerns are /api/docs/summarize at $11.6109/month, p95 8,490.2 ms, and /api/support/triage at $3.4176/month, p95 7,624.25 ms. Docs summary and tag generation are genuinely independent; the shorter paired call averaged 3,078 ms, giving a rough theoretical critical-path saving if benchmarked concurrently. Support’s classification → draft → tone-check chain is dependent and is not parallelizable.
+I recorded three findings across two endpoints: one independent parallel pair and two conditional Anthropic caching candidates. The static Sonnet prompts are reused and the pinned helper does not turn on caching, but the character/4 estimates of 857–861 tokens are below Anthropic’s published 1,024-token Sonnet minimum. The Sheet and tickets therefore treat the $0.97/month docs and $0.56/month support figures as cache-read upper bounds pending exact tokenization, cacheable-prefix design, TTL, write-cost, and hit-rate validation—not guaranteed savings. Anthropic’s published standard rates and cache multipliers are documented on its pricing page, and its prompt-caching guidance specifies the minimum. OpenAI caching is automatic for eligible prompts, as described in its prompt-caching guide; Gemini 2.5 implicit caching is also enabled by default for eligible inputs in Google’s caching documentation.
+The screen excluded 5 of 340 request rows—one null, one zero, one negative latency, and both rows for one duplicate request ID—and 3 of 534 call rows—one provider/model mismatch and both repeated-sequence rows. One additional surviving call attached to an excluded duplicate request was omitted from the successful-request cost math. Embeddings and moderation are separately listed, and the commented-out alternate call and flag-off experimental rewrite are logged as excluded. Pricing sources and check dates are in the Sheet; the standard rates used were OpenAI GPT-4o, GPT-4o mini, Anthropic Claude pricing, and Google Gemini 2.5 Flash pricing. The estimate uses static prompt and response-character token approximations, so request-time input/context is not included and the total is a directional lower bound, not invoice reconciliation.
+This was executed on 2026-08-04 for the requested July 9–15 window rather than backdated to July 16. Before posting, exact Sheet-ID and window searches found no indexed duplicate. However, the Teams history connector returned empty bodies for existing channel posts and the Chrome deep link remained at the Teams launcher; that limitation and the actual send are explicitly recorded in the Run Log.
+One separate security issue needs attention: Supabase reported RLS disabled on public.request_logs and public.llm_call_logs, with an advisory that these tables are exposed to client roles. I did not alter the database. Review grants and design the intended policies before enabling RLS; enabling it without policies can block legitimate access. The advisory’s starting SQL is:
+ALTER TABLE public.request_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.llm_call_logs ENABLE ROW LEVEL SECURITY;
+See Supabase’s row-level security guidance. The report also notes the fake test-only hardcoded credential fallback at app/services/llm_clients.py:6 without reproducing its value.

@@ -1,0 +1,82 @@
+Worked for 44m 41s
+
+I'm using the GitHub, Chrome, Google Drive/Sheets/Docs, Jira triage, and Teams messaging skills because this run spans code analysis, verified staging interaction, artifact creation, defect handling, and final notification. I'll first resolve the required branch to an exact SHA and inspect the workflow instructions; I won't write to staging until both the environment identity and reset state are independently confirmed.
+
+Used GitHub integration, ran commands
+
+The required branch resolves through GitHub to the exact commit, and the local checkout matches it. The repository documents a loopback-only staging oracle with dedicated fictional credentials and an explicit clean-state timestamp endpoint; I'm now validating the implementation itself rather than relying on README claims.
+
+Used Google Drive integration, edited a file, ran commands
+
+Viewed 2 images
+
+Used Google Drive integration
+
+The native Google Sheet now exists in the existing "QA Test Data Reports" folder with 94 schema-traceable cases plus an initialized Run Log. The local and imported workbook both preserve the required tabs; next I'm switching to browser execution with only the dedicated fictional staging identity.
+
+Used the browser, ran commands
+
+The browser run has now covered login, dashboard, registration, customer create, and customer edit. The customer phone-format bypass reproduced on create and twice on edit; the email-format inconsistency also reproduced identically on the registration and edit entry points. I'm continuing with product, order, order-item, and admin cases; the unsafe nonexistent-product probe remains blocked from submission because it would persist an orphan.
+
+Used the browser, ran a command
+
+Context automatically compacted
+
+Repository and staging safeguards are confirmed, and the 9-form inventory is complete. I've tested seven forms so far; I'm finishing the relationship-safe order-item and admin cases, then I'll verify database integrity before publishing the report, tickets, run log, and Teams summary.
+
+Used the browser, ran commands
+
+All 9 forms have now been exercised. The unsafe nonexistent-relationship probe was intentionally not submitted; I'm treating it as a blocked manual-review case, while the safe quantity boundary probe reproduced twice without creating an orphan.
+
+Used Atlassian Rovo and the browser, ran commands
+
+The second-look integrity check passed: 17 tagged records were created, every foreign key still resolves, and SQLite's foreign-key check is clean. Six validation gaps reproduced; the risky orphan-reference case remains unexecuted. I'm now triaging Jira, every matching historical issue is resolved, so the workflow requires fresh bugs rather than reopening or duplicating open work.
+
+Used Google Drive and Atlassian Rovo integrations, ran commands
+
+Searchjiraissuesusingjql
+
+Ran commands
+
+The six new bugs are filed and verified unassigned with the required labels. Their screenshots are linked directly. I'm building the native Google Docs QA report now, using the document workflow's render-and-inspect pass before import.
+
+Used Google Drive integration, ran commands
+
+Viewed 4 images
+
+Viewed 4 images
+
+Used Google Drive integration
+
+Viewed 5 images
+
+Used Google Drive integration, ran commands
+
+Viewed 5 images
+
+Viewed 5 images
+
+Viewed 4 images
+
+Used Google Drive integration, ran commands
+
+Viewed 3 images
+
+Used Google Drive integration, ran commands
+
+Viewed 2 images
+
+Used Google Drive integration, ran commands
+
+Viewed an image
+
+The report passed connector structure checks and a 13-page PDF visual review after two pagination repairs. All eight screenshots, headings, lists, tables, the run-date chip, and native Sheet links survived the Google Docs conversion.
+
+Used Atlassian Rovo, Google Drive, and Codex Apps integrations, ran commands
+
+The Teams notification is live in the exact Testing Client Workflows to Test channel with the requested subject. I'm closing the Run Log with the final artifact and ticket links, then doing one last cross-system readback.
+
+Used Google Drive integration, edited a file, ran commands
+
+Run completed with confirmed validation failures. Forms: 9 discovered, 9 tested, 0 cap-skipped. Records created: 17, final foreign-key check found 0 orphans. Confirmed gaps: 1 Critical, 3 High, 1 Medium, 1 Low. Jira issues: 6. Dataset and final Run Log delivered as a Google Sheet. QA report with eight browser screenshots delivered as a Google Doc. Teams notification sent. The unsafe nonexistent-product relationship probe was not submitted because it could create an orphan, and is recorded as a blocked manual-review case, not a confirmed gap.
+

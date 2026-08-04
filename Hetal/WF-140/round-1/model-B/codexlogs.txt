@@ -1,0 +1,112 @@
+Worked for 5m 25s
+
+
+I’ll use the Google Drive, Google Sheets, Google Docs, Teams, and Gmail workflows to ground the review in the policy and source data, then make the requested Jira, tracker, Teams, and draft-email updates. I’ll treat unresolved policy gaps as explicit exceptions rather than filling them in.
+
+
+
+
+Used Google Drive integration, ran commands
+
+
+The four source files resolved cleanly. I’m reading the policy and each sheet’s actual tab structure now, then I’ll reconcile tracker usage against SSO and renewal quotes before deciding what qualifies.
+
+
+
+
+Used Google Drive, Atlassian Rovo, and Codex Apps integrations
+
+
+The policy-qualified opportunities are four ticket-level consolidations plus one tracker-only CRM opportunity. The project-management pair is a single category opportunity: Asana and Trello together fit Jira’s eight spare seats, but both renew inside the 21-day freeze, so the ticket must be deferred. Design has an apparent overlap but no policy-designated target, so I’m keeping it as a policy gap rather than choosing Figma by intuition.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+Createjiraissue
+
+
+
+
+
+The four Jira Tasks were created and assigned to the authenticated IT Operations Lead account: ITOPS-29 through ITOPS-32. I’m writing the row-level dispositions into the tracker’s existing review columns, with the project-management saving split across Asana and Trello so the column totals without double-counting the combined opportunity.
+
+
+
+
+Used Google Drive integration
+
+
+The tracker readback confirms all 20 decisions, targets, saving values, records, and reasons landed in Subscriptions!K:O with the existing currency and wrap formatting preserved. I’m using the Chrome-control workflow for the native visual check required by the Sheets workflow, then I’ll post the live Teams summary and create the unsent department drafts.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+Getjiraissue
+
+
+
+
+
+Getjiraissue
+
+
+
+
+
+Getjiraissue
+
+
+
+
+
+Getjiraissue
+
+
+
+
+
+Used Chrome integration, ran a command
+
+
+The native tracker view refreshed to the current ITOPS-29–32 records and shows the review columns wrapping as intended. I’m moving to the final communications: one live channel post and department-specific Gmail drafts with empty recipients.
+
+
+
+
+Used Gmail and Codex Apps integrations
+
+
+
+
+
+Completed the quarterly review and write-back.
+SaaS Subscription Tracker — Subscriptions: all 20 rows now have a decision, retained/target tool, saving where calculable, Jira or tracker record, and policy reason in columns K:O. I verified the connector readback and refreshed native Sheets view.
+Live Teams summary posted to SaaS Consolidation Model Test.
+Five Gmail drafts were created for Marketing, Design, Company-wide/communications, Engineering, and Sales. Readback confirms all five are labelled DRAFT, have an empty To list, and begin with a requirement to add a verified address before sending. None was sent.
+Opportunity	Annual saving	Record
+Asana + Trello → Jira	$7,740	ITOPS-29 — deferred to next cycle
+Slack → Microsoft Teams	$34,200	ITOPS-30
+Toggl Track → Harvest	$6,000	ITOPS-31
+Dropbox Business → OneDrive	$5,400	ITOPS-32
+Pipedrive → HubSpot	$2,880	Tracker only; below the $3,000 Jira threshold
+
+All four Jira Tasks are assigned to the authenticated IT Operations Lead account, Hetal M1.
+Annualised spend analysed: $140,340 across all 20 tracker rows, using the quote overrides, monthly annualisation, and Miro’s €4,000 quote at 1.08. Total policy-qualified potential annual saving: $56,220. That includes $7,740 deferred under the renewal freeze and $2,880 tracker-only; ticketed value is $53,340.
+The higher-risk and unresolved points are called out separately in Teams and the tracker:
+Asana and Trello renew 11 and 14 days after the review, so both are deferred and no cancellation is part of this cycle.
+Slack is a 291-SSO-user company-wide migration with integration, retention, entitlement, and change-management risk.
+Dropbox contains an 8 TB design archive.
+Harvest feeds client invoices and itself renews within 21 days; it remains the sanctioned standard.
+Figma and Adobe XD appear to overlap, but the policy supplies no Design standard or target-selection rule. Loom has no category. Their target and saving were left unresolved.
+ClickUp, Discord, and Box were kept out of scope; Miro and GA4/Mixpanel were kept as complementary jobs.
+No subscription was cancelled, no vendor was contacted, no licences were changed, and no tracker rows were deleted.
+
+
+2:11 PM
+

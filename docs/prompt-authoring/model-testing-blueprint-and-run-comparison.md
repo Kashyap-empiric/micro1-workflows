@@ -1,6 +1,6 @@
 # Model Testing Blueprint and Run Comparison
 
-Reusable companion to `harsh-evaluation-protocol.md`, `head-to-head-07-23-template.md`, and
+Reusable companion to `../scoring/harsh-evaluation-protocol.md`, `../scoring/codex-session-context.md`, and
 `prompt-definition-template.md`.
 
 The purpose of this file is to make a test difficult for the right reasons and make the comparison
@@ -267,12 +267,8 @@ Apply the strictest applicable cap, then score each dimension on its own evidenc
 | Requirement % 95%+ with no critical or high fail | May support 5-6, but the harsh protocol still requires a real flaw hunt |
 
 The cap is not permission to invent a flaw. A failed requirement must be assigned to the correct
-box and supported by evidence. Overall is computed after Boxes 2 through 8 using the holistic rule:
-start from Task accuracy, apply evidence-backed caps for material failures in the other dimensions,
-and dock one point when a run takes substantially longer than a comparable run because of real
-efficiency drag. A difference of only a few minutes is not enough. A delay that causes an actual
-failure is docked according to impact. Trivial timing differences and external
-waiting do not count, and Overall never receives an upward bonus.
+box and supported by evidence. Overall is computed after Boxes 2 through 8, by holistic judgment as
+described in `../scoring/harsh-evaluation-protocol.md` section 5, not a fixed formula.
 
 ### Extra comparison metrics
 

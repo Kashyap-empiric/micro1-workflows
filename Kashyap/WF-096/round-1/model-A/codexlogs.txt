@@ -1,0 +1,86 @@
+Worked for 59m 27s
+
+I'm starting with the required access gate and will stop immediately if any named resource is missing or ambiguous. I'm using the GitHub, Google Drive/Docs, and Teams messaging skills because they define the safe read/write checks and native-format write paths for those systems.
+
+Used Atlassian Rovo, GitHub, Google Drive, and Codex Apps integrations, ran commands
+
+The gate found no resolvable chat team/channel for the target name at first. I'm doing the remaining read-only access checks and one direct chat inventory check so the stop report can distinguish a naming/visibility failure from a broader access failure; I will not transition the ticket, create a document, comment, or send a message yet.
+
+Used Atlassian Rovo, GitHub, Google Drive, and Codex Apps integrations
+
+Access gate passed: the ticket project is readable/editable, the private repository is readable with admin permission, exactly one matching Drive folder exists and its Google Docs are readable/owned by the connected account, and the target channel is readable and write-preflighted. The immutable repository snapshot is pinned. I'm now selecting exactly one ticket and will bind every repository read to that snapshot.
+
+Used Atlassian Rovo and GitHub integrations, ran commands
+
+The ticket is now In Progress with the required start comment. It has no direct attachments and one linked source document; that document is inside the confirmed folder and readable. I've extracted the allowed repository sources at the pinned snapshot and detected a Node.js 22 / strict TypeScript monorepo with Next.js 15 + React 19, NestJS 11 + BullMQ, PostgreSQL 16, Redis 7, S3, OIDC/OAuth 2.1 + PKCE, and AWS ECS Fargate. I'm moving into the eight-candidate evidence pass now.
+
+Used GitHub integration, ran commands, searched the web
+
+The evidence pass has stabilized the five finalists. The leading recommendation is AWS-native, supports the tenant count and adjustable send rates, and costs the least per message of the finalists; the main tradeoff is more deliverability and quota operations. The document skill now routes this table-heavy deliverable through a polished import-to-native-document process, so I'm applying the render-and-verify workflow before the native import.
+
+Used Google Drive integration, ran commands
+
+[Context automatically compacted]
+
+The access gate passed, the ticket is selected, and the repository snapshot is fixed. The eight-candidate shortlist and five-platform evaluation are complete; I'm validating the generated report artifact now before importing it as a native document.
+
+Ran commands
+
+The first file build did not persist, so I'm rebuilding it from the validated research data in a clean staging directory. No external write has happened from that failed attempt; the ticket start transition/comment remain the only completed mutations so far.
+
+Edited a file, ran commands
+
+The rebuilt report now passes the title-sanitization check. I'm rendering every page for visual review next; after that I'll import the verified file, convert the date/source markers and implementation list into native document elements, and run a second review pass on the native document.
+
+Used Google Drive integration, ran commands
+
+The native import was blocked by a safety review because the import action couldn't name a destination folder at upload time, even though the target folder was already confirmed and explicitly authorized. I'm checking for a folder-scoped native action; I will not upload to an ambiguous location or create a replacement folder.
+
+Used Google Drive integration, edited a file, ran commands
+
+The report is now a native document inside the confirmed folder, with real headings, tables, lists, links, page breaks, date chips, a rich-link chip, and native checklist bullets. I'm running structural and placeholder validation on the native document before the ticket and chat writes.
+
+Used Google Drive integration, edited a file, ran commands (repeated document read/write and text/table checks)
+
+Searched Drive for the target document name
+
+Ran a series of PowerShell commands decoding a base64 PDF export to disk, then locating and invoking local PDF info/render binaries (multiple rounds of hunting through file paths and environment variable settings before the correct binary location was found)
+
+Viewed 6 images
+
+Used Google Drive integration (got and updated the document)
+
+Viewed 6 images
+
+Viewed 6 images
+
+Viewed 4 images
+
+Used Google Drive integration, edited files, ran a command (got and updated document tables, re-exported, re-decoded, re-rendered)
+
+Viewed 6 images
+
+Viewed 6 images
+
+Viewed 6 images
+
+Viewed 3 images
+
+Got the ticket issue state
+
+The native document passed visual review across all 21 rendered pages and the pre-post checks: 12 required sections in order, one five-row comparison matrix, exactly five platform sections, one selected primary recommendation, 10 native checklist items, no prohibited placeholder text, and exactly one matching document in the target folder. I'm posting the deduplicated ticket summary and moving the ticket to In Review now.
+
+Used Atlassian Rovo and Codex Apps integrations
+
+The ticket summary comment is posted, the ticket is In Review, and the chat message was posted once after the latest-20 duplicate check found no completion message for this ticket. I'm doing the final cross-system count verification and removing only this run's local staging artifacts before returning the run report.
+
+Used Google Drive and Codex Apps integrations, searched Drive for the target document name, listed chat channel messages, read the document text and metadata again
+
+Got the ticket issue state
+
+Used Google Drive integration, ran commands (got document tables and text)
+
+Ran a PowerShell timestamp check confirming the staging directory was inside the workspace, then removed that staging directory and confirmed it was gone; ran a final git status check
+
+Completed successfully.
+

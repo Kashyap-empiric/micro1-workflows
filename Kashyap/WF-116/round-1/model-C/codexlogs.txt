@@ -1,0 +1,85 @@
+Worked for 34m 6s
+
+I'm using the Google Drive/Sheets/Docs, Teams, and Atlassian workflow skills because this run spans all five systems. I'll begin with the mandatory four-resource read/write preflight; if any check fails, I'll stop before reading campaign data or creating any deliverable, then record the failure in the existing warehouse Run Log if that sheet is writable.
+
+Used Atlassian Rovo, Google Drive, and Codex Apps integrations, ran a command
+
+Preflight passed: the exact Sheet and folder are readable and editable, Jira project SCM is visible with issue-creation permission, and the exact Teams channel is readable with direct posting enabled. I'm now moving into the scoped June 1–7 data pull; no source rows outside that window will enter the attribution calculations.
+
+Used Google Drive integration, ran commands
+
+The scoped pull returned 15 Google Ads rows, 12 Meta rows, 10 LinkedIn rows, 45 GA4 sessions, and the qualifying CRM set (deduplicated where both created and closed dates matched). I'm resolving click IDs now; the source schema exposes first/last touch IDs plus opportunity-linked GA4 sessions rather than the requested semicolon list, so I'll preserve all resolvable GA4-linked touches and document that schema gap in Data Quality Notes.
+
+Used Atlassian Rovo integration
+
+Attribution validation is clean: 19 included opportunities each sum to exactly 100%; one opportunity was excluded because its only click ID could not be resolved. The blended True CAC is ₹1,962.63, cross-platform overlap is 73.68%, and seven Platform + Campaign Type combinations meet the underperformance rule. I'm creating one unassigned SCM optimization task for each of those seven, with the required label and week-specific identity.
+
+Used Atlassian Rovo integration
+
+Createjiraissue
+
+Edited files, ran commands
+
+Viewed 2 images
+
+Used Google Drive and Codex Apps integrations
+
+The seven Jira tasks were created successfully as SCM-37 through SCM-43, all unassigned and labeled marketing-optimization. The duplicate check found no matching post for June 1–7 (the only "Attribution Report Ready" match was for June 29–July 5), so this run will send one new channel notification after the report's final verification.
+
+Used Google Drive integration
+
+The report now contains all three native Google Docs tabs, the complete 21-combination campaign table, both attribution charts, the last-click comparison, overlap analysis, the seven linked Jira tasks, and Data Quality Notes. I'm running the structural and completeness gate now; after that, I'll send the single Teams post and finalize the run summary and Run Log.
+
+Used Google Drive and Codex Apps integrations, ran a command
+
+For the final visual gate, I'm using the PDF inspection workflow because the Docs workflow requires every exported page of a table- and figure-heavy report to be rasterized and checked. This does not create another deliverable; it is only verifying the native Google Doc's rendered output.
+
+Ran commands
+
+Viewed 5 images
+
+Viewed 5 images
+
+Viewed 4 images
+
+Used Google Drive integration, ran commands
+
+Viewed 4 images
+
+Viewed 4 images
+
+Used Google Drive integration, ran commands
+
+Viewed 3 images
+
+Used Google Drive integration, ran commands
+
+Viewed 5 images
+
+Used Google Drive integration, ran commands
+
+Viewed 3 images
+
+Used Google Drive and Codex Apps integrations
+
+The final gate passed: all three tab titles and six date chips are correct, both charts and both tables are present, all 21 campaign combinations are represented, all 19 included timelines sum to 100%, there are no placeholders, the document is in the required folder, and exactly one Teams message exists for this window. I'm recording the completed run in the warehouse Run Log now.
+
+Used Google Drive integration, edited a file, ran commands
+
+Pipeline completed successfully for June 1–7, 2026 IST.
+Total spend: ₹37,290.00
+Blended True CAC: ₹1,962.63
+Over-credited combinations: 3
+Under-credited combinations: 10
+Underperforming combinations/Jira tasks: 7
+Cross-platform overlap: 73.68% (14 of 19 opportunities)
+Attribution validation: 19/19 included opportunities sum to 100%
+One opportunity excluded due to no resolved campaign touch
+Run Log status: Complete
+Deliverables:
+Google Doc attribution report
+Jira: SCM-37, SCM-38, SCM-39, SCM-40, SCM-41, SCM-42, SCM-43
+Microsoft Teams notification
+Marketing Data Warehouse
+The report's connector structure, HTML export, and all 12 exported PDF pages were verified.
+

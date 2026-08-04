@@ -1,134 +1,22 @@
-# Round 1 data-seeding controls - multi-touch attribution
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
 
-Clone the warehouse and empty output destinations for `R1-A` through `R1-D`. Each run must start with
-the same frozen reporting window, source rows, FX table, and empty Run Log, and use
-`[ATTRIBUTION-R1-<run>]` on every writable artifact. Keep per-opportunity timelines, attribution math,
-expected CACs, and ticket expectations in an evaluator-only manifest.
+Use only:
+- Sheet: Marketing Data Warehouse - Solstice Cloud
+- Drive folder: Weekly Attribution Reports - Solstice Cloud
+- Jira project: Solstice Cloud Marketing, key SCM
+- Teams: testing client workflows → Marketing Attribution Summary
+- Reporting window: 2026-06-22 through 2026-06-28, Asia/Kolkata
 
-Seed unresolved click IDs, Contact-ID fallback, single/two/three-touch paths, cross-platform touches,
-no-resolved-touch cases, a missing FX rate, duplicate-ticket behavior, high spend with zero conversions,
-and last-click differences just above and below the 20 percent boundary. Include raw PII in one source
-field for redaction and a duplicate-Teams-post variant. The test data below is the domain baseline.
+The Sheet's six source tabs are permanent inputs: Google Ads Export, Meta Ads Export, LinkedIn Ads Export, GA4 Sessions, CRM Opportunities, and FX Rates (Weekly). Keep their canonical fictional values, formulas, formatting, and dates. It must test single/two/multi-touch paths, Contact-ID fallback, cross-platform paths, unresolved click IDs, no-resolved-touch exclusions, open/Closed Won/Closed Lost records, redacted PII, missing FX, high-spend/no-conversion, last-click differences on both sides of 20%, overlapping pairings, and three underperforming combinations. Use only the fixed week-effective INR rates, including one missing-rate currency. Keep calculation expectations evaluator-only.
 
-Create a complete test environment for a fictional company called Solstice Cloud. This setup is only for testing a weekly multi-touch marketing attribution workflow. Do not connect to any real Google Ads, Meta Ads, LinkedIn Ads, GA4, CRM, or external marketing platforms. All marketing, analytics, and CRM information must exist only as sample data inside Google Sheets.
+Difficulty and isolation: make source precedence, identity fallback, path ordering, currency handling, and ticket
+deduplication disagree in ways that cannot be solved by a single tab or simple total. Do not add helper columns,
+precomputed credit, expected CACs, candidate-ticket hints, or model-visible answers.
 
-If a resource already exists with the exact required name, reuse it instead of creating another one.
+Direct pre-run reset:
+- Clear Run Log to its headers and remove all workflow-created Sheet tabs/objects. Do not rewrite the six frozen source tabs.
+- Delete all report Docs/files in Weekly Attribution Reports - Solstice Cloud while retaining the folder.
+- Empty SCM, then create one To Do, unassigned issue labelled wf116-baseline-open with summary [WF116 baseline] Paid-search attribution overlap and a stale fictional description. This is the update-in-place case; do not create other Jira issues during setup.
+- Delete all posts/replies in Marketing Attribution Summary.
 
-Create a Google Sheet named Marketing Data Warehouse - Solstice Cloud.
-
-Inside that spreadsheet create these tabs exactly:
-
-Google Ads Export
-Meta Ads Export
-LinkedIn Ads Export
-GA4 Sessions
-CRM Opportunities
-Run Log
-FX Rates (Weekly)
-
-Leave the Run Log tab empty except for these headers:
-
-Run Date | Window Start | Window End | Status | Step Reached | Failure Reason | Google Doc Link | Jira Issues Created | Teams Notification Sent
-
-For the "FX Rates (Weekly)" tab (a.k.a. FX_2026_W27), look up the actual currency exchange rates to INR - do not invent them. Build a table with these columns:
-
-Currency | Rate to INR | Effective Start | Effective End | Source
-
-Cover every non-INR currency that appears anywhere in the Google Ads Export, Meta Ads Export, or LinkedIn Ads Export sample data. Use a fixed rate per currency for the reporting window only (Effective Start = Monday, June 29, 2026, Effective End = Sunday, July 5, 2026, Asia/Kolkata) - since this is the only week being tested right now, don't populate other weeks. Cite the actual source (e.g. the specific rate provider or reference page) for each rate in the Source column.
-
-Populate the remaining tabs with realistic fictional sample data covering Monday June 29, 2026 through Sunday July 5, 2026 (Asia/Kolkata).
-
-Requirements for the sample dataset:
-
-Around 15 Google Ads rows
-Around 12 Meta Ads rows
-Around 10 LinkedIn Ads rows
-Around 45 GA4 session rows
-Around 20 CRM opportunity rows
-
-The dataset should intentionally contain:
-
-Brand Search campaigns
-Competitor campaigns
-Display campaigns
-Retargeting campaigns
-Prospecting campaigns
-Lead Gen campaigns
-ABM campaigns
-
-Across all platforms.
-
-Include:
-
-Spend
-Clicks
-Platform-reported conversions
-Click IDs
-Contact IDs
-Opportunity IDs
-Campaign IDs
-
-Every ID should be fictional.
-
-Make sure the data exercises every branch of the attribution workflow by including:
-
-single-touch opportunities
-two-touch opportunities
-three-touch opportunities
-opportunities spanning multiple ad platforms
-opportunities with unresolved Click IDs
-opportunities with zero attributed conversions
-Closed Won opportunities
-Closed Lost opportunities
-open opportunities
-campaigns with high spend but poor performance
-campaigns with strong multi-touch contribution but weak last-click performance
-campaigns with good last-click performance but poor multi-touch contribution
-
-Ensure that:
-
-some campaigns become "materially over-credited"
-some become "materially under-credited"
-at least three Platform + Campaign Type combinations qualify as underperforming
-at least four Jira issues will eventually be created by the workflow
-at least two audience-overlap platform pairings exist
-
-Create a Google Drive folder named:
-
-Weekly Attribution Reports - Solstice Cloud
-
-Leave the folder empty.
-
-Create a Jira project named:
-
-Solstice Cloud Marketing
-
-with project key:
-
-SCM
-
-Do not create any issues.
-
-Reuse the existing Microsoft Teams team named:
-
-testing client workflow
-
-Inside that team create a channel named:
-
-Marketing Attribution Summary
-
-Seed the channel with 3-5 short unrelated historical messages dated within the previous two weeks, such as product updates, vacation notices, or deployment announcements.
-
-None of those messages may contain both:
-
-"Attribution Report Ready"
-"June 29, 2026 to July 5, 2026"
-
-Return only the following information after setup completes:
-
-Google Sheet name and link
-Google Drive folder name and link
-Jira project name and key
-Microsoft Teams team and channel
-Confirmation that the Run Log is empty
-Confirmation that the sample data is ready for the workflow to execute
+Do not calculate attribution, create a report, create tickets, or post during setup. When finished, summarize the setup in plain language and confirm the frozen sources, empty Run Log/folder/channel, and baseline Jira issue. Report any blocker directly.

@@ -1,10 +1,10 @@
 # WF-076 Round 2 - Final Comparison
 
-Canonical rules: [head-to-head-07-23-template.md](../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
+Canonical rules: [codex-session-context.md](../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../docs/scoring/comparative-rerate-addendum.md)
 
-Note: this round evaluates three models (A-C: gpt-5.6-cat, gpt-5.6-fish, gpt-5.6-dog, each at Extra
-High intelligence only), not the earlier six-model A-F structure that included the High tier. Any
-stub for a retired High-tier variant is preserved at `round-2/archive-high-tier/<codename>/`.
+Note: this round evaluates three models (A-C: gpt-5.6-cat, gpt-5.6-fish, gpt-5.6-dog, each at
+Extra High intelligence only). The High-intelligence variants were dropped after the update and
+are kept in `archive/` for reference.
 
 ## METADATA
 
@@ -40,6 +40,6 @@ stub for a retired High-tier variant is preserved at `round-2/archive-high-tier/
 - [ ] All three model files contain raw Logs and Output.
 - [ ] Requirements, traps, and source-of-truth checks were completed.
 - [ ] Boxes 2-8 were finalized before box 1.
-- [ ] Box 1 uses the current holistic formula (Task accuracy ceiling + evidence-backed caps), not a literal MIN.
+- [ ] Box 1 uses the current MIN formula.
 - [ ] Individual model files contain no visible cross-model comparison.
 - [ ] The ranking is strict and supported by the model files.

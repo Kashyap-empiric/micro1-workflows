@@ -2,6 +2,12 @@
 
 **Read this before scoring any model run. Every time. Every model. Every rescore.**
 
+**This file is the canonical source for two things other scoring files only summarize or point
+back to: the per-rating commentary requirements (section 5, "A 6 requires...", "A 4 or 5
+requires...") and how Overall/Box-1 gets derived (section 5, last bullet — by judgment, not a
+formula). If another file's wording of either ever looks different from what's here, this file
+wins.**
+
 This file exists because the same correction keeps getting given: be critical, be harsh, stop
 handing out generous scores. Treat this as a standing instruction, not a suggestion. If a scoring
 pass gets drafted without this protocol having been run, the pass is invalid and gets redone.
@@ -194,15 +200,10 @@ Run every gate before finalizing. No exceptions.
 - **Coupling rule.** If the commentary names a flaw, a miss, or a "would have been cleaner if", the
   number moves down for it. The reverse holds too.
 - **One real defect in the core work caps the box.** Do not average failures away.
-- **Overall task success is holistic and derived after boxes 2 through 8.** Start from Task accuracy
-  as the correctness ceiling. Apply a lower cap for a real instruction-following, autonomy,
-  verification, writing, citation, GUI, or core-outcome failure when that defect materially harms
-  task success. If the run takes substantially longer than a comparable run and the difference
-  reflects real efficiency drag, dock Overall by one point even when the final deliverable is usable.
-  A difference of only a few minutes is not enough. If the delay causes an actual failure, dock
-  according to the resulting impact. Do not dock for trivial timing differences or external waiting
-  outside the model's control. Never give an upward bonus.
-  Keep the result between 1 and 6.
+- **Overall task success is holistic and derived after boxes 2 through 8, by judgment, not a fixed
+  formula.** No prescribed starting point, cap sequence, or point deduction. Weigh the finalized
+  boxes 2-8 and the run as a whole, and land on the number that honestly reflects whether the
+  persona got a usable, correct result. Never give an upward bonus. Keep the result between 1 and 6.
 - **Spread check.** After all 8 numbers are drafted, look at them as a set. If every box landed in
   the same narrow band while the commentary describes distinct specific problems, re-examine which
   box each problem actually belongs to and push that one down.
@@ -231,8 +232,8 @@ Run every gate before finalizing. No exceptions.
 5. If a box is 5, does its commentary contain two positives, two negatives, and a concrete
    improvement or correction?
 6. Does each commentary's balance match its rating without invented strengths or weaknesses?
-7. Was box 1 derived after boxes 2 through 8, starting from Task accuracy and applying only
-   evidence-backed caps and the relative-efficiency adjustment?
+7. Was box 1 derived after boxes 2 through 8, by holistic judgment grounded in their finalized
+   evidence rather than worked out first?
 8. Does the spread reflect real differences in severity across boxes and across models?
 9. Is every flaw grounded in something checked, with nothing invented from missing visibility?
 
@@ -245,6 +246,6 @@ what was or was not available, roughly 100-120 words per Commentary, terse one-c
 ## Related standing rules
 
 The per-dimension definitions and the full source text live in
-`head-to-head-07-23-template.md` under "Source: REUSABLE CONTEXT". Re-read the actual per-dimension
-entry for each box before finalizing that box, every pass. This protocol is the flaw-hunting
-procedure that runs alongside it, not a replacement for it.
+[codex-session-context.md](codex-session-context.md) under "Source: REUSABLE CONTEXT". Re-read the
+actual per-dimension entry for each box before finalizing that box, every pass. This protocol is
+the flaw-hunting procedure that runs alongside it, not a replacement for it.

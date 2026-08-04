@@ -1,0 +1,98 @@
+Worked for 3m 36s
+
+
+I’ll first locate the repository, Jira project, and target Google Sheet, then compute the classifications and fusion sweep directly from the recorded production rankings before updating the sheet and filing only the requested tickets.
+
+
+
+
+I’m using the GitHub skill to inspect the repository and the Google Sheets skill to update the two analysis tabs; I’ll use the Jira connector directly for the narrowly scoped ticket creation.
+
+
+
+
+Used Atlassian Rovo, GitHub and Google Drive integrations, loaded tools, read files, ran commands
+
+
+I located the exact private GitHub repository, the non-decoy Google Sheet, and the “Search Quality” Jira project. The source fixture contains 84 production-query rows and explicitly identifies eight possible corpus-content gaps; I’m now validating the actual rankings and existing sheet structure before calculating the fusion sweep.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations
+
+
+The sweep has a unique optimum at α = 0.5: BM25 hits 56/84 queries, dense hits 31/84, and hybrid hits 67/84—a 116.13% relative improvement over dense. Importantly, the 12 no-coverage rows include eight confirmed corpus gaps and four retrieval misses with existing ground-truth content, so only the eight confirmed gaps will receive content tickets.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations, read files, ran a command
+
+
+Both spreadsheet tabs are populated, including all 84 independent queries and separate rows for all four outcome categories. I’ve also submitted the eight confirmed-gap tickets plus the single hybrid-retrieval recommendation; I’m now reconciling the saved sheet values and Jira issue records against the computed results.
+
+
+
+
+Got spreadsheet cells "'Per-Query Detail'!A1:I85, 'Category Su…"
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Got spreadsheet metadata "Hybrid Retrieval Coverage Analysis"
+
+
+
+
+
+
+
+
+Analysis as of July 29, 2026: Hybrid Retrieval Coverage Analysis
+Across 84 queries:
+BM25 Recall@5: 56/84 = 66.67%
+Dense Recall@5: 31/84 = 36.90%
+Optimal hybrid Recall@5: 67/84 = 79.76%, at α = 0.5
+Hybrid improvement over dense: 116.13% relative, exceeding the 39% requirement.
+Category	Queries	Share	BM25	Dense	Hybrid
+exact-match	35	41.67%	100.00%	0.00%	85.71%
+semantic	10	11.90%	0.00%	100.00%	100.00%
+mixed	27	32.14%	77.78%	77.78%	100.00%
+no-coverage	12	14.29%	0.00%	0.00%	0.00%
+
+
+Fusion sweep:
+α	Recall@5
+0.0	36.90%
+0.1	48.81%
+0.2	48.81%
+0.3	48.81%
+0.4	48.81%
+0.5	79.76%
+0.6	73.81%
+0.7	73.81%
+0.8	73.81%
+0.9	75.00%
+1.0	66.67%
+
+
+The 12 no-coverage queries comprise eight confirmed corpus gaps and four retrieval misses with existing content: Q033, Q040, Q061, and Q081. No corpus-gap tickets were filed for those four retrieval misses.
+Corpus-gap tickets:
+Q002: SQ-102
+Q005: SQ-101
+Q020: SQ-103
+Q024: SQ-104
+Q032: SQ-105
+Q044: SQ-107
+Q057: SQ-106
+Q058: SQ-108
+Retrieval recommendation: SQ-109 — retain hybrid retrieval at evaluated α = 0.5. No production retrieval settings were changed.
+

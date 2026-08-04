@@ -1,14 +1,100 @@
-# Round 1 cleanup - Hybrid retrieval coverage
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a
+prior chat, run manifest, run ID, setup output, model response, companion prompt, or mode/command flag. The
+immutable test resource IDs are embedded below. Remove all matching workflow output regardless of when the prior run occurred.
 
-Clean only fixture `R1-<run>` using its manifest IDs and `[R1-<run>]` output tag. Capture the final
-Sheet, Jira, repository, and report evidence before reset.
+Never search by name and substitute another resource. Never touch production resources. If an immutable
+ID resolves incorrectly, stop and report the blocker.
 
-1. Delete run-tagged Jira issues in the sandbox project, leaving unrelated seed issues untouched.
-2. Delete the run's generated Sheet contents or the run-specific Sheet copy, then restore the empty
-   template tabs from the immutable baseline.
-3. Remove only run-created report artifacts and any run-specific test repository copy if the manifest
-   identifies it as disposable. Do not change the frozen source corpus/query/recipe snapshot.
-4. Verify there are no tagged tickets or outputs, the Sheet has only its baseline headers/tabs, and input
-   checksums match the pre-run manifest. Log reset status in evaluator records.
+1. Target Google Sheet
 
-Stop on ambiguous ownership or a checksum mismatch. Never delete shared research assets or private gold keys.
+Reset only:
+- File ID: 1gcLDcOna0Lvspp5af516hjPtbMt_-08K9P3SXZW97t0
+- Title: Hybrid Retrieval Coverage Analysis
+
+Preserve these tabs without deleting or recreating them:
+- Per-Query Detail — tab ID 2098058345
+- Category Summary — tab ID 1085682319
+
+Restore the following headers:
+
+Per-Query Detail:
+Query ID | Query Text | Ground Truth Chunk(s) | Disputed? | BM25-only Hit? |
+Dense-only Hit? | Category | Hybrid Hit at Optimal α? | Corpus Gap?
+
+Category Summary:
+Query Category | Query Count | % of Query Log | BM25-only Recall@5 |
+Dense-only Recall@5 | Hybrid Recall@5 | Optimal Fusion Weight (α)
+
+Clear every value, formula, note, hyperlink, validation rule, and formatting below row 1. Remove any extra
+tabs, charts, filters, filter views, tables, conditional formatting, merges, named ranges, or other objects
+created during the run.
+
+Restore:
+- Tab order: Per-Query Detail, then Category Summary
+- One frozen header row
+- Bold, wrapped header formatting
+- Header-row height: 48 pixels
+- Empty-row height: 20 pixels
+- Per-Query Detail column widths A:I:
+  111, 335, 207, 111, 143, 143, 143, 223, 127 pixels
+- Category Summary column widths A:G:
+  191, 127, 143, 175, 175, 175, 223 pixels
+
+Both tabs must be empty beneath their headers.
+
+2. Decoy Google Sheet
+
+Reset and preserve only:
+- File ID: 1oCBioX887HOdzSJ300oFCUE8KZmXY646xS4uER4Bawk
+- Title: Hybrid Retrieval Coverage Analysis — Decoy
+- Per-Query Detail tab ID: 825803856
+- Category Summary tab ID: 1596549199
+
+If the run changed the decoy, clear its data rows and restore the same two header-only tabs. Never delete,
+rename, or convert the decoy into the target.
+
+3. Jira
+
+Reset only:
+- Site: https://expert-team-dglnybj3.atlassian.net
+- Project ID: 10067
+- Project key: SQ
+- Project name: Search Quality
+
+This is a disposable test project with an empty baseline. Enumerate every current issue in project ID
+10067, record its immutable issue ID/key for the cleanup report, and delete it.
+
+If the Jira connector cannot delete issues, use the authenticated Jira UI on this exact site and project.
+Do not touch any other Jira project or project administration.
+
+Verify that `project = SQ ORDER BY key ASC` returns zero issues.
+
+4. GitHub integrity check
+
+Verify but do not modify:
+- Owner: hetalempiricinfotech-eng
+- Repository: support-rag-eval
+- Branch: main
+- Expected commit: fe9f5f923c8d685e31d0442a2a0dc83fd7bd7155
+
+Verify:
+- corpus.md: 9afe4e3343d566aff4f3678e24768f07a822456d37317e65fba19040f3c5444d
+- query_log.md: 995d40b455d9bac485a8838b5031d1ddb1e8ae6fa38deda1a647462533fb9044
+- recipe.md: 3d5545f152497ca090a40d843f6532d26b3baaba81f911fff88f5e67b3ed7ae2
+
+If the GitHub commit or checksums differ, report the failure and do not rewrite the repository.
+
+5. Final verification
+
+When finished, provide a concise plain-language completion summary containing:
+- Target and decoy Sheet IDs
+- Rows cleared from each tab
+- New target Sheet revision
+- Deleted Jira issue IDs/keys
+- Zero-issue Jira verification
+- GitHub commit and checksum results
+- Completion timestamp
+- Any failure
+
+The environment is ready for another run only when both Sheets match their baselines, Jira contains zero
+issues, and GitHub verification passes.

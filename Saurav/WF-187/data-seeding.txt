@@ -1,74 +1,19 @@
-# Round 1 data-seeding controls - prompt drift
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or any mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
 
-Seed four isolated but identical repository, observability, report, Jira, and Teams fixtures for
-`R1-A` through `R1-D`. Preserve commit SHAs and keep canonical selection, family grouping, production-log
-interpretation, model-pattern flags, and ticket decisions in an evaluator-only manifest. Tag output
-`[DRIFT-R1-<run>]` and block visibility of all previous run artifacts.
+Use only:
+- GitHub: sauravempiricinfotech-sys/cahuu-api-backend, cahuu-web-app, cahuu-mobile-app, cahuu-flutterflow-export
+- Supabase: cahuu-observability.prompt_invocation_logs
+- Drive folder/Sheet: Prompt Drift Reports - Cahuu → LLM Prompt Drift Report - Cahuu
+- Jira: Cahuu Prompt Governance, key CPG
+- Teams: Testing Client Workflows → Prompt Drift Alerts
 
-Make the distinctions testable: newest canonical with Python only as tie-breaker, identical ignoring
-whitespace, minor and meaningful drift, a single-source family, code-versus-production mismatch, zero
-traffic, native-structured-output replacing manual JSON instruction, and a version carrying both drift
-and deprecated-pattern flags. Seed an open issue for update, a closed issue for fresh creation, and a
-prior-message variant for duplicate notification handling. Never permit code changes.
+Compute the seven full UTC days ending yesterday. The four private repositories are static inputs and must retain canonical fixtures for tied-date canonical selection, whitespace/minor/meaningful/single-source families, production mismatch, native structured output versus manual JSON, and combined meaningful drift/deprecated pattern. Do not expose expected grouping/decisions or modify source.
 
-Prepare a complete sample environment for testing the LLM prompt drift workflow. This setup is only for testing and evaluation. Do not use or modify any production systems, production data, production repositories, or production credentials. Reuse a resource instead of duplicating it whenever one with the exact name already exists.
+For the computed window, seed only prompt_invocation_logs with its canonical fictional rows: production-confirming calls, a code/production mismatch, and a zero-traffic family/platform. Do not alter another Supabase table.
 
-GITHUB REPOSITORIES
+Direct pre-run reset:
+- Restore LLM Prompt Drift Report - Cahuu to header-only Prompt Families, Model Pattern Check, and Run Log tabs; remove output rows, formulas, comments, objects, and added tabs while retaining the Sheet/folder.
+- Empty CPG, then create exactly two baseline tickets with no comments or attachments: wf187-baseline-open, To Do, unassigned, summary [Prompt Drift] support-chatbot and a stale fictional description; and wf187-baseline-closed, Done, unassigned, summary [Prompt Drift] receipt-data-extractor and a historical description. Do not create other Jira tickets during setup.
+- Delete all posts/replies in Prompt Drift Alerts.
 
-Create or locate four small sample repositories under "sauravempiricinfotech-sys", all default branch "main":
-
-1. "cahuu-api-backend" (Python/FastAPI). Include:
-   - app/prompts/support_chatbot.py, SUPPORT_CHATBOT_SYSTEM_PROMPT, a ~500-word persona prompt written for Claude (mentions no OpenAI-specific quirks), passed to an Anthropic call targeting "claude-sonnet-4-5". Last commit touching this file dated July 13, 2026 ("Tune support persona for Claude migration").
-   - app/prompts/ticket_summarizer.py, TICKET_SUMMARIZER_PROMPT, a short internal-tool prompt targeting "gpt-4o-mini". Last commit touching this file dated June 1, 2026.
-   - app/services/code_review_bot.py, CODE_REVIEW_PROMPT, an internal dev-tool prompt targeting "gpt-4o", called only from a CLI script, not through the main API. Last commit touching this file dated April 2, 2026.
-   - app/services/receipt_extractor.py, RECEIPT_EXTRACTOR_PROMPT, targeting "gpt-4o", using OpenAI's structured-output/JSON-schema response format rather than freeform text instructions. Last commit touching this file dated July 14, 2026 ("Migrate receipt extraction to structured outputs").
-
-2. "cahuu-web-app" (Node/Express + React). Include:
-   - server/prompts/supportChatbot.js, exporting SUPPORT_CHATBOT_SYSTEM_PROMPT, an older prompt written for GPT-4 (different structure, different examples, noticeably different tone from the Python version), targeting "gpt-4o" via the OpenAI SDK. Last commit touching this file dated March 10, 2026, untouched since.
-   - server/prompts/ticketSummarizer.js, exporting TICKET_SUMMARIZER_PROMPT, text identical (aside from JS vs Python string syntax) to the Python backend's ticket_summarizer.py prompt, targeting "gpt-4o-mini". Last commit touching this file dated June 2, 2026.
-   - No code-review or receipt-extraction prompts in this repo.
-
-3. "cahuu-mobile-app" (Flutter/Dart). Include:
-   - lib/prompts/support_chatbot_prompt.dart, a Dart string constant supportChatbotSystemPrompt, reworded and shortened from the Python version, still explicitly targeting model "gpt-4" in the API call. Last commit touching this file dated May 5, 2026.
-   - lib/services/receipt_extractor_service.dart, a Dart string constant with the older "reply ONLY with valid JSON, no other text" style instruction, targeting "gpt-4o". Last commit touching this file dated May 20, 2026 (never migrated to structured outputs).
-   - No ticket-summarizer or code-review prompts in this repo.
-
-4. "cahuu-flutterflow-export" (a FlutterFlow project's GitHub-synced export). Include:
-   - lib/custom_code/actions/support_chatbot_action.dart, a Dart string constant that's a near-verbatim copy of the Python backend's July 13 support_chatbot text (only trivial whitespace differences), targeting "claude-sonnet-4-5". Last commit touching this file dated July 15, 2026 (a manual sync commit, making it the most recently modified copy of this family across all four repos).
-   - No other prompt families in this repo.
-
-SUPABASE PROJECT
-
-Create or locate a Supabase project named "cahuu-observability" with one table:
-
-prompt_invocation_logs: log_id (uuid, pk), platform (text: python_backend, web_app, mobile_flutter, or flutterflow), prompt_family (text), prompt_version_tag (text), model_used (text), invoked_at (timestamptz).
-
-Seed rows spread across 2026-07-09 00:00:00 UTC through 2026-07-15 23:59:59 UTC as follows:
-
-- support_chatbot: python_backend rows tagged "v3-claude" throughout the week (model claude-sonnet-4-5); web_app rows tagged "v2-gpt4-legacy" throughout the week (model gpt-4o); mobile_flutter rows tagged "v1-mobile-short" throughout the week (model gpt-4); flutterflow rows tagged "v3-claude-synced" throughout the week (model claude-sonnet-4-5). A few dozen rows per platform is enough.
-- ticket_summarizer: python_backend and web_app rows both tagged "v1-shared" throughout the week (model gpt-4o-mini), confirming both platforms are serving the same version their code shows.
-- receipt_extractor: python_backend rows tagged "v1-freeform-json" for July 9 through July 14, then tagged "v2-structured-output" only on July 15 (matching the code's July 14 migration reaching production a day later); mobile_flutter rows tagged "v1-freeform-json-mobile" throughout the week (model gpt-4o), confirming the Flutter app is still genuinely serving the old-style prompt.
-- code_review_assistant: zero rows for the entire window, since this prompt is only invoked from an internal CLI script that doesn't log through this table.
-
-GOOGLE DRIVE AND SHEETS
-
-Create or locate a Google Drive folder named "Prompt Drift Reports - Cahuu". Inside it, do not pre-create the Sheet, the workflow creates "LLM Prompt Drift Report - Cahuu" itself on first run.
-
-JIRA PROJECT
-
-Create or locate a Jira project named "Cahuu Prompt Governance" (key CPG), team-managed Kanban is fine. Seed two tickets ahead of time:
-
-- An open ticket (status "To Do") titled something like "[Prompt Drift] Support Chatbot Persona", description containing stale findings from a prior week, so the workflow updates it in place rather than duplicating it.
-- A closed ticket (status "Done") titled something like "[Prompt Drift] Receipt/Data Extractor", so the workflow opens a fresh ticket for that family this run instead of reopening the closed one.
-
-Do not pre-create a ticket for any other family.
-
-MICROSOFT TEAMS
-
-Create or locate a Microsoft Teams team named "Testing Client Workflows" with a channel named "Prompt Drift Alerts". Seed the channel with 3-4 short, unrelated historical messages (a deploy notice, a standup note, a PR-merged message) dated within the past two weeks. None of them may link to the "LLM Prompt Drift Report - Cahuu" sheet or name the "July 9-15, 2026" window, so the workflow's duplicate-post check can be exercised honestly on its first real run.
-
-WRAP-UP
-
-Do not create duplicate resources when matching ones already exist. Do not provision real cloud infrastructure or real billing accounts. Do not run any part of the drift-check workflow itself during this setup, don't create the Sheet, don't touch the two seed Jira tickets beyond creating them, and don't post anything to Teams beyond the unrelated seed messages.
-
-Once setup is complete, report back: all four GitHub repo URLs and resolved commit SHAs; the Supabase project name and confirmation the table is seeded; the Drive folder name/URL; the Jira project name, key, and the two seeded ticket keys with their statuses; and the Teams team/channel name. This is what the drift-check workflow prompt's resource names resolve to when it runs.
+Do not generate report data, tickets, or Teams posts during setup. Preserve source conflicts and output baselines so the run tests analysis rather than recall. When finished, summarize what was seeded and reset in plain language, confirm the source repositories/table, blank Sheet, Jira baselines, and zero-message channel, and report any blocker directly.
