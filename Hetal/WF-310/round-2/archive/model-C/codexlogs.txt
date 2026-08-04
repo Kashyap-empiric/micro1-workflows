@@ -1,0 +1,147 @@
+Worked for 3m 27s
+
+
+I’ll inspect the repository data, reproduce the full BM25/dense/RRF analysis, then update the Google Sheet and create only the confirmed corpus-gap tickets plus one retrieval recommendation in Jira.
+
+
+
+
+Ran commands
+
+
+I’m using the GitHub skill to locate and read the source repository, and the Google Sheets skill to update the two spreadsheet tabs with range-level precision.
+
+
+
+
+Used GitHub, Google Drive and Atlassian Rovo integrations, loaded tools, read files, ran commands
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+I found the intended repository and spreadsheet, confirmed the Jira project is SQ, and verified the log contains 84 independent queries, including eight explicitly documented corpus gaps and six disputed-ground-truth queries. The spreadsheet already has the requested nine per-query columns and seven category-summary columns, so I’ll preserve its existing headers and formatting.
+
+
+
+
+The verified optimum is α = 0.5: BM25 hits 56/84 queries (66.67%), dense hits 31/84 (36.90%), and hybrid hits 67/84 (79.76%)—a 116.13% relative improvement over dense-only. Importantly, 12 queries have no top-five coverage, but only eight are confirmed corpus gaps; the other four are retrieval misses and will not receive content-gap tickets.
+
+
+
+
+Used Google Drive integration
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Both spreadsheet tabs have been populated. I’m now creating exactly nine Jira tasks: eight tied to the log’s explicit corpus-gap flags, plus one recommendation to retain hybrid retrieval at α = 0.5; the four in-corpus retrieval misses are recorded only in the spreadsheet.
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Got spreadsheet cells "'Per-Query Detail'!A1:I86, 'Category Su…"
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Verification now reconciles all 84 spreadsheet rows against the source log, confirms all six disputed flags, and matches the eight corpus-gap flags to exactly eight Jira tickets. The remaining four no-coverage rows—Q033, Q040, Q061, and Q081—are correctly marked as retrieval misses with no corpus-gap tickets.
+
+
+
+
+
+
+
+Updated Hybrid Retrieval Coverage Analysis with all 84 queries and category summaries.
+Recall@5
+BM25: 56/84 = 66.67%
+Dense: 31/84 = 36.90%
+Hybrid, optimal α = 0.5: 67/84 = 79.76%
+Hybrid improvement over dense: 116.13%, exceeding the 39% requirement.
+Category	Queries	Share	BM25 recall	Dense recall	Hybrid recall
+exact-match	35	41.67%	100.00%	0.00%	85.71%
+semantic	10	11.90%	0.00%	100.00%	100.00%
+mixed	27	32.14%	77.78%	77.78%	100.00%
+no-coverage	12	14.29%	0.00%	0.00%	0.00%
+
+
+Fusion sweep: α 0.0: 36.90%; 0.1: 48.81%; 0.2: 48.81%; 0.3: 48.81%; 0.4: 48.81%; 0.5: 79.76%; 0.6: 73.81%; 0.7: 73.81%; 0.8: 73.81%; 0.9: 75.00%; 1.0: 66.67%.
+Of the 12 uncovered queries, eight are confirmed corpus gaps and four are retrieval misses: Q033, Q040, Q061, and Q081. Those four received no content-gap tickets.
+Jira tickets
+Q002: SQ-92
+Q005: SQ-93
+Q020: SQ-94
+Q024: SQ-95
+Q032: SQ-96
+Q044: SQ-97
+Q057: SQ-98
+Q058: SQ-99
+Hybrid retrieval recommendation: SQ-100
+No production retrieval settings, indexes, embeddings, or corpus content were changed.
+
+
+14:54
+

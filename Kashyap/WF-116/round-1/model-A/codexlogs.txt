@@ -1,0 +1,75 @@
+Worked for 33m 34s
+
+I'm starting with the required access preflight only—no campaign, analytics, CRM, message, or issue data will be read until all four destinations are confirmed writable. I'm using the connected Google Drive/Sheets/Docs, Atlassian, and Teams workflows because this run spans those systems; if any preflight check fails, I'll stop and only append the required failure row if the warehouse itself is writable.
+
+Used Google Drive, Atlassian Rovo, and Codex Apps integrations, ran commands
+
+All four preflight checks passed, including no-op write probes on the exact Sheet and Drive folder, Jira create/edit visibility for SCM, and Teams' write-target validation. I'm now reading only the specified tabs and will keep every range bounded to the June 15–21 window logic.
+
+Used Google Drive and Codex Apps integrations, ran commands
+
+The attribution model is complete and reconciles: 19 included opportunities each sum to exactly 100%; one unresolved opportunity is excluded as required. The window contains ₹34,721 spend, 3 materially over-credited combinations, 10 materially under-credited combinations, and 7 underperforming combinations that require Jira work.
+
+Used Atlassian Rovo integration
+
+Getjiraissue
+
+Ran a command
+
+The Google Docs workflow is now shaping the report build: because the destination folder is empty and the deliverable requires native document tabs, I'm using a direct native Docs route and preparing chart images for insertion, with readback and PDF visual verification before I treat the report as complete.
+
+Ran commands
+
+I'm also applying the visualization workflow for the two requested attribution charts. It will influence only the chart design and QA; the finished charts will live inside the Executive Summary tab, not as separate deliverables.
+
+Edited a file, ran commands, searched the web
+
+Viewed 2 images
+
+Edited a file, ran a command
+
+Viewed an image
+
+Ran a command
+
+Viewed an image
+
+Used Google Drive integration, ran commands, searched the web
+
+The report now has all three native tabs, all nine attribution/operations tables, and both chart images inserted. I'm in the verification pass now—checking native date chips, Jira hyperlinks, table completeness, and rendered PDF pages before sending the Teams notification.
+
+Used Google Drive integration, edited a file, ran commands
+
+Viewed 4 images
+
+Used Google Drive and Codex Apps integrations, ran commands
+
+Viewed 3 images
+
+All three document tabs now pass semantic and rendered-page checks: the campaign tables are complete, split-table headers repeat correctly, both charts are sharp, Jira links work, and no placeholders remain. I'm writing the final success row to the warehouse Run Log now.
+
+Used Google Drive and Codex Apps integrations
+
+Pipeline completed successfully for June 15–21, 2026 IST.
+Google Doc attribution report
+Teams notification
+Jira: SCM-62, SCM-63, SCM-64, SCM-65, SCM-66, SCM-67, SCM-68
+Key results:
+Total spend: ₹34,721
+Attributed conversions: 19.0
+Blended True CAC: ₹1,827
+Attributed pipeline: ₹10,97,400
+Attributed revenue: ₹25,87,725
+Materially over-credited: 3
+Materially under-credited: 10
+Underperforming combinations: 7
+Cross-platform opportunities: 14 of 19, or 73.7%
+All 21 spend-bearing combinations appear in the report, every included opportunity reconciles to 100%, one unresolved opportunity was excluded and documented, and exactly one Teams message exists for the window. The Run Log success row was appended and verified.
+The document retains the explicitly requested June 8–14 filename, while all report content and calculations use June 15–21.
+
+Weekly Attribution Report - June 8, 2026 to June 14, 2026 (Google Docs — Open in default browser / Open in app)
+
+Edited 2 files (+133/-0)
+C:/Users/Empiric/.codex/visualizations/2026/07/24/019f93e6-0ae5-75f0-bed3-7a210df95c5a/attribution_charts.py (+105/-0)
+C:/Users/Empiric/.codex/visualizations/2026/07/24/019f93e6-0ae5-75f0-bed3-7a210df95c5a/montage_pdf.py (+28/-0)
+

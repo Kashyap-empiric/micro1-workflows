@@ -1,0 +1,10 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only https://www.linkedin.com/in/kashyap-empiric-b9998641a, Gmail mailbox kashyap.empiricinfotech@expert.micro1.ai, testing client workflows → Marketing → linkedin-approvals, and Sheet Empiric Infotech LinkedIn Content Log.
+
+1. Delete all posts from the exact test-controlled LinkedIn target. Do not operate on a public or differently named profile.
+2. Delete every sent test-mailbox message with subject beginning LinkedIn Post Published -. Never delete the mailbox.
+3. Delete every post and reply in testing client workflows → Marketing → linkedin-approvals. Retain the team and channel.
+4. Restore Empiric Infotech LinkedIn Content Log to these header-only tabs, removing all rows, objects, formulas, comments, and added tabs. Retain the same Sheet; standalone setup recreates its two adversarial seed rows.
+   Content Log: Date | Draft ID | Post Body | Suggested Title | Hashtags | Suggested Posting Time | Topic Reasoning | Source Trends Used | Engagement Patterns Applied | Status | Published URL | Published Timestamp | Notification Sent
+   Issues: Date | Draft ID | Issue | Status
+
+If any destination cannot be confirmed test-controlled or any reset fails, stop and report the affected resource plainly; do not start another run. When finished, summarize the cleanup in plain language and confirm zero LinkedIn posts, zero matching Gmail messages, zero Teams messages, and the header-only Sheet baseline.

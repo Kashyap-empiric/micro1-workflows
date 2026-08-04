@@ -1,0 +1,86 @@
+Worked for 17m 14s
+
+I'm using the GitHub, Google Drive/Docs, Teams, and Atlassian workflow skills because this run spans all four systems. I'll start with the required access gate, including the exact Drive-folder uniqueness check and a pinned GitHub snapshot; if any part of that gate fails, I'll stop there and report it.
+
+Used Google Drive, GitHub, Atlassian Rovo, and Codex Apps integrations, ran commands
+
+Access gate passed: the ticket project is browseable and editable under read/write scopes, the private repository grants admin/pull/push access, exactly one non-trashed exact-name Drive folder was found and the authenticated account owns it and all eight existing documents already in it, and the target channel is readable with a successful direct-post preflight. The repository snapshot is pinned to a specific commit on the default branch; every repository read from here uses that immutable commit.
+
+Searched Jira issues using JQL
+
+The selection query returns one eligible issue: a Medium-priority transactional email delivery research ticket created earlier that day. I'm moving that issue into the research state and then gathering its linked source pack and the pinned repository context.
+
+Used Atlassian Rovo integration, ran a command
+
+Transitioned the ticket
+
+Used Atlassian Rovo, Google Drive, and GitHub integrations, ran commands
+
+The linked source pack is in the confirmed folder and is readable. It adds concrete replay, retention, latency, credential-rotation, redaction, and operational constraints. The pinned repository confirms a strict TypeScript/Node 22 monorepo with Next.js 15/React 19, NestJS 11, PostgreSQL 16, Redis/BullMQ, S3, and ECS Fargate. I'm now collecting the bounded adoption signals and official vendor evidence as of the run date.
+
+Ran commands, searched the web
+
+The adoption shortlist is now bounded to eight platforms, with dated npm counts for a stated seven-day window and exact GitHub star observations on the run date. The five strongest combined adoption/fit candidates are named. A notable differentiator is that one finalist's own webhook documentation says it does not currently support HMAC signatures, while another finalist's default per-team rate is 5 requests/second unless increased or batched.
+
+I'm switching into the document-authoring workflow now. The Google Docs skill directs a polished, reference-free report through a rendered staging artifact followed by native Google Docs conversion, with native formatting and post-import verification.
+
+Ran commands
+
+[Context automatically compacted]
+
+Ran commands
+
+The evidence review is complete enough to draft the decision. I'm using the Documents skill's Google-Docs-native import path now: a structured, rendered source document first, followed by native Docs readback and repair of dates, links, lists, and tables.
+
+Ran commands, searched the web
+
+The first document segment is in place. The five-platform section exceeded a single-command length limit, so I'm splitting that generation into bounded segments; the source artifact remains one document.
+
+Ran commands
+
+The source document passes the structural checks: required section order, five individual platform sections, an eleven-column five-row comparison matrix, real list numbering, and no placeholder text. A local rendering tool is unavailable in this environment, so the local render gate fell back to structural QA; I'll use native Docs readback and Drive export checks after import.
+
+Used Google Drive integration
+
+The pipeline is paused at the Google Docs creation gate. Access validation succeeded for: the ticket project with browse/edit scopes, the private repository with read/write permissions, exactly one Drive folder matching the exact confirmed name, owned by the authenticated account, existing documents in that folder with readable content and owner-level permissions, and the target channel with direct-post validation. The immutable repository snapshot (default branch, pinned commit) is recorded. The selected ticket was transitioned to In Progress with the required start comment.
+
+The research document was prepared and structurally validated with all required sections, five evaluated platforms, and a five-platform comparison matrix. The exact-name check found no existing target document in the confirmed folder.
+
+The actual native Google Docs import was rejected by a safety control because the import action does not accept the authorized destination folder or account as an argument. It would initially upload internal research content without proving that exact destination in the upload call itself. I did not attempt a workaround, move, ticket completion comment, status transition, or chat post.
+
+To continue, please explicitly approve this risk-aware sequence: upload the redacted research document to the authenticated Google Drive account using the available native import action, then move the resulting native Google Doc into the confirmed folder and verify its parent before any ticket or chat publication.
+
+[The user approved the proposed sequence]
+
+Worked for 8m 2s
+
+I'll continue with the approved upload-then-move sequence and finish the downstream publication gates. I'm using the Google Docs/Documents skills for the native import, verification and repair, then the Teams messaging skill for the duplicate check and channel post.
+
+Used Google Drive integration, ran commands
+
+The native Google Doc was imported successfully and moved into the confirmed research folder. I'm validating the live document structure and native semantics before touching the ticket or chat.
+
+Used Google Drive integration
+
+Native readback preserved the heading hierarchy, 11 tables, page-orientation sections and 193 real list paragraphs. It also exposed conversion artifacts: non-ASCII punctuation arrived as "?", and imported dates and the linked source document are plain text/link elements. A checked-in file-backed trusted-read bridge is not callable in this environment, so I'm using the full connector structure as the advisory inventory and making narrow native repairs.
+
+Used Google Drive integration, ran a command
+
+The repair pass converted all malformed bullet markers to native Docs list presets, inserted 12 native date chips, replaced the source-pack hyperlink with a canonical rich-link chip, and converted the implementation list to the Docs checkbox preset. I'm running the publication validation now.
+
+Used Google Drive integration
+
+The live validation passed: exactly five platform rows, one primary recommendation, all required section headings in order, 12 date chips, one source-document rich link, native tables/lists, no placeholders or malformed text, and exactly one target document in the confirmed folder. HTML export confirms 11 tables and 67 heading tags; the PDF export succeeded, but its connector payload cannot be rasterized locally here, so page-fit visual QA remains unverified.
+
+Used Atlassian Rovo integration
+
+The ticket now has exactly one completion summary comment and is In Review. I'm checking the latest 20 channel messages for the ticket-key/phrase duplicate rule immediately before publication.
+
+Used Codex Apps integration
+
+The chat post succeeded. I'm doing one final state reconciliation across the single issue, the exact Drive-folder title, and the posted channel message, then I'll return the run report with the adoption evidence and scoring basis.
+
+Used Google Drive and Codex Apps integrations, ran a command
+
+Completed successfully.
+

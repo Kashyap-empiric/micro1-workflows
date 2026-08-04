@@ -1,0 +1,190 @@
+Worked for 6m 7s
+
+
+I’m using the GitHub, Supabase, Google Sheets, Teams, and Chrome-access workflows for this run. I’ll perform a strict access preflight first and stop immediately if any required scope cannot be confirmed; only after that will I pin the repository snapshots and inspect content.
+
+
+
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo, and Codex Apps integrations, ran commands
+
+
+Access preflight passed: all four GitHub repositories expose pull access; the named Supabase project and table are readable in the UTC window; the exact Sheet is owned by the connected Drive account; CPG is available for both create and edit actions; and Teams resolved the channel with can_post_directly: true. I’m pinning the four default-branch snapshots at the captured run start, then I’ll inventory prompts and production usage against those fixed references.
+
+
+
+
+Used GitHub and Supabase integrations, ran commands, searched the web
+
+
+The pinned inventory contains four product families: support, receipt extraction, thread summarization, and a single-source vendor-copy prompt. The logs also show a backend support deployment mismatch (support-v2 served while code says support-v3) and no mobile traffic for its code families in the window. I’m using the OpenAI documentation workflow for the current model-pattern review, alongside Anthropic’s official documentation.
+
+
+
+
+Used Google Drive, Atlassian Rovo, and Codex Apps integrations, ran a command, searched the web
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Codex Apps integration
+
+
+The Teams connector can resolve and preflight the channel, but its message reads returned empty bodies for the two posts in the duplicate-check interval. The Chrome workflow requires me to use the active session for that missing read, so I’m switching to Chrome to inspect those posts before deciding whether a new notification is allowed.
+
+
+
+
+Used Chrome and Codex Apps integrations, ran commands
+
+
+
+
+
+The run is blocked at the Teams duplicate-post gate, so I stopped before making any Sheet or Jira changes.
+Access preflight succeeded:
+GitHub: pull: true on all four requested repositories.
+Supabase: cahuu-observability was found and public.prompt_invocation_logs was readable; the bounded production-window probe returned 778 rows.
+Google Drive: the exact LLM Prompt Drift Report - Cahuu is in the requested folder and is owned by the connected account.
+Jira: CPG was returned for both action=create and action=edit.
+Teams: the exact team and channel resolved, and write preflight returned can_post_directly: true.
+What failed is the required read of existing Teams post bodies for deduplication. The channel listing found two posts within the interval, at 2026-07-28T06:19:53Z and 2026-07-28T09:29:10Z, but the connector returned content: null; fetching each canonical message path returned an empty body. Exact Sheet-ID and window searches also returned no results. The Chrome fallback reached the Teams launcher, but “Use the web app instead” did not enter the channel or expose the posts. I therefore cannot determine whether either post already links to this Sheet or names the production window. I will not guess, send a possible duplicate, or log an unsupported duplicate-skip.
+No Google Sheet cells were updated, no Jira issues were created or edited, and no Teams message was sent.
+The fixed run context was:
+Platform	Pinned default-branch commit
+Python backend	37031bccae0b1470cfb580cebd761e5d4565ab4d
+MERN web app	33bd4ad6d5d453eca6fd2213b47069920d743b89
+Flutter mobile app	f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow export	40987da6088bd838e13164800225f265de525f7b
+
+Run-start snapshot: 2026-07-28T10:09:08Z. Production window: 2026-07-21T00:00:00Z through 2026-07-28T00:00:00Z, end exclusive.
+The preliminary inventory found four families, with three meaningfully diverged families: support, receipt extraction, and thread summarization. Vendor copy is single-source. It also found the backend support deployment mismatch: 412 invocations were tagged support-v2 while pinned code declares support-v3. Mobile support and thread prompts had no observed production traffic. The pattern review identified one prompt-only JSON enforcement workaround on backend receipt gpt-4.1; OpenAI recommends native Structured Outputs with strict JSON Schema where supported, and GPT-4.1 supports Structured Outputs. Structured Outputs guide, GPT-4.1 model. All three thread versions target claude-3-5-sonnet-latest; Anthropic says Sonnet 3.5 models were retired on October 28, 2025 and retired-model requests fail on Anthropic-operated platforms, so the telemetry label needs investigation alongside migration. Anthropic model deprecations. These findings have not yet been published as final run artifacts.
+There is also a separate Supabase security advisory: public.request_logs and public.llm_call_logs have RLS disabled. I did not change them. Review Data API exposure and grants, design appropriate policies, and only then consider:
+ALTER TABLE public.request_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.llm_call_logs ENABLE ROW LEVEL SECURITY;
+Enabling RLS without matching policies can block legitimate access. See Supabase RLS guidance.
+Please open and sign in to the Teams web app in Chrome, navigate to Testing Client Workflows → Prompt Drift Alerts, and tell me when it is ready. I can then inspect the two posts, complete the duplicate decision, update the Sheet and CPG tickets, and either send the notification or record the verified skip.
+
+
+3:44 PM
+
+
+
+
+
+
+
+post it through connector
+
+
+
+
+
+
+3:45 PM
+
+
+
+
+
+
+Worked for 5m 6s
+
+
+Understood. I’ll use the Teams connector for the final post. I’m continuing the unfinished run first: populate the exact Sheet, create fresh CPG tickets because the prior family tickets are closed, verify those artifacts, then send the channel update through the connector using the completed counts and Sheet link.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations, ran commands
+
+
+The target Sheet still has only its three header rows, and CPG has no open issues; the older family tickets are closed, so fresh tickets are required. I’m writing one stable family/platform row per discovered version in Prompt Families!A2:L11 and the corresponding ten model reviews in Model Pattern Check!A2:I11. The recurring key is the family_id plus platform, so a later run can update these rows in place.
+
+
+
+
+Updated spreadsheet
+
+
+
+
+
+The family and pattern tabs are populated. I’m creating three unassigned CPG Tasks—support, receipt, and thread—because no open CPG issue covers them. Receipt and thread will keep semantic alignment and model-pattern remediation as distinct action groups, including the web thread version’s double flag.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+CPG-27, CPG-28, and CPG-29 were created successfully as unassigned To Do Tasks. I’m doing the final connector-side channel check through the current send time, then I’ll post the requested summary through that connector as you directed.
+
+
+
+
+Used Codex Apps integration
+
+
+The Teams connector accepted the post and returned a canonical message link. I’m recording that send, the ticket actions, the pinned commits, and the duplicate-read limitation in Run Log!A2:N2, then I’ll verify all three tabs and the created ticket state.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations
+
+
+Getjiraissue
+
+
+
+
+
+Microsoft teams fetch
+
+
+
+
+
+The connector readback confirms all ten family rows, ten model-pattern rows, the completed Run Log, all three Tasks still unassigned in To Do, and the sent Teams message body. I’m using the Chrome visual-review workflow now because the Sheets workflow requires a rendered check for clipping and layout before handoff.
+
+
+
+
+Used Chrome integration, ran a command
+
+
+Context automatically compacted
+
+
+
+Used Chrome integration, ran a command
+
+
+
+
+
+The weekly drift run is complete, and the engineering notification was sent through the Teams connector.
+LLM Prompt Drift Report – Cahuu — Prompt Families, Model Pattern Check, and Run Log populated and visually verified.
+Production window: 2026-07-21 00:00:00 UTC through 2026-07-28 00:00:00 UTC (seven full days, end exclusive).
+4 prompt families checked; 3 families meaningfully diverged; 4 confirmed model-pattern/lifecycle flags.
+3 new Jira Tasks, all verified unassigned and in To Do:CPG-27 — Support chatbot / triage persona
+CPG-28 — Receipt / structured data extractor
+CPG-29 — Thread / conversation summarizer
+
+Teams notification — sent at 2026-07-28 10:17:48 UTC.
+Codebase	Pinned default-branch commit
+Python backend	37031bccae0b1470cfb580cebd761e5d4565ab4d
+MERN web app	33bd4ad6d5d453eca6fd2213b47069920d743b89
+Flutter mobile app	f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow export	40987da6088bd838e13164800225f265de525f7b
+
+The most important production discrepancy is the backend support family: 412 invocations were tagged support-v2 while the pinned code declares support-v3, so this is a deployment or tagging mismatch separate from its meaningful drift against canonical web support-v4. Mobile support and mobile thread summarization had no observed production traffic.
+The model findings distinguish prompt drift from model-pattern work. Backend receipt-v6 uses a prompt-only “valid JSON only” workaround even though GPT-4.1 supports native strict schema Structured Outputs (OpenAI Structured Outputs, GPT-4.1 model documentation). The three thread versions target claude-3-5-sonnet-latest; Anthropic documents Sonnet 3.5 retirement on its operated platforms and recommends a current replacement, while its Messages API uses a top-level system parameter for system instructions (model deprecations, Messages API). The web thread version is explicitly double-flagged: its 120-word constraint is a separate meaningful divergence from the retired-model action.
+One caveat is recorded in the Run Log: the connector listed two earlier channel posts in the duplicate-check interval but returned no readable bodies; exact Sheet-ID and window searches found no match. After your explicit direction to post through the connector, I sent the message and logged that the prior-body duplicate determination could not be independently completed.
+Separately, Supabase surfaced a critical advisory that public.request_logs and public.llm_call_logs have RLS disabled. I did not change them during this diagnostic run. Review Data API exposure and grants, then enable RLS with appropriate policies; enabling without policies can block legitimate access (Supabase RLS guidance).
+

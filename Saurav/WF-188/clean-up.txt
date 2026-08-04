@@ -1,0 +1,20 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, inventory, control sheet, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Retain the GitHub repository, Supabase project/tables, Drive folder, target Sheet, Jira project, and Teams team/channel.
+
+## In-scope resources
+
+- GitHub: sauravempiricinfotech-sys/cahuu-llm-gateway, main
+- Supabase: cahuu-observability.request_logs and cahuu-observability.llm_call_logs
+- Drive folder and Sheet: LLM Cost Attribution Reports - Cahuu → LLM Cost & Latency Attribution - Cahuu
+- Jira project: Cahuu LLM Gateway Ops (CLGO)
+- Teams: Testing Client Workflows → LLM Cost Attribution
+
+Stop if an exact-name project, folder, repository, Sheet, team, or channel is duplicated. Do not touch a differently named resource.
+
+## Reset only workflow-mutated state
+
+1. Sheet. Reset LLM Cost & Latency Attribution - Cahuu to these blank tabs, in order, and no others: Cost By Endpoint (Endpoint | Feature | Model(s) | 7d 2xx Requests | Monthly Volume | Prompt Token Method | Est. Tokens / Request | Est. Monthly Cost (USD) | P50 Latency (ms) | P95 Latency (ms) | Opportunity Flags | Ticket / Notes); Cost By Feature (Feature | Endpoints | Monthly Volume | Est. Monthly Cost (USD) | Opportunities); Pricing Sources (Provider | Model | Input Price | Output Price | Official Source | Checked Date | Notes); Run Log (Run Date | Analysis Window | Commit SHA | Status / Exclusions). Clear all workflow rows, formulas, charts, comments, links, and formatting added by the run. Retain the same Sheet and Drive folder.
+2. Jira. Keep or recreate only these two labelled baseline issues. wf188-baseline-open: summary [LLM Cost] /api/support/triage; description WF-188 test baseline: existing open ticket to update in place.; To Do; unassigned; no comments/attachments. wf188-baseline-closed: summary [LLM Cost] /api/docs/summarize; description WF-188 test baseline: closed history; it must not block a new ticket.; Done; unassigned; no comments/attachments. Delete every other CLGO issue and attachment as model-created workflow output. Retain the project, settings, and members.
+3. Teams. Delete every post and reply in LLM Cost Attribution. The channel begins empty, so every message is workflow-mutated. Retain the team and channel.
+4. Source safety. On a normal cleanup, only read-check the named GitHub repository and the two named Supabase tables; the workflow is diagnostic and must not alter them. If the model changed either source, stop and report the unresolved source change. Never modify another branch, repository, or Supabase table.
+
+If any reset or verification fails, stop and report the remaining resource plainly; do not start another model run. When finished, summarize the cleanup in plain language and confirm the blank Sheet baseline, exactly two baseline Jira issues, zero Teams messages, and passed source-access checks.

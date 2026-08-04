@@ -1,0 +1,13 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only Freelance Growth, Profile Health Dashboard → Scores, Profile Improvements, Upwork https://www.upwork.com/freelancers/~0124d436cfb83b7122, and Fiverr saurav_empiric.
+
+1. Drive: delete Freelance Profile Gap Analysis for 28 July 2026 and other workflow output from Freelance Growth; retain the folder.
+2. Sheet: restore Profile Health Dashboard → Scores to this exact header and four stale rows; delete all other rows and objects:
+   Platform | Section | Owner Value or Count | Competitor Median | Score (out of 10) | Status | Priority Rank
+   Upwork | Headline | 38 characters, no niche keyword | 92 characters, includes niche keyword and years of experience | 3 | gap | 1
+   Fiverr | Overview | 65 words | 170 words | 4 | gap | 2
+   Upwork | Overall | blank | blank | 5.1 | blank | blank
+   Fiverr | Overall | blank | blank | 5.6 | blank | blank
+3. Tasks: reset Profile Improvements to the single incomplete task Upwork fix headline, notes stale placeholder to update in place, due 2026-07-01; delete every other task.
+4. Marketplaces: verify no owner-profile field was edited. Never make a marketplace change during cleanup.
+
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm the four-row Sheet baseline, one stale task, no workflow Doc, and no marketplace edits.

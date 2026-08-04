@@ -1,0 +1,7 @@
+reads conversion data from Google Ads, Meta Ads and LinkedIn Ads simultaneously, applies multi-touch attribution model instead of last-click, calculates true cost-per-acquisition per channel per campaign type, posts real attribution report to marketing manager weekly - stops credit going entirely to last click, shows which channels actually influence deals.
+
+Workflow Description
+
+Review paid marketing performance across Google Ads, Meta Ads, and LinkedIn Ads for the previous completed week. Instead of relying on platform-reported last-click conversions, combine advertising data with GA4 and CRM opportunity data to determine the true contribution of every marketing channel throughout the customer journey.
+
+Analyze the complete conversion funnel, identify campaigns receiving too much or too little credit, recommend budget reallocations, detect audience overlap, and create optimization tasks for underperforming campaigns.

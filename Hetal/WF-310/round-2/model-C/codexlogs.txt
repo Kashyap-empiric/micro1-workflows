@@ -1,0 +1,253 @@
+Worked for 4m 20s
+
+
+I’ll read the attached brief, inspect the workspace, and then carry the requested work through to a verified deliverable.
+
+
+
+
+Read files
+
+
+I’m using the GitHub and Google Sheets skills to ground the analysis in the repository and write the two requested tabs. I’ll use the connected Jira capability for the confirmed content gaps and the single retrieval recommendation, keeping retrieval misses separate from corpus gaps.
+
+
+
+
+Used GitHub, Google Drive and Atlassian Rovo integrations, loaded tools, read files
+
+
+The source fixture has 84 query rows, 154 chunks, and RRF k = 60; the recipe also specifies ascending chunk-ID tie-breaks. I’ve grounded the exact target Sheet and SQ Jira project. Next I’m parsing the recorded rankings and validating the existing tab schema before writing.
+
+
+
+
+Used Atlassian Rovo, GitHub and Google Drive integrations
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Fetched file
+
+
+
+
+
+The sweep has a unique optimum at α = 0.5: 67/84 hybrid hits. Standalone BM25 has 56/84 and dense has 31/84. The classification is 35 exact-match, 10 semantic, 27 mixed, and 12 no-coverage; eight of those 12 are confirmed corpus gaps, while Q033, Q040, Q061, and Q081 are retrieval misses with content present. I’ll write the existing nine-column detail schema in A2:I85 and the four-row summary in A2:G5.
+
+
+
+
+Used GitHub and Google Drive integrations
+
+
+The Sheet content write succeeded. I’m filing eight content-gap Tasks only for the log-confirmed no-answer rows, plus one recommendation Task to retain hybrid at α = 0.5 as an evaluation recommendation. The four retrieval misses with existing ground truth will remain in the detail tab without corpus-gap tickets.
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Got spreadsheet cells "'Per-Query Detail'!A1:I85, 'Category Su…"
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Readback reconciles all 84 rows, four summary rows, and exactly nine Jira Tasks. I’m using the computer-use skill now for the Sheet’s required rendered visual QA, so I can catch clipping or layout issues that a cell-value read cannot show.
+
+
+
+
+Read Computer Use skill
+
+
+
+Inspect rendered Sheet
+
+
+
+
+
+Open coverage Sheet
+
+
+
+
+
+Inspect Sheet layout
+
+
+
+
+
+Searched for Resize a Column|autoResizeDimensions|updateDimensionProperties in reference-batch-update-recipes.md
+
+
+
+Inspect summary layout
+
+
+
+
+
+The rendered summary is clean. In the detail tab, longer query text is visibly clipped by the populated ground-truth column. I’m applying the smallest layout repair: widen only the query-text column, wrap its data cells, and fit the populated row heights, then I’ll re-render both tabs.
+
+
+
+
+Updated spreadsheet
+
+
+
+
+
+Verify detail layout
+
+
+
+
+
+Verify later detail rows
+
+
+
+
+
+Verify final detail rows
+
+
+
+
+
+The detail tab now renders long queries on wrapped, fitted rows without truncating them, and the summary remains legible. I’m doing a final narrow connector check of the repaired formatting and reconciliation before handing off the results.
+
+
+
+
+Used Google Drive integration
+
+
+
+
+
+Completed the analysis, updated the Hybrid Retrieval Coverage Analysis Sheet, and filed the nine requested Jira Tasks.
+Retrieval result
+The unique optimal sweep point is α = 0.5 with RRF k = 60.
+Method	Hits / 84	Recall@5
+BM25-only	56 / 84	66.67%
+Dense-only	31 / 84	36.90%
+Hybrid at α = 0.5	67 / 84	79.76%
+
+
+Hybrid improves on dense-only by 116.13% relative:
+\[
+\frac{79.7619\%-36.9048\%}{36.9048\%}
+= \frac{67-31}{31}
+= 116.13\%
+\]That clears the requested 39% relative-improvement threshold. The absolute Recall@5 gain over dense-only is 42.86 percentage points.
+α	Hybrid hits / 84	Recall@5
+0.0	31	36.90%
+0.1	41	48.81%
+0.2	41	48.81%
+0.3	41	48.81%
+0.4	41	48.81%
+0.5	67	79.76%
+0.6	62	73.81%
+0.7	62	73.81%
+0.8	62	73.81%
+0.9	63	75.00%
+1.0	56	66.67%
+
+
+I used the recorded top-10 ranks, zero contribution for a missing side, and ascending chunk-ID tie-breaking. Disputed rows counted either candidate as a hit and remain explicitly flagged in the Sheet.
+Category rollup
+These are conditional Recall@5 values within each outcome bucket, with shares based on the full 84-query log:
+Category	Count	Share	BM25 Recall@5	Dense Recall@5	Hybrid Recall@5	Overall optimal α
+exact-match	35	41.67%	100.00%	0.00%	85.71%	0.5
+semantic	10	11.90%	0.00%	100.00%	100.00%	0.5
+mixed	27	32.14%	77.78%	77.78%	100.00%	0.5
+no-coverage	12	14.29%	0.00%	0.00%	0.00%	0.5
+
+
+The 12 no-coverage rows comprise:
+Eight confirmed corpus gaps: Q002, Q005, Q020, Q024, Q032, Q044, Q057, Q058.
+Four retrieval misses despite content existing: Q033 (D046/D047), Q040 (D053), Q061 (D053), and Q081 (D031). Their corpus-gap flag is No, and no corpus-gap ticket was filed for them.
+The six hybrid-only recoveries are Q027, Q049, Q052, Q064, Q068, and Q079. The six disputed queries—Q010, Q023, Q031, Q034, Q069, and Q084—are marked Yes in Disputed?.
+The Sheet contains all 84 independent query rows in Per-Query Detail!A2:I85 and the four requested rows in Category Summary!A2:G5. I also widened and wrapped the query-text column and fitted the populated row heights after rendered visual QA exposed clipping.
+Jira Tasks
+Confirmed corpus-content gaps:
+SQ-119 — Q002, HIPAA BAA process
+SQ-120 — Q005, QuickBooks Online integration
+SQ-121 — Q020, deleted workspace restore
+SQ-122 — Q024, legal hold and retention deletion
+SQ-123 — Q032, mobile offline drafting
+SQ-124 — Q044, customer-managed encryption keys
+SQ-125 — Q057, real-time live-chat translation
+SQ-126 — Q058, automatic voice-call transcription
+Retrieval recommendation:
+SQ-127 — Retain hybrid RRF at evaluated α = 0.5
+Each gap ticket explicitly records that there is no acceptable existing chunk ID, describes the missing content, and recommends content-team action. SQ-127 includes the query and chunk IDs, sweep, Recall@5 evidence, relative-improvement calculation, and recommendation.
+No production retrieval setting, live fusion weight, embedding, index, or corpus chunk was changed.

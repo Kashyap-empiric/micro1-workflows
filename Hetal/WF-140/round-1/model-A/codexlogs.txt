@@ -1,0 +1,89 @@
+Worked for 12m 16s
+
+
+I’m using the Google Drive/Sheets skills for the rulebook and row-level write-back, the Teams messaging skills for the live channel post, and the Gmail skill for unsent owner drafts. I’ll first reconcile the policy with all three sheets, then make only the explicitly requested writes; ambiguous rows will be marked rather than inferred.
+
+
+
+
+Ran commands
+
+
+The Sheets workflow requires a few precision and verification references before any live range read or edit, so I’m loading those now. I’m also routing the policy document through the Google Docs workflow so its definitions—not generic SaaS assumptions—control the analysis.
+
+
+
+
+Ran commands
+
+
+The required connectors are available, including Jira, Teams, and Gmail, so I won’t need the Chrome fallback. I’m now resolving the four authoritative Google files and the exact Teams/Jira destinations before reading or writing anything.
+
+
+
+
+Used Google Drive integration
+
+
+The policy is now grounded. It establishes five standards (Jira, Teams, OneDrive, HubSpot, Harvest), makes the SSO and quote sheets authoritative for usage/cost, uses a $3,000 ticket threshold, and freezes action for renewals within 21 days while still recording and ticketing them. I’m paging through the remaining rows now so every tool gets a policy-backed disposition.
+
+
+
+
+Used Google Drive, Atlassian Rovo, and Codex Apps integrations
+
+
+The policy-backed opportunity set is now clear: five real overlaps total $56,220/year. Four clear the Jira threshold; one (Pipedrive → HubSpot, $2,880/year) is tracker-only. The two project-management tools are within the 21-day renewal freeze, so their ticket will explicitly defer execution to next cycle.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+Createjiraissue
+
+
+
+
+
+Used Google Drive integration
+
+
+The tracker write-back is complete and verified across all 20 tool rows. I resolved the exact Teams channel inside “testing client workflows”; I’m posting the finance/ops summary there now and creating five Gmail drafts with intentionally blank To fields for Marketing, Design, Company-wide, Engineering, and Sales.
+
+
+
+
+Used Gmail and Codex Apps integrations
+
+
+The Jira tickets, Teams post, and all five drafts succeeded. I’m doing the last readback now: confirming the new drafts remain unsent with blank recipients and checking the final tracker output for completeness and preserved formatting.
+
+
+
+
+Listed drafts
+
+
+
+
+
+
+
+
+Completed the SaaS consolidation review.
+Annual spend analysed: $140,340
+Estimated annual saving: $56,220
+Five genuine overlaps identified
+All 20 rows updated in SaaS Subscription Tracker
+Jira tickets, assigned to Hetal M1:
+ITOPS-33: Asana + Trello → Jira — $7,740, deferred under the renewal freeze
+ITOPS-34: Slack → Microsoft Teams — $34,200
+ITOPS-35: Toggl Track → Harvest — $6,000
+ITOPS-36: Dropbox Business → OneDrive — $5,400
+Pipedrive → HubSpot saves $2,880 and was recorded only on the tracker because it is below the $3,000 ticket threshold.
+Higher-risk items were called out: the Asana/Trello renewal freeze, Slack’s company-wide migration and 196 indicated additional Teams seats, Dropbox’s 8 TB archive and short renewal window, and Harvest’s exact-fit capacity.
+The Teams summary was posted live. Five Gmail drafts were created for Marketing, Design, Company-wide, Engineering, and Sales; all remain drafts with empty To fields and verified-address warnings.
+No cancellations, vendor contacts, licence changes, data moves, or emails were sent.
+

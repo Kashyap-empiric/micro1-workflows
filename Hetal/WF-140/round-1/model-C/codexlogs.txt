@@ -1,0 +1,68 @@
+Worked for 6m 56s
+
+
+I’m using the Google Drive/Sheets, Atlassian, Teams messaging, and Gmail skills because this review spans all five systems and includes live writes. I’ll apply the governance document first, then analyze the three sheets, write back row-level decisions, create only policy-qualified Jira tickets, post the live Teams summary, and leave unsent Gmail drafts with blank recipients.
+
+
+
+
+Ran commands
+
+
+The connectors are available, so I’m staying in the authenticated APIs and won’t need browser fallback. I’m now grounding the policy and source workbooks by exact file IDs before reading any rows.
+
+
+
+
+Used Google Drive integration
+
+
+The policy produces five genuine overlaps: Project Management (Asana and Trello → Jira), Slack → Microsoft Teams, Toggl Track → Harvest, Dropbox Business → OneDrive, and Pipedrive → HubSpot. The first four clear the Jira threshold; Pipedrive is tracker-only. Asana and Trello are also inside the 21-day renewal freeze, so their opportunity must be recorded and ticketed but deferred to the next cycle.
+
+
+
+
+Used Atlassian Rovo, Gmail, and Codex Apps integrations
+
+
+Createjiraissue
+
+
+
+
+
+The four Jira tasks were created in IT Ops and assigned to the authenticated IT Operations Lead account. I’m writing the full 20-row decision matrix back to the tracker now, including kept standards, out-of-scope exceptions, complementary tools, the below-threshold CRM item, and the two policy gaps where no standard/category lets me make a valid call.
+
+
+
+
+Used Google Drive and Gmail integrations
+
+
+The tracker write-back is verified, and five Gmail drafts now exist with blank recipient fields: Marketing, Design, Company-wide communications, Engineering, and Sales. Each draft explicitly says a verified owner address is required before sending. I’m posting the finance/ops summary live to the resolved Teams channel, then I’ll verify the post and drafts.
+
+
+
+
+Used Gmail and Codex Apps integrations
+
+
+
+
+
+Completed the quarterly SaaS consolidation review.
+Annualized spend analyzed: $140,340
+Estimated annual saving: $56,220
+Ticketed saving: $53,340
+Tracker-only saving: $2,880
+Updated all 20 rows in the SaaS Subscription Tracker with the decision, retained standard, saving, Jira outcome, and policy reason.
+Created and assigned to Hetal M1:
+ITOPS-25: Asana and Trello → Jira, $7,740
+ITOPS-26: Slack → Microsoft Teams, $34,200
+ITOPS-27: Toggl Track → Harvest, $6,000
+ITOPS-28: Dropbox Business → OneDrive, $5,400
+Pipedrive → HubSpot was recorded only on the tracker because its $2,880 saving is below the $3,000 ticket threshold.
+The Teams summary was posted live, with the renewal-freeze risk and 8 TB Dropbox migration risk called out separately.
+Five Gmail drafts were created for Marketing, Design, Company-wide communications, Engineering, and Sales. All remain unsent, have no To recipient, and explicitly require a verified owner address.
+Policy gaps were recorded for Figma/Adobe XD—no sanctioned Design standard—and Loom—missing category and policy treatment. No subscriptions, vendors, licences, or tracker rows were changed or removed.
+

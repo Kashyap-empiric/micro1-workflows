@@ -1,0 +1,155 @@
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require
+clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup
+only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age. If prior workflow output remains, perform the named-resource reset below
+directly, then continue with setup.
+
+This is a stable fixture in dedicated test accounts. Do not use a run ID, manifest, control sheet, setup inventory, production account, local file, or differently named resource. Exact names define the fixture boundary.
+
+## Reusable resources
+
+Create a missing resource; otherwise retain and reuse it. Stop if any exact-name resource is duplicated.
+
+- Drive folder: SaaS Consolidation Model Test
+- Sheet: SaaS Subscription Tracker; tab: Subscriptions
+- Sheet: Identity Login Report - June 2026; tab: SSO Active Users
+- Sheet: Vendor Renewal Quotes Q3 2026; tab: Quotes
+- Doc: SaaS Governance Policy
+- Jira project: IT Ops
+- Teams team: SaaS Model Tests; channel: SaaS Consolidation Model Test
+- The connected dedicated test Gmail mailbox
+
+The Drive folder and its four inputs are permanent. Keep them, the Jira project, and the team/channel across model runs.
+
+## Direct pre-run reset
+
+Before checking the fixture state, reset only output a prior model could have changed:
+
+- Clear K2:O21 in SaaS Subscription Tracker → Subscriptions. Retain the sheet, A1:J21, K1:O1, formatting,
+  Drive folder, and the other three source files.
+- Delete every issue and attachment in the exact IT Ops test project. Retain the project, settings, and members.
+- Delete every post and reply in the exact SaaS Consolidation Model Test channel. Retain the team and channel.
+- Delete every draft in the connected dedicated test mailbox. Never send a draft or delete the mailbox.
+- Do not alter the identity report, quote sheet, or governance policy unless a prior model incorrectly changed
+  that named source; repair only that source if needed.
+
+## Ready-state checks
+
+Before the model starts, verify:
+
+- IT Ops has zero issues and attachments.
+- SaaS Consolidation Model Test has zero channel posts/replies.
+- The test mailbox has zero drafts.
+- Tracker cells K2:O21 are blank and all source data below is intact.
+- Tracker source columns A:J and all supporting inputs are read-only to the model-run account; K:O is editable.
+
+Never create a duplicate fixture. Restore only a named input that was accidentally changed. Use Wednesday 29 July 2026, Asia/Kolkata. Do not create Jira issues, Teams posts, or Gmail drafts during setup.
+
+## Static source data
+
+Tracker headers in A1:O1:
+
+Tool | Category | Department Owner | Licenses | Active Users (30d, self-reported) | Billing Term | Cost per Term (USD) | Renewal Date | Vendor | Notes | Review Decision — 2026-07-29 IST | Consolidate Onto / Retain | Est. Annual Saving (USD) | Jira / Record | Policy Basis / Reason
+
+Populate A2:J21 as follows; K:O must begin blank:
+
+Jira | Project Management | Engineering | 200 | 112 | Annual | 22800 | 2026-11-15 | Atlassian | All engineering sprints run here; unused enterprise seats are available for migration
+Asana | Project Management | Marketing | 40 | 9 | Monthly | 520 | 2026-08-09 | Asana | Marketing picked this up last year, light use
+Trello | Project Management | Design | 25 | 3 | Monthly | 125 | 2026-08-12 | Atlassian | A couple of kanban boards
+ClickUp | Project Management | Client Services | 60 | 55 | Annual | 9900 | 2027-01-20 | ClickUp | Client project portals; clients log in externally to track delivery
+Slack | Communication | Company-wide | 300 | 288 | Annual | 30600 | 2026-12-01 | Slack | Main internal chat
+Microsoft Teams | Communication | Company-wide | 300 | 205 | Annual | 0 | 2027-03-01 | Microsoft | Bundled under Microsoft 365 E3; mostly used for calls
+Discord | Communication | DevRel | 20 | 17 | Monthly | 0 | 2027-06-30 | Discord | Public developer community server, external users, free tier
+Harvest | Time Tracking | Client Services | 60 | 58 | Annual | 6480 | 2026-08-19 | Harvest | Billable hours; feeds client invoices
+Toggl Track | Time Tracking | Engineering | 45 | 12 | Monthly | 450 | 2026-09-10 | Toggl | Engineering internal time estimates
+Dropbox Business | File Storage | Design | 30 | 6 | Annual | 5400 | 2026-08-22 | Dropbox | 8 TB design asset archive lives here
+Box | File Storage | Legal | 10 | 10 | Annual | 2040 | 2027-02-15 | Box | Executed contracts under legal retention hold
+OneDrive | File Storage | Company-wide | 300 | 240 | Annual | 0 | 2027-03-01 | Microsoft | Bundled under Microsoft 365 E3
+Figma | Design | Design | 20 | 18 | Annual | 6480 | 2026-10-05 | Figma | UI design and prototyping
+Adobe XD | Design | Design | 12 | 1 | Annual | 7200 | 2026-08-28 | Adobe | Legacy; one designer opens old files; vendor discontinued it
+Miro | Whiteboarding | Product | 35 | 24 | Annual | 3800 | 2026-11-12 | Miro | Workshops, journey maps, retros
+Google Analytics 4 | Analytics | Marketing | 0 | 8 | Free | 0 | 2027-06-30 | Google | Website and marketing traffic
+Mixpanel | Analytics | Product | 0 | 6 | Annual | 9600 | 2026-10-30 | Mixpanel | In-product event analytics
+HubSpot | CRM | Marketing | 15 | 13 | Annual | 10800 | 2026-12-15 | HubSpot | Marketing and sales CRM plus email
+Pipedrive | CRM | Sales | 8 | 2 | Monthly | 240 | 2026-09-01 | Pipedrive | One sales rep started this on a company card
+Loom | [blank] | Various | 45 | 25 | Monthly | 375 | 2026-08-25 | Loom | Async video walkthroughs; no category set
+
+Identity Login Report - June 2026 / SSO Active Users:
+
+Tool | Unique Active Users (30d)
+Jira | 112
+Asana | 2
+Trello | 3
+ClickUp | 51
+Slack | 291
+Microsoft Teams | 205
+Discord | External (not in SSO)
+Harvest | 56
+Toggl Track | 4
+Dropbox Business | 2
+Box | 10
+OneDrive | 240
+Figma | 18
+Adobe XD | 1
+Miro | 19
+Google Analytics 4 | External (not in SSO)
+Mixpanel | 18
+HubSpot | 3
+Pipedrive | 7
+Loom | 9
+
+Vendor Renewal Quotes Q3 2026 / Quotes:
+
+Tool | Quoted Renewal Cost | Currency | Term
+Slack | 34200 | USD | Annual
+Toggl Track | 6000 | USD | Annual
+Miro | 4000 | EUR | Annual
+
+SaaS Governance Policy binding rules:
+
+1. External/client-access tools and tools holding platform-bound legal/compliance-retention data are out of scope. Record them kept; never retire them or use them as a target.
+2. Standards: Project Management → Jira; internal Communication → Microsoft Teams; File Storage → OneDrive; CRM → HubSpot; Time Tracking → Harvest. Never retire a standard.
+3. The identity report is the source of truth for usage. External means outside SSO, not waste.
+4. Quotes override tracker costs. Monthly costs × 12; EUR × 1.08 USD.
+5. Savings = retired tool annual cost minus incremental standard-seat cost. Standard spare licences = licences minus identity-report users. A $0 standard has a $0 seat price.
+6. Create a Jira issue only for saving ≥ $3,000.
+7. Renewal within 21 days, inclusive, is frozen: record and ticket if eligible, but defer action to next cycle.
+8. Complementary tools are not overlaps: whiteboarding ≠ UI design; web/marketing analytics ≠ in-product analytics.
+9. If there is no sanctioned target or the category is blank, mark unresolved; do not infer a target or saving.
+
+## Difficulty and isolation requirements
+
+This is a performance test, not a happy-path demo. Keep the following conflicts intact and do not add hints,
+formulas, comments, issue templates, draft templates, or prefilled output that reveal the answer:
+
+- Tracker usage deliberately conflicts with the identity report; the identity report must win.
+- Slack and Toggl have authoritative quotes; Miro has a EUR quote that must be converted but is still a
+  complementary tool, so a correct calculation alone must not create an opportunity.
+- Jira has 88 spare seats for the grouped Asana/Trello migration; Harvest has exactly four spare seats for
+  Toggl; HubSpot has 12 spare seats for Pipedrive; OneDrive has 60 spare seats for Dropbox. Teams needs more
+  seats for Slack, but its incremental seat price is $0.
+- Asana and Trello are ticket-eligible but frozen. Harvest is a retained standard whose renewal is exactly 21
+  days away, so the inclusive-boundary rule must be recognised without retiring it.
+- ClickUp, Discord, and Box must be excluded for different reasons. Miro, GA4, and Mixpanel look adjacent but
+  are not overlaps. Figma, Adobe XD, and Loom must remain unresolved rather than receiving an invented target.
+- Pipedrive is a valid consolidation but its $2,880 annual saving is below the Jira threshold. Dropbox is
+  ticket-eligible but must carry the 8 TB migration risk.
+
+Make the four permanent input files discoverable to the model-run account and editable only where necessary:
+the model may write tracker K:O but may not edit A:J or the three supporting inputs. Do not create any
+model-visible evaluator record or expected-output artifact.
+
+### Evaluator-only oracle — do not create in a connected app
+
+Use this only to score the model after its run; it is not fixture data and must never be exposed to the model:
+
+- Total annual spend analysed: $140,340.
+- Total annual savings: $56,220.
+- Exactly four Jira issues: Asana + Trello → Jira ($7,740, frozen/deferred); Slack → Microsoft Teams ($34,200);
+  Toggl Track → Harvest ($6,000); and Dropbox Business → OneDrive ($5,400, high-risk).
+- Pipedrive → HubSpot is recorded on the tracker only ($2,880). ClickUp, Discord, and Box are out of scope;
+  Miro, GA4, and Mixpanel are complementary/no-overlap; Figma, Adobe XD, and Loom are unresolved.
+- Harvest remains the Time Tracking standard, with its 21-day freeze risk recorded but no retirement action.
+- Exactly five Gmail drafts: Marketing, Design, Company-wide, Engineering, and Sales. Each has an empty To
+  field and a verified-address warning.
+
+When finished, summarize the setup in plain language and confirm the named resources and ready-state checks. Report any blocker directly.

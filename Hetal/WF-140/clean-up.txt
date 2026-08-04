@@ -1,0 +1,22 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, inventory, control sheet, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Retain the Drive folder and four source files, Jira project, Teams team/channel, and mailbox.
+
+## In-scope resources
+
+- Drive folder: SaaS Consolidation Model Test
+- Sheet: SaaS Subscription Tracker; tab: Subscriptions
+- Jira project: IT Ops
+- Teams: SaaS Model Tests → SaaS Consolidation Model Test
+- All drafts in the connected dedicated test mailbox
+
+Touch no other Drive item, folder, document, project, Teams destination, email, subscription, or licence. Stop on duplicate exact-name folder, project, team, or channel.
+
+## Reset only workflow-mutated state
+
+1. Tracker: clear K2:O21 in SaaS Subscription Tracker → Subscriptions. Keep A1:J21, K1:O1, formatting, the sheet, its Drive folder, and the other three source files unchanged. If the workflow changed tracker structure, source columns, or tabs, stop and report the unresolved reset. Do not recreate the Drive folder or the other sources.
+2. Jira: delete all issues and their attachments in IT Ops. Retain the project, its settings, and members. Verify zero issues.
+3. Teams: delete all posts and replies in SaaS Consolidation Model Test. Retain the team and channel. Verify zero messages.
+4. Gmail: delete every draft in the dedicated test mailbox. Do not send a draft or delete the mailbox. Verify zero drafts.
+
+The workflow does not change the identity report, quote sheet, governance policy, Drive folder, Jira project configuration, Teams configuration, or mailbox configuration. Leave those intact.
+
+If a reset fails, stop and report the remaining resource plainly; do not begin another run. When finished, summarize the reset and confirm K2:O21 is blank and Jira, Teams, and Gmail have zero workflow output.

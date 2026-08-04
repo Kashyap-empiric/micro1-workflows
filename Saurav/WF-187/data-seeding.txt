@@ -1,0 +1,19 @@
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or any mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
+
+Use only:
+- GitHub: sauravempiricinfotech-sys/cahuu-api-backend, cahuu-web-app, cahuu-mobile-app, cahuu-flutterflow-export
+- Supabase: cahuu-observability.prompt_invocation_logs
+- Drive folder/Sheet: Prompt Drift Reports - Cahuu → LLM Prompt Drift Report - Cahuu
+- Jira: Cahuu Prompt Governance, key CPG
+- Teams: Testing Client Workflows → Prompt Drift Alerts
+
+Compute the seven full UTC days ending yesterday. The four private repositories are static inputs and must retain canonical fixtures for tied-date canonical selection, whitespace/minor/meaningful/single-source families, production mismatch, native structured output versus manual JSON, and combined meaningful drift/deprecated pattern. Do not expose expected grouping/decisions or modify source.
+
+For the computed window, seed only prompt_invocation_logs with its canonical fictional rows: production-confirming calls, a code/production mismatch, and a zero-traffic family/platform. Do not alter another Supabase table.
+
+Direct pre-run reset:
+- Restore LLM Prompt Drift Report - Cahuu to header-only Prompt Families, Model Pattern Check, and Run Log tabs; remove output rows, formulas, comments, objects, and added tabs while retaining the Sheet/folder.
+- Empty CPG, then create exactly two baseline tickets with no comments or attachments: wf187-baseline-open, To Do, unassigned, summary [Prompt Drift] support-chatbot and a stale fictional description; and wf187-baseline-closed, Done, unassigned, summary [Prompt Drift] receipt-data-extractor and a historical description. Do not create other Jira tickets during setup.
+- Delete all posts/replies in Prompt Drift Alerts.
+
+Do not generate report data, tickets, or Teams posts during setup. Preserve source conflicts and output baselines so the run tests analysis rather than recall. When finished, summarize what was seeded and reset in plain language, confirm the source repositories/table, blank Sheet, Jira baselines, and zero-message channel, and report any blocker directly.

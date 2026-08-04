@@ -1,0 +1,5 @@
+Freelancer Profile Optimizer & Lead-Gap Research 	
+
+Uses browser-automation agents to scan a freelancer's Upwork/Fiverr profile, extract each section (headline, overview, skills, portfolio, reviews, rates), score profile health against top-performing profiles in the same niche, then generate section-by-section improvement suggestions and a structured research document (gap analysis, competitor benchmark, prioritized action plan) to help them win more leads.
+It will work to create an complete analysis dashboard and data and details of there freelancing platform account and will suggest an improvement they can add in there profile to gain leads and callbacks from clients
+Tools used Google Account fivver or Upwork account google docs (Multi user profile to scan)

@@ -1,0 +1,30 @@
+Worked for 15m 1s
+
+I'm using the GitHub, Supabase, Google Sheets/Drive, Jira, Teams, and Chrome-control skills because this is a permission-gated cross-system audit with browser fallback. I'll first verify every required read/write permission without reading repository, log, sheet, ticket, or channel contents; if any check fails, I'll stop exactly as requested.
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo, and Codex Apps integrations, ran commands
+
+All mandatory preflight checks passed: four GitHub repos are readable, cahuu-observability.public.prompt_invocation_logs is visible, the target Sheet is owned/editable and in the named folder, Jira CPG permits create/edit, and the Teams channel resolves with direct posting permission. I've frozen the run start at 2026-07-28T06:10:00.0381862Z; the production window is 2026-07-21T00:00:00Z through 2026-07-28T00:00:00Z (end-exclusive).
+
+Used GitHub and Supabase integrations, ran commands
+
+The frozen-code scan found four functional prompt families: support, thread summarization, receipt extraction, and vendor discovery copy. Production logs also expose one deployment mismatch already: the Python backend code is support-v3, while production served support-v2 throughout the window. I'm now applying the OpenAI documentation skill for the model-pattern portion so every OpenAI recommendation comes from current official guidance; Anthropic will be checked against its own official documentation.
+
+Ran Get-Content -LiteralPath 'C:\Users\Empiric\.codex\skills\.system\openai-docs\SKILL.md' -Raw
+
+The OpenAI documentation skill requires its official-docs server before any fallback search. That server is not currently exposed, so I'm attempting its standard local registration now; if it still isn't callable in this session, I'll use official OpenAI web pages only.
+
+Used Google Drive integration, ran commands, searched the web
+
+The evidence is now stable: 4 families checked; 3 have meaningful cross-platform divergence. There are 4 deprecated-pattern flags, three thread-summary versions still target retired Claude Sonnet 3.5, and the backend receipt extractor manually enforces JSON even though GPT-4.1 supports strict native Structured Outputs. I'm writing the two evidence tabs first, then I'll create/update the three family tickets and finish the Run Log and Teams post with their exact links.
+
+Used Google Drive and Atlassian Rovo integrations
+
+Create jira issue
+
+Used Google Drive and Codex Apps integrations, ran commands
+
+The Sheet, three unassigned To Do tickets, and Teams post are all complete and read back cleanly. I'm doing one final visual pass on the live Google Sheet now to catch clipping or damaged layout before handing it back.
+
+Used Chrome integration, ran commands
+

@@ -1,0 +1,151 @@
+Worked for 6m 49s
+
+
+I’ll use the GitHub skill to source the repository data and the Google Sheets skill to write the analysis. For Jira, I’ll use the connected Jira tools if available, falling back to the signed-in Chrome session only if needed. I’ll compute the fusion sweep locally and keep corpus gaps strictly separate from retrieval misses.
+
+
+
+
+Loaded tools
+
+
+The Sheets workflow requires exact tab metadata, bounded reads, and a post-write visual-quality check. I’m loading those rules now before touching the workbook; no external changes have been made yet.
+
+
+
+
+Read files, ran a command
+
+
+I’m resolving the three exact external targets in parallel: the installed GitHub repository, the named Google Sheet, and the Jira site/project. Once grounded, I’ll fetch only the three repository files and inspect the two target tabs before computing or writing anything.
+
+
+
+
+Used GitHub, Google Drive and Atlassian Rovo integrations
+
+
+The target workbook is a clean two-tab template with the exact requested headers and no existing data rows, so the write will preserve its structure and formatting. I’m now running the 11-point RRF sweep with k = 60, using recorded ranks only and chunk-ID tie breaks exactly as specified.
+
+
+
+
+The sweep has a unique winner at α = 0.5: BM25 56/84, dense 31/84, hybrid 67/84. Hybrid improves 116.13% relative to dense-only. Before the write pass, I’m re-reading the full target rectangles and checking the Search Quality project for pre-existing matching tickets so this run does not create duplicates.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations
+
+
+The workbook has been populated. I’m filing nine Jira tasks now: eight confirmed corpus gaps (and only those eight), plus one hybrid-retrieval recommendation. The four non-gap retrieval misses—Q033, Q040, Q061, and Q081—remain documented only in the per-query sheet, as requested.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+All nine Jira tasks were created successfully (SQ-83 through SQ-91). The Sheets skill requires a rendered visual check after edits, so I’m using the computer-use skill only for final visual QA of the two tabs; all data writes remain connector-backed.
+
+
+
+
+Read Computer Use skill
+
+
+
+Inspect signed-in Chrome
+
+
+
+
+
+Open Sheet for visual QA
+
+
+
+
+
+Load analysis workbook
+
+
+
+
+
+Check workbook rendering
+
+
+
+
+
+Inspect category summary tab
+
+
+
+
+
+Inspect category summary tab
+
+
+
+
+
+Both tabs render cleanly at normal zoom: headers are readable, detail rows wrap without overlap, and summary percentages/α formatting are correct. I’m doing the final machine check now—84 detail rows, four rollup rows, category/flag reconciliation, and all nine Jira keys/descriptions.
+
+
+
+
+Got spreadsheet cells "'Per-Query Detail'!A1:I85, 'Category Su…"
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+
+
+
+Completed the analysis as of 29 July 2026 (Asia/Kolkata). The evidence supports keeping hybrid retrieval: the unique optimal RRF weight is α = 0.5.
+Retriever	Hits	Recall@5
+BM25-only	56/84	66.67%
+Dense-only	31/84	36.90%
+Hybrid, α = 0.5	67/84	79.76%
+
+
+Hybrid’s relative improvement over dense-only is 116.13%, comfortably exceeding the 39% threshold.
+RRF sweep:
+α	Hits	Recall@5
+0.0	31	36.90%
+0.1	41	48.81%
+0.2	41	48.81%
+0.3	41	48.81%
+0.4	41	48.81%
+0.5	67	79.76%
+0.6	62	73.81%
+0.7	62	73.81%
+0.8	62	73.81%
+0.9	63	75.00%
+1.0	56	66.67%
+
+
+Category rollup:
+Category	Queries	Share	BM25 recall	Dense recall	Hybrid recall
+exact-match	35	41.67%	100.00%	0.00%	85.71%
+semantic	10	11.90%	0.00%	100.00%	100.00%
+mixed	27	32.14%	77.78%	77.78%	100.00%
+no-coverage	12	14.29%	0.00%	0.00%	0.00%
+
+
+The Google Sheet now contains all 84 per-query rows and the four-category summary. The six disputed queries are explicitly flagged.
+Eight confirmed corpus gaps received tickets:
+SQ-83 (Q002), SQ-84 (Q005), SQ-85 (Q020), SQ-86 (Q024)
+SQ-87 (Q032), SQ-88 (Q044), SQ-89 (Q057), SQ-90 (Q058)
+The recommendation is recorded in SQ-91. Q033, Q040, Q061, and Q081 are retrieval misses with content present—not corpus gaps—and received no corpus-gap ticket.
+No production weight, index, embeddings, or corpus content was changed.
+

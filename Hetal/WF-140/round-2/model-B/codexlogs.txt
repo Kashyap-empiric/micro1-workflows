@@ -1,0 +1,115 @@
+Worked for 6m 39s
+
+
+I’ll first locate the governance policy, subscription tracker, SSO report, and renewal quotes, then apply the policy before making any Jira, spreadsheet, Teams, or Gmail changes. If a connector is unavailable, I’ll use the existing signed-in Chrome session as requested.
+
+
+
+
+I’m using the Google Drive/Sheets skills to inspect and update the source files, the Teams messaging skill to publish the live summary, and the Chrome-control skill for Gmail or any service whose connector is unavailable.
+
+
+
+
+Used Google Drive, Atlassian Rovo and Codex Apps integrations, loaded tools, read files, ran a command
+
+
+I’ve located all four source documents, confirmed the IT Ops Jira project and your Jira identity, and found the exact Teams channel. The policy explicitly makes SSO usage authoritative, groups same-category retirements together, prefers fresh renewal quotes, and freezes renewals within 21 days of 29 July 2026.
+
+
+
+
+Used Google Drive integration
+
+
+The policy-based reconciliation identifies five real opportunities totaling $56,220 annually: four meet the Jira threshold, while the $2,880 CRM opportunity belongs on the tracker only. Three cases require separate risk flags, and the Asana/Trello renewals are inside the policy’s freeze window.
+
+
+
+
+Used Chrome integration
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Google Drive and Chrome integrations
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Four Jira tasks have now been created and assigned to you. I also confirmed an important boundary case: Harvest’s 19 August renewal is exactly 21 days after the review date, so its related Toggl migration is frozen even though the opportunity still gets a ticket.
+
+
+
+
+Used Google Drive and Chrome integrations
+
+
+All 20 tracker rows have been updated, and five department-specific Gmail drafts are saved with empty recipient fields. The four filed Jira opportunities are ITOPS-49 through ITOPS-52; the CRM consolidation remains tracker-only because its $2,880 saving is below policy threshold.
+
+
+
+
+Got spreadsheet cells "'Subscriptions'!A1:P21"
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Chrome and Codex Apps integrations
+
+
+The Teams summary is now posted live, and final checks confirm all 20 original subscription rows were preserved, every row has a policy-backed decision, the savings column totals $56,220, all four Jira tasks are assigned correctly, and all five unsent drafts are present with blank recipients.
+
+
+
+
+Leave Gmail Drafts open for your review and clean up browser automation
+
+
+
+
+
+
+
+
+Reviewed 20 tools: $140,340 annual spend and $56,220 potential annual savings.
+ITOPS-49: Asana + Trello → Jira: $7,740. Renewal-frozen.
+ITOPS-50: Slack → Microsoft Teams: $34,200. Higher risk: 291 users.
+ITOPS-51: Toggl Track → Harvest: $6,000. Billing risk; renewal-frozen.
+ITOPS-52: Dropbox → OneDrive: $5,400. Higher risk: 8 TB migration.
+Tracker only: Pipedrive → HubSpot: $2,880.
+Updated all rows in the subscription tracker and published the Teams summary.
+Five Gmail drafts were created with empty recipient fields. Figma, Adobe XD, and Loom remain unresolved because required policy information is missing. No emails were sent or subscriptions changed.

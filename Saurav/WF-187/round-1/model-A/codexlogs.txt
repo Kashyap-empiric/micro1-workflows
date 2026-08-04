@@ -1,0 +1,117 @@
+Worked for 18m 10s
+
+
+I’m starting with an access-only preflight and will not inspect repository contents, logs, Sheet data, Jira issues, or Teams posts until every required permission is confirmed. I’m using the GitHub, Supabase, Google Sheets, Jira, Teams, and Chrome-control skills so the checks and later writes follow each system’s required workflow; Chrome will be the fallback only where a connector is unavailable.
+
+
+
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo, and Codex Apps integrations, ran commands
+
+
+Access preflight passed in full:
+All four GitHub repositories are readable; the authenticated account has admin permission on each.
+cahuu-observability is healthy, public.prompt_invocation_logs exists, and a zero-row SQL read probe succeeded.
+The exact Sheet is in the exact Drive folder, and the authenticated Drive user is its owner.
+Jira project CPG is visible for both create and edit actions.
+Teams resolved the exact team/channel, and its write-target preflight reports can_post_directly: true.
+I’ve fixed the run start at 2026-07-28T09:16:28Z; the production window is 2026-07-21T00:00:00Z through 2026-07-28T00:00:00Z (seven full UTC days). I’ll now resolve and pin the four default-branch commits at or before that start time before reading any code.
+
+
+
+
+Used GitHub integration, ran commands
+
+
+The commit pins are now fixed and match the current main heads, all safely before the run start:
+backend 37031bccae0b1470cfb580cebd761e5d4565ab4d
+web 33bd4ad6d5d453eca6fd2213b47069920d743b89
+mobile f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow export 40987da6088bd838e13164800225f265de525f7b
+I’m taking detached local snapshots at those SHAs so the inventory can use language-aware, multi-pattern searches without drifting if GitHub changes mid-run. No source code will be edited.
+
+
+
+
+Used Supabase integration, ran commands
+
+
+The source inventory yields four functional families: support copilot, thread summarization, receipt extraction, and vendor-discovery copy. Production confirms live traffic for most repo versions, but the backend support family is still serving support-v2 while its pinned code declares support-v3; mobile has no observed production traffic for either of its two families. I’m now checking the four distinct targeted model identifiers against current first-party provider guidance, keeping any model-pattern finding separate from the wording-drift rating.
+
+
+
+
+Used Google Drive integration, searched the web
+
+
+The model check has two confirmed actionable pattern categories, affecting four exact platform versions:
+All three thread-summary versions target retired Claude Sonnet 3.5 identifiers; Anthropic’s current retirement guidance names claude-sonnet-4-6 as the replacement.
+The backend receipt prompt manually enforces “valid JSON only” even though GPT‑4.1 supports strict JSON Schema Structured Outputs.
+The support and vendor prompts use supported OpenAI message patterns, and the web receipt prompt has no confirmed workaround in the prompt text. I’m writing the family/platform matrix and model checks now; the Run Log will be written only after the Jira and Teams outcomes are known so it contains no placeholders.
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations
+
+
+No open CPG ticket currently covers any of the three qualifying families, so this run will create three new unassigned Tasks. Their descriptions keep wording alignment, production deployment skew, and model-pattern migration as distinct action items—especially for the web thread-summary version, which is double-flagged for both a 120-word output constraint and the retired Claude model.
+
+
+
+
+Used Atlassian Rovo integration
+
+
+Createjiraissue
+
+
+
+
+
+Used Codex Apps integration
+
+
+The Teams connector found one channel post in the required date range but returned an empty body for it, so it cannot determine whether that post names this window or links the same Sheet. The Chrome-control fallback now applies: I’m inspecting that one existing post in the logged-in Teams UI before deciding whether to send or skip.
+
+
+
+
+Used Chrome and Codex Apps integrations, ran a command
+
+
+The existing post does not match the duplicate rule: neither channel search nor the connector’s message fetch finds the Sheet ID/title or the 2026-07-21–2026-07-28 window, and the Teams web fallback is not signed in. I’m therefore sending the requested channel update through the validated Teams connector rather than treating an unreadable, generic-titled post as a duplicate.
+
+
+
+
+Used Google Drive, Chrome, and Codex Apps integrations
+
+
+
+
+
+Weekly drift check completed.
+Window: 2026-07-21T00:00:00Z–2026-07-28T00:00:00Z
+Families checked: 4
+Meaningfully diverged: 3
+Deprecated-pattern flags: 4 platform versions across 2 families
+Jira Tasks created: 3, all unassigned in To Do
+Teams notification: sent
+Pinned commits:
+Backend: 37031bccae0b1470cfb580cebd761e5d4565ab4d
+Web: 33bd4ad6d5d453eca6fd2213b47069920d743b89
+Mobile: f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow: 40987da6088bd838e13164800225f265de525f7b
+Deliverables:
+Updated Google Sheet
+CPG-24 — Support chatbot
+CPG-25 — Thread summarizer
+CPG-26 — Receipt extractor
+Teams notification
+Notable production finding: backend support served support-v2 despite pinned code declaring support-v3. Mobile support and thread summarization had no observed traffic. The pattern flags cover retired Claude Sonnet 3.5 usage and the backend receipt prompt’s manual JSON enforcement; see Anthropic’s deprecation guidance and OpenAI’s Structured Outputs guide.
+Separate Supabase security advisory: public.request_logs and public.llm_call_logs have RLS disabled. I did not change them. The suggested SQL is below, but policies must be designed before enabling RLS or access may be blocked:
+ALTER TABLE public.request_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.llm_call_logs ENABLE ROW LEVEL SECURITY;
+Supabase RLS documentation
+

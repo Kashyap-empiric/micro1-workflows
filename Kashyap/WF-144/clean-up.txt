@@ -1,0 +1,8 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only kashyapempiricinfotech-sys/webapp-main, Jira MBTF, Mobile Build - Test Fixture, and Testing Client Workflows → Engineering.
+
+1. Drive: delete all workflow blueprint Docs/files from Mobile Build - Test Fixture. Retain the folder and harmless static noise Doc.
+2. Jira: delete every MBTF issue and attachment. Retain the project itself; standalone setup recreates the two named baseline issues.
+3. Teams: delete every post/reply in Testing Client Workflows → Engineering.
+4. GitHub: verify the static main history and cutoff fixture; do not modify source.
+
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm empty MBTF, no workflow Docs, zero Teams messages, and verified repository integrity.

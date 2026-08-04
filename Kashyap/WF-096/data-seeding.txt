@@ -1,0 +1,19 @@
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
+
+Use only:
+- Jira project: TCW
+- GitHub: kashyapempiricinfotech-sys/relayforge-operations-platform
+- Drive folder: RelayForge Research Documentation
+- Teams: testing client workflows → Engineering
+
+All named resources must be unique and test-controlled. Stop on ambiguity rather than substituting another resource.
+
+Direct pre-run reset:
+- Empty TCW, then create a deterministic queue: one labelled wf096-baseline-target, To Do, Highest priority Technical Research issue titled Evaluate transactional email provider for RelayForge; a same-priority later-created wf096-baseline-decoy; and a wf096-baseline-history Done issue. The target must contain its fictional transactional-email requirement, direct attachments, in-folder source document, external out-of-scope link, two normal comments, and one stale comment beginning Automated research completed. Do not create workflow comments.
+- Keep every source attachment/document in RelayForge Research Documentation. After the target issue key is known, create exactly one blank stale output Doc titled [TCW] - 3rd Party Research - <TARGET-KEY> - <YYYY-MM-DD>; delete all other Docs with that title prefix. Preserve source documents.
+- Delete all posts/replies in the exact Engineering test channel.
+- Verify the repository default-branch snapshot, README, architecture docs, contributing guide, dependency/configuration files, Dockerfile, CI, and IaC. Preserve the configuration-versus-documentation disagreement; configuration is authoritative. Never modify source.
+
+The fixture must remain difficult: the selected issue wins only under priority/created/key tie-breaks; external links are out of scope; the stale Jira comment and stale output Doc must be updated in place; the stack disagreement tests source precedence; vendor selection/research facts remain unknown to the model.
+
+When finished, summarize the setup in plain language and confirm the static queue, Drive sources, repository snapshot, and empty Teams state are restored. Report any blocker directly.

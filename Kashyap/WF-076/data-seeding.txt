@@ -1,0 +1,21 @@
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
+
+Use only:
+- GitHub: kashyapempiricinfotech-sys/sample-qa-test-project, branch agent/qa-validation-fixture
+- Hosted staging environment encoded by that branch
+- Sheet: Test Data Repository - sample-qa-test-project
+- Drive folder: QA Test Data Reports
+- Jira project: Testing Client Workflows
+- Teams: Testing Client Workflows → Test → Test Data Generation and Validation Summary
+
+The repository and staging environment are static inputs. Verify the branch SHA, visible/API non-production marker, dedicated fictional credentials, safe reset operation, and remotely reachable staging URL. Reset staging with its approved safe reset only; never create a local substitute or hand-delete records.
+
+Direct pre-run reset:
+- Run the approved staging reset and verify its baseline marker and Customers, Products, Orders, and Order Items relationships.
+- Restore the named Sheet to header-only Test Data Repository and Run Log tabs; delete output Docs from QA Test Data Reports while retaining the folder.
+- Empty the exact Testing Client Workflows test project, then create exactly two baseline issues with no comments or attachments: [WF076 baseline] Customer validation duplicate (To Do, labels validation and wf076-baseline-open) and [WF076 baseline] Historical referential-integrity finding (Done, labels validation and wf076-baseline-closed). The open issue must describe the duplicate-eligible validation rule; the closed issue must not block a new finding.
+- Delete all posts and replies in the exact Teams channel.
+
+Retain the difficult static fixture: separate create/edit customer routes, admin form, same-URL modal/tab, deprecated hidden form, and private oracle for required/format/referential/script/business/ORM/error-message defects plus one retest-only flaky false positive. Do not expose the oracle, run tests, create findings, write report output, or post during setup.
+
+When finished, summarize the setup in plain language and confirm the sources, staging reset, output baselines, Jira seeds, and Teams zero-message state. Report any blocker directly.

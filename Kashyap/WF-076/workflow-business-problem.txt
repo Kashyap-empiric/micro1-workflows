@@ -1,0 +1,273 @@
+reads project schema, seed files, entity definitions and existing test fixtures from codebase, generates realistic domain-accurate test data per form field type, fills test environments or staging forms with contextually correct values (not lorem ipsum), logs generated dataset to spreadsheet for team reuse.
+---
+Business Problem
+
+QA teams waste significant time manually creating realistic test data before testing new features. Generic placeholder values often fail business validations, resulting in poor test coverage and missed defects.
+
+This workflow automatically analyzes the project schema, entity relationships, validation rules, existing fixtures, and seed data to generate realistic, domain-specific test data. It populates staging forms, stores reusable datasets, identifies validation gaps, and prepares comprehensive reports for future testing.
+
+Step 1: Analyze Project Structure
+
+Review the selected GitHub repository.
+
+Analyze:
+
+Database schema
+Entity models
+ORM definitions
+Validation rules
+Enums
+Relationships
+Seed files
+Existing fixtures
+Factory classes
+Mock data
+API schemas
+OpenAPI / Swagger specifications
+
+Identify:
+
+Required fields
+Optional fields
+Unique constraints
+Foreign key dependencies
+Business validation rules
+Default values
+Step 2: Discover Testable Forms
+
+Identify all user input forms including:
+
+Registration
+Login
+Profile
+Product
+Order
+Payment
+Customer
+Employee
+Invoice
+Support Ticket
+Settings
+Custom Forms
+
+For each form extract:
+
+Field Name
+Data Type
+Required Status
+Validation Rules
+Allowed Values
+Relationships
+Conditional Fields
+Step 3: Generate Intelligent Test Data
+
+Generate realistic business data instead of placeholder values.
+
+Examples:
+
+Customer System
+
+Realistic Names
+Valid Emails
+Phone Numbers
+Addresses
+Countries
+ZIP Codes
+
+E-Commerce
+
+Products
+Categories
+Prices
+SKUs
+Discounts
+
+Healthcare
+
+Patient IDs
+Appointment Dates
+Insurance Numbers
+
+Finance
+
+Invoice Numbers
+Account Numbers
+Transaction References
+
+Education
+
+Student IDs
+Courses
+Grades
+
+Ensure generated data satisfies all business constraints.
+
+Step 4: Generate Edge Case Dataset
+
+Create datasets covering:
+
+Positive Cases
+
+Boundary Values
+
+Minimum Values
+
+Maximum Values
+
+Invalid Characters
+
+Duplicate Records
+
+Missing Required Fields
+
+Special Characters
+
+Unicode
+
+Long Text
+
+Expired Dates
+
+Future Dates
+
+Invalid Relationships
+
+Step 5: Relationship Validation
+
+Ensure generated records maintain valid relationships.
+
+Examples:
+
+Customer → Orders
+
+Order → Order Items
+
+Employee → Department
+
+Invoice → Customer
+
+Project → Tasks
+
+Role → Permissions
+
+Never generate orphan records.
+
+Step 6: Populate Staging Application
+
+Using Chrome,
+
+Open the staging application.
+
+Populate forms automatically using generated datasets.
+
+Do not submit destructive operations.
+
+Only create or update records within approved QA/Staging environments.
+
+Capture:
+
+Validation failures
+Client-side errors
+Server-side validation messages
+Unexpected behavior
+Step 7: Detect Validation Gaps
+
+Identify:
+
+Missing Required Validation
+Weak Password Rules
+Duplicate Data Accepted
+Invalid Email Acceptance
+Numeric Validation Issues
+Date Validation Problems
+Business Rule Violations
+Inconsistent Error Messages
+
+Assign severity:
+
+Critical
+
+High
+
+Medium
+
+Low
+
+Step 8: Create Reusable Dataset Library
+
+Update Google Sheet:
+
+Test Data Repository
+
+Columns:
+
+Module
+Form
+Field
+Test Scenario
+Generated Value
+Expected Result
+Validation Type
+Dataset Category
+Generated Date
+
+Categorize:
+
+Happy Path
+Boundary
+Negative
+Regression
+UAT
+Step 9: Generate QA Report
+
+Create Google Document:
+
+Test Data Generation Report - {Project Name}
+
+Include:
+
+Executive Summary
+Forms Covered
+Generated Dataset Summary
+Validation Rules Identified
+Relationship Mapping
+Validation Gaps Found
+Edge Cases Generated
+Failed Form Validations
+Recommendations
+Future Dataset Suggestions
+Step 10: Create Jira Issues
+
+If validation gaps are detected,
+
+Create Jira bugs containing:
+
+Form Name
+Field
+Steps to Reproduce
+Generated Input
+Expected Result
+Actual Result
+Severity
+Screenshot (if available)
+
+Leave issues unassigned.
+
+Apply labels:
+
+Validation
+QA
+Regression
+TestData
+Bug
+Step 11: Notify QA Team
+
+Post a Microsoft Teams or Slack summary including:
+
+Forms Tested
+Records Generated
+Validation Gaps Found
+Bugs Created
+Google Sheet Link
+QA Report Link
+Jira Issue Count

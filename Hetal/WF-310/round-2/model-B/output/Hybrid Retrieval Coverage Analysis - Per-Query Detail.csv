@@ -1,0 +1,85 @@
+Query ID,Query Text,Ground Truth Chunk(s),Disputed?,BM25-only Hit?,Dense-only Hit?,Category,Hybrid Hit at Optimal α?,Corpus Gap?
+Q001,when are customer satisfaction surveys sent?,D034,no,hit,miss,exact-match,hit,no
+Q002,what is the HIPAA BAA process for healthcare customers?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q003,case summary came out in the default language,D062,no,hit,miss,exact-match,hit,no
+Q004,SAML-AC-07 after changing our workspace slug,D009,no,hit,hit,mixed,hit,no
+Q005,how do I connect LumenDesk to QuickBooks Online?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q006,does choosing a cheaper tier erase yesterday's records?,D022,no,miss,hit,semantic,hit,no
+Q007,how can finished work become active again because somebody wrote back?,D020,no,miss,hit,semantic,hit,no
+Q008,what happens to cases when a workspace is archived?,D032,no,hit,hit,mixed,hit,no
+Q009,"when responsibility changes hands, what follows the new person?",D021,no,hit,hit,mixed,hit,no
+Q010,do archived projects and their audit logs stay searchable after the normal retention period ends?,disputed: D047 or D063,yes,hit,miss,exact-match,hit,no
+Q011,why do messages from different places appear as one continuous thread?,D024,no,hit,hit,mixed,hit,no
+Q012,how do users get routed to company login and also created from the identity provider?,"D036, D037",no,hit,hit,mixed,hit,no
+Q013,where will incoming correspondence land after its team destination is removed?,D027,no,miss,hit,semantic,hit,no
+Q014,the outage is over; how do I rerun the same webhook payloads?,D040,no,hit,miss,exact-match,hit,no
+Q015,nightly export stopped with EXPT-772,D012,no,hit,miss,exact-match,hit,no
+Q016,is the sign out timer related to token expiration?,"D044, D045",no,hit,miss,exact-match,hit,no
+Q017,agent phone is not getting queue alerts,D054,no,hit,miss,exact-match,miss,no
+Q018,idp user creation returns SCIM-409,D010,no,hit,miss,exact-match,hit,no
+Q019,I see two upload size docs; which file size limit applies now?,"D050, D051",no,hit,miss,exact-match,hit,no
+Q020,how do I restore a deleted workspace myself?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q021,what stays for audit after masking private details from old messages?,D028,no,hit,hit,mixed,hit,no
+Q022,same phone suggested combining customers during bulk import,D053,no,hit,miss,exact-match,miss,no
+Q023,"when several escalation policies match a custom status, is the queue policy or the status category more important?",disputed: D035 or D060,yes,hit,miss,exact-match,hit,no
+Q024,can a legal hold stop one customer's messages from being deleted?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q025,renewal failed with PAY-1189,D007,no,hit,miss,exact-match,hit,no
+Q026,can I resend failed webhooks after the receiver comes back?,D040,no,hit,miss,exact-match,hit,no
+Q027,why is the Canvas mobile draft conflict sync still waiting?,D140,no,miss,miss,mixed,hit,no
+Q028,webhook API gives HTTP 410 for our endpoint,D005,no,hit,hit,mixed,hit,no
+Q029,Teams notifications need what kind of approval?,D057,no,hit,miss,exact-match,hit,no
+Q030,how can remaining capacity drop sooner compared with the forecast?,D026,no,miss,hit,semantic,hit,no
+Q031,"after a signing key change during an outage, should I rotate the secret or replay missed webhooks?",disputed: D040 or D041,yes,hit,miss,exact-match,hit,no
+Q032,does the mobile app support offline ticket drafting?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q033,what is retained when we archive things versus delete a sandbox?,"D046, D047",no,miss,miss,no-coverage,miss,no
+Q034,should a survey be suppressed when a message was first marked as spam and later restored?,disputed: D030 or D034,yes,hit,hit,mixed,hit,no
+Q035,what comes with SKU-ENT-71?,D003,no,hit,hit,mixed,hit,no
+Q036,"429 from api, is the bucket per token?",D008,no,hit,miss,exact-match,hit,no
+Q037,which escalation rule wins if several match?,D035,no,hit,miss,exact-match,hit,no
+Q038,why can't the Slack app read a private channel?,D056,no,hit,hit,mixed,hit,no
+Q039,what stays for audit after masking private details from imported messages?,D028,no,hit,hit,mixed,hit,no
+Q040,same phone suggested combining customers after a workspace sync,D053,no,miss,miss,no-coverage,miss,no
+Q041,can I test a rule without changing real tickets?,D059,no,hit,miss,exact-match,hit,no
+Q042,exports and imports both paused during changes; where are those explained?,"D042, D043",no,hit,miss,exact-match,miss,no
+Q043,need to retry a stored delivery without creating a new event,D040,no,hit,miss,exact-match,hit,no
+Q044,can we choose our own encryption key for stored messages?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q045,why does a French article fall back to English?,D061,no,hit,miss,exact-match,hit,no
+Q046,where can I check Prism renewal ledger balance and correction status?,"D081, D088",no,hit,hit,mixed,hit,no
+Q047,receiver is fixed now; can we replay the old deliveries?,D040,no,hit,miss,exact-match,hit,no
+Q048,where do I set session_idle_minutes?,D004,no,hit,hit,mixed,hit,no
+Q049,why is our Atlas relay queue still paused after tenant recovery?,D065,no,miss,miss,mixed,hit,no
+Q050,why were our usual follow-up actions silent while we loaded many customers?,D025,no,miss,hit,semantic,hit,no
+Q051,why was a duplicate customer suggested with the same phone?,D053,no,hit,miss,exact-match,hit,no
+Q052,why is the Prism renewal ledger correction still locked?,D080,no,miss,miss,mixed,hit,no
+Q053,"after masking private details, what evidence is preserved for reviewers?",D028,no,miss,hit,semantic,hit,no
+Q054,why did the solved ticket open again after the customer answered?,D033,no,hit,miss,exact-match,hit,no
+Q055,where can I review Beacon mailbox owner transfer activity?,"D096, D104",no,hit,hit,mixed,hit,no
+Q056,what stays for audit after masking private details from ticket messages?,D028,no,miss,hit,semantic,hit,no
+Q057,can LumenDesk translate live chat in real time for agents?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q058,can voice calls be transcribed into the ticket automatically?,no answer in corpus,no,miss,miss,no-coverage,miss,yes
+Q059,where can I audit Canvas mobile draft conflict sync activity?,"D147, D150",no,hit,hit,mixed,hit,no
+Q060,I need to update invoice legal details and who gets billing emails,"D038, D039",no,hit,miss,exact-match,hit,no
+Q061,why did matching phone details suggest combining customers in this account?,D053,no,miss,miss,no-coverage,miss,no
+Q062,does RelayBox R4 support suppression sync?,D006,no,hit,miss,exact-match,hit,no
+Q063,what does BILL-TAX-ID change on invoices?,D011,no,hit,hit,mixed,hit,no
+Q064,why is the Beacon mailbox owner transfer still pending?,D095,no,miss,miss,mixed,hit,no
+Q065,does our Atlas relay show paused tenant checks after recovery?,"D067, D078",no,hit,hit,mixed,hit,no
+Q066,automation save says HD-5022 after bulk edit,D002,no,hit,hit,mixed,hit,no
+Q067,conditional form child field is not required yet,D058,no,hit,miss,exact-match,hit,no
+Q068,why is the Cedar sandbox archive restore still blocked?,D125,no,miss,miss,mixed,hit,no
+Q069,will a customer reply bring back a ticket if the previous message was internal?,disputed: D020 or D033,yes,hit,miss,exact-match,hit,no
+Q070,why can't staff blindly use the machine-written answer?,D019,no,miss,hit,semantic,hit,no
+Q071,we need the billing date changed next cycle; what happens?,D031,no,hit,miss,exact-match,hit,no
+Q072,which refund guidance is current for an annual renewal?,"D048, D049",no,hit,miss,exact-match,hit,no
+Q073,why are newly imported cases absent from lookup results for a while?,D029,no,miss,hit,semantic,hit,no
+Q074,what decides the winner when coworkers submit conflicting changes together?,D023,no,miss,hit,semantic,hit,no
+Q075,how do merged customer profiles keep history?,D052,no,hit,miss,exact-match,hit,no
+Q076,"after a webhook outage and secret change, what are the two separate steps?","D040, D041",no,hit,miss,exact-match,hit,no
+Q077,"uploads fail with HD-4019, what should I clear?",D001,no,hit,hit,mixed,hit,no
+Q078,DKIM check fails even though I added DNS,D055,no,hit,miss,exact-match,miss,no
+Q079,why did Harbor webhook replay stop after signature rotation?,D110,no,miss,miss,mixed,hit,no
+Q080,how does proration work when the invoice day moves?,D031,no,hit,miss,exact-match,hit,no
+Q081,"if we shift the subscription anniversary, do old bills remain?",D031,no,miss,miss,no-coverage,miss,no
+Q082,can finance move our renewal day without losing invoices?,D031,no,hit,miss,exact-match,miss,no
+Q083,does correcting a mistaken junk decision repair earlier classifications too?,D030,no,hit,hit,mixed,hit,no
+Q084,does archiving work stop automations but keep records searchable?,disputed: D032 or D047,yes,hit,hit,mixed,hit,no

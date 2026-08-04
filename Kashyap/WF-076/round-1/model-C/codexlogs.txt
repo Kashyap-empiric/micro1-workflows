@@ -1,0 +1,103 @@
+Worked for 33m 22s
+
+I'll run this as a traceable QA workflow using the GitHub, Google Drive/Sheets/Docs, Jira triage, Chrome control, and Teams messaging skills in that order. I'll first pin the supplied branch to its exact SHA and model the codebase, then verify staging and its reset state before any live writes; if any mandatory staging check fails, I'll stop live testing and record the blocker as instructed.
+
+Ran commands
+
+The workflow instructions require native Google artifacts to be created from verified local files, so I'm loading the spreadsheet/document creation rules and the connector capabilities before making any external changes. This keeps the Sheet and report structurally valid and lets me use exact IDs rather than guessed targets.
+
+Used GitHub integration, ran commands
+
+The supplied branch is now pinned and confirmed through GitHub at the exact commit. I'm analyzing only that revision; the repository is a localhost staging oracle with dedicated fictional credentials and an explicit non-production environment endpoint, but I still need to confirm the running app and clean-state evidence live before submitting anything.
+
+Ran commands
+
+Repository analysis found nine active form pages when applying the URL-based counting rule: login, dashboard/Quick note (one page despite its tab), registration, customer create, customer edit, product, order, order item, and admin inventory. The hidden deprecated contact form is excluded. Because the count is under 25, all nine are eligible for live testing. I'm now connecting to the browser to verify the environment endpoint, staging banner, dedicated login, and reset evidence before any form submission.
+
+Used the browser, ran commands
+
+The in-app browser is blocking loopback navigation, so I'm switching to the connected Chrome surface that can access the local staging app. This is a browser-surface issue, not an environment failure; no staging writes have occurred.
+
+Used Chrome integration, ran commands
+
+Staging is now verified from two independent live signals: the app banner states "STAGING / SAMPLE QA / FICTIONAL DATA ONLY," and the environment endpoint reports production:false, sample_only:true, seed qa-oracle-v2, with a clean seed timestamp. A read-only database inventory exactly matches the documented seed (3 customers, 3 products, 1 order/item, 0 registrations) and contains no prior run identifiers, so the write gate is open for this run.
+
+Used Google Drive, Atlassian Rovo, Chrome, and Codex Apps integrations, ran commands
+
+All nine active form pages have now been exercised on a valid or safe control path, with relationship integrity preserved. I'm moving into negative validation probes. I will not execute the nonexistent-product test because the code proves it would persist an orphan order item; that case will be marked "manual review / blocked by non-orphan safety rule" rather than run.
+
+Used Chrome integration, edited a file, ran commands
+
+Live retests confirmed six persistent validation gaps: 1 Critical, 3 High, 1 Medium, and 1 Low. The one-off Quick note failure disappeared on exact replay and is excluded. The orphan-reference case was not executed and remains blocked for manual review. I'm now checking the Jira project for open duplicates by underlying rule before creating any issues; the documented closed reference will not be reopened.
+
+Used Atlassian Rovo integration
+
+The Jira duplicate check found only resolved/Done oracle tickets, including the closed reference, and no open issue covering this run's failures. Per the rule, I'll create new bugs rather than comment on or reopen those closed tickets. First I'm building the native Google Sheet so each new ticket can link to this run's dataset.
+
+Edited files, ran commands
+
+Viewed 2 images
+
+Import spreadsheet
+
+The first Sheet upload was blocked because the workbook repeated the staging password. I'm applying the safer artifact pattern: keep the login scenario and outcome, but replace the credential value with a non-secret reference to the repository-managed staging credential. No credential will be copied into Drive, Jira, the report, or Teams.
+
+Used Google Drive integration, edited a file, ran a command
+
+Google Drive rejected the sanitized workbook as unapproved egress to the connected account, even after removing the password value. I'm treating Drive as blocked and will not retry or route around that control. I'll continue the independent Jira workflow, recording the missing Sheet/report links and screenshot attachment as connector-blocked; the local workbook and evidence remain intact for later upload if explicitly approved.
+
+Used Atlassian Rovo integration
+
+Createjiraissue
+
+Six new unassigned bugs were created successfully, all labeled validation, QA, regression, test-data, bug, and qa-oracle-v2. I'm now producing the QA report locally with the captured browser evidence and updating the local Run Log to record Drive as the blocking stage; I will then send the Teams summary with the Jira links and the Drive blocker.
+
+Used Codex Apps integration, edited files, ran commands
+
+Viewed 3 images
+
+Finish browser QA session
+
+Run status: completed except Google Drive publishing, which requires explicit approval after the connector rejected the sanitized upload.
+Forms: 9 discovered, 9 tested, 0 skipped
+Records created: 17
+Confirmed gaps: 1 Critical, 3 High, 1 Medium, 1 Low
+Safety-blocked: one case was not executed because it would create an orphan
+Jira bugs: six created
+Teams notification: sent successfully
+Local deliverables are complete. The report passed structural checks and contains eight browser screenshots. Page-render QA was unavailable because LibreOffice is not installed.
+
+To finish the native Google Sheet, Google Doc, and remote Run Log, please explicitly approve uploading these sanitized QA artifacts to the connected Google Drive folder "QA Test Data Reports."
+
+Edited 3 files (+529/-0)
+
+[USER]: complete tje drive publishing
+
+Worked for 9m 43s
+
+I'm using the Google Drive, Sheets, and Docs workflows to publish the already-sanitized artifacts, place them in "QA Test Data Reports," verify native conversion, finalize the remote Run Log with both links, and add those links to Jira and Teams. Your approval clears the Drive egress blocker; no credentials will be uploaded.
+
+Ran commands
+
+Context automatically compacted
+
+Ran commands
+
+The publishing inputs are sanitized and ready: reusable positive data remains schema-valid, negative cases stay separate, and the staging password is represented only by a non-secret placeholder. I'm importing the workbook as a native Google Sheet now, then I'll verify its tabs and finish the Run Log with live links.
+
+Used Google Drive integration, ran commands
+
+The native Sheet is published inside "QA Test Data Reports," with both required tabs preserved. I also upgraded each populated range to a native Sheets table; the dataset category and reusable fields now retain finite-choice dropdown behavior, and the table ranges cover all 74 scenario rows plus the Run Log row.
+
+Used Google Drive integration, edited files, ran commands
+
+The QA report is now a native Google Doc in the same Drive folder. I'm doing the post-conversion checks next, title, required sections, tables, image preservation, and parent folder, before I mark the Run Log complete and add the links to Jira and Teams.
+
+Used Google Drive and Atlassian Rovo integrations
+
+The QA tickets now each have a comment linking the published Sheet and report. I'm applying the Teams messaging workflow for the last handoff so the original QA channel receives the final live links and completion status.
+
+Used Google Drive and Codex Apps integrations, ran a command
+
+Drive publishing is complete. The Run Log is marked complete, Jira tickets contain the artifact links, and the final Teams notification was sent. No staging password was published.
+

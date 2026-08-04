@@ -1,0 +1,9 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only GitHub kashyapempiricinfotech-sys/sample-qa-test-project branch agent/qa-validation-fixture, the staging URL encoded by that branch, QA Test Data Reports, Test Data Repository - sample-qa-test-project, Jira Testing Client Workflows, and Test Data Generation and Validation Summary.
+
+1. Staging: use only the approved reset operation. Verify the fictional baseline marker and related baseline records; never hand-delete data.
+2. Drive/Sheet: delete workflow report Docs/files in QA Test Data Reports. Restore Test Data Repository and Run Log to their header-only baseline and remove workflow-created tabs, rows, objects, formulas, comments, and formatting.
+3. Jira: delete every issue and attachment in the exact Testing Client Workflows test project. Retain the project itself; standalone setup recreates its two named baseline findings.
+4. Teams: delete all posts and replies in Test Data Generation and Validation Summary. Retain the channel.
+5. GitHub: verify the exact fixture branch and staging non-production marker; do not modify source.
+
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm the staging marker, header-only Sheet, empty Jira project, no report files, and zero Teams messages.

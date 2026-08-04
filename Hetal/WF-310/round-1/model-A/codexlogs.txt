@@ -1,0 +1,237 @@
+Worked for 13m 38s
+
+
+I’ll use the GitHub workflow to inspect the evaluation repository, the Google Sheets workflow for the two analysis tabs, and the Atlassian/Jira workflow to create only the confirmed corpus-gap tickets plus one retrieval recommendation ticket. I’ll first reproduce every ranking and fusion result locally, then reconcile counts before making any external writes.
+
+
+
+
+Ran commands
+
+
+The Jira meeting-notes skill is not appropriate here because these are analysis findings, not assigned meeting actions; I’m using the Jira connector directly while keeping the requested ticket schema. For Sheets, the workflow requires bounded range reads and a pre-write layout check, so I’m grounding the exact tab structure before any edits.
+
+
+
+
+Used GitHub, Google Drive, and Atlassian Rovo integrations, ran commands
+
+
+The source has 84 independent query rows, 8 explicit “no answer in corpus” gaps, 6 disputed-ground-truth rows, and k = 60; the recipe also specifies ascending chunk ID for exact fused-score ties. I’m now running the full 11-weight sweep and checking boundary ranks and split-signal cases before writing anything.
+
+
+
+
+Got spreadsheet cells
+
+
+
+
+
+The sweep is internally consistent: α = 0.5 is the unique best weight at 67/84 hits; the endpoints reproduce dense-only (31/84) and BM25-only (56/84), all 8 confirmed corpus gaps are no-coverage, and the remaining 4 no-coverage rows are retrieval misses with content present. I’m writing the two grounded tab ranges now.
+
+
+
+
+Used Google Drive integration
+
+
+The connector readback matches all 5 summary rows and all 85 detail rows (header plus 84 queries) with zero cell mismatches. The Sheets workflow now calls for a rendered visual check, so I’m using the computer-use skill only to inspect the finished tabs for clipping or damaged layout; no browser-based data entry is needed.
+
+
+
+
+Ran Get-Content -Raw -LiteralPath 'C:\Users\Empiric\.codex\plugins\cache\openai-bundled\computer-use\26.721.41059\skills\computer-use\SKILL.md'
+
+
+
+
+Initialize visual sheet QA
+
+
+
+
+
+Find the browser window
+
+
+
+
+
+Inspect the Google Sheets window
+
+
+
+
+
+Capture the sheet for visual QA
+
+
+
+
+
+Analysis and Sheet updates are complete:
+Optimal RRF α: 0.5
+BM25 Recall@5: 56/84 (66.67%)
+Dense Recall@5: 31/84 (36.90%)
+Hybrid Recall@5: 67/84 (79.76%)
+Relative hybrid improvement over dense: 116.13%, clearing the 39% target
+Categories: 35 exact-match, 10 semantic, 27 mixed, 12 no-coverage
+Confirmed corpus gaps: 8
+Non-gap retrieval misses: Q033, Q040, Q061, Q081
+The Google Sheet was populated and connector readback found zero mismatches.
+You stopped Computer Use with Escape during visual QA, so I stopped work as required. The visual check and nine Jira tickets have not been completed or created. Tell me to continue and I’ll finish them.
+
+
+
+
+Use chrome connector
+
+
+
+
+
+
+4:57 PM
+
+
+
+
+
+
+I’ll resume with the Chrome connector, using the existing logged-in Google Sheets and Jira sessions to complete the visual verification and create the eight confirmed corpus-gap tickets plus the single retrieval recommendation ticket.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+Chrome visual QA is complete: both tabs render cleanly, the summary fits without clipping, and the per-query table is populated through Q084 with the filter and frozen header intact. I’m now preparing the nine Jira issues in the Search Quality project; I’ll pause immediately before the first final “Create” action for the browser-required confirmation.
+
+
+
+
+Used Chrome integration
+
+
+
+
+
+The Q002 Jira draft is prepared. Chrome requires confirmation immediately before submitting representational content.
+Should I click Create and submit all nine Search Quality tasks: eight corpus-gap tickets for Q002, Q005, Q020, Q024, Q032, Q044, Q057, and Q058, plus the hybrid-retrieval recommendation ticket?
+
+
+5:04 PM
+
+
+
+
+
+
+
+ofcourse
+
+
+
+
+
+
+5:04 PM
+
+
+
+
+
+
+Worked for 14m 25s
+
+
+Confirmed. I’ll submit the prepared Q002 task, then create the remaining seven corpus-gap tasks and the single hybrid-retrieval recommendation task, verifying each Jira key as it is created.
+
+
+
+
+Used Chrome integration
+
+
+Q002 was created as SQ-56. I’m continuing through the remaining confirmed gaps one by one, keeping Jira’s “Create another” workflow open and checking each new key before moving on.
+
+
+
+
+Used Chrome integration
+
+
+Context automatically compacted
+
+
+
+Confirmed. I’m proceeding with the remaining eight Jira creations in the approved batch, then I’ll reconcile all nine ticket keys against the eight corpus gaps plus the single retrieval recommendation.
+
+
+
+
+Used Chrome integration, ran a command
+
+
+Three tickets are now verified as SQ-56 through SQ-58. I’m continuing with the remaining five corpus-gap tickets and the one recommendation ticket; the analysis and Sheet values remain unchanged.
+
+
+
+
+Used Chrome integration
+
+
+All eight confirmed corpus-gap tickets are now created and mapped only to the eight corpus-gap = yes queries. I’m filing the final retrieval recommendation ticket next, then I’ll close the blank create dialog and run the exact-count reconciliation.
+
+
+
+
+Used Chrome integration
+
+
+The Jira reconciliation passed: 9 unique tickets, exactly 8 gap tickets for the confirmed corpus-gap IDs, exactly 1 recommendation, and zero tickets for the four retrieval-miss/no-gap queries. I’m leaving the completed Jira board and populated Sheet available in Chrome and preparing the final results summary.
+
+
+
+
+Ran commands
+
+
+
+
+
+Completed the retrieval analysis, populated the Google Sheet, and created exactly nine Jira tickets.
+Results
+Optimal RRF weight: α = 0.5, uniquely best, with k = 60
+BM25 Recall@5: 56/84 = 66.67%
+Dense Recall@5: 31/84 = 36.90%
+Hybrid Recall@5: 67/84 = 79.76%
+Hybrid’s relative improvement over dense: 116.13%
+This clears the 39% requirement by 77.13 percentage points
+α sweep Recall@5:
+0.0: 36.90% · 0.1: 48.81% · 0.2: 48.81% · 0.3: 48.81% · 0.4: 48.81% · 0.5: 79.76% · 0.6: 73.81% · 0.7: 73.81% · 0.8: 73.81% · 0.9: 75.00% · 1.0: 66.67%
+Category	Queries	Share	BM25	Dense	Hybrid
+Exact-match	35	41.67%	100%	0%	85.71%
+Semantic	10	11.90%	0%	100%	100%
+Mixed	27	32.14%	77.78%	77.78%	100%
+No-coverage	12	14.29%	0%	0%	0%
+
+The 12 no-coverage queries comprise eight confirmed corpus gaps and four retrieval misses with content present: Q033, Q040, Q061, and Q081. No corpus-gap tickets were created for those four retrieval misses.
+Open the completed Hybrid Retrieval Coverage Analysis Sheet
+Both tabs were populated and verified with zero readback mismatches. Disputed queries Q010, Q023, Q031, Q034, Q069, and Q084 are explicitly flagged.
+Jira tickets
+Corpus gaps:
+SQ-56 — Q002 HIPAA BAA process
+SQ-57 — Q005 QuickBooks Online integration
+SQ-58 — Q020 deleted workspace restoration
+SQ-59 — Q024 legal-hold controls
+SQ-60 — Q032 offline mobile ticket drafting
+SQ-61 — Q044 customer-managed encryption keys
+SQ-62 — Q057 real-time live-chat translation
+SQ-63 — Q058 voice-call transcription
+Recommendation:
+SQ-64 — Keep hybrid RRF and evaluate α=0.5
+No production pipeline, live fusion weight, embeddings, index, or corpus content was changed.
+

@@ -1,0 +1,151 @@
+Worked for 5m 11s
+
+
+I’m using the GitHub workflow to retrieve the exact evaluation inputs, the Google Sheets workflow for range-precise updates, and the Atlassian/Jira workflow for evidence-backed ticket creation. I’ll compute the fusion sweep locally from the logged rankings, then reconcile every sheet row and Jira ticket against the same result set.
+
+
+
+
+Loaded tools, read files, ran a command
+
+
+I’ve confirmed the workspace is intentionally empty, so I’m reading the source files directly from the connected GitHub repository. In parallel, I’m locating the exact Sheet and resolving the Jira project metadata; no writes will occur until the retrieval results are fully computed and checked.
+
+
+
+
+Used GitHub, Google Drive and Atlassian Rovo integrations
+
+
+The computation is complete: the unique best sweep point is α = 0.5, with hybrid Recall@5 of 67/84 (79.76%). BM25 is 56/84 (66.67%) and dense is 31/84 (36.90%), so hybrid improves on dense by 116.13% relative—well above the 39% threshold. I’m now validating the destination ranges and checking the Search Quality project for pre-existing copies before creating the nine requested tickets.
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Google Drive and Atlassian Rovo integrations
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Updated spreadsheet
+
+
+
+
+
+The Sheet write and all nine Jira creations succeeded. I’m doing the final reconciliation now: 84 per-query rows, four category rows, eight confirmed corpus-gap tickets, one retrieval recommendation ticket, and no Jira ticket for the four no-coverage retrieval misses that still have valid corpus chunks.
+
+
+
+
+Used Google Drive integration
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Got spreadsheet cells "'Per-Query Detail'!A1:I3, 'Category Sum…"
+
+
+
+
+
+
+
+
+Completed the analysis, Sheet updates, and Jira filing. No production retrieval settings, index, embeddings, or corpus content were changed.
+Results
+Optimal RRF weight: α = 0.5 with k = 60.
+BM25 Recall@5: 56/84 = 66.67%
+Dense Recall@5: 31/84 = 36.90%
+Hybrid Recall@5: 67/84 = 79.76%
+Hybrid relative improvement over dense: 116.13%
+Result: clears the 39% requirement by 77.13 percentage points
+Recommendation: keep hybrid retrieval; do not move to dense-only
+Sweep results: α 0.0: 36.90%; 0.1–0.4: 48.81%; 0.5: 79.76%; 0.6–0.8: 73.81%; 0.9: 75.00%; 1.0: 66.67%.
+Category	Count	Share	BM25 R@5	Dense R@5	Hybrid R@5
+exact-match	35	41.67%	100.00%	0.00%	85.71%
+semantic	10	11.90%	0.00%	100.00%	100.00%
+mixed	27	32.14%	77.78%	77.78%	100.00%
+no-coverage	12	14.29%	0.00%	0.00%	0.00%
+
+
+The Google Sheet now contains all 84 per-query rows and the four-category summary. The six disputed queries are explicitly flagged.
+Of the 12 no-coverage queries:
+Eight are confirmed corpus gaps and received tickets.
+Four are retrieval misses with valid corpus chunks: Q033, Q040, Q061, and Q081. These appear only in Per-Query Detail, with no corpus-gap ticket.
+Jira tickets created:
+SQ-75 — Q002 HIPAA BAA
+SQ-79 — Q005 QuickBooks Online
+SQ-74 — Q020 workspace restoration
+SQ-77 — Q024 legal holds
+SQ-82 — Q032 offline mobile drafting
+SQ-80 — Q044 customer-managed encryption
+SQ-78 — Q057 live-chat translation
+SQ-76 — Q058 voice transcription
+SQ-81 — hybrid retrieval recommendation
+
+
+13
+

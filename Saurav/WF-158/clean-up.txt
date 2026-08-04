@@ -1,0 +1,7 @@
+Execute this cleanup as a standalone task in this chat. The instructions below are complete: do not ask for or require a prior chat, manifest, run ID, setup output, model response, companion prompt, or mode/command flag. Remove all matching workflow output regardless of when the prior run occurred. Use only sauravempiricinfotech-sys/preaudit-fixture-20260717-568de6c branch preaudit-fixture, PreAudit Fixture Reports - 2026-07-17 - 568de6c, and Gmail mailbox saurav.empiricinfotech@expert.micro1.ai.
+
+1. Drive: delete every report Google Doc/file in PreAudit Fixture Reports - 2026-07-17 - 568de6c. Retain the folder; standalone setup recreates its one blank placeholder.
+2. Gmail: delete every draft in the dedicated test mailbox. Never send a draft or delete the mailbox.
+3. GitHub/public fixture inputs: verify the branch, file-count/cap fixture, deployment mappings, and public balance references. Do not modify code, metadata, addresses, or chain state.
+
+If any reset remains unresolved, stop and report the affected resource plainly. When finished, summarize the cleanup in plain language and confirm an empty report folder, zero drafts, and verified static inputs.

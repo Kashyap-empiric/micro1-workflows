@@ -1,0 +1,18 @@
+Execute this setup as a standalone task in this chat. The instructions below are complete: do not ask for or require clean-up.txt, a prior chat, run ID, manifest, prior setup result, or mode/command flag. This chat is for setup only; do not run prompt-def.txt. Reset all matching prior-run output regardless of age.
+
+Use only:
+- GitHub: kashyapempiricinfotech-sys/webapp-main, main
+- Cutoff: 2026-07-10 18:00 Asia/Kolkata
+- Jira: Mobile Build - Test Fixture, key MBTF
+- Drive folder: Mobile Build - Test Fixture
+- Teams: Testing Client Workflows → Engineering
+
+Keep the GitHub repository as a static private/test-controlled input. It must retain the difficult cutoff history (valid pre-cutoff commit, author/committer timestamp conflict, and a later commit) and source traps: indirect reuse, dynamic routes, current/legacy auth, active/dormant integrations, buried data model, dead code, and test-only secret-shaped strings. The evaluator-only oracle remains hidden; do not run or modify source.
+
+Direct pre-run reset:
+- Empty MBTF, then create exactly two labelled baseline issues: wf144-baseline-foundation is To Do with summary Foundation and auth, a harmless baseline description, and no comments or attachments; wf144-baseline-noise is Done with summary MBTF closed baseline noise and one harmless attachment. Do not create other Jira issues during setup.
+- Delete workflow blueprint Docs/files from Mobile Build - Test Fixture, retaining the folder and its harmless static noise Doc.
+- Delete all posts/replies in Testing Client Workflows → Engineering.
+- Verify main history/cutoff inputs read-only. Repair only this named test repository if a prior model changed it.
+
+Do not create blueprint output, Jira phase tickets, or Teams notification during setup. When finished, summarize the setup in plain language and confirm the baseline Jira state, folder, channel, and cutoff snapshot. Report any blocker directly.
