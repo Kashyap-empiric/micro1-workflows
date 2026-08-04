@@ -1,0 +1,18 @@
+{
+  "cycle": "WF-116",
+  "task": "Cross-Platform Marketing Attribution Intelligence",
+  "persona": "Marketing operations lead at a mid-sized cloud software company",
+  "models_evaluated": [
+    "A",
+    "B",
+    "C"
+  ],
+  "overall_ratings": {
+    "A": 4,
+    "B": 5,
+    "C": 3
+  },
+  "ranking_best_to_worst": "B > A > C",
+  "best_overall": "B",
+  "why_top_model_is_best_and_what_separates_the_others": "See final-comparison.md in this round folder for the full evidence-based paragraph per model."
+}
