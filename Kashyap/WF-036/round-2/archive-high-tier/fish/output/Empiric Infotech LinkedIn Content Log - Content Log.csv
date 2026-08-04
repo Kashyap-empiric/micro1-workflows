@@ -1,0 +1,27 @@
+Date,Draft ID,Post Body,Suggested Title,Hashtags,Suggested Posting Time,Topic Reasoning,Source Trends Used,Engagement Patterns Applied,Status,Published URL,Published Timestamp,Notification Sent,,,,,,,,,,,,
+2026-07-21,EI-LI-20260721-01,"Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)",Cloud cost visibility before optimization,#CloudCost #FinOps #DevOps,2026-07-21 10:30,"Seed row for testing, FinOps angle.",The New Stack,Hook plus three-point list plus soft CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder),2026-07-21 10:32,Yes,,,,,,,,,,,,
+2026-07-22,EI-LI-20260722-01,"Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)",Platform engineering as an internal product,#PlatformEngineering #DevEx #SRE,2026-07-22 11:00,"Seed row for testing, platform engineering angle.",InfoQ,Contrarian hook plus short paragraphs plus question CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder),2026-07-22 11:03,Yes,,,,,,,,,,,,
+2026-08-03,EI-LI-20260803-01,"2.4 trillion parameters is the headline.
+
+95 billion active parameters is the operational story.
+
+Alibaba's newly announced Qwen3.8-Max uses a mixture-of-experts design that activates only a fraction of the model for each request.
+
+For platform teams, that distinction matters more than leaderboard screenshots.
+
+Before introducing any large model into production, check four things:
+
+- Active compute per request - not just total model size
+- Latency and throughput at your real concurrency
+- Cost per completed workflow - not cost per token alone
+- A safe routing and rollback path when quality drifts
+
+The teams that get value from AI will not be the ones chasing the biggest model.
+
+They will be the ones building the platform discipline to use the right model, safely and predictably.
+
+What metric decides whether a new model earns a place in your stack?
+
+#PlatformEngineering #CloudInfrastructure #DevOps #MLOps #AIOperations",The AI Model Metric Platform Teams Should Watch,#PlatformEngineering #CloudInfrastructure #DevOps #MLOps #AIOperations,2026-08-03 13:30 Asia/Kolkata,"Selected the 3 August 2026 Qwen3.8-Max announcement because Reuters independently reports its 2.4-trillion-parameter mixture-of-experts architecture with only 95 billion parameters active per request, while a heavily engaged Hacker News discussion adds practitioners’ deployment, self-hosting, and model-selection perspectives. It is timely, corroborated by two approved sources, substantial, relevant to cloud/platform operations, and does not duplicate the 21 or 22 July Content Log stories.",Reuters Technology: https://www.reuters.com/business/retail-consumer/alibaba-unveils-its-most-capable-ai-model-date-not-far-behind-moonshots-size-2026-08-03/ | Hacker News: https://news.ycombinator.com/item?id=49150470,"Majority creator signals: a concrete, curiosity-led opening; short standalone paragraphs; practical numbered-style checks; a single question CTA at the end; and a concise set of cloud/DevOps/platform hashtags. Frequency observed from recent profile activity; no creator wording or ideas reused.",Published,https://www.linkedin.com/feed/update/urn:li:share:7489952538377576448/,2026-08-03 13:27:21,Yes,Draft ID,Post Body,Suggested Title,Hashtags,Suggested Posting Time,Topic Reasoning,Source Trends Used,Engagement Patterns Applied,Status,Published URL,Published Timestamp,Notification Sent
+,,,,,,,,,,,,,EI-LI-20260721-01,"Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)",Cloud cost visibility before optimization,#CloudCost #FinOps #DevOps,2026-07-21 10:30,"Seed row for testing, FinOps angle.",The New Stack,Hook plus three-point list plus soft CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder),2026-07-21 10:32,Yes
+,,,,,,,,,,,,,EI-LI-20260722-01,"Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)",Platform engineering as an internal product,#PlatformEngineering #DevEx #SRE,2026-07-22 11:00,"Seed row for testing, platform engineering angle.",InfoQ,Contrarian hook plus short paragraphs plus question CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder),2026-07-22 11:03,Yes

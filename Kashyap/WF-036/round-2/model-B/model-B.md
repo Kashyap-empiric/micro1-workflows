@@ -1,6 +1,6 @@
 # WF-036 Round 2 - Model B
 
-Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../../docs/scoring/comparative-rerate-addendum.md)
+Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
 
 ## Model identity
 
@@ -8,53 +8,61 @@ Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-sessi
 Codex, gpt-5.6-fish, Extra High intelligence
 
 ### Session ID
-[Session ID]
+019fc6c1-b08f-7863-bbb3-0508abc398ec
 
 ## Logs
 
-[Codex logs](codexlogs.txt)
+Raw logs saved at `codexlogs.txt` (same folder), referenced here, read in full during the scoring pass.
 
 ## Output
 
-[Complete produced artifact content and durable actual values - not yet captured]
+Raw evidence saved at `output/`, referenced here, transcription and analysis happen
+during the scoring pass once all three models are ready:
 
-## 2. Task accuracy, ignoring speed
-
-[Rating and Commentary from the current head-to-head template]
-
-## 3. Efficiency
-
-**Rating:** [1-6]
-**End-to-end time (minutes):** [value]
-**Wrong actions / recovery:** [one short factual clause]
-**Commentary:** [standalone commentary]
-
-## 4. Writing quality
-
-[Rating and Commentary]
-
-## 5. Instruction following
-
-[Rating and Commentary]
-
-## 6. Collaboration, autonomy, and verification
-
-**Rating:** [1-6]
-**Steering needed:** [one short factual clause]
-**Additional editing before I'd use it:** [one short factual clause]
-**Commentary:** [standalone commentary]
-
-## 7. Citation quality
-
-[Rating or N/A and Commentary]
-
-## 8. GUI action correctness
-
-[Rating or N/A and Commentary]
+- `post.png` — published LinkedIn post
+- `teams post.png` — delivered Teams notification
+- `Empiric Infotech LinkedIn Content Log - Content Log.csv` — exported Content Log sheet
 
 ## 1. Overall task success
 
-[Write only after boxes 2-8 are final. Start from Task accuracy, apply evidence-backed caps for
-material failures, and dock one point only when the run takes substantially longer than a comparable
-run because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+**Rating:** 5
+**Commentary:** Task accuracy sets the ceiling at 5, a complete and well formatted deliverable with one real sourcing looseness, treating two different companies' incidents as one jointly confirmed story. Every other box here is strong, a tight fifteen minute single pass with both recoveries handled inline, full instruction following on the no approval requirement, and no collaboration interruptions of any kind. None of the remaining gaps, the thin Teams destination verification and the same sourcing issue already counted once, rises to a material failure that would justify capping Overall further below the task accuracy ceiling, and the runtime here is fast rather than a drag that would justify a dock. This run lands at 5.
+
+## 2. Task accuracy, ignoring speed
+
+**Rating:** 5
+**Commentary:** The topic choice is well grounded, two named sources within the recency window, no overlap with the seeded log rows, and every Content Log field carries a complete, correctly formatted value including a precise August 1 dating on both citations. The one real problem is a cross company conflation, the Reuters citation reports on OpenAI's agents while the New Stack citation covers an Anthropic containment failure, and the reasoning text presents them as jointly confirming one trending story without ever naming that they describe two different organizations. That is a real accuracy gap in the sourcing logic even though the published post itself stays generic enough to avoid stating either company by name.
+
+## 3. Efficiency
+
+**Rating:** 5
+**End-to-end time (minutes):** 15
+**Wrong actions / recovery:** composer bulk paste rejected, Teams web login unexpectedly required credentials, both resolved inline in the same pass.
+**Commentary:** Fifteen minutes in a single continuous pass with two recoveries handled inline is a genuinely tight run. The composer rejected bulk paste and the run switched to a browser native keystroke path without pausing or asking for help. Teams then asked for credentials unexpectedly and the run resolved it through the connected integration in the same breath. Neither recovery required a retry loop or a stop for input, both are described and resolved in the same one or two log entries. The only mark against this box is that two separate platform frictions still had to be worked around at all in what should be a routine publish and notify sequence.
+
+## 4. Writing quality
+
+**Rating:** 5
+**Commentary:** The hook is tight and declarative, one line that states the stakes without needing a second sentence to land, and the piece keeps that economy through four short, evenly weighted paragraphs before the controls list. The four bullet controls are specific rather than generic and the closing question is concrete. What keeps this from a higher mark is that the piece stays entirely abstract, no agent, no company, no concrete scenario beyond real world incidents highlight an uncomfortable truth, so the reader has to take the premise on faith rather than being shown a specific situation up front.
+
+## 5. Instruction following
+
+**Rating:** 6
+**Commentary:** No live approval is requested at any point in this run, and the narration proceeds from research snapshot through both notifications without a single stop for user input, fully honoring the prompt's own no human in the loop framing. Every literal field requirement is satisfied, five hashtags, correct draft ID format, both notifications confirmed sent, and the two seed rows untouched. The one limitation is that the Teams destination resolution is asserted rather than demonstrated, the closing summary states the message reached the existing Marketing thread titled linkedin approvals without ever narrating how an exact channel match was confirmed given that the named channel does not straightforwardly exist.
+
+## 6. Collaboration, autonomy, and verification
+
+**Rating:** 6
+**Steering needed:** none required, single autonomous pass with no stops.
+**Additional editing before I'd use it:** none, delivered values are usable as is.
+**Commentary:** This is a genuinely autonomous run, no approval requests, no interruptions, and no resumed segments anywhere in the log. That is real, meaningful evidence against a task explicitly designed to run without a human in the loop. The gap is verification depth. The closing summary confirms that fields now read Published and Notification Sent Yes, but it never reconciles the logged post text against what was actually typed into the composer, and it never explains how the Teams destination was confirmed to be the exact named channel rather than a nearby substitute. Confirming that values changed is not the same as confirming the values are exactly right.
+
+## 7. Citation quality
+
+**Rating:** 4
+**Commentary:** Both citations are real, dated, and directly relevant, and the reasoning correctly notes that neither overlaps the two seeded log rows. The problem is the same one affecting task accuracy, the Reuters source is specifically about OpenAI's agents and the New Stack source is specifically about an Anthropic containment failure, two different companies' incidents cited together as if independently confirming one story. The published post itself stays generic enough to avoid naming either company incorrectly, which limits the damage, but the underlying citation reasoning still overstates how many independent outlets are actually covering one single trending event.
+
+## 8. GUI action correctness
+
+**Rating:** 4
+**Commentary:** Both real platform frictions in this run, the LinkedIn composer rejecting bulk paste and Teams unexpectedly requiring credentials, were correctly diagnosed and worked around using appropriate fallback paths, and the final published post and sheet state are both correct. The gap is narrative completeness rather than a wrong action, the log never shows the specific steps behind the Teams channel resolution the way it shows the LinkedIn keystroke fallback, so an action that plausibly required real judgment, given that the named channel does not exist as stated, is reported as a clean success without the supporting detail a fully verifiable GUI trace would include.

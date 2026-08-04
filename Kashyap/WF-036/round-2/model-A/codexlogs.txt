@@ -1,2 +1,152 @@
-[Complete raw session transcript - not yet captured]
+Worked for 27m 32s
 
+
+I’m using the Chrome-control and Windows computer-use skills because this run must operate entirely in the existing logged-in Chrome profile across research, Sheets, LinkedIn, Gmail, and Teams. I’ll take one source/log/creator snapshot first, finish the post and metadata from that snapshot, then perform the writes and publish without requesting approval.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+The one-time snapshot is complete enough to rank candidates: the strongest qualifying theme is AI-agent containment failures and what they imply for platform guardrails, covered independently by Reuters and The New Stack within the three-day window. The only recent log rows are on FinOps and platform-as-product, so this does not overlap the last 14 days. I’m now validating the two snapshot articles’ depth and then I’ll write the post without returning to the sources.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+The post is now logged as Generated in row 4 with all metadata, and the publication/notification fields are still empty as required. I’m moving to the authorized LinkedIn profile, where I’ll publish the finalized body exactly as logged.
+
+
+
+
+Used Chrome integration
+
+
+The LinkedIn composer is open, but its rich-text field is ignoring normal bulk typing while still accepting individual key events. I’m using the browser’s documented recovery path to keep the same finalized text and avoid changing accounts or destinations.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+LinkedIn publication is confirmed at the live URL, and the sheet now records Published with the Asia/Kolkata timestamp. I’m sending the Gmail and Teams notifications next; these are final heads-ups, not drafts or approval requests.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+The Gmail heads-up was sent. Teams opened an account picker instead of the expected logged-in workspace, and the listed expert.micro1.ai account was rejected while the other account requests a password. I’m checking the same Chrome profile for the previously used direct channel URL before treating Teams as failed.
+
+
+
+
+Used Chrome integration
+
+
+Teams’ web session remains blocked by a password prompt even through the previously used direct channel link. As the browser route is unavailable, I’m using the Windows computer-control skill to check whether the already-installed Teams desktop app has the active workspace session; this is the last in-scope route before logging the notification failure.
+
+
+
+
+Connect to Windows apps
+
+
+
+
+
+Load Windows control guidance
+
+
+
+
+
+Check Windows action requirements
+
+
+
+
+
+Find the Teams desktop app
+
+
+
+
+
+Inspect the active Teams workspace
+
+
+
+
+
+Requested permission
+
+
+
+View the active Teams workspace
+
+
+
+
+
+uese teams connector
+
+
+
+
+
+
+1:06 PM
+
+
+
+
+
+
+The run was interrupted before completion.
+Published: LinkedIn post
+Draft ID: EI-LI-20260803-01
+Published timestamp: 2026-08-03 13:01:41 IST
+Content Log: recorded as Published
+Gmail: sent successfully
+Teams: not sent—the web session required a password, and the desktop Teams fallback was stopped via Escape
+Notification Sent: remains blank
+Failure/Issues logging was not completed because computer control was explicitly stopped.
+
+
+
+
+I’m using the Teams messaging skill to send the missing live channel notification through the connector. After it succeeds, I’ll return to the existing log row, set Notification Sent to Yes, and verify the completed run.
+
+
+
+
+Used Codex Apps integration, ran commands
+
+
+The Teams connector send succeeded. The earlier Chrome control state did not persist across the interruption, so I’m reconnecting to the same Chrome profile to update and verify the existing log row; no new research or drafting will occur.
+
+
+
+
+Used Chrome integration, ran commands
+
+
+
+
+
+Completed using the Teams connector.
+Teams: message sent under Marketing → #linkedin-approvals
+LinkedIn: live post
+Draft ID: EI-LI-20260803-01
+Content Log: Published
+Notification Sent: Yes
+Gmail and Teams notifications: both sent successfully
+
+
+1:10 PM

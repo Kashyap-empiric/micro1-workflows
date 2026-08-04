@@ -1,10 +1,13 @@
 # WF-036 Round 2 - Final Comparison
 
-Canonical rules: [codex-session-context.md](../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../docs/scoring/comparative-rerate-addendum.md)
+Canonical rules: [head-to-head-07-23-template.md](../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
 
-Note: this round evaluates three models (A-C: gpt-5.6-cat, gpt-5.6-fish, gpt-5.6-dog, each at
-Extra High intelligence only). The High-intelligence variants were dropped after the update and
-are kept in `archive/` for reference.
+Note: this round evaluates three models (A-C: gpt-5.6-cat, gpt-5.6-fish, gpt-5.6-dog, each at Extra
+High intelligence only), not the earlier six-model A-F structure that included the High tier.
+
+Archived: the three retired High-intelligence runs (gpt-5.6-cat, gpt-5.6-fish, gpt-5.6-dog, all
+High) are preserved with their original scoring intact at `round-2/archive-high-tier/<codename>/`.
+They are historical record only and are not part of this round's active three-model comparison.
 
 ## METADATA
 
@@ -20,26 +23,52 @@ are kept in `archive/` for reference.
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
-| A | MISSING | MISSING | MISSING | NO |
-| B | MISSING | MISSING | MISSING | NO |
-| C | MISSING | MISSING | MISSING | NO |
+| A | PRESENT | PRESENT | PRESENT | YES |
+| B | PRESENT | PRESENT | PRESENT | YES |
+| C | PRESENT | PRESENT | PRESENT | YES |
 
 ## Final comparison
 
 ### Rank all responses from best to worst
-[Strict order, no ties - pending]
+1. B
+2. C
+3. A
 
 ### Which model is best overall?
-[Pending]
+B. It is the only run that pairs a Task accuracy ceiling above 4 (a 5, on a well sourced and fully
+complete deliverable with only one real citation looseness) with a fully autonomous process, zero
+approval requests, zero interruptions, both platform frictions recovered inline in the same pass,
+and a fast fifteen minute total runtime. Nothing about B is spotless, its Teams destination
+resolution is asserted rather than demonstrated and it shares the same OpenAI and Anthropic source
+conflation that A carries, but it is the only model that combines real topic and sourcing strength
+with a genuinely unattended run, which is exactly what this workflow is built to test.
 
 ### Why is the top model best, and what separates the other models?
-[One evidence-based paragraph per model, in ranked order - pending]
+B leads because it is the only run that did not need a single live approval and still delivered the
+strongest sourced, most complete Task accuracy result short of the model that chose the most
+internally consistent citation set. Its only real gaps, a thin Teams verification narrative and an
+undisambiguated pair of sources, are both process or documentation gaps rather than anything that
+reached the published post or the final sheet state.
+
+C ranks second because its Task accuracy is the strongest of the three, the only citation set that
+explicitly names and ranks a rejected alternative topic, but that strength is undercut by real
+process cost. C needed four separate rounds of live user input, including having the same publish
+confirmation gate fire twice in one run even after the user had already told it to stop asking, plus
+a self reported content fidelity slip where logged bullet characters became hyphens in the actually
+published post.
+
+A ranks third. Like B it never requested a live approval, a genuine strength against the prompt's
+no human in the loop requirement, and its topic and writing are solid. But it carries the same
+unresolved OpenAI and Anthropic source conflation as B, and its process included a long, unexplained
+dead end chasing a Windows desktop Teams app across seven tool calls before falling back to the
+connector it could have tried directly, plus an unexplained mid run interruption that left
+Notification Sent blank until a second pass resumed the work.
 
 ## Final sign-off
 
-- [ ] All three model files contain raw Logs and Output.
-- [ ] Requirements, traps, and source-of-truth checks were completed.
-- [ ] Boxes 2-8 were finalized before box 1.
-- [ ] Box 1 uses the current MIN formula.
-- [ ] Individual model files contain no visible cross-model comparison.
-- [ ] The ranking is strict and supported by the model files.
+- [x] All three model files contain raw Logs and Output.
+- [x] Requirements, traps, and source-of-truth checks were completed.
+- [x] Boxes 2-8 were finalized before box 1.
+- [x] Box 1 uses the current holistic formula (Task accuracy ceiling + evidence-backed caps), not a literal MIN.
+- [x] Individual model files contain no visible cross-model comparison.
+- [x] The ranking is strict and supported by the model files.
