@@ -1,0 +1,18 @@
+{
+  "cycle": "WF-188",
+  "task": "FastAPI LLM Integration Cost & Latency Feature Attribution Monitor",
+  "persona": "Software Engineer at a mid sized IT firm",
+  "models_evaluated": [
+    "A",
+    "B",
+    "C"
+  ],
+  "overall_ratings": {
+    "A": 5,
+    "B": 3,
+    "C": 4
+  },
+  "ranking_best_to_worst": "A > C > B",
+  "best_overall": "A",
+  "why_top_model_is_best_and_what_separates_the_others": "See final-comparison.md in this round folder for the full evidence-based paragraph per model."
+}

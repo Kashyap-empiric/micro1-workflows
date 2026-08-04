@@ -1,2 +1,118 @@
-[Complete raw session transcript - not yet captured]
+Worked for 6m 52s
 
+
+I’ll read the attached brief, then inspect the relevant codebases and run the drift check it specifies.
+
+
+
+
+Read Run the weekly LLM prompt drift check across Cahuu's four codebases (the Python…
+
+
+
+This workflow spans GitHub, Supabase, Google Sheets, Jira, and Teams, so I’m using their integration skills to follow each system’s access and write conventions. I’ll perform the required access gate first; if any permission cannot be confirmed, I’ll stop before inspecting repository or production data.
+
+
+
+
+Used Atlassian Rovo, GitHub, Google Drive, Supabase and Codex Apps integrations, loaded tools, read files, ran a command
+
+
+The access gate passed: all four GitHub repositories expose pull access; the bounded prompt_invocation_logs read succeeded; the named Sheet is in the correct folder and is owned by the connected Drive identity; Jira CPG is visible for both create and edit actions; and Teams preflight says the exact channel can be posted to directly. I’m freezing the repository snapshots now and will keep all production queries within 2026-07-28 00:00 UTC through 2026-08-04 00:00 UTC (exclusive).
+
+
+
+
+Used Supabase and Google Drive integrations, read files, ran commands, searched the web
+
+
+The frozen snapshots contain four families: support persona, receipt extraction, thread summarization, and a single-source vendor-copy prompt. The production aggregate confirms the Python support deployment lag (support-v2 served while code is support-v3) and no mobile traffic for its support or thread variants. I’m checking the provider guidance now; the OpenAI documentation skill applies to the OpenAI-targeted models, so I’ll use its official-docs route alongside Anthropic’s official documentation.
+
+
+
+
+Used OpenAI Developer Docs integration, loaded a tool, searched the web
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+The provider check confirms one manual JSON-only workaround on Python receipt extraction, and all three thread-summary versions target the retired Claude Sonnet 3.5 family. The MERN thread version is double-flagged: its 120-word output constraint diverges from canonical, and its model target is retired. I found open, unassigned To Do tickets for the three actionable families, so I’ll refresh only their Summary and Description, then apply the in-place Sheet update and duplicate-post check.
+
+
+
+
+Used Codex Apps integration
+
+
+The Teams history connector resolves six posts in the required interval, but returns null or empty bodies, so it cannot establish whether the current same-window replacement is still present or links to the Sheet. The Chrome fallback in your brief is needed for that duplicate check; I’m switching to the signed-in Chrome session to inspect the actual channel state before deciding whether to send.
+
+
+
+
+Used Chrome and Codex Apps integrations
+
+
+Editjiraissue
+
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Editjiraissue
+
+
+
+
+
+The three open Jira tickets were refreshed successfully and remain unassigned in To Do. I’m updating the existing family and model-check rows in place, then adding a Run Log entry for this rerun. The channel history contains the same-window replacement message ID recorded by the prior Run Log, so I’m treating this as a duplicate-skip and recording that decision, with the body-read limitation noted transparently.
+
+
+
+
+Used Google Drive integration
+
+
+The Sheet readback is complete: 10 platform-version rows across four families, 10 model-check rows, and the new rerun log entry are populated with no placeholders. I’m doing the required rendered-sheet visual pass now, then I’ll close out with the precise duplicate-skip caveat and security advisory.
+
+
+
+
+Used Chrome integration
+
+
+
+
+
+The weekly drift rerun is recorded in the LLM Prompt Drift Report - Cahuu. The existing family and model-check rows were updated in place, and a new Run Log entry was added.
+Production window: 2026-07-28 00:00 UTC through 2026-08-04 00:00 UTC, end exclusive.
+4 prompt families checked; 3 families meaningfully diverged: support chatbot, receipt extraction, and thread summarizer.
+4 actionable model-pattern/model-target flags: one manual JSON-only workaround on Python receipt extraction, plus three retired Claude Sonnet 3.5 targets on thread-summary versions.
+3 existing Jira tickets updated, with only Summary and Description changed; all remained unassigned in To Do:CPG-34 — support-chatbot
+CPG-36 — receipt-extraction
+CPG-35 — thread-summarizer
+
+No repository prompt changes were made.
+Codebase	Frozen default-branch commit
+Python backend	37031bccae0b1470cfb580cebd761e5d4565ab4d
+MERN web app	33bd4ad6d5d453eca6fd2213b47069920d743b89
+Flutter mobile app	f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow export	40987da6088bd838e13164800225f265de525f7b
+
+
+The most important production mismatch is the Python support path: 412 invocations served support-v2 while pinned code and the log’s code marker say support-v3. Mobile support and thread-summary versions had no observed production traffic in the window.
+The provider check used current official documentation dated 2026-08-04. GPT-4.1, GPT-4.1 mini, and GPT-4o mini support Structured Outputs; OpenAI recommends schema-enforced Structured Outputs over JSON mode when possible, making the backend’s manual “valid JSON only, no markdown” workaround actionable. (GPT-4.1, GPT-4.1 mini, GPT-4o mini, Structured Outputs, message-role guidance.) Anthropic documents Claude Sonnet 3.5’s retirement on 2025-10-28, recommends claude-sonnet-4-6, and documents the Messages API’s top-level system field for initial system instructions. (Model deprecations, Messages API.) The MERN thread version’s 120-word divergence and retired target remain separate action items in CPG-35.
+Teams: I did not send another post. The duplicate-skip is logged in Run Log row 4 because channel history identifies the same-window replacement message 1785841257441, which the prior Run Log records as the replacement notification for this window. There is an important verification caveat: the Teams connector returned an empty body for that message, and Chrome reached only the Teams launcher, so I could not independently re-read its body or establish whether it remains visible. I logged that limitation rather than claiming a new send.
+One separate critical Supabase security advisory surfaced during the access check: RLS is disabled on public.request_logs and public.llm_call_logs. Do not enable it blindly, because enabling RLS without appropriate policies can block legitimate access. Review Data API exposure and grants, design the required policies, then consider:
+ALTER TABLE public.request_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.llm_call_logs ENABLE ROW LEVEL SECURITY;
+See Supabase Row Level Security guidance. I did not apply any database change.

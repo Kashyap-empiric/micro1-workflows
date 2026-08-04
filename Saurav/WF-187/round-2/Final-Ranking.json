@@ -1,0 +1,18 @@
+{
+  "cycle": "WF-187",
+  "task": "Cross-Platform LLM Prompt Version Drift Tracker",
+  "persona": "Software Engineer at a mid-sized IT firm",
+  "models_evaluated": [
+    "A",
+    "B",
+    "C"
+  ],
+  "overall_ratings": {
+    "A": 4,
+    "B": 3,
+    "C": 5
+  },
+  "ranking_best_to_worst": "C > A > B",
+  "best_overall": "C",
+  "why_top_model_is_best_and_what_separates_the_others": "See final-comparison.md in this round folder for the full evidence-based paragraph per model."
+}

@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-187",
+  "model": "B",
+  "file": "Model-B-Fish-Extra-High.json",
+  "task": "Cross-Platform LLM Prompt Version Drift Tracker",
+  "persona": "Software Engineer at a mid-sized IT firm",
+  "metadata": {
+    "occupation": "Software Engineer",
+    "manual_baseline_minutes": 150,
+    "runs_per_month": 4,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 3
+  },
+  "shared_context": "All three runs checked the same four codebases for the same weekly prompt drift window, against a live sheet and ticket history that already carried a prior pass for this exact window. All three correctly grouped prompts into the same families, picked the same canonical versions, caught the same code-versus-production deployment mismatch, and split the same double-flagged version into two separate ticket actions. Where they diverged was in how each one closed out the required recurring log entry and the duplicate-post check before sending or skipping the channel notification, and that is where the real gaps between them show up.",
+  "run_time": "10 (9m 56s)",
+  "suggested_field6": 3,
+  "suggested_field6_reason": "The underlying analysis is accurate wherever I can check it, every family, every canonical pick, and the production mismatch all hold up.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 3,
+      "commentary": "The underlying analysis is accurate wherever I can check it, every family, every canonical pick, and the production mismatch all hold up. But a named required tab entry for this run simply isn't in the finished sheet despite the run's own claim that it wrote it, and a wrong summary count went out in the message that reached the engineering channel. Those are not stylistic issues, they are a deliverable that's missing and a number a reader would act on that's wrong. Add the full stop that needed my explicit instruction before the run would finish, and what's left is correct core work sitting inside a handoff I would not consider done without going back through it myself."
+    },
+    "task_accuracy": {
+      "rating": 3,
+      "commentary": "The classification work itself is solid. Every canonical pick is right, the drift write-ups name specific wording and structural changes rather than just a label, the code-versus-production mismatch is called out on its own, and the double-flagged version keeps its two fixes distinct. What caps this well below that is the recurring log tab, a named requirement of this task, which still shows only the entry that predates this run. Nothing in the finished sheet reflects this run's own pass the way the run itself claims it does. And the one summary figure that made it into an outward-facing channel message, the count of deprecated-pattern findings, is a quarter of what the model-check tab actually contains, a wrong headline number sitting next to otherwise accurate work."
+    },
+    "efficiency": {
+      "rating": 4,
+      "end_to_end_time_minutes": "15",
+      "wrong_actions_recovery": "one full stop mid-run waiting on my explicit go-ahead before the remaining Jira, sheet, and channel work continued",
+      "commentary": "The active processing itself moves fast, under ten minutes of real work split across two segments, and once it resumed it went straight through the remaining tickets, the sheet, and the notification without a wasted step. The problem is the gap in the middle. The run stopped completely rather than proceeding on its own judgment, and even though my reply was immediate, that is real added latency a fully self-directed pass wouldn't have needed. A fast pair of segments with a full stop between them is not the same as one clean fast run."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "The tickets are clean and consistently structured, each one keeps its wording fix separate from its model-pattern or deployment fix, and the refreshed ticket carries an explicit line telling me not to touch its existing assignee or status, a small courtesy that saves a future reader from guessing. The channel message opens with a real headline sentence before the counts, which is what a person skimming it actually needs. The one place this falls short is that the count printed right in that same message doesn't match the tab it's supposedly summarizing, so the clean formatting is dressing up a number I can't actually trust without opening the sheet myself."
+    },
+    "instruction_following": {
+      "rating": 3,
+      "commentary": "The structural requirements mostly land. Commits stay fixed, the window is computed correctly, the existing ticket gets refreshed rather than duplicated, and the double flag stays split into two items. What brings this down further than a close-but-missed step is that the task explicitly asks for a recurring log entry with a status note for every run, and this run's own status note isn't in the finished artifact at all, not thin, not vague, simply absent. The closing handback also names its tickets without linking to them the way it links the sheet, short of what the task's own definition of a finished handoff asks for."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 3,
+      "steering_needed": "one real interruption, a full stop at the point where it needed to send, that required my explicit instruction before it would continue",
+      "additional_editing": "I'd want the recurring log entry actually written before I'd call this run's bookkeeping complete, and I'd fix the deprecated-pattern count before this message reaches anyone else on the channel",
+      "commentary": "It made a defensible call stopping rather than guessing at a post it couldn't read, and it was honest that my go-ahead was overriding an unresolved check rather than treating it as proof the check had passed. Where it falls short is afterward. It told me the recurring log had been updated with this run's own send details, and that update isn't in the sheet I can actually open. Confirming its own bookkeeping landed would have caught that gap before it reached me, and the same shallow self-check is why a wrong count made it into the channel message unnoticed."
+    },
+    "citation_quality": {
+      "rating": 3,
+      "commentary": "Every model-pattern finding carries a live source and an access date, including the platforms that came back clean, so the check plainly ran across the board rather than only where something got flagged. What holds this down is that the one number a reader would actually cite from this run, the total count of deprecated-pattern findings, doesn't trace back to the tab that is supposed to be its source, it's off by three findings in both the places that state it. A citation that doesn't reconcile with its own supporting data is a real problem, not a stylistic one, and every remaining citation still points to a general model page rather than a specific section."
+    },
+    "gui_action_correctness": {
+      "rating": 4,
+      "commentary": "There's genuine browser action here to grade. The connector's own read of the channel history came back with the right message count but empty bodies, and the browser fallback got further than a stalled launcher, it actually reached a state where the run could conclude no existing post matched this window. That's a real answer, not a guess dressed up as one. What keeps it from going higher is that the same channel state, viewed through the sheet this run itself produced afterward, doesn't cleanly square with treating the check as fully resolved, so the on-screen work got an answer without the rest of the run treating that answer as durable."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > A > B",
+  "cycle_best_overall": "C"
+}

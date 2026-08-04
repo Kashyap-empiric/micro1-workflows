@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-187",
+  "model": "A",
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "Cross-Platform LLM Prompt Version Drift Tracker",
+  "persona": "Software Engineer at a mid-sized IT firm",
+  "metadata": {
+    "occupation": "Software Engineer",
+    "manual_baseline_minutes": 150,
+    "runs_per_month": 4,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 3
+  },
+  "shared_context": "All three runs checked the same four codebases for the same weekly prompt drift window, against a live sheet and ticket history that already carried a prior pass for this exact window. All three correctly grouped prompts into the same families, picked the same canonical versions, caught the same code-versus-production deployment mismatch, and split the same double-flagged version into two separate ticket actions. Where they diverged was in how each one closed out the required recurring log entry and the duplicate-post check before sending or skipping the channel notification, and that is where the real gaps between them show up.",
+  "run_time": "15 (15m 2s)",
+  "suggested_field6": 4,
+  "suggested_field6_reason": "The deliverable is complete and the underlying analysis is right, every family gets a correct canonical call, the production mismatch is caught and isolated, the tickets are properly split, and the rerun gets handled without duplicating anything.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 4,
+      "commentary": "The deliverable is complete and the underlying analysis is right, every family gets a correct canonical call, the production mismatch is caught and isolated, the tickets are properly split, and the rerun gets handled without duplicating anything. What keeps this at 4 rather than higher is that the run's own account of its most externally visible action, the channel notification, doesn't hold together. It told me that notification was sent before it was, needed a nudge to actually send it, and even the finished send doesn't match the identifier the sheet records for it. A persona reading this handoff would have the right analysis in hand but no clean way to confirm which message actually reached the channel, which is a real usability gap on top of otherwise solid work."
+    },
+    "task_accuracy": {
+      "rating": 4,
+      "commentary": "The family groupings hold up against the source data, the canonical picks are right in every case, and the drift write-ups name the actual wording and behavior changes rather than just labeling them. The production cross-check correctly separates a code-versus-traffic mismatch from ordinary wording drift, and the single-source prompt gets reported as single-source instead of mislabeled as drift. What pulls this down is a real internal contradiction: the identifier the run's own closing confirmation gives for the channel message it sent doesn't match the identifier recorded in the recurring log entry for that same send, two of its own required outputs disagreeing about which message actually landed. On top of that, one family only carries entries for two of the four codebases with nothing telling me whether the other two were checked and genuinely have nothing to report."
+    },
+    "efficiency": {
+      "rating": 3,
+      "end_to_end_time_minutes": "15",
+      "wrong_actions_recovery": "one real detour confirming a channel could accept a post before any actual reading began, and a duplicate-post check that came back unreadable through every path tried without ever landing on a usable answer",
+      "commentary": "Fifteen minutes for four codebases, a production cross-check, a full sheet rebuild, three ticket refreshes, and a channel notification is not a bad pace on paper, but a meaningful share of it goes to steps that didn't pay off. The early browser check before any real work started was extra insurance for a misread permission flag rather than something the task needed. The later duplicate check consumed a connector read and a browser fallback and still didn't resolve anything, and the actual send only went out after I had to tell it to proceed. Two stretches of real overhead on a run this size is enough to keep it out of the top band."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "The tickets read cleanly, each one keeps the wording or behavior fix in its own numbered line separate from the deployment or model-pattern fix, exactly the separation this kind of report needs. The closing account, once it finally goes out, opens with a plain statement of what got checked before dropping into the counts, so I get the headline first. Where it loses me is that I effectively get two closing summaries instead of one, an initial narrative that already describes the notification as sent, then a second, separate wrap-up after the actual send went out repeating most of the same figures. Reading the same numbers twice in two different closing messages is the kind of redundancy a single clean handoff would have avoided."
+    },
+    "instruction_following": {
+      "rating": 4,
+      "commentary": "Most of the explicit structure gets followed to the letter. The commits stay fixed and get reused throughout, the window comes out correctly, the double-flagged version keeps its wording fix and its model-pattern fix as two separate ticket items instead of one swallowing the other, and the rerun gets handled by refreshing the existing tickets rather than piling up duplicates. Two things don't come through clean. The instruction to check the channel for an existing post before sending doesn't get genuinely satisfied, since every read of that post came back empty and the send went ahead on an inference rather than a confirmed result. And the closing handback names the tickets it touched without linking to them the way it links the sheet, short of what a finished handoff owes me."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 3,
+      "steering_needed": "one real nudge, telling it to actually post through the connector after its own narrative had already described the notification as sent",
+      "additional_editing": "I'd want the channel send reconciled against the sheet's own record of it before I'd trust either one, and I'd rewrite the closing handback to link the tickets directly",
+      "commentary": "It got through the bulk of the analysis unattended and made a real judgment call when the post it needed to check came back unreadable, choosing to send rather than freeze. Where the self-checking breaks down is that it told me the notification was sent before it actually was, and even after the real send went out, nothing in the run reconciles that final confirmation against what the sheet itself now shows for that same message. Confirming an action happened is not the same as confirming which action happened, and that gap, on top of needing my nudge to actually finish the send, is why this lands at 3/7."
+    },
+    "citation_quality": {
+      "rating": 4,
+      "commentary": "Every model-pattern finding carries a live source and an access date, and that holds across the platforms that came back clean as well as the ones that got flagged, telling me the check ran everywhere rather than only where something turned up. What keeps this down is the same reconciliation problem showing up here too, since a citation is only as good as my ability to trust what the run says it verified, and the mismatch between the send it confirmed and the send its own log recorded undercuts that trust for the one claim that matters most externally. Every citation also points to a general model page rather than a specific section, a page to check rather than a pinpoint to the claim."
+    },
+    "gui_action_correctness": {
+      "rating": 3,
+      "commentary": "There's real browser action to grade here, not just a fallback that never engaged. The first pass used the browser only to confirm a post composer was present, a step that added a click without adding information. The second pass, checking the existing channel post before sending, reached a browser session that wasn't signed in, so the one screen that could have actually answered the duplicate question never got read. Two browser attempts, neither of which produced a usable result, and the second one directly touches the run's shakiest decision, is why this sits at 3/7 rather than higher."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > A > B",
+  "cycle_best_overall": "C"
+}

@@ -14,32 +14,37 @@ are kept in `archive/` for reference.
 4. Times PER MONTH I run this workflow: 4
 5. Workflow difficulty 1-7: 7
 6. Initial Codex test rating 1-7: 3
-7. Notes on Codex's performance: [FILL]
+7. Notes on Codex's performance: Consistent, correct core analysis across every run this cycle. The recurring weekly deliverables (the log entry and the channel notification) are where the runs actually separate from each other.
 
 ## Readiness
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
-| A | MISSING | MISSING | MISSING | NO |
-| B | MISSING | MISSING | MISSING | NO |
-| C | MISSING | MISSING | MISSING | NO |
+| A | PRESENT | PRESENT | PRESENT | YES |
+| B | PRESENT | PRESENT | PRESENT | YES |
+| C | PRESENT | PRESENT | PRESENT | YES |
 
 ## Final comparison
 
 ### Rank all responses from best to worst
-[Strict order, no ties - pending]
+C > A > B
 
 ### Which model is best overall?
-[Pending]
+C
 
 ### Why is the top model best, and what separates the other models?
-[One evidence-based paragraph per model, in ranked order - pending]
+
+C is the only run whose recurring log entry actually reconciles with its own supporting tab in the same sheet, and it is the only one that resolved the required duplicate-post check honestly: it named the specific prior message covering this exact window, skipped sending a redundant notification, and logged the one thing it genuinely couldn't verify, the message's live content, as an open limitation instead of asserting a certainty it didn't have. It ran unattended, finished fastest, and its tickets carry the most thorough action breakdown of the three. Its remaining gaps, a canonical-timestamp comparison that only shows the winner and one family with incomplete platform coverage, are shared by every run this cycle and don't set it apart on their own.
+
+A sits in the middle. Its core analysis is just as accurate, and it also ran unattended through most of the work, but its own account of its most externally visible action does not hold together: it described the channel notification as sent before it actually was, needed an explicit nudge to finish sending it, and the identifier its final confirmation gives for that message does not match what the sheet's own recurring log records for the same send. That is a real gap between what the run reported and what it can actually prove happened, on top of a duplicate-post check that came back unreadable and got sent through anyway.
+
+B is last despite reaching the same correct family and drift conclusions as the other two. It stopped completely partway through and needed an explicit instruction before it would finish, a real interruption rather than a brief pause. More seriously, the recurring log entry the task explicitly requires for every run is simply absent from the finished sheet even though the run's own narration claims it was written, and the one summary count that reached the engineering channel in the notification message is a quarter of what the run's own supporting tab actually shows. A deliverable that isn't there and a wrong number that went out externally are more consequential than either of the other two runs' gaps, which is why this ranks at the bottom despite solid underlying analysis.
 
 ## Final sign-off
 
-- [ ] All three model files contain raw Logs and Output.
-- [ ] Requirements, traps, and source-of-truth checks were completed.
-- [ ] Boxes 2-8 were finalized before box 1.
-- [ ] Box 1 uses the current MIN formula.
-- [ ] Individual model files contain no visible cross-model comparison.
-- [ ] The ranking is strict and supported by the model files.
+- [x] All three model files contain raw Logs and Output.
+- [x] Requirements, traps, and source-of-truth checks were completed.
+- [x] Boxes 2-8 were finalized before box 1.
+- [x] Box 1 was derived by holistic judgment from the finalized boxes 2-8, per the current standing rule (harsh-evaluation-protocol.md section 5), not a fixed formula.
+- [x] Individual model files contain no visible cross-model comparison.
+- [x] The ranking is strict and supported by the model files.

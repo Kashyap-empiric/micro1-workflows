@@ -76,41 +76,50 @@ Call Details tab (raw export, 11 rows) and Non-Generative Calls tab (2 rows, emb
 
 ## 2. Task accuracy, ignoring speed
 
-[Rating and Commentary from the current head-to-head template]
+**Rating:** 3/7
+
+The route trace, the feature grouping, and the dependency reasoning are all correct, and the screening catches a genuine secondary trap the others in this cycle sometimes miss, a call row tied to an already-excluded duplicate request rather than counted on its own. The real problem sits in the token-estimation choice. It uses a noticeably more aggressive characters-per-token divisor than the standard approximation, and that choice is what pushes one endpoint's static prompt estimate just over the provider's real caching minimum, turning an opportunity that a standard estimate would rule out into one it recommends and tickets. That same divisor is also most of the reason the headline monthly spend figure lands roughly a third above what a more conventional estimate would produce. Disclosing the method doesn't fix the fact that a threshold call this consequential rests on a number the run never validated against anything real.
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
-**End-to-end time (minutes):** [value]
-**Wrong actions / recovery:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 3/7
+**End-to-end time (minutes):** 17 (17m 5s)
+**Wrong actions / recovery:** none stated, it moved through the checks, the trace, the screening, and the report as one continuous pass
+**Commentary:** Seventeen minutes for the full route trace, both telemetry tables, seven endpoints of math, two tickets, and a channel post runs longer than a task of this shape should need, and nothing in the run points to a specific detour that explains the extra time over a tighter pass. The scope covered is real and the work is thorough, but I don't have a named inefficiency to point at beyond the raw total itself, and a total this size for work this bounded is enough on its own to keep this out of the top band.
 
 ## 4. Writing quality
 
-[Rating and Commentary]
+**Rating:** 4/7
+
+Both tickets are laid out cleanly, each stating the volume, the cost, the latency, and a single clear opportunity without padding, and the channel message opens with the total spend before the endpoint detail, the right order for a quick read. What holds this back is that the headline spend figure sits right at the top of that message with no hint to the reader that it rests on a more conservative token estimate than a standard approach would produce, so it reads as a settled number rather than the estimate-dependent figure it actually is.
 
 ## 5. Instruction following
 
-[Rating and Commentary]
+**Rating:** 3/7
+
+The explicit mechanics are followed well, non-generative calls are kept separate, dead and flag-disabled code is excluded and logged, and the existing ticket gets refreshed without its assignee or status touched. Where this falls short is the ticket gate itself. The task is explicit that a ticket needs a real opportunity attached, not just a cost or latency number, and the caching case behind the second ticket only clears that bar because of this run's own aggressive token estimate, not because the endpoint's prompt is actually long enough under a standard measure. That is close to filing a ticket on an estimate rather than a demonstrated opportunity, the exact pattern this task is built to catch.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
-**Steering needed:** [one short factual clause]
-**Additional editing before I'd use it:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 3/7
+**Steering needed:** none, it completed the whole pipeline unattended
+**Additional editing before I'd use it:** I'd rerun the token estimate with a standard divisor before trusting either the headline spend figure or the second ticket, and I'd want the resulting cache-eligibility call reconfirmed
+**Commentary:** It ran the whole thing without needing me to step in, and the telemetry screening is genuinely careful, catching a secondary exclusion trap the run could easily have missed. Where the self-checking falls short is exactly where it mattered most, the token estimate that decided whether a ticket should exist at all. Nothing in the run stops to sanity check that number against a standard approximation or a real tokenizer before treating it as the basis for a filed ticket, so a choice that materially changes the outcome went out without the scrutiny a threshold call like that deserves.
 
 ## 7. Citation quality
 
-[Rating or N/A and Commentary]
+**Rating:** 3/7
+
+The pricing figures themselves trace cleanly to official pages with checked dates, and that discipline is consistent across every model this run priced. The real weakness is one step upstream of the pricing, the token counts those prices get multiplied against. The headline spend figure and the second ticket's cache claim both rest on a token-estimation method that was never checked against anything more concrete than its own stated divisor, so the two numbers a reader would actually want to cite from this run are one hop removed from something verifiable rather than fully traceable.
 
 ## 8. GUI action correctness
 
-[Rating or N/A and Commentary]
+**Rating:** 4/7
+
+The browser check for an existing channel post reached a real conclusion, searching the window and finding no match before the message went out, a completed check rather than a stall. What keeps this from going higher is the same gap as the citation issue above in a different form, the run reports the negative search result without showing what the screen itself displayed, so I'm taking a completed but undocumented check on trust.
 
 ## 1. Overall task success
 
-[Write only after boxes 2-8 are final. Start from Task accuracy, apply evidence-backed caps for
-material failures, and dock one point only when the run takes substantially longer than a comparable
-run because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+**Rating:** 3/7
+
+The route tracing, the grouping, and the dependency calls are all correct, and the telemetry screening is genuinely careful. What caps this well below that is a single method choice, an aggressive token-estimation divisor, that both inflates the headline spend figure by roughly a third and is the deciding factor in whether one endpoint earns a Jira ticket at all. That is not a cosmetic difference, it changes a real recommendation this task is specifically built to test. A persona reading this handoff would walk away with a materially higher cost estimate and an action item that a more standard measurement wouldn't support, and neither the number nor the ticket carries any flag telling them so.
