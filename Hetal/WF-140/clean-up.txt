@@ -1,0 +1,17 @@
+# Round 1 cleanup - SaaS consolidation
+
+Clean only the completed run identified by `[SAAS-R1-<run>]`. Before changing anything, capture the
+final tracker, ticket, Teams, and draft URLs/IDs in the evaluation record. Use the run's control-sheet
+manifest as the source of truth.
+
+1. Delete Jira issues in the test project carrying the exact run tag. Do not alter untagged issues.
+2. Delete Teams posts and Gmail drafts carrying the exact run tag only.
+3. Delete or archive the run-tagged report/output copies. Restore the run's tracker from its immutable
+   baseline, including blank output columns and unchanged source values.
+4. Restore the empty output state and baseline metadata for that run slot. Keep evaluator-only oracle and
+   captured evidence outside the model-visible fixture.
+5. Verify zero tagged Jira issues, Teams posts, Gmail drafts, and Drive outputs remain; confirm tracker
+   source cells and blank output columns match the baseline; record the verification result and time.
+
+If an item cannot be matched exactly to the run tag or baseline ID, stop and report it. Do not guess,
+delete broad folders, cancel subscriptions, alter licences, or touch another run.

@@ -1,0 +1,68 @@
+Working as of Wednesday 29 July 2026, timezone Asia/Kolkata. I lead retrieval quality for our support RAG
+assistant. Every so often I pull the last stretch of production queries and check how much our BM25 and
+dense retrievers actually overlap versus cover different ground, because I keep hearing from engineering
+that "dense retrieval should be enough now" and I don't think the query log backs that up.
+
+Everything you need is in the GitHub repo "support-rag-eval": "corpus.md" has the document chunks our RAG
+system can retrieve from, "query_log.md" has the production queries with their confirmed ground-truth
+chunk(s) (some queries have two acceptable chunks, some are marked disputed between two candidates, some
+have no acceptable chunk in the corpus at all) and the exact top-10 ranked results our BM25 retriever and
+our dense retriever already returned in production for each one, and "recipe.md" has the exact retrieval
+parameters used to generate those rankings.
+
+For every query, work out whether BM25 alone found an acceptable chunk in its top 5, whether dense alone
+did, and put the query into exactly one bucket based purely on retrieval outcome: exact-match if only BM25
+found it, semantic if only dense found it, mixed if both found it, if neither found it alone but a fused
+ranking does, or if the query has two acceptable chunks and each retriever independently found a different
+one of the two, and no-coverage if nothing finds it at all, even fused. The no-coverage bucket is a
+retrieval-miss bucket only: it applies whenever BM25, dense, and the optimal fused ranking all miss in the
+top 5, regardless of whether an acceptable chunk actually exists in the corpus. For a disputed-ground-truth
+query, count a hit for a method if either of the two disputed candidate chunks appears in that method's top
+5, and flag these queries as disputed in your output rather than silently resolving the dispute yourself.
+Treat every query as its own row even if it looks like a paraphrase of another query in the log; do not
+merge or deduplicate them. Do not decide any bucket from how the query reads; decide it from what each
+retriever actually returned for that specific query.
+
+Separately from that bucket, set a corpus-gap flag to yes only when "query_log.md" itself records that no
+acceptable ground-truth chunk exists anywhere in the corpus for that query. This flag is about whether the
+content exists at all, not about whether retrieval found it, so it does not come from your BM25/dense/fused
+computation. Every corpus-gap query will also land in the no-coverage bucket, since no retriever can hit a
+chunk that was never in the corpus, but not every no-coverage query is a corpus-gap: some no-coverage
+queries have an acceptable chunk in the corpus that BM25, dense, and the fused ranking all happened to miss
+in their top 5, and that is a retrieval miss, not a corpus gap. Keep the two concepts distinct in your
+output rather than treating no-coverage and corpus-gap as synonyms.
+
+Then implement Reciprocal Rank Fusion yourself and sweep it: for a given fusion weight α, a chunk's fused
+score is α × 1/(k + its BM25 rank) + (1 − α) × 1/(k + its dense rank), using the k value from "recipe.md"
+and 0 for a side the chunk doesn't appear in at all. Test α at every step of 0.1 from 0.0 to 1.0 inclusive,
+and for each value work out the fused top 5 per query and the overall Recall@5 across the whole query log.
+Report whichever α gives the highest overall Recall@5 as the optimal fusion weight, and use that α's fused
+rankings to decide the mixed bucket above and to fill in each query's hybrid hit/miss.
+
+Work out BM25-only Recall@5, dense-only Recall@5, and hybrid Recall@5 at the optimal α, all across the full
+query log, and check whether hybrid clears at least a 39% relative improvement over dense-only. State the
+actual percentage improvement you get, not just whether it clears the bar.
+
+For every query flagged corpus-gap, file a ticket in the Jira project "Search Quality" naming it as a corpus
+content gap: which query, what content should exist to answer it, and what you'd recommend the content team
+do about it. Do not file a corpus-gap ticket for a no-coverage query that turns out to be a retrieval miss
+rather than a confirmed corpus gap; record those in the Per-Query Detail tab instead, with no ticket. Also
+file exactly one more ticket in the same project with your retrieval recommendation: whether we should keep
+hybrid retrieval at the optimal α you found or move to dense-only, backed by the actual BM25-only,
+dense-only, and hybrid Recall@5 numbers. Every ticket needs at least a title, the related query ID(s), the
+related chunk ID(s), the finding, and the recommended action.
+
+Write every query's classification and its corpus-gap flag (yes/no) into the "Per-Query Detail" tab of the
+Google Sheet "Hybrid Retrieval Coverage Analysis", and write the per-category rollup (exact-match, semantic,
+mixed, and no-coverage reported on its own row, not folded into the other three) into the "Category
+Summary" tab, including each category's share of the full query log, its BM25-only and dense-only recall,
+its hybrid recall, and the optimal α you found overall. The no-coverage row in "Category Summary" is a count
+of retrieval misses, not of confirmed corpus gaps; confirmed corpus gaps are tracked per query via the
+corpus-gap flag in "Per-Query Detail" and should reconcile against the Corpus Gap tickets filed.
+
+Do not change anything about the actual production retrieval pipeline or its live fusion weight, do not
+re-embed or re-index anything, and do not add or remove a chunk from the corpus. This is analysis and
+tickets only; my team decides separately whether to ship a new fusion weight.
+
+If the GitHub, Jira, or Google Sheets connector is not available, use the current Chrome session to reach
+them, everything is already logged in.

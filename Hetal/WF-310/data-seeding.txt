@@ -1,0 +1,52 @@
+# Round 1 data-seeding controls - hybrid retrieval coverage
+
+Create one private, immutable fixture for each run `R1-A` through `R1-D`. Each gets the same frozen
+corpus, query log, recipe, Sheet, and Jira sandbox, with no visible output from earlier runs. Keep gold
+classifications, RRF calculations, and ticket expectations outside the model-visible assets.
+
+Seed at least one query for every hard distinction: BM25-only, dense-only, both, fused-only, two acceptable
+chunks split across retrievers, disputed ground truth, corpus gap, and retrieval miss despite an existing
+chunk. Include a ranking boundary where the stated `k` value changes the fused top five. Keep paraphrases
+as separate rows and add a decoy output target. Record input checksums, expected alpha sweep, and tagged
+cleanup selectors in the private manifest.
+
+Create an isolated external test environment for four model evaluations. Do not read, modify, or create anything in production systems.
+
+Source fixture:
+C:\Users\Empiric\Documents\[Hetal] Hybrid BM25 + Dense Vector Search Coverage Complementarity Analyzer\adversarial-benchmark\candidate
+
+Runs: model-a, model-b, model-c, model-d
+
+For each run:
+
+1. Create a private GitHub repository named `support-rag-eval-<run>`.
+   - Add only these files from the source fixture:
+     - repo_snapshot/corpus.md → corpus.md
+     - repo_snapshot/query_log.md → query_log.md
+     - repo_snapshot/recipe.md → recipe.md
+   - Do not add answer keys, graders, or any files from `evaluator_private`.
+
+2. Create a new Google Sheet named `Hybrid Retrieval Coverage Analysis — <run>`.
+   - Create exactly two tabs:
+     - Per-Query Detail
+     - Category Summary
+   - Use the structure in `sheet_template.xlsx` from the source fixture.
+   - Keep the sheet otherwise empty so the tested model supplies the analysis.
+
+3. Create a dedicated Jira sandbox project named `Search Quality Sandbox — <run>`.
+   - It must be distinct from any production Search Quality project.
+   - Ensure the tested model can create issues there.
+
+4. Create an environment manifest containing:
+   - run name
+   - GitHub repository URL
+   - Google Sheet URL
+   - Jira project name and key
+   - confirmation that all assets are sandbox-only
+
+Safety requirements:
+- Never reuse or write to production GitHub repositories, Google Sheets, or Jira projects.
+- Never create tickets in the production “Search Quality” project.
+- Do not perform the retrieval analysis, calculate RRF, or prefill any expected results.
+- Do not expose the gold answer, scorer, or private evaluator files.
+- If creating a Jira project requires unavailable admin permission, stop and report that specific blocker; do not substitute a production project.

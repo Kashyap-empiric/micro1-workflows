@@ -1,0 +1,236 @@
+reads all SaaS subscriptions from finance spreadsheet, groups tools by functional category (4 project trackers, 3 communication tools, 2 time trackers), identifies functional overlap across tools, calculates combined cost of overlapping tools vs best single replacement. Posts consolidation opportunities to owner with estimated annual savings - reduces SaaS sprawl.
+---
+Business Problem
+
+Organizations accumulate multiple SaaS tools over time across departments without central governance.
+
+This leads to:
+
+Multiple tools solving the same problem
+Underutilized subscriptions
+Overlapping licenses
+Fragmented workflows
+High unnecessary recurring costs
+Shadow IT adoption
+
+Examples:
+
+4 project management tools (Jira, Asana, Trello, ClickUp)
+3 communication tools (Teams, Slack, Discord)
+2 time tracking tools (Harvest, Toggl)
+Multiple file storage systems (Drive, Dropbox, OneDrive)
+
+This workflow identifies consolidation opportunities and calculates financial impact of simplification.
+
+Step 1: Read SaaS Inventory Sheet
+
+Open Google Sheet:
+
+"SaaS Subscription Tracker"
+
+Extract:
+
+Tool Name
+Category (if available)
+Department Owner
+Number of Licenses
+Monthly Cost
+Annual Cost
+Usage Metrics (if available)
+Renewal Date
+Vendor
+
+Normalize missing category data using functional classification.
+
+Step 2: Group Tools by Function
+
+Cluster tools into functional categories:
+
+Example Categories:
+Project Management
+Communication & Chat
+Time Tracking
+CRM
+Design Tools
+DevOps Tools
+Documentation Tools
+Analytics Tools
+HR Tools
+Finance Tools
+
+Identify:
+
+Tools with same primary function
+Tools with partial overlap
+Tools used by same teams for same purpose
+Step 3: Overlap Detection
+
+For each category:
+
+Identify redundancy signals:
+
+Same functional purpose
+Same user group
+Similar feature set
+Duplicate workflow usage
+Parallel adoption across departments
+
+Example:
+
+Category        Tools
+Project Management        Jira, Asana, ClickUp, Trello
+
+Flag as:
+
+Full Overlap
+Partial Overlap
+Complementary Use
+Step 4: Usage Efficiency Scoring
+
+Assign each tool a Usage Efficiency Score (1–10) based on:
+
+Active users vs licensed users
+Frequency of usage
+Feature utilization (if data available)
+Cross-team adoption
+Integration usage
+
+Low score tools become consolidation candidates.
+
+Step 5: Cost Analysis
+
+Compute:
+
+For each category:
+Total monthly spend
+Total annual spend
+Cost per tool
+Cost per active user
+
+Then calculate:
+
+Consolidation Scenario:
+Best single replacement tool (based on market standard)
+Expected unified cost
+Estimated savings potential
+License reduction percentage
+
+Example:
+
+Current Spend (Project Tools): $4,200/month  
+After Consolidation (Jira only): $1,800/month  
+Estimated Savings: $2,400/month (~$28,800/year)
+Step 6: Replacement Recommendation
+
+For each redundant group, recommend:
+
+Primary consolidation tool
+Migration feasibility
+Feature coverage comparison
+Risk level of migration
+Teams affected
+
+Classification:
+
+Safe to Consolidate
+Moderate Migration Risk
+High Risk (needs review)
+Do Not Consolidate (functional uniqueness)
+Step 7: Risk Assessment
+
+Evaluate risks of consolidation:
+
+Data migration complexity
+User adoption resistance
+Feature gaps in replacement tool
+Department-specific dependencies
+Compliance / audit requirements
+Step 8: Create Consolidation Opportunities
+
+Generate structured opportunities:
+
+Tool Group
+Current Tools
+Recommended Tool
+Annual Cost Before
+Annual Cost After
+Estimated Savings
+Migration Effort
+Risk Level
+Business Impact
+Step 9: Jira Ticket Generation
+
+For each High Savings Opportunity, create Jira task:
+
+Title:
+
+SaaS Consolidation Opportunity – [Category Name]
+
+Description:
+Current tool stack
+Redundancy analysis
+Recommended consolidation
+Migration plan
+Estimated savings
+Risk considerations
+Labels:
+finance-optimization
+saas-consolidation
+cost-reduction
+procurement
+
+Assign to:
+
+IT Operations Lead OR Finance Owner
+Step 10: Google Sheet Update
+
+Update "SaaS Subscription Tracker" with:
+
+Category grouping
+Overlap status
+Efficiency score
+Consolidation recommendation
+Estimated savings
+Risk level
+Jira ticket ID
+Status (Reviewed / Recommended / Approved / Rejected)
+Step 11: Microsoft Teams Summary
+
+Post to Finance / Operations channel:
+
+Include:
+
+Total SaaS tools analyzed
+Number of overlapping categories
+Total estimated annual savings
+Top 5 consolidation opportunities
+High-risk migrations
+Jira tickets created
+Tools with critical redundancy
+
+Highlight:
+
+“Quick Win Savings Opportunities”
+
+and:
+
+“High Risk Consolidation Requires Review”
+
+Expected Deliverables
+SaaS inventory classification
+Tool overlap analysis
+Cost optimization report
+Consolidation recommendations
+Jira tickets for execution
+Finance dashboard updates
+Teams summary
+Operational Validation
+
+Workflow is complete only if:
+
+All SaaS tools are categorized
+Overlaps are identified
+Savings are calculated
+Consolidation recommendations are generated
+Jira tickets are created for actionable items
+Finance team is notified

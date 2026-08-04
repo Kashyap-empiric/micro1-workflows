@@ -1,0 +1,69 @@
+# Round 1 data-seeding controls - QA validation workflow
+
+Build four independently resettable staging fixtures, `R1-A` through `R1-D`, from the same fixed
+repository commit and database baseline. The model may write only `[QA-R1-<run>]` records and the
+evaluator-only manifest holds the defect oracle, baseline snapshot, and expected findings.
+
+Make all critical distinctions reproducible: required-field, format, ORM-rule, referential-integrity,
+reflected-script, and business-rule gaps; a low-severity error-message inconsistency; a flaky false
+positive that fails the retest; a deprecated hidden form; an admin form; and duplicate-eligible findings
+with both open and closed Jira history. Verify exact commit, staging banner, clean-state marker, and no
+orphan records. The controls here override any conflicting legacy setup language below.
+
+I would write it like this. It stays focused on **setting up** the dummy environment only and hands off cleanly to your QA workflow prompt.
+
+---
+
+Prepare a complete sample environment for testing a QA test data generation workflow. This setup is only for testing and evaluation. Do not use or modify any production systems, production data, production repositories, or production credentials.
+
+Create a small sample GitHub repository named **sample-qa-test-project** (or a similar clearly identifiable sample name). The repository should contain a simple application that is realistic enough for QA testing. Include a small relational database schema with related entities such as Customers, Products, Orders, and Order Items, together with migrations, ORM models, validation rules, enums, default values, seed files, fixtures or factory data where appropriate, and a README describing the application. Where applicable, include an API specification such as OpenAPI or Swagger so the repository contains realistic artifacts for later analysis. Once the repository is in the state you want it tested against, note the exact commit SHA of that state (and the branch it's on). The QA workflow this feeds into requires an exact branch or commit rather than "whatever the default branch is," so a moving default branch isn't good enough here.
+
+Create a small self-contained local application from that repository to act as the staging environment. Do not deploy anything to cloud infrastructure or use paid services. The application should run locally and expose a local URL that will serve as the staging environment for later testing. Give that URL a clear non-production marker (e.g. something like `staging.localhost` or a `staging` subpath), and have the app itself confirm it's non-production too, either with a visible environment banner in the UI or a small API endpoint/flag (e.g. `/api/environment` returning `"environment": "staging"`), so the QA workflow's non-production check has something concrete to verify against instead of just trusting the URL. Include a small number of user-facing forms such as Registration, Product, Customer, and Order forms with both required and optional fields so validation behavior can be exercised, and make sure they're all reachable from the app's main authenticated navigation within a couple of clicks, since the QA workflow only looks that deep. Give the Customer form separate create and edit pages on their own routes instead of one shared page, so the workflow's rule that counts those as two distinct forms actually has something to count. Also put one small piece of the app, like a quick note or inline edit box, inside a tab or modal that doesn't change the page's URL, so the rule that a same-URL tab or modal doesn't count as a new form or a new navigation level has something real to check against.
+
+Set up a dedicated set of fake staging credentials (a login or API key, clearly labeled as staging-only) for the QA workflow to authenticate with, separate from any other credentials in the sample setup, so it has a designated staging identity to use rather than reusing something else. Also give the environment a simple way to tell it's in a known clean state, such as a visible "last reset" or "last seeded" timestamp in the app or its API, so the QA workflow can check that before it starts writing data.
+
+Populate the sample application with clearly fictional data only. Use sample names, addresses, phone numbers, email addresses, products, and other values that cannot reasonably be mistaken for real customer information. Clearly label all repositories, applications, data, and environments as **Sample**, **Test**, or **QA** wherever appropriate.
+
+Seed the application with a small, known set of intentional validation gaps so the QA workflow has real defects to find, rather than a clean app that would just produce an empty report. Make sure each one behaves the same way every time it's submitted, since the workflow will resubmit anything it plans to rate Critical or High to confirm it reproduces before recording it, a gap that only shows up sometimes would make that check unreliable. Include at least one gap for each of these, and keep track of exactly what you planted so the workflow's findings can be checked against it afterward:
+
+* **High, required-field bypass:** a field marked required in the schema or ORM (e.g. the Order form's shipping address) that the server actually accepts empty.
+* **High, format bypass:** a field with a defined format rule (e.g. the Customer phone number) where the server accepts values that don't match the rule.
+* **Critical, referential-integrity bypass:** a form (e.g. Order Item) that accepts a reference to a related record that doesn't exist, such as a product ID not present in the Products table.
+* **Critical, security:** a text field (e.g. a Customer notes or Product description field) that accepts script or HTML input and reflects it back without sanitizing it.
+* **Medium, business-rule bypass:** a rule enforced only in application code, not the database (e.g. order quantity must be positive, or can't exceed stock on hand), that can be bypassed on a single record.
+* **High, ORM-level rule:** a validation rule enforced by a decorator or annotation on the ORM model itself (e.g. a model-level validator on the Product price field), rather than a raw database constraint, that the server doesn't actually enforce. Keep this one distinct from the Medium case above, since it should still count as schema-level and get rated High, not Medium, even though it isn't a plain DB constraint.
+* **Low, error-message inconsistency:** the same underlying rule (e.g. email format) validated in two different forms (say, Registration and Customer edit), where a failing submission returns a different error message or status code depending on which form it came from.
+* **Not a real gap, one-off false positive:** something that looks like a validation failure the first time but isn't an actual bug, like a form that occasionally throws a generic error from a deliberately flaky endpoint, so you can confirm the workflow's second look correctly throws this out instead of recording it as a finding.
+
+Expose at least one of these gaps, such as the format bypass or the uniqueness rule behind email addresses, through more than one form using the same underlying rule, so the QA workflow's "update the existing Jira issue instead of creating a duplicate" logic has something to actually test. Also create one Jira issue ahead of time in the "Testing Client Workflows" project for one of these duplicate-eligible gaps, and set its status to Closed or Resolved, so you can confirm the workflow creates a new issue instead of reopening or updating a closed one. Also add one clearly deprecated or hidden form (e.g. a "Legacy Contact" form not linked from the main navigation) so the workflow's rule to exclude deprecated forms unless marked active can be exercised, and consider adding a small admin interface with one or two of its own forms so the "include the admin interface if present" scope logic gets used too.
+
+Optionally, keep an easy way to temporarily break each external connection on demand, stopping the local staging server, revoking the workflow's access to Jira, Sheets, or Teams, so the stop-and-log-to-Run-Log and log-and-proceed failure paths can each be tested with a separate run.
+
+Create or locate a Google Sheet named **Test Data Repository - Sample Project**. If one already exists with that exact name, reuse it instead of creating a duplicate.
+
+Create or locate a Google Drive folder named **QA Test Data Reports**. If one already exists with that exact name, reuse it instead of creating a duplicate.
+
+Create or locate a Jira project named **Testing Client Workflows**. If a project with that exact name already exists, reuse it instead of creating another project.
+
+Create or locate a Microsoft Teams team named **Testing Client Workflows**, with a channel named **Test**, and within it use the channel **#Test Data Generation and Validation Summary** for workflow notifications. If Microsoft Teams is unavailable, create or locate an equivalent Slack workspace and channel with the same names.
+
+Do not create duplicate resources when matching ones already exist. Reuse existing sample resources whenever possible.
+
+Do not provision cloud infrastructure, production databases, production repositories, billing resources, paid subscriptions, or external integrations beyond the sample resources required for this testing environment.
+
+Do not create or expose production credentials, API keys, tokens, or confidential information. Where credentials are required for local execution, use clearly fake placeholder values only.
+
+Once the setup is complete, return the following information so it can be used as input for a separate QA workflow:
+
+* Repository URL
+* Branch name and the exact commit SHA to analyze
+* Local staging application URL, including the non-production marker it exposes (hostname pattern and/or environment banner or API flag)
+* Staging credential reference (the fake login or API key set up for the QA workflow to use)
+* Reset/clean-state indicator (e.g. the last-reset or last-seeded timestamp, and where to find it)
+* A list of the intentional validation gaps you seeded, with the form, field, expected category, and expected severity for each, so the QA workflow's findings can be checked against what was actually planted
+* Google Sheet ID
+* Google Drive folder ID
+* Jira project key
+* Microsoft Teams notification location (or Slack channel if Slack was used)
+
+The setup is complete only when every required sample resource has either been successfully created or an existing matching sample resource has been identified, and all of the above identifiers have been returned for use by the subsequent workflow.

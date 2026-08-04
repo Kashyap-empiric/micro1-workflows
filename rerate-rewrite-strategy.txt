@@ -1,0 +1,9 @@
+How to do a proper rate and rewrite:
+
+- Compare the logs and output of all four models PROPERLY and THOROUGHLY. Go back to the actual raw pasted Logs/Output for each model, not a recalled summary from earlier in the conversation.
+
+- Based on that internal comparison, rerate and rewrite Boxes 2-8 of all 4 models (but make sure the commentary doesn't have comparsion, they should feel isolated). This is where relative severity gets calibrated across all four runs, box by box.
+
+- Only after Boxes 2-8 are fully rerated and rewritten for all four models, rerate and rewrite the Overall task success box (Box 1) for all 4. Box 1 depends on where Boxes 2-8 land (Overall is derived from Task accuracy and Instruction following), so it has to be done last, using their final recalibrated values, not the other way around.
+
+- The comparison itself never appears as visible text anywhere except the Final comparison section. Every box and subfield still reads as if it were the only model ever scored. See head-to-head-comparative-rerate-addendum.md for the full procedure and the banned-pattern list.

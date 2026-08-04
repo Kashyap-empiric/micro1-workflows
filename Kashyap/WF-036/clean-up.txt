@@ -1,0 +1,16 @@
+# Round 1 cleanup - LinkedIn publishing workflow
+
+Clean only the private test assets tagged `[LINKEDIN-R1-<run>]`. Preserve raw logs and evaluation evidence
+outside the browser/test accounts before deleting anything.
+
+1. Delete the tagged private test post from the controlled page/profile. Never operate on a public or
+   untagged LinkedIn post.
+2. Delete the matching tagged Gmail message and Teams channel post.
+3. Remove the tagged Content Log and Issues rows, then restore the cloned sheet to its immutable baseline
+   with only its seed rows and headers.
+4. Delete run-specific research snapshot copies or archive them outside the model-visible fixture.
+5. Verify no tagged post, message, email, or sheet row remains and that the baseline draft-ID history is
+   exactly restored. Record the result in the run control manifest.
+
+If the publication target or message cannot be identified by tag and ID, stop. Do not delete broadly or
+attempt cleanup on any live profile, mailbox, or channel.

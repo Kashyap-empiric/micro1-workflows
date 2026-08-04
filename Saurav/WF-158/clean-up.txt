@@ -1,0 +1,13 @@
+# Round 1 cleanup - Smart contract pre-audit
+
+Clean only report and email artifacts tagged `[PREAUDIT-R1-<run>]`. Preserve code-review evidence, balance
+snapshots, final Doc, and email-draft metadata in the evaluator record before cleanup.
+
+1. Delete the run-created Google Doc/report in the private fixture folder and delete the matching Gmail draft.
+2. Remove temporary browser downloads, CVE research copies, and local calculations carrying the exact run tag.
+3. Restore the fixture Drive folder to its placeholder/baseline state. Do not modify the GitHub branch,
+   Solidity source, deployment metadata, balances, public chain data, or seeded fixture addresses.
+4. Verify no tagged report, draft, or temporary output remains, the source repo SHA and file counts match
+   baseline, and the placeholder state is restored. Record reset time and verifier.
+
+Stop on an untagged report or ambiguous address. Never sign, deploy, transfer funds, or delete untagged work.

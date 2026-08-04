@@ -1,0 +1,355 @@
+Business Problem
+
+Before implementing a new feature, developers often spend several hours researching third-party platforms to determine:
+
+Which platform best fits the project requirements?
+Is it compatible with our technology stack?
+How difficult is integration?
+What are the pricing implications?
+Are there API limitations?
+What authentication methods are supported?
+Are there SDKs available?
+What risks should be considered?
+
+This research is typically repeated across multiple projects, leading to duplicated effort and inconsistent decisions.
+
+This workflow automates the entire evaluation process and produces an implementation-ready technical research document.
+
+Step 1: Identify Research Task
+
+Review the Jira project.
+
+Select the highest-priority ticket labeled:
+
+Research
+Technical Research
+Integration Research
+Architecture Research
+
+Retrieve:
+
+Feature Title
+Description
+Business Requirements
+Acceptance Criteria
+Attachments
+Client Documents
+Design Files
+Comments
+Existing Technical Notes
+
+Update the Jira ticket status to In Progress.
+
+Step 2: Analyze Project Context
+
+Review the project documentation stored in Jira and GitHub.
+
+Extract:
+
+Project Overview
+Existing Architecture
+Technology Stack
+Frontend Framework
+Backend Framework
+Database
+Cloud Platform
+Authentication Mechanism
+Deployment Model
+Existing Third-Party Integrations
+Coding Standards
+
+Create a project context summary that will be referenced throughout the research.
+
+Step 3: Identify Integration Requirements
+
+Analyze the requested feature.
+
+Determine:
+
+Required functionality
+Functional requirements
+Non-functional requirements
+Security requirements
+Scalability expectations
+Compliance requirements (GDPR, HIPAA, PCI, etc.)
+Performance expectations
+Expected transaction volume
+Multi-region support
+Offline support (if applicable)
+Step 4: Discover Candidate Platforms
+
+Research all suitable third-party solutions.
+
+Examples:
+
+Authentication
+Payment Gateway
+OCR
+AI Models
+Video SDK
+Push Notifications
+Maps
+Email
+SMS
+Cloud Storage
+Search Engines
+Analytics
+Calendar APIs
+
+Identify up to 10–15 viable platforms ranked by suitability.
+
+Step 5: Deep Evaluation of Each Platform
+
+Create one Google Docs sub-page per platform.
+
+Each platform must include:
+
+Overview
+Company
+Product
+Primary Use Case
+Feature Support
+Required Features
+Missing Features
+Optional Features
+Technology Compatibility
+React
+Angular
+Vue
+Flutter
+React Native
+Node.js
+Python
+Java
+.NET
+PHP
+Laravel
+Next.js
+
+SDK availability and maturity.
+
+Integration Complexity
+
+Estimate:
+
+Easy
+Medium
+Complex
+
+Include:
+
+Authentication flow
+API design
+Webhooks
+SDK quality
+Required infrastructure
+Expected implementation effort
+Documentation Quality
+
+Include:
+
+Official documentation links
+API reference
+SDK documentation
+Quick-start guide
+Example repositories
+Migration guides
+Pricing
+
+Document:
+
+Free Tier
+Trial Availability
+Monthly Pricing
+Usage-based Pricing
+Enterprise Plan
+Hidden Costs
+Rate Limits
+
+Estimate monthly cost based on the project's expected usage where possible.
+
+Risks
+
+Examples:
+
+Vendor lock-in
+API rate limits
+Downtime risk
+Regional restrictions
+Limited SDK support
+Breaking API changes
+Expensive scaling
+Poor documentation
+Community maturity
+Advantages
+Fast implementation
+Strong documentation
+Large community
+Good SDKs
+Stable APIs
+Enterprise support
+High scalability
+Disadvantages
+High pricing
+Missing features
+Complex authentication
+Limited customization
+Poor performance
+Licensing restrictions
+Security
+
+Review:
+
+OAuth support
+API Keys
+JWT
+Encryption
+Compliance certifications
+Audit logs
+SSO support
+Integration Steps
+
+Provide a developer-ready implementation plan:
+
+Create account
+Obtain credentials
+Install SDK
+Configure environment variables
+Backend integration
+Frontend integration
+Webhook configuration
+Testing
+Production deployment
+Sample Code
+
+Where applicable, include:
+
+Installation command
+Authentication example
+API request examples
+Basic implementation snippets
+Step 6: Comparative Analysis
+
+Create a comparison table.
+
+Columns:
+
+Platform
+Feature Coverage
+Tech Stack Compatibility
+Integration Complexity
+Pricing
+SDK Quality
+Documentation Quality
+Security
+Scalability
+Community Support
+Overall Score
+Step 7: AI Recommendation
+
+Based on the project requirements, recommend:
+
+Primary Recommendation
+
+Explain:
+
+Why it is the best fit
+Expected implementation effort
+Long-term benefits
+Estimated maintenance cost
+Risks to monitor
+Alternative Options
+
+Provide suitable alternatives and when they would be preferable.
+
+Step 8: Generate Architecture Notes
+
+Create an implementation blueprint including:
+
+High-level integration architecture
+Data flow
+Authentication flow
+Error handling strategy
+Retry mechanisms
+Rate limit handling
+Caching recommendations
+Security considerations
+Monitoring and logging recommendations
+Step 9: Create Google Documentation
+
+Create a Google Document named:
+
+{Project Name} – Third Party Research
+
+Suggested structure:
+
+Project Overview
+Feature Requirements
+Technology Stack
+Evaluation Methodology
+Comparison Matrix
+Recommended Platform
+Individual Platform Research (sub-pages)
+Architecture Blueprint
+Risks & Mitigation
+Cost Analysis
+Implementation Checklist
+Final Recommendation
+
+Store the document in the project's Google Drive folder.
+
+Step 10: Update Jira
+
+Add a Jira comment containing:
+
+Research Summary
+Recommended Platform
+Comparison Table
+Estimated Integration Effort
+Estimated Monthly Cost
+Major Risks
+Google Document Link
+
+Update the Jira ticket status to In Review.
+
+Step 11: Notify Engineering Team
+
+Post a Microsoft Teams message.
+
+Example:
+
+Third-Party Research Completed
+
+Feature: Social Login Integration
+
+Recommended Platform: Auth0
+
+Alternatives Reviewed: Clerk, Firebase Auth, Supabase Auth, AWS Cognito
+
+Estimated Integration Time: 2–3 days
+
+Estimated Monthly Cost: ~$99
+
+Primary Risks:
+
+Vendor lock-in
+Rate limits on free tier
+
+Deliverables:
+
+Research Document
+Comparison Matrix
+Integration Blueprint
+Implementation Checklist
+
+Google Document: <link>
+
+Deliverables
+Comprehensive Google Doc with sub-pages for each platform
+Feature comparison matrix
+Cost and licensing analysis
+Technical implementation blueprint
+Integration checklist
+Architecture recommendations
+Jira updates with research summary
+Microsoft Teams notification

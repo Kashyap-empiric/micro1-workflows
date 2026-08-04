@@ -1,0 +1,15 @@
+# Round 1 cleanup - QA validation workflow
+
+Reset only the `R1-<run>` staging clone and artifacts carrying `[QA-R1-<run>]`. Save the final dataset,
+report, finding evidence, issue IDs, and notification links to the evaluator record first.
+
+1. Use the approved staging reset endpoint or database snapshot to remove run-tagged records and restore
+   the exact repository/database baseline. Never hand-delete production-like records or leave orphans.
+2. Delete run-created dataset/report files, Drive outputs, Teams/Slack notifications, and Jira issues that
+   carry the exact run tag. Restore any seed issue's original description/status instead of deleting it.
+3. Confirm the staging banner, fixed commit, clean-state timestamp, form inventory, seeded defects, and
+   false-positive behaviour match the pre-run manifest.
+4. Verify no tagged data, ticket, output, or notification remains, then write the reset result and time to
+   the evaluator control record.
+
+Stop on a missing baseline, failed database restore, or uncertain run tag. Do not delete shared QA data.

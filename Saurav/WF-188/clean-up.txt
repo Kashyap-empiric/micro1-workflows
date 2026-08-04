@@ -1,0 +1,15 @@
+# Round 1 cleanup - LLM cost and latency attribution
+
+Clean only `[COST-R1-<run>]` artifacts and restore the fixed code/log/report baseline. Preserve final
+calculations, pricing evidence, ticket IDs, and Teams state in the evaluation record before cleanup.
+
+1. Restore the report Sheet tabs and Run Log to baseline or delete the run-specific Sheet copy. Do not alter
+   raw request or call logs, frozen repository commit, or evaluator screening oracle.
+2. Delete new tagged Jira issues. Restore an updated seeded open ticket to its original fields/status and
+   leave the closed seed issue unchanged.
+3. Delete the tagged Teams post and tagged temporary exports or pricing snapshots.
+4. Verify no tagged output remains, Sheet baseline headers/rows are correct, seeded ticket states are exact,
+   source-table row counts match the manifest, and the Teams channel has no tagged post. Log reset proof.
+
+Stop on an uncertain item or failed baseline comparison. Never delete untagged operations data or change
+provider configuration, source code, or real credentials.

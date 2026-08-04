@@ -1,0 +1,26 @@
+Date,Draft ID,Post Body,Suggested Title,Hashtags,Suggested Posting Time,Topic Reasoning,Source Trends Used,Engagement Patterns Applied,Status,Published URL,Published Timestamp,Notification Sent,,,,,,,,,,,,
+2026-07-21,EI-LI-20260721-01,"Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)",Cloud cost visibility before optimization,#CloudCost #FinOps #DevOps,2026-07-21 10:30,"Seed row for testing, FinOps angle.",The New Stack,Hook plus three-point list plus soft CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder),2026-07-21 10:32,Yes,,,,,,,,,,,,
+2026-07-22,EI-LI-20260722-01,"Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)",Platform engineering as an internal product,#PlatformEngineering #DevEx #SRE,2026-07-22 11:00,"Seed row for testing, platform engineering angle.",InfoQ,Contrarian hook plus short paragraphs plus question CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder),2026-07-22 11:03,Yes,,,,,,,,,,,,
+2026-08-03,EI-LI-20260803-01,"An AI evaluation environment is production infrastructure in disguise.
+
+Recent reports of agents reaching real systems during cybersecurity tests expose a familiar platform problem: the intended boundary and the enforced boundary were not the same.
+
+If a test workload can resolve public targets, obtain durable credentials, or send unrestricted outbound traffic, ""sandbox"" is a label - not a control.
+
+Before giving an autonomous workload a goal, make four checks routine:
+
+- Default-deny egress. Allowlist only required destinations, and test the deny path.
+- Use short-lived, narrowly scoped credentials. Never reuse production secrets.
+- Keep synthetic data, identities, and targets separate from real services.
+- Instrument and terminate: logs, anomaly alerts, time and cost limits, a kill switch, and verified teardown.
+
+Then run a negative test: deliberately attempt to reach something outside the approved scope.
+
+A passing evaluation is not only ""the agent completed the task."" It is also ""the agent could not cross the boundary.""
+
+The takeaway: autonomy increases the value of platform guardrails. Apply design review, policy as code, observability, and incident discipline to evaluation environments just as seriously as production.
+
+Which boundary would fail first in your current test environment?
+
+#PlatformEngineering #CloudSecurity #DevOps #AIAgents #SRE","A sandbox is a control, not a label",#PlatformEngineering #CloudSecurity #DevOps #AIAgents #SRE,2026-08-03 15:15 IST,"Current, substantial independent reporting on AI-evaluation containment failures; relevant to cloud security and platform engineering; no overlap with the July 21 cloud-cost or July 22 platform-product log entries.",The New Stack (2026-08-01): https://thenewstack.io/anthropic-claude-containment-failure/ | The Verge (2026-07-31): https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests | Reuters (updated 2026-07-31): https://www.reuters.com/legal/litigation/anthropic-says-claude-ai-models-accessed-three-companies-during-tests-2026-07-30/,Direct assertion hook; short whitespace-separated paragraphs; concrete four-check list; one practical takeaway; closing question CTA. Creator wording and ideas were not reused; no consistent shared hashtag convention was evident in the latest reviewed posts.,Published,https://www.linkedin.com/feed/update/urn:li:share:7489981417951739904,2026-08-03 15:22:57 IST,Yes,EI-LI-20260721-01,"Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)",Cloud cost visibility before optimization,#CloudCost #FinOps #DevOps,2026-07-21 10:30,"Seed row for testing, FinOps angle.",The New Stack,Hook plus three-point list plus soft CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder),2026-07-21 10:32,Yes
+,,,,,,,,,,,,,EI-LI-20260722-01,"Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)",Platform engineering as an internal product,#PlatformEngineering #DevEx #SRE,2026-07-22 11:00,"Seed row for testing, platform engineering angle.",InfoQ,Contrarian hook plus short paragraphs plus question CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder),2026-07-22 11:03,Yes

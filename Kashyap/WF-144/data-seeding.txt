@@ -1,0 +1,80 @@
+Set up the dedicated test accounts for one run of the signed-off WF-144 workflow. This is setup
+only: do not run the workflow, create `Mobile Build Blueprint - webapp-main`, create the workflow's
+Jira phase issues, attach workflow output, or post the workflow's Teams message.
+
+The reusable cycle is:
+
+`seed -> run the signed-off WF-144 prompt -> cleanup -> seed again`
+
+All named accounts and destinations below are test-only. Reuse them on every cycle; do not create
+duplicates or use a manifest, run tag, production account, or production data.
+
+## Required access
+
+Use connected GitHub, Jira, Google Drive/Docs, and Microsoft Teams integrations. Chrome is only the
+fallback permitted by the signed-off workflow for Jira attachments and Google Doc native tabs.
+
+Confirm access to these exact test resources before continuing:
+
+- GitHub repository: `kashyapempiricinfotech-sys/webapp-main`, branch `main`.
+- Jira site: `https://workflow-testing-xgfb79cw.atlassian.net`.
+- Jira project: `Mobile Build - Test Fixture`, key `MBTF`.
+- Drive folder: `Mobile Build - Test Fixture`.
+- Teams team/channel: `Testing Client Workflows` / `Engineering`.
+
+If any connector, permission, or destination is unavailable, or if there is more than one exact
+matching Drive folder, team, or channel, stop and report the blocker.
+
+## Repository fixture
+
+Create or repair the test-only `main` branch as a compact TypeScript/React/Express web app with:
+
+- `package.json`, `README.md`, `.env.example`, and source under `/app`, `/src`, `/api`, and `/server`,
+  plus a data-model file such as `/server/db/schema.prisma`.
+- Login, dashboard, invoices, settings, admin-reports, and notifications-center screens. Admin reports
+  must use a client-side role check; notifications must be feature-flagged.
+- Reusable components used by at least three screens, including a barrel re-export and a wrapper call
+  site; public and authenticated API routes, including routes registered from a route-manifest array.
+- JWT auth plus a deprecated but still live cookie/session auth flow with two legacy endpoints.
+- Two active integrations, one installed but inactive feature-flagged integration, and one unimported
+  business-logic service.
+- Two genuine secret-shaped values that should be reported only by file and line, and one obvious
+  `.env.example` placeholder that should not be treated as a real secret.
+
+Ensure `main` has exactly this fixture history; reuse it when it already matches:
+
+1. Commit A: fixture application; author and committer time `2026-07-10T17:00:00+05:30`.
+2. Commit B: small legacy-auth change; author time `2026-07-10T17:45:00+05:30`, committer time
+   `2026-07-10T19:00:00+05:30`. It must be excluded from the cutoff snapshot.
+3. Commit C: after the cutoff on both timestamps; add `src/components/ExperimentalScanner.tsx` and a
+   new route. It must be visible at HEAD but excluded from workflow output.
+
+Commit A is the expected snapshot for 10 July 2026, 18:00 IST. The workflow must be able to read the
+repository but must not run or modify it.
+
+## Jira fixture
+
+Create or reuse the `MBTF` project and confirm its not-started status is `To Do`. The project must
+contain exactly one seed issue:
+
+- Summary: `Foundation and auth`
+- Status: `To Do`
+- Attachments: none
+- Description begins: `TEST SEED: the workflow should update this issue instead of creating another with the same summary.`
+
+Do not create any other issue during setup. The cleanup prompt will remove the workflow-created issues
+and return this seed issue to the state above. If the project contains any other issue or the seed
+does not match this state, run the cleanup prompt first.
+
+## Drive and Teams fixture
+
+Create or reuse exactly one editable Drive folder named `Mobile Build - Test Fixture`. It must be
+empty before the workflow starts. If it is not empty, run the cleanup prompt first; do not silently
+make its existing files part of a new seed state.
+
+Create or reuse the `Engineering` channel under `Testing Client Workflows`. It must contain no
+messages before the workflow starts. If it contains messages, run the cleanup prompt first. Confirm
+that the connected account can post there, but do not post a setup message.
+
+Report the repository commit SHAs, the Jira project and seed-issue key, the Drive folder, the Teams
+channel, and any blocker. State clearly that the signed-off workflow has not been run.

@@ -1,0 +1,68 @@
+# WF-036 Round 2 - Model A
+
+Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
+
+## Model identity
+
+### Model
+Codex, gpt-5.6-cat, Extra High intelligence
+
+### Session ID
+019fc678-4847-70e2-8166-00fb0e6bc53f
+
+## Logs
+
+Raw logs saved at `codexlogs.txt` (same folder), referenced here, read in full during the scoring pass.
+
+## Output
+
+Raw evidence saved at `output/`, referenced here, transcription and analysis happen
+during the scoring pass once all three models are ready:
+
+- `post.png` — published LinkedIn post
+- `teams post.png` — delivered Teams notification
+- `Empiric Infotech LinkedIn Content Log - Content Log.csv` — exported Content Log sheet
+
+## 1. Overall task success
+
+**Rating:** 3
+**Commentary:** Task accuracy lands at 4, a well chosen and complete topic undermined by a source citation that quietly conflates two different companies' incidents, and that sets the ceiling. Instruction following and collaboration both score well here, this run never once stopped for a live approval, which genuinely matters against the prompt's explicit no human in the loop requirement. But efficiency and GUI both show real drag, seven wasted steps chasing a desktop Teams path that never worked, plus an unexplained mid run interruption that left Notification Sent blank until a second pass resumed the work. That is real efficiency drag on a task meant to complete in one unattended pass, and it earns a one point dock off the task accuracy ceiling, landing this run at 3.
+
+## 2. Task accuracy, ignoring speed
+
+**Rating:** 4
+**Commentary:** The selected theme lines up well with the brief, and every literal Content Log field is filled with real values including a source backed reasoning paragraph. The core problem is that the two cited sources describe two different companies. The Reuters piece reports on OpenAI's agents while the New Stack piece covers an Anthropic containment failure, and the reasoning text treats them as if they jointly confirm one trending story without ever naming that they involve different organizations. Separately, no alternative candidate topic is documented, so there is no way to confirm the source count tie break rule was actually applied here rather than the run settling on the first workable idea.
+
+## 3. Efficiency
+
+**Rating:** 3
+**End-to-end time (minutes):** 28
+**Wrong actions / recovery:** composer fallback needed, an extended dead end into Windows desktop Teams app skills before finding the working connector, then an unexplained mid run interruption.
+**Commentary:** Twenty seven and a half minutes is a long single pass, and most of that time is not the core research or writing work, it is Teams routing. After the web session rejected the login, the run walked through seven distinct Windows control steps trying to reach the desktop Teams app, connecting to Windows apps, loading control guidance, checking action requirements, finding the app, inspecting the workspace, requesting permission, and viewing the workspace, before abandoning that path entirely for the connector it could have tried first. On top of that, the run was interrupted before Notification Sent got set, and had to resume in a second pass to close that out. That is a genuinely inefficient route to a destination the connector reached directly once it was finally tried.
+
+## 4. Writing quality
+
+**Rating:** 4
+**Commentary:** The opening two lines are a strong hook, short, punchy, and immediately establishing stakes without hedging. The body stays concrete and the closing question is specific rather than generic. Two things pull this down from a higher mark. The control list runs to six items where four would carry the same point more tightly, and that length works against the brief's own instruction to keep one clear takeaway rather than a comprehensive checklist. And the piece never states the takeaway as a single explicit sentence, leaving the reader to assemble it from the list.
+
+## 5. Instruction following
+
+**Rating:** 6
+**Commentary:** This run honors the prompt's own framing of itself, publish without requesting approval, completely. There is no stop for a live reply anywhere in the log, not before the first publish action and not for the Teams routing decision, even though Teams needed real problem solving to reach a working channel. Every literal field requirement is also met, four hashtags, a correct draft ID, both notifications eventually confirmed sent, and the two seed rows left untouched. The one real gap is that the final destination is described only as Marketing under linkedin approvals without ever explaining whether that is a genuine separate channel or a thread label inside Marketing, so the exact match to the named destination is asserted rather than shown.
+
+## 6. Collaboration, autonomy, and verification
+
+**Rating:** 5
+**Steering needed:** none required from the user, though the run experienced an unexplained interruption and had to resume on its own.
+**Additional editing before I'd use it:** none, delivered values are usable as is.
+**Commentary:** No live approval was requested anywhere in this run, which is a real strength for a task defined around unattended completion. But the run was not actually one clean unattended pass either. It stopped mid stream with Notification Sent still blank and had to pick back up in a second worked segment to finish reconciling the row, and nothing in the log explains what caused that stop. Verification is also thin at the close, the final summary states that the content log was updated and notifications sent without demonstrating that the logged post text matches what was actually typed into LinkedIn. Two separate gaps in an otherwise steering free run.
+
+## 7. Citation quality
+
+**Rating:** 4
+**Commentary:** Both sources are real, current, and directly on topic for a platform engineering audience. The reasoning text calls them out as two independent sources covering the same trending story, but a Reuters piece specifically about OpenAI's agents and a New Stack piece specifically about an Anthropic containment failure are two different companies' incidents, not one story independently confirmed twice, and the citation text never acknowledges that distinction. No rejected alternative candidate is documented either, so the source count tie break this citation set is meant to satisfy cannot be confirmed as having actually been applied against a real second option.
+
+## 8. GUI action correctness
+
+**Rating:** 4
+**Commentary:** The run correctly recovered from a rejected bulk paste in the LinkedIn composer using a documented keystroke fallback, and the final published post and sheet state are both correct. Two real issues remain. The Teams routing work spent seven distinct tool and skill invocations exploring a Windows desktop app path that never worked before switching to the connector that did, a lot of wasted action for one notification. And the run experienced an interruption whose cause is never surfaced, Windows control was simply stopped and had to be reconnected in a later pass, which is a gap in the run's own account of its actions rather than a clean, explainable recovery.

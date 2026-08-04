@@ -1,0 +1,16 @@
+# Round 1 cleanup - Third-party research workflow
+
+Clean only outputs carrying `[RESEARCH-R1-<run>]` and restore the exact pre-run fixture from its manifest.
+Capture links, source log, Jira changes, and final report before cleanup.
+
+1. Delete the run-created Google Doc and any run-specific Drive artifact. Do not delete the authorised
+   source folder, repository snapshot, or seeded attachments.
+2. Remove run-tagged Teams posts. Delete new run-tagged Jira issues; for a seeded/open issue updated by the
+   run, restore its baseline summary, description, comments, assignee, and status. Restore the selected
+   seed ticket to its pre-run status and remove only automated tagged comments.
+3. Reset the run's research source-log and temporary snapshots to baseline without altering saved evaluator
+   evidence or public-source archive references.
+4. Verify no tagged Doc, ticket, comment, or Teams post remains and all seed resources exactly match their
+   baseline IDs and fields. Log reset status.
+
+Stop if an item has no exact tag/baseline match. Never delete an untagged research document or Jira issue.

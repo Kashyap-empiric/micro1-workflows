@@ -1,0 +1,14 @@
+# Round 1 cleanup - Multi-touch attribution
+
+Clean only `[ATTRIBUTION-R1-<run>]` output and restore the cloned warehouse/output baseline. Preserve final
+calculations, report links, ticket IDs, and Teams evidence in the evaluation record first.
+
+1. Delete the tagged Google Doc, tagged Teams post, and run-created Jira issues. For a seeded matching
+   issue updated in place, restore its original fields and status rather than deleting it.
+2. Restore the run's output tabs and Run Log to baseline. Do not alter the frozen source exports, GA4 rows,
+   CRM rows, or FX rates used to seed the next run.
+3. Remove any temporary attribution tables, charts, or exported artifacts carrying the run tag.
+4. Verify no tagged Doc/post/ticket/output remains, the Run Log is empty or baseline-only, and source-tab
+   checksums match the manifest. Record reset verification with time and evaluator name.
+
+Stop on an ambiguous ticket or missing baseline. Never delete broad folder contents or production marketing data.

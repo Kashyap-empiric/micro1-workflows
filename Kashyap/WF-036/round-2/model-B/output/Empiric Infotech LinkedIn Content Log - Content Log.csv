@@ -1,0 +1,26 @@
+Date,Draft ID,Post Body,Suggested Title,Hashtags,Suggested Posting Time,Topic Reasoning,Source Trends Used,Engagement Patterns Applied,Status,Published URL,Published Timestamp,Notification Sent,,,,,,,,,,,,
+2026-07-21,EI-LI-20260721-01,"Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)",Cloud cost visibility before optimization,#CloudCost #FinOps #DevOps,2026-07-21 10:30,"Seed row for testing, FinOps angle.",The New Stack,Hook plus three-point list plus soft CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder),2026-07-21 10:32,Yes,,,,,,,,,,,,
+2026-07-22,EI-LI-20260722-01,"Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)",Platform engineering as an internal product,#PlatformEngineering #DevEx #SRE,2026-07-22 11:00,"Seed row for testing, platform engineering angle.",InfoQ,Contrarian hook plus short paragraphs plus question CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder),2026-07-22 11:03,Yes,,,,,,,,,,,,
+2026-08-03,EI-LI-20260803-01,"Your AI agent is only as safe as the network path you forgot to close.
+
+Recent real-world incidents highlight an uncomfortable truth: calling something a sandbox does not make it a security boundary.
+
+For platform teams, safer autonomy starts with four practical controls:
+
+- Block outbound access by default; allow only named destinations.
+
+- Issue short-lived credentials with the minimum required access.
+
+- Run tools in isolated environments with explicit policy checks.
+
+- Monitor every action and stop runs when behavior crosses a boundary.
+
+The takeaway: treat AI agents like production workloads, not trusted shortcuts.
+
+If an agent can reach it, change it, or send data to it, that path belongs in your threat model.
+
+Which guardrail would your team put in place first?
+
+#PlatformEngineering #DevSecOps #CloudSecurity #AIEngineering #DevOps",AI Agent Safety Starts With Infrastructure Boundaries,#PlatformEngineering #DevSecOps #CloudSecurity #AIEngineering #DevOps,2026-08-03 14:15 IST,Published in the last three Asia/Kolkata calendar days and independently covered by Reuters and The New Stack; substantial reporting ties real agent containment failures directly to platform controls. Neither of the two Content Log stories from the past 14 days covers this announcement.,Reuters Technology (2026-08-01 IST): https://www.reuters.com/business/openai-finds-evidence-other-ai-agents-escaped-containment-it-widens-hacking-2026-07-31/ | The New Stack (2026-08-01 IST): https://thenewstack.io/anthropic-claude-containment-failure/,"Majority signals across Nana Janashia, Guillermo Rauch, and Gergely Orosz: outcome-led opening, short paragraphs, concise practical checklist, one closing discussion question, and hashtags at the end; creator activity ranged from same-day to weekly.",Published,https://www.linkedin.com/feed/update/urn:li:share:7489964290792300545/,2026-08-03 14:14:02 IST,Yes,Draft ID,Post Body,Suggested Title,Hashtags,Suggested Posting Time,Topic Reasoning,Source Trends Used,Engagement Patterns Applied,Status,Published URL,Published Timestamp,Notification Sent
+,,,,,,,,,,,,,EI-LI-20260721-01,"Most cloud cost overruns aren't a pricing problem, they're a visibility problem. Here are three checks we run before changing a single instance type. (seed test post)",Cloud cost visibility before optimization,#CloudCost #FinOps #DevOps,2026-07-21 10:30,"Seed row for testing, FinOps angle.",The New Stack,Hook plus three-point list plus soft CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a (seed placeholder),2026-07-21 10:32,Yes
+,,,,,,,,,,,,,EI-LI-20260722-01,"Platform engineering isn't a team you hire, it's a product you ship to your own developers. Here's what treating it as an internal product actually changes. (seed test post)",Platform engineering as an internal product,#PlatformEngineering #DevEx #SRE,2026-07-22 11:00,"Seed row for testing, platform engineering angle.",InfoQ,Contrarian hook plus short paragraphs plus question CTA,Published,https://www.linkedin.com/in/kashyap-empiric-b9998641a(seed placeholder),2026-07-22 11:03,Yes

@@ -1,0 +1,14 @@
+# Round 1 cleanup - Freelancer profile analysis
+
+Clean only `[PROFILE-R1-<run>]` artifacts and restore the controlled snapshots, dashboard, and task list
+to their baseline. Save the final Doc, dashboard/task evidence, and benchmark calculation record first.
+
+1. Delete the run-created gap-analysis Doc and tagged snapshot/report copies.
+2. Remove run-created tasks carrying the exact tag. For the seeded matching task updated in place, restore
+   its original title, notes, due date, and incomplete state.
+3. Restore the Scores tab from the immutable baseline, including its four stale seed rows, and remove only
+   rows created by the run tag.
+4. Verify zero tagged Docs/tasks/rows remain, baseline profile snapshots and competitor packets are intact,
+   and no marketplace profile was edited. Record reset verification.
+
+Stop if task/row ownership is uncertain. Never modify any live Upwork or Fiverr profile or public competitor data.

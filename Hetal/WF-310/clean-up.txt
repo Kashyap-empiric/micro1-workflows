@@ -1,0 +1,14 @@
+# Round 1 cleanup - Hybrid retrieval coverage
+
+Clean only fixture `R1-<run>` using its manifest IDs and `[R1-<run>]` output tag. Capture the final
+Sheet, Jira, repository, and report evidence before reset.
+
+1. Delete run-tagged Jira issues in the sandbox project, leaving unrelated seed issues untouched.
+2. Delete the run's generated Sheet contents or the run-specific Sheet copy, then restore the empty
+   template tabs from the immutable baseline.
+3. Remove only run-created report artifacts and any run-specific test repository copy if the manifest
+   identifies it as disposable. Do not change the frozen source corpus/query/recipe snapshot.
+4. Verify there are no tagged tickets or outputs, the Sheet has only its baseline headers/tabs, and input
+   checksums match the pre-run manifest. Log reset status in evaluator records.
+
+Stop on ambiguous ownership or a checksum mismatch. Never delete shared research assets or private gold keys.
