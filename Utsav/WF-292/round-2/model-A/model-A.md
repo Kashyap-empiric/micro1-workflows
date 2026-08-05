@@ -8,7 +8,7 @@ Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-sessi
 Codex, gpt-5.6-cat, Extra High intelligence
 
 ### Session ID
-[Session ID]
+019fd246-cd07-7ec3-b557-e861b4b8b9bd
 
 ## Logs
 

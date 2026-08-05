@@ -16,7 +16,7 @@ Go through every value in the body of all seven draft tables and give each one e
 
 Write the whole review to the Notion database "Wrensfield Disclosure Review Register", one row per value. Each row needs at least which table the cell sits on, which cell it is, its value as drafted, the action, and a one-line reason that names the section you relied on to get there. Set the rest of the row up however works best for reading it back.
 
-Then post to the Microsoft Teams channel "disclosure-review", for real: every cell you are holding back or changing, each with its table, its value and its one-line reason, plus how many cells that comes to and how many you reviewed altogether, plus which of the seven tables clear as they stand. Those counts as figures, not ranges.
+Then post to the Microsoft Teams channel "disclosure-review" in "testing client workflows", for real: every cell you are holding back or changing, each with its table, its value and its one-line reason, plus how many cells that comes to and how many you reviewed altogether, plus which of the seven tables clear as they stand. Those counts as figures, not ranges.
 
 Put a Gmail draft together for each analyst whose table you are changing, telling them what is changing on their table and why, so Nadira can read it before it goes to them. Keep them as drafts and do not send any of them. There is no verified address for any of these analysts in this workspace, so leave the To field empty, note in the draft that it needs a verified address before it goes out, and do not guess or invent one.
 

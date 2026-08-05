@@ -13,7 +13,7 @@ Raghunathan about where Vantridge stands on its research elections before the 20
 and there is normally one of them). Only touch Drafts, do not touch anything in Sent or Inbox. Tell me
 how many drafts you removed.
 
-3) Microsoft Teams. In the "research-tax-2025-return" channel, delete the position post a past run put
+3) Microsoft Teams. In the "research-tax-2025-return" channel in "testing client workflows", delete the position post a past run put
 up so the channel is clear of it. Leave the channel itself in place. If you cannot delete a message,
 tell me which ones are still there. If the channel does not exist yet, say so.
 
