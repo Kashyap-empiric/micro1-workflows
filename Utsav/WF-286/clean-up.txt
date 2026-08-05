@@ -8,7 +8,7 @@ completely empty (a run writes one row per request, ten of them). Leave the data
 with its properties. Tell me how many rows you deleted and how many remain. If you cannot delete a row,
 say which ones are still there so I can clear them by hand.
 
-2) Microsoft Teams. In the "oss-contributions" channel, delete the queue post a past run put up so the
+2) Microsoft Teams. In the "oss-contributions" channel in "testing client workflows", delete the queue post a past run put up so the
 channel is clear of it. Leave the channel itself in place. If you cannot delete a message, tell me which
 ones are still there. If the channel does not exist yet, say so.
 

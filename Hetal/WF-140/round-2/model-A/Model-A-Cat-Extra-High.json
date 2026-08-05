@@ -3,7 +3,7 @@
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
-  "run_time": "12 (11m 33s)",
+  "run_time": "12",
   "boxes": {
     "overall_task_success": {
       "rating": 4,

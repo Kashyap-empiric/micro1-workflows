@@ -3,7 +3,7 @@
   "model": "C",
   "file": "Model-C-Dog-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
-  "run_time": "6 (6m 26s)",
+  "run_time": "6",
   "boxes": {
     "overall_task_success": {
       "rating": 5,

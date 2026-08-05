@@ -3,7 +3,7 @@
   "model": "B",
   "file": "Model-B-Fish-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
-  "run_time": "7 (6m 39s)",
+  "run_time": "7",
   "boxes": {
     "overall_task_success": {
       "rating": 5,

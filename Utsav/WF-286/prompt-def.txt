@@ -10,10 +10,13 @@ The GitHub repo "halvard-oss-review" is the review bundle. Under projects/ there
 
 The whole queue goes into the Notion database "Halvard Outbound Contribution Register", one row per request. Each row needs at least the request number, the engineer, the target project, the lines changed, the outcome, and a one-line note naming what you relied on to get there, whether that is a section of the policy, a clause of a licence, a part of the agreement terms, or a row on one of the other three tabs. The rest of the row is yours, set it up however reads back best.
 
-Post to the Microsoft Teams channel "oss-contributions" as well, and post it live rather than leaving it with me as a draft. The post needs every request that is not a plain approve, each with its request number, its outcome and its one-line reason, plus how many of the ten need no approval from this programme at all and how many are being refused. Both of those as counts, not ranges. Our policy says what gets sent to the patent committee and what does not, so work that out and put it in the same post.
+Post to the Microsoft Teams channel "oss-contributions" in "testing client workflows" team as well, and post it live rather than leaving it with me as a draft. The post needs every request that is not a plain approve, each with its request number, its outcome and its one-line reason, plus how many of the ten need no approval from this programme at all and how many are being refused. Both of those as counts, not ranges. Our policy says what gets sent to the patent committee and what does not, so work that out and put it in the same post.
 
 No pull request anywhere, no branch pushed, no agreement signed or countersigned. The Notion rows and the Teams post are all we want from you, Anneke and the engineers do the rest.
 
 If one of these will not open for you, the Google Sheet, one of the three Google Docs, the GitHub repo, the Notion database or the Teams channel, stop there and say which. Guessing at what a rule says, what a licence grants or what we have executed is worse than telling me you could not find it. And if a request needs something the rulebook genuinely does not cover, mark that row and tell me what is not in there.
 
 The July queue is sorted when every request on the "Request Queue" tab has its Notion row with an outcome and a reason on it, the Teams post is up carrying every request that is not a plain approve with both counts on it, those counts reconcile against the Notion rows, and nothing anywhere has been opened, pushed or signed.
+
+
+For Notion, use the exact select value `no approval needed - exempt`. In Teams prose, it may be written as `no approval needed, exempt`.

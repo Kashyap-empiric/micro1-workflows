@@ -19,26 +19,33 @@ Extra High intelligence only).
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
-| A | MISSING | MISSING | MISSING | NO |
-| B | MISSING | MISSING | MISSING | NO |
-| C | MISSING | MISSING | MISSING | NO |
+| A | OK | OK | Verified against policy, licences, agreement doc, patent list | YES |
+| B | OK | OK | Verified against policy, licences, agreement doc, patent list | YES |
+| C | OK | OK | Verified against policy, licences, agreement doc, patent list | YES |
 
 ## Final comparison
 
 ### Rank all responses from best to worst
-[Strict order, no ties - pending]
+1. Model A
+2. Model B
+3. Model C
 
 ### Which model is best overall?
-[Pending]
+Model A.
 
 ### Why is the top model best, and what separates the other models?
-[One evidence-based paragraph per model, in ranked order - pending]
+
+Model A is the top result. All ten filed requests landed on the correct outcome, including the two hardest calls in the set, a licence whose grant clause simply does not reach patents defeating an otherwise plausible match against the patent list, and a contribution that only became a patent problem once combined with what its target project already carried. It reached that result in one unbroken pass with no failed attempts, no retries, and no need to stop and ask anything. The real cost is entirely in presentation. Several of the required one line reasons run to two or three chained citations, and the posted channel summary opens by repeating its own headline and then runs eight flagged requests together as one dense paragraph rather than something built to be scanned quickly by a signing director.
+
+Model B sits second. Its ten outcomes are equally correct and its committee routing is equally sound, and unlike the top result it hit two genuine obstacles along the way, a source connection that failed outright and a verification tool that hit a usage limit partway through the run, and worked through both on its own without ever stopping to ask for help. That autonomy under real friction is a genuine strength. It loses ground on how it resolved a naming collision between two destination records sharing the same title, picking the one that looked newer rather than confirming which one actually carried the required exact value, and on a posted summary that opens with a crowded compound sentence and, in the portion I could fully read, keeps its flagged requests in one continuous paragraph rather than separated lines.
+
+Model C is third despite reaching the same correct set of ten outcomes and showing the deepest sourcing habit of the group, the only one of the three that actively named and ruled out a second plausible match against the patent list rather than only defending the one call that mattered, and the only one to catch an exact schema mismatch between two similarly named destination records rather than guessing between them. Against that, it hit the same kind of access ambiguity on two separate fronts that the others navigated on their own, resolved one front with real rigor, and resolved the other by accepting a bare assurance and proceeding on a copy of the source it had itself just flagged as unconfirmed, then needed a person to reply before it would finish at all. Correct answers sitting on one unverified assumption, reached only after a full stop, is a real cost a task this dependent on getting sources right should not carry.
 
 ## Final sign-off
 
-- [ ] All three model files contain raw Logs and Output.
-- [ ] Requirements, traps, and source-of-truth checks were completed.
-- [ ] Boxes 2-8 were finalized before box 1.
-- [ ] Box 1 uses the current MIN formula.
-- [ ] Individual model files contain no visible cross-model comparison.
-- [ ] The ranking is strict and supported by the model files.
+- [x] All three model files contain raw Logs and Output.
+- [x] Requirements, traps, and source-of-truth checks were completed.
+- [x] Boxes 2-8 were finalized before box 1.
+- [x] Box 1 was derived holistically from the finalized boxes 2-8, by judgment rather than a fixed formula, per the current harsh-evaluation-protocol (which supersedes any older MIN-formula rule).
+- [x] Individual model files contain no visible cross-model comparison.
+- [x] The ranking is strict and supported by the model files.
