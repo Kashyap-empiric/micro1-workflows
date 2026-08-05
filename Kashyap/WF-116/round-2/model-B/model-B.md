@@ -8,7 +8,7 @@ Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-sessi
 Codex, gpt-5.6-fish, Extra High intelligence
 
 ### Session ID
-[Session ID]
+019fcc43-b7e9-74d3-9a46-6d26f1c35904
 
 ## Logs
 
@@ -32,16 +32,16 @@ Teams message, "testing client workflows" team, "Marketing Attribution Summary" 
 
 ## 2. Task accuracy, ignoring speed
 
-**Rating:** 5/7
+**Rating:** 6/7
 
-Every figure reconciles across the deliverable, spend, conversions, and the over and under-credited counts all tie out between the summary and the underlying tables, and the deliverable goes further than just asserting the 100% allocation claim, it lists all 19 included opportunities with their actual resolved touches and shows each one summing to 100%. The click-ID resolution logic is genuinely careful, the Data Quality Notes work through ten separate contact-ID and Click-ID cross-checks by name and correctly trust an exact campaign-export match over a session-level status label in four of them, exactly the kind of contradiction this task is built to test. What keeps this short of a higher mark is the same gap the format shares with the rest of this deliverable, the two required charts render as proportional table bars rather than actual chart images.
+Every figure reconciles across the deliverable, spend, conversions, and the over and under-credited counts all tie out between the summary and the underlying tables, and the deliverable goes further than just asserting the 100% allocation claim, it lists all 19 included opportunities with their actual resolved touches and shows each one summing to 100%. The click-ID resolution logic is genuinely careful, the Data Quality Notes work through ten separate contact-ID and Click-ID cross-checks by name and correctly trust an exact campaign-export match over a session-level status label in four of them, exactly the kind of contradiction this task is built to test. The one gap is that the detailed reasoning is spelled out for those four contradiction cases specifically, while the other six cross-checks are named but not walked through the same way, leaving their basis thinner than the strongest part of this box.
 
 ## 3. Efficiency
 
 **Rating:** 5/7
-**End-to-end time (minutes):** 15 (15m 2s)
+**End-to-end time (minutes):** 15
 **Wrong actions / recovery:** none stated, the run moved from the access gate through the report, the tickets, and the notification in one continuous pass
-**Commentary:** Fifteen minutes for a full attribution pass across three ad platforms, GA4, and CRM data, plus seven tickets and a document this detailed, is a tight runtime, and nothing in the narration points to a repeated step or a dead end. The one thing keeping this off a perfect score is that the log itself stays at a checkpoint level, "populated and verified," without narrating the specific verification actions the way a fully transparent account would, so I'm inferring a clean run from the absence of stated problems rather than from a described check of every step.
+**Commentary:** Fifteen minutes for a full attribution pass across three ad platforms, GA4, and CRM data, plus seven tickets and a document this detailed, is a tight runtime, and nothing in the narration points to a repeated step or a dead end. The one thing keeping this off a perfect score is that the log itself stays at a checkpoint level, "populated and verified," without narrating the specific verification actions the way a fully transparent account would.
 
 ## 4. Writing quality
 
@@ -53,7 +53,7 @@ The Executive Summary opens with the spend and CAC headline before the supportin
 
 **Rating:** 5/7
 
-The reporting window, the position-based formula, the stage filters, and the ticket-per-underperformer rule are all followed precisely, and this is the one deliverable in this set that visibly applies the click-ID resolution rule correctly on its hardest cases, trusting an exact export match over a contradicting status label rather than dropping a touch it could have kept. The one place this doesn't fully meet the letter of the brief is the charts, which the brief asks for as visualizations and which shipped here as bar-shaded table cells instead of embedded images.
+The reporting window, the position-based formula, the stage filters, and the ticket-per-underperformer rule are all followed precisely, and this deliverable visibly applies the click-ID resolution rule correctly on its hardest cases, trusting an exact export match over a contradicting status label rather than dropping a touch it could have kept. The one place this doesn't fully meet the letter of the brief is the charts, which the brief asks for as visualizations and which shipped here as bar-shaded table cells instead of embedded images.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -64,9 +64,9 @@ The reporting window, the position-based formula, the stage filters, and the tic
 
 ## 7. Citation quality
 
-**Rating:** 5/7
+**Rating:** 6/7
 
-Every headline figure traces to the tables beneath it, and this deliverable is the most auditable of what I'd expect for a report like this, the opportunity-level list shows the actual touches and weights behind the 100% claim rather than asserting it, and the Data Quality Notes name the specific Click ID, the specific GA4 session, and the specific opportunity behind each of ten individual data-quality calls. That level of specific, checkable detail is exactly what this box rewards. The one thing keeping it short of higher is that, like the rest of the report, the visual presentation of that traceability is table cells and bars rather than a true chart a reader could screenshot and hand off on its own.
+Every headline figure traces to the tables beneath it, and this deliverable is genuinely auditable, the opportunity-level list shows the actual touches and weights behind the 100% claim rather than asserting it, and the Data Quality Notes name the specific Click ID, the specific GA4 session, and the specific opportunity behind each of ten individual data-quality calls. That level of specific, checkable detail is exactly what this box rewards. The one thing keeping it just short of flawless is that the reasoning behind four of those ten calls is walked through in full while the other six are named without the same explanation, a minor unevenness in an otherwise tightly sourced report.
 
 ## 8. GUI action correctness
 
@@ -78,4 +78,4 @@ Nothing in this run's own account shows the rendered document actually being ope
 
 **Rating:** 5/7
 
-The attribution work here is the most rigorously checked of what's in front of me, every opportunity's touches and weights are shown rather than asserted, and the hardest data-quality contradiction in this task, a session status label disagreeing with an exact campaign match, gets resolved correctly and explained in detail. The run finished fast and unattended with nothing pointing to a wasted step. What keeps this from a higher mark is that the deliverable itself was never visibly checked as a rendered document, only confirmed at the connector level, and the charts the brief calls for shipped as table bars rather than images. A persona acting on this report gets the most trustworthy numbers of what I reviewed, delivered without the final look-and-feel check that would fully back them up.
+The attribution work here is rigorously checked, every opportunity's touches and weights are shown rather than asserted, and the hardest data-quality contradiction in this task, a session status label disagreeing with an exact campaign match, gets resolved correctly and explained in detail. The run finished fast and unattended with nothing pointing to a wasted step. What keeps this from a higher mark is that the deliverable itself was never visibly checked as a rendered document, only confirmed at the connector level, and the charts the brief calls for shipped as table bars rather than images. A persona acting on this report gets trustworthy numbers, delivered without the final look-and-feel check that would fully back them up.

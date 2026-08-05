@@ -1,7 +1,6 @@
 {
-  "cycle": "WF-144",
+  "task_id": "WF-144",
   "task": "Web App to Mobile Build Blueprint and Backlog",
-  "persona": "Engineering manager at a mid-sized software company planning a mobile build",
   "models_evaluated": [
     "A",
     "B",

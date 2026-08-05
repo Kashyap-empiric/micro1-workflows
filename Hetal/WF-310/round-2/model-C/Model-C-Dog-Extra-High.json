@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-310",
+  "task_id": "WF-310",
   "model": "C",
   "file": "Model-C-Dog-Extra-High.json",
   "task": "RAG Retrieval Complementarity and Fusion Analysis",
-  "persona": "Data Scientist at a mid sized IT firm.",
-  "metadata": {
-    "occupation": "Data Scientist",
-    "manual_baseline_minutes": 240,
-    "runs_per_month": 1.5,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs classified the same 84 queries against the source rankings, correctly separated the six disputed queries, split genuine corpus gaps from plain retrieval misses, and produced the same category summary (exact-match 35, semantic 10, mixed 27, no-coverage 12) and the same fusion result, alpha = 0.5 as the unique optimum, BM25 66.67%, dense 36.90%, hybrid 79.76%, a 116.13% relative improvement over dense. Each filed the same eight corpus-gap Jira tickets plus one hybrid-retrieval recommendation ticket, left the same four queries as Sheet-only retrieval misses, and touched no production retrieval settings. Where they diverged is whether a run actually opened its own finished sheet to check how it renders before calling itself done, how completely its tickets traced individual queries back to specific source chunks, and how much time it burned getting to an otherwise identical result.",
-  "run_time": "about 4.5",
-  "suggested_field6": 4,
-  "suggested_field6_reason": "The substance is all there and correct, every query classified against the actual retrieval outcomes, the fusion sweep and recall figures matching an independent recompute.",
+  "run_time": "4.5 (4m 20s)",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
@@ -52,7 +41,5 @@
       "rating": 4,
       "commentary": "The navigation itself is clean, opening the workbook, noticing that populated rows were clipped by the preset column widths, and applying a narrow, targeted repair rather than reworking the whole layout, nothing lands in the wrong place. Finding that one clipped column meant working through the rendered sheet, then the coverage tab, then the layout view, then the summary view in turn, four separate looks before the actual problem area got isolated. The repair itself also pauses partway through to look up the correct way to resize a column rather than applying it directly, a real detour in what should have been a short, targeted fix. Both add roundabout steps to a route that otherwise never puts a click in the wrong place."
     }
-  },
-  "cycle_ranking_best_to_worst": "C > B > A",
-  "cycle_best_overall": "C"
+  }
 }

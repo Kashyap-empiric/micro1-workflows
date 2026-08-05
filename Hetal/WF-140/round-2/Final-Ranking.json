@@ -1,7 +1,6 @@
 {
-  "cycle": "WF-140",
+  "task_id": "WF-140",
   "task": "SaaS Overlap and Consolidation Review",
-  "persona": "IT Operations Lead at a mid-size IT services company, owns the SaaS tool stack, vendor renewals and tooling governance, and files cleanup work into Jira.",
   "models_evaluated": [
     "A",
     "B",

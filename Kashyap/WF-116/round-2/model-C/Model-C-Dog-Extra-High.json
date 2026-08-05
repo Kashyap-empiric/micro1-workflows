@@ -1,24 +1,13 @@
 {
-  "cycle": "WF-116",
+  "task_id": "WF-116",
   "model": "C",
   "file": "Model-C-Dog-Extra-High.json",
   "task": "Cross-Platform Marketing Attribution Intelligence",
-  "persona": "Marketing operations lead at a mid-sized cloud software company",
-  "metadata": {
-    "occupation": "Marketing Operations",
-    "manual_baseline_minutes": 240,
-    "runs_per_month": 4,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs pulled the same week of Google Ads, Meta Ads, LinkedIn Ads, GA4, and CRM data and produced a position-based attribution report, a set of Jira optimization tickets, and a Teams notification. All three got the reporting mechanics right: the formula, the pipeline and revenue stage filters, and the reconciliation between the summary and the underlying tables. The real test was a single data-quality trap, several sessions carried a status label marking a Click ID unresolved even though that same Click ID had an exact match in the campaign export, and whether a run trusted the real match or the label is what actually separated the three, along with whether the two required charts shipped as real images or a text-based substitute.",
-  "run_time": "26 (26m 15s)",
-  "suggested_field6": 3,
-  "suggested_field6_reason": "The reporting mechanics, the formatting, and the self-honesty about what couldn't be verified are all real strengths, and this is the only deliverable with true chart images instead of a workaround.",
+  "run_time": "26",
   "boxes": {
     "overall_task_success": {
       "rating": 3,
-      "commentary": "The reporting mechanics, the formatting, and the self-honesty about what couldn't be verified are all real strengths, and this is the only deliverable with true chart images instead of a workaround. What caps this well below that is a documented, explicit misapplication of the task's core resolution rule: three Click IDs with a real export match got dropped anyway because of a status label, and that choice is what produces this run's different underperforming list and Jira set. A persona acting on this report would open tickets and reallocate budget based on a set of combinations that a straightforward reading of the resolution rule would not have produced, which is a material problem a polished document and honest caveats elsewhere don't offset."
+      "commentary": "The reporting mechanics, the formatting, and the self-honesty about what couldn't be verified are all real strengths, and this deliverable ships with true chart images instead of a workaround. What caps this well below that is a documented, explicit misapplication of the task's core resolution rule: three Click IDs with a real export match got dropped anyway because of a status label, and that choice is what produces this run's different underperforming list and Jira set. A persona acting on this report would open tickets and reallocate budget based on a set of combinations that a straightforward reading of the resolution rule would not have produced, which is a material problem a polished document and honest caveats elsewhere don't offset."
     },
     "task_accuracy": {
       "rating": 3,
@@ -26,13 +15,13 @@
     },
     "efficiency": {
       "rating": 3,
-      "end_to_end_time_minutes": "26 (26m 15s)",
+      "end_to_end_time_minutes": "26",
       "wrong_actions_recovery": "a font-rendering workaround for the local chart-build step, a POSIX-specific verification tool that didn't run in this environment and had to be substituted, a failed Chrome-based channel check that detached mid-navigation, a Windows Teams app check that found no app available, and a trailing blank page plus two reset heading styles caught during PDF QA.",
       "commentary": "Twenty six minutes covers a real amount of friction along the way, several tool and environment mismatches that each needed a substitute path, and two separate failed attempts at confirming the channel state before the run gave up on that specific check and sent anyway. The PDF visual pass at the end is genuinely useful and caught two real formatting defects before they shipped. But between the tooling substitutions and the two dead-end channel-verification attempts, this is a meaningfully bumpier path to the deliverable than a single clean pass would need, even though every individual snag got handled."
     },
     "writing_quality": {
       "rating": 4,
-      "commentary": "This is the only deliverable in front of me with real chart images rather than a text-based substitute, and the two charts chosen, conversions by platform and the CAC divergence comparison, are the two most useful visuals a reader would actually want. The prose throughout is clear and the methodology section reads naturally rather than like a checklist. What pulls this down is a recommendation that undercuts itself: one budget line tells the reader to audit click-ID resolution and query intent for a combination whose own underlying data already had that exact question answered and decided, just decided in a way this same report doesn't fully stand behind elsewhere. Sending a reader to re-investigate something the run itself already resolved, and resolved shakily, is a real clarity problem."
+      "commentary": "This deliverable ships with real chart images rather than a text-based substitute, and the two charts chosen, conversions by platform and the CAC divergence comparison, are the two most useful visuals a reader would actually want. The prose throughout is clear and the methodology section reads naturally rather than like a checklist. What pulls this down is a recommendation that undercuts itself: one budget line tells the reader to audit click-ID resolution and query intent for a combination whose own underlying data already had that exact question answered and decided, just decided in a way this same report doesn't fully stand behind elsewhere. Sending a reader to re-investigate something the run itself already resolved, and resolved shakily, is a real clarity problem."
     },
     "instruction_following": {
       "rating": 2,
@@ -52,7 +41,5 @@
       "rating": 3,
       "commentary": "There's real on-screen effort here to grade. The channel-verification attempt went through a browser path that detached during navigation and a Windows app path that found no app installed, two distinct failed routes to the same check, both accurately reported rather than glossed over. Separately, the PDF export and visual review did work as intended, catching a trailing blank page and two reset heading styles before the final version shipped, a real, demonstrated check rather than an assumed clean pass. Two failed attempts at one required check, offset by a genuinely useful visual pass on the other, is a mixed enough record to land in the middle rather than higher."
     }
-  },
-  "cycle_ranking_best_to_worst": "B > A > C",
-  "cycle_best_overall": "B"
+  }
 }

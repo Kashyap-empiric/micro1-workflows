@@ -32,10 +32,10 @@ The blueprint itself is thorough, the tab structure is complete, the commit is p
 
 ## 3. Efficiency
 
-**Rating:** 5/7
-**End-to-end time (minutes):** 25 (25m 2s)
+**Rating:** 6/7
+**End-to-end time (minutes):** 25
 **Wrong actions / recovery:** none stated beyond the expected Chrome fallback for Jira attachments, needed because the standard connector doesn't expose an attachment-upload action
-**Commentary:** Twenty five minutes for a full architecture read, a nine-tab document, four tickets with attachments, and a Teams post is a tight runtime for this scope, and the run reads as one continuous pass with real visual verification built in rather than skipped. The only real mark against it is not a wasted step but a missed one: nothing in the run shows a check for an existing matching issue before creating new tickets, and that missing step is exactly what let a duplicate slip through elsewhere in this review.
+**Commentary:** Twenty five minutes for a full architecture read, a nine-tab document, four tickets with attachments, and a Teams post is a tight runtime for this scope, and the run reads as one continuous pass with real visual verification built in rather than skipped. The one small thing is that the image review happens across five separate batches, three images, then six, six, five, and five, rather than one consolidated pass, a minor structural inefficiency even though every batch does get checked.
 
 ## 4. Writing quality
 
@@ -60,13 +60,13 @@ The tab structure, the commit pin, the four-issue cap, the To Do-only status, an
 
 **Rating:** 4/7
 
-The ticket descriptions name specific technical elements, credential storage mechanisms, contract versioning gaps, the exact database layer, rather than describing the work in generic terms, and the Secrets found tab points at file and line instead of asserting a finding vaguely. What keeps this from a higher mark is that I have no way to independently confirm these specific technical claims against the actual repository from what's in front of me, so the specificity is real but the traceability stops at the document's own word.
+The ticket descriptions name specific technical elements, credential storage mechanisms, contract versioning gaps, the exact database layer, rather than describing the work in generic terms, and the Secrets found tab points at file and line instead of asserting a finding vaguely. What keeps this from a higher mark is that the Secrets tab is the only place in the document that grounds a claim to an exact file and line, the architecture and contract claims elsewhere carry the same specificity in wording but not the same pointer to a location a reader could go check, so the traceability apparatus is inconsistent across the document rather than applied throughout.
 
 ## 8. GUI action correctness
 
-**Rating:** 4/7
+**Rating:** 6/7
 
-There's real, demonstrated visual verification here, the run exported and reviewed the rendered attachment PDFs multiple times across several batches of images before calling them finished, which is a genuine check rather than an assumption. What keeps this from a higher mark is that the same care wasn't extended to the Jira search step, where a browser-and-connector pass to look for an existing matching issue would have caught the duplicate before it happened, and nothing in the run shows that check being attempted.
+There's real, demonstrated visual verification here, the run exported and reviewed the rendered attachment PDFs multiple times across several batches of images before calling them finished, which is a genuine check rather than an assumption. The one gap is that this visual pass is narrated for the derived Jira attachment PDFs specifically, but not for the canonical Google Doc itself, so the source-of-truth document doesn't get the same on-screen confirmation the exported copies do.
 
 ## 1. Overall task success
 

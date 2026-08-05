@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-116",
+  "task_id": "WF-116",
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Cross-Platform Marketing Attribution Intelligence",
-  "persona": "Marketing operations lead at a mid-sized cloud software company",
-  "metadata": {
-    "occupation": "Marketing Operations",
-    "manual_baseline_minutes": 240,
-    "runs_per_month": 4,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs pulled the same week of Google Ads, Meta Ads, LinkedIn Ads, GA4, and CRM data and produced a position-based attribution report, a set of Jira optimization tickets, and a Teams notification. All three got the reporting mechanics right: the formula, the pipeline and revenue stage filters, and the reconciliation between the summary and the underlying tables. The real test was a single data-quality trap, several sessions carried a status label marking a Click ID unresolved even though that same Click ID had an exact match in the campaign export, and whether a run trusted the real match or the label is what actually separated the three, along with whether the two required charts shipped as real images or a text-based substitute.",
-  "run_time": "40 (40m 23s)",
-  "suggested_field6": 4,
-  "suggested_field6_reason": "The underlying attribution work is right.",
+  "run_time": "40",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
@@ -26,7 +15,7 @@
     },
     "efficiency": {
       "rating": 2,
-      "end_to_end_time_minutes": "40 (40m 23s)",
+      "end_to_end_time_minutes": "40",
       "wrong_actions_recovery": "the bundled charting library was unavailable and had to be swapped for an alternate image approach, three separate native chart-embedding attempts were rejected by the connector before falling back to text-based bars, and the exported PDF went through four distinct rounds of visual defects, a date-chip timezone error, a table cell indentation fault, a multi-page row-splitting fault, and a heading-formatting fault, each requiring its own fix and re-export.",
       "commentary": "Forty minutes for this scope is a lot of time, and the bulk of it is not the attribution analysis itself, which reads as settled early, but a long tail of document-formatting problems surfacing one after another during the write and QA phase. Every one of those problems did get caught and fixed before the final handoff, which is real diligence, but six or more distinct recovery cycles on the same deliverable is substantial drag for a task meant to run start to finish without a person watching it. A tighter run would have caught more of these before the first export rather than across five."
     },
@@ -52,7 +41,5 @@
       "rating": 4,
       "commentary": "There is real, demonstrated on-screen verification here, not just a claim that edits landed. The run exported the document to PDF and visually inspected it four separate times, and each pass caught a genuine rendering defect the connector-level write itself would never have surfaced, a wrong date, a misaligned cell, a broken page, a formatting override. That is exactly the kind of check that catches problems a database-level readback would miss. The reason this doesn't rate higher is that the same visual pass had to run so many times, and three separate native image-embedding attempts still failed outright, meaning the on-screen result for the charts specifically never fully matched what was intended."
     }
-  },
-  "cycle_ranking_best_to_worst": "B > A > C",
-  "cycle_best_overall": "B"
+  }
 }

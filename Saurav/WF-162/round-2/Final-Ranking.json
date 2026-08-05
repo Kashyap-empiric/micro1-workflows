@@ -1,7 +1,6 @@
 {
-  "cycle": "WF-162",
+  "task_id": "WF-162",
   "task": "Freelancer Profile Optimizer and Lead-Gap Research",
-  "persona": "Freelance developer running an independent practice through Upwork and Fiverr",
   "models_evaluated": [
     "A",
     "B",

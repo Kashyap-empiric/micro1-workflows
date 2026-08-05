@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-188",
+  "task_id": "WF-188",
   "model": "B",
   "file": "Model-B-Fish-Extra-High.json",
   "task": "FastAPI LLM Integration Cost & Latency Feature Attribution Monitor",
-  "persona": "Software Engineer at a mid sized IT firm",
-  "metadata": {
-    "occupation": "Software Engineer",
-    "manual_baseline_minutes": 210,
-    "runs_per_month": 4,
-    "difficulty_1to7": 6,
-    "my_initial_rating_field6": 4
-  },
-  "shared_context": "All three runs traced the same seven billable endpoints against the same pinned commit and the same screened telemetry window, and all three reached the same route tracing, feature grouping, and call-dependency conclusions. The real test in this task was the ticket gate on the slower of the two flagged endpoints, whose caching case sits right at the provider's real token minimum, and whether the run correctly treated a sub-threshold estimate as disqualifying rather than ticket-worthy. That single judgment call, and how each run's token-estimation method fed into it, is what actually separates the three.",
   "run_time": "17 (17m 5s)",
-  "suggested_field6": 3,
-  "suggested_field6_reason": "The route tracing, the grouping, and the dependency calls are all correct, and the telemetry screening is genuinely careful.",
   "boxes": {
     "overall_task_success": {
       "rating": 3,
@@ -52,7 +41,5 @@
       "rating": 4,
       "commentary": "The browser check for an existing channel post reached a real conclusion, searching the window and finding no match before the message went out, a completed check rather than a stall. What keeps this from going higher is the same gap as the citation issue above in a different form, the run reports the negative search result without showing what the screen itself displayed, so I'm taking a completed but undocumented check on trust."
     }
-  },
-  "cycle_ranking_best_to_worst": "A > C > B",
-  "cycle_best_overall": "A"
+  }
 }

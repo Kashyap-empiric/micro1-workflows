@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-188",
+  "task_id": "WF-188",
   "model": "C",
   "file": "Model-C-Dog-Extra-High.json",
   "task": "FastAPI LLM Integration Cost & Latency Feature Attribution Monitor",
-  "persona": "Software Engineer at a mid sized IT firm",
-  "metadata": {
-    "occupation": "Software Engineer",
-    "manual_baseline_minutes": 210,
-    "runs_per_month": 4,
-    "difficulty_1to7": 6,
-    "my_initial_rating_field6": 4
-  },
-  "shared_context": "All three runs traced the same seven billable endpoints against the same pinned commit and the same screened telemetry window, and all three reached the same route tracing, feature grouping, and call-dependency conclusions. The real test in this task was the ticket gate on the slower of the two flagged endpoints, whose caching case sits right at the provider's real token minimum, and whether the run correctly treated a sub-threshold estimate as disqualifying rather than ticket-worthy. That single judgment call, and how each run's token-estimation method fed into it, is what actually separates the three.",
   "run_time": "11 (10m 35s)",
-  "suggested_field6": 4,
-  "suggested_field6_reason": "The core route tracing, grouping, and cost math are all correct, the methodology writeup is genuinely transparent about the calls it made and why, and the run is good at surfacing its own limitations in plain language.",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
@@ -52,7 +41,5 @@
       "rating": 3,
       "commentary": "There's real browser action here, an attempt to inspect the channel's post history before sending. What it actually got back was an unreadable state, blank bodies through the connector and no further progress in the browser beyond the entry screen, and the run says so plainly rather than dressing up the result. The problem is what happened next: it sent the notification anyway on the strength of a search that never actually confirmed there was nothing to find. An honestly reported dead end is better than a hidden one, but the send still went out on an unresolved check, which is why this sits at 3/7 rather than higher."
     }
-  },
-  "cycle_ranking_best_to_worst": "A > C > B",
-  "cycle_best_overall": "A"
+  }
 }

@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-162",
+  "task_id": "WF-162",
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Freelancer Profile Optimizer and Lead-Gap Research",
-  "persona": "Freelance developer running an independent practice through Upwork and Fiverr",
-  "metadata": {
-    "occupation": "Software Developer",
-    "manual_baseline_minutes": 180,
-    "runs_per_month": 2,
-    "difficulty_1to7": 6,
-    "my_initial_rating_field6": 4
-  },
-  "shared_context": "All three runs were asked to score the same owner profile on both Upwork and Fiverr against a five-competitor benchmark dated 28 July, on a run date of 4 August, and to turn the gaps into a scored dashboard and a matching set of tasks. The real test was two-fold: whether a run recognized that a live search on the run date would return today's rankings rather than the requested historical page, and whether hitting Fiverr's verification block was treated as a reason to stop and resolve it properly rather than a reason to ship half the job. All three runs that did complete both platforms reconciled their dashboard rows and tasks exactly; where they diverged was in whether both platforms actually got finished, how the historical-date question got handled, and how much outside help was needed to get there.",
   "run_time": "20 (19m 48s)",
-  "suggested_field6": 5,
-  "suggested_field6_reason": "Both platforms are fully scored, every gap has a matching task, every task lands on the right due date, and the run correctly avoided the trap of treating a same-day search as a historical benchmark.",
   "boxes": {
     "overall_task_success": {
       "rating": 5,
@@ -52,7 +41,5 @@
       "rating": 4,
       "commentary": "There's real on-screen verification here, the run checked the live-rendered Scores tab visually in addition to the connector write, and the access gate itself was confirmed through the actual signed-in browser session rather than assumed. What keeps this from a higher mark is that the visual check here was a single rendered look rather than a fuller page-by-page review, so I'm trusting a meaningful share of the final layout on the connector's word rather than a direct look at every page."
     }
-  },
-  "cycle_ranking_best_to_worst": "A > C > B",
-  "cycle_best_overall": "A"
+  }
 }

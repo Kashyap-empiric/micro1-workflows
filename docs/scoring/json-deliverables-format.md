@@ -34,22 +34,11 @@ copied verbatim from that model's `.md` file, byte for byte, never re-summarized
 
 ```json
 {
-  "cycle": "WF-<ID>",
+  "task_id": "WF-<ID>",
   "model": "A",
   "file": "Model-A-<Codename>-Extra-High.json",
   "task": "<WF title, from workflows.txt / final-comparison.md METADATA>",
-  "persona": "<the METADATA occupation+workplace line from final-comparison.md>",
-  "metadata": {
-    "occupation": "<METADATA line 1>",
-    "manual_baseline_minutes": <METADATA line 3, integer>,
-    "runs_per_month": <METADATA line 4, integer>,
-    "difficulty_1to7": <METADATA line 5, integer>,
-    "my_initial_rating_field6": <METADATA line 6, integer>
-  },
-  "shared_context": "<one paragraph describing the shared task setup and what separated the runs in this round; written once, same text reused across all three model JSONs in the round>",
   "run_time": "<this model's End-to-end time string from box 3>",
-  "suggested_field6": <this model's box 1 rating, integer>,
-  "suggested_field6_reason": "<first sentence or two of this model's box 1 commentary>",
   "boxes": {
     "overall_task_success": { "rating": <int>, "commentary": "<box 1 commentary verbatim>" },
     "task_accuracy": { "rating": <int>, "commentary": "<box 2 commentary verbatim>" },
@@ -69,25 +58,26 @@ copied verbatim from that model's `.md` file, byte for byte, never re-summarized
     },
     "citation_quality": { "rating": <int>, "commentary": "<box 7 commentary verbatim>" },
     "gui_action_correctness": { "rating": <int>, "commentary": "<box 8 commentary verbatim>" }
-  },
-  "cycle_ranking_best_to_worst": "<final-comparison.md ranking string, e.g. 'A > C > B'>",
-  "cycle_best_overall": "<final-comparison.md best-overall letter>"
+  }
 }
 ```
 
 Notes:
 - `boxes` key order matches the box 1 -> 8 numbering conceptually, but `overall_task_success` (box 1)
   is listed first in the object even though it's derived and written last in the `.md` file.
-- `cycle_ranking_best_to_worst` and `cycle_best_overall` are the same for all three models' JSON files
-  in a round; they're the round's one ranking, not a per-model value.
+- The top-level ID field is `task_id`, not `cycle`, matching the TL's own schema.
+- Do not include `cycle_ranking_best_to_worst` or `cycle_best_overall` in the per-model JSON files.
+  That ranking data belongs only in `Final-Ranking.json`, not repeated across all three model files.
+- No `persona` field. Drop it entirely rather than leaving it as an empty string.
+- No `metadata` object. That data belongs to the task-level record, not the per-model JSON.
+- No `shared_context`. No `suggested_field6` / `suggested_field6_reason`.
 
 ## Final-Ranking.json schema
 
 ```json
 {
-  "cycle": "WF-<ID>",
+  "task_id": "WF-<ID>",
   "task": "<WF title>",
-  "persona": "<METADATA occupation+workplace line>",
   "models_evaluated": ["A", "B", "C"],
   "overall_ratings": { "A": <int>, "B": <int>, "C": <int> },
   "ranking_best_to_worst": "<e.g. 'A > C > B'>",

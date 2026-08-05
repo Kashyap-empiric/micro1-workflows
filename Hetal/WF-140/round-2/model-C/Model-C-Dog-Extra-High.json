@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-140",
+  "task_id": "WF-140",
   "model": "C",
   "file": "Model-C-Dog-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
-  "persona": "IT Operations Lead at a mid-size IT services company, owns the SaaS tool stack, vendor renewals and tooling governance, and files cleanup work into Jira.",
-  "metadata": {
-    "occupation": "Computer Systems Analyst",
-    "manual_baseline_minutes": 200,
-    "runs_per_month": 4,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs read the same SaaS tracker, SSO report, renewal quotes, and governance policy, correctly reconciled every one of the 20 tracker rows, computed the same USD 140,340 total spend and USD 56,220 total saving, filed the same four Jira tickets (Slack to Microsoft Teams, Asana and Trello to Jira, Toggl Track to Harvest, Dropbox Business to OneDrive) plus the Pipedrive to HubSpot opportunity recorded on the tracker only, left Figma, Adobe XD, and Loom unresolved rather than guessing, posted a live Teams summary, and created five blank-recipient Gmail drafts with no cancellation, licence change, or vendor contact anywhere. Where they diverge is run time, labelling clarity in the tracker's decision column, how cleanly the citation trail separates sourced figures from added planning language, and whether every claimed figure actually appears somewhere else in the record to check it against.",
-  "run_time": "6",
-  "suggested_field6": 5,
-  "suggested_field6_reason": "Every figure in the tracker matches what the tickets, the live post, and the drafts show, once I check each of them against the real source myself, and nothing was guessed where the policy gave no answer.",
+  "run_time": "6 (6m 26s)",
   "boxes": {
     "overall_task_success": {
       "rating": 5,
@@ -52,7 +41,5 @@
       "rating": 5,
       "commentary": "Direct tool calls handled the sheet, ticket, and channel updates in this run, leaving the email drafts as the only part that actually happened on screen. Every draft carries the correct blank recipient field and the right department targeting, nothing lands in the wrong place. Compose windows sit stacked open on top of each other in the captures instead of being closed one at a time, and a browser notification prompt is still sitting undismissed on screen across more than one of the captured views. That kind of clutter is minor on its own, but it should have been cleared before calling that screen state final."
     }
-  },
-  "cycle_ranking_best_to_worst": "C > B > A",
-  "cycle_best_overall": "C"
+  }
 }

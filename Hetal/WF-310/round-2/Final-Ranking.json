@@ -1,7 +1,6 @@
 {
-  "cycle": "WF-310",
+  "task_id": "WF-310",
   "task": "RAG Retrieval Complementarity and Fusion Analysis",
-  "persona": "Data Scientist at a mid sized IT firm.",
   "models_evaluated": [
     "A",
     "B",

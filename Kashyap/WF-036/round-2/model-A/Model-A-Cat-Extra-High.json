@@ -1,58 +1,45 @@
 {
-  "cycle": "WF-036",
+  "task_id": "WF-036",
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Automated LinkedIn Content Pipeline for Empiric Infotech",
-  "persona": "",
-  "metadata": {
-    "occupation": "",
-    "manual_baseline_minutes": "",
-    "runs_per_month": "",
-    "difficulty_1to7": "",
-    "my_initial_rating_field6": ""
-  },
-  "shared_context": "All three runs researched, wrote, and published one LinkedIn post for the same company, updated the same content log, and sent the same Teams notification, under a prompt that explicitly rules out any human in the loop. All three chose defensible topics and produced usable posts. Where they diverged was in whether the run actually stayed unattended, how cleanly it recovered from the platform frictions it hit along the way, and whether the sourcing behind the topic choice held up as one independently confirmed story or quietly conflated two different companies' incidents.",
-  "run_time": "28",
-  "suggested_field6": 3,
-  "suggested_field6_reason": "Task accuracy lands at 4, a well chosen and complete topic undermined by a source citation that quietly conflates two different companies' incidents, and that sets the ceiling.",
+  "run_time": "27.5",
   "boxes": {
     "overall_task_success": {
       "rating": 3,
-      "commentary": "Task accuracy lands at 4, a well chosen and complete topic undermined by a source citation that quietly conflates two different companies' incidents, and that sets the ceiling. Instruction following and collaboration both score well here, this run never once stopped for a live approval, which genuinely matters against the prompt's explicit no human in the loop requirement. But efficiency and GUI both show real drag, seven wasted steps chasing a desktop Teams path that never worked, plus an unexplained mid run interruption that left Notification Sent blank until a second pass resumed the work. That is real efficiency drag on a task meant to complete in one unattended pass, and it earns a one point dock off the task accuracy ceiling, landing this run at 3."
+      "commentary": "Reaching Teams was the real drag on this run. It worked through a desktop app path that never actually got the notification through before finally trying the connector that had been available from the start, and it also stopped partway through before picking back up on its own to close out the remaining notification. The topic, agentic containment failures and the guardrails they demand, is timely and relevant, and the post made it all the way to a live LinkedIn publish with the log and both notifications eventually confirmed. The citation behind that topic quietly treats two separate companies' incidents as one confirmed trend, and that flaw combines with the Teams drag to cap this below what the topic and writing earned on their own."
     },
     "task_accuracy": {
       "rating": 4,
-      "commentary": "The selected theme lines up well with the brief, and every literal Content Log field is filled with real values including a source backed reasoning paragraph. The core problem is that the two cited sources describe two different companies. The Reuters piece reports on OpenAI's agents while the New Stack piece covers an Anthropic containment failure, and the reasoning text treats them as if they jointly confirm one trending story without ever naming that they involve different organizations. Separately, no alternative candidate topic is documented, so there is no way to confirm the source count tie break rule was actually applied here rather than the run settling on the first workable idea."
+      "commentary": "The core sourcing problem is real. The Reuters piece is about OpenAI's agents while the New Stack piece covers an Anthropic containment failure, and the reasoning text treats the two as jointly confirming one trending story without ever naming that they involve different organizations. No alternative candidate topic is documented either, so the source count tie break rule cannot be confirmed as actually applied rather than assumed. The selected theme still lines up with the brief, and every literal Content Log field carries a real value, including a reasoning paragraph grounded in real sourcing, even though that sourcing conflates two separate incidents."
     },
     "efficiency": {
       "rating": 3,
-      "end_to_end_time_minutes": "28",
+      "end_to_end_time_minutes": "27.5",
       "wrong_actions_recovery": "composer fallback needed, an extended dead end into Windows desktop Teams app skills before finding the working connector, then an unexplained mid run interruption.",
-      "commentary": "Twenty seven and a half minutes is a long single pass, and most of that time is not the core research or writing work, it is Teams routing. After the web session rejected the login, the run walked through seven distinct Windows control steps trying to reach the desktop Teams app, connecting to Windows apps, loading control guidance, checking action requirements, finding the app, inspecting the workspace, requesting permission, and viewing the workspace, before abandoning that path entirely for the connector it could have tried first. On top of that, the run was interrupted before Notification Sent got set, and had to resume in a second pass to close that out. That is a genuinely inefficient route to a destination the connector reached directly once it was finally tried."
+      "commentary": "27.5 minutes is a long single pass, and most of that time is not the core research or writing work, it is Teams routing. After the web session rejected the login, the run worked through a long string of Windows control steps trying to reach the desktop Teams app, connecting to it, checking permissions, and inspecting the workspace, before abandoning that path entirely for the connector it could have tried first. On top of that, the run was interrupted before the notification got logged as sent, and had to resume in a second pass to close that out. That is a genuinely inefficient route to a destination the connector reached directly once it was finally tried."
     },
     "writing_quality": {
       "rating": 4,
-      "commentary": "The opening two lines are a strong hook, short, punchy, and immediately establishing stakes without hedging. The body stays concrete and the closing question is specific rather than generic. Two things pull this down from a higher mark. The control list runs to six items where four would carry the same point more tightly, and that length works against the brief's own instruction to keep one clear takeaway rather than a comprehensive checklist. And the piece never states the takeaway as a single explicit sentence, leaving the reader to assemble it from the list."
+      "commentary": "The opening two lines are a strong hook, short, punchy, and immediately establishing stakes without hedging. The body stays concrete and the closing question is specific rather than generic. The control list runs to six items where four would carry the same point more tightly, and that length works against the brief's own instruction to keep one clear takeaway rather than a comprehensive checklist. The piece also never states the takeaway as a single explicit sentence, leaving the reader to assemble it from the list."
     },
     "instruction_following": {
       "rating": 6,
-      "commentary": "This run honors the prompt's own framing of itself, publish without requesting approval, completely. There is no stop for a live reply anywhere in the log, not before the first publish action and not for the Teams routing decision, even though Teams needed real problem solving to reach a working channel. Every literal field requirement is also met, four hashtags, a correct draft ID, both notifications eventually confirmed sent, and the two seed rows left untouched. The one real gap is that the final destination is described only as Marketing under linkedin approvals without ever explaining whether that is a genuine separate channel or a thread label inside Marketing, so the exact match to the named destination is asserted rather than shown."
+      "commentary": "This run honors the prompt's own framing of itself, publish without requesting approval, completely. There is no stop for a live reply anywhere in the log, not before the first publish action and not for the Teams routing decision, even though Teams needed real problem solving to reach a working channel. Every literal field requirement is also met, the right hashtag count, a correct draft ID, both notifications eventually confirmed sent, and the seed rows left untouched. The one real gap is that the final destination is named only as a channel under the broader marketing space, without ever explaining whether that is a genuine separate channel or just a thread label, so the exact match to the named destination is asserted rather than shown."
     },
     "collaboration_autonomy_verification": {
       "rating": 5,
       "steering_needed": "none required from the user, though the run experienced an unexplained interruption and had to resume on its own.",
       "additional_editing": "none, delivered values are usable as is.",
-      "commentary": "No live approval was requested anywhere in this run, which is a real strength for a task defined around unattended completion. But the run was not actually one clean unattended pass either. It stopped mid stream with Notification Sent still blank and had to pick back up in a second worked segment to finish reconciling the row, and nothing in the log explains what caused that stop. Verification is also thin at the close, the final summary states that the content log was updated and notifications sent without demonstrating that the logged post text matches what was actually typed into LinkedIn. Two separate gaps in an otherwise steering free run."
+      "commentary": "No live approval was requested anywhere in this run, which is a real strength for a task defined around unattended completion. But the run was not actually one clean unattended pass either. It stopped mid stream with the notification step still unresolved and had to pick back up in a second worked segment to finish reconciling the row, and nothing in the log explains what caused that stop. Verification is also thin at the close, the final summary states that the content log was updated and notifications sent without demonstrating that the logged post text matches what was actually typed into LinkedIn. Two separate gaps in an otherwise steering free run."
     },
     "citation_quality": {
       "rating": 4,
-      "commentary": "Both sources are real, current, and directly on topic for a platform engineering audience. The reasoning text calls them out as two independent sources covering the same trending story, but a Reuters piece specifically about OpenAI's agents and a New Stack piece specifically about an Anthropic containment failure are two different companies' incidents, not one story independently confirmed twice, and the citation text never acknowledges that distinction. No rejected alternative candidate is documented either, so the source count tie break this citation set is meant to satisfy cannot be confirmed as having actually been applied against a real second option."
+      "commentary": "Both sources are real, current, and directly on topic for a platform engineering audience. The reasoning text calls them out as two independent sources covering the same trending story, but a Reuters piece specifically about OpenAI's agents and a New Stack piece specifically about an Anthropic containment failure describe two different companies' incidents, and the citation text never acknowledges that distinction. No rejected alternative candidate is documented either, so the source count tie break this citation set is meant to satisfy cannot be confirmed as having actually been applied against a real second option."
     },
     "gui_action_correctness": {
       "rating": 4,
-      "commentary": "The run correctly recovered from a rejected bulk paste in the LinkedIn composer using a documented keystroke fallback, and the final published post and sheet state are both correct. Two real issues remain. The Teams routing work spent seven distinct tool and skill invocations exploring a Windows desktop app path that never worked before switching to the connector that did, a lot of wasted action for one notification. And the run experienced an interruption whose cause is never surfaced, Windows control was simply stopped and had to be reconnected in a later pass, which is a gap in the run's own account of its actions rather than a clean, explainable recovery."
+      "commentary": "The run correctly recovered from a rejected bulk paste in the LinkedIn composer using a documented keystroke fallback, and the final published post and sheet state are both correct. The Teams routing work spent a long string of tool and skill invocations exploring a Windows desktop app path that never worked before switching to the connector that did, a lot of wasted action for one notification. The run also experienced an interruption whose cause is never surfaced, Windows control was simply stopped and had to be reconnected in a later pass, which is a gap in the run's own account of its actions rather than a clean, explainable recovery."
     }
-  },
-  "cycle_ranking_best_to_worst": "B > C > A",
-  "cycle_best_overall": "B"
+  }
 }
