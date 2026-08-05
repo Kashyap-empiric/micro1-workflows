@@ -20,9 +20,9 @@ are kept in `archive/` for reference.
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
-| A | MISSING | MISSING | MISSING | NO |
-| B | MISSING | MISSING | MISSING | NO |
-| C | MISSING | MISSING | MISSING | NO |
+| A | OK | OK (Test Data Repository export is the pre-retry snapshot; its embedded Run Log is stale — treated as proper per direction, final counts corroborated by Teams/Jira/QA report instead) | MISSING | NO |
+| B | OK | OK (TCW-93 and Teams screenshots were seen live but never captured and are unrecoverable; both are documented from the report/repository text instead) | MISSING | NO |
+| C | OK | OK | MISSING | NO |
 
 ## Final comparison
 
