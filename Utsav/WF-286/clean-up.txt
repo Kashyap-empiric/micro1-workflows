@@ -1,0 +1,27 @@
+I need a test bench reset before I re-seed it. Everything here is invented test data for an open-source
+contribution review exercise, a made-up company with made-up projects and no real code in it, so delete
+freely. Do all of the below and give me a one-line status per app. Do not seed or create any new test data
+in this step, this is cleanup only.
+
+1) Notion. Open the database "Halvard Outbound Contribution Register" and delete every row in it so it is
+completely empty (a run writes one row per request, ten of them). Leave the database itself in place
+with its properties. Tell me how many rows you deleted and how many remain. If you cannot delete a row,
+say which ones are still there so I can clear them by hand.
+
+2) Microsoft Teams. In the "oss-contributions" channel, delete the queue post a past run put up so the
+channel is clear of it. Leave the channel itself in place. If you cannot delete a message, tell me which
+ones are still there. If the channel does not exist yet, say so.
+
+3) GitHub. Delete the repo "halvard-oss-review" so I can build a clean one. It is a seeded test bundle,
+there is nothing real in it. If you cannot delete it, say so and give me the link, I will do it by hand.
+Do not touch any other repo.
+
+4) Google Drive. So I can re-seed clean copies, move these to trash: the Google Sheet "Halvard Outbound
+Contribution Queue - July 2026", and the Google Docs "Halvard Systems - Outbound Contribution Policy",
+"Licence Texts - Grant Clauses" and "Halvard Systems - Contributor Agreement Terms". If you cannot delete
+one, give me its link and leave it, I will re-seed clean copies anyway. Tell me what you removed.
+
+When you are done, report exactly: how many rows remain in the Notion "Halvard Outbound Contribution
+Register" database, whether the "oss-contributions" Teams channel is clear, whether the
+"halvard-oss-review" repo is gone, and whether the Sheet and all three Docs are in the trash. If any app is
+not connected or you cannot reach it, say so and carry on, do not guess or invent anything.

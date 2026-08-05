@@ -1,0 +1,29 @@
+I need a test bench reset before I re-seed it. Everything here is invented test data for a statistical
+disclosure review exercise, a made-up health system and a made-up standards body with no real patients
+and no real institution in it, so delete freely. Do all of the below and give me a one-line status per
+app. Do not seed or create any new test data in this step, this is cleanup only.
+
+1) Notion. Open the database "Wrensfield Disclosure Review Register" and delete every row in it so it
+is completely empty (a run writes one row per cell, around forty of them). Leave the database itself in
+place with its properties. Tell me how many rows you deleted and how many remain. If you cannot delete
+a row, say which ones are still there so I can clear them by hand.
+
+2) Gmail. In Drafts, delete the analyst notes a past run left there (each one is a note to an analyst
+about changes being made to a table of theirs before the Wrensfield Community Health Report goes out;
+there can be around three of them, to Joss Ferreira, Tobias Lund and Ilse Marek). Only touch Drafts, do
+not touch anything in Sent or Inbox. Tell me how many drafts you removed.
+
+3) Microsoft Teams. In the "disclosure-review" channel, delete the review post a past run put up so the
+channel is clear of it. Leave the channel itself in place. If you cannot delete a message, tell me which
+ones are still there. If the channel does not exist yet, say so.
+
+4) Google Drive. So I can re-seed clean copies, move these to trash: the Google Sheets "Wrensfield
+Community Health Report Summer 2026 - Draft Tables" and "Wrensfield Community Health Report Spring 2026
+- As Published", and the Google Doc "Sundermere Statistical Disclosure Standard SDS-4 - Extract". If you
+cannot delete one, give me its link and leave it, I will re-seed clean copies anyway. Tell me what you
+removed.
+
+When you are done, report exactly: how many rows remain in the Notion "Wrensfield Disclosure Review
+Register" database, how many analyst drafts remain in Gmail, whether the "disclosure-review" Teams
+channel is clear, and whether both Sheets and the Doc are in the trash. If any app is not connected or
+you cannot reach it, say so and carry on, do not guess or invent anything.

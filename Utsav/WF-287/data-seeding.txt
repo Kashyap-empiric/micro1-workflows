@@ -1,0 +1,363 @@
+Set up a fixed test workspace for a tax accounting task. All invented for testing. If a Google Sheet
+called "Vantridge Research Cost Pool - 2025 Return" already exists from a past run, or either of the
+Google Docs called "Research Cost Rules Pack - 2025 Return" or "Elections Procedure Circular 7", move
+the old ones to trash first and build clean copies. Then build everything below exactly as written.
+
+Everything below is invented for testing: the company, the projects, the contractors, the customers,
+the people, and the tax rules themselves are all made up. The rule numbers are invented and are not
+citations to anything real. Build it exactly as written; the text and the numbers are the fixture.
+
+1) Make a Google Sheet called "Vantridge Research Cost Pool - 2025 Return" in my Google Drive with
+four tabs.
+
+Tab one is called "Cost Pool" with these columns in this order: Cost line, Project, Category,
+Location, Description, Contractor, Amount. Put in exactly these 36 rows:
+
+CL-2001 | Larkfield | Wages | Austin, Texas | Engineers on the columnar query engine, working out whether the planned index structure can hold the latency target at all | No | 720000
+CL-2002 | Larkfield | Supplies | Austin, Texas | Prototype test rigs consumed in the query engine benchmarks, scrapped afterwards | No | 60000
+CL-2003 | Larkfield | Contract research | Austin, Texas | Paid to Delmore Research Partners to run the query planner experiments on our behalf, in their Austin lab | Yes | 400000
+CL-2004 | Sandpiper | Wages | San Juan, Puerto Rico | Engineers on the offline sync layer, resolving whether conflict resolution can be done client side at all | No | 960000
+CL-2005 | Sandpiper | Supplies | San Juan, Puerto Rico | Handsets consumed in the sync experiments, destructively tested and scrapped | No | 48000
+CL-2006 | Sandpiper | Contract research | San Juan, Puerto Rico | Paid to Isla Verde Labs to run the sync experiments on our behalf, at their San Juan site | Yes | 200000
+CL-2007 | Halcyon | Wages | Bengaluru, India | Engineers rebuilding the ingestion pipeline, establishing whether a streaming design can hold the ordering guarantee | No | 840000
+CL-2008 | Halcyon | Supplies | Bengaluru, India | Cluster hardware consumed in the throughput trials | No | 90000
+CL-2009 | Halcyon | Wages | Austin, Texas | The Austin group on the same pipeline rewrite, establishing whether the ordering guarantee survives the schema migration | No | 300000
+CL-2010 | Halcyon | Contract research | Bengaluru, India | Paid to Ashvale Technologies to run the throughput experiments on our behalf, at their Bengaluru site | Yes | 240000
+CL-2011 | Wrenlow | Wages | Krakow, Poland | Engineers on the ranking model before the project was stopped, resolving whether the approach could hold precision at scale | No | 180000
+CL-2012 | Wrenlow | Contract research | Krakow, Poland | Paid to Nordwytt Analytics for the precision trials on our behalf, invoiced before the stop | Yes | 120000
+CL-2013 | Ferncastle | Wages | Austin, Texas | Engineers on the internal billing platform, working out whether the proration engine can reconcile mid cycle plan changes | No | 480000
+CL-2014 | Ferncastle | Contract research | Austin, Texas | Paid to Brackenhall Consulting to design and test the proration engine on our behalf | Yes | 160000
+CL-2015 | Ospreyline | Wages | Austin, Texas | Engineers on the next generation radio stack, resolving whether it can hold the power budget | No | 540000
+CL-2016 | Ospreyline | Equipment depreciation | Austin, Texas | This year's depreciation on the RF chamber and the spectrum analysers, used only on the radio stack experiments | No | 180000
+CL-2017 | Ospreyline | Supplies | Austin, Texas | Radio modules and antennas consumed in the power budget trials, destroyed in testing | No | 96000
+CL-2018 | Ospreyline | Equipment purchase | Austin, Texas | Bought two more spectrum analysers for the lab in December, not in service at year end, so nothing is being depreciated on them yet | No | 220000
+CL-2019 | Ospreyline | Test engineering | Austin, Texas | Testing three candidate antenna layouts against each other to establish which design is the appropriate one for the next generation stack | No | 168000
+CL-2020 | Marbrook | Test engineering | Austin, Texas | Conformance testing of each production build of the console against the released design spec before it ships, to catch units that do not meet it | No | 240000
+CL-2021 | Marbrook | Wages | Austin, Texas | Engineers building a customer specific export adapter for Halbrook Freight, to the requirement Halbrook wrote | No | 130000
+CL-2022 | Marbrook | Wages | Austin, Texas | Engineers on the shipping console itself, resolving whether the query cache can be made to hold under peak load. Work on the same component that has been in commercial production since March 2024, not on a new one. | No | 150000
+CL-2023 | Marbrook | Market research | Austin, Texas | Surveying customers on which integrations they want next | No | 85000
+CL-2024 | Marbrook | Advertising | Austin, Texas | Launch campaign for the export adapter | No | 110000
+CL-2025 | Tidewell | Wages | Hagatna, Guam | Engineers on the maritime telemetry work, establishing whether the satellite link can carry the sensor payload | No | 420000
+CL-2026 | Tidewell | Supplies | Hagatna, Guam | Sensor buoys consumed in the sea trials | No | 65000
+CL-2027 | Larkfield | Wages | Austin, Texas | The second query engine team, resolving whether the vectorised executor can beat the row at a time path | No | 360000
+CL-2028 | Larkfield | Equipment depreciation | Austin, Texas | This year's depreciation on the benchmark cluster, used only on the query engine experiments | No | 120000
+CL-2029 | Sandpiper | Wages | San Juan, Puerto Rico | The second sync team, working out whether background sync can survive the OS scheduler limits | No | 300000
+CL-2030 | Halcyon | Wages | Bengaluru, India | The second pipeline team, resolving whether backpressure can be made stable under burst load | No | 360000
+CL-2031 | Ferncastle | Supplies | Austin, Texas | Load generators consumed in the proration trials | No | 40000
+CL-2032 | Ospreyline | Contract research | Austin, Texas | Paid to Delmore Research Partners for the power budget experiments on our behalf | Yes | 240000
+CL-2033 | Larkfield | Supplies | Austin, Texas | Storage media consumed in the query engine benchmarks | No | 32000
+CL-2034 | Wrenlow | Supplies | Krakow, Poland | GPU time and test corpora consumed in the ranking trials before the stop | No | 60000
+CL-2035 | Ferncastle | Wages | Austin, Texas | Engineers on the ledger reconciliation logic, working out whether the double entry model can absorb retroactive plan changes | No | 210000
+CL-2036 | Ospreyline | Test engineering | Austin, Texas | Conformance testing of shipped gateway units against the settled firmware spec on the production line, to catch units that do not meet it | No | 90000
+
+Tab two is called "Project Register" with these columns in this order: Project, What it is, Status,
+Funded by. Put in exactly these 8 rows:
+
+Ferncastle | Our internal billing and provisioning platform, built for our own use and never sold or licensed to anyone | In development, not released | Vantridge, own funds
+Halcyon | The ingestion and streaming pipeline behind the Marbrook console | In development, not released | Vantridge, own funds
+Larkfield | A new columnar query engine we intend to license to customers | In development, not released | Vantridge, own funds
+Marbrook | The freight visibility console we sell | In commercial production since March 2024. Shipping to customers on the standard price list. | Vantridge, own funds
+Ospreyline | The telemetry gateway. Two components: the current firmware, and the next generation radio stack. | Gateway units have shipped to pilot customers since February 2025 and the production line builds them to the settled firmware spec. The next generation radio stack is a separate component, its design is not settled and it has never been produced or sold. | Vantridge, own funds
+Sandpiper | The mobile SDK and its offline sync layer | In development, not released | Vantridge, own funds
+Tidewell | Maritime telemetry research | In development, not released | Coastwatch Marine Institute, under a research contract that pays our costs on this project in full. The institute funds the work and takes the results.
+Wrenlow | Recommendation ranking for the Marbrook console | Stopped on 20 March 2025. The model was shelved, the code was deleted from the monorepo and the results were abandoned. Nothing from Wrenlow is in any shipping product and nothing will be. | Vantridge, own funds
+
+Tab three is called "Prior-Year Balances" with these columns in this order: Project, Year incurred,
+Location, Bucket, Original amount, Amortised through 31 Dec 2024, Unamortised at 1 Jan 2025. Put in
+exactly these 9 rows:
+
+Ferncastle | 2023 | Austin, Texas | Domestic, capitalised over 5 years under the old law | 1000000 | 300000 | 700000
+Halcyon | 2022 | Bengaluru, India | Foreign, capitalised over 15 years | 1350000 | 225000 | 1125000
+Halcyon | 2023 | Bengaluru, India | Foreign, capitalised over 15 years | 900000 | 90000 | 810000
+Halcyon | 2024 | Bengaluru, India | Foreign, capitalised over 15 years | 1200000 | 40000 | 1160000
+Larkfield | 2022 | Austin, Texas | Domestic, capitalised over 5 years under the old law | 1500000 | 750000 | 750000
+Marbrook | 2024 | Austin, Texas | Domestic, capitalised over 5 years under the old law | 600000 | 60000 | 540000
+Sandpiper | 2023 | San Juan, Puerto Rico | Foreign, capitalised over 15 years | 900000 | 90000 | 810000
+Wrenlow | 2023 | Krakow, Poland | Foreign, capitalised over 15 years | 1800000 | 180000 | 1620000
+Wrenlow | 2024 | Krakow, Poland | Foreign, capitalised over 15 years | 750000 | 25000 | 725000
+
+Tab four is called "Return Facts" with these columns in this order: Item, Detail. Put in exactly
+these 9 rows:
+
+Entity | Vantridge Systems Inc., a calendar year filer
+Tax year being filed | Calendar year 2025
+2025 return status | On extension. Due 15 October 2026. Not filed yet.
+Average annual gross receipts, three tax years ending 2024 | 24800000
+2022 original return, date it was actually filed | 9 February 2023
+2023 original return, date it was actually filed | 11 October 2024
+2024 original return, date it was actually filed | 14 October 2025
+Amended returns filed for any prior year | None
+Elections made to date under Circular 7 | None
+
+2) Make a Google Doc called "Research Cost Rules Pack - 2025 Return" in my Google Drive, with
+exactly this text:
+
+"RESEARCH COST RULES PACK, 2025 RETURN. Pulled for the Vantridge return. Fictional company,
+fictional rules, invented for testing. The rule numbers below are made up and are not citations to
+anything. The rules and the wording below are the authoritative and complete rulebook for this
+exercise. Treat them as correct, and do not rely on outside knowledge of any real tax code, any
+real revenue procedure, any real regulation or any real agency notice. If it is not in this pack or
+in the circular, it does not apply here.
+
+RULE 400. DOMESTIC RESEARCH EXPENDITURE, AND THE DEDUCTION.
+
+400.1 A research expenditure is an amount paid or incurred in connection with the taxpayer's trade
+or business which represents a research or experimental cost in the experimental or laboratory
+sense. A cost is in that sense where it is for activity intended to discover information that would
+eliminate uncertainty about the development or improvement of a product, and uncertainty exists
+where the information available to the taxpayer does not establish the capability of developing or
+improving the product, the method of doing so, or the appropriate design of the product.
+
+400.2 A domestic research expenditure is a research expenditure attributable to research conducted
+within the country. The taxpayer deducts a domestic research expenditure in full in the year it is
+incurred.
+
+400.3 A research expenditure attributable to research conducted outside the country is a foreign
+research expenditure. Rule 410 governs it. This rule does not reach it and it is not deductible
+when incurred.
+
+400.4 WHAT WITHIN THE COUNTRY MEANS FOR THIS RULE. Research is conducted within the country where it
+is conducted in any of the fifty states, in the federal district, or in any commonwealth, possession
+or territory named in the schedule to this rule. Research conducted anywhere else is conducted
+outside the country.
+
+SCHEDULE TO RULE 400. The commonwealths, possessions and territories treated as within the country
+for 400.4: the Commonwealth of Puerto Rico, Guam, the United States Virgin Islands, American Samoa,
+and the Commonwealth of the Northern Mariana Islands. Research conducted in any of these is
+conducted within the country and is not foreign research.
+
+400.5 WHAT A RESEARCH EXPENDITURE INCLUDES. A research expenditure includes the wages of employees
+engaged in research, the cost of supplies consumed in research, a reasonable allowance for
+depreciation on equipment used in research, and amounts paid to another person to perform research
+on the taxpayer's behalf. Where an amount is paid to another person to perform research on the
+taxpayer's behalf, the whole of that amount is a research expenditure under this rule. No
+percentage or haircut is applied to it by this rule.
+
+400.6 SOFTWARE. Amounts paid or incurred for the development of software are research expenditures
+for this rule, whether the software is developed for sale or licence to others or for the
+taxpayer's own internal use. Internal use makes no difference to this rule. Where the software
+development is conducted is what fixes whether it is domestic or foreign under 400.4.
+
+400.7 WHAT THIS RULE DOES NOT REACH. The following are not research expenditures and this rule does
+not reach them at all:
+
+(a) ordinary testing or inspection of materials or products for quality control;
+(b) efficiency surveys, management studies, market research, market testing and consumer surveys;
+(c) advertising and promotion;
+(d) the acquisition of another person's patent, model, production process or invention;
+(e) research in connection with literary, historical or similar projects;
+(f) the cost of acquiring land, or of acquiring property of a character subject to the allowance for
+depreciation. A reasonable allowance for depreciation on that property, where the property is used
+in research, is still a research expenditure under 400.5. The purchase is out, the depreciation is
+in, and both can be true of the same asset.
+
+400.8 THE QUALITY-CONTROL LINE, AND IT IS A FINE ONE. Testing is ordinary testing for quality
+control under 400.7(a) where it is testing to determine whether a unit that has been produced
+conforms to a design that has already been settled on.
+
+400.9 A cost this rule does not reach is not a domestic research expenditure and it is not a foreign
+research expenditure. Where it qualifies on its own terms as an ordinary and necessary business
+expense, it is deducted as one in the year it is incurred. Where it is a capital cost on its own
+terms, it is capitalised. Either way it is outside this rule, it is outside Rule 410, and it is not
+carried into any figure this pack or the circular defines by reference to a research expenditure.
+
+400.10 FUNDING MAKES NO DIFFERENCE TO THIS RULE. A research expenditure is a research expenditure
+under this rule whether the taxpayer bears the cost itself or is paid, reimbursed or funded for it
+by a grant, a contract or another person. What another person's funding does is Rule 520's business
+and not this rule's.
+
+RULE 410. FOREIGN RESEARCH EXPENDITURE, AND THE AMORTISATION.
+
+410.1 A foreign research expenditure is charged to capital account and amortised rateably over
+fifteen years. It is not deductible in the year it is incurred and no part of it may be deducted
+under Rule 400. The whole of the expenditure is amortised, including the whole of any amount paid
+to another person to perform the research on the taxpayer's behalf. No percentage or haircut is
+applied to it by this rule.
+
+410.2 THE FIFTEEN YEARS RUN WHATEVER HAPPENS TO THE RESEARCH. Where the property with respect to
+which a foreign research expenditure was incurred is disposed of, retired or abandoned during the
+fifteen year period, no deduction is allowed on account of that disposition, retirement or
+abandonment, and the amortisation continues over the remainder of the period as if the disposition,
+retirement or abandonment had not happened. Shelving the work, deleting the code, stopping the
+project and abandoning the results are all covered by this and none of them accelerates anything.
+
+410.3 THE MIDPOINT CONVENTION. An expenditure incurred at any point in a year is treated as incurred
+at the midpoint of that year. A full year of amortisation is one fifteenth of the expenditure. The
+year the expenditure is incurred carries half of a full year, being one thirtieth of the
+expenditure, and each of the fourteen following years carries a full one fifteenth, and the
+sixteenth year carries the remaining half.
+
+RULE 520. THE RESEARCH CREDIT, AND WHAT QUALIFIES FOR IT.
+
+520.1 This rule is a separate rule from Rule 400 and it has its own test. A cost being a research
+expenditure under Rule 400 does not make it a qualifying cost for this rule. A cost failing this
+rule does not on that account fail Rule 400. Every cost is sorted under Rule 400 and under this rule
+separately, and the two answers do not have to agree.
+
+520.2 THE FOUR-PART TEST. An activity is qualified research for this rule only where all four of
+these hold:
+
+(a) the expenditure on it is a research expenditure under Rule 400;
+(b) it is undertaken to discover information that is technological in nature;
+(c) its application is intended to be useful in the development of a new or improved business
+component of the taxpayer; and
+(d) substantially all of its activities constitute elements of a process of experimentation relating
+to a new or improved function, performance, reliability or quality.
+
+520.3 WHERE THE RESEARCH IS CONDUCTED. Only research conducted within the country is qualified
+research for this rule, and within the country here has exactly the meaning it has in 400.4 and the
+schedule to Rule 400. Research conducted outside the country is not qualified research and no part
+of its cost enters the credit base, whatever Rule 410 does with it.
+
+520.4 THE QUALIFYING COSTS, AND THERE ARE ONLY THREE KINDS.
+
+(a) WAGES. Wages paid to an employee for qualified services, being services engaging in qualified
+research, or directly supervising or directly supporting it. The whole of the qualifying wage enters
+the credit base.
+
+(b) SUPPLIES. The cost of supplies used in the conduct of qualified research. Supplies means
+tangible property other than land, and other than property of a character subject to the allowance
+for depreciation. Depreciation on equipment is not a supply cost. No part of a depreciation
+allowance enters the credit base under this paragraph or under any other paragraph of this rule,
+whatever Rule 400.5 does with it.
+
+(c) CONTRACT RESEARCH. SIXTY-FIVE PER CENT of any amount paid to a person other than an employee of
+the taxpayer for qualified research performed on the taxpayer's behalf. The remaining thirty-five
+per cent does not enter the credit base. This percentage applies whatever the contract says,
+whatever the invoice totals, and whatever Rule 400.5 allows as a deduction on the same amount.
+
+520.5 WHAT THIS RULE EXCLUDES EVEN WHERE 520.2 WOULD OTHERWISE BE MET. None of the following is
+qualified research and no part of its cost enters the credit base:
+
+(a) research conducted after the beginning of commercial production of the business component that
+the research relates to. Research relating to a new or improved business component is not conducted
+after the beginning of commercial production of that component merely because some other component
+of the taxpayer is already in commercial production. The question is whether the component the
+research relates to is itself already in commercial production;
+(b) adaptation of an existing business component to a particular customer's requirement or need;
+(c) duplication of an existing business component;
+(d) surveys, studies, market research, market testing and routine data collection;
+(e) routine or ordinary testing or inspection for quality control. The line between quality-control
+testing and other testing is the same line 400.8 draws, and it is drawn the same way here;
+(f) research conducted outside the country, per 520.3;
+(g) research in the social sciences, the arts or the humanities;
+(h) research funded by any grant, by any contract, or by any other person. Research is funded for
+this paragraph where another person pays or reimburses the taxpayer's costs of it, whatever Rule
+400.10 does with the same cost.
+
+520.6 THE CREDIT FIGURE. The credit for the year is TWENTY PER CENT of the credit base. The credit
+base is the sum of the qualifying wages under 520.4(a), the qualifying supply costs under 520.4(b),
+and sixty-five per cent of the qualifying contract research payments under 520.4(c).
+
+RULE 530. THE CREDIT REDUCTION, AND WHAT IT REDUCES.
+
+530.1 Where the taxpayer claims the credit under Rule 520, the taxpayer's domestic research
+expenditure deduction under Rule 400 is reduced by the full amount of the credit claimed. The
+reduction is dollar for dollar and it is not scaled, prorated or capped.
+
+530.2 WHAT THE REDUCTION RUNS AGAINST, AND THIS IS THE WHOLE OF IT. The reduction runs against the
+deduction allowed under Rule 400 for the year's domestic research expenditures, and against nothing
+else. It does not reduce the Rule 410 amortisation. It does not reduce an ordinary and necessary
+business expense deducted under Rule 400.9. It does not reduce a deduction taken under any part of
+the circular. A cost that Rule 400 does not reach is not in the base the reduction runs against,
+whatever else is true of that cost.
+
+530.3 THE ORDER. Work out the Rule 400 deduction first, work out the Rule 520 credit second, then
+apply the reduction. The reduced Rule 400 deduction is the figure that goes on the return."
+
+3) Make a Google Doc called "Elections Procedure Circular 7" in my Google Drive, with exactly this
+text:
+
+"ELECTIONS PROCEDURE CIRCULAR 7. Issued for the first returns filed under Rule 400. Fictional
+procedure, fictional numbers, invented for testing. This circular is not a citation to anything. This
+circular and the rules pack are the whole of the law for this exercise and nothing outside them
+applies.
+
+PART 1. WHO THIS REACHES.
+
+1.1 A taxpayer is a small taxpayer for this circular where its average annual gross receipts for the
+three tax years ending with 2024 do not exceed $31,000,000.
+
+1.2 A taxpayer that is not a small taxpayer cannot make the election in Part 2. A small taxpayer can
+make it, subject to Part 2's own window. Being a small taxpayer is what opens the door in Part 2. It
+is not what holds the door open, and a taxpayer that is comfortably inside the receipts threshold has
+established nothing about whether its window is still there.
+
+PART 2. ELECTION A. THE RETROACTIVE ELECTION FOR 2022, 2023 AND 2024.
+
+2.1 A small taxpayer may elect to treat its domestic research expenditures for the 2022, 2023 and
+2024 years as deductible in the year incurred rather than capitalised over five years, and to recover
+the difference. The election is made by filing an amended return for EVERY one of those years in
+which the taxpayer had domestic research expenditures. An election for fewer than all of those years
+is not an election under this part and will not be given effect.
+
+2.2 THE WINDOW. The amended return for a year must be filed by the EARLIER of:
+
+(a) 6 July 2026; or
+
+(b) the last day of the three year period beginning on the day the taxpayer's original return for
+that year was actually filed.
+
+2.3 There is no extension of either date in 2.2 and there is no relief for a late election under this
+part. Where the window has closed for any one of the three years, the election under this part cannot
+be made at all, because 2.1 requires all of them.
+
+2.4 WORKED EXAMPLE 1. A calendar year small taxpayer filed its original 2022 return on 15 October
+2023, which was its extended due date. The three year period in 2.2(b) begins on 15 October 2023 and
+its last day is 14 October 2026. That is later than 6 July 2026, so 2.2(a) is the earlier of the two
+and the window for 2022 closed on 6 July 2026.
+
+2.5 WORKED EXAMPLE 2, AND IT IS THE ONE PEOPLE MISS. A calendar year small taxpayer filed its
+original 2022 return early, on 14 February 2023, without waiting for the due date. The three year
+period in 2.2(b) begins on 14 February 2023 and its last day is 13 February 2026. That is EARLIER
+than 6 July 2026, so 2.2(b) is the earlier of the two and the window for 2022 closed on 13 February
+2026, nearly five months before the date in 2.2(a). Filing early shortened the window. The day the
+return was ACTUALLY FILED is what starts the three year period. The due date does not start it, an
+extension of the due date does not start it, and the date in 2.2(a) does not rescue a year whose own
+period has already run out.
+
+2.6 Each of the three years has its own window under 2.2 and each is worked out on its own facts.
+Because 2.1 requires all three years, the election under this part is unavailable from the moment the
+earliest of the three windows closes.
+
+PART 3. ELECTION B. THE ACCELERATION ELECTION ON THE 2025 RETURN.
+
+3.1 A taxpayer that holds an unamortised balance of DOMESTIC research expenditures capitalised under
+the law as it stood before Rule 400 may elect to deduct that remaining balance, either in full on its
+2025 return or rateably over its 2025 and 2026 returns.
+
+3.2 THE SCOPE, AND IT IS NARROW. This election reaches the unamortised balance of DOMESTIC research
+expenditures and nothing else. It does not reach a balance of foreign research expenditures, whether
+that balance was capitalised under Rule 410 or under the law as it stood before Rule 410. No balance
+of foreign research expenditures may be accelerated, shortened, written off or recovered under this
+circular or under any other provision. Rule 410.2 governs those balances and it governs them whatever
+happens to the research.
+
+3.3 THE WINDOW. The election is made by attaching a statement to the taxpayer's timely filed 2025
+return, including extensions. For a calendar year taxpayer on extension that date is 15 October 2026.
+The election is open until that date and it is not available after it.
+
+3.4 A deduction taken under this part is taken under this circular. It is not a Rule 400 deduction,
+it does not enter the Rule 520 credit base, and the Rule 530 reduction does not run against it.
+
+3.5 A taxpayer that does not make this election continues to amortise the balance over the period
+that was already running on it. Rule 400 does not reach an expenditure that was incurred before the
+first year Rule 400 applies to.
+
+3.6 ELECTION A AND ELECTION B ARE SEPARATE. Neither is a condition of the other. The closing of the
+window in Part 2 does not close the window in Part 3, and it does not open it either. Nothing in Part
+2 is required before Part 3 can be used."
+
+4) In Notion, create an empty database called "Vantridge 2025 Research Position Register" with these
+properties and no rows: Cost line (title), Project (text), Amount (number), Deduction treatment
+(select: deduct in the year incurred, domestic / amortise, foreign / ordinary deduction, not research / capitalise the
+asset, not research), Credit treatment (select: qualifying / not qualifying), Credit base amount
+(number), Rule relied on (text). Leave it empty.
+
+5) In Microsoft Teams, make sure a channel called "research-tax-2025-return" exists and has no
+position post in it. Leave it empty.
+
+When you are done, give me the links to the Google Sheet, both Google Docs, the Notion database and
+the Teams channel, and confirm the "Cost Pool" tab has 36 rows, the "Project Register" tab has 8
+rows, the "Prior-Year Balances" tab has 9 rows, the "Return Facts" tab has 9 rows, and the Notion
+database has zero rows.

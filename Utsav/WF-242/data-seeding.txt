@@ -1,0 +1,270 @@
+Set up a fixed test workspace for a breach-notification exercise. All invented for testing: no real
+company, no real people, no real incident, and the domains are example addresses. If a Google Doc
+called "Grafton Incident - Record" or a Google Doc called "Grafton - Data Stores and DPAs" already
+exists from a past run, move the old ones to trash first and build clean copies. Then build
+everything below exactly as written; the text is the fixture.
+
+1) Make a Google Doc called "Grafton Incident - Record" in my Google Drive, with exactly this text:
+
+"GRAFTON INCIDENT - RECORD. Fictional, for testing. Corviston Software Pvt Ltd. Incident name:
+Grafton. Opened by the security team, handed to GRC for the notification position. All times IST.
+
+WHAT HAPPENED. A long-lived service account token for our build system leaked inside a public
+container image layer that was pushed by mistake on 6 July 2026. On the night of Saturday 11 July an
+attacker used that token to authenticate to the self-hosted CI runner ci-runner-04 from an
+unrecognised network, then moved from there to the internal file host fs-03 and to the configuration
+vault vault-prod-02. The attacker read files on fs-03 and read the secret inventory on vault-prod-02.
+There is no evidence of any write, deletion or encryption by the attacker, and no evidence of any
+activity after 03:00 on Sunday 12 July.
+
+TIMELINE.
+
+Mon 6 July 2026, 15:22 - the container image carrying the token is pushed to a public registry. Not
+noticed at the time.
+
+Sat 11 July 2026, 21:14 - FIRST ALERT. EDR on ci-runner-04 raises anomalous credential use from an
+unrecognised ASN. The on-call engineer acknowledges it, reads it as noise from a vendor scan window,
+and closes it without escalating. Nothing is known at this point about what was reached, or about
+whether any personal data is involved.
+
+Sat 11 July 2026, 21:31 to Sun 12 July 2026, 03:00 - attacker activity. Pivot from ci-runner-04 to
+fs-03 at 00:35. Directory reads on fs-03 from 00:48 to 02:05. Secret inventory read on vault-prod-02
+at 01:12. Last observed activity 03:00.
+
+Sun 12 July 2026, 08:30 - a contractor reports that her work laptop, asset CS-LAP-0219, was stolen
+from a car in Berlin on the evening of Saturday 11 July. Logged as a device-loss report of its own.
+Folded into Grafton later that day because one of the stores in the Grafton review, hr-laptop-backup,
+also had a copy sitting on that device. Forensics found no link between the theft and the intrusion:
+the leaked token is the only entry vector, and CS-LAP-0219 has not authenticated to anything since
+the theft.
+
+Sun 12 July 2026, 11:42 - MDM confirms the remote wipe on CS-LAP-0219 executed. The device console
+shows no successful pre-boot authentication after the theft. The key vault shows the escrowed
+recovery key for that device was never checked out. The whole-volume encryption key for CS-LAP-0219
+was not held on ci-runner-04, fs-03 or vault-prod-02, and was not in anything the attacker reached.
+
+Sun 12 July 2026, 19:20 - a second EDR alert fires on fs-03 for a bulk read. On-call escalates and
+the incident Grafton is opened. At this point we know a host was read from. Nobody has yet
+established what was in the files, or whether any of it is personal data.
+
+Mon 13 July 2026, 09:40 - Thornbury IR, our forensics vendor, delivers its report. The file-level
+and secret-level findings set out under BLAST RADIUS below are that report.
+
+Mon 13 July 2026, 14:00 - CONTAINMENT. Token revoked. ci-runner-04 and fs-03 rebuilt from clean
+images. Every secret on vault-prod-02 rotated. Egress to the attacker's ranges blocked. Contained.
+
+Tue 14 July 2026, 07:00 - GRC picks the notification position up. This record is handed over as it
+stands.
+
+BLAST RADIUS.
+
+Reached by the attacker: ci-runner-04 (build runner, entry point), fs-03 (internal file host),
+vault-prod-02 (configuration vault).
+
+Read on vault-prod-02: the full secret inventory, at 01:12 on Sunday 12 July. Among the secrets read
+is analytics-pepper-v3, the pseudonymisation pepper used by the analytics pipeline. Every secret on
+vault-prod-02 was rotated at containment.
+
+Read on fs-03, by path and time on Sunday 12 July: /srv/analytics/events/ at 00:48,
+/srv/customers/acme/crm-mirror/ at 01:30, /srv/finance/payroll/sg/ at 01:47,
+/srv/finance/contractors/br/ at 01:58, /srv/marketing/drafts/ at 02:05. Nothing else on fs-03 was
+opened.
+
+Not in the blast radius: the production customer database cluster (separate VPC, no route from fs-03,
+no credential for it on any host the attacker reached), the corporate Google Workspace tenant, and
+the source code hosting.
+
+Separate limb: CS-LAP-0219, the stolen laptop. It is not a host on our network and the attacker
+never touched it. It is in the Grafton review only because one store had a copy on it.
+
+WHAT WE STILL DO NOT KNOW. Whether the attacker copied out what they read or only read it. The
+egress logs on fs-03 cover the window and the volumes are consistent with either. Treat the reads as
+reads that happened."
+
+2) Make a second Google Doc called "Grafton - Data Stores and DPAs" in my Google Drive, with exactly
+this text:
+
+"GRAFTON - DATA STORES AND DPAs. Fictional, for testing. Corviston Software Pvt Ltd. The six stores
+in the Grafton blast radius as they stand in the data inventory, plus the customer contract excerpt
+that covers one of them. Re-confirmed against the inventory on Monday 13 July 2026. All times IST.
+
+Corviston Software Pvt Ltd is headquartered in Bengaluru, India. It has three subsidiaries: Corviston
+Software Europe GmbH, in Berlin, Germany, Corviston Software Singapore Pte Ltd, in Singapore, and
+Corviston Software do Brasil Ltda, in Sao Paulo, Brazil, incorporated in May 2026.
+
+--- STORE: hr-laptop-backup
+Holds: a local backup archive of the HR system export for the European entity. Per person: full name,
+home address, personal email, date of birth, national identification number, salary band, and the
+bank account used for payroll.
+Subjects: 96 current and former staff of Corviston Software Europe GmbH. All of them are residents of
+EU member states (Germany, Ireland, the Netherlands, Poland).
+Our role: controller. It is our own staff data, held for our own payroll and HR purposes, on nobody's
+instruction but ours.
+Where it was: only on the laptop CS-LAP-0219. This store is not on ci-runner-04, fs-03 or
+vault-prod-02, and no copy of it was reached by the attacker.
+State when it was reached: the whole volume on CS-LAP-0219 was encrypted with FileVault, XTS-AES-128
+with a 256-bit key. The volume was never unlocked after the theft and there was no successful
+pre-boot authentication. The escrowed recovery key was never checked out of the key vault, and that
+key was not held on any host the attacker reached. MDM confirms the remote wipe executed on Sunday 12
+July 2026 at 11:42.
+
+--- STORE: analytics-events
+Holds: the product event stream for our own SaaS product. Per event: subject_ref, the feature and
+page touched, the client IP truncated to a /24, a coarse city, session duration, and plan tier.
+subject_ref is a deterministic HMAC of the end user's account email under a secret pepper named
+analytics-pepper-v3. There is no stored mapping table anywhere. Anyone holding analytics-pepper-v3
+can take any email address, compute its subject_ref, and pull that person's whole event history out
+of the store. Without the pepper the subject_ref values do not resolve to anyone.
+Subjects: about 412,000 end users of our product, identified from billing country as residents of EU
+member states.
+Our role: controller. It is our own telemetry, collected under our own privacy notice for our own
+product decisions, not on any customer's instruction.
+Where it was: fs-03, /srv/analytics/events/.
+State when it was reached: pseudonymised as described above, and stored as plaintext Parquet on the
+host. Not encrypted at rest at the file level.
+
+--- STORE: acme-crm-mirror
+Holds: a read replica of Acme Corp Ltd's CRM, which we host for Acme under our services agreement
+with them. Per record: the name, business email, phone number and employer of one of Acme's own end
+customers, plus deal notes and support ticket text written by Acme's staff.
+Subjects: about 28,000 end customers of Acme Corp Ltd, resident in EU member states. Acme Corp Ltd is
+established in Dublin, Ireland.
+Our role: processor. We hold and process this replica only on Acme's documented instructions under
+the DPA excerpted below. Acme decides why it is processed and how. We are not the controller for any
+of it.
+Where it was: fs-03, /srv/customers/acme/crm-mirror/.
+State when it was reached: plaintext. Application-level encryption at rest was never turned on for
+this replica; the work is still open as ticket PLAT-2214.
+
+--- STORE: sg-payroll-extract
+Holds: a payroll export for the Singapore entity. Per person: full name, NRIC or FIN number,
+residential address, bank account number and branch code, monthly gross salary, and CPF contribution
+amounts.
+Subjects: 214 current staff of Corviston Software Singapore Pte Ltd. All of them are residents of
+Singapore.
+Our role: controller. It is our own staff data, held for our own payroll purposes.
+Where it was: fs-03, /srv/finance/payroll/sg/.
+State when it was reached: plaintext CSV. The share was opened in June 2026 for a payroll vendor
+handover and the encryption-at-rest flag on it was never set.
+
+--- STORE: br-contractor-roster
+Holds: the contractor roster and payment file for the Brazil entity. Per person: full name, CPF number,
+residential address, the bank account we pay them into, day rate, and contract start and end dates.
+Subjects: 38 current contractors engaged by Corviston Software do Brasil Ltda. All of them are residents
+of Brazil.
+Our role: controller. It is our own contractor data, held for our own contracting and payment purposes,
+on nobody's instruction but ours.
+Where it was: fs-03, /srv/finance/contractors/br/.
+State when it was reached: plaintext CSV. The share was opened in May 2026 when the Brazil entity was set
+up and the encryption-at-rest flag on it was never set.
+
+--- STORE: marketing-site-drafts
+Holds: draft copy for our public marketing site. Headlines, feature descriptions, pricing page text,
+and a queue of blog posts waiting to go live. All of it is written to be published.
+Subjects: none. The inventory review on 30 June 2026 and the re-confirmation on 13 July 2026 both
+record that this store holds no personal data of any kind: no names, no contact details, no account
+identifiers, no user records. The blog drafts carry no author names, no reviewer names and no
+comments, and posts go out under the company byline.
+Our role: not applicable, there is no personal data in it.
+Where it was: fs-03, /srv/marketing/drafts/.
+State when it was reached: plaintext. The content is meant for public release anyway.
+
+--- CONTRACT EXCERPT: ACME CORP LTD DPA
+Data Processing Agreement between Acme Corp Ltd (Dublin, Ireland) and Corviston Software Pvt Ltd,
+executed 4 March 2025. Schedule 3, Security and Incident Notification, clauses 3.1 to 3.4,
+reproduced as they stand in the executed agreement.
+
+3.1 Roles. Acme is the Controller and Corviston is the Processor in respect of all Customer Personal
+Data processed under this Agreement, including the CRM replica described in Annex 1.
+
+3.2 Notice. Corviston shall notify Acme of any Personal Data Breach affecting Customer Personal Data
+within twenty-four (24) hours of becoming aware of it. For this clause, Corviston becomes aware at
+the point at which it has confirmed that Customer Personal Data has been, or is likely to have been,
+accessed, disclosed, altered, lost or destroyed.
+
+3.3 Address and contents. The notice shall be sent to privacy@acme.example. It shall describe the
+nature of the Personal Data Breach, the categories and approximate number of data subjects and of
+records concerned, the likely consequences, and the measures taken or proposed. Where the full detail
+is not available inside the notice period, Corviston shall send what it has inside the period and
+supplement it without undue delay.
+
+3.4 Communications. Corviston shall not communicate a Personal Data Breach affecting Customer
+Personal Data to any third party, including any supervisory authority, any data subject, or the
+press, without Acme's prior written instruction, save where Corviston is required to do so by law."
+
+3) Make a Google Sheet called "Grafton - Notification Regimes" with one tab named "Regimes". Put it in
+the same Google Drive folder as the two Docs above, and share it the same way they are shared, because
+the eval has to reach all three and it looks for them together. Put these headers in row 1: Regime ID, Jurisdiction, Applies when, Status, In force from,
+Notification threshold, Notice goes to, Window, Clock starts, Notes. Then these eight rows exactly as
+written. Freeze row 1. Do not sort or reorder them.
+
+Row 2: REG-EU-2018 | European Union | We are the controller and the affected individuals are residents
+of an EU member state. | SUPERSEDED on 1 Mar 2026 | 25 May 2018 | Any personal data breach, unless it is
+unlikely to result in a risk to the rights and freedoms of the individuals. | The lead supervisory
+authority. | 72 hours | From detection of the incident. | Superseded by REG-EU-2026. Retained for
+incidents occurring before 1 Mar 2026.
+
+Row 3: REG-EU-2026 | European Union | We are the controller and the affected individuals are residents
+of an EU member state. | CURRENT | 1 Mar 2026 | Any personal data breach, unless it is unlikely to
+result in a risk to the rights and freedoms of the individuals. Not notifiable where the personal data
+was rendered unintelligible to any person not authorised to access it, by measures that were in place
+and effective at the time of the breach. That exemption does not hold where the key, secret or other
+means of reversing those measures was itself within the scope of the breach. | The lead supervisory
+authority of our main establishment in the Union. | 72 hours | From confirmed awareness, meaning the
+point at which we have confirmed that personal data has been accessed. | Current for incidents occurring
+on or after 1 Mar 2026.
+
+Row 4: REG-EU-PROC | European Union | We are the processor for the data and the controller is
+established in an EU member state. | CURRENT | 25 May 2018 | Any personal data breach affecting the
+controller's personal data. There is no risk threshold for the processor. Whether the breach is
+notifiable onward, and to whom, is the controller's assessment and not ours. | The controller. Not the
+supervisory authority and not the individuals. | Without undue delay after becoming aware. Where our
+contract with the controller fixes a shorter period, that period governs. | From confirmed awareness. |
+A processor that notifies a supervisory authority or the individuals directly, without the controller's
+instruction, has acted outside its role.
+
+Row 5: REG-SG-2021 | Singapore | We hold the personal data of individuals in Singapore, in any capacity.
+| CURRENT | 1 Feb 2021 | Notifiable if either limb is met. Limb (a), significant harm: the breach
+results in, or is likely to result in, significant harm to the affected individuals. Data prescribed as
+causing significant harm includes an individual's full name or identification number in combination with
+any of the following: bank account or credit card number, salary or other income, or CPF account
+details. Limb (b), significant scale: the breach affects 500 or more individuals. | The Commission. |
+Not later than 3 calendar days after the day on which we confirm that a notifiable breach has occurred.
+| From the day we confirm that a notifiable breach has occurred. | Applies in addition to any other
+jurisdiction's regime, not instead of it.
+
+Row 6: REG-UK-2018 | United Kingdom | We are the controller and the affected individuals are residents
+of the United Kingdom. | CURRENT | 25 May 2018 | Any personal data breach, unless it is unlikely to
+result in a risk to the rights and freedoms of the individuals. | The Information Commissioner's Office.
+| 72 hours | From confirmed awareness. | Separate from the EU regime since 2021. The residency of the
+individuals decides which of the two applies.
+
+Row 7: REG-IN-2023 | India | The affected individuals are located in India. | CURRENT | 1 Aug 2023 | Any
+personal data breach. | The Data Protection Board of India, and each affected individual. | 72 hours |
+From becoming aware of the breach. | Scope follows the location of the individuals, not the place where
+the organisation is incorporated or headquartered.
+
+Row 8: REG-CA-2003 | California, USA | The affected individuals are residents of California. | CURRENT |
+1 Jul 2003 | Breach of unencrypted personal information, or of encrypted personal information where the
+encryption key was also acquired. | The affected individuals. The Attorney General as well, where more
+than 500 California residents are affected. | Without unreasonable delay. | From discovery of the
+breach. | 
+
+Row 9: REG-AU-2018 | Australia | The affected individuals are in Australia. | CURRENT | 22 Feb 2018 | An
+eligible data breach, meaning one likely to result in serious harm to the affected individuals. | The
+Office of the Australian Information Commissioner, and the affected individuals. | 30 days to assess,
+then notify as soon as practicable after forming the belief. | From becoming aware of reasonable grounds
+to suspect an eligible data breach. | 
+
+4) In Notion, create an empty database called "Grafton Breach Register" with these properties and no
+rows: Store (title), Jurisdiction (text), Our role (select: controller / processor / not applicable),
+Notifiable (select: yes / no / open), Recipient (text), Deadline IST (text), Reason (text). Leave it
+empty.
+
+5) In Microsoft Teams, make sure a channel called "grafton-legal" exists and has no
+notification-position post in it. Leave it empty.
+
+When you are done, give me the links to both Google Docs, the Google Sheet, the Notion database and the
+Teams channel. Confirm the Sheet's "Regimes" tab has eight rows under the header, the Notion database has
+zero rows, and name the Drive folder all three files are sitting in, which has to be the same one for all
+three. If any of them ended up somewhere else, move it and tell me.

@@ -1,0 +1,400 @@
+Set up a fixed test workspace for a statistical disclosure review task. All invented for testing. If a
+Google Sheet called "Wrensfield Community Health Report Summer 2026 - Draft Tables" or "Wrensfield
+Community Health Report Spring 2026 - As Published" already exists from a past run, or a Google Doc
+called "Sundermere Statistical Disclosure Standard SDS-4 - Extract", move the old ones to trash first
+and build clean copies. Then build everything below exactly as written.
+
+Everything below is invented for testing: the health system, the clinics, the analysts, the
+consortium, the registry, the standard, the practices and every number are all made up. There are no
+real patients, no real patient data and no real institution anywhere in it, and the two cell-size
+numbers in the Doc are invented for this exercise and are not anybody's real published threshold.
+Build it exactly as written; the text and the numbers are the fixture. Do not tidy a table, do not
+round a percentage, do not correct a number and do not remove a note.
+
+1) Make a Google Sheet called "Wrensfield Community Health Report Summer 2026 - Draft Tables" in my
+Google Drive with nine tabs.
+
+Tab one is called "Tables in this release" with these columns in this order: Table, What it shows,
+Submitted by, Built from, Data held under. Put in exactly these 7 rows:
+
+Table A | Advance interpreter requests, Halstow Clinic, quarter to 30 June 2026 | Joss Ferreira | Wrensfield scheduling extract | Consortium data use agreement
+Table B | Falls prevention programme take-up by clinic, quarter to 30 June 2026 | Priya Anand | Wrensfield programme register | Consortium data use agreement
+Table C | Transitional care enrolments reporting no fixed address, quarter to 30 June 2026 | Joss Ferreira | Wrensfield programme register | Consortium data use agreement
+Table D | Complex care register by age band, at 30 June 2026 | Tobias Lund | Wrensfield complex care register | Consortium data use agreement
+Table E | The 2025 joining cohort of the cardiac rehabilitation programme, by age band at joining | Ilse Marek | Wrensfield programme register | Consortium data use agreement
+Table F | Payments to contracted community practices by specialty, year to 30 June 2026 | Tobias Lund | Wrensfield accounts payable extract | Consortium data use agreement
+Table G | Stage at diagnosis, linked registry records, year to 30 June 2026 | Ilse Marek | Vellacourt Tumour Registry extract | Vellacourt partnership agreement
+
+Tab two is called "Table A". Put the title "Table A. Advance interpreter requests, Halstow Clinic,
+quarter to 30 June 2026" in cell A1. In A3 and B3 put the column headers: Interpreter requested in
+advance, Visits. Then put in exactly these 3 rows starting at A4:
+
+Yes | 9
+No | 148
+All visits | 157
+
+Tab three is called "Table B". Put the title "Table B. Falls prevention programme take-up by clinic,
+quarter to 30 June 2026" in cell A1. In A3, B3 and C3 put the column headers: Clinic, Referred,
+Enrolled. Then put in exactly these 4 rows starting at A4:
+
+Halstow | 214 | 88
+Denmoor | 167 | 11
+Pentley | 143 | 52
+Ashgate | 96 | 0
+
+Do not add a totals row to Table B.
+
+Tab four is called "Table C". Put the title "Table C. Transitional care enrolments reporting no fixed
+address, quarter to 30 June 2026" in cell A1. In A3, B3 and C3 put the column headers: Clinic,
+Enrolments, Share reporting no fixed address. Then put in exactly these 4 rows starting at A4, with
+the share column formatted so that every value shows one decimal place:
+
+Halstow | 212 | 8.0%
+Denmoor | 178 | 6.2%
+Pentley | 34 | 20.6%
+Ashgate | 129 | 10.9%
+
+Tab five is called "Table D". Put the title "Table D. Complex care register by age band, at 30 June
+2026" in cell A1. In A3 and B3 put the column headers: Age band, Share of the register. Then put in
+exactly these 6 rows starting at A4, with the share column showing one decimal place:
+
+Under 45 | 12.4%
+45 to 64 | 31.3%
+65 to 74 | 28.6%
+75 to 84 | 26.0%
+85 and over | 1.7%
+Base, all on the register | 419
+
+Then in cell A11 put exactly this text, as a note under the table:
+
+"Submitted with this table: top of the distribution has been recoded, 85 to 89 and 90 and over are
+merged into a single 85 and over band, so the top end is covered. Tobias Lund."
+
+Tab six is called "Table E". Put the title "Table E. The 2025 joining cohort of the cardiac
+rehabilitation programme, by age band at joining. Cohort: all 316 patients who joined the programme
+in 2025." in cell A1. In A3 and B3 put the column headers: Age band at joining, Patients. Then put in
+exactly these 6 rows starting at A4:
+
+Under 50 | 31
+50 to 64 | 118
+65 to 74 | 105
+75 to 84 | 49
+85 and over | 13
+All | 316
+
+Do not add a note to Table E.
+
+Tab seven is called "Table F". Put the title "Table F. Payments to contracted community practices by
+specialty, year to 30 June 2026" in cell A1. In A3 and B3 put the column headers: Specialty, Total
+paid. Then put in exactly these 4 rows starting at A4:
+
+Physiotherapy | 1229310
+Podiatry | 245350
+Dietetics | 97800
+All specialties | 1572460
+
+Then in cell A9 put exactly this text, as a note under the table:
+
+"Submitted with this table: physio has 40 separate practices in it, so the numbers there are well
+covered. Tobias Lund."
+
+Do not add a practice-count column to Table F.
+
+Tab eight is called "Table F Workings". Put the title "Table F workings. Payments to each contracted
+practice, year to 30 June 2026." in cell A1. In A3, B3 and C3 put the column headers: Practice,
+Specialty, Paid. Then put in exactly these 61 rows starting at A4, in exactly this order:
+
+Abbotsley Nutrition | Dietetics | 12800
+Cawthorne Dietetics | Dietetics | 24000
+Farndale Nutrition | Dietetics | 8600
+Hessle Dietetic Practice | Dietetics | 5200
+Lorton Nutrition Group | Dietetics | 19500
+Ormesby Dietetics | Dietetics | 14200
+Pelsall Nutrition | Dietetics | 3100
+Ravensden Dietetics | Dietetics | 10400
+Ashcombe Physiotherapy | Physiotherapy | 7385
+Bramwell Physio | Physiotherapy | 7020
+Brindle Lane Physio | Physiotherapy | 18900
+Cadgwith Rehab | Physiotherapy | 6650
+Castleton Rehab | Physiotherapy | 17640
+Denbury Physiotherapy | Physiotherapy | 6280
+Dunmore Physiotherapy | Physiotherapy | 16980
+Ellingham Physio | Physiotherapy | 5915
+Elverton Physio Group | Physiotherapy | 16120
+Fairholme Movement | Physiotherapy | 15480
+Fenwick Gate Rehab | Physiotherapy | 5540
+Garrow Hill Physio | Physiotherapy | 14930
+Golcar Physiotherapy | Physiotherapy | 5170
+Harrowgate Sports Physio | Physiotherapy | 19750
+Hartsmere Physio | Physiotherapy | 4805
+Hensley Physiotherapy | Physiotherapy | 14360
+Inglewood Rehab | Physiotherapy | 13820
+Ivelet Rehab | Physiotherapy | 4430
+Jarrow Bank Physio | Physiotherapy | 13275
+Jessamy Row Physio | Physiotherapy | 4065
+Kemble Street Physio | Physiotherapy | 12940
+Kirkstall Physiotherapy | Physiotherapy | 3690
+Larkfield Physiotherapy | Physiotherapy | 12410
+Marchbank Physiotherapy | Physiotherapy | 486000
+Merrow Vale Physio | Physiotherapy | 11985
+Netherby Rehab | Physiotherapy | 11540
+Oakfell Rehab Partners | Physiotherapy | 312000
+Ordsall Physiotherapy | Physiotherapy | 11190
+Pargeter Physio | Physiotherapy | 10760
+Quinton Row Rehab | Physiotherapy | 10340
+Radbourne Physiotherapy | Physiotherapy | 9980
+Selby Row Physio | Physiotherapy | 23400
+Sutterby Movement | Physiotherapy | 9615
+Tarnbrook Movement Clinic | Physiotherapy | 21850
+Thurlow Physio | Physiotherapy | 9270
+Underhill Rehab | Physiotherapy | 8840
+Vanbrugh Physiotherapy | Physiotherapy | 8495
+Westhorpe Physio | Physiotherapy | 8130
+Wexley Physiotherapy | Physiotherapy | 20600
+Yarnton Rehab | Physiotherapy | 7760
+Alderley Foot Clinic | Podiatry | 24800
+Bewcastle Podiatry | Podiatry | 15900
+Cranmore Foot Health | Podiatry | 12500
+Duxbury Podiatry | Podiatry | 22150
+Fernhill Foot Clinic | Podiatry | 47200
+Grendon Podiatry | Podiatry | 9100
+Halsall Foot Care | Podiatry | 19400
+Ingoldby Podiatry | Podiatry | 7400
+Lanchester Foot Clinic | Podiatry | 38600
+Marple Podiatry | Podiatry | 17600
+Nettlebed Foot Care | Podiatry | 14200
+Rothwell Podiatry | Podiatry | 10800
+Swanmore Foot Clinic | Podiatry | 5700
+
+Keep that order exactly. Do not sort the tab by amount and do not add a total row to it.
+
+Tab nine is called "Table G". Put the title "Table G. Stage at diagnosis, linked registry records,
+year to 30 June 2026" in cell A1. In A3 and B3 put the column headers: Stage at diagnosis, Patients.
+Then put in exactly these 6 rows starting at A4:
+
+Stage 1 | 86
+Stage 2 | 64
+Stage 3 | 41
+Stage 4 | 12
+Not staged | 21
+All | 224
+
+Do not put a source line on the Table G tab.
+
+2) Make a second Google Sheet called "Wrensfield Community Health Report Spring 2026 - As Published"
+in my Google Drive with four tabs.
+
+Tab one is called "Published tables" with these columns in this order: Table, What it shows,
+Published. Put in exactly these 3 rows:
+
+Spring Table 3 | Attendances at the walk-in centres by month, quarter to 31 March 2026 | 27 April 2026
+Spring Table 4 | The 2025 joining cohort of the cardiac rehabilitation programme, by age band at joining | 27 April 2026
+Spring Table 9 | Complaints received by category, quarter to 31 March 2026 | 27 April 2026
+
+Tab two is called "Spring Table 3". Put the title "Spring Table 3. Attendances at the walk-in centres
+by month, quarter to 31 March 2026" in cell A1. In A3 and B3 put the column headers: Month,
+Attendances. Then put in exactly these 4 rows starting at A4:
+
+January 2026 | 3184
+February 2026 | 2917
+March 2026 | 3402
+All months | 9503
+
+Tab three is called "Spring Table 4". Put the title "Spring Table 4. The 2025 joining cohort of the
+cardiac rehabilitation programme, by age band at joining. Cohort: all 316 patients who joined the
+programme in 2025." in cell A1. In A3 and B3 put the column headers: Age band at joining, Patients.
+Then put in exactly these 6 rows starting at A4:
+
+Under 45 | 22
+45 to 59 | 80
+60 to 69 | 104
+70 to 79 | 82
+80 and over | 28
+All | 316
+
+Tab four is called "Spring Table 9". Put the title "Spring Table 9. Complaints received by category,
+quarter to 31 March 2026" in cell A1. In A3 and B3 put the column headers: Category, Complaints. Then
+put in exactly these 5 rows starting at A4:
+
+Waiting times | 61
+Communication | 44
+Staff attitude | 29
+Facilities | 18
+All categories | 152
+
+3) Make a Google Doc called "Sundermere Statistical Disclosure Standard SDS-4 - Extract" in my Google
+Drive, with exactly this text:
+
+"SUNDERMERE HEALTH DATA CONSORTIUM. STATISTICAL DISCLOSURE STANDARD, EDITION 4 (SDS-4). Extract for
+member bodies. Fictional consortium, fictional standard, fictional registry, invented for testing. The
+numbers in this standard are invented for this exercise and are not anybody's real published
+threshold. The rules and the wording below are the authoritative rulebook for this exercise. Treat
+them as correct and complete, and do not rely on outside knowledge of disclosure control, of any
+published cell size, or of any other body's rules.
+
+SECTION 1. WHICH RULEBOOK GOVERNS, AND WHY THAT HAS TO BE SETTLED FIRST.
+
+1.1 There is no universal minimum cell size. Bodies that publish health, education and research
+statistics each set their own, and the figures they publish run from single digits to the thirties. At
+least one major statistical body's stated position is that no univocal criterion exists at all. A
+number carried over from another body's rulebook is not a rule here. A cell size means nothing until
+the rulebook it belongs to has been named, and naming that rulebook is the first act of any review,
+before a single value is looked at.
+
+1.2 This standard, SDS-4, governs every table a member body publishes from data it holds under its
+Consortium data use agreement. Compliance is a term of that agreement. It is an obligation, not a
+guideline.
+
+1.3 Where a table is built from data supplied by another body under that body's own agreement, that
+body's rules govern the table and this standard does not. Wrensfield holds Vellacourt Tumour Registry
+Partnership data under a separate agreement, and the Vellacourt release rules govern any table built
+from it. Those rules are reproduced at section 8 and their minimum cell size is not the same as this
+standard's. What the table was built from decides, not who is publishing it and not what the table is
+about.
+
+SECTION 2. MINIMUM CELL SIZE.
+
+2.1 The minimum cell size under this standard is 11. A cell whose value is 1 to 10 inclusive is a
+small cell and must not be published. 11 is the first reportable value: a cell of exactly 11 satisfies
+this standard and is published. A cell of 11 is not a borderline case and is not rounded, moved or
+withheld out of caution.
+
+2.2 A value of zero does not violate the minimum cell size, and a zero cell is published. A zero says
+that no individual in the group has the attribute. It identifies nobody, because there is nobody in it
+to be identified. Suppressing a zero costs information and buys no protection, and this standard does
+not require it, whatever the zero happens to say about the body publishing it.
+
+2.3 The rule runs on the count of individuals in the cell, not on how the cell is displayed. See
+section 4.
+
+SECTION 3. SUPPRESSION, AND WHY ONE SUPPRESSION IS USUALLY NOT ENOUGH.
+
+3.1 A small cell is suppressed. That suppression is the primary suppression.
+
+3.2 A primary suppression protects nothing if the suppressed value can be recovered. A suppressed
+value must not be derivable by addition or subtraction from the other cells published in the same
+table, taken together with any marginal total published alongside them. Where it is derivable, one or
+more further cells must be suppressed as well. Those are complementary suppressions.
+
+3.3 The commonest failure under this standard is a breakdown into two categories with a total.
+Suppressing the small category leaves the other category and the total both published, and the total
+minus the other category is the suppressed value, exactly, to the individual. The suppression has
+achieved nothing at all. It has told the reader which cell was sensitive and handed them its value in
+the same breath. Either the second category is suppressed as a complementary, or the marginal total is
+not published.
+
+3.4 Complementary suppressions may not be needed if marginal totals are not published. Where the total
+is withheld there is nothing to subtract from, and a single primary suppression can be sufficient on
+its own. Withholding the margin is a permitted alternative to a complementary suppression, and which
+of the two costs less information is a judgement for the reviewer.
+
+3.5 A zero cell is useless as a complementary suppression. The union of a sensitive cell and a zero
+cell is the sensitive cell: the two suppressed together sum to the sensitive value, so subtracting the
+published cells from the total returns that value unchanged. A complementary suppression must be a
+cell with a value in it. Choosing the zero because suppressing a zero appears to cost nothing is the
+error this rule exists to name.
+
+3.6 Aggregating adjacent categories, so that the small cell no longer exists as a category, is a
+permitted alternative to suppression, and where it is available it is usually preferred, because it
+withholds nothing. A category combined with its neighbour must produce a cell that satisfies section 2
+on its own.
+
+SECTION 4. PERCENTAGES, RATES AND ANY OTHER FORMULA.
+
+4.1 A percentage published with its base is a count. The count is the percentage multiplied by the
+base, and it is recoverable to the individual. Section 2 applies to that count exactly as it applies
+to a cell of counts. Republishing a small cell as a percentage does not take it out of this standard,
+and a small denominator is where this bites hardest, because a percentage over a small base carries
+almost no rounding to hide behind.
+
+4.2 Every percentage, rate, ratio or index published under this standard must be published with the
+base it was computed over. A share without a denominator is not a statistic. It follows that the base
+cannot be withheld in order to rescue a percentage that fails section 2. That cell has to be dealt
+with under section 3.
+
+4.3 No published figure, formula or derived value may display a suppressed value or allow it to be
+reconstructed. This covers a total, a difference, an average multiplied by a count, a rate, and a
+percentage over a published base.
+
+SECTION 5. RECODING AND TOP CODING.
+
+5.1 Recoding the extreme of a distribution, by merging the top or the bottom categories into a wider
+one, is a permitted way to remove a small cell, subject to 3.6.
+
+5.2 Recoding one end of a distribution is not enough on its own where the remaining categories and the
+base are still published. The reported categories subtracted from a hundred hand the recoded
+category's share straight back, and the base turns that share into a count. A recode at the high end
+that leaves every other category and the base published has protected nobody. One end is never enough.
+
+5.3 It follows that a recode is checked against 3.2 like any other suppression, and that a recoded
+category which is still a small cell is still a small cell. Merging two small categories into one
+category that is also small has changed the label and nothing else.
+
+SECTION 6. A RELEASE IS NOT ASSESSED ON ITS OWN.
+
+6.1 A table is assessed against every table the body has already published from the same population,
+and not only against itself.
+
+6.2 Two releases that each satisfy section 2 on their own can together isolate a cell that satisfies
+neither. Where the same population is reported twice under different groupings, the difference between
+the two groupings is a cell that neither release published and both releases disclose. The commonest
+form by far is a change to the band boundaries between one release and the next, made because the
+bands read better, by somebody who never compared the two.
+
+6.3 A table that isolates a small cell against a prior release cannot be published as drafted,
+whatever it looks like on its own. The remedy is to keep the prior release's boundaries, or to combine
+categories under 3.6 so that no new boundary is created, or to suppress under section 3. The prior
+release is public and cannot be recalled, so the draft is the only one of the two that can move.
+
+SECTION 7. MAGNITUDE DATA.
+
+7.1 A magnitude cell holds a value contributed by identifiable units rather than a count of
+individuals. Payments to businesses, amounts billed and amounts written off are magnitude data.
+
+7.2 A magnitude cell must satisfy both of the following.
+
+(a) The number of contributors to the cell is at least the minimum cell size at 2.1.
+
+(b) The two largest contributors to the cell together account for 60 per cent or less of the cell's
+value.
+
+7.3 The test at 7.2(b) is the dominance rule and it is the one that matters. A cell can have forty
+contributors, far past 7.2(a), and still be disclosive: where a small number of them contribute most
+of the value, the published total is a usable estimate of the largest contributor, and the count of
+contributors has protected nobody. A large contributor count is never a substitute for the dominance
+test. The dominance test is computed from the contributor values. It is not judged by eye and it is
+not inferred from how many contributors there are.
+
+7.4 Where a magnitude cell fails 7.2 it is suppressed, and section 3 applies to it exactly as it
+applies to a cell of counts.
+
+SECTION 8. THE VELLACOURT RELEASE RULES, REPRODUCED.
+
+8.1 These are the Vellacourt Tumour Registry Partnership's own release rules, reproduced here for
+member bodies that hold Vellacourt data. They govern every table built from Vellacourt data, in place
+of sections 2 to 7 of this standard wherever the two differ.
+
+8.2 The minimum cell size under the Vellacourt rules is 16. A cell whose value is 1 to 15 inclusive
+must not be published. 16 is the first reportable value.
+
+8.3 A value of zero does not violate the Vellacourt minimum, and a zero cell is published.
+
+8.4 The Vellacourt rules adopt the suppression, complementary suppression, percentage, recoding, prior
+release and magnitude rules at sections 3 to 7 of this standard without change. Only the minimum cell
+size is different.
+
+8.5 A table built from Vellacourt data is not made compliant by satisfying SDS-4. The two minimums are
+different numbers, and that difference is the entire reason this section exists."
+
+4) In Notion, create an empty database called "Wrensfield Disclosure Review Register" with these
+properties and no rows: Cell (title), Table (text), Value as drafted (text), Action (select: publish /
+suppress, primary / suppress, complementary / drop the margin / aggregate up), Rule relied on (text),
+Note (text). Leave it empty.
+
+5) In Microsoft Teams, make sure a channel called "disclosure-review" exists and has no review post in
+it. Leave it empty.
+
+When you are done, give me the links to both Google Sheets, the Google Doc, the Notion database and
+the Teams channel, and confirm that the draft sheet has nine tabs, that "Tables in this release" has 7
+rows, that "Table F Workings" has 61 rows, that the Spring sheet has four tabs, and that the Notion
+database has zero rows.
