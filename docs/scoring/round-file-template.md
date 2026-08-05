@@ -53,7 +53,7 @@ Canonical rules: [four canonical files listed above]
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
+**Rating:** [1-7]
 **End-to-end time (minutes):** [value]
 **Wrong actions / recovery:** [one short factual clause]
 **Commentary:** [standalone commentary]
@@ -68,7 +68,7 @@ Canonical rules: [four canonical files listed above]
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
+**Rating:** [1-7]
 **Steering needed:** [one short factual clause]
 **Additional editing before I'd use it:** [one short factual clause]
 **Commentary:** [standalone commentary]
@@ -85,7 +85,8 @@ Canonical rules: [four canonical files listed above]
 
 [Write only after boxes 2-8 are final. Judgment call, not a fixed formula: weigh the finalized
 boxes 2-8 and the run as a whole, and land on the number that honestly reflects whether the persona
-got a usable, correct result. Keep the final rating between 1 and 6.]
+got a usable, correct result. Keep the final rating between 1 and 7, reserving 7 for a run with no
+real, observed weakness anywhere across boxes 2-8.]
 ```
 
 ## `final-comparison.md`

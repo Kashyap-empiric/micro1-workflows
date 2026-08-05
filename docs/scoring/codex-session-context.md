@@ -22,10 +22,12 @@ score, NOT a failing grade," not just "mixed."
 
 **Where this disagrees with the current standing rules, the standing rules win** — see
 [harsh-evaluation-protocol.md](harsh-evaluation-protocol.md) and
-[feather-form-scratchpad.md](feather-form-scratchpad.md) for what's authoritative now. Two known
-disagreements: this source text says a 7 should be "essentially never" but doesn't forbid it
-outright, whereas the current rule is a hard ceiling of 6. And "connector" is allowed despite still
-being listed as banned jargon here, since the client's own filled example uses it.
+[feather-form-scratchpad.md](feather-form-scratchpad.md) for what's authoritative now. One
+formerly-known disagreement is now resolved: this source text's "7 = flawless for this dimension,
+essentially never, only after a hard hunt turns up nothing" now matches the standing rule (updated
+2026-08-05) — a 7 is allowed, but only when the full flaw hunt for that box comes back with zero
+real, observed findings. One disagreement remains: "connector" is allowed despite still being
+listed as banned jargon here, since the client's own filled example uses it.
 
 ---
 

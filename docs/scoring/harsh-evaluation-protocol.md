@@ -181,9 +181,12 @@ sake.
 
 Run every gate before finalizing. No exceptions.
 
-- **Ceiling is 6.** Hard. Never a 7, even for a flawless-looking run.
+- **Ceiling is 7, reserved for verified perfection.** A 7 requires the flaw hunt to be fully run
+  and come back empty for that box, zero real findings, checked against the source, not just an
+  absence of narrated problems. If there is any real, observed flaw in that box's dimension,
+  however small, it is not a 7. Default to 6 whenever there is any doubt.
 - **A 6 requires naming the one thing.** If the one small thing cannot be named, the hunt is not
-  finished and the score is not a 6.
+  finished and the score is not a 6, and it is certainly not a 7.
 - **A 4 or 5 requires two distinct named issues** in that box's commentary. Not one issue restated.
   Not vague filler. If only one real issue exists, rethink whether it is actually a 6.
 - **Every rating must be reflected in the writing, in proportion to the number.** The mix of
@@ -202,7 +205,9 @@ Run every gate before finalizing. No exceptions.
 - **Overall task success is holistic and derived after boxes 2 through 8, by judgment, not a fixed
   formula.** No prescribed starting point, cap sequence, or point deduction. Weigh the finalized
   boxes 2-8 and the run as a whole, and land on the number that honestly reflects whether the
-  persona got a usable, correct result. Never give an upward bonus. Keep the result between 1 and 6.
+  persona got a usable, correct result. Never give an upward bonus. Keep the result between 1 and 7,
+  and reserve 7 for a run that was genuinely flawless end to end, with no real, observed weakness
+  anywhere across boxes 2-8.
 - **Spread check.** After all 8 numbers are drafted, look at them as a set. If every box landed in
   the same narrow band while the commentary describes distinct specific problems, re-examine which
   box each problem actually belongs to and push that one down.
@@ -225,8 +230,9 @@ Run every gate before finalizing. No exceptions.
 
 1. Did the trap list get written and walked item by item?
 2. Does every box name a specific, in-dimension, actually-observed flaw?
-3. Is any box sitting at 6? Go back and look harder. A comfortable 6 usually means the hunt
-   stopped early.
+3. Is any box sitting at 6 or 7? Go back and look harder. A comfortable 6 usually means the hunt
+   stopped early, and a 7 doubly so, it must survive the full flaw hunt with nothing found, not
+   just a hunt that came up empty because it stopped early.
 4. Does every 4 or 5 carry two distinct named issues?
 5. Does each box's mix of positives and negatives track its rating band, rather than just
    restating the number in words?

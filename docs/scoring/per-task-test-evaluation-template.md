@@ -335,14 +335,14 @@ Write the full form commentary in the head-to-head file. Keep this table as the 
 
 | Dimension | Rating | Evidence-backed reason |
 |---|---:|---|
-| 1. Overall task success | [1-6] | [derive last] |
-| 2. Task accuracy, ignoring speed | [1-6] | [ ] |
-| 3. Efficiency | [1-6] | [ ] |
-| 4. Writing quality | [1-6] | [ ] |
-| 5. Instruction following | [1-6] | [ ] |
-| 6. Collaboration, autonomy, verification | [1-6] | [ ] |
-| 7. Citation quality | [1-6/N/A] | [ ] |
-| 8. GUI action correctness | [1-6/N/A] | [ ] |
+| 1. Overall task success | [1-7] | [derive last] |
+| 2. Task accuracy, ignoring speed | [1-7] | [ ] |
+| 3. Efficiency | [1-7] | [ ] |
+| 4. Writing quality | [1-7] | [ ] |
+| 5. Instruction following | [1-7] | [ ] |
+| 6. Collaboration, autonomy, verification | [1-7] | [ ] |
+| 7. Citation quality | [1-7/N/A] | [ ] |
+| 8. GUI action correctness | [1-7/N/A] | [ ] |
 
 ### Model run verdict
 

@@ -72,19 +72,19 @@ Codex, using gpt-5.6-cyan with Extra High intelligence
 
 > Base every score and the final ranking only on how this model performed on this specific task, and support every score with its commentary. A failure to act, such as a plan made but never executed, counts as a significant failure.
 
-### 1. Overall task success, rating 1 to 7 (self-imposed ceiling 6) *
+### 1. Overall task success, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 2. Task accuracy, ignoring speed, rating 1 to 7 (self-imposed ceiling 6) *
+### 2. Task accuracy, ignoring speed, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 3. Efficiency, rating 1 to 7 (self-imposed ceiling 6) *
+### 3. Efficiency, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **End-to-end time (minutes):** [FILL]
@@ -92,19 +92,19 @@ Codex, using gpt-5.6-cyan with Extra High intelligence
 **Commentary:**
 [FILL]
 
-### 4. Writing quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 4. Writing quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 5. Instruction following, rating 1 to 7 (self-imposed ceiling 6) *
+### 5. Instruction following, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 6. Collaboration, autonomy, and verification, rating 1 to 7 (self-imposed ceiling 6) *
+### 6. Collaboration, autonomy, and verification, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Steering needed:** [FILL: how often you had to steer or interrupt, how necessary and severe each steer was]
@@ -112,13 +112,13 @@ Codex, using gpt-5.6-cyan with Extra High intelligence
 **Commentary:**
 [FILL]
 
-### 7. Citation quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 7. Citation quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 8. GUI action correctness, rating 1 to 7 (self-imposed ceiling 6), or N/A: Not applicable to this task *
+### 8. GUI action correctness, rating 1 to 7 (7 reserved for a verified-perfect run), or N/A: Not applicable to this task *
 [FILL]
 
 **Commentary:**
@@ -140,19 +140,19 @@ Codex, using gpt-5.6-rose with High intelligence
 
 > Base every score and the final ranking only on how this model performed on this specific task, and support every score with its commentary. A failure to act, such as a plan made but never executed, counts as a significant failure.
 
-### 1. Overall task success, rating 1 to 7 (self-imposed ceiling 6) *
+### 1. Overall task success, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 2. Task accuracy, ignoring speed, rating 1 to 7 (self-imposed ceiling 6) *
+### 2. Task accuracy, ignoring speed, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 3. Efficiency, rating 1 to 7 (self-imposed ceiling 6) *
+### 3. Efficiency, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **End-to-end time (minutes):** [FILL]
@@ -160,19 +160,19 @@ Codex, using gpt-5.6-rose with High intelligence
 **Commentary:**
 [FILL]
 
-### 4. Writing quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 4. Writing quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 5. Instruction following, rating 1 to 7 (self-imposed ceiling 6) *
+### 5. Instruction following, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 6. Collaboration, autonomy, and verification, rating 1 to 7 (self-imposed ceiling 6) *
+### 6. Collaboration, autonomy, and verification, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Steering needed:** [FILL: how often you had to steer or interrupt, how necessary and severe each steer was]
@@ -180,13 +180,13 @@ Codex, using gpt-5.6-rose with High intelligence
 **Commentary:**
 [FILL]
 
-### 7. Citation quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 7. Citation quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 8. GUI action correctness, rating 1 to 7 (self-imposed ceiling 6), or N/A: Not applicable to this task *
+### 8. GUI action correctness, rating 1 to 7 (7 reserved for a verified-perfect run), or N/A: Not applicable to this task *
 [FILL]
 
 **Commentary:**
@@ -208,19 +208,19 @@ Codex, using gpt-5.6-cyan with High intelligence
 
 > Base every score and the final ranking only on how this model performed on this specific task, and support every score with its commentary. A failure to act, such as a plan made but never executed, counts as a significant failure.
 
-### 1. Overall task success, rating 1 to 7 (self-imposed ceiling 6) *
+### 1. Overall task success, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 2. Task accuracy, ignoring speed, rating 1 to 7 (self-imposed ceiling 6) *
+### 2. Task accuracy, ignoring speed, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 3. Efficiency, rating 1 to 7 (self-imposed ceiling 6) *
+### 3. Efficiency, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **End-to-end time (minutes):** [FILL]
@@ -228,19 +228,19 @@ Codex, using gpt-5.6-cyan with High intelligence
 **Commentary:**
 [FILL]
 
-### 4. Writing quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 4. Writing quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 5. Instruction following, rating 1 to 7 (self-imposed ceiling 6) *
+### 5. Instruction following, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 6. Collaboration, autonomy, and verification, rating 1 to 7 (self-imposed ceiling 6) *
+### 6. Collaboration, autonomy, and verification, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Steering needed:** [FILL: how often you had to steer or interrupt, how necessary and severe each steer was]
@@ -248,13 +248,13 @@ Codex, using gpt-5.6-cyan with High intelligence
 **Commentary:**
 [FILL]
 
-### 7. Citation quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 7. Citation quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 8. GUI action correctness, rating 1 to 7 (self-imposed ceiling 6), or N/A: Not applicable to this task *
+### 8. GUI action correctness, rating 1 to 7 (7 reserved for a verified-perfect run), or N/A: Not applicable to this task *
 [FILL]
 
 **Commentary:**
@@ -276,19 +276,19 @@ Codex, using gpt-5.6-rose with Extra High intelligence
 
 > Base every score and the final ranking only on how this model performed on this specific task, and support every score with its commentary. A failure to act, such as a plan made but never executed, counts as a significant failure.
 
-### 1. Overall task success, rating 1 to 7 (self-imposed ceiling 6) *
+### 1. Overall task success, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 2. Task accuracy, ignoring speed, rating 1 to 7 (self-imposed ceiling 6) *
+### 2. Task accuracy, ignoring speed, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 3. Efficiency, rating 1 to 7 (self-imposed ceiling 6) *
+### 3. Efficiency, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **End-to-end time (minutes):** [FILL]
@@ -296,19 +296,19 @@ Codex, using gpt-5.6-rose with Extra High intelligence
 **Commentary:**
 [FILL]
 
-### 4. Writing quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 4. Writing quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 5. Instruction following, rating 1 to 7 (self-imposed ceiling 6) *
+### 5. Instruction following, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 6. Collaboration, autonomy, and verification, rating 1 to 7 (self-imposed ceiling 6) *
+### 6. Collaboration, autonomy, and verification, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Steering needed:** [FILL: how often you had to steer or interrupt, how necessary and severe each steer was]
@@ -316,13 +316,13 @@ Codex, using gpt-5.6-rose with Extra High intelligence
 **Commentary:**
 [FILL]
 
-### 7. Citation quality, rating 1 to 7 (self-imposed ceiling 6) *
+### 7. Citation quality, rating 1 to 7 (7 reserved for a verified-perfect run) *
 [FILL]
 
 **Commentary:**
 [FILL]
 
-### 8. GUI action correctness, rating 1 to 7 (self-imposed ceiling 6), or N/A: Not applicable to this task *
+### 8. GUI action correctness, rating 1 to 7 (7 reserved for a verified-perfect run), or N/A: Not applicable to this task *
 [FILL]
 
 **Commentary:**

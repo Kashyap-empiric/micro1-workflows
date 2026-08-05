@@ -75,7 +75,8 @@ during the scoring pass once all three models are ready:
 file to match its number. Start from Task accuracy, apply evidence-backed caps for material
 failures, and dock one point only when the run takes substantially longer than a comparable run
 because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+rating between 1 and 7, reserving 7 for a run with no real, observed weakness anywhere across
+boxes 2-8.]
 
 ## 2. Task accuracy, ignoring speed
 
@@ -83,7 +84,7 @@ rating between 1 and 6.]
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
+**Rating:** [1-7]
 **End-to-end time (minutes):** [value]
 **Wrong actions / recovery:** [one short factual clause]
 **Commentary:** [standalone commentary]
@@ -98,7 +99,7 @@ rating between 1 and 6.]
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
+**Rating:** [1-7]
 **Steering needed:** [one short factual clause]
 **Additional editing before I'd use it:** [one short factual clause]
 **Commentary:** [standalone commentary]
