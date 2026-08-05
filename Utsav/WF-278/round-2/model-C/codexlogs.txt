@@ -1,1 +1,55 @@
-[Complete raw session transcript - not yet captured]
+Worked for 2m 8s
+
+
+I’ll use the Google Drive, Sheets, and Docs workflows to establish the complete rulebook and invoice population, then the Notion, Teams, and Gmail workflows to record the decisions, post the live escalation summary, and leave Lena one unsent firm draft. I’ll reconcile the reduction and held totals from the line-level register before the Teams post.
+
+
+
+
+Used Google Drive, Notion and Codex Apps integrations, loaded tools, read files, ran commands
+
+
+The source files and Teams channel resolve cleanly. Notion search surfaced two databases with the exact register name, so I’m inspecting their schemas and current contents before choosing a write target; I won’t create duplicate rows in an arbitrary namesake.
+
+
+
+
+Used Notion and Google Drive integrations
+
+
+The newer empty register has the requested seven-column schema and was created alongside this source set; the older namesake already contains a prior 20-line run. I’m treating the newer empty database as the current destination. The rulebook produces 13 approves, 3 reduces, 3 rejects, and 1 escalation. The closed-matter line is held for Marcus Feld under §2.1; it is not treated as a reduction.
+
+
+
+
+Used Notion integration
+
+
+The register readback reconciles: reduced lines contribute $4,056.25, rejected lines $7,939.50, for $11,995.75 coming off; the sole escalated line holds $1,627.50. I’m posting that exact reconciliation live in Teams and creating the firm note as an unsent, blank-recipient Gmail draft for Lena’s review.
+
+
+
+
+Used Gmail and Codex Apps integrations
+
+
+
+
+
+Completed the June review.
+Vantridge Invoice Line Register: all 20 invoice lines have exactly one disposition, billed amount, reduction field, guideline section, and one-line reason.
+Live Teams escalation post in legal-ops-billing: posted and read back successfully.
+Unsent Gmail draft for Lena's review: covers all three reduced and three rejected lines, with line, matter, billed amount, amount coming off, section, and rationale. Readback confirms the DRAFT label and an empty To field. The draft says to add the firm's verified billing address and obtain Lena's review before sending.
+Disposition	Lines	Billed amount	Coming off
+Approve	13	$43,045.50	$0.00
+Reduce	3	$10,962.50	$4,056.25
+Reject	3	$7,939.50	$7,939.50
+Escalate	1	$1,627.50	$0.00
+Total	20	$63,575.00	$11,995.75
+
+
+The held amount is $1,627.50: L-17, INV-40815, M-2213 Redgate, under §2.1. Its 10 June work date is after the 9 June matter-schedule closure, so Marcus Feld must decide whether the requested work remains payable or the matter was closed too early.
+The register totals reconcile to the Teams figures: $11,995.75 reduction and $1,627.50 held. No invoice was paid or released for payment, and no email was sent.
+
+
+15:21

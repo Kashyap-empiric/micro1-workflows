@@ -35,7 +35,7 @@ Both planted traps get caught, a renewal sitting exactly on the freeze cutoff an
 
 **Rating:** 5/7
 
-The channel summary reads clearly, a short basis line up front followed by grouped headers for the filed opportunities, the higher risk calls, and the tracker only item, so a reader can scan it in seconds. The Gmail drafts read naturally, each closing with the required verified-address line without sounding boilerplate. The Jira ticket bodies run long though, a planning scope section stacked on top of the required tools, target, and saving makes each one longer than it needs to be for something meant to be actioned quickly. The channel post also restates the same dollar figures twice, once in the opportunity list and again in the risk section, adding nothing new the second time.
+The channel summary reads clearly, a short basis line up front followed by grouped headers for the filed opportunities, the higher risk calls, and the tracker only item, so a reader can scan it in seconds. The Gmail drafts read naturally, each closing with the required unverified address line, without sounding boilerplate. The Jira ticket bodies run long though, a planning scope section stacked on top of the required tools, target, and saving makes each one longer than it needs to be for something meant to be actioned quickly. The channel post also restates the same dollar figures twice, once in the opportunity list and again in the risk section, adding nothing new the second time.
 
 ## 5. Instruction following
 
@@ -60,7 +60,7 @@ The seat and saving arithmetic shows up as an actual calculation in each ticket 
 
 **Rating:** 5/7
 
-Direct tool calls handled the sheet, ticket, and channel updates in this run, leaving the email drafts as the only part that actually happened on screen. Every draft carries the correct blank recipient field and the right department targeting, nothing lands in the wrong place. Compose windows sit stacked open on top of each other in the captures instead of being closed one at a time, and a browser notification prompt is still sitting undismissed on screen across more than one of the captured views. That kind of clutter is minor on its own, but it should have been cleared before calling that screen state final.
+Direct tool calls handled the sheet, ticket, and channel updates in this run, leaving the email drafts as the only part that actually happened on screen. Every draft carries the correct blank recipient field and the right department targeting, nothing lands in the wrong place. Compose windows sit stacked open on top of each other on screen instead of being closed one at a time, and a browser notification prompt is still sitting undismissed across more than one screen along the way. That kind of clutter is minor on its own, but it should have been cleared before calling that screen state final.
 
 ## 1. Overall task success
 

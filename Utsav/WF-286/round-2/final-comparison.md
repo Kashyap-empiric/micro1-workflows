@@ -7,13 +7,13 @@ Extra High intelligence only).
 
 ## METADATA
 
-1. Occupation / career:
-2. Occupation + workplace:
-3. Time to complete this workflow WITHOUT a model (minutes):
-4. Times PER MONTH I run this workflow:
-5. Workflow difficulty 1-7:
-6. Initial Codex test rating 1-7:
-7. Notes on Codex's performance:
+1. Occupation / career: Computer and Information Systems Managers (nearest dropdown value)
+2. Occupation + workplace: Engineering director carrying the open-source programme at a software company that holds patents, working the queue of engineers asking to contribute upstream, with the programme director signing each queue off.
+3. Time to complete this workflow WITHOUT a model (minutes): 180
+4. Times PER MONTH I run this workflow: 4
+5. Workflow difficulty 1-7: 7
+6. Initial Codex test rating 1-7: [pending, this is my own read going into this round's specific run and should not carry over from a prior round's scored result]
+7. Notes on Codex's performance: [pending, same reason as field 6]
 
 ## Readiness
 

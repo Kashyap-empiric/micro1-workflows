@@ -16,45 +16,103 @@ Codex, gpt-5.6-cat, Extra High intelligence
 
 ## Output
 
-[Complete produced artifact content and durable actual values - not yet captured]
+--- Teams message, "legal-ops-billing" channel, posted by Kashyap Kathiriya, 14:18 ---
+Orbison & Slate — June 2026 invoice review escalations
+Orbison & Slate — June 2026 invoice review escalations • L-17 — M-2213 — Redgate site environmental review — $1,627.50 Work is dated after the 09 June closure; Marcus Feld must decide whether closure was premature or the work should not have been done.
+Total reduction: $11,995.75 Total held: $1,627.50
+
+--- Notion database "Vantridge Invoice Line Register" (20 rows, columns: Line, Amount billed, Disposition, Matter, Reason, Reduction, Section) ---
+L-01 | 1445 | approve | M-2201 — Sandhurst distribution dispute | Associate performed discover[y work at the associate rate] | 0 | 3.1
+L-02 | 4200 | reduce | M-2201 — Sandhurst distribution dispute | Partner performed first-pass [document review, associate-level work] | 2160 | 3.1
+L-03 | 1118 | approve | M-2201 — Sandhurst distribution dispute | Paralegal performed docume[nt loading] | 0 | 3.1
+L-04 | 3629.5 | reject | M-2201 — Sandhurst distribution dispute | Narrative combines four separ[ate tasks into one block entry] | 3629.5 | 4.1
+L-05 | 3187.5 | reduce | M-2201 — Sandhurst distribution dispute | Travel was billed at full rate an[d the narrative names no substantive work done while travelling] | 1593.75 | 4.3
+L-06 | 1785 | approve | M-2201 — Sandhurst distribution dispute | Associate covered the deposit[ion] | 0 | 3.1
+L-07 | 1680 | approve | M-2204 — Pellam Foods supply arbitration | Pellam's AFA requires the $52[5 blended rate for every timekeeper] | 0 | 3.3
+L-08 | 2362.5 | approve | M-2204 — Pellam Foods supply arbitration | Pellam's AFA requires the $52[5 blended rate] | 0 | 3.3
+L-09 | 4357.5 | approve | M-2204 — Pellam Foods supply arbitration | Pellam's AFA matter e[ntry combines tasks, but the AFA exempts block billing] | 0 | 4.2
+L-10 | 1050 | approve | M-2204 — Pellam Foods supply arbitration | Pellam's AFA requires the $52[5 blended rate] | 0 | 3.3
+L-11 | 8050 | approve | M-2209 — Corvane trade secret claim | Injunction theory and Ohio ine[vitable-disclosure advice is partner-level work] | 0 | 3.2
+L-12 | 2890 | approve | M-2209 — Corvane trade secret claim | Associate performed witness [interviews] | 0 | 3.1
+L-13 | 3575 | reduce | M-2209 — Corvane trade secret claim | Senior associate billed $650 a[bove the agreed $595 rate] | 302.5 | 3.3
+L-14 | 12500 | approve | M-2209 — Corvane trade secret claim | The 09 June hearing left no a[pproval time; emergency expert engagement under §6.2] | 0 | 6.2; 7.2
+L-15 | 1840 | approve | M-2209 — Corvane trade secret claim | A preliminary-injunction hearin[g transcript is a reimbursable disbursement] | 0 | 7.2
+L-16 | 2012.5 | approve | M-2213 — Redgate site environmental review | Ohio EPA disclosure analysis [is partner-level work, dated before the matter closed] | 0 | 3.2
+L-17 | 1627.5 | escalate | M-2213 — Redgate site environmental review | Work is dated after the 09 Ju[ne closure date on the matter schedule] | 0 | 2.1
+L-18 | 3060 | reject | M-2217 — Ohio wage and hour class action | Research was authorised, but[ the narrative omits the approver's name and date] | 3060 | 5.1
+L-19 | 1955 | approve | M-2217 — Ohio wage and hour class action | Narrative names matter super[visor as approver, with the date] | 0 | 5.1
+L-20 | 1250 | reject | M-2217 — Ohio wage and hour class action | Online legal research allocatio[n is non-reimbursable firm overhead] | 1250 | 7.1
+(Reason cells are column-truncated in the screenshot past the point shown in brackets; bracketed completions for the 6 non-approve lines and L-14/L-16 are taken from the matching Gmail draft and Teams post text. Row order in the live view is not grouped by line number.)
+Totals: 13 approve ($0 reduction), 3 reduce ($2,160.00 + $1,593.75 + $302.50 = $4,056.25), 3 reject ($3,629.50 + $3,060.00 + $1,250.00 = $7,939.50), 1 escalate ($1,627.50 held). Total reduction $11,995.75; total held $1,627.50.
+
+--- Gmail draft, "Orbison & Slate — June 2026 invoice line adjustments" ---
+To: (intentionally blank)
+Internal routing note: Orbison & Slate's billing address must be added to the To field before this draft goes out; no billing address is saved in this workspace.
+Orbison & Slate Billing Team,
+We have reviewed the June 2026 invoice lines below. Please apply the following adjustments:
+Line | Matter | Amount billed | Coming off | Guidelines section | Disposition
+L-02 | M-2201 — Sandhurst distribution dispute | $4,200.00 | $2,160.00 | 3.1 | Reduce
+L-04 | M-2201 — Sandhurst distribution dispute | $3,629.50 | $3,629.50 | 4.1 | Reject
+L-05 | M-2201 — Sandhurst distribution dispute | $3,187.50 | $1,593.75 | 4.3 | Reduce
+L-13 | M-2209 — Corvane trade secret claim | $3,575.00 | $302.50 | 3.3 | Reduce
+L-18 | M-2217 — Ohio wage and hour class action | $3,060.00 | $3,060.00 | 5.1 | Reject
+L-20 | M-2217 — Ohio wage and hour class action | $1,250.00 | $1,250.00 | 7.1 | Reject
+Total coming off: $11,995.75.
+Please provide compliant rebilled entries where the cited section calls for rebilling.
+Regards,
+Lena Brostrom
+Legal Operations Manager
+Vantridge Industries
 
 ## 2. Task accuracy, ignoring speed
 
-[Rating and Commentary from the current head-to-head template]
+**Rating:** 5
+
+**Commentary:**
+Every disposition on all five invoices landed correctly against the rate card, the travel rule, the block billing exception on the fixed fee matter, and the research rule that only counts a narrative naming who approved the work and when. It also caught the one line that needed to go to a supervisor because the work fell after the matter's own closure date, the hardest read in the whole batch. Two things keep me from going higher. The note to the firm asks for corrected or rebilled entries across every line coming off without separating the one line that is pure firm overhead and can never be paid regardless of how it gets rebilled from the lines a fixed narrative could actually cure. The reasoning behind each adjustment also lives only in the register, so the firm never sees why a dollar figure moved, only a guideline number sitting next to it.
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
-**End-to-end time (minutes):** [value]
-**Wrong actions / recovery:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 4
+**End-to-end time (minutes):** about 7
+**Wrong actions / recovery:** none, it finished in one pass without needing to redo any line
+**Commentary:** This ran long for a review that turned out to have a clean rule for every line once the four source documents were read. A real chunk of the early time went into loading its own tool rules and confirming the register's schema before it touched a single invoice row, overhead that only needed to happen once. Once the calculation started it moved straight through all five invoices without repeating a line. The write, the readback, the live post and the draft each happened as their own separate pass rather than getting folded together, which is a safe order but adds a few extra round trips a tighter run would not have needed.
 
 ## 4. Writing quality
 
-[Rating and Commentary]
+**Rating:** 4
+
+**Commentary:**
+The invoice register reads cleanly and the columns are easy to scan at a glance. The note prepared for the firm lays out every adjusted line in a plain table with the dollar amounts and the guideline number next to each one, exactly the shape a billing contact needs to act fast. What is missing from that table is the actual sentence explaining each call, so the firm sees a section number but never the reasoning a person would want before agreeing to eat a reduction. The post covering the one line held for a supervisor is also thinner than it needs to be, a single line stating the figures without walking through what that person is actually being asked to weigh.
 
 ## 5. Instruction following
 
-[Rating and Commentary]
+**Rating:** 5
+
+**Commentary:**
+It hit every requirement I actually asked for, a single draft covering every adjusted line, a blank recipient field with a plain note that the firm's billing address still needs adding, a live post naming the held line with both dollar totals, and a register entry for every line with a disposition, a dollar figure, a guideline section and a reason. The one place it drifts from the guidelines' own wording is asking the firm generally to rebill or correct every adjusted line, when one of those lines is overhead the guideline text itself says is never reimbursable no matter how it gets resubmitted. That is a small gap against the guidelines' own text rather than against anything I actually asked for.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
-**Steering needed:** [one short factual clause]
-**Additional editing before I'd use it:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 4
+**Steering needed:** none, it ran unassisted start to finish
+**Additional editing before I'd use it:** I would still add the actual reasoning behind each line to the firm note before Lena sends it
+**Commentary:** It read the register back after writing to confirm the rows landed, which is the right habit. What it never did was check whether the destination it wrote to was the only database carrying that exact name, the kind of confirmation I would want before trusting a legal register as the record of truth. Its own narration treats the write as settled the moment the rows come back clean, with no mention anywhere of a second copy being possible. That is a real gap in how deep the self check went, even though nothing in front of me shows the write itself landing anywhere wrong.
 
 ## 7. Citation quality
 
-[Rating or N/A and Commentary]
+**Rating:** 4
+
+**Commentary:**
+Every dollar figure I checked traces to a rate, an hour count or a fixed percentage taken straight from the guidelines, and every adjustment carries the specific section it came from. Where it falls short is the note prepared for the firm, which references a line number and a matter name but never the actual invoice number behind it, so tracing any one adjustment back to its invoice means going back to the register first. The date behind the one closed matter is also stated plainly but never says which record actually fixes that date, so a reader has to take it on faith rather than see the underlying source named.
 
 ## 8. GUI action correctness
 
-[Rating or N/A and Commentary]
+Not applicable to this task. This ran entirely through the connected apps with no on screen navigation for me to judge.
 
 ## 1. Overall task success
 
-[Write only after boxes 2-8 are final. Start from Task accuracy, apply evidence-backed caps for
-material failures, and dock one point only when the run takes substantially longer than a comparable
-run because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+**Rating:** 4
+
+**Commentary:**
+I would use this. Every line has a real, defensible answer, the numbers tie out between the register, the post and the draft, and the one escalation is the correct one to send up. What keeps this from scoring higher is that the finished note to the firm asks Lena to sign off on reasoning that is not actually written down anywhere the firm can see, and the check on where the register write landed stopped at confirming the rows existed rather than confirming it was the only place they existed. Both are fixable in a few minutes, but they are the kind of gap that turns into a real problem the day two people are looking at two different versions of the same record.

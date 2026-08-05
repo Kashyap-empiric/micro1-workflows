@@ -35,7 +35,7 @@ Every figure I checked against the source data holds up, including the two traps
 
 **Rating:** 4/7
 
-The Gmail drafts read well, each one written the way a real internal notice would, naming the tools, the identity numbers, and the required verified-address line without sounding generated. The channel summary does not hold up as well, a single dense paragraph long enough that the interface collapses it behind a toggle that has to be clicked open, defeating the point of a quick finance and ops update. The Jira ticket bodies lean on compressed policy citations too, several section numbers strung together with no separation, closer to shorthand notes to self than something a stakeholder would want to parse. Together the collapsed summary and the shorthand citations are what keep this at 4/7 rather than higher.
+The Gmail drafts read well, each one written the way a real internal notice would, naming the tools, the identity numbers, and the required unverified address line, without sounding generated. The channel summary does not hold up as well, a single dense paragraph long enough that the interface collapses it behind a toggle that has to be clicked open, defeating the point of a quick finance and ops update. The Jira ticket bodies lean on compressed policy citations too, several section numbers strung together with no separation, closer to shorthand notes to self than something a stakeholder would want to parse. Together the collapsed summary and the shorthand citations are what keep this at 4/7 rather than higher.
 
 ## 5. Instruction following
 
@@ -48,19 +48,19 @@ Nothing was cancelled, changed, or contacted that should have stayed untouched, 
 **Rating:** 6/7
 **Steering needed:** none, it went start to finish without any input from me
 **Additional editing before I'd use it:** the one savings figure that only appears inside a single email would need to be sourced or dropped before it goes out
-**Commentary:** I never had to intervene anywhere in this run. Its closing message lists specific things it rechecked rather than a blanket claim, the row count held at twenty, the savings total matched what the tickets and tracker separately added up to, the tickets were confirmed assigned, and the draft count came out at five, specifics showing it actually looked at what it produced rather than assuming the actions went through. The one gap I could find after checking hard for a second is a number it introduced only once, inside a single department email, a combined figure with nothing else in the record to check it against, and that single gap is what holds this at 6/7.
+**Commentary:** I never had to intervene anywhere in this run. Its closing message lists specific things it rechecked rather than a blanket claim, the row count held steady, the savings total matched what the tickets and tracker separately added up to, the tickets were confirmed assigned, and the draft count matched what went out, specifics showing it actually looked at what it produced rather than assuming the actions went through. The one gap I could find after checking hard for a second is a number it introduced only once, inside a single department email, a combined figure with nothing else in the record to check it against, and that single gap is what holds this at 6/7.
 
 ## 7. Citation quality
 
 **Rating:** 4/7
 
-Most of the numbers in this run trace cleanly. The identity counts, the fresh quotes, and the seat arithmetic are all shown inline, and I could check every one of them against the source myself. One department email states a combined savings figure that does not appear anywhere else, not the tracker, not the ticket, not the channel post, so there is nothing to trace it back to beyond working it out again by hand. The ticket bodies separately compress several policy section citations onto one line without marking which clause actually drives which number, so confirming the exact basis for a given figure takes more work than it should.
+Most of the numbers in this run trace cleanly. The identity counts, the fresh quotes, and the seat arithmetic are all shown inline, and I could check every one of them against the source myself. One department email states a combined savings figure that appears nowhere in the tracker, the ticket, or the channel post, so there is nothing to trace it back to beyond working it out again by hand. The ticket bodies separately compress several policy section citations onto one line without marking which clause actually drives which number, so confirming the exact basis for a given figure takes more work than it should.
 
 ## 8. GUI action correctness
 
 **Rating:** 5/7
 
-Screen based work in this run comes down to the email drafts, since the sheet, ticket, and channel updates went through direct tool calls rather than a browser. Every draft carries the correct blank recipient field and the right department targeting, nothing lands in the wrong place. The screen state behind that work is looser though. Several compose windows sit stacked on top of each other instead of being closed one at a time, and one capture shows the drafts list already narrowed by a search filter before all five drafts are visible together in one view. Neither puts a draft in the wrong place, but together they leave the screen looking less finished than the work underneath it.
+Screen based work in this run comes down to the email drafts, since the sheet, ticket, and channel updates went through direct tool calls rather than a browser. Every draft carries the correct blank recipient field and the right department targeting, nothing lands in the wrong place. The screen state behind that work is looser though. Several compose windows sit stacked on top of each other instead of being closed one at a time, and at one point the drafts list sits narrowed by a search filter before all five drafts are visible together in one view. Neither puts a draft in the wrong place, but together they leave the screen looking less finished than the work underneath it.
 
 ## 1. Overall task success
 

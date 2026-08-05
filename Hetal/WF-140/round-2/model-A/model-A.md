@@ -22,7 +22,7 @@ Annual spend analysed across all 20 tracker rows: USD 140,340. Total estimated a
 
 **Rating:** 6/7
 
-Checking every row against the policy and the source data myself, each one lands on the correct call, including both traps in the setup, a renewal exactly on the freeze cutoff and a whiteboarding tool quoted in a foreign currency. The grouped project management opportunity gets tested against the ticket threshold as a combined figure rather than per tool, the right read of the policy. I went looking hard for a second gap in the underlying numbers and found none. The one real thing still sitting here is the decision column, where three tools simply out of scope carry the same "retain" wording used for genuine category standards, and that labelling gap on its own is what holds this at 6/7.
+Checking every row against the policy and the source data myself, each one lands on the correct call, including both traps in the setup, a renewal exactly on the freeze cutoff and a whiteboarding tool quoted in a foreign currency. The grouped project management opportunity gets tested against the ticket threshold as a combined figure rather than per tool, the right read of the policy. I went looking hard for a second gap and found none. The one real thing still sitting here is the decision column, where three tools simply out of scope carry the same "retain" wording used for genuine category standards, and that labelling gap on its own is what holds this at 6/7.
 
 ## 3. Efficiency
 
@@ -35,7 +35,7 @@ Checking every row against the policy and the source data myself, each one lands
 
 **Rating:** 5/7
 
-The finance and ops summary is easy to scan, a short headline block of the two topline figures followed by grouped bullets for tickets, the tracker only item, and higher risk calls. Most Gmail drafts read like something a person would send, naming the tools and numbers behind the math before the required verified-address line. One salutation breaks the pattern though, "Hi Company-wide owner" reads like a label rather than a team, unlike "Sales owner" or "Design owner" elsewhere. The reason column is dense in places too, six policy sections cited back to back on one row, closer to an audit trail than a department owner wants to read, and both are why this lands at 5/7 instead of 6.
+The finance and ops summary is easy to scan, a short headline block of two topline figures followed by grouped bullets for tickets, the tracker only item, and higher risk calls. Most Gmail drafts read like something a person would send, naming the tools and numbers behind the math before the required unverified address line. One salutation breaks the pattern though, "Hi Company-wide owner" reads like a label rather than a team, unlike "Sales owner" or "Design owner" elsewhere. The reason column is dense in places too, six policy sections cited back to back on one row, closer to an audit trail than a department owner wants to read, and both are why this lands at 5/7 instead of 6.
 
 ## 5. Instruction following
 
@@ -48,7 +48,7 @@ The Teams post went out live rather than as a draft, every Gmail draft carries a
 **Rating:** 5/7
 **Steering needed:** none, the run completed unattended from the opening plan to the final summary
 **Additional editing before I'd use it:** the three "retain, out of scope" rows would need a wording pass before I'd hand the tracker to anyone else
-**Commentary:** The run never needed me to jump in, and its closing message states it went back and visually rechecked the tracker and drafts before handing the summary back, a real check of its own work rather than a claim the actions fired. That check still has gaps though. It never reconciled the recheck against the wording in the decision column, so the labelling gap between standards and out of scope tools survived its own review. The draft recheck also only confirms five items exist under Drafts with the right note attached. It stops short of checking that each one's figures and tool names actually match the tracker. Presence is not correctness, and both gaps are why this stays at 5/7.
+**Commentary:** The run never needed me to jump in, and its closing message states it went back and visually rechecked the tracker and drafts before handing the summary back, a real check of its own work rather than a claim the actions fired. That check still has gaps though. It never reconciled the recheck against the wording in the decision column, so the labelling gap between standards and out of scope tools survived its own review. The draft recheck also only confirms the drafts exist under Drafts with the right note attached. It stops short of checking that each one's figures and tool names actually match the tracker. Presence is not correctness, and both gaps are why this stays at 5/7.
 
 ## 7. Citation quality
 
@@ -60,7 +60,7 @@ The tracker's dollar figures trace back to specific inputs I could check myself,
 
 **Rating:** 5/7
 
-Email drafting is the part of this run that happened on screen, since the sheet, ticket, and channel work went through direct tool calls instead of clicking through a page. Each draft needing a blank recipient field has one, and the subject lines and department targeting land correctly. Compose windows were left stacked on top of each other rather than closed one at a time, partly covering the drafts list underneath. The browser window also shrinks partway through the session, so the last capture shows a much smaller frame with the compose pane filling nearly the whole view instead of floating over the inbox like the earlier ones did, and either one would need tidying before anyone opened that mailbox.
+Email drafting is the part of this run that happened on screen, since the sheet, ticket, and channel work went through direct tool calls instead of clicking through a page. Each draft needing a blank recipient field has one, and the subject lines and department targeting land correctly. Compose windows were left stacked on top of each other rather than closed one at a time, partly covering the drafts list underneath. The browser window also shrinks partway through the session, so by the end it shows a much smaller frame with the compose pane filling nearly the whole view instead of floating over the inbox like it did earlier, and either one would need tidying before anyone opened that mailbox.
 
 ## 1. Overall task success
 

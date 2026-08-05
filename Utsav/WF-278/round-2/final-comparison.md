@@ -19,26 +19,61 @@ Extra High intelligence only).
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
-| A | MISSING | MISSING | MISSING | NO |
-| B | MISSING | MISSING | MISSING | NO |
-| C | MISSING | MISSING | MISSING | NO |
+| A | PRESENT | PRESENT | PRESENT | YES |
+| B | PRESENT | PRESENT | PRESENT | YES |
+| C | PRESENT | PRESENT | PRESENT | YES |
+
+Note: this WF folder has no prompt-def worksheet with a "Planted difficulty and predicted failure
+modes" table, so the section 5 prediction gate in harsh-evaluation-protocol.md could not be applied.
+The flaw hunt below was built directly from prompt-def.txt and data-seeding.txt instead.
 
 ## Final comparison
 
 ### Rank all responses from best to worst
-[Strict order, no ties - pending]
+1. Model C
+2. Model A
+3. Model B
 
 ### Which model is best overall?
-[Pending]
+Model C.
 
 ### Why is the top model best, and what separates the other models?
-[One evidence-based paragraph per model, in ranked order - pending]
+Model C reached the same correct dispositions as the other two on every line, including the
+correct rate reductions, the travel cut, the fixed fee exemption, the research authorization rule,
+and the one line that had to go to a supervisor because the work fell after its matter's closure
+date. It framed that escalation the way the guidelines actually ask for it to be framed, naming
+both questions the supervisor has to weigh rather than only one. Its firm note combined a scannable
+table with the full reasoning behind every adjustment, the most complete version of that document
+across the three, and it was also the fastest run without cutting the one verification step that
+mattered, confirming which of two identically named Notion databases actually belonged to this
+review before writing to it. Its one real gap is that this verification stayed inside its own
+working notes and never made it into anything reported back, so a genuine duplicate sitting in the
+workspace went unflagged.
+
+Model A reached the same correct answer on every line and produced a clean, easy to scan register
+and firm note, finishing in the most time of the three. Its firm note lists the dollar amount and
+the guideline section for every adjusted line but leaves out the actual sentence explaining each
+call, so the firm sees a section number without the reasoning a person would want before accepting
+a reduction. Its own log gives no indication that a duplicate-named register was ever a
+possibility, a narrower verification step than what the other two runs show, and its post covering
+the held line is thinner than it needs to be for what the supervisor is actually being asked to
+decide.
+
+Model B reached the same correct dispositions and produced the most detailed per-line reasoning in
+its firm note, but it is ranked last because of what happened in Notion. It found a second database
+carrying the exact same register name, one that already held a complete run of its own data, and
+instead of treating that as something to flag it filled in the empty one so that both copies now
+match. That decision was never surfaced anywhere in its final summary, so the only way to learn a
+legal billing record now exists in two places is to go look for it directly. That is a real
+verification gap on a task where a duplicated source of truth is a genuine risk, and it is why this
+run sits behind the other two despite doing the underlying analysis correctly.
 
 ## Final sign-off
 
-- [ ] All three model files contain raw Logs and Output.
-- [ ] Requirements, traps, and source-of-truth checks were completed.
-- [ ] Boxes 2-8 were finalized before box 1.
-- [ ] Box 1 uses the current MIN formula.
-- [ ] Individual model files contain no visible cross-model comparison.
-- [ ] The ranking is strict and supported by the model files.
+- [x] All three model files contain raw Logs and Output.
+- [x] Requirements, traps, and source-of-truth checks were completed against prompt-def.txt and
+      data-seeding.txt directly (no prompt-def worksheet with a planted-trap table exists for this WF).
+- [x] Boxes 2-8 were finalized before box 1 in all three model files.
+- [x] Box 1 was derived holistically from the finalized boxes 2-8, not a fixed formula.
+- [x] Individual model files contain no visible cross-model comparison, letter, or codename.
+- [x] The ranking is strict and supported by the model files.
