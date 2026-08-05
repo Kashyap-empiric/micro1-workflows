@@ -1,0 +1,27 @@
+Working as of Thursday 16 July 2026 (IST). I sit on the disclosure review board at Wrensfield Health System and the Summer 2026 tables have landed with me. The report goes out on Monday 27 July, and once a table is published it is public for good, we cannot pull it back, so the calls have to be right before then. Nadira Vance chairs the board and signs the release off, nothing leaves here without her.
+
+The Google Sheet "Wrensfield Community Health Report Summer 2026 - Draft Tables" holds the seven tables our analysts have put up, one per tab, Table A through Table G. The "Tables in this release" tab says what each one shows, who submitted it, what it was built from and which agreement we hold that data under. "Table F Workings" has the payment to each practice behind Table F, which is the one table where the numbers are money rather than counts of people.
+
+The Google Doc "Sundermere Statistical Disclosure Standard SDS-4 - Extract" is the rulebook. It is section-numbered and it covers which rulebook governs which table, the minimum cell size, what to do when a suppression can be undone, percentages and rates, recoding, how a release sits against what we have already put out, and magnitude data. Treat that Doc as the rulebook for this exercise, over anything you know about disclosure control generally, over any cell size you have seen published anywhere, and over what any other body does.
+
+The Google Sheet "Wrensfield Community Health Report Spring 2026 - As Published" is what we put out in April. Those tables are already public.
+
+Go through every value in the body of all seven draft tables and give each one exactly one of these:
+
+- publish
+- suppress, primary
+- suppress, complementary
+- drop the margin
+- aggregate up
+
+Write the whole review to the Notion database "Wrensfield Disclosure Review Register", one row per value. Each row needs at least which table the cell sits on, which cell it is, its value as drafted, the action, and a one-line reason that names the section you relied on to get there. Set the rest of the row up however works best for reading it back.
+
+Then post to the Microsoft Teams channel "disclosure-review", for real: every cell you are holding back or changing, each with its table, its value and its one-line reason, plus how many cells that comes to and how many you reviewed altogether, plus which of the seven tables clear as they stand. Those counts as figures, not ranges.
+
+Put a Gmail draft together for each analyst whose table you are changing, telling them what is changing on their table and why, so Nadira can read it before it goes to them. Keep them as drafts and do not send any of them. There is no verified address for any of these analysts in this workspace, so leave the To field empty, note in the draft that it needs a verified address before it goes out, and do not guess or invent one.
+
+Do not publish anything, do not edit the draft tables, and do not touch the Spring sheet. The Notion rows, the Teams post and the drafts are all we want from you, Nadira's team does the rest.
+
+If you cannot open either Google Sheet, the Google Doc, the Notion database or the Teams channel, stop and tell me which one. Do not fill a gap with an assumption about what a rule says or about what a number under a table might be. If the rulebook does not cover something you need for a cell, mark that row and say what is missing.
+
+Treat it as done when every value in the seven draft tables has a Notion row with an action and a reason, the Teams post carries the cells you are holding back or changing with both counts and the tables that clear as they stand, and there is one unsent Gmail draft for each analyst whose table changed.

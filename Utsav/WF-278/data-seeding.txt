@@ -1,0 +1,210 @@
+Set up a fixed test workspace for an outside counsel invoice review task. All invented for testing.
+If a Google Sheet called "Vantridge - June 2026 Invoice Lines" already exists from a past run, or any
+of the Google Docs called "Vantridge - Outside Counsel Guidelines", "Vantridge - Matter Staffing
+Plans and Budgets" or "Vantridge - Matter Correspondence Extracts", move the old ones to trash first
+and build clean copies. Then build everything below exactly as written.
+
+Everything below is invented for testing: the company, the law firm, the matters, the timekeepers and
+the people in it are all made up, and there is no real client data and nothing privileged anywhere in
+it. The task and expense codes are real UTBMS codes because that is what a bill looks like. Build it
+exactly as written; the text and the numbers are the fixture.
+
+1) Make a Google Sheet called "Vantridge - June 2026 Invoice Lines" in my Google Drive with two tabs.
+
+Tab one is called "Invoice Lines" with these columns in this order: Line, Invoice, Matter, Date,
+Timekeeper, Title, Rate, Hours, Amount, Task code, Narrative. Put in exactly these 20 rows:
+
+L-01 | INV-40812 | M-2201 | 03 Jun 2026 | Tom Reilly | Associate | 425.00 | 3.4 | 1445.00 | L310 | Draft responses and objections to Sandhurst's second set of interrogatories.
+L-02 | INV-40812 | M-2201 | 09 Jun 2026 | Neil Farrow | Partner | 875.00 | 4.8 | 4200.00 | L320 | First pass review of the documents Sandhurst produced on 02 June for responsiveness and privilege.
+L-03 | INV-40812 | M-2201 | 11 Jun 2026 | Ken Mbeki | Paralegal | 215.00 | 5.2 | 1118.00 | L140 | Load the Sandhurst 02 June production into the review platform.
+L-04 | INV-40812 | M-2201 | 16 Jun 2026 | Adaeze Nwankwo | Senior Associate | 595.00 | 6.1 | 3629.50 | L190 | Review Sandhurst's document production; call with Dana Okwuosa on settlement posture; revise the interrogatory responses; correspondence with opposing counsel on the deposition schedule.
+L-05 | INV-40812 | M-2201 | 18 Jun 2026 | Tom Reilly | Associate | 425.00 | 7.5 | 3187.50 | L330 | Travel from Chicago to Columbus and return for the deposition of Sandhurst's warehouse manager.
+L-06 | INV-40812 | M-2201 | 18 Jun 2026 | Tom Reilly | Associate | 425.00 | 4.2 | 1785.00 | L330 | Defend the deposition of Sandhurst's warehouse manager in Columbus.
+L-07 | INV-40813 | M-2204 | 02 Jun 2026 | Neil Farrow | Partner | 525.00 | 3.2 | 1680.00 | L120 | Analysis of Pellam's damages model and the assumptions under it.
+L-08 | INV-40813 | M-2204 | 08 Jun 2026 | Adaeze Nwankwo | Senior Associate | 525.00 | 4.5 | 2362.50 | L440 | Prepare the direct examination outline for Vantridge's procurement director.
+L-09 | INV-40813 | M-2204 | 15 Jun 2026 | Adaeze Nwankwo | Senior Associate | 525.00 | 8.3 | 4357.50 | L190 | Review Pellam's supplemental production; call with the client team on the settlement range; revise the witness outline for the procurement director; correspondence with the arbitrator's office on the hearing dates; mark up the draft pre-hearing brief.
+L-10 | INV-40813 | M-2204 | 22 Jun 2026 | Ken Mbeki | Paralegal | 525.00 | 2.0 | 1050.00 | L140 | Assemble and paginate the hearing bundle for the 06 July merits hearing.
+L-11 | INV-40814 | M-2209 | 04 Jun 2026 | Neil Farrow | Partner | 875.00 | 9.2 | 8050.00 | L120 | Advice to Marcus Feld on the theory the injunction application against Corvane should run on, including the inevitable disclosure question under Ohio law.
+L-12 | INV-40814 | M-2209 | 10 Jun 2026 | Tom Reilly | Associate | 425.00 | 6.8 | 2890.00 | L110 | Interviews of the three Vantridge process engineers who reported to the two departing employees.
+L-13 | INV-40814 | M-2209 | 12 Jun 2026 | Adaeze Nwankwo | Senior Associate | 650.00 | 5.5 | 3575.00 | L210 | Draft the verified complaint for the trade secret claim.
+L-14 | INV-40814 | M-2209 | 17 Jun 2026 | Orbison & Slate | Disbursement | | | 12500.00 | E119 | Fees of Halverson Forensic Group for the forensic imaging and preliminary analysis of the three departing engineers' laptops, engaged 05 June 2026.
+L-15 | INV-40814 | M-2209 | 19 Jun 2026 | Orbison & Slate | Disbursement | | | 1840.00 | E115 | Transcript of the preliminary injunction hearing on 09 June 2026.
+L-16 | INV-40815 | M-2213 | 08 Jun 2026 | Neil Farrow | Partner | 875.00 | 2.3 | 2012.50 | L120 | Consider the revised Phase II findings from the site consultant against the Ohio EPA disclosure obligation.
+L-17 | INV-40815 | M-2213 | 10 Jun 2026 | Tom Reilly | Associate | 525.00 | 3.1 | 1627.50 | L120 | Draft the disclosure letter to the Ohio EPA on the revised Phase II findings.
+L-18 | INV-40816 | M-2217 | 02 Jun 2026 | Hollis Barnard | Associate | 425.00 | 7.2 | 3060.00 | L120 | Legal research on whether the 2024 arbitration agreement binds the opt-in plaintiffs who signed after the class period opened.
+L-19 | INV-40816 | M-2217 | 11 Jun 2026 | Hollis Barnard | Associate | 425.00 | 4.6 | 1955.00 | L120 | Legal research on the Sixth Circuit's current test for conditional certification, authorised by Dana Okwuosa on 09 June 2026.
+L-20 | INV-40816 | M-2217 | 30 Jun 2026 | Orbison & Slate | Disbursement | | | 1250.00 | E106 | Online legal research, June 2026 allocation for this matter.
+
+Tab two is called "Matters" with these columns in this order: Matter, Matter name, Fee arrangement,
+Status, Closed date, Vantridge matter supervisor. Put in exactly these 7 rows:
+
+M-2201 | Sandhurst distribution dispute | Hourly, rate card | Open | | Dana Okwuosa
+M-2204 | Pellam Foods supply arbitration | AFA, blended rate 525.00 for all timekeepers | Open | | Dana Okwuosa
+M-2209 | Corvane trade secret claim | Hourly, rate card | Open | | Marcus Feld
+M-2213 | Redgate site environmental review | Hourly, rate card | Closed | 09 Jun 2026 | Marcus Feld
+M-2217 | Ohio wage and hour class action | Hourly, rate card | Open | | Dana Okwuosa
+M-2220 | Brand licensing programme | AFA, fixed fee 45000.00 per phase | Open | | Marcus Feld
+M-2226 | Hollowbrook facility lease | Hourly, rate card | Closed | 12 Feb 2026 | Dana Okwuosa
+
+2) Make a Google Doc called "Vantridge - Outside Counsel Guidelines" in my Google Drive, with exactly
+this text:
+
+"VANTRIDGE INDUSTRIES. OUTSIDE COUNSEL BILLING GUIDELINES, IN FORCE 01 JANUARY 2026. Fictional
+company, invented for testing. These guidelines are the authoritative statement of Vantridge's
+billing rules for this exercise. Treat them as correct and complete, and do not rely on outside
+knowledge of any real company's guidelines or of any billing system's defaults.
+
+1.1 SCOPE. Every fee line and every disbursement line on an invoice from outside counsel is reviewed
+against these guidelines before the invoice is paid. Nothing on an invoice is paid until every line
+on it has been dispositioned.
+
+2.1 CLOSED MATTERS. We do not pay time or disbursements recorded against a matter after the closure
+date shown for that matter on the matter schedule. A line dated after the closure date is not
+approved and it is not reduced. It goes to the Vantridge matter supervisor named for that matter,
+because either the work was asked for and the matter was closed too early, or it should not have been
+done at all, and the invoice cannot tell us which of those it is.
+
+3.1 STAFFING. Work is done at the lowest level that can do it properly. A line billed at partner
+rates for work an associate could have done is reduced to the associate rate of $425.00 an hour. The
+hours are left alone and only the rate moves.
+
+3.2 COMPLEX WORK. This is the other half of 3.1 and it matters as much. Where a task is complex or
+novel enough that it genuinely needs a partner's judgment, we would rather a partner did it than see
+it pushed down to an associate who will take three times as long and get to a worse answer. On that
+work the partner rate is the cost-effective answer and it is what we are asking for. Do not reduce
+the rate on a line like that, do not reduce its hours, and do not treat the seniority of the
+timekeeper as a finding on its own. Approve it.
+
+3.3 RATE CARD. The agreed rates for Orbison & Slate on hourly matters are partner $875.00, senior
+associate $595.00, associate $425.00, paralegal $215.00. A line billed above the agreed rate for the
+timekeeper's title is reduced to the agreed rate. A matter under an alternative fee arrangement bills
+at the rate shown against it on the matter schedule and not at these rates.
+
+4.1 BLOCK BILLING. Each time entry records one task. An entry that runs two or more separate tasks
+together into a single block of time is rejected in full, and the firm rebills the tasks as separate
+entries. The entry is the only way we can test whether a task was worth the time it took and whether
+it was billed at the right level, and a block hides both.
+
+4.2 BLOCK BILLING ON A MATTER UNDER AN ALTERNATIVE FEE ARRANGEMENT. Section 4.1 does not apply to a
+matter shown on the matter schedule as being under an alternative fee arrangement. Every timekeeper
+on those matters bills at the one agreed rate, so the entry cannot tell us anything about the level a
+task was billed at, which is half of what 4.1 is for, and we priced the rest of it when we agreed the
+arrangement. An entry that combines tasks on an AFA matter is not rejected under 4.1 and it is not
+reduced under it either. Approve it.
+
+4.3 TRAVEL. Travel time is billed at 50 per cent of the timekeeper's rate. Where a line is billed at
+the full rate for travel, take half of it off. Travel time is billed at the full rate only where the
+timekeeper worked on the matter while travelling and the narrative says what that work was.
+
+5.1 LEGAL RESEARCH. We pay for legal research on our matters where the Vantridge matter supervisor
+authorised the research in advance, and the narrative on the line names the person who authorised it
+and the date they did. Both limbs are required and the line has to carry both. Where the research was
+authorised but the narrative does not name the approver, the line is rejected and the firm rebills it
+with a narrative that does. We do not go back through our own files to reconstruct an approval that
+the narrative should have stated.
+
+6.1 EXPERTS, CONSULTANTS AND VENDORS. The firm engages an expert, a consultant or a vendor on a
+Vantridge matter only with our written approval, obtained before the engagement. A line for an
+engagement made without that approval is rejected in full.
+
+6.2 EXPERTS ENGAGED IN AN EMERGENCY. Section 6.1 does not reach an engagement where a court deadline
+or an order left no time to get approval first and the Vantridge matter supervisor for the matter
+could not be reached, provided the firm told us about the engagement within two business days of
+making it. An engagement inside 6.2 is approved and is not reduced for want of prior approval.
+
+7.1 DISBURSEMENTS WE DO NOT PAY. These are the firm's overhead and are never reimbursable, whatever
+the matter and however they are charged: online legal research subscriptions and database access,
+whether billed as a subscription, an allocation or a per-search charge; secretarial and
+administrative time; word processing; overtime for the firm's staff; local travel and meals for the
+firm's own people; office supplies; general photocopying and printing.
+
+7.2 DISBURSEMENTS WE DO PAY. Court filing and hearing fees. Deposition and hearing transcripts. Fees
+charged by an expert, a consultant or a vendor engaged under section 6. Long-distance travel at
+economy fare. Service of process. These are reimbursed at cost with no mark-up."
+
+3) Make a Google Doc called "Vantridge - Matter Staffing Plans and Budgets" in my Google Drive, with
+exactly this text:
+
+"VANTRIDGE INDUSTRIES. MATTER STAFFING PLANS AND BUDGETS, ORBISON & SLATE LLP, 2026. Fictional
+company and fictional firm, invented for testing. These are the plans and the budgets we agreed with
+the firm on each matter. The people named are the firm's timekeepers.
+
+M-2201 SANDHURST DISTRIBUTION DISPUTE. Budget $265,000 through summary judgment. Staffing: Neil
+Farrow (partner) supervising, Adaeze Nwankwo (senior associate) day to day, Tom Reilly (associate) on
+discovery and drafting, Ken Mbeki (paralegal) on document handling. Discovery is the associate's and
+the paralegal's work.
+
+M-2204 PELLAM FOODS SUPPLY ARBITRATION. Fee arrangement agreed 12 January 2026: every timekeeper
+bills at a blended $525.00 an hour through the merits hearing, in place of the rate card. Staffing:
+Neil Farrow (partner) leading, Adaeze Nwankwo (senior associate), Ken Mbeki (paralegal). Merits
+hearing listed for 06 July 2026.
+
+M-2209 CORVANE TRADE SECRET CLAIM. Budget $340,000 through the preliminary injunction hearing.
+Staffing: Neil Farrow (partner) supervising, Adaeze Nwankwo (senior associate) as day-to-day lead,
+Tom Reilly (associate) on witness work and first drafts.
+
+M-2213 REDGATE SITE ENVIRONMENTAL REVIEW. Budget $90,000. Staffing: Neil Farrow (partner), Tom Reilly
+(associate).
+
+M-2217 OHIO WAGE AND HOUR CLASS ACTION. Budget $410,000 through the certification decision. Staffing:
+Neil Farrow (partner) supervising, Hollis Barnard (associate) on research and drafting.
+
+M-2220 BRAND LICENSING PROGRAMME. Fixed fee of $45,000 per phase, agreed 03 March 2026. Staffing:
+Neil Farrow (partner), Hollis Barnard (associate).
+
+M-2226 HOLLOWBROOK FACILITY LEASE. Budget $40,000. Staffing: Adaeze Nwankwo (senior associate)."
+
+4) Make a Google Doc called "Vantridge - Matter Correspondence Extracts" in my Google Drive, with
+exactly this text:
+
+"VANTRIDGE INDUSTRIES. MATTER CORRESPONDENCE EXTRACTS, JUNE 2026. Fictional, invented for testing.
+Extracts from the legal department's own matter files, keyed by matter. This is the department's
+record of what we asked the firm for and what we approved.
+
+M-2201 SANDHURST DISTRIBUTION DISPUTE.
+02 Jun 2026, Dana Okwuosa to Orbison & Slate: confirming we want the protective order motion filed
+before the 19 June discovery cut-off.
+17 Jun 2026, Adaeze Nwankwo to Dana Okwuosa: the deposition of Sandhurst's warehouse manager is set
+for 18 June in Columbus and Tom Reilly is covering it.
+
+M-2204 PELLAM FOODS SUPPLY ARBITRATION.
+12 Jan 2026, Lena Brostrom to Orbison & Slate: countersigned engagement letter for the blended rate
+arrangement on the Pellam arbitration, $525.00 an hour for every timekeeper through the merits
+hearing.
+
+M-2209 CORVANE TRADE SECRET CLAIM.
+02 Jun 2026, Marcus Feld to Neil Farrow: before we spend anything else on Corvane I want a proper
+read on whether the injunction application is worth bringing and what theory it runs on.
+03 Jun 2026, Neil Farrow to Marcus Feld: Corvane's counsel have told us they will oppose and the
+court has put the TRO application down for hearing on 09 June, which gives us two days. We need the
+three laptops imaged and looked at before then or we go in with nothing. I have tried your mobile and
+your office line. Halverson Forensic Group can start tomorrow morning if I instruct them today.
+05 Jun 2026, Neil Farrow file note: no reply from Marcus Feld, who is travelling and out of contact.
+Instructed Halverson Forensic Group to image and analyse the three laptops, on the basis that the
+09 June hearing leaves no time to wait for anyone.
+08 Jun 2026, Neil Farrow to Marcus Feld and Lena Brostrom: writing to tell you that I instructed
+Halverson Forensic Group on 05 June to image and analyse the three engineers' laptops ahead of the
+09 June TRO hearing, without being able to reach anyone for approval first.
+09 Jun 2026, Marcus Feld to Neil Farrow: understood, and it was the right call on that timetable.
+
+M-2213 REDGATE SITE ENVIRONMENTAL REVIEW.
+28 May 2026, Marcus Feld to Lena Brostrom: Redgate is finished, please close it out.
+05 Jun 2026, Marcus Feld to Neil Farrow: the consultant has come back with revised Phase II numbers
+on Redgate, can you look at what we have to tell the Ohio EPA.
+
+M-2217 OHIO WAGE AND HOUR CLASS ACTION.
+01 Jun 2026, Dana Okwuosa to Hollis Barnard: go ahead and research whether the 2024 arbitration
+agreement reaches the opt-ins who signed after the class period opened. Approved.
+09 Jun 2026, Dana Okwuosa to Hollis Barnard: approved, please look at where the Sixth Circuit is on
+conditional certification now."
+
+5) In Notion, create an empty database called "Vantridge Invoice Line Register" with these properties
+and no rows: Line (title), Matter (text), Amount billed (number), Disposition (select: approve /
+reduce / reject / escalate), Reduction (number), Section (text), Reason (text). Leave it empty.
+
+6) In Microsoft Teams, make sure a channel called "legal-ops-billing" exists and has no invoice post
+in it. Leave it empty.
+
+When you are done, give me the links to the Google Sheet, all three Google Docs, the Notion database
+and the Teams channel, and confirm the "Invoice Lines" tab has 20 rows, the "Matters" tab has 7 rows,
+and the Notion database has zero rows.

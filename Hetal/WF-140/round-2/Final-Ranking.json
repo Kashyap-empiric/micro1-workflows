@@ -1,0 +1,18 @@
+{
+  "cycle": "WF-140",
+  "task": "SaaS Overlap and Consolidation Review",
+  "persona": "IT Operations Lead at a mid-size IT services company, owns the SaaS tool stack, vendor renewals and tooling governance, and files cleanup work into Jira.",
+  "models_evaluated": [
+    "A",
+    "B",
+    "C"
+  ],
+  "overall_ratings": {
+    "A": 4,
+    "B": 5,
+    "C": 5
+  },
+  "ranking_best_to_worst": "C > B > A",
+  "best_overall": "C",
+  "why_top_model_is_best_and_what_separates_the_others": "C reconciles every tracker row correctly, files the right tickets at the right figures, and does it on the fastest of the three timelines with no wrong actions anywhere in the run. Its tickets are the most transparent of the three on the actual seat and saving arithmetic, showing the calculation rather than just the result, and its channel summary is the easiest of the three to scan on a first read. It loses a little ground on scope discipline, its tickets each add a planning section that goes past naming the tools, the target, and the saving into effectively proposing a migration project, near identical across all four tickets regardless of how different the opportunities are, which is real content this review was not asked to produce.\n\nB reconciles just as correctly and finishes in close to the same time, with a closing check that names specific facts it verified rather than a vague claim of completion. The channel summary is dense enough that the interface collapses it behind a toggle before it can be read, and one department email states a combined savings figure that does not appear anywhere else in the tracker, the tickets, or the channel post, so there is nothing to check it against beyond redoing the arithmetic by hand.\n\nA also reconciles every figure correctly and produces a channel summary and a set of department emails that read cleanly, but it took roughly double the time of the other two to get to the same result, and its own narration shows why, a heavy pass through several reference documents before any real work on the tracker began. The tracker's decision column also uses the same wording for genuine category standards and for tools that were simply out of scope, a labelling choice that blurs a distinction the other two keep clean. Correct work delivered this much slower, with a column that needs a wording pass before anyone else reads it, is what settles it at the bottom of the three."
+}

@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-310",
+  "model": "A",
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "RAG Retrieval Complementarity and Fusion Analysis",
+  "persona": "Data Scientist at a mid sized IT firm.",
+  "metadata": {
+    "occupation": "Data Scientist",
+    "manual_baseline_minutes": 240,
+    "runs_per_month": 1.5,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 3
+  },
+  "shared_context": "All three runs classified the same 84 queries against the source rankings, correctly separated the six disputed queries, split genuine corpus gaps from plain retrieval misses, and produced the same category summary (exact-match 35, semantic 10, mixed 27, no-coverage 12) and the same fusion result, alpha = 0.5 as the unique optimum, BM25 66.67%, dense 36.90%, hybrid 79.76%, a 116.13% relative improvement over dense. Each filed the same eight corpus-gap Jira tickets plus one hybrid-retrieval recommendation ticket, left the same four queries as Sheet-only retrieval misses, and touched no production retrieval settings. Where they diverged is whether a run actually opened its own finished sheet to check how it renders before calling itself done, how completely its tickets traced individual queries back to specific source chunks, and how much time it burned getting to an otherwise identical result.",
+  "run_time": "7 (6m 49s)",
+  "suggested_field6": 3,
+  "suggested_field6_reason": "The underlying numbers are entirely correct, and the ticket record names its own source files directly, a genuine strength worth crediting.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 3,
+      "commentary": "The underlying numbers are entirely correct, and the ticket record names its own source files directly, a genuine strength worth crediting. Against that, the total time this took is well out of proportion to a task that is fundamentally one bounded computation and a fixed set of writes, and the extra minutes bought a repeated check that found nothing rather than a proportionally deeper result. A real efficiency drag like that has to cost something even when the deliverable itself is sound, and combined with a citation gap in how the tickets trace individual cases, this settles at 3 rather than higher."
+    },
+    "task_accuracy": {
+      "rating": 5,
+      "commentary": "Working back from the source rankings myself, every query lands in the bucket it should, the disputed rows are flagged rather than quietly settled, and the corpus gap flag never gets confused with a plain retrieval miss anywhere in the eighty four rows. The sweep across the full weighting range picks the right optimum, and the recall and improvement figures both hold up against my own recompute. The one thing missing from an otherwise complete analysis is any legend or methodology note inside the sheet itself explaining what the categories mean or how the fusion score is built, so the document only makes full sense to someone who also has the original prompt in front of them. That is a real completeness gap even with flawless numbers underneath it."
+    },
+    "efficiency": {
+      "rating": 3,
+      "end_to_end_time_minutes": "about 7",
+      "wrong_actions_recovery": "none wrong, though the same summary tab gets opened and read a second time without turning up anything new before the check is called done",
+      "commentary": "About seven minutes end to end is well past what a bounded computation over a fixed query log and a fixed set of writes should need, and the extra time does not buy a proportionally larger result. It does include a pass at opening the rendered sheet to look for layout problems, which is a real and useful step, but that pass turns up nothing and gets repeated on the same tab without new information before moving on. A repeated look at the same screen with no new finding is exactly the kind of drag that adds minutes without adding value, and on a task this bounded the total time should track the scope more closely than it does here."
+    },
+    "writing_quality": {
+      "rating": 4,
+      "commentary": "The closing message lays out the retrieval numbers, the full sweep, and the category rollup each in their own clearly labeled table, and nothing in it is hard to follow. The tradeoff is that presenting the headline recall figures and then the full sweep as two separate tables means the same optimal weight row effectively gets repeated with overlapping numbers rather than the second table building cleanly on the first, so a reader ends up reconciling two tables that mostly say the same thing. A single synthesizing sentence connecting the two would have tightened this considerably. It reads competently but a bit more like a data dump than a considered narrative."
+    },
+    "instruction_following": {
+      "rating": 5,
+      "commentary": "Every explicit constraint in the brief gets honored here, the row count, the ban on merging similar queries, the boundary against altering production retrieval, and the separation of a corpus gap from a retrieval miss that only happened to miss in the top five. Computing recall within each category admits more than one reasonable reading, using the category's own count as the base versus the whole log, and this run picks an interpretation without ever naming that a choice had to be made. The choice happens to be the sound one, but a genuine ambiguity resolved silently is still a small instruction following gap rather than a flagged judgment call, which is why this stays at 5."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 4,
+      "steering_needed": "none, it ran unattended from the single prompt straight through to completion",
+      "additional_editing": "very little on substance, mostly tightening the repeated tables in the closing summary before I circulated it anywhere",
+      "commentary": "Beyond just trusting the connector, this run actually opened the finished sheet and looked at the rendered tabs before calling itself done, which is a real content level check rather than a confirmation that a write request succeeded. That is genuine thoroughness. The gap is that the second look at the same tab found nothing new, so the extra verification pass added time without adding confidence beyond what the first pass already established. Checking a finished deliverable is good practice, but repeating an identical check with no reason to suspect the first pass missed something does not amount to catching a real problem."
+    },
+    "citation_quality": {
+      "rating": 4,
+      "commentary": "Both tickets I opened name the exact source files behind the analysis directly in the ticket body, a concrete and traceable habit, and every headline number traces cleanly back to the source when I check it myself. Where this comes up short is that the related query and chunk identifiers in the recommendation record are listed as one undifferentiated block rather than mapped to which specific hybrid recovery or which specific retrieval miss each one supports, so tracing an individual case still takes manual work. The improvement is also reported only as a relative percentage, without the plain point gap alongside it."
+    },
+    "gui_action_correctness": {
+      "rating": 4,
+      "commentary": "The rendered sheet gets opened and read correctly, with no wrong clicks or misdirected navigation anywhere in the pass, and both tabs come back confirmed legible at normal zoom. The one real weakness is that the same tab gets reopened and inspected a second time without anything changing in between, so the second pass adds a navigation step without adding new visual evidence. A single, well aimed look at each tab would have covered the same ground more efficiently than the repeated pass this run actually took."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > B > A",
+  "cycle_best_overall": "C"
+}

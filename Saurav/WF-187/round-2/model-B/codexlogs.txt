@@ -1,2 +1,130 @@
-[Complete raw session transcript - not yet captured]
+Worked for 9m 56s
 
+
+I’ll read the attached request first, then inspect the relevant repositories and carry out the requested prompt-drift checks end to end.
+
+
+
+
+Read Run the weekly LLM prompt drift check across Cahuu's four codebases (the Python…
+
+
+
+I’m applying the GitHub, Supabase, Google Sheets, Teams, Teams-messaging, and Chrome-control workflows because this run requires authenticated access checks, production-log analysis, a live report, Jira/Teams updates, and a browser fallback if an integration is unavailable. Before inspecting any repository or production data, I’ll verify access to every required system and stop immediately if any prerequisite is missing.
+
+
+
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo and Codex Apps integrations, loaded tools, read files, ran a command
+
+
+All required access checks passed: the four GitHub repositories, the exact Supabase table, the editable report in its correct Drive folder, Jira project CPG with create/edit access, and posting rights in the specified Teams channel. I’ve fixed the production window at 2026-07-28 00:00 UTC through 2026-08-04 00:00 UTC and will now freeze each repository at its latest eligible commit before inspecting prompts or logs.
+
+
+
+
+Used Supabase integration, ran commands
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Google Drive, GitHub and Codex Apps integrations, ran commands
+
+
+The repositories are now pinned to four immutable commits, and I’ve identified four prompt families across ten source files. The production logs already show one important deployment mismatch: the Python support prompt is current in code but production served an older tagged version; I’m also checking a Teams-integration limitation because existing channel posts are returned without readable message bodies.
+
+
+
+
+I’m also applying the OpenAI-documentation workflow for the OpenAI model checks, while using official Anthropic documentation for the Claude prompt guidance.
+
+
+
+
+Used Chrome, GitHub and Codex Apps integrations, loaded a tool, searched the web
+
+
+The audit has resolved four families: support, receipt extraction, thread summarization, and a FlutterFlow-only vendor-copy prompt. Three families have meaningful cross-platform drift; I also confirmed one obsolete manual-JSON workaround, three references to a Claude model family that Anthropic has already retired, and the Python support deployment lag affecting 412 production calls.
+
+
+
+
+Used Atlassian Rovo and Google Drive integrations
+
+
+The Google Sheet now contains all ten platform-specific prompt records and all ten model checks, including the single-source vendor family and both no-traffic mobile cases. I’m updating the existing support ticket and preparing separate receipt/thread tickets; the receipt and thread tickets will keep wording/output fixes distinct from model-pattern or model-lifecycle fixes.
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Createjiraissue
+
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Used Chrome integration
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Codex Apps integration
+
+
+All three required Jira issues are now verified as unassigned and in “To Do”: the existing support issue was refreshed, and new receipt/thread issues were created. I also checked the Teams channel both through the integration and the signed-in Chrome session; there is no existing post for this report or production window, so I’m about to publish the engineering notification.
+
+
+
+
+Used Google Drive and Codex Apps integrations
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+
+
+Used Chrome and Google Drive integrations
+
+
+
+
+
+Completed: 4 prompt families checked; 3 meaningfully diverged; 1 deprecated prompting pattern; 3 Jira tickets created or updated. Also identified three retired Claude model references and 412 Python support requests serving an outdated prompt.
+UTC window: July 28–August 4, 2026, end exclusive.
+Repository commits:
+Backend: 37031bccae0b1470cfb580cebd761e5d4565ab4d
+Web: 33bd4ad6d5d453eca6fd2213b47069920d743b89
+Mobile: f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow: 40987da6088bd838e13164800225f265de525f7b
+Google Sheet · CPG-34 · CPG-35 · CPG-36 · Teams notification
+Additional critical finding: Row-level security is disabled on two Supabase tables. Remediation requires appropriate access policies before enabling RLS:

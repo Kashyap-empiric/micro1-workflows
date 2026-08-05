@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-140",
+  "model": "A",
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "SaaS Overlap and Consolidation Review",
+  "persona": "IT Operations Lead at a mid-size IT services company, owns the SaaS tool stack, vendor renewals and tooling governance, and files cleanup work into Jira.",
+  "metadata": {
+    "occupation": "Computer Systems Analyst",
+    "manual_baseline_minutes": 200,
+    "runs_per_month": 4,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 3
+  },
+  "shared_context": "All three runs read the same SaaS tracker, SSO report, renewal quotes, and governance policy, correctly reconciled every one of the 20 tracker rows, computed the same USD 140,340 total spend and USD 56,220 total saving, filed the same four Jira tickets (Slack to Microsoft Teams, Asana and Trello to Jira, Toggl Track to Harvest, Dropbox Business to OneDrive) plus the Pipedrive to HubSpot opportunity recorded on the tracker only, left Figma, Adobe XD, and Loom unresolved rather than guessing, posted a live Teams summary, and created five blank-recipient Gmail drafts with no cancellation, licence change, or vendor contact anywhere. Where they diverge is run time, labelling clarity in the tracker's decision column, how cleanly the citation trail separates sourced figures from added planning language, and whether every claimed figure actually appears somewhere else in the record to check it against.",
+  "run_time": "12 (11m 33s)",
+  "suggested_field6": 4,
+  "suggested_field6_reason": "Every requested artifact exists and checks out against the real source data, the tracker, the tickets, the live post, and the drafts all land on the same correct figures with no invented target and no guessed saving where the policy gave no answer, and on correctness alone this would sit higher.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 4,
+      "commentary": "Every requested artifact exists and checks out against the real source data, the tracker, the tickets, the live post, and the drafts all land on the same correct figures with no invented target and no guessed saving where the policy gave no answer, and on correctness alone this would sit higher. What pulls it down a full point is the run time, which ran to roughly double what this same tracker and deliverable set needed, driven by a heavy upfront reading pass before any real work started. That is a substantial delay, not a difference of a couple of minutes, and it counts as real efficiency drag. The labelling choice that blurs standards from exclusions in the tracker is a second, smaller reason this stays at 4/7."
+    },
+    "task_accuracy": {
+      "rating": 5,
+      "commentary": "Every tracker row landed on the correct call when checked against the policy and the source data myself, including the two boundary cases planted in the setup, the renewal that sits exactly on the freeze cutoff and the whiteboarding tool with a foreign currency quote. The grouped project management opportunity is threshold tested as a group rather than per tool, the correct read. The real gap sits in the decision column, where three excluded tools get the same \"retain\" wording used for the actual category standards, so a reader skimming that column cannot tell a genuine standard from a tool that was simply out of scope. Nothing in the underlying figures is wrong, but that labelling choice muddies a column meant to be read at a glance, which is why this sits at 5/7."
+    },
+    "efficiency": {
+      "rating": 4,
+      "end_to_end_time_minutes": "12",
+      "wrong_actions_recovery": "none, the run went straight through to the deliverable without a failed step or a redo",
+      "commentary": "The run finished cleanly with no wrong turns, but it opened by reading through five separate tool reference documents in full before starting any actual work on the tracker, a heavier upfront pass than the task needed given how directly the policy maps onto the tracker rows. That early overhead alone accounts for a large share of the total time on a tracker of this size. Nothing after that point was wasted, the middle of the run moves straight through policy reconciliation, ticket filing, and the sheet write back without repeating a step, but the slow start on its own is enough to keep this out of the top band."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "The finance and ops summary is genuinely easy to scan, a short headline block of the two topline figures followed by grouped bullets for filed tickets, the item recorded on the tracker only, and the calls flagged as higher risk. The Gmail drafts read like something a person would actually send, each one names the specific tools and the identity numbers behind the math, and closes with the required line noting a verified address is needed, without sounding templated. The one place this drops is the tracker's own reason column, dense enough in places, six policy section numbers cited back to back on a single row, that it reads more like an audit trail than something a department owner would want to read, which is why this lands at 5/7 instead of 6."
+    },
+    "instruction_following": {
+      "rating": 5,
+      "commentary": "Every explicit constraint in the request is met, the Teams post went out live rather than as a draft, every Gmail draft has a blank recipient field with the required note that a verified address is needed, and nothing was cancelled, no licence touched, no vendor contacted. Tools without a policy answer were logged as unresolved rather than guessed, exactly what was asked. The one place it drifted from the letter of the request is the department email for design, which folds two separate tool changes into a single message rather than two fully separate messages the way the other four department emails do, an inconsistency in how the same instruction was applied across departments rather than a missed requirement."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 5,
+      "steering_needed": "none, the run completed unattended from the opening plan to the final summary",
+      "additional_editing": "the three \"retain, out of scope\" rows would need a wording pass before I'd hand the tracker to anyone else",
+      "commentary": "It ran the whole task without needing a single interjection and its own closing message states that it went back and visually rechecked the tracker and the Gmail drafts before handing the summary back, which is a real check of its own work rather than just a claim that the actions fired. What it did not do is reconcile that closing check against the specific wording choices in the decision column, so the labelling gap in the rows for tools that were simply out of scope survived its own review. Confirming outputs landed is not the same as confirming the column reads correctly, and that gap is what keeps this at 5/7."
+    },
+    "citation_quality": {
+      "rating": 5,
+      "commentary": "Every dollar figure in the tracker traces back to a specific input I could check myself, the identity report counts, the fresh quotes, and the spare seat arithmetic are all shown inline rather than asserted, and the two grouped project management rows tie back to the same combined figure used in the filed ticket. The one weak seam is the citation style itself in a few rows, where as many as six policy section numbers are strung together on a single line without distinguishing which clause actually drives that row's number versus which is background context, so an auditor has to do some of that separating work themselves rather than being handed it directly."
+    },
+    "gui_action_correctness": {
+      "rating": 5,
+      "commentary": "The email drafting itself is where this is gradable, since it happened on screen while the sheet, ticket, and channel work all went through direct tool calls rather than clicking through a page. Every draft that needed a blank recipient field has one, and the subject lines and department targeting are all correct, so nothing landed on the wrong account or the wrong draft. The visible weakness is in the screen state itself, multiple compose windows were left open stacked on top of each other rather than closed one at a time, which partly covers the underlying drafts list and would need a moment of tidying before anyone else looked at that mailbox, and that is why this is not higher."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > B > A",
+  "cycle_best_overall": "C"
+}

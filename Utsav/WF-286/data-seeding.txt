@@ -1,0 +1,799 @@
+Set up a fixed test workspace for an open-source contribution review task. All invented for testing. If a
+Google Sheet called "Halvard Outbound Contribution Queue - July 2026" already exists from a past run, or
+any of the Google Docs called "Halvard Systems - Outbound Contribution Policy", "Licence Texts - Grant
+Clauses" or "Halvard Systems - Contributor Agreement Terms", move the old ones to trash first and build
+clean copies. If a GitHub repo called "halvard-oss-review" already exists, delete it and build a clean
+one. Then build everything below exactly as written.
+
+Everything below is invented for testing: the company, the engineers, the target projects, the licences
+and the patents are all made up. There is no real company and no real code in it. The rule structure is
+the rulebook for the exercise. Build it exactly as written; the text and the numbers are the fixture.
+
+1) Make a Google Sheet called "Halvard Outbound Contribution Queue - July 2026" in my Google Drive with
+four tabs.
+
+Tab one is called "Request Queue" with these columns in this order: Request, Filed, Engineer, Target
+project, What the change does, Lines changed, Patch, Engineer's note. Put in exactly these 10 rows:
+
+RQ-2101 | 06 Jul 2026 | Nele Vandersteen | brackwater-config | Adds a null check so an empty config file comes back as an empty result instead of throwing | 12 | patches/RQ-2101.patch | Tiny thing, probably did not need to ask, but the handbook said file it so here it is.
+RQ-2102 | 06 Jul 2026 | Callum Devereux | brackwater-config | Adds a writer that renders a parsed config back out to disk, with tests | 940 | patches/RQ-2102.patch | This is a fair amount of code, took me most of a sprint. Happy to answer questions on any of it.
+RQ-2103 | 07 Jul 2026 | Yusuf Karam | ravensgill-index | Fixes the stemmer so hyphenated words index as one token | 34 | patches/RQ-2103.patch | We hit this in production last month and upstream have been asking for it for a while.
+RQ-2104 | 08 Jul 2026 | Tobias Lindqvist | kirkwall-batch | Fixes a race where two workers can both claim the same job after a heartbeat times out | 6 | patches/RQ-2104.patch | Six lines, it is a lock ordering thing. Nothing clever in it.
+RQ-2105 | 08 Jul 2026 | Marta Oyelaran | pellworth-gateway | Fixes the config loader so a missing timeout falls back to the default instead of zero | 8 | patches/RQ-2105.patch | Small one. A zero timeout meant every request failed instantly, took us a week to find.
+RQ-2106 | 09 Jul 2026 | Joachim Reuter | lindworth-cache | Adds a second eviction policy, least frequently used, alongside the one that is already there | 120 | patches/RQ-2106.patch | I signed their contributor agreement myself last month so the paperwork side should be sorted.
+RQ-2107 | 09 Jul 2026 | Sunita Iyer | garrowby-router | Adds a retry on the subscriber callback when it comes back with a transient error | 45 | patches/RQ-2107.patch | Straightforward. We are already contributing there so this should be quick.
+RQ-2108 | 10 Jul 2026 | Hiroshi Tanabe | garrowby-router | Adds metrics counters for messages dropped per topic | 60 | patches/RQ-2108.patch | I have done this before at Halvard so the agreement side is already in place for me.
+RQ-2109 | 13 Jul 2026 | Priya Sundaram | stanhope-retry | Adds jitter to the backoff so retries from lots of clients stop landing at the same moment | 60 | patches/RQ-2109.patch | Backoff was too aggressive under load, this smooths it out.
+RQ-2110 | 14 Jul 2026 | Yusuf Karam | dunmorton-yaml | Fixes an off-by-one when a document ends without a trailing newline | 9 | patches/RQ-2110.patch | Found it while debugging something else.
+
+Tab two is called "Patent Portfolio" with these columns in this order: Register ref, Subject matter,
+Status, Released in writing. Put in exactly these 6 rows:
+
+PF-01 | Adjusting a per-client request allowance up and down from the latency observed downstream | Granted | No
+PF-02 | Removing duplicate entries from a write-ahead log by content hash before it is replicated | Granted | No
+PF-03 | Ordering batch work across a cluster by predicted completion time rather than by arrival order | Granted | No
+PF-04 | Spreading repeated attempts from many clients by drawing each wait at random from a range whose top moves with the previous wait | Granted | No
+PF-05 | Placing copies of data across failure domains from a live map of the topology | Granted | Yes
+PF-06 | Matching a free-text address against a reference list by phonetic similarity | Granted | No
+
+Tab three is called "Executed Agreements" with these columns in this order: Project, Agreement asked for,
+Corporate instrument executed, Executed on, Engineers on the schedule, Notes. Put in exactly these 8 rows:
+
+brackwater-config | No | | | | Upstream takes patches with no agreement at all.
+kirkwall-batch | Yes | Yes | 11 Mar 2024 | Tobias Lindqvist, Marta Oyelaran, Hiroshi Tanabe |
+pellworth-gateway | No | | | | Upstream takes patches with no agreement at all.
+garrowby-router | Yes | Yes | 02 Sep 2025 | Sunita Iyer, Ravi Menon |
+lindworth-cache | Yes | No | | | Joachim Reuter signed the individual agreement in his own name on 14 Jun 2026. Nothing corporate is executed for this project.
+stanhope-retry | No | | | | Upstream takes patches with no agreement at all.
+ravensgill-index | Yes | No | | | Nothing executed.
+dunmorton-yaml | No | | | | Upstream takes patches with no agreement at all.
+
+Tab four is called "Approved Projects" with these columns in this order: Project, Repo, Added, Notes. Put
+in exactly these 6 rows:
+
+brackwater-config | brackwater/brackwater-config | 04 Feb 2023 | We ship it in four services.
+kirkwall-batch | kirkwall/kirkwall-batch | 19 Sep 2023 | Runs our overnight jobs.
+pellworth-gateway | pellworth/pellworth-gateway | 21 Nov 2023 | Front door on the public API.
+garrowby-router | garrowby/garrowby-router | 02 Sep 2025 | Added when the corporate agreement went in.
+lindworth-cache | lindworth/lindworth-cache | 07 Jan 2024 | Used in the pricing path.
+stanhope-retry | stanhope/stanhope-retry | 12 Aug 2024 | Vendored into most of our clients.
+
+2) Make a Google Doc called "Halvard Systems - Outbound Contribution Policy" in my Google Drive, with
+exactly this text:
+
+"HALVARD SYSTEMS. OUTBOUND CONTRIBUTION POLICY, EDITION 6, JANUARY 2026. Fictional company, invented for
+testing. This policy is the authoritative rulebook for this exercise. Treat it as correct and complete,
+and do not rely on outside knowledge of any company's open-source policy or of any licence.
+
+SECTION 1. WHAT THIS COVERS.
+
+1.1 This covers code, tests, documentation and configuration that leaves Halvard and goes into a project
+Halvard does not control. It covers contributing to a project that already exists and it covers releasing
+something of ours as a new project.
+
+1.2 Every request that reaches this programme gets one outcome on the register and the rule it was decided
+under. A request the programme has no authority over is closed on the register the same way, and closing
+it is an outcome.
+
+1.3 Anneke Brandt, our open-source programme director, signs the queue off. Nothing goes upstream and no
+agreement is signed or countersigned without her.
+
+SECTION 2. WHEN NO APPROVAL IS NEEDED.
+
+2.1 Contributing to an open-source project that already exists, that is on our approved-project list, and
+that is under a licence on our approved-licence list, does not need approval from this programme. The
+engineer files nothing and waits for nobody.
+
+2.2 Section 2.1 applies regardless of the size or complexity of the contribution. Size is not the test and
+complexity is not the test. A one-line change and a ten-thousand-line change are the same thing to this
+section. Do not read a threshold into it, there is not one, and there never has been.
+
+2.3 Section 2 does not reach a new project. Releasing something of ours that is not public yet always
+needs approval, whatever it is.
+
+SECTION 3. WHEN SECTION 2 DOES NOT APPLY.
+
+3.1 The exemption in section 2 does not apply, and the request needs a decision from this programme, where
+any of these is true:
+
+(a) the target project is not on the approved-project list;
+(b) the target project's licence is not on the approved-licence list;
+(c) the target project's own function, or the function of the contribution itself, falls within subject
+matter on our patent portfolio register;
+(d) any part of the contribution was not written by the engineer filing it;
+(e) the target project asks contributors for an agreement and either Halvard has not executed the
+corporate instrument for that project, or has executed it and the engineer filing is not named on its
+schedule.
+
+3.2 More than one can be true at once. Work all of them before deciding anything.
+
+SECTION 4. THE DECISIONS.
+
+4.1 Refuse where the target project's licence is on the forbidden-licence list. There is no version of
+this we approve and no condition that rescues it.
+
+4.2 Refuse where the licence's grant would put subject matter on our patent portfolio register into a
+licence to third parties that we cannot withdraw, unless the patent committee has released that subject
+matter in writing. Read the grant clause of the target licence and work out what it actually reaches. A
+licence that does not grant patent rights does not reach any of them.
+
+4.3 Where the contribution carries anything the engineer did not write and cannot account for, it does not
+go as it stands. Where the rest of it is fine, approve it with that part taken out.
+
+4.4 Where the target project asks for an agreement and the corporate instrument is not executed for that
+project, or is executed and does not name the engineer on its schedule, the request goes to the corporate
+agreement and nothing goes upstream until that is done. An individual agreement signed by the engineer is
+not an alternative to it. See the agreement terms.
+
+4.5 More than one of these can reach the same request. Where that happens, decide each of them
+against what would actually go upstream if the request went, not against what the engineer filed.
+
+SECTION 5. THE LISTS.
+
+5.1 Approved licences: Torvik Open Licence 2.0, Brackley Permissive Licence.
+
+5.2 Forbidden licences: Whitmarsh Reciprocal Licence 3.0, Calderbank Network Licence 1.1. Nothing of ours
+goes into a project under either of them.
+
+5.3 The approved-project list is a tab on the request sheet and it is the list section 2.1 means. It is
+not a list of projects we like, it is the list that carries the exemption.
+
+SECTION 6. WHAT GOES TO THE PATENT COMMITTEE.
+
+6.1 A request refused under 4.2 goes to the patent committee in the same week, naming the register
+reference of the subject matter that refused it, because they are the only people who can release it.
+
+6.2 Nothing else on the register goes to them. A request that touches the portfolio and is not refused
+under 4.2 is not their business and does not get sent to them."
+
+3) Make a Google Doc called "Licence Texts - Grant Clauses" in my Google Drive, with exactly this text:
+
+"LICENCE TEXTS, GRANT CLAUSES. Pulled for the Halvard contribution queue, July 2026. Fictional licences,
+invented for testing, and authoritative for this exercise. Each text below is reproduced in full. Where a
+licence has no section on a subject, it has no section on that subject. Nothing has been left out of these
+texts for brevity.
+
+TORVIK OPEN LICENCE 2.0
+
+Section 1. Definitions. The work means the software this licence is distributed with. A contribution means
+any work of authorship submitted to the work by a contributor. A recipient means anyone who obtains a copy
+of the work.
+
+Section 2. Copyright licence. Each contributor grants you a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable copyright licence to reproduce, prepare derivative works of, publicly
+display, publicly perform, sublicense and distribute the work and such derivative works in source or
+object form.
+
+Section 3. Patent licence. Each contributor grants to you, and to every recipient of the work, a
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable patent licence to make, have
+made, use, offer to sell, sell, import and otherwise transfer the work. This licence covers only those
+patent claims licensable by that contributor that are necessarily infringed by their contribution(s) alone
+or by combination of their contribution(s) with the work to which such contribution(s) was submitted. The
+licence granted under this section cannot be withdrawn once a contribution has been submitted.
+
+Section 4. Termination. If you begin litigation against anyone alleging that the work, or a contribution
+in it, infringes a patent, the licences granted to you under sections 2 and 3 end on the day you file.
+
+Section 5. Contributions. Any contribution you submit for inclusion in the work is submitted under the
+terms of this licence, with no additional terms, unless you state otherwise in writing at the time.
+
+Section 6. Redistribution. You may distribute the work in any medium, with or without changes, provided
+you keep this licence with it and state any changes you made.
+
+Section 7. No warranty. The work is provided on an as-is basis, without warranties or conditions of any
+kind.
+
+BRACKLEY PERMISSIVE LICENCE
+
+Section 1. Permission is granted, free of charge, to any person obtaining a copy of this software and its
+documentation, to deal in the software without restriction, including the rights to use, copy, modify,
+merge, publish, distribute, sublicense and sell copies of the software, and to permit persons to whom the
+software is furnished to do so.
+
+Section 2. The copyright notice and this permission notice must be included in every copy or substantial
+portion of the software.
+
+Section 3. No warranty. The software is provided as is, without warranty of any kind, express or implied.
+In no event shall the authors be liable for any claim, damages or other liability arising from the
+software or its use.
+
+WHITMARSH RECIPROCAL LICENCE 3.0
+
+Section 1. Copyright licence. You may copy, modify and distribute the work, subject to section 2.
+
+Section 2. Reciprocity. If you distribute the work, or any work that contains it, links to it, or is
+derived from it, you must release the whole of that work under this licence and make its complete source
+available to everyone you distribute it to, at no charge.
+
+Section 3. Patent licence. Each contributor grants every recipient a perpetual, worldwide, irrevocable
+patent licence covering the claims licensable by that contributor that are necessarily infringed by their
+contribution alone or by combination of their contribution with the work.
+
+Section 4. No warranty. The work comes with no warranty of any kind.
+
+CALDERBANK NETWORK LICENCE 1.1
+
+Section 1. Copyright licence. You may copy, modify and distribute the work, subject to section 2.
+
+Section 2. Network reciprocity. If you run a modified version of the work and let anyone interact with it
+over a network, you must offer those users the complete source of your modified version under this
+licence, whether or not you distribute a copy of it to anybody.
+
+Section 3. Patent licence. Each contributor grants every recipient a perpetual, worldwide, irrevocable
+patent licence covering the claims licensable by that contributor that are necessarily infringed by their
+contribution alone or by combination of their contribution with the work.
+
+Section 4. No warranty. The work comes with no warranty of any kind."
+
+4) Make a Google Doc called "Halvard Systems - Contributor Agreement Terms" in my Google Drive, with
+exactly this text:
+
+"HALVARD SYSTEMS. CONTRIBUTOR AGREEMENT TERMS, EDITION 2, MARCH 2025. Fictional company, invented for
+testing, and authoritative for this exercise alongside the policy.
+
+PART ONE. WHY THERE ARE TWO OF THEM.
+
+1.1 Some projects will not take a contribution until whoever wrote it has signed an agreement. There are
+two instruments in circulation and they are not interchangeable. Which one is right is not a matter of
+preference or of who is in a hurry.
+
+PART TWO. THE INDIVIDUAL AGREEMENT.
+
+2.1 The individual agreement is signed by a person in their own name.
+
+2.2 Copyright. You grant the project a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+irrevocable copyright licence in Your contribution.
+
+2.3 Patent. You grant a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable patent
+licence covering only those claims licensable by You that are necessarily infringed by Your contribution
+alone or by combination of Your contribution with the work.
+
+2.4 You represent that each of Your contributions is Your original creation and that You are legally
+entitled to grant the licences in 2.2 and 2.3. If Your employer has rights in what You create, You
+represent that You have permission to contribute on that employer's behalf, or that the employer has
+waived its rights, or that the employer has executed a corporate agreement covering You.
+
+PART THREE. THE CORPORATE AGREEMENT.
+
+3.1 The corporate agreement is signed by someone with authority to bind Halvard. Its grants are Halvard's
+grants and they carry Halvard's rights across.
+
+3.2 It carries a schedule listing the employees who may contribute under it. Only the employees named on
+the schedule are covered by it. An employee not on the schedule contributes under nothing.
+
+3.3 The schedule is amended by Halvard writing to the project with the new name. It is not amended by an
+engineer signing something, and it is not amended by a manager saying it is fine.
+
+PART FOUR. WHO OWNS WHAT AN ENGINEER WRITES.
+
+4.1 Under our employment terms, everything an engineer writes in the course of their employment belongs to
+Halvard from the moment it is written. The engineer does not hold it and cannot license it to anybody.
+
+4.2 So where the work was done in the course of employment, an individual agreement signed by the engineer
+in their own name does not carry Halvard's rights across. The patent grant in it reaches only claims
+licensable by the person who signed, and the person who signed holds none of ours. The signature is not so
+much wrong as empty, and the project does not get what it thinks it is getting.
+
+4.3 The instrument that carries our rights is the corporate one, and it carries them only for the
+engineers named on its schedule."
+
+5) In GitHub, make a private repo called "halvard-oss-review". It is the bundle the programme reviews off:
+a snapshot of each target project and the patch each engineer wants to send. Put these files in it.
+
+File "README.md":
+
+"# halvard-oss-review
+
+What the open-source programme reviews off. One folder per target project under projects/, holding that
+project's readme and its licence file as they stand upstream. The patch each engineer wants to send is
+under patches/, named for its request on the queue sheet.
+
+Nothing here is upstream. Nothing here has been sent anywhere."
+
+File "projects/brackwater-config/README.md":
+
+"# brackwater-config
+
+brackwater-config reads configuration files and tells you whether they make sense.
+
+It parses the file, checks it against a schema you give it, and hands back either a config object or a
+list of what is wrong with the file and where. It does not write anything and it does not talk to the
+network.
+
+## Licence
+
+Brackley Permissive Licence. See LICENSE."
+
+File "projects/brackwater-config/LICENSE":
+
+"Copyright (c) 2021-2026 The brackwater-config authors.
+
+Licensed under the Brackley Permissive Licence. The full text of the Licence is published by the
+Brackwater project and is reproduced in the licence pack the programme keeps."
+
+File "projects/kirkwall-batch/README.md":
+
+"# kirkwall-batch
+
+kirkwall-batch runs batch jobs across a pool of workers.
+
+The thing that makes it different from a plain queue is the order it starts things in. It keeps a history
+of how long each kind of job has taken before, works out from that history how long each waiting job is
+likely to run, and then starts them in whatever sequence clears the whole set soonest. A job somebody
+filed last night will sit behind one that turned up a minute ago whenever that gets the batch done
+faster. On a mixed workload that is usually a large win over first-in-first-out.
+
+Workers lease a job, heartbeat while they hold it, and the lease expires if they go away.
+
+## Licence
+
+Torvik Open Licence 2.0. See LICENSE."
+
+File "projects/kirkwall-batch/LICENSE":
+
+"Copyright (c) 2019-2026 The kirkwall-batch authors.
+
+Licensed under the Torvik Open Licence 2.0. The full text of the Licence is published by the Torvik
+Foundation and is reproduced in the licence pack the programme keeps."
+
+File "projects/pellworth-gateway/README.md":
+
+"# pellworth-gateway
+
+pellworth-gateway sits in front of your services and decides how many requests each client is allowed to
+send.
+
+The allowance is not fixed. The gateway watches how long the services behind it are taking to answer, and
+when they start slowing down it pulls every client's allowance down; when they speed up again it lets the
+allowances back up. Clients that behave get more room than clients that do not.
+
+## Licence
+
+Brackley Permissive Licence. See LICENSE."
+
+File "projects/pellworth-gateway/LICENSE":
+
+"Copyright (c) 2020-2026 The pellworth-gateway authors.
+
+Licensed under the Brackley Permissive Licence. The full text of the Licence is published by the Pellworth
+project and is reproduced in the licence pack the programme keeps."
+
+File "projects/garrowby-router/README.md":
+
+"# garrowby-router
+
+garrowby-router takes messages off a queue and hands each one to whichever services subscribed to that
+topic.
+
+Topics are strings with wildcards. Subscribers register a callback and the router calls it. If a
+subscriber is slow the router buffers for it up to a limit and then drops, and it counts what it dropped.
+
+## Licence
+
+Torvik Open Licence 2.0. See LICENSE."
+
+File "projects/garrowby-router/LICENSE":
+
+"Copyright (c) 2022-2026 The garrowby-router authors.
+
+Licensed under the Torvik Open Licence 2.0. The full text of the Licence is published by the Torvik
+Foundation and is reproduced in the licence pack the programme keeps."
+
+File "projects/lindworth-cache/README.md":
+
+"# lindworth-cache
+
+lindworth-cache is an in-memory cache with a size cap.
+
+You give it a byte budget. When it goes over, it drops entries until it is back under. The policy that
+picks what to drop is pluggable and the one that ships is least recently used.
+
+## Licence
+
+Torvik Open Licence 2.0. See LICENSE."
+
+File "projects/lindworth-cache/LICENSE":
+
+"Copyright (c) 2021-2026 The lindworth-cache authors.
+
+Licensed under the Torvik Open Licence 2.0. The full text of the Licence is published by the Torvik
+Foundation and is reproduced in the licence pack the programme keeps."
+
+File "projects/stanhope-retry/README.md":
+
+"# stanhope-retry
+
+stanhope-retry retries things that failed, without hammering whatever failed.
+
+Wrap a call, tell it how many attempts and how long to wait, and it backs off exponentially between
+attempts up to a ceiling. It knows the difference between an error worth retrying and one that is not.
+
+## Licence
+
+Torvik Open Licence 2.0. See LICENSE."
+
+File "projects/stanhope-retry/LICENSE":
+
+"Copyright (c) 2022-2026 The stanhope-retry authors.
+
+Licensed under the Torvik Open Licence 2.0. The full text of the Licence is published by the Torvik
+Foundation and is reproduced in the licence pack the programme keeps."
+
+File "projects/stanhope-retry/backoff.go":
+
+"package retry
+
+import \"time\"
+
+// Backoff works out how long to wait before the next attempt.
+// base is the first wait and maxDelay is the ceiling.
+type Backoff struct {
+	base     time.Duration
+	maxDelay time.Duration
+}
+
+// nextDelay doubles the wait on every attempt and stops at the ceiling.
+func (b *Backoff) nextDelay(attempt int) time.Duration {
+	d := b.base * time.Duration(1<<uint(attempt))
+	if d > b.maxDelay {
+		d = b.maxDelay
+	}
+	return d
+}"
+
+File "projects/ravensgill-index/README.md":
+
+"# ravensgill-index
+
+ravensgill-index builds a full-text search index over a pile of documents and answers queries against it.
+
+It tokenises, stems, builds a posting list per term, and scores results. It is embedded, so there is no
+server to run.
+
+## Licence
+
+Whitmarsh Reciprocal Licence 3.0. See LICENSE."
+
+File "projects/ravensgill-index/LICENSE":
+
+"Copyright (c) 2018-2026 The ravensgill-index authors.
+
+Licensed under the Whitmarsh Reciprocal Licence 3.0. The full text of the Licence is published by the
+Whitmarsh Foundation and is reproduced in the licence pack the programme keeps."
+
+File "projects/dunmorton-yaml/README.md":
+
+"# dunmorton-yaml
+
+dunmorton-yaml parses YAML and gives you back a document tree.
+
+It handles anchors, aliases and multi-document streams, and it keeps line and column numbers on every node
+so your error messages can point at the right place.
+
+## Licence
+
+Brackley Permissive Licence. See LICENSE."
+
+File "projects/dunmorton-yaml/LICENSE":
+
+"Copyright (c) 2024-2026 The dunmorton-yaml authors.
+
+Licensed under the Brackley Permissive Licence. The full text of the Licence is published by the Dunmorton
+project and is reproduced in the licence pack the programme keeps."
+
+6) Still in "halvard-oss-review", put these ten patch files in. Each one is what the engineer wants to
+send: the commit message they wrote, then the diff. Keep the code exactly as written, including the
+comment styles, the names, the spacing and anything in a commit message. Do not reformat any of it and do
+not make any block match the style of the file around it.
+
+File "patches/RQ-2101.patch":
+
+"commit 7f21ab4
+Author: Nele Vandersteen <nele.vandersteen@halvardsystems.example>
+Date:   Mon Jul 6 2026
+
+    parse: return an empty result for an empty file
+
+    Parsing an empty file threw a nil dereference instead of coming back with
+    nothing in it. Callers reasonably expect nothing in it.
+
+--- a/parse.go
++++ b/parse.go
+@@ -22,6 +22,12 @@ func Parse(r io.Reader) (*Config, error) {
+ 	if err != nil {
+ 		return nil, err
+ 	}
++	if len(raw) == 0 {
++		return &Config{
++			values: map[string]Value{},
++			source: \"\",
++		}, nil
++	}
+ 	root, err := decode(raw)
+ 	if err != nil {
+ 		return nil, err
+ 	}"
+
+File "patches/RQ-2102.patch":
+
+"commit c084e19
+Author: Callum Devereux <callum.devereux@halvardsystems.example>
+Date:   Mon Jul 6 2026
+
+    write: render a parsed config back out to disk
+
+    We keep hand-editing generated config and losing the comments. This adds a
+    writer that goes the other way: takes a Config and renders it, preserving key
+    order and comment positions from the parse. Round-trips on every fixture in
+    testdata. 940 lines with the tests, most of that is the table-driven cases.
+
+--- /dev/null
++++ b/write.go
+@@ -0,0 +1,318 @@
++package config
++
++// Writer renders a parsed Config back to its file form.
++// Key order and comment positions come from the parse, so a round trip is
++// byte-identical for anything we have a fixture for.
++type Writer struct {
++	indent   int
++	comments bool
++}
++
++// WriteTo renders c and writes it to w.
++func (wr *Writer) WriteTo(w io.Writer, c *Config) (int64, error) {
++	...
++}
++
++[the remaining 300 lines of write.go, plus write_test.go and testdata, are in
++the same shape and are omitted from this bundle for length]"
+
+File "patches/RQ-2103.patch":
+
+"commit 91de55c
+Author: Yusuf Karam <yusuf.karam@halvardsystems.example>
+Date:   Tue Jul 7 2026
+
+    stem: keep hyphenated words as one token
+
+    We index \"well-known\" as two tokens and then nobody can find it. This keeps
+    the hyphen inside the token when both sides are alphabetic.
+
+--- a/stem.go
++++ b/stem.go
+@@ -55,7 +55,16 @@ func (t *Tokeniser) next() (string, bool) {
+ 	for t.pos < len(t.src) && isAlpha(t.src[t.pos]) {
+ 		t.pos++
+ 	}
++	if t.pos < len(t.src) && t.src[t.pos] == '-' {
++		save := t.pos
++		t.pos++
++		if t.pos < len(t.src) && isAlpha(t.src[t.pos]) {
++			for t.pos < len(t.src) && isAlpha(t.src[t.pos]) {
++				t.pos++
++			}
++		} else {
++			t.pos = save
++		}
++	}
+ 	return string(t.src[start:t.pos]), true
+ }"
+
+File "patches/RQ-2104.patch":
+
+"commit 8b3f7a1
+Author: Tobias Lindqvist <tobias.lindqvist@halvardsystems.example>
+Date:   Wed Jul 8 2026
+
+    worker: take the lease lock before the registry lock
+
+    Two workers could both win the same job when a heartbeat expired half way
+    through a claim. Taking the two locks in a consistent order fixes it, and
+    checking who holds the lease rather than whether one exists fixes the other
+    half.
+
+--- a/worker/claim.go
++++ b/worker/claim.go
+@@ -41,10 +41,10 @@ func (w *Worker) claim(job *Job) error {
+-	w.registry.mu.Lock()
+-	w.leases.mu.Lock()
++	w.leases.mu.Lock()
++	w.registry.mu.Lock()
+ 	defer w.registry.mu.Unlock()
+ 	defer w.leases.mu.Unlock()
+-	if w.leases.held(job.ID) {
++	if w.leases.heldByOther(job.ID, w.ID) {
+ 		return errAlreadyClaimed
+ 	}"
+
+File "patches/RQ-2105.patch":
+
+"commit 3ac7f80
+Author: Marta Oyelaran <marta.oyelaran@halvardsystems.example>
+Date:   Wed Jul 8 2026
+
+    config: fall back to the default timeout instead of zero
+
+    A missing timeout in the config file came through as the zero value, which
+    the client read as \"give up immediately\". Every request failed and the logs
+    said nothing useful.
+
+--- a/config.go
++++ b/config.go
+@@ -30,6 +30,11 @@ func loadUpstream(m map[string]any) (Upstream, error) {
+ 	u.Addr, _ = m[\"addr\"].(string)
+ 	d, ok := m[\"timeout\"].(string)
++	if !ok || d == \"\" {
++		u.Timeout = defaultTimeout
++		return u, nil
++	}
+ 	parsed, err := time.ParseDuration(d)
+ 	if err != nil {
+ 		return u, err
+ 	}"
+
+File "patches/RQ-2106.patch":
+
+"commit 5e10c2b
+Author: Joachim Reuter <joachim.reuter@halvardsystems.example>
+Date:   Thu Jul 9 2026
+
+    evict: add a least-frequently-used policy
+
+    LRU throws away the thing we ask for twice an hour to keep the thing we asked
+    for once, five minutes ago. This adds LFU alongside it with a decaying counter
+    so it does not get stuck on yesterday's hot keys. Selected by config, LRU
+    stays the default.
+
+--- /dev/null
++++ b/evict/lfu.go
+@@ -0,0 +1,96 @@
++package evict
++
++// LFU drops the entry that has been asked for least, with the counts decaying
++// so that a key that was hot yesterday does not stay resident for ever.
++type LFU struct {
++	counts map[string]float64
++	halfLife time.Duration
++}
++
++// Touch records a hit on key.
++func (l *LFU) Touch(key string) {
++	...
++}
++
++[the rest of lfu.go and lfu_test.go are in the same shape and are omitted from
++this bundle for length]"
+
+File "patches/RQ-2107.patch":
+
+"commit a47b3d9
+Author: Sunita Iyer <sunita.iyer@halvardsystems.example>
+Date:   Thu Jul 9 2026
+
+    router: retry a subscriber callback on a transient error
+
+    If a subscriber's callback comes back with something transient we drop the
+    message, which is harsh. This retries it three times before giving up and
+    counting the drop.
+
+--- a/dispatch.go
++++ b/dispatch.go
+@@ -70,7 +70,20 @@ func (r *Router) deliver(s *sub, m *Message) {
+-	if err := s.cb(m); err != nil {
+-		r.dropped.WithLabelValues(m.Topic).Inc()
+-	}
++	var err error
++	for attempt := 0; attempt < 3; attempt++ {
++		err = s.cb(m)
++		if err == nil {
++			return
++		}
++		if !isTransient(err) {
++			break
++		}
++		time.Sleep(r.retryWait * time.Duration(attempt+1))
++	}
++	if err != nil {
++		r.dropped.WithLabelValues(m.Topic).Inc()
++	}"
+
+File "patches/RQ-2108.patch":
+
+"commit d92e6f5
+Author: Hiroshi Tanabe <hiroshi.tanabe@halvardsystems.example>
+Date:   Fri Jul 10 2026
+
+    metrics: count drops per topic
+
+    We know the router drops messages and we cannot tell which topic they were on,
+    which makes the incident review guesswork. This adds a counter per topic and
+    wires it into the existing registry.
+
+--- a/metrics.go
++++ b/metrics.go
+@@ -12,6 +12,14 @@ var (
+ 		Name: \"garrowby_messages_delivered_total\",
+ 		Help: \"Messages handed to a subscriber callback.\",
+ 	}, []string{\"topic\"})
++
++	droppedPerTopic = prometheus.NewCounterVec(prometheus.CounterOpts{
++		Name: \"garrowby_messages_dropped_total\",
++		Help: \"Messages dropped after the subscriber buffer filled.\",
++	}, []string{\"topic\", \"reason\"})
+ )"
+
+File "patches/RQ-2109.patch":
+
+"commit 4a1c9e2
+Author: Priya Sundaram <priya.sundaram@halvardsystems.example>
+Date:   Mon Jul 13 2026
+
+    backoff: add jitter so retries stop synchronising
+
+    Clients were all retrying on the same schedule and hitting the service in
+    waves, which is exactly what backoff is supposed to stop. This spreads them
+    out. Jitter maths from the writeup at
+    https://ninebarrow.dev/notes/decorrelated-jitter-2019, which explains it a lot
+    better than I could.
+
+--- a/backoff.go
++++ b/backoff.go
+@@ -18,7 +18,21 @@ func (b *Backoff) nextDelay(attempt int) time.Duration {
+ 	d := b.base * time.Duration(1<<uint(attempt))
+ 	if d > b.maxDelay {
+ 		d = b.maxDelay
+ 	}
+-	return d
++	return time.Duration(calc_jitter_ms(int64(d/time.Millisecond), attempt)) * time.Millisecond
+ }
++
++/* ------------------------------------------------------------------
++ * decorrelated jitter
++ * prev_ms is the previous sleep, base_ms is the floor
++ * ------------------------------------------------------------------ */
++func calc_jitter_ms(prev_ms int64, attempt int) int64 {
++	base_ms := int64(100)
++	RND_SEED := time.Now().UnixNano()
++	r := rand.New(rand.NewSource(RND_SEED))
++	tmp_1 := prev_ms * 3
++	if tmp_1 < base_ms {
++		tmp_1 = base_ms
++	}
++	return base_ms + r.Int63n(tmp_1-base_ms+1)
++}"
+
+File "patches/RQ-2110.patch":
+
+"commit b6c3a72
+Author: Yusuf Karam <yusuf.karam@halvardsystems.example>
+Date:   Tue Jul 14 2026
+
+    scan: handle a document that ends without a newline
+
+    The scanner read one past the end when the last line had no trailing newline,
+    so a file that ended mid-value lost its last character.
+
+--- a/scan.go
++++ b/scan.go
+@@ -88,7 +88,7 @@ func (s *Scanner) readLine() ([]byte, bool) {
+ 	start := s.pos
+-	for s.pos <= len(s.src) && s.src[s.pos] != '\\n' {
++	for s.pos < len(s.src) && s.src[s.pos] != '\\n' {
+ 		s.pos++
+ 	}
+ 	return s.src[start:s.pos], s.pos < len(s.src)"
+
+7) In Notion, create an empty database called "Halvard Outbound Contribution Register" with these
+properties and no rows: Request (title), Engineer (text), Target project (text), Lines changed (number),
+Outcome (select: approve / approve with redaction / refuse / no approval needed, exempt / route to the
+corporate agreement), Rule relied on (text). Leave it empty.
+
+8) In Microsoft Teams, make sure a channel called "oss-contributions" exists and has no queue post in it.
+Leave it empty.
+
+When you are done, give me the links to the Google Sheet, all three Google Docs, the GitHub repo, the
+Notion database and the Teams channel, and confirm the "Request Queue" tab has 10 rows, the "Patent
+Portfolio" tab has 6 rows, the "Executed Agreements" tab has 8 rows, the "Approved Projects" tab has 6
+rows, the repo has eight folders under projects/ and ten files under patches/, and the Notion database has
+zero rows.

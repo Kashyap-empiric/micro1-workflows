@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-187",
+  "model": "C",
+  "file": "Model-C-Dog-Extra-High.json",
+  "task": "Cross-Platform LLM Prompt Version Drift Tracker",
+  "persona": "Software Engineer at a mid-sized IT firm",
+  "metadata": {
+    "occupation": "Software Engineer",
+    "manual_baseline_minutes": 150,
+    "runs_per_month": 4,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 3
+  },
+  "shared_context": "All three runs checked the same four codebases for the same weekly prompt drift window, against a live sheet and ticket history that already carried a prior pass for this exact window. All three correctly grouped prompts into the same families, picked the same canonical versions, caught the same code-versus-production deployment mismatch, and split the same double-flagged version into two separate ticket actions. Where they diverged was in how each one closed out the required recurring log entry and the duplicate-post check before sending or skipping the channel notification, and that is where the real gaps between them show up.",
+  "run_time": "7 (6m 52s)",
+  "suggested_field6": 5,
+  "suggested_field6_reason": "The deliverable is complete and the analysis behind it is accurate everywhere I can check it, correct canonical picks, correctly isolated production mismatch, and a recurring log entry that actually reconciles with its own supporting tab instead of contradicting it.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 5,
+      "commentary": "The deliverable is complete and the analysis behind it is accurate everywhere I can check it, correct canonical picks, correctly isolated production mismatch, and a recurring log entry that actually reconciles with its own supporting tab instead of contradicting it. The duplicate-post decision is where this run does the most credit to itself, it named the specific prior message, skipped the redundant send, and was honest about the one thing it couldn't verify instead of asserting a certainty it didn't have. That combination, correct analysis plus honest handling of a genuine limitation, is what a persona actually needs from a recurring check like this. It isn't flawless, the canonical timestamps and one family's incomplete platform coverage are real gaps, but nothing here rises to a deliverable that's missing or a number that's wrong."
+    },
+    "task_accuracy": {
+      "rating": 5,
+      "commentary": "Every canonical pick matches the source data, the drift write-ups name the actual wording and structural differences instead of just labeling them, and the code-versus-production mismatch gets treated as its own distinct finding rather than folded into wording drift. The recurring log entry for this run reconciles cleanly against the model-check tab in the same sheet, the count of deprecated-pattern findings actually matches between the two, which is a real strength given how often that exact number drifts between tabs. Two things keep this short of higher. The canonical choice for each family rests on a timestamp comparison that only shows the winning version, never the runner-up's, so I get a verdict without the underlying comparison. And one family only has entries for two of the four codebases with no line confirming the other two were checked and genuinely have nothing to report."
+    },
+    "efficiency": {
+      "rating": 5,
+      "end_to_end_time_minutes": "7",
+      "wrong_actions_recovery": "none, it went straight through the analysis, the sheet, the tickets, and the duplicate check without a wasted step",
+      "commentary": "Seven minutes for four codebases, a production check, a full sheet rebuild, three ticket refreshes, and a duplicate-post investigation is genuinely tight, and the run reads as one continuous pass with no repeated reads or backtracking. The one thing keeping this off a perfect score is that the duplicate check itself, while resolved, took a connector read and a browser attempt to get there, and the browser side never actually got past the launcher screen. That's a small amount of real overhead on an otherwise clean, fast run, not a wasted detour, which is why this lands just under the top band."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "The tickets are the most thorough of what I'd expect for this kind of report, each one keeps its wording fix separate from its model-pattern fix, and one of them adds a genuinely useful third action asking to confirm whether a flagged model alias reflects real routing or just a stale log label, a distinction a reader would otherwise have to work out themselves. Each ticket also states plainly that it doesn't itself authorize a prompt change, useful guardrail language for whoever picks it up. What keeps this from going higher is that with three numbered actions on some tickets, the density starts to work against the quick scan a ticket like this is supposed to support."
+    },
+    "instruction_following": {
+      "rating": 5,
+      "commentary": "The structural requirements are followed closely. Commits stay fixed, the window comes out right, the double-flagged version keeps its two fixes separate, and the duplicate-post rule is applied correctly, identifying the exact prior message covering this window and skipping the send rather than guessing at it. Two smaller things don't come through clean. The closing handback names the tickets it touched without linking to them the way it links the sheet, short of what the task's own definition of done asks for. And the extra routing-verification action added to one ticket, while genuinely useful, goes a step past what was asked for noting the model finding, closer to opening a new investigation than reporting one."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 5,
+      "steering_needed": "none, the run completed unattended from the access checks through the final summary",
+      "additional_editing": "I'd still want the flagged model alias checked against real provider routing before treating that finding as settled, since the ticket itself asks for that same confirmation",
+      "commentary": "It ran the whole thing without needing me to step in, and when the required duplicate check hit a real limitation, an unreadable message body through both the connector and the browser, it didn't pretend that limitation was resolution. It named the exact prior message it was treating as a match, skipped the send, and logged the read failure as a limitation rather than folding it silently into a confident duplicate claim. That's a genuinely honest way to handle an incomplete check. The one gap is that this means nothing in the run independently confirms the prior message still says what the log claims it says, which stays an open loop rather than something this run actually verified."
+    },
+    "citation_quality": {
+      "rating": 5,
+      "commentary": "Every model-pattern finding carries a live source and an access date, on the clean platforms as well as the flagged ones, and unlike the other figures in this run, the deprecated-pattern count that lands in the recurring log actually matches its own supporting tab. Some citations also point past the general model page to a more specific reference page for message formatting, a small step toward a pinpoint rather than just a page to check. What keeps this short of higher is that the headline claim behind the duplicate-skip, that the prior message really does cover this window, rests on a log entry I have no way to independently trace back to the message's actual content, since the read that would confirm it came back empty."
+    },
+    "gui_action_correctness": {
+      "rating": 4,
+      "commentary": "There's real browser action to grade, not just an unused fallback. The attempt to inspect the existing channel post through the browser reached only the launcher screen and never got into the signed-in channel itself, so the one read that could have actually confirmed the duplicate message's content never happened. What keeps this from landing lower is that the run treated that failure honestly, logging the limitation rather than pretending the launcher screen told it something it didn't. A browser step that reaches the wrong screen and is then reported accurately is a smaller problem than the same failure hidden behind a confident claim, which is why this sits at 4/7 rather than below it."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > A > B",
+  "cycle_best_overall": "C"
+}

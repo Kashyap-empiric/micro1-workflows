@@ -86,41 +86,50 @@ Call Details tab (raw export, 11 rows) and Non-Generative Calls tab (2 rows: /ap
 
 ## 2. Task accuracy, ignoring speed
 
-[Rating and Commentary from the current head-to-head template]
+**Rating:** 4/7
+
+The route trace, the feature grouping, and the dependency calls all hold up, the screening explicitly documents the router-tag-versus-path conflict and the exact commit-cutoff boundary it applied, and it catches the same secondary telemetry trap the more careful runs this cycle catch, a call row riding on an already-excluded request rather than counted independently. The token method is the standard approximation and the totals reconcile cleanly across every rollup. What actually pulls this down is a direct inconsistency inside its own work: it states plainly that the slower endpoint's static prompt sits under the provider's real caching minimum, then still writes up and files a ticket treating that same endpoint as a caching opportunity anyway. Naming the threshold and then acting past it is a real accuracy problem, not just a hedge.
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
-**End-to-end time (minutes):** [value]
-**Wrong actions / recovery:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 5/7
+**End-to-end time (minutes):** 11 (10m 35s)
+**Wrong actions / recovery:** none stated, it went straight through the trace, the screening, both tickets, and the channel post in one pass
+**Commentary:** Ten and a half minutes for a full route trace, two telemetry tables, seven endpoints of cost and latency math, a documented commit-cutoff check, two tickets, and a channel post is genuinely tight for the amount of ground this run covers, especially given how much detail the writeup itself carries. Nothing in the run reads as a repeated step or a dead end. The only thing keeping this a notch under the top band is that the duplicate-post check, while it did reach the channel, never got past an unreadable state before the run moved on, a small amount of real friction even in an otherwise clean pass.
 
 ## 4. Writing quality
 
-[Rating and Commentary]
+**Rating:** 5/7
+
+This is a carefully hedged writeup, both caching claims are labeled as conditional, spell out exactly what would need to be validated before anyone should trust them, and never overstate a savings figure as guaranteed. The methodology section is genuinely transparent, walking through the tag-versus-path call and the commit boundary in plain language rather than just asserting the result. The one place this undercuts itself is that a ticket built entirely around a caching claim it also calls not guaranteed and not yet demonstrated sends a mixed signal, careful language wrapped around an action that reads more confident than the words around it.
 
 ## 5. Instruction following
 
-[Rating and Commentary]
+**Rating:** 4/7
+
+Most of the explicit mechanics are followed precisely, non-generative calls stay separate, dead code and the post-cutoff commit are correctly excluded and documented, and the existing ticket is refreshed without touching its assignee or status. Where this doesn't come through clean is the ticket gate. The task is specific that a ticket needs a real opportunity attached, and this run's own numbers already say the caching case for one endpoint doesn't clear the provider's stated minimum, yet a ticket gets filed for it anyway, hedged rather than withheld. Recognizing a threshold isn't met and filing the ticket regardless is closer to the letter being bent than followed.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
-**Steering needed:** [one short factual clause]
-**Additional editing before I'd use it:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 3/7
+**Steering needed:** none, the run completed unattended from the access checks through the channel post
+**Additional editing before I'd use it:** I'd pull the caching ticket unless a real tokenizer check clears the threshold this run's own estimate says it doesn't, and I'd want the duplicate-post read confirmed before trusting the send
+**Commentary:** This run is genuinely good at noticing its own gaps, naming the sub-threshold token count instead of hiding it, and separately logging that the channel history it checked came back with unreadable message bodies. Where it falls short is what it does after noticing. It files the caching ticket anyway instead of holding it for validation, and it sends the notification anyway instead of treating the unreadable history as a real unknown. Flagging a limitation and then acting as if it doesn't apply is a more specific gap than simply missing the limitation in the first place, and it shows up twice in the same run.
 
 ## 7. Citation quality
 
-[Rating or N/A and Commentary]
+**Rating:** 5/7
+
+Every price traces to an official page with a checked date, and the caching discussion goes a step further than a bare source link, citing the exact per-model token minimum and showing its own estimate against that number rather than asserting eligibility. The totals reconcile across every rollup with nothing unaccounted for. What keeps this at 5 rather than higher is that the ticket resting on the caching claim cites the same threshold it fails, so the citation itself is the evidence against the action taken with it, a strange position for an otherwise well-sourced writeup to be in.
 
 ## 8. GUI action correctness
 
-[Rating or N/A and Commentary]
+**Rating:** 3/7
+
+There's real browser action here, an attempt to inspect the channel's post history before sending. What it actually got back was an unreadable state, blank bodies through the connector and no further progress in the browser beyond the entry screen, and the run says so plainly rather than dressing up the result. The problem is what happened next: it sent the notification anyway on the strength of a search that never actually confirmed there was nothing to find. An honestly reported dead end is better than a hidden one, but the send still went out on an unresolved check, which is why this sits at 3/7 rather than higher.
 
 ## 1. Overall task success
 
-[Write only after boxes 2-8 are final. Start from Task accuracy, apply evidence-backed caps for
-material failures, and dock one point only when the run takes substantially longer than a comparable
-run because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+**Rating:** 4/7
+
+The core route tracing, grouping, and cost math are all correct, the methodology writeup is genuinely transparent about the calls it made and why, and the run is good at surfacing its own limitations in plain language. What keeps this at 4 is that surfacing a limitation and then acting past it happens twice in the same run, a caching ticket filed despite the run's own numbers saying the threshold isn't met, and a notification sent despite an admittedly unreadable duplicate-check. A persona reading this handoff gets accurate numbers and genuinely honest caveats, but also two actions the run's own evidence argues against, which is a real gap between what it noticed and what it did.

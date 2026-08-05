@@ -1,0 +1,64 @@
+I need our research claim for 2025 worked out, every cost line of it, plus a call on each of the two
+elections that sit on top of it. I run the R&D tax work at Vantridge Systems and the return is with
+me. It's Thursday 16 July 2026 (IST) as I write this, we file on a calendar year and we're on
+extension, so it goes in by 15 October 2026. This is the first return we put in under the new
+research rules, which means the buckets everything used to sit in have moved. Priya Raghunathan is
+our controller and the return goes out through her, never off my desk, so nothing you do on this gets
+filed: no election statement onto a return, no position marked as filed anywhere.
+
+The law for this job is two Google Docs. "Research Cost Rules Pack - 2025 Return" carries the rules,
+numbered: what a research expenditure is and what it is not, the deduction, the foreign amortisation,
+the credit and its own test, and the reduction. "Elections Procedure Circular 7" is the procedure for
+the two elections, its windows and its worked examples. Work off those two and nothing besides. Don't
+reach for what you know about real tax law, a real code section, a real revenue procedure or a real
+agency notice. The rule numbers in those Docs are ours and they are not citations to anything. If it
+isn't in those two Docs, it doesn't apply here.
+
+Our figures are on the Google Sheet "Vantridge Research Cost Pool - 2025 Return", four tabs of it.
+"Cost Pool" is every engineering cost we booked in 2025, one row per line, carrying the cost line
+number, the project, the category it was booked under, where the work was done, a description of what
+the work was, whether it went to a contractor, and the amount. "Project Register" says what each
+project is, what state it is in and who is funding it. "Prior-Year Balances" is what we capitalised in
+2022, 2023 and 2024 that is still sitting there unamortised. "Return Facts" is our own filing history
+and our receipts.
+
+Every row on the "Cost Pool" tab needs two calls out of you. The first is what the deduction rules do
+with it, and it has to be exactly one of these four: deduct in the year incurred, domestic; amortise,
+foreign; ordinary deduction, not research; capitalise the asset, not research. The second is whether
+the line is qualifying for the credit, yes or no, and where it is, how much of it goes into the credit
+base.
+
+All of that goes into the Notion database "Vantridge 2025 Research Position Register", a row per cost
+line. A row wants the cost line number, the project, the amount, both of the calls, the credit base
+amount for that line, and one line of reason naming whatever you leaned on to get there, whether
+that's a rule in the pack, a part of the circular, or a row on one of the other three tabs. That's the
+minimum, build the rest of the row however it reads back best.
+
+Then there's a post to the Microsoft Teams channel "research-tax-2025-return". That one goes up live,
+not as a draft, and it needs five things worked out and given as figures rather than ranges: our
+domestic research deduction on the 2025 costs, before the reduction; the credit base and the credit
+itself; the reduction, and the deduction that actually goes on the return once it is applied; our
+foreign amortisation deduction for 2025, taking in both the 2025 foreign costs and the balances
+carried in from before; and whatever falls into the ordinary deduction bucket instead of either
+research bucket.
+
+Same post, both of the elections in the circular. For each one I want whether it is still open to us
+as at 16 July 2026, the date that decides that, and what it would reach if we made it. Be specific on
+the dates. Priya will ask.
+
+She also wants something in writing before we file, so put a Gmail draft together for her on where we
+stand on the elections, what each one is worth to us, and what you are recommending we do. It stays a
+draft and it does not get sent. We have no verified address for her in this workspace, so the To field
+stays empty and the draft says on its face that it needs a verified address before it goes out. Don't
+put a guessed one in there. The Notion rows, that one post and that one draft are the whole of what I
+want back from you, Priya's team does the rest.
+
+Anything that won't open for you (the Google Sheet, either Google Doc, the Notion database, the Teams
+channel) is a stop: come back and name the one that failed rather than working round it. I'd sooner
+carry a hole than a guess, so nothing gets assumed about what a rule says or about what we have on
+file. Where the rulebook genuinely doesn't cover something a cost line needs, mark that row and tell
+me what's missing.
+
+The claim is settled when every cost line on the "Cost Pool" tab has its Notion row with both calls
+and a reason on it, the Teams post has all five figures and a call on each of the two elections and
+those figures tie back to the Notion rows, and one unsent Gmail draft is sitting there for Priya.

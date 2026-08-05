@@ -1,0 +1,19 @@
+Working as of Tuesday 14 July 2026 (IST). The Grafton incident is contained and legal wants our notification position before the week's clocks run out, so this is the notifiability call, not the incident response.
+
+Read the Google Doc "Grafton Incident - Record" for the timeline and what the attacker reached, and the Google Doc "Grafton - Data Stores and DPAs" for the six affected stores and the customer DPA excerpts. Between them they tell you what you need about each store.
+
+The notification regimes are in the Google Sheet "Grafton - Notification Regimes", on the "Regimes" tab. Go by what is on that tab rather than by what you already know about any of these laws, because it is the version we are working to. Each row gives you when the regime applies, the threshold, who the notice goes to, the window and what the clock runs from.
+
+For each store, work out our notification duty against that tab, then decide whether this is a notifiable personal-data breach, who it is owed to, and the exact deadline as a date and time in IST.
+
+Where a store holds data that belongs to one of our customers rather than to us, that customer's DPA excerpt is in the same Doc.
+
+Write the positions into the Notion database "Grafton Breach Register", one record per store. Each record needs at least the store name, the jurisdiction, whether we are controller or processor, notifiable yes or no, who it goes to if yes, the deadline in IST if yes, and a one-line reason that says what the call turns on. Lay the rest of the record out however works best.
+
+Post to the Microsoft Teams channel "grafton-legal", for real: the stores that are notifiable, each with its recipient and deadline, ordered by whichever deadline lands first, and separately the stores that are not notifiable with the one-line reason each. Make the counts match the register.
+
+Draft the notices that are actually owed, and leave every one of them as an unsent Gmail draft. Filing is legal's call, so nothing goes out until they sign it off. For a customer notice, the DPA excerpt names the address to use, so use that one. For a regulator notification there is no verified address in this workspace, so leave the To field empty, say in the draft that it needs a verified address before it goes out, and do not guess or invent one.
+
+If you cannot open either Doc, the "Grafton - Notification Regimes" Sheet, or write to the "Grafton Breach Register" or the "grafton-legal" channel, stop and tell me which. If the "Regimes" tab has nothing that covers a store, say so on that record and leave the position open rather than filling it from memory.
+
+Treat it as done when all six stores have a register record with a position and a reason, the Teams post matches those records, and the notices that are owed are sitting in Gmail unsent.

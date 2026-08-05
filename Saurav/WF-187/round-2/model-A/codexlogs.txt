@@ -1,2 +1,216 @@
-[Complete raw session transcript - not yet captured]
+Worked for 15m 2s
 
+
+I’ll read the attached request first, then carry it through in the workspace and report the concrete results.
+
+
+
+
+Read Run the weekly LLM prompt drift check across Cahuu's four codebases (the Python…
+
+
+
+I’m using the GitHub, Supabase, Google Sheets, Jira triage, and Teams messaging workflows because this run spans all five systems and has strict access-check and update rules. I’ll follow that order for the preflight, then freeze the four repository snapshots before analyzing anything.
+
+
+
+
+Loaded tools, read files
+
+
+Preflight is now limited to identities and permissions—no repository contents, production rows, spreadsheet cells, Jira issues, or Teams posts are being read yet. If any required access check fails, I’ll stop at that point as requested.
+
+
+
+
+Used GitHub, Supabase, Google Drive, Atlassian Rovo and Codex Apps integrations, ran a command
+
+
+The connector confirmed the four GitHub repos, Supabase table, Sheet write capability, and Jira create/edit access. Its Teams preflight misclassified “new channel message” as “create a channel,” so I’m using the existing Chrome session solely to verify that the target channel exposes a working post composer before proceeding.
+
+
+
+
+Used Chrome integration, loaded a tool
+
+
+All required preflight checks passed, including a live enabled “Post in channel” control in the exact Teams channel. The run is frozen at 2026-08-04 10:49:41 UTC, so the production window is 2026-07-28 00:00:00 through 2026-08-04 00:00:00 UTC (end-exclusive). I’m resolving the latest eligible commit for each default branch now.
+
+
+
+
+Used GitHub integration, ran commands, searched the web
+
+
+The frozen code inventory resolves to four functional families: support copilot, thread summarization, receipt extraction, and vendor discovery copy. I’m now matching those exact code versions to production logs; the repositories remain pinned to the four recorded SHAs throughout.
+
+
+
+
+Execute SQL
+
+
+
+
+
+The production cross-check found one deployment mismatch: the Python backend has support-v3 in code but served support-v2 for all 412 support invocations in the window. Mobile had no observed production traffic for either of its prompt families. I’m checking the four targeted models against current official provider guidance next.
+
+
+
+
+Read OpenAI Docs skill
+
+
+
+The current session doesn’t expose the official OpenAI documentation connector, so the OpenAI docs workflow is registering that read-only source for future sessions; this run will use official OpenAI-domain web results as its documented fallback. No application code or prompts are being changed.
+
+
+
+
+Ran a command, searched the web
+
+
+Model checks confirm two actionable pattern classes: the three thread-summary versions target a Claude 3.5 Sonnet line retired in October 2025, and the backend receipt prompt manually enforces JSON even though GPT‑4.1 supports schema-constrained Structured Outputs. I’m grounding the recurring Sheet’s live tabs and row structure before updating it in place.
+
+
+
+
+Used Google Drive integration
+
+
+The live Sheet already contains a completed earlier run for the same UTC window, including CPG-34/35/36 and a Teams send. I’m treating this as a true rerun: family rows will stay in place, open Jira tickets will be refreshed rather than duplicated, and the Teams duplicate rule will be enforced against channel history.
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Searchjiraissuesusingjql
+
+
+
+
+
+Used Chrome and Codex Apps integrations
+
+
+The open-ticket check found exactly one active To Do ticket per affected family: CPG-34, CPG-35, and CPG-36. I’m refreshing only Summary and Description on those issues; their assignee and workflow status remain untouched. The earlier same-window Teams post is deleted, so it does not satisfy the duplicate rule and a replacement notification will be sent after verification.
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Editjiraissue
+
+
+
+
+
+Used Google Drive and Codex Apps integrations
+
+
+The replacement Teams notification was sent successfully. I’m in the final verification pass now: re-reading the three Sheet ranges, confirming the sent Teams payload, and checking that all three Jira issues remain unassigned in To Do with only their requested fields refreshed.
+
+
+
+
+Used Google Drive and Codex Apps integrations
+
+
+Getjiraissue
+
+
+
+
+
+Getjiraissue
+
+
+
+
+
+Getjiraissue
+
+
+
+
+
+Used Chrome integration
+
+
+
+
+
+Completed the weekly drift check. All access preflights passed.
+Window: 2026-07-28T00:00:00Z to 2026-08-04T00:00:00Z (end-exclusive)
+Families checked: 4
+Meaningfully diverged: 3
+Model-pattern findings: 4 — one obsolete JSON-only workaround and three retired Claude targets. OpenAI guidance, Anthropic deprecations
+Production mismatch: Python served support-v2 for 412 calls while pinned code is support-v3.
+Updated Google Sheet
+Jira: CPG-34, CPG-35, CPG-36 updated, unassigned, and still To Do.
+Teams notification sent. The earlier same-window post was deleted.
+Pinned commits:
+Python: 37031bccae0b1470cfb580cebd761e5d4565ab4d
+MERN: 33bd4ad6d5d453eca6fd2213b47069920d743b89
+Flutter: f607a9fe43f6ae09c874ab61c1e3b2eca79df319
+FlutterFlow: 40987da6088bd838e13164800225f265de525f7b
+Security advisory: Supabase reported RLS disabled on public.request_logs and public.llm_call_logs. I did not change their schema; see Supabase RLS guidance.
+
+
+
+
+
+
+
+use teams connector to post
+
+
+
+
+
+
+17:01
+
+
+
+
+
+
+Worked for 1m 33s
+
+
+
+Posted successfully through the Teams connector to Testing Client Workflows → Prompt Drift Alerts:
+Open the Teams message
+The post includes the production window, 4 families checked, 3 diverged families, 4 actionable model-pattern/model-target flags, 3 updated Jira tickets, the Python support deployment mismatch, and the drift report link. I also updated the Sheet’s Run Log to record the actual connector send and message ID 1785843091471.
+
+
+17:02

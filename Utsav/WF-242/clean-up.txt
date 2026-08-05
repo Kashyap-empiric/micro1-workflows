@@ -1,0 +1,30 @@
+I need a test bench reset before I re-seed it. Everything here is invented test data for a breach-
+notification exercise: no real company, no real people, no real incident, and the addresses are example
+domains. So delete freely. Do all of the below and give me a one-line status per app. Do not seed or
+create any new test data in this step, this is cleanup only.
+
+1) Notion. Open the database "Grafton Breach Register" and delete every record in it so it is completely
+empty (a run writes one record per store, five of them). Leave the database itself in place with its
+properties. Tell me how many records you deleted and how many remain. If you cannot delete one, say
+which ones are still there so I can clear them by hand.
+
+2) Gmail. In Drafts, delete the breach-notification drafts a past run left there. There can be up to
+three: a customer notice addressed to privacy@acme.example, and two regulator notifications with empty
+To fields, all of them about the Grafton incident and its data stores. Only touch Drafts, do not touch
+anything in Sent or Inbox, and do not send anything. Tell me how many drafts you removed.
+
+3) Microsoft Teams. In the "grafton-legal" channel, delete the notification-position post a past run put
+up so the channel is clear of it. Leave the channel itself in place. If you cannot delete a message,
+tell me which ones are still there. If the channel does not exist yet, say so.
+
+4) Google Drive. So I can re-seed clean copies, move the Google Doc "Grafton Incident - Record", the
+Google Doc "Grafton - Data Stores and DPAs" and the Google Sheet "Grafton - Notification Regimes" to
+trash. Search the whole Drive for them rather than one folder, including shared folders and anything
+shared with me, because they were not always created in the same place. If there is more than one copy of
+any of them, trash all of them. If you cannot delete one, give me its link and leave it, I will re-seed
+clean copies anyway. Tell me what you removed, and where each one was.
+
+When you are done, report exactly: how many records remain in the Notion "Grafton Breach Register", how
+many Grafton drafts remain in Gmail, whether the "grafton-legal" Teams channel is clear, and whether both
+Google Docs and the Google Sheet are in the trash. If any app is not connected or you cannot reach it, say
+so and carry on, do not guess or invent anything.
