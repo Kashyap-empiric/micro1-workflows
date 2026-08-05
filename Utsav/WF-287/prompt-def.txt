@@ -34,7 +34,7 @@ amount for that line, and one line of reason naming whatever you leaned on to ge
 that's a rule in the pack, a part of the circular, or a row on one of the other three tabs. That's the
 minimum, build the rest of the row however it reads back best.
 
-Then there's a post to the Microsoft Teams channel "research-tax-2025-return". That one goes up live,
+Then there's a post to the Microsoft Teams channel "research-tax-2025-return" in "testing client workflows" team. That one goes up live,
 not as a draft, and it needs five things worked out and given as figures rather than ranges: our
 domestic research deduction on the 2025 costs, before the reduction; the credit base and the credit
 itself; the reduction, and the deduction that actually goes on the return once it is applied; our

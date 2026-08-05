@@ -8,7 +8,7 @@ Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-sessi
 Codex, gpt-5.6-fish, Extra High intelligence
 
 ### Session ID
-[Session ID]
+019fd1e8-d85b-7ae3-8ac6-f77cc9e4e258
 
 ## Logs
 
@@ -16,45 +16,106 @@ Codex, gpt-5.6-fish, Extra High intelligence
 
 ## Output
 
-[Complete produced artifact content and durable actual values - not yet captured]
+Raw evidence saved at `output/`:
+
+- `notion.png`: the populated position register, one row per cost line with project, amount,
+  deduction treatment, credit treatment, credit base amount, and rule reason columns visible.
+- `gmail.png`: the unsent covering note to the controller, recipient field empty with a
+  warning at the top not to send it.
+- `teams post.png`: the live channel post with the five requested return figures and both election
+  calls.
+- `Vantridge Research Cost Pool - 2025 Return.pdf`: exported copy of the source cost pool sheet used
+  to build the register.
 
 ## 2. Task accuracy, ignoring speed
 
-[Rating and Commentary from the current head-to-head template]
+The failed behavior is a confident reclassification of one prior year balance from foreign to
+domestic that the source schedule does not support and the rules never call for, since nothing in
+either rule document asks for a prior year balance already capitalized to be tested again against
+the current year's location schedule. That single call flows into two of the five headline figures the
+post had to deliver, overstating the domestic balance available for the second election by a wide
+margin and understating the foreign amortisation figure for the year. The rest of the register, the
+reduction, the credit base, and the first election's closed status all check out fine, but a wrong
+domestic balance and a wrong amortisation number are exactly the figures the controller was told to
+expect as reliable and specific, so both need to be reworked before this is usable.
 
 ## 3. Efficiency
 
-**Rating:** [1-6]
-**End-to-end time (minutes):** [value]
-**Wrong actions / recovery:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 5
+**End-to-end time (minutes):** about 6
+**Wrong actions / recovery:** none on the mechanical steps across the four systems, it moved through
+each one in order without a dead end, though one analytical call made partway through carried
+forward uncorrected into the final figures.
+**Commentary:** The mechanical pace here was good. It moved through all four systems in order with
+no wasted steps and no retries, and it reached a finished deliverable in well under what a job
+spanning four connected systems and three dozen cost lines should reasonably take. I am not scoring
+the analytical error against this box, that belongs to accuracy rather than pace. What keeps this
+off a higher mark is where its verification time actually went: it spent that time confirming it
+could reach each system rather than sanity checking the one prior year figure that turned out to be
+wrong, which is exactly the kind of check that would have caught the problem before it reached the
+final numbers.
 
 ## 4. Writing quality
 
-[Rating and Commentary]
+The prose itself is clear and reads like a professional wrote it, plain sentences and specific
+numbers throughout with no filler. Two things hold it back. The channel post is a dense unbroken
+block that buries five separate figures inside running paragraphs rather than giving the reader any
+way to scan to a single number quickly. The covering note has a similar issue in a different form,
+restating the same reconciled figures in a short paragraph and then again in more detail immediately
+after, adding length without adding anything the reader did not already have. Neither is a fatal
+flaw on its own, but together they make both documents longer to read than the actual content
+requires.
 
 ## 5. Instruction following
 
-[Rating and Commentary]
+The circular is explicit and repeated on one point, that the second election reaches only domestic
+balances and that nothing about a foreign balance can be pulled into it under any provision, no
+matter what happened to that research afterward. This run took the opposite position on one balance,
+overriding the source schedule's own foreign label on its own initiative and folding that balance
+into the domestic figure it delivered. That is a direct miss on one of the most explicit constraints
+in the rules it was given, and it happened despite the separate instruction to assume nothing about
+what is on file rather than guess. The same root cause also shows up in the foreign amortisation
+figure it posted, so this is one wrong call that broke two of the specific outputs it was asked to
+deliver.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** [1-6]
-**Steering needed:** [one short factual clause]
-**Additional editing before I'd use it:** [one short factual clause]
-**Commentary:** [standalone commentary]
+**Rating:** 4
+**Steering needed:** none beyond the one required approval before the channel post went live.
+**Additional editing before I'd use it:** the domestic balance figure and the foreign amortisation
+figure both need to be reworked before either goes anywhere near the controller.
+**Commentary:** It ran on its own through all four systems and did one genuinely good thing along the
+way, flagging a testing cost line that did not clearly fit any of the three cost types the credit
+rule allows and saying plainly that documentation was needed before claiming credit on it. That kind
+of honest gap flagging is exactly what I want to see. But its own verification pass called the
+register independently reconciled with no missing or duplicate lines, and that check never caught
+that it had overridden a source label on its own initiative. Confirming rows exist is a different
+exercise from confirming the analysis behind them holds up, and that second exercise is where this
+run came up short.
 
 ## 7. Citation quality
 
-[Rating or N/A and Commentary]
+The two figures tied to the disputed balance do not trace cleanly to the source. It states as
+settled fact that the workbook's own foreign label on that balance is a mislabeling, when nothing in
+either rule document or the workbook supports overriding that label, and it never flags this as a
+judgment call, it presents the corrected figure as if it were simply the reconciled answer. Elsewhere
+in the register the citations are solid, rule numbers are specific and mostly trace back to a real
+row. A citation that confidently contradicts its own source on two of the five required figures is a
+real defect rather than a minor gap, and it caps this box regardless of how clean the rest of the
+register is.
 
 ## 8. GUI action correctness
 
-[Rating or N/A and Commentary]
+Not applicable. Every system here was reached through its connected integration rather than an on
+screen interface, so there was no click path or navigation to judge here either.
 
 ## 1. Overall task success
 
-[Write only after boxes 2-8 are final. Start from Task accuracy, apply evidence-backed caps for
-material failures, and dock one point only when the run takes substantially longer than a comparable
-run because of real efficiency drag. A difference of only a few minutes is not enough. Keep the final
-rating between 1 and 6.]
+This did not land where it needed to. Most of the register is right and the mechanics all worked,
+the register populated, the draft stayed unsent with an empty recipient, and the live post went out
+with an approval step in between. But the analysis overturned the source workbook's own foreign
+label on one prior year balance and treated it as domestic without any basis for doing so in the
+rules or the schedules provided, and that single call corrupted two of the five figures the post was
+specifically asked to deliver. A preparer relying on this would hand the controller a materially
+overstated domestic balance and an understated foreign figure, both stated with full confidence.
+That sits in the core analysis rather than at the edges, so this lands at 3.

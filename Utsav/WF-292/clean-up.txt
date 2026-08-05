@@ -13,7 +13,7 @@ about changes being made to a table of theirs before the Wrensfield Community He
 there can be around three of them, to Joss Ferreira, Tobias Lund and Ilse Marek). Only touch Drafts, do
 not touch anything in Sent or Inbox. Tell me how many drafts you removed.
 
-3) Microsoft Teams. In the "disclosure-review" channel, delete the review post a past run put up so the
+3) Microsoft Teams. In the "disclosure-review" channel in "testing client workflows", delete the review post a past run put up so the
 channel is clear of it. Leave the channel itself in place. If you cannot delete a message, tell me which
 ones are still there. If the channel does not exist yet, say so.
 

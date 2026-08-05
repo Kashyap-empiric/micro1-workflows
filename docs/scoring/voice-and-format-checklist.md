@@ -84,6 +84,14 @@ Never as a hedge inside a box.
 **When a box needs a nit to stay under the ceiling:** find a real content-based critique of the
 model's work. Never a critique of the reviewer's own visibility.
 
+**"The user" is a third-person leak, same family as "you."** The trainer ran the session and is
+also the one being addressed as "the user" inside a raw log or transcript. Copying that log label
+into the commentary produces sentences that refer to the same person twice in two different
+persons in one breath, for example "the user had to explicitly say post it without asking me."
+Rewrite as first person throughout: "I had to explicitly say post it without asking again." This
+applies to the Box 3 and Box 6 sub-fields too ("none required from the user" becomes "none required
+from me").
+
 ---
 
 ## 3. PLAIN PROFESSIONAL LANGUAGE
@@ -115,6 +123,8 @@ Say it the human way:
 
 | Tell | Rule |
 |---|---|
+| Bold formatting | Never inside a box's own text (commentary or sub-fields). Markdown bold reads as a form/tool artifact, not a person's typed answer. |
+| Quotation marks around a word or short phrase for emphasis | Banned. Describe the word, label, or phrasing in plain prose instead of scare-quoting it. "carries the same retain wording" not "carries the same \"retain\" wording"; "the Hi Company-wide owner greeting" not "the \"Hi Company-wide owner\" greeting." |
 | Em-dashes, en-dashes, and hyphens | All banned, including hyphenated compound modifiers ("empty-section", "re-run", "tie-break", "reviews-after-editable"). Rephrase as separate words or restructure the sentence: "the rule for empty sections", "run it again", "the tie break", "the rule ranking reviews behind editable gaps". Use commas or parentheses for the em-dash cases; use plain multi-word phrasing for compound modifiers. |
 | Semicolons | Banned, project-wide. |
 | "X, not Y" contrastive construction | Banned. Say what the thing IS and stop. No negated alternative for contrast. |
@@ -193,6 +203,10 @@ client-ready."
 "Wrong actions / recovery" is a count or a flat statement of what happened. Never "none visible in
 the narration."
 
+**Efficiency commentary uses numerals for time, never spelled-out words.** Write "25 minutes" in the
+Commentary prose, not "Twenty five minutes." This matches the End-to-end time sub-field, which is
+already numeric, and keeps the prose consistent with it.
+
 **Final ranking field never uses "=".** Even on identical box scores, find the qualitative edge and
 rank strictly. Equal scores mean the 1-7 scale was not granular enough. (The separate "Notes on
 Codex's performance" narrative field may state a tie.)
@@ -232,7 +246,7 @@ Do these in order after drafting or editing any box.
 5. **Identifier scan.** Anything that looks like an ID, a quoted number, a URL, or a copy-pasted
    label.
 6. **Format check.** Word count per Commentary, labeled sub-fields on boxes 3 and 6, sub-fields at
-   one clause, no "=" in the ranking.
+   one clause, no "=" in the ranking, time written as a numeral in Efficiency commentary.
 7. **Structural-variation scan (section 6.5).** Read all 8 boxes for this model, then all boxes
    across all models, back to back. Flag any closing or opening clause that repeats near-verbatim
    three or more times. This pass only works read in bulk, not box by box.
@@ -258,6 +272,9 @@ between other tasks, not like a form a tool filled in. Keep every factual claim,
 and the rating number exactly as they are. Change only the prose.
 
 Strip on sight:
+- Bold formatting anywhere in the box's own text.
+- Quotation marks around a word or short phrase for emphasis. Describe it in plain prose instead of
+  scare-quoting it.
 - Em-dashes and en-dashes (— –). Use a period, comma, or parenthesis instead.
 - Semicolons. Split into two sentences or use a comma.
 - "X, not Y" contrastive phrasing. State what it IS and stop, no negated alternative tacked on.
