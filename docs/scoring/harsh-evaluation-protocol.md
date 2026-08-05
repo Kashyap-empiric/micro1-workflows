@@ -186,15 +186,14 @@ Run every gate before finalizing. No exceptions.
   finished and the score is not a 6.
 - **A 4 or 5 requires two distinct named issues** in that box's commentary. Not one issue restated.
   Not vague filler. If only one real issue exists, rethink whether it is actually a 6.
-- **A 5 is a mixed-result rating.** Its commentary must contain at least two distinct,
-  evidence-backed positives, at least two distinct, evidence-backed negatives, and a concrete
-  improvement or correction the model needed. The positives and negatives must belong to that box's
-  dimension. Do not split one point into artificial duplicates or invent a positive to satisfy the
-  structure.
-- **Every rating must be reflected in the writing.** Strong ratings need observable strengths and a
-  remaining limitation. Low ratings should make the failed behavior and required repair clear. If no
-  genuine positive or negative exists, do not manufacture one, record the evidence honestly and
-  reconsider whether the number fits.
+- **Every rating must be reflected in the writing, in proportion to the number.** The mix of
+  evidence-backed positives and negatives in a box's commentary should track its rating band, not
+  just echo it in wording. A mixed-result rating carries real named strengths alongside real named
+  weaknesses. A high rating leans on strengths with its one remaining limitation still named. A low
+  rating leans on the failed behavior and the repair it needs. The positives and negatives must
+  belong to that box's dimension. Do not split one point into artificial duplicates or invent a
+  positive or negative to satisfy the structure. If no genuine positive or negative exists, do not
+  manufacture one, record the evidence honestly and reconsider whether the number fits.
 - **Most dimensions, examined critically, belong at 5 or below.** 6 is not a default landing spot.
 - **Ties break low.** Always.
 - **Coupling rule.** If the commentary names a flaw, a miss, or a "would have been cleaner if", the
@@ -229,8 +228,8 @@ Run every gate before finalizing. No exceptions.
 3. Is any box sitting at 6? Go back and look harder. A comfortable 6 usually means the hunt
    stopped early.
 4. Does every 4 or 5 carry two distinct named issues?
-5. If a box is 5, does its commentary contain two positives, two negatives, and a concrete
-   improvement or correction?
+5. Does each box's mix of positives and negatives track its rating band, rather than just
+   restating the number in words?
 6. Does each commentary's balance match its rating without invented strengths or weaknesses?
 7. Was box 1 derived after boxes 2 through 8, by holistic judgment grounded in their finalized
    evidence rather than worked out first?

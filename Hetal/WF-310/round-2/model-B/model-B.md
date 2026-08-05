@@ -42,22 +42,22 @@ Codex, gpt-5.6-fish, Extra High intelligence
 **Rating:** 4
 
 **Commentary:**
-The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures all reconciling, and the ticket filing matching the requirement including which queries correctly get left out of a corpus-gap ticket. The gap that caps this is that the run never checks its own deliverable the way a person actually would, by opening the finished sheet and looking at how it reads, so its confidence rests entirely on a connector level data check rather than a real look at the result. That is a genuine shortfall for a document meant to be read by someone else, which is why this settles at 4 rather than higher.
+The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures all reconciling, and the ticket filing matching the requirement, including which queries correctly get left out of a corpus-gap ticket. The run never checks its own deliverable the way a person actually would, opening the finished sheet and looking at how it reads, so its confidence rests on a connector level check rather than a real look at the result. The sheet also never explains itself to a reader coming in cold, since it never says what a category actually represents or how the fusion math behind it works. Both are real gaps, and together they hold this at 4.
 
 ## 2. Task accuracy, ignoring speed
 
 **Rating:** 5
 
 **Commentary:**
-Checked row by row against the source rankings, the classification is right across all eighty four queries, the disputed cases are flagged rather than resolved on the model's own judgment, and a genuine content gap never gets mixed up with a query that simply missed retrieval in the top five. The winning fusion weight and every recall figure match what I get recomputing this independently, including the improvement percentage. What stops this short of flawless is that nowhere in the finished sheet is there a legend or short methodology note explaining the four categories or how the fused score is built, so the document depends on the reader also having the original brief rather than standing on its own. That is a real, if minor, completeness gap.
+Checked row by row against the source rankings, the classification is right across all eighty four queries, the disputed cases stay flagged rather than resolved on the model's own judgment, and a genuine content gap never gets mixed up with a retrieval miss. The winning fusion weight and every recall figure match my own independent recompute, improvement percentage included. Nowhere in the finished sheet is there a legend explaining the four categories or how the fused score is built, so the document depends on a reader also having the original brief. The recommendation ticket flags five queries where keyword search alone would have succeeded but the optimal fused setting misses them, then only recommends monitoring, real filler on a finding that deserved a real answer.
 
 ## 3. Efficiency
 
 **Rating:** 5
 **End-to-end time (minutes):** about 3.5
-**Wrong actions / recovery:** none wrong, though the ticket numbers that come back afterward are out of sequence relative to the order the queries were just reported in, a tidiness slip rather than an actual mistake.
+**Wrong actions / recovery:** nothing actually wrong, just a tidiness slip, the ticket numbers that come back afterward are out of sequence relative to the order the queries were just reported in.
 **Commentary:**
-For a task that reduces to one bounded computation and a fixed set of writes, this finished quickly and without a single failed step or retry anywhere in the run. The one thing I would tidy up is that the ticket references end up scrambled relative to the list of queries they correspond to, suggesting the filing happened in a different order than it gets reported in afterward. It costs nothing in correctness and nothing in time, but it is still a small sign of a process that could have stayed a bit more orderly on its way to a clean finish, which keeps this at 5.
+For a task that reduces to one bounded computation and a fixed set of writes, this finished quickly and without a single failed step or retry anywhere in the run. The ticket references that come back afterward are scrambled relative to the list of queries they correspond to, suggesting the filing happened in a different order than it gets reported in. The closing reconciliation runs three separate calls, pulling the cell values, searching Jira, then pulling the sheet's metadata on top, when two of the three would likely have covered the same ground. Neither issue costs real time or correctness, but both are signs of a process that could have stayed more orderly on its way to a clean finish.
 
 ## 4. Writing quality
 
@@ -71,12 +71,12 @@ The closing recap is organized into clear tables for the retrieval numbers, the 
 **Rating:** 5
 
 **Commentary:**
-Every literal rule gets honored, all eighty four queries kept as independent rows with nothing merged, the corpus-gap flag kept distinct from a plain retrieval miss, and no change made anywhere to production retrieval or the corpus. Computing recall within a category genuinely admits two readings, the category's own count as the base or the full log, and this run picks one without ever noting that a choice had to be made. The choice is the sound one and matches what a careful reader would expect, but resolving a real ambiguity silently instead of naming it is still a small gap against a brief that explicitly rewards flagging exactly this kind of judgment call.
+Every literal rule gets honored, all eighty four queries kept as independent rows with nothing merged, the corpus-gap flag kept distinct from a plain retrieval miss, and no change made anywhere to production retrieval or the corpus. The category recall figures could reasonably be built against that category's own count or against the full log, and those two starting points would not land on the same numbers, yet this run never says which one it used, though the pick matches what a careful reader would expect. The six disputed queries the brief specifically calls out never come up anywhere in the closing recap, even though the sheet's own disputed column is filled in correctly.
 
 ## 6. Collaboration, autonomy, and verification
 
 **Rating:** 3
-**Steering needed:** none, it ran unattended from the single prompt through to the finished deliverable.
+**Steering needed:** none, it ran the whole thing unattended off the single prompt.
 **Additional editing before I'd use it:** I would still open the sheet myself and check how it actually renders before trusting it, since that was never confirmed during the run.
 **Commentary:**
 The run confirms every write by reading the cell values back through the connector, which is a genuine check, but that is where it stops. It never opens the finished tabs to see what a reader would actually see, whether long entries wrap properly or get cut off by the columns underneath them. On a task whose entire purpose is a document someone else will read, treating a successful data read as equivalent to a finished, legible deliverable is a real gap, since confirming the values are correct and confirming the layout is usable are two different checks and only the first one happened here.
@@ -86,7 +86,7 @@ The run confirms every write by reading the cell values back through the connect
 **Rating:** 5
 
 **Commentary:**
-The recommendation record traces individual cases rather than staying at the surface, naming specifically which queries were rescued only through fusion and which retrieval misses still have content sitting in the corpus, each one tied to the exact chunk that explains it. Every headline figure holds up when I check it against the real source rankings myself. What is missing is any statement inside the ticket of which underlying files the analysis actually drew from, so the reasoning has to stand on its own rather than pointing back to a named source trail, and the improvement gets reported only as a relative percentage without the plain point gap sitting alongside it.
+The recommendation record traces individual cases rather than staying at the surface, naming specifically which queries were rescued only through fusion and which retrieval misses still have content sitting in the corpus, each one tied to the exact chunk that explains it. Every headline figure holds up when I check it against the real source rankings myself. Nothing inside the ticket states which underlying files the analysis actually drew from, so the reasoning has to stand on its own rather than point back to a named source trail. The percentage improvement stands alone too, with no absolute recall point gap anywhere nearby to anchor how big a jump it actually represents.
 
 ## 8. GUI action correctness
 

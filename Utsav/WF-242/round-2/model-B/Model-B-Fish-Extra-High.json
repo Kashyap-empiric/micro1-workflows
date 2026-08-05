@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-242",
+  "model": "B",
+  "file": "Model-B-Fish-Extra-High.json",
+  "task": "Grafton breach notification triage across Docs, Sheet, Notion, Teams and Gmail",
+  "persona": "Security GRC lead at a SaaS company, deciding the notification position after an incident is contained.",
+  "metadata": {
+    "occupation": "Information Security Analysts",
+    "manual_baseline_minutes": 180,
+    "runs_per_month": 2,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 6
+  },
+  "shared_context": "All three models worked the same fixture: two Google Docs describing a fictional breach and the affected data stores, a Google Sheet of notification regimes, an empty Notion breach register, and an empty Teams channel. Each had to work out the notification duty for six data stores against the regimes sheet, write one register record per store, post a matching summary to the legal channel, and leave every notice actually owed as an unsent Gmail draft with no address guessed for the two regulator notices. What separated the runs was not the legal analysis, which all three got right on every store, but completeness of the Teams post, how traceable the citations were back to the regimes sheet, and whether the register itself landed in the shared workspace the fixture actually lives in.",
+  "run_time": "about 4 minutes",
+  "suggested_field6": 5,
+  "suggested_field6_reason": "The core deliverable is right and it is sitting where it should be.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 5,
+      "commentary": "The core deliverable is right and it is sitting where it should be. Six correct positions in the shared register, a Teams post that matches those positions, and three unsent drafts with the right addresses and the right gaps left open for legal to fill in. What keeps this from going higher is that the parts a legal reader would lean on hardest, the reasoning behind the three most urgent calls, only show up in the drafts and never make it into the post meant to summarize the position at a glance. Add a verification trail that asserts more than it shows, and this is a genuinely usable result that still needs the Teams post filled in before I'd call it finished."
+    },
+    "task_accuracy": {
+      "rating": 5,
+      "commentary": "The substance here checks out row for row. I traced the person counts, the file paths, and the regime math against the source documents myself and none of it was off, including the harder calls like the Singapore store meeting the harm limb despite missing the scale limb, and Brazil staying open instead of getting filled in from outside knowledge. Two things stop me from going higher. The register's own reason text for each row doesn't carry the point in time everything else hangs off, so a reader has to go find the matching Gmail draft to see what the clock actually started from. And the Acme row buries the one fact that makes the processor notice apply, the customer's own EU establishment, inside a parenthetical in the jurisdiction cell instead of the reasoning itself."
+    },
+    "efficiency": {
+      "rating": 5,
+      "end_to_end_time_minutes": "about 4 minutes",
+      "wrong_actions_recovery": "no wrong actions, it moved straight through the task without a retry",
+      "commentary": "It moved straight from reading the source material to the final drafts with no dead ends along the way. The one real detour was resolving which of three separate teams containing an identically named channel was the right one to post to, which it did before writing anything, so the time was spent narrowing a genuine ambiguity rather than wandering. It also opened with two separate planning statements before touching a single tool, a small amount of throat clearing relative to how short the whole run ended up being. Neither cost much, which is why the total time is as tight as it is."
+    },
+    "writing_quality": {
+      "rating": 4,
+      "commentary": "The drafts themselves read cleanly, with a clear notice structure and no wasted sentences. The Teams post is where this loses ground. It gives a full one line reason for every store that isn't notifiable and for the one left open, then gives the three notifiable stores nothing beyond a recipient and a date, so the section a legal reader would care about most is the thinnest part of the post. The Gmail drafts also stay in continuous paragraph form the whole way through, with no bullet breakdown for the enumerable facts like affected counts or remediation steps, which makes the denser paragraphs slower to scan than they need to be for a document meant for a quick legal read."
+    },
+    "instruction_following": {
+      "rating": 5,
+      "commentary": "Every literal constraint I checked line by line is met. The blank regulator To fields carry the required note about needing a verified address, the customer notice uses the DPA's own address, and the notifiable stores are ordered by whichever deadline comes first. The one place it only half followed through is the one line reason requirement itself. The prompt's spirit is that every store gets a reason a reader can act on, and it delivered that fully for the not notifiable and open stores but not at all for the three notifiable ones, so the post's most urgent section is also its least substantiated one. That leaves the single most safety critical part of the post resting entirely on trust in a deadline and a name with no visible reasoning behind it."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 4,
+      "steering_needed": "none, it completed the task on its own",
+      "additional_editing": "I'd want the missing reasoning for the notifiable stores added to the Teams post before sending it to legal as is",
+      "commentary": "It ran clean without needing a nudge, and it did notice a real ambiguity on its own, working out which of three same named Teams channels was the right one before posting. Where it falls short is showing its work on verification. It states the register was checked against all six stores and the drafts confirmed as unsent, but the narration never describes how, unlike a run that hits a snag and has to narrate its way through a fallback check. Confirming an outcome without showing the check behind it is a thinner form of verification, and it also never reconciled the six row count in the register against the six store count in its own Teams post out loud."
+    },
+    "citation_quality": {
+      "rating": 5,
+      "commentary": "Every draft opens with a labeled regime line naming the exact row of the sheet it's standing on, so a reader can go straight to the source instead of reconstructing which row applies from the prose. The gap is that this labeling doesn't carry over into the register itself, so anyone starting from the register rather than a draft loses that shortcut. The Acme notice is also a notch less precise than it could be, citing the DPA's schedule broadly rather than naming the specific clause number that sets the 24 hour clock, a detail the underlying contract excerpt actually spells out."
+    },
+    "gui_action_correctness": {
+      "rating": 5,
+      "commentary": "Navigation here was mostly clean. It worked out which of three identically named Teams channels was the real one before posting rather than guessing, and the register landed in the correct shared workspace. One of the captured Gmail drafts shows an action undone notice sitting over the compose window, a leftover trace of some undo cycle during the session that never got explained or cleared before the screenshot was taken, and the body text reads intact so nothing looks actually broken, but it's a loose end in an otherwise finished screen. The register verification also has a thinner on screen trail than the drafts do, with the log stating six pages were created and checked without showing that check happening the way the rest of the session is narrated."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > B > A",
+  "cycle_best_overall": "C"
+}

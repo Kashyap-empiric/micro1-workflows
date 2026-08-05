@@ -1,1 +1,70 @@
-[Complete raw session transcript - not yet captured]
+Worked for 4m 20s
+
+
+I’m using the Google Drive/Sheets, Notion knowledge-capture, Teams messaging, and Gmail skills to trace the facts and regime clocks, build the six-store register, post the legal summary, and leave the owed notices unsent. I’ll treat the supplied regime tab and DPA excerpts as controlling.
+
+
+
+
+Used Google Drive, Notion and Codex Apps integrations, loaded tools, read files
+
+
+The source files are located. There are multiple exact-name candidates for the Notion database and Teams channel, so I’m checking their schemas and surrounding content before choosing a write target.
+
+
+
+
+Used Google Drive, Notion and Codex Apps integrations
+
+
+The controlling tab yields three notices, two no-notice positions, and one open position. The decisive clocks start with Thornbury’s file/secret-level confirmation at 09:40 IST on 13 July—not the unqualified first alert or the incident opening. I’ll use the newly created register matching the source-file setup and the channel explicitly described as the fictional Grafton legal workspace.
+
+
+
+
+Used Notion and Codex Apps integrations
+
+
+The six Notion records read back correctly. I’m preparing the three owed drafts now: Acme at the DPA address, and two regulator drafts with blank recipients and an explicit address-verification gate.
+
+
+
+
+Used Gmail and Codex Apps integrations
+
+
+The three drafts are present with the DRAFT label: Acme has the contractual address, and both regulator To fields are empty. The legal-channel post succeeded with the same 3/2/1 breakdown.
+
+
+
+
+Microsoft teams fetch
+
+
+
+
+
+
+
+
+Done. The Grafton Breach Register has six verified records: 3 notifiable, 2 not notifiable, 1 open. The matching position was posted to grafton-legal.
+Store	Role / jurisdiction	Position	Recipient	Deadline IST
+acme-crm-mirror	Processor / EU, Acme established in Ireland	Yes	Acme Corp Ltd, privacy@acme.example	Tue 14 Jul 2026, 09:40
+analytics-events	Controller / EU	Yes	Lead supervisory authority of our main establishment in the Union	Thu 16 Jul 2026, 09:40
+sg-payroll-extract	Controller / Singapore	Yes	The Commission	Thu 16 Jul 2026, 23:59
+hr-laptop-backup	Controller / EU	No	—	—
+marketing-site-drafts	Not applicable / no personal data	No	—	—
+br-contractor-roster	Controller / Brazil	Open	Open	Open
+
+
+The clock calls turn on Thornbury IR’s file- and secret-level confirmation at 09:40 IST on 13 July. The first alert did not establish personal-data access, and the incident-opening alert did not yet identify the files or their contents. For Singapore, the tab’s three-calendar-day formulation runs from the day the notifiable breach was confirmed, giving the end of 16 July. Brazil remains open because the supplied Regimes tab has no covering row.
+Three notices are present as unsent Gmail drafts:
+Acme customer notice, addressed to the DPA-specified privacy@acme.example.
+EU supervisory-authority notice, with To blank and an express verified-address/filing-route gate.
+Singapore Commission notice, with To blank and the same verification gate.
+Gmail readback showed all three carrying the DRAFT label; nothing was sent. Legal sign-off and verified regulator filing addresses remain necessary.
+The analysis used the supplied Incident Record, Data Stores and DPAs, and Notification Regimes sheet, without filling the Brazil gap from external law.
+One connector limitation surfaced: Notion’s Query Data Source operation was unavailable because the workspace usage limit had been reached. Creation succeeded and each of the six records was verified by direct page fetch instead. For database-wide SQL querying later, retry after the limit resets or upgrade the Notion plan.
+
+
+13:31

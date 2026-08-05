@@ -1,0 +1,18 @@
+{
+  "cycle": "WF-242",
+  "task": "Grafton breach notification triage across Docs, Sheet, Notion, Teams and Gmail",
+  "persona": "Security GRC lead at a SaaS company, deciding the notification position after an incident is contained.",
+  "models_evaluated": [
+    "A",
+    "B",
+    "C"
+  ],
+  "overall_ratings": {
+    "A": 3,
+    "B": 5,
+    "C": 5
+  },
+  "ranking_best_to_worst": "C > B > A",
+  "best_overall": "C",
+  "why_top_model_is_best_and_what_separates_the_others": "C is the strongest of the three. It landed all six positions correctly against the regimes sheet and the two source docs, including the two calls this prompt is actually testing for: letting the exposed pepper defeat the analytics store's unintelligibility exemption, and leaving the Brazil store open instead of filling the gap from outside legal knowledge. What separates it from the other two is completeness and sourcing. Its Teams post is the only one that gives every notifiable store its own one line reason instead of leaving the most urgent section of the post thin, and it is the only run that names the exact regime identifier and DPA clause behind a notice in the Teams post itself and in one register row, rather than leaving that traceability inside the linked draft alone. It ran in the middle of the pack for time. Its real weaknesses are a duplicate looking entry in its own Notion sidebar that its closing summary never addressed, and a version of the analysis, naming Acme's own EU establishment explicitly, that only shows up in its own conversation summary and never made it into the persisted register.\n\nB is close behind and is the fastest and most direct of the three, moving from source material to finished drafts with almost no wasted motion. Its factual accuracy is clean end to end, and its drafts are the best sourced individually, each one opening with a labeled regime line that points a reader straight at the row of the sheet it depends on. What keeps it out of first is completeness in the one deliverable meant to be read at a glance. Its Teams post gives a full reason to every not notifiable and open store but nothing beyond a recipient and a date to the three notifiable ones, so the most urgent section of the post is also the one a reader has to take on faith. Its closing narration also asserts that the register was checked without describing how, a thinner form of verification than the other two runs showed.\n\nA sits last, and by a real margin rather than a close one. Its underlying legal reasoning is sound and its drafts are the best formatted of the three, breaking dense facts into labeled sections with bullet points that make them easy to scan. But the register it wrote sits in a personal Notion space rather than the shared workspace the other two runs both used, even though its own narration explicitly flagged that the register name and the channel name each had more than one match in the workspace before it chose a destination. It never circled back to confirm that choice was right. On top of that it took roughly two and a half times as long as either of the other two runs for a result I still cannot confirm sits in the correct place, which is a serious efficiency drag with nothing extra to show for it. Strong drafting and sound analysis do not make up for real doubt about whether the register legal is supposed to open is the one this run actually populated."
+}

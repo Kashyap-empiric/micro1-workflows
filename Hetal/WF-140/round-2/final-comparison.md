@@ -45,6 +45,6 @@ A also reconciles every figure correctly and produces a channel summary and a se
 - [x] All three model files contain raw Logs and Output.
 - [x] Requirements, traps, and source-of-truth checks were completed.
 - [x] Boxes 2-8 were finalized before box 1.
-- [x] Box 1 uses the current MIN formula.
+- [x] Box 1 was derived by holistic judgment from the finalized boxes 2-8, not a fixed formula.
 - [x] Individual model files contain no visible cross-model comparison.
 - [x] The ranking is strict and supported by the model files.

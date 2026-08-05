@@ -1,0 +1,58 @@
+{
+  "cycle": "WF-242",
+  "model": "A",
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "Grafton breach notification triage across Docs, Sheet, Notion, Teams and Gmail",
+  "persona": "Security GRC lead at a SaaS company, deciding the notification position after an incident is contained.",
+  "metadata": {
+    "occupation": "Information Security Analysts",
+    "manual_baseline_minutes": 180,
+    "runs_per_month": 2,
+    "difficulty_1to7": 7,
+    "my_initial_rating_field6": 6
+  },
+  "shared_context": "All three models worked the same fixture: two Google Docs describing a fictional breach and the affected data stores, a Google Sheet of notification regimes, an empty Notion breach register, and an empty Teams channel. Each had to work out the notification duty for six data stores against the regimes sheet, write one register record per store, post a matching summary to the legal channel, and leave every notice actually owed as an unsent Gmail draft with no address guessed for the two regulator notices. What separated the runs was not the legal analysis, which all three got right on every store, but completeness of the Teams post, how traceable the citations were back to the regimes sheet, and whether the register itself landed in the shared workspace the fixture actually lives in.",
+  "run_time": "about 11 minutes",
+  "suggested_field6": 3,
+  "suggested_field6_reason": "The legal analysis underneath this run is sound, and its drafts are well constructed, breaking the facts into clear labeled sections a reviewer can move through fast.",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 3,
+      "commentary": "The legal analysis underneath this run is sound, and its drafts are well constructed, breaking the facts into clear labeled sections a reviewer can move through fast. But the deliverable that actually matters most here, the shared register legal is supposed to open, doesn't demonstrably exist where the other pieces point. It wrote six correct rows into a database sitting in a personal Notion space rather than the shared workspace, and never checked back on the ambiguity it raised about itself before writing there. Add in a run that took well over twice as long as it needed to for the same result, and I can't call this a usable deliverable as it stands. It needs someone to go find the register, confirm it's visible to legal, and possibly redo the write before this is ready to hand off."
+    },
+    "task_accuracy": {
+      "rating": 4,
+      "commentary": "The six positions themselves are right. It caught that the pepper sitting in the same breach as the analytics data is what kills the pseudonymisation exemption, applied the Singapore harm limb correctly even though the scale limb wasn't met, and left the Brazil row open instead of reaching for outside law, which is the main trap in this prompt. What holds it back is where the work landed. The register sits in a personal Notion space rather than the shared workspace this fixture lives in, and the six rows I found there aren't demonstrably the ones legal would actually open. The Acme row's jurisdiction field also just says European Union rather than naming the customer's own establishment, the fact the processor notice actually turns on."
+    },
+    "efficiency": {
+      "rating": 3,
+      "end_to_end_time_minutes": "about 11 minutes",
+      "wrong_actions_recovery": "no outright wrong clicks, but it had to abandon its first Notion verification method after hitting a usage limit and go back through all six rows one by one instead",
+      "commentary": "This took roughly two and a half times as long as a comparable run covering the same six stores and the same three drafts, without anything extra to show for the added time. A real chunk of it went into working out which Notion database and which Teams channel it actually meant, since both names had more than one match sitting in the workspace, and the resolution it landed on still isn't clearly the right one. The rest went into checking the register row by row again after its first verification attempt got blocked. None of this was a wrong click in the moment, but it's a lot of extra time for a result that still doesn't clearly sit in the correct spot."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "The drafts are the strongest part of this run. Each one breaks the facts into short labeled sections with bullet points under headings like affected data and measures taken, which makes a dense legal notice easy for a reviewer to scan in a hurry. The Teams post carries a one line reason next to every notifiable store as well as the ones that aren't, so nothing there needs a follow up question. The one place it slips is consistency across the three deliverable types. The Teams post and the register rows read as flowing sentences while the Gmail drafts switch to a heavily bulleted structure, so someone reading all three back to back gets three different formatting conventions for the same set of facts."
+    },
+    "instruction_following": {
+      "rating": 4,
+      "commentary": "It hit the letter of the prompt on the pieces I can check line by line. The regulator drafts have empty To fields with an explicit note that an address needs verifying, the customer draft uses the address out of the DPA excerpt, and the notifiable stores in the Teams post are ordered by whichever deadline comes first. The gap is destination fidelity. Its own narration flagged that both the register name and the channel name had more than one match in the workspace, which is exactly the kind of ambiguity this prompt punishes a wrong guess on, and the register it landed on sits in a personal space rather than the shared one. Getting the format and the ordering right doesn't make up for a real risk that the write went to the wrong destination."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 3,
+      "steering_needed": "none, it ran unattended from start to finish",
+      "additional_editing": "I'd want to reopen the register myself and confirm it's the shared copy before anything goes to legal",
+      "commentary": "It gets credit for flagging its own limitation instead of hiding it. When its first Notion verification method hit a usage limit, it said so plainly and switched to checking each of the six rows individually rather than just asserting the write worked. What it never circled back to is the ambiguity it raised for itself earlier, that both the register and the channel had more than one same named match in the workspace. It picked a destination for each and moved on without ever confirming afterward that the one it picked was the shared one everyone else would open. Flagging a data gap is worth something. Flagging a destination gap and never resolving it is a real verification hole."
+    },
+    "citation_quality": {
+      "rating": 4,
+      "commentary": "The figures in the drafts trace cleanly back to the source material. The subject counts, the file paths, and the timing for each store match what's in the incident record and the data store descriptions, and I checked them against it myself. What's missing is any reference to which row of the regimes sheet each notice is actually standing on. None of the three drafts names a regime by its identifier, so a reader checking a draft against the sheet has to reconstruct which row applies from the legal language alone instead of being pointed straight to it. The Acme row's jurisdiction field has the same problem in miniature, since it drops the one fact, the customer's own EU establishment, that actually grounds the citation."
+    },
+    "gui_action_correctness": {
+      "rating": 3,
+      "commentary": "The clearest problem in this run is here. The Notion workspace the register sits in is a personal space, not the shared team workspace, even though its own narration says it noticed more than one same named database and stopped to inspect them before choosing. That inspection step didn't stop it from landing somewhere different from where the shared fixture actually lives. On top of that, its first attempt to verify the register through an aggregate check failed on a usage limit, so it had to fall back to opening each of the six rows individually, a roundabout path a cleaner run through the same workspace wouldn't have needed. The navigation got the content right. It didn't get the destination right."
+    }
+  },
+  "cycle_ranking_best_to_worst": "C > B > A",
+  "cycle_best_overall": "C"
+}
