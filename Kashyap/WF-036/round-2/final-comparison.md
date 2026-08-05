@@ -58,11 +58,11 @@ a self reported content fidelity slip where logged bullet characters became hyph
 published post.
 
 A ranks third. Like B it never requested a live approval, a genuine strength against the prompt's
-no human in the loop requirement, and its topic and writing are solid. But it carries the same
+no human in the loop requirement, and its topic and writing hold up well. But it carries the same
 unresolved OpenAI and Anthropic source conflation as B, and its process included a long, unexplained
-dead end chasing a Windows desktop Teams app across seven tool calls before falling back to the
-connector it could have tried directly, plus an unexplained mid run interruption that left
-Notification Sent blank until a second pass resumed the work.
+dead end chasing a Windows desktop Teams app across many tool calls before falling back to the
+connector it could have tried directly, plus an unexplained mid run interruption that left the
+notification field unresolved until a second pass resumed the work.
 
 ## Final sign-off
 
