@@ -38,17 +38,7 @@ copied verbatim from that model's `.md` file, byte for byte, never re-summarized
   "model": "A",
   "file": "Model-A-<Codename>-Extra-High.json",
   "task": "<WF title, from workflows.txt / final-comparison.md METADATA>",
-  "metadata": {
-    "occupation": "<METADATA line 1>",
-    "manual_baseline_minutes": <METADATA line 3, integer>,
-    "runs_per_month": <METADATA line 4, integer>,
-    "difficulty_1to7": <METADATA line 5, integer>,
-    "my_initial_rating_field6": <METADATA line 6, integer>
-  },
-  "shared_context": "<one paragraph describing the shared task setup and what separated the runs in this round; written once, same text reused across all three model JSONs in the round>",
   "run_time": "<this model's End-to-end time string from box 3>",
-  "suggested_field6": <this model's box 1 rating, integer>,
-  "suggested_field6_reason": "<first sentence or two of this model's box 1 commentary>",
   "boxes": {
     "overall_task_success": { "rating": <int>, "commentary": "<box 1 commentary verbatim>" },
     "task_accuracy": { "rating": <int>, "commentary": "<box 2 commentary verbatim>" },
@@ -79,6 +69,8 @@ Notes:
 - Do not include `cycle_ranking_best_to_worst` or `cycle_best_overall` in the per-model JSON files.
   That ranking data belongs only in `Final-Ranking.json`, not repeated across all three model files.
 - No `persona` field. Drop it entirely rather than leaving it as an empty string.
+- No `metadata` object. That data belongs to the task-level record, not the per-model JSON.
+- No `shared_context`. No `suggested_field6` / `suggested_field6_reason`.
 
 ## Final-Ranking.json schema
 

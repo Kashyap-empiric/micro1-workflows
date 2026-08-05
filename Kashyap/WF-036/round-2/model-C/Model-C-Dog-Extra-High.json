@@ -3,17 +3,7 @@
   "model": "C",
   "file": "Model-C-Dog-Extra-High.json",
   "task": "Automated LinkedIn Content Pipeline for Empiric Infotech",
-  "metadata": {
-    "occupation": "",
-    "manual_baseline_minutes": "",
-    "runs_per_month": "",
-    "difficulty_1to7": "",
-    "my_initial_rating_field6": ""
-  },
-  "shared_context": "All three runs researched, wrote, and published one LinkedIn post for the same company, updated the same content log, and sent the same Teams notification, under a prompt that explicitly rules out any human in the loop. All three chose defensible topics and produced usable posts. Where they diverged was in whether the run actually stayed unattended, how cleanly it recovered from the platform frictions it hit along the way, and whether the sourcing behind the topic choice held up as one independently confirmed story or quietly conflated two different companies' incidents.",
   "run_time": "21",
-  "suggested_field6": 4,
-  "suggested_field6_reason": "The sourcing is rigorous and the deliverable landed correctly, but getting there took the same publish confirmation overridden twice in one session, plus a content fidelity slip in the recovery path, a real process failure against a prompt that explicitly rules out any human in the loop.",
   "boxes": {
     "overall_task_success": {
       "rating": 4,

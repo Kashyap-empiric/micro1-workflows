@@ -3,17 +3,7 @@
   "model": "B",
   "file": "Model-B-Fish-Extra-High.json",
   "task": "Automated LinkedIn Content Pipeline for Empiric Infotech",
-  "metadata": {
-    "occupation": "",
-    "manual_baseline_minutes": "",
-    "runs_per_month": "",
-    "difficulty_1to7": "",
-    "my_initial_rating_field6": ""
-  },
-  "shared_context": "All three runs researched, wrote, and published one LinkedIn post for the same company, updated the same content log, and sent the same Teams notification, under a prompt that explicitly rules out any human in the loop. All three chose defensible topics and produced usable posts. Where they diverged was in whether the run actually stayed unattended, how cleanly it recovered from the platform frictions it hit along the way, and whether the sourcing behind the topic choice held up as one independently confirmed story or quietly conflated two different companies' incidents.",
   "run_time": "15",
-  "suggested_field6": 5,
-  "suggested_field6_reason": "The deliverable is complete and well formatted, with one real sourcing looseness, two different companies' incidents treated as one jointly confirmed story.",
   "boxes": {
     "overall_task_success": {
       "rating": 5,
