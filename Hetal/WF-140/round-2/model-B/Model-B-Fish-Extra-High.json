@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-140",
+  "task_id": "WF-140",
   "model": "B",
   "file": "Model-B-Fish-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
-  "persona": "IT Operations Lead at a mid-size IT services company, owns the SaaS tool stack, vendor renewals and tooling governance, and files cleanup work into Jira.",
-  "metadata": {
-    "occupation": "Computer Systems Analyst",
-    "manual_baseline_minutes": 200,
-    "runs_per_month": 4,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs read the same SaaS tracker, SSO report, renewal quotes, and governance policy, correctly reconciled every one of the 20 tracker rows, computed the same USD 140,340 total spend and USD 56,220 total saving, filed the same four Jira tickets (Slack to Microsoft Teams, Asana and Trello to Jira, Toggl Track to Harvest, Dropbox Business to OneDrive) plus the Pipedrive to HubSpot opportunity recorded on the tracker only, left Figma, Adobe XD, and Loom unresolved rather than guessing, posted a live Teams summary, and created five blank-recipient Gmail drafts with no cancellation, licence change, or vendor contact anywhere. Where they diverge is run time, labelling clarity in the tracker's decision column, how cleanly the citation trail separates sourced figures from added planning language, and whether every claimed figure actually appears somewhere else in the record to check it against.",
   "run_time": "7 (6m 39s)",
-  "suggested_field6": 5,
-  "suggested_field6_reason": "The deliverable is complete and correct everywhere I could check it against the real source, the tracker, the tickets, the live post, and the drafts all agree with each other and with the policy, and nothing was guessed where the policy was silent.",
   "boxes": {
     "overall_task_success": {
       "rating": 5,
@@ -52,7 +41,5 @@
       "rating": 5,
       "commentary": "The gradable part of this is the email drafting itself, which happened on screen, since the sheet, ticket, and channel work went through direct tool calls. Every draft has the correct blank recipient field and the right department targeting, so nothing landed in the wrong place. What I can see on screen is less tidy than the underlying work, several compose windows were left open stacked on each other rather than closed one at a time, and one screenshot shows the drafts list already narrowed by a search filter before all five drafts are visible together in one view, both small but real housekeeping gaps in the final screen state."
     }
-  },
-  "cycle_ranking_best_to_worst": "C > B > A",
-  "cycle_best_overall": "C"
+  }
 }

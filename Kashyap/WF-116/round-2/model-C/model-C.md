@@ -37,7 +37,7 @@ The reporting mechanics are sound, the stage filters, the position-based math, t
 ## 3. Efficiency
 
 **Rating:** 3/7
-**End-to-end time (minutes):** 26 (26m 15s)
+**End-to-end time (minutes):** 26
 **Wrong actions / recovery:** a font-rendering workaround for the local chart-build step, a POSIX-specific verification tool that didn't run in this environment and had to be substituted, a failed Chrome-based channel check that detached mid-navigation, a Windows Teams app check that found no app available, and a trailing blank page plus two reset heading styles caught during PDF QA.
 **Commentary:** Twenty six minutes covers a real amount of friction along the way, several tool and environment mismatches that each needed a substitute path, and two separate failed attempts at confirming the channel state before the run gave up on that specific check and sent anyway. The PDF visual pass at the end is genuinely useful and caught two real formatting defects before they shipped. But between the tooling substitutions and the two dead-end channel-verification attempts, this is a meaningfully bumpier path to the deliverable than a single clean pass would need, even though every individual snag got handled.
 
@@ -45,7 +45,7 @@ The reporting mechanics are sound, the stage filters, the position-based math, t
 
 **Rating:** 4/7
 
-This is the only deliverable in front of me with real chart images rather than a text-based substitute, and the two charts chosen, conversions by platform and the CAC divergence comparison, are the two most useful visuals a reader would actually want. The prose throughout is clear and the methodology section reads naturally rather than like a checklist. What pulls this down is a recommendation that undercuts itself: one budget line tells the reader to audit click-ID resolution and query intent for a combination whose own underlying data already had that exact question answered and decided, just decided in a way this same report doesn't fully stand behind elsewhere. Sending a reader to re-investigate something the run itself already resolved, and resolved shakily, is a real clarity problem.
+This deliverable ships with real chart images rather than a text-based substitute, and the two charts chosen, conversions by platform and the CAC divergence comparison, are the two most useful visuals a reader would actually want. The prose throughout is clear and the methodology section reads naturally rather than like a checklist. What pulls this down is a recommendation that undercuts itself: one budget line tells the reader to audit click-ID resolution and query intent for a combination whose own underlying data already had that exact question answered and decided, just decided in a way this same report doesn't fully stand behind elsewhere. Sending a reader to re-investigate something the run itself already resolved, and resolved shakily, is a real clarity problem.
 
 ## 5. Instruction following
 
@@ -76,4 +76,4 @@ There's real on-screen effort here to grade. The channel-verification attempt we
 
 **Rating:** 3/7
 
-The reporting mechanics, the formatting, and the self-honesty about what couldn't be verified are all real strengths, and this is the only deliverable with true chart images instead of a workaround. What caps this well below that is a documented, explicit misapplication of the task's core resolution rule: three Click IDs with a real export match got dropped anyway because of a status label, and that choice is what produces this run's different underperforming list and Jira set. A persona acting on this report would open tickets and reallocate budget based on a set of combinations that a straightforward reading of the resolution rule would not have produced, which is a material problem a polished document and honest caveats elsewhere don't offset.
+The reporting mechanics, the formatting, and the self-honesty about what couldn't be verified are all real strengths, and this deliverable ships with true chart images instead of a workaround. What caps this well below that is a documented, explicit misapplication of the task's core resolution rule: three Click IDs with a real export match got dropped anyway because of a status label, and that choice is what produces this run's different underperforming list and Jira set. A persona acting on this report would open tickets and reallocate budget based on a set of combinations that a straightforward reading of the resolution rule would not have produced, which is a material problem a polished document and honest caveats elsewhere don't offset.

@@ -9,12 +9,12 @@ are kept in `archive/` for reference.
 ## METADATA
 
 1. Occupation / career: Software Developer
-2. Occupation + workplace: [FILL]
-3. Time to complete this workflow WITHOUT a model (minutes): [FILL]
-4. Times PER MONTH I run this workflow: [FILL]
-5. Workflow difficulty 1-7: [FILL]
-6. Initial Codex test rating 1-7: [FILL]
-7. Notes on Codex's performance: [FILL]
+2. Occupation + workplace: Software Developer at a mid sized IT firm
+3. Time to complete this workflow WITHOUT a model (minutes): 250
+4. Times PER MONTH I run this workflow: 5
+5. Workflow difficulty 1-7: 7
+6. Initial Codex test rating 1-7: 4
+7. Notes on Codex's performance: B produced a complete research document in a single unattended pass with no live intervention, and it was the only one of the three that treated the finalist missing a signed callback mechanism as a genuine disqualification rather than folding that failure quietly into a lower security score.
 
 ## Readiness
 

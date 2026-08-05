@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-310",
+  "task_id": "WF-310",
   "model": "B",
   "file": "Model-B-Fish-Extra-High.json",
   "task": "RAG Retrieval Complementarity and Fusion Analysis",
-  "persona": "Data Scientist at a mid sized IT firm.",
-  "metadata": {
-    "occupation": "Data Scientist",
-    "manual_baseline_minutes": 240,
-    "runs_per_month": 1.5,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs classified the same 84 queries against the source rankings, correctly separated the six disputed queries, split genuine corpus gaps from plain retrieval misses, and produced the same category summary (exact-match 35, semantic 10, mixed 27, no-coverage 12) and the same fusion result, alpha = 0.5 as the unique optimum, BM25 66.67%, dense 36.90%, hybrid 79.76%, a 116.13% relative improvement over dense. Each filed the same eight corpus-gap Jira tickets plus one hybrid-retrieval recommendation ticket, left the same four queries as Sheet-only retrieval misses, and touched no production retrieval settings. Where they diverged is whether a run actually opened its own finished sheet to check how it renders before calling itself done, how completely its tickets traced individual queries back to specific source chunks, and how much time it burned getting to an otherwise identical result.",
   "run_time": "3.5 (3m 36s)",
-  "suggested_field6": 4,
-  "suggested_field6_reason": "The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures all reconciling, and the ticket filing matching the requirement including which queries correctly get left out of a corpus-gap ticket.",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
@@ -52,7 +41,5 @@
       "rating": null,
       "commentary": "Not applicable to this task. Every action here went through a connector or a direct file and API read, with no on screen navigation for me to evaluate."
     }
-  },
-  "cycle_ranking_best_to_worst": "C > B > A",
-  "cycle_best_overall": "C"
+  }
 }

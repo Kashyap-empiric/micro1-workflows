@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-187",
+  "task_id": "WF-187",
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Cross-Platform LLM Prompt Version Drift Tracker",
-  "persona": "Software Engineer at a mid-sized IT firm",
-  "metadata": {
-    "occupation": "Software Engineer",
-    "manual_baseline_minutes": 150,
-    "runs_per_month": 4,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs checked the same four codebases for the same weekly prompt drift window, against a live sheet and ticket history that already carried a prior pass for this exact window. All three correctly grouped prompts into the same families, picked the same canonical versions, caught the same code-versus-production deployment mismatch, and split the same double-flagged version into two separate ticket actions. Where they diverged was in how each one closed out the required recurring log entry and the duplicate-post check before sending or skipping the channel notification, and that is where the real gaps between them show up.",
   "run_time": "15 (15m 2s)",
-  "suggested_field6": 4,
-  "suggested_field6_reason": "The deliverable is complete and the underlying analysis is right, every family gets a correct canonical call, the production mismatch is caught and isolated, the tickets are properly split, and the rerun gets handled without duplicating anything.",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
@@ -52,7 +41,5 @@
       "rating": 3,
       "commentary": "There's real browser action to grade here, not just a fallback that never engaged. The first pass used the browser only to confirm a post composer was present, a step that added a click without adding information. The second pass, checking the existing channel post before sending, reached a browser session that wasn't signed in, so the one screen that could have actually answered the duplicate question never got read. Two browser attempts, neither of which produced a usable result, and the second one directly touches the run's shakiest decision, is why this sits at 3/7 rather than higher."
     }
-  },
-  "cycle_ranking_best_to_worst": "C > A > B",
-  "cycle_best_overall": "C"
+  }
 }

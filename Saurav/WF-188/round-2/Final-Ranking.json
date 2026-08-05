@@ -1,7 +1,6 @@
 {
-  "cycle": "WF-188",
+  "task_id": "WF-188",
   "task": "FastAPI LLM Integration Cost & Latency Feature Attribution Monitor",
-  "persona": "Software Engineer at a mid sized IT firm",
   "models_evaluated": [
     "A",
     "B",

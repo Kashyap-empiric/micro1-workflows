@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-310",
+  "task_id": "WF-310",
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "RAG Retrieval Complementarity and Fusion Analysis",
-  "persona": "Data Scientist at a mid sized IT firm.",
-  "metadata": {
-    "occupation": "Data Scientist",
-    "manual_baseline_minutes": 240,
-    "runs_per_month": 1.5,
-    "difficulty_1to7": 7,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs classified the same 84 queries against the source rankings, correctly separated the six disputed queries, split genuine corpus gaps from plain retrieval misses, and produced the same category summary (exact-match 35, semantic 10, mixed 27, no-coverage 12) and the same fusion result, alpha = 0.5 as the unique optimum, BM25 66.67%, dense 36.90%, hybrid 79.76%, a 116.13% relative improvement over dense. Each filed the same eight corpus-gap Jira tickets plus one hybrid-retrieval recommendation ticket, left the same four queries as Sheet-only retrieval misses, and touched no production retrieval settings. Where they diverged is whether a run actually opened its own finished sheet to check how it renders before calling itself done, how completely its tickets traced individual queries back to specific source chunks, and how much time it burned getting to an otherwise identical result.",
   "run_time": "7 (6m 49s)",
-  "suggested_field6": 3,
-  "suggested_field6_reason": "The underlying numbers are entirely correct, and the ticket record names its own source files directly, a genuine strength worth crediting.",
   "boxes": {
     "overall_task_success": {
       "rating": 3,
@@ -52,7 +41,5 @@
       "rating": 4,
       "commentary": "The rendered sheet gets opened and read correctly, with no wrong clicks or misdirected navigation anywhere in the pass, and both tabs come back confirmed legible at normal zoom. The one real weakness is that the same tab gets reopened and inspected a second time without anything changing in between, so the second pass adds a navigation step without adding new visual evidence. A single, well aimed look at each tab would have covered the same ground more efficiently than the repeated pass this run actually took."
     }
-  },
-  "cycle_ranking_best_to_worst": "C > B > A",
-  "cycle_best_overall": "C"
+  }
 }

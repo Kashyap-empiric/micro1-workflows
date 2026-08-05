@@ -1,20 +1,9 @@
 {
-  "cycle": "WF-144",
+  "task_id": "WF-144",
   "model": "A",
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Web App to Mobile Build Blueprint and Backlog",
-  "persona": "Engineering manager at a mid-sized software company planning a mobile build",
-  "metadata": {
-    "occupation": "Engineering Manager",
-    "manual_baseline_minutes": 480,
-    "runs_per_month": 1,
-    "difficulty_1to7": 6,
-    "my_initial_rating_field6": 3
-  },
-  "shared_context": "All three runs read the same frozen commit of the same web app repository and produced a multi-tab architecture blueprint, four grouped Jira phase issues, and a Teams notification. All three resolved the cutoff commit correctly and produced thorough, specifically detailed blueprint content. The fixture already had one open Jira issue covering foundation and auth work, and whether a run matched that issue by its exact summary and updated it in place, instead of creating a differently worded duplicate, is what actually separated the three, along with how each one handled the required Chrome fallback for Jira attachments and how cleanly the run reached the finish line.",
-  "run_time": "25 (25m 2s)",
-  "suggested_field6": 3,
-  "suggested_field6_reason": "The blueprint content is thorough and the process ran fast and unattended, but the deliverable ships with a real duplicate ticket sitting next to an untouched existing one covering the same phase, a direct miss on the task's own re-run rule rather than a stylistic nit.",
+  "run_time": "25",
   "boxes": {
     "overall_task_success": {
       "rating": 3,
@@ -25,10 +14,10 @@
       "commentary": "The blueprint itself is thorough, the tab structure is complete, the commit is pinned and stated, and the ticket descriptions carry specific, concrete technical detail rather than vague scope language. The real problem is upstream of the content: the fixture already had an open Jira issue covering foundation and auth work, and this run never checked for it before creating a new ticket under different wording. The result is a fresh ticket sitting alongside an untouched existing one that covers essentially the same phase, exactly the duplicate the task's own re-run rule exists to prevent. Strong analytical content sitting on top of a real duplication problem is why this lands well below the middle of the scale."
     },
     "efficiency": {
-      "rating": 5,
-      "end_to_end_time_minutes": "25 (25m 2s)",
+      "rating": 6,
+      "end_to_end_time_minutes": "25",
       "wrong_actions_recovery": "none stated beyond the expected Chrome fallback for Jira attachments, needed because the standard connector doesn't expose an attachment-upload action",
-      "commentary": "Twenty five minutes for a full architecture read, a nine-tab document, four tickets with attachments, and a Teams post is a tight runtime for this scope, and the run reads as one continuous pass with real visual verification built in rather than skipped. The only real mark against it is not a wasted step but a missed one: nothing in the run shows a check for an existing matching issue before creating new tickets, and that missing step is exactly what let a duplicate slip through elsewhere in this review."
+      "commentary": "Twenty five minutes for a full architecture read, a nine-tab document, four tickets with attachments, and a Teams post is a tight runtime for this scope, and the run reads as one continuous pass with real visual verification built in rather than skipped. The one small thing is that the image review happens across five separate batches, three images, then six, six, five, and five, rather than one consolidated pass, a minor structural inefficiency even though every batch does get checked."
     },
     "writing_quality": {
       "rating": 4,
@@ -46,13 +35,11 @@
     },
     "citation_quality": {
       "rating": 4,
-      "commentary": "The ticket descriptions name specific technical elements, credential storage mechanisms, contract versioning gaps, the exact database layer, rather than describing the work in generic terms, and the Secrets found tab points at file and line instead of asserting a finding vaguely. What keeps this from a higher mark is that I have no way to independently confirm these specific technical claims against the actual repository from what's in front of me, so the specificity is real but the traceability stops at the document's own word."
+      "commentary": "The ticket descriptions name specific technical elements, credential storage mechanisms, contract versioning gaps, the exact database layer, rather than describing the work in generic terms, and the Secrets found tab points at file and line instead of asserting a finding vaguely. What keeps this from a higher mark is that the Secrets tab is the only place in the document that grounds a claim to an exact file and line, the architecture and contract claims elsewhere carry the same specificity in wording but not the same pointer to a location a reader could go check, so the traceability apparatus is inconsistent across the document rather than applied throughout."
     },
     "gui_action_correctness": {
-      "rating": 4,
-      "commentary": "There's real, demonstrated visual verification here, the run exported and reviewed the rendered attachment PDFs multiple times across several batches of images before calling them finished, which is a genuine check rather than an assumption. What keeps this from a higher mark is that the same care wasn't extended to the Jira search step, where a browser-and-connector pass to look for an existing matching issue would have caught the duplicate before it happened, and nothing in the run shows that check being attempted."
+      "rating": 6,
+      "commentary": "There's real, demonstrated visual verification here, the run exported and reviewed the rendered attachment PDFs multiple times across several batches of images before calling them finished, which is a genuine check rather than an assumption. The one gap is that this visual pass is narrated for the derived Jira attachment PDFs specifically, but not for the canonical Google Doc itself, so the source-of-truth document doesn't get the same on-screen confirmation the exported copies do."
     }
-  },
-  "cycle_ranking_best_to_worst": "B > C > A",
-  "cycle_best_overall": "B"
+  }
 }

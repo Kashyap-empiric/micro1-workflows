@@ -1,7 +1,6 @@
 {
-  "cycle": "WF-116",
+  "task_id": "WF-116",
   "task": "Cross-Platform Marketing Attribution Intelligence",
-  "persona": "Marketing operations lead at a mid-sized cloud software company",
   "models_evaluated": [
     "A",
     "B",

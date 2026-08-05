@@ -8,7 +8,7 @@ Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-sessi
 Codex, gpt-5.6-cat, Extra High intelligence
 
 ### Session ID
-[Session ID]
+019fcbf7-2e9d-7cf2-a3fe-9403906610b6
 
 ## Logs
 
@@ -39,7 +39,7 @@ Every figure in this deliverable reconciles. The 21 per-combination spend values
 ## 3. Efficiency
 
 **Rating:** 2/7
-**End-to-end time (minutes):** 40 (40m 23s)
+**End-to-end time (minutes):** 40
 **Wrong actions / recovery:** the bundled charting library was unavailable and had to be swapped for an alternate image approach, three separate native chart-embedding attempts were rejected by the connector before falling back to text-based bars, and the exported PDF went through four distinct rounds of visual defects, a date-chip timezone error, a table cell indentation fault, a multi-page row-splitting fault, and a heading-formatting fault, each requiring its own fix and re-export.
 **Commentary:** Forty minutes for this scope is a lot of time, and the bulk of it is not the attribution analysis itself, which reads as settled early, but a long tail of document-formatting problems surfacing one after another during the write and QA phase. Every one of those problems did get caught and fixed before the final handoff, which is real diligence, but six or more distinct recovery cycles on the same deliverable is substantial drag for a task meant to run start to finish without a person watching it. A tighter run would have caught more of these before the first export rather than across five.
 
