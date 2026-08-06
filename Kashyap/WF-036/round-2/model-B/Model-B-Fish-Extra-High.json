@@ -1,6 +1,10 @@
 {
   "task_id": "WF-036",
   "model": "B",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-fish, Extra High intelligence",
+    "session_id": "019fc6c1-b08f-7863-bbb3-0508abc398ec"
+  },
   "file": "Model-B-Fish-Extra-High.json",
   "task": "Automated LinkedIn Content Pipeline for Empiric Infotech",
   "run_time": "15",

@@ -1,6 +1,10 @@
 {
   "cycle": "WF-242",
   "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fd085-7095-7621-b6f1-bfb112260031"
+  },
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Grafton breach notification triage across Docs, Sheet, Notion, Teams and Gmail",
   "persona": "Security GRC lead at a SaaS company, deciding the notification position after an incident is contained.",

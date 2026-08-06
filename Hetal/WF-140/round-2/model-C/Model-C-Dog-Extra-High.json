@@ -1,6 +1,10 @@
 {
   "task_id": "WF-140",
   "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fcb37-2100-7451-98ac-e16527f02091"
+  },
   "file": "Model-C-Dog-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
   "run_time": "6",

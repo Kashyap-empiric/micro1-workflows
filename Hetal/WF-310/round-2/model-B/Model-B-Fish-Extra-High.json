@@ -1,6 +1,10 @@
 {
   "task_id": "WF-310",
   "model": "B",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-fish, Extra High intelligence",
+    "session_id": "019fc6ff-abf3-7bf1-a53f-13a616a54535"
+  },
   "file": "Model-B-Fish-Extra-High.json",
   "task": "RAG Retrieval Complementarity and Fusion Analysis",
   "run_time": "3.6",

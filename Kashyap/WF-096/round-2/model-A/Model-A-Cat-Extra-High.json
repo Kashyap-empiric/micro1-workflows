@@ -1,6 +1,10 @@
 {
   "task_id": "WF-096",
   "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fcca0-a58d-7cb0-b4f6-9169a0c0e844"
+  },
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Third-Party Integration Research & Technical Evaluation Automation",
   "run_time": "48",

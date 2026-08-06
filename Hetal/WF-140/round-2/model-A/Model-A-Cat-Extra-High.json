@@ -1,6 +1,10 @@
 {
   "task_id": "WF-140",
   "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fc7c1-82e3-75c0-bf75-fcfa30c80866"
+  },
   "file": "Model-A-Cat-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
   "run_time": "12",

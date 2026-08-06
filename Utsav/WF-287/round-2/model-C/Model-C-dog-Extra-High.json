@@ -1,6 +1,10 @@
 {
   "task_id": "WF-287",
   "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fd203-5e18-7321-a5cb-277d8bb2e248"
+  },
   "file": "Model-C-dog-Extra-High.json",
   "task": "Vantridge 2025 research tax claim: cost line classification, credit, and election analysis",
   "run_time": "about 5",

@@ -1,6 +1,10 @@
 {
   "task_id": "WF-140",
   "model": "B",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-fish, Extra High intelligence",
+    "session_id": "019fcb1c-1975-73c1-b491-9c88f5c625f4"
+  },
   "file": "Model-B-Fish-Extra-High.json",
   "task": "SaaS Overlap and Consolidation Review",
   "run_time": "7",

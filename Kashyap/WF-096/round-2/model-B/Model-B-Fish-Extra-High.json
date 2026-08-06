@@ -1,6 +1,10 @@
 {
   "task_id": "WF-096",
   "model": "B",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-fish, Extra High intelligence",
+    "session_id": "019fccd6-d459-78f0-a6e4-8b2f4bb2f4da"
+  },
   "file": "Model-B-Fish-Extra-High.json",
   "task": "Third-Party Integration Research & Technical Evaluation Automation",
   "run_time": "24",
