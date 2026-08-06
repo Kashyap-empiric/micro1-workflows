@@ -1,6 +1,10 @@
 {
   "task_id": "WF-188",
   "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fcbfc-71dc-7c62-bd77-7106fd32f167"
+  },
   "file": "Model-C-Dog-Extra-High.json",
   "task": "FastAPI LLM Integration Cost & Latency Feature Attribution Monitor",
   "run_time": "11 (10m 35s)",

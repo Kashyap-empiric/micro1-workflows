@@ -142,6 +142,7 @@ Say it the human way:
 | Robotic rhythm | Vary sentence length. Contractions are fine. The odd short fragment is fine. A little blunt is fine. |
 | Hashtags | Never, anywhere in submitted text. |
 | Identical fix-scaffold reused across a multi-box rewrite pass | If the same replacement shape gets used to patch box 4 in every model file in one pass (e.g. "sentence. X though. Y also." every time), that IS a new repeated skeleton, not a fix. When fixing the same flagged pattern in several boxes at once, vary the actual sentence structure per box, not just the wording. |
+| Punchy closing tagline / zinger | A short, dramatic-sounding sentence used purely as an ending flourish, restating the finding in a quotable way: "That's a real problem.", "That's a contradiction sitting inside itself.", "Nothing here reads as wasted motion." Banned as a box-closer even when factually accurate, because the same stylized shape recurring across boxes and tasks is what reads as templated. End on the finding itself, stated plainly, and stop. |
 
 Target rhythm: "It actually opened the sheet and filled every column, which I half expected it to
 fake. I opened GA4 myself and the totals matched. Lost a little time futzing around before it got
@@ -232,6 +233,14 @@ lands at X/7." No individual instance breaks a rule. 32 in a row is the problem.
 - This requires a dedicated pass reading all the boxes together, comparing box-to-box and
   model-to-model for a repeated skeleton, since scanning one box at a time won't surface it.
 
+**Second recurrence (2026-08-06, reviewer Vaishnav via TL):** same underlying note, different
+surface form. The substance and information in the boxes were called out as strong; the flagged
+issue was specific closing "tag line" phrases used as an ending flourish across many tasks, e.g.
+"That's a real problem...", "That's a contradiction sitting inside itself...", "Nothing here reads
+as wasted motion...". Not the same string as the WF-310 "which is why this lands at X/7" pattern,
+but the same family: a stylized, quotable closing sentence reused as a box-ending device. See the
+"Punchy closing tagline / zinger" row in section 4.
+
 ## 7. THE RUN ORDER
 
 Do these in order after drafting or editing any box.
@@ -289,6 +298,9 @@ Strip on sight:
 - "It's worth noting," "it's important to note," "notably," announcing that a fact matters instead of
   just stating it.
 - Any opener that repeats near-verbatim across other boxes in the same file or session.
+- A punchy closing tagline used as an ending flourish ("That's a real problem.", "That's a
+  contradiction sitting inside itself.", "Nothing here reads as wasted motion."). End on the finding
+  stated plainly and stop, don't add a dramatic restatement on top of it.
 - Marketing adjectives: robust, seamless, comprehensive, leverage, delve, showcase, holistic,
   paramount, underscore.
 - Rule-of-three lists. Tidy triples read as generated, vary the count or drop the list structure.

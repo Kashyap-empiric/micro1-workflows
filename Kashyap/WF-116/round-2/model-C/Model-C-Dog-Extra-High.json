@@ -1,6 +1,10 @@
 {
   "task_id": "WF-116",
   "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fcc6d-7254-7002-a07d-d941066a0d4e"
+  },
   "file": "Model-C-Dog-Extra-High.json",
   "task": "Cross-Platform Marketing Attribution Intelligence",
   "run_time": "26",

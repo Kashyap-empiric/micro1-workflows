@@ -1,6 +1,10 @@
 {
   "task_id": "WF-116",
   "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fcbf7-2e9d-7cf2-a3fe-9403906610b6"
+  },
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Cross-Platform Marketing Attribution Intelligence",
   "run_time": "40",

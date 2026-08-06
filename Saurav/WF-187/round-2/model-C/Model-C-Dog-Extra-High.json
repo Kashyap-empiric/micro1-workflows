@@ -1,6 +1,10 @@
 {
   "task_id": "WF-187",
   "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fcc7c-6e22-7e43-b983-4b943b52cce4"
+  },
   "file": "Model-C-Dog-Extra-High.json",
   "task": "Cross-Platform LLM Prompt Version Drift Tracker",
   "run_time": "7 (6m 52s)",

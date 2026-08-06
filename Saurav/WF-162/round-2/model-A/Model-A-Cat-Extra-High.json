@@ -1,6 +1,10 @@
 {
   "task_id": "WF-162",
   "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fcc98-a65e-7e70-a265-3eb6899ffc70"
+  },
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Freelancer Profile Optimizer and Lead-Gap Research",
   "run_time": "20 (19m 48s)",

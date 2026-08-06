@@ -36,6 +36,10 @@ copied verbatim from that model's `.md` file, byte for byte, never re-summarized
 {
   "task_id": "WF-<ID>",
   "model": "A",
+  "model_identity": {
+    "model": "<full model line from that model's .md '### Model' section, e.g. 'Codex, gpt-5.6-cat, Extra High intelligence'>",
+    "session_id": "<verbatim from that model's .md '### Session ID' section>"
+  },
   "file": "Model-A-<Codename>-Extra-High.json",
   "task": "<WF title, from workflows.txt / final-comparison.md METADATA>",
   "run_time": "<this model's End-to-end time string from box 3>",
@@ -71,6 +75,9 @@ Notes:
 - No `persona` field. Drop it entirely rather than leaving it as an empty string.
 - No `metadata` object. That data belongs to the task-level record, not the per-model JSON.
 - No `shared_context`. No `suggested_field6` / `suggested_field6_reason`.
+- `model_identity` is copied verbatim from the source `.md`'s `## Model identity` section. If that
+  section's Session ID is still a `[Session ID]` placeholder, do not invent one, leave that model's
+  JSON without `model_identity` and flag it instead of generating a fake ID.
 
 ## Final-Ranking.json schema
 
