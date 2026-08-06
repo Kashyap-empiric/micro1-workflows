@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-278",
+  "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fd116-427d-7493-b792-522fa0befc83"
+  },
+  "file": "Model-A-cat-Extra-High.json",
+  "task": "Vantridge June 2026 invoice line disposition against outside counsel billing guidelines",
+  "run_time": "about 7",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 4,
+      "commentary": "I would use this. Every line has a real, defensible answer, the numbers tie out between the register, the post and the draft, and the one escalation is the correct one to send up. What keeps this from scoring higher is that the finished note to the firm asks Lena to sign off on reasoning that is not actually written down anywhere the firm can see, and the check on where the register write landed stopped at confirming the rows existed rather than confirming it was the only place they existed. Both are fixable in a few minutes, but they are the kind of gap that turns into a real problem the day two people are looking at two different versions of the same record."
+    },
+    "task_accuracy": {
+      "rating": 5,
+      "commentary": "Every disposition on all five invoices landed correctly against the rate card, the travel rule, the block billing exception on the fixed fee matter, and the research rule that only counts a narrative naming who approved the work and when. It also caught the one line that needed to go to a supervisor because the work fell after the matter's own closure date, the hardest read in the whole batch. Two things keep me from going higher. The note to the firm asks for corrected or rebilled entries across every line coming off without separating the one line that is pure firm overhead and can never be paid regardless of how it gets rebilled from the lines a fixed narrative could actually cure. The reasoning behind each adjustment also lives only in the register, so the firm never sees why a dollar figure moved, only a guideline number sitting next to it."
+    },
+    "efficiency": {
+      "rating": 4,
+      "end_to_end_time_minutes": "about 7",
+      "wrong_actions_recovery": "none, it finished in one pass without needing to redo any line",
+      "commentary": "This ran long for a review that turned out to have a clean rule for every line once the four source documents were read. A real chunk of the early time went into loading its own tool rules and confirming the register's schema before it touched a single invoice row, overhead that only needed to happen once. Once the calculation started it moved straight through all five invoices without repeating a line. The write, the readback, the live post and the draft each happened as their own separate pass rather than getting folded together, which is a safe order but adds a few extra round trips a tighter run would not have needed."
+    },
+    "writing_quality": {
+      "rating": 4,
+      "commentary": "The invoice register reads cleanly and the columns are easy to scan at a glance. The note prepared for the firm lays out every adjusted line in a plain table with the dollar amounts and the guideline number next to each one, exactly the shape a billing contact needs to act fast. What is missing from that table is the actual sentence explaining each call, so the firm sees a section number but never the reasoning a person would want before agreeing to eat a reduction. The post covering the one line held for a supervisor is also thinner than it needs to be, a single line stating the figures without walking through what that person is actually being asked to weigh."
+    },
+    "instruction_following": {
+      "rating": 5,
+      "commentary": "It hit every requirement I actually asked for, a single draft covering every adjusted line, a blank recipient field with a plain note that the firm's billing address still needs adding, a live post naming the held line with both dollar totals, and a register entry for every line with a disposition, a dollar figure, a guideline section and a reason. The one place it drifts from the guidelines' own wording is asking the firm generally to rebill or correct every adjusted line, when one of those lines is overhead the guideline text itself says is never reimbursable no matter how it gets resubmitted. That is a small gap against the guidelines' own text rather than against anything I actually asked for."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 4,
+      "steering_needed": "none, it ran unassisted start to finish",
+      "additional_editing": "I would still add the actual reasoning behind each line to the firm note before Lena sends it",
+      "commentary": "It read the register back after writing to confirm the rows landed, which is the right habit. What it never did was check whether the destination it wrote to was the only database carrying that exact name, the kind of confirmation I would want before trusting a legal register as the record of truth. Its own narration treats the write as settled the moment the rows come back clean, with no mention anywhere of a second copy being possible. That is a real gap in how deep the self check went, even though nothing in front of me shows the write itself landing anywhere wrong."
+    },
+    "citation_quality": {
+      "rating": 4,
+      "commentary": "Every dollar figure I checked traces to a rate, an hour count or a fixed percentage taken straight from the guidelines, and every adjustment carries the specific section it came from. Where it falls short is the note prepared for the firm, which references a line number and a matter name but never the actual invoice number behind it, so tracing any one adjustment back to its invoice means going back to the register first. The date behind the one closed matter is also stated plainly but never says which record actually fixes that date, so a reader has to take it on faith rather than see the underlying source named."
+    },
+    "gui_action_correctness": {
+      "rating": null,
+      "commentary": "Not applicable to this task. This ran entirely through the connected apps with no on screen navigation for me to judge."
+    }
+  }
+}
