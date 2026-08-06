@@ -3,19 +3,19 @@
   "model": "B",
   "file": "Model-B-Fish-Extra-High.json",
   "task": "RAG Retrieval Complementarity and Fusion Analysis",
-  "run_time": "3.5 (3m 36s)",
+  "run_time": "3.6",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
-      "commentary": "The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures all reconciling, and the ticket filing matching the requirement, including which queries correctly get left out of a corpus-gap ticket. The run never checks its own deliverable the way a person actually would, opening the finished sheet and looking at how it reads, so its confidence rests on a connector level check rather than a real look at the result. The sheet also never explains itself to a reader coming in cold, since it never says what a category actually represents or how the fusion math behind it works. Both are real gaps, and together they hold this at 4."
+      "commentary": "The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures reconciling, and the ticket filing matching the requirement, including which queries correctly get left out of a corpus-gap ticket. The run never checks its own deliverable the way a person actually would, opening the finished sheet to see how it reads, so its confidence rests on a connector level check rather than a real look at the result. The sheet also never explains itself to a reader coming in cold, since it never says what a category represents or how the fusion math works. A correct analysis that skips both checks is why this sits at 4 rather than higher."
     },
     "task_accuracy": {
       "rating": 5,
-      "commentary": "Checked row by row against the source rankings, the classification is right across all eighty four queries, the disputed cases stay flagged rather than resolved on the model's own judgment, and a genuine content gap never gets mixed up with a retrieval miss. The winning fusion weight and every recall figure match my own independent recompute, improvement percentage included. Nowhere in the finished sheet is there a legend explaining the four categories or how the fused score is built, so the document depends on a reader also having the original brief. The recommendation ticket flags five queries where keyword search alone would have succeeded but the optimal fused setting misses them, then only recommends monitoring, real filler on a finding that deserved a real answer."
+      "commentary": "Checked row by row against the source rankings, the classification is right across all eighty four queries, the disputed cases stay flagged rather than resolved on the model's own judgment, and a genuine content gap never gets mixed up with a retrieval miss. The winning fusion weight and every recall figure match my own independent recompute. Nowhere in the finished sheet is there a legend explaining the four categories or how the fused score is built, so the document depends on a reader who already has the brief. The recommendation ticket flags five queries where keyword search alone would have succeeded but the fused setting misses them, then only recommends monitoring, filler on a finding that deserved more."
     },
     "efficiency": {
       "rating": 5,
-      "end_to_end_time_minutes": "about 3.5",
+      "end_to_end_time_minutes": "3.6",
       "wrong_actions_recovery": "nothing actually wrong, just a tidiness slip, the ticket numbers that come back afterward are out of sequence relative to the order the queries were just reported in.",
       "commentary": "For a task that reduces to one bounded computation and a fixed set of writes, this finished quickly and without a single failed step or retry anywhere in the run. The ticket references that come back afterward are scrambled relative to the list of queries they correspond to, suggesting the filing happened in a different order than it gets reported in. The closing reconciliation runs three separate calls, pulling the cell values, searching Jira, then pulling the sheet's metadata on top, when two of the three would likely have covered the same ground. Neither issue costs real time or correctness, but both are signs of a process that could have stayed more orderly on its way to a clean finish."
     },

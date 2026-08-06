@@ -194,3 +194,14 @@ After all four models are ready:
 
 The final comparison is written last. It may compare models, but it must not introduce new facts or
 re-derive individual scores that are absent from the model files.
+
+## Fixing a reviewer-flagged tie
+
+If a Reviewer sends a round back because two or more models landed on the same score, or as a
+pre-submission check for the same thing, use
+[equal-score-revision-prompt.md](equal-score-revision-prompt.md). It is a paste-ready three-step
+sequence for the external Final comparison chat tool that surfaces the tie, assigns deduction
+points, and regenerates the Final comparison text. Any rating change it produces must still be
+written back into the actual `model-<letter>.md` and JSON deliverable files, and the result must
+still pass [voice-and-format-checklist.md](voice-and-format-checklist.md) and the strict no-ties
+rule before `final-comparison.md` is considered done.

@@ -88,3 +88,12 @@ After rewriting, do not rely on a pattern search alone to confirm the fix. A gre
 fixed word list can truncate long lines and silently miss real instances. Re-read the actual file
 content, box by box, top to bottom, for all four models, and confirm none of the banned patterns
 survived, including inside the Logs & Output section, before presenting the result.
+
+## If a tie survives anyway
+
+This pass recalibrates severity across all models, but it is still possible for two models to land
+on the same number in good faith. If that happens, or if a Reviewer catches a tie later,
+[equal-score-revision-prompt.md](equal-score-revision-prompt.md) has the paste-ready sequence for
+resolving it through the external Final comparison chat tool, plus the reminder that any resulting
+rating change still has to be written back into the actual model files, not left as a verbal
+resolution in that chat.

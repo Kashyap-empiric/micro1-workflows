@@ -42,14 +42,14 @@ Codex, gpt-5.6-cat, Extra High intelligence
 **Rating:** 3
 
 **Commentary:**
-The underlying numbers are entirely correct, and the ticket record names its own source files directly, a genuine strength worth crediting. Against that, the total time this took is well out of proportion to a task that is fundamentally one bounded computation and a fixed set of writes, and the extra minutes bought a repeated check that found nothing rather than a proportionally deeper result. The recommendation ticket also leaves its own related chunk identifiers as one long undifferentiated list rather than tied to the specific case each one supports, so a reader still has to do that tracing work by hand. Both problems are real and both land on the finished record I would actually be handing off.
+The underlying numbers are entirely correct, and the ticket record names its own source files directly, a genuine strength worth crediting. The total time this took is well out of proportion to one bounded computation and a fixed set of writes, and the extra minutes bought a repeated check that found nothing new. The recommendation ticket also leaves its related chunk identifiers as one undifferentiated list instead of tying each one to the specific case it supports, so a reader still has to do that tracing by hand. Correct math and traceable tickets still leave a handoff that took too long to produce and still needs manual reassembly before someone else can use it directly.
 
 ## 2. Task accuracy, ignoring speed
 
 **Rating:** 5
 
 **Commentary:**
-The disputed rows stay flagged instead of quietly resolved, a corpus gap never gets confused with a plain retrieval miss, and working back through the source rankings myself, every query lands in the right bucket. The sweep across the full weighting range lands on the right optimum, and the recall and improvement figures hold up against my own recompute. The sheet carries no legend explaining what the categories mean or how the fusion score gets built, so it only makes sense to a reader who also has the original brief. Nothing in the closing message mentions five specific queries buried in its own numbers, rows where a plain keyword match alone would have worked but the chosen fusion setting drops them anyway.
+The disputed rows stay flagged instead of quietly resolved, a corpus gap never gets confused with a plain retrieval miss, and checking the source rankings myself, every query lands in the right bucket. The sweep across the full weighting range lands on the right optimum, and the recall and improvement figures hold up against my own recompute. The sheet carries no legend explaining what the categories mean or how the fusion score gets built, so it only makes sense to a reader with the original brief. Nothing in the closing message mentions five specific queries buried in its own numbers, rows where a plain keyword match alone would have worked but the chosen fusion setting drops them anyway.
 
 ## 3. Efficiency
 
@@ -71,15 +71,15 @@ The closing message lays out the retrieval numbers, the full sweep, and the cate
 **Rating:** 5
 
 **Commentary:**
-Every explicit constraint in the brief gets honored here, the row count, the ban on merging similar queries, the boundary against altering production retrieval, and the separation of a corpus gap from a retrieval miss that only happened to miss in the top five. This run never says whether category recall gets computed against the category's own count or the full log, two different bases that would produce two different numbers, and it just picks one silently. The six disputed queries get counted through a specific convention too, treating either candidate chunk as a hit, but that convention never appears anywhere in the deliverable. Both calls turn out reasonable, but resolving two real ambiguities without naming either one is a genuine instruction following gap.
+Every explicit constraint in the brief gets honored here, the row count, the ban on merging similar queries, the boundary against altering production retrieval, and the separation of a corpus gap from a retrieval miss that only happened to miss in the top five. This run never says whether category recall gets computed against the category's own count or the full log, two bases that would land on different numbers, and it just picks one silently. The six disputed queries get counted through a specific convention too, treating either candidate chunk as a hit, but that convention never appears in the deliverable. Both calls turn out reasonable, but resolving two real ambiguities without naming either one is a genuine gap.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** 4
+**Rating:** 6
 **Steering needed:** none. It went start to finish on the one prompt without stopping once.
 **Additional editing before I'd use it:** not much on substance, mainly tightening the repeated tables in the closing summary before I'd send it anywhere.
 **Commentary:**
-This run actually opened the finished sheet and looked at the rendered tabs before calling itself done, a real content level check rather than a confirmation that a write request succeeded, and that is genuine thoroughness. The gap sits on the Jira side of the same verification pass. After filing all nine tickets, the closing check confirms they exist through a search rather than reading a single ticket's own body back to make sure the finding and recommended action it just wrote match what the sheet actually shows. The sheet got a real look. The tickets only got confirmed present, and whether their contents were actually right never got the same scrutiny, a real, if narrower, gap in an otherwise careful close.
+This run opens the finished sheet and reads the rendered tabs before calling itself done, a real content level check rather than a confirmation that a write request succeeded. It runs a final reconciliation across all 84 rows, the four rollup rows, and the category and flag counts, catching any internal mismatch before handing the work back. The one place this thoroughness doesn't reach is Jira: after filing all nine tickets, the closing check confirms they exist through a search rather than reading a ticket's body to check its finding and recommended action against the sheet. That single gap, on an otherwise carefully verified close, keeps this just short of the top of the band.
 
 ## 7. Citation quality
 

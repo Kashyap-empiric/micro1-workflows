@@ -42,14 +42,14 @@ Codex, gpt-5.6-fish, Extra High intelligence
 **Rating:** 4
 
 **Commentary:**
-The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures all reconciling, and the ticket filing matching the requirement, including which queries correctly get left out of a corpus-gap ticket. The run never checks its own deliverable the way a person actually would, opening the finished sheet and looking at how it reads, so its confidence rests on a connector level check rather than a real look at the result. The sheet also never explains itself to a reader coming in cold, since it never says what a category actually represents or how the fusion math behind it works. Both are real gaps, and together they hold this at 4.
+The analysis holds up completely against my own recompute, every query classified correctly, the fusion sweep and recall figures reconciling, and the ticket filing matching the requirement, including which queries correctly get left out of a corpus-gap ticket. The run never checks its own deliverable the way a person actually would, opening the finished sheet to see how it reads, so its confidence rests on a connector level check rather than a real look at the result. The sheet also never explains itself to a reader coming in cold, since it never says what a category represents or how the fusion math works. A correct analysis that skips both checks is why this sits at 4 rather than higher.
 
 ## 2. Task accuracy, ignoring speed
 
 **Rating:** 5
 
 **Commentary:**
-Checked row by row against the source rankings, the classification is right across all eighty four queries, the disputed cases stay flagged rather than resolved on the model's own judgment, and a genuine content gap never gets mixed up with a retrieval miss. The winning fusion weight and every recall figure match my own independent recompute, improvement percentage included. Nowhere in the finished sheet is there a legend explaining the four categories or how the fused score is built, so the document depends on a reader also having the original brief. The recommendation ticket flags five queries where keyword search alone would have succeeded but the optimal fused setting misses them, then only recommends monitoring, real filler on a finding that deserved a real answer.
+Checked row by row against the source rankings, the classification is right across all eighty four queries, the disputed cases stay flagged rather than resolved on the model's own judgment, and a genuine content gap never gets mixed up with a retrieval miss. The winning fusion weight and every recall figure match my own independent recompute. Nowhere in the finished sheet is there a legend explaining the four categories or how the fused score is built, so the document depends on a reader who already has the brief. The recommendation ticket flags five queries where keyword search alone would have succeeded but the fused setting misses them, then only recommends monitoring, filler on a finding that deserved more.
 
 ## 3. Efficiency
 
