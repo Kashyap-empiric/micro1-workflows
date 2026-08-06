@@ -34,50 +34,50 @@ Teams message, "Testing Client Workflows" team, "LLM Cost Attribution" channel: 
 
 ## 2. Task accuracy, ignoring speed
 
-**Rating:** 5/7
+**Rating:** 4/7
 
-Every billable endpoint gets traced correctly, the feature grouping applies the router tag rather than the URL path where the two disagree, and the per-endpoint totals reconcile cleanly up through the feature rollup to the grand total with nothing left dangling. The token estimate uses the standard characters-per-token approximation and states that method plainly, and the caching review backs up its non-eligible calls with the actual static-token counts against each model's real minimum rather than asserting the conclusion. It correctly leaves the slower of the two flagged endpoints out of Jira since neither a real parallelization nor a real caching opportunity clears the bar for it, exactly the restraint this task is testing for. What keeps this off a higher number is that the run log's own screening note doesn't say whether a call row riding on an already-excluded duplicate request got caught by the exclusion or quietly survived into the math, so I can't fully audit that corner of the screening myself.
+Every billable endpoint gets traced correctly, the feature grouping applies the router tag rather than the URL path where the two disagree, and the per endpoint totals reconcile cleanly up through the feature rollup to the grand total. The caching review backs its non eligible calls with real static token counts against each model's minimum rather than asserting the conclusion, and it correctly leaves the slower flagged endpoint out of Jira since no real opportunity clears the bar for it, exactly the restraint this task is testing for. Two things hold this back. This run reports one fewer excluded telemetry row than a clean screening of the same window should produce, the missing one tied to a call riding on an already excluded duplicate request, so a row that likely should have dropped out may still be sitting in the math. And the screening note never settles it either way.
 
 ## 3. Efficiency
 
-**Rating:** 4/7
+**Rating:** 6/7
 **End-to-end time (minutes):** 17 (16m 31s)
 **Wrong actions / recovery:** none stated, it moved through the access checks, the code trace, the telemetry screen, and the report in one continuous pass
-**Commentary:** Sixteen and a half minutes for a full route trace, two telemetry tables, seven endpoints of cost and latency math, a pricing lookup, a ticket, and a channel post is a reasonable pace for the amount of ground covered, and nothing in the run reads as backtracking or a repeated step. It also built out two extra tabs beyond the required four, a full call-level breakdown and a separate non-generative section, real added value but also real added time. Against a task this size that additional scope is defensible, but it is still the reason this run sits closer to the middle of the band than the top.
+**Commentary:** Sixteen and a half minutes for a full route trace, two telemetry tables, seven endpoints of cost and latency math, a pricing lookup, a ticket, and a channel post is a reasonable pace for the amount of ground covered, and nothing in the run reads as backtracking or a repeated step. The one real cost is scope. It built two extra tabs beyond the required four, a full call level breakdown and a separate section for calls outside the generative attribution, real added value but also real added time on a task this size, and that tradeoff is the one thing keeping this just under a perfect score.
 
 ## 4. Writing quality
 
 **Rating:** 5/7
 
-The ticket lays out the numbers a reader actually needs, the volume, the cost, the two latency figures, and the parallelization case, in a straight sequence without padding, and it closes with a plain diagnostic-only line so nobody mistakes it for an authorization to change anything. The channel message leads with the total spend before dropping into the two endpoints worth watching, which is the order a reader wants. The one place this could be tighter is that the ticket restates the same latency saving twice, once in the summary numbers and again inside the opportunity paragraph, a small redundancy in an otherwise economical writeup.
+The ticket lays out the numbers a reader actually needs, the volume, the cost, the two latency figures, and the parallelization case, in a straight sequence without padding, and it closes with a plain diagnostic only line so nobody mistakes it for an authorization to change anything. Two things hold the rest of it back. The channel message opens by restating its own headline as a near duplicate second sentence before any figure appears, a repeat a reader has to read past. And the ticket restates the same latency saving twice, once in the summary numbers and again inside the opportunity paragraph, a small redundancy in an otherwise economical writeup.
 
 ## 5. Instruction following
 
-**Rating:** 5/7
+**Rating:** 6/7
 
-The explicit rules are followed closely. Non-generative calls are kept in their own section rather than folded into the cost total, the commented-out and flag-disabled code paths are excluded and logged rather than silently skipped, retries are counted once per logical request, and the ticket gate is applied correctly, meaning the endpoint that only clears the latency threshold without a real opportunity behind it stays in the sheet rather than getting a ticket it doesn't earn. The one place this falls short of the letter of the task is the closing handback, which names its ticket and its sheet without linking either one, short of the direct links the finished handoff is supposed to include.
+The explicit rules are followed closely. Non generative calls are kept in their own section rather than folded into the cost total, the commented out and flag disabled code paths are excluded and logged rather than silently skipped, retries are counted once per logical request, and the ticket gate is applied correctly, meaning the endpoint that only clears the latency threshold without a real opportunity behind it stays out of Jira rather than getting a ticket it does not earn. The one thing keeping this from a higher mark is the closing handback, which names its ticket and its sheet without linking either one, short of the direct links a finished handoff is supposed to include.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** 5/7
+**Rating:** 6/7
 **Steering needed:** none, it ran the whole pipeline unattended from the access checks through the channel post
-**Additional editing before I'd use it:** I'd want the router-tag-versus-path check double confirmed myself, since the run doesn't show its own reasoning for that call the way I'd want on a rule this easy to get backwards
-**Commentary:** It ran the whole thing on its own, and its clearest piece of self-checking is the restraint it showed on the ticket gate, actively deciding not to file a ticket for an endpoint that was slow but didn't have a real opportunity attached, rather than filing one on cost or latency alone. That is exactly the kind of judgment call this task is built to test, and it got it right without needing me to point it there. The gap is that the run doesn't narrate how it resolved the one genuinely tricky grouping rule, so I'm trusting the correct result without seeing the check behind it.
+**Additional editing before I'd use it:** I'd want the router tag versus path check double confirmed myself, since the run doesn't show its own reasoning for that call the way I'd want on a rule this easy to get backwards
+**Commentary:** This run's clearest piece of self checking is the restraint it showed on the ticket gate, actively deciding not to file a ticket for an endpoint that was slow but did not have a real opportunity attached, rather than filing one on cost or latency alone. That is exactly the kind of judgment call this task is built to test, and it got it right without needing me to point it there. The one thing keeping this from a higher mark is that the run never narrates how it resolved the one genuinely tricky grouping rule, so I am trusting the correct result without seeing the check behind it.
 
 ## 7. Citation quality
 
-**Rating:** 5/7
+**Rating:** 6/7
 
-Every price traces to an official page with a checked date, and the numbers derived from those prices reconcile all the way from the per-call cost up through the endpoint and feature totals with nothing that doesn't add up. The caching conclusions are backed by the actual token counts against each model's published minimum rather than a bare assertion, which is exactly the kind of traceable reasoning this box is meant to reward. What keeps it short of higher is that every source is a general model or pricing page rather than a pinpoint to the specific line backing the number, a page to check rather than an exact claim to verify against.
+Every price traces to an official page with a checked date, and the numbers derived from those prices reconcile all the way from the per call cost up through the endpoint and feature totals with nothing that does not add up. The caching conclusions are backed by the actual token counts against each model's published minimum rather than a bare assertion, exactly the kind of traceable reasoning this box is meant to reward. The one thing keeping this from a higher mark is that every source is a general model or pricing page rather than a pinpoint to the specific line backing the number, more a page to check than a precise reference.
 
 ## 8. GUI action correctness
 
-**Rating:** 4/7
+**Rating:** 6/7
 
-There's real browser work to grade, the duplicate-post check that reached an actual answer rather than stalling. It got into the channel, searched for the sheet identifier and the reporting window, found no match, and sent on the strength of that result. That's a real, completed check rather than a guess. What keeps this from going higher is that the run gives me the conclusion of that search without describing what the screen actually showed, so I'm taking the negative result on trust rather than seeing the evidence behind it myself.
+There is real browser work to grade, the check for an existing channel post that reached an actual answer rather than stalling. It got into the channel, searched for the sheet identifier and the reporting window, found no match, and sent on the strength of that result, a real completed check rather than a guess. The one thing keeping this from a higher mark is that the run gives me the conclusion of that search without describing what the screen actually showed, so I am taking the negative result on trust rather than seeing the evidence behind it myself.
 
 ## 1. Overall task success
 
 **Rating:** 5/7
 
-This is a complete, internally consistent deliverable. Every endpoint is traced and costed correctly, the totals reconcile cleanly at every rollup level, and the one judgment call this task is really testing, whether a slow-but-not-actionable endpoint earns a ticket, gets the correct, disciplined answer instead of a ticket filed on latency alone. The channel notification and the diagnostic ticket both read cleanly and match the sheet behind them. The only real gaps are transparency ones, a screening nuance the run doesn't narrate and a grouping rule it doesn't show its reasoning for, neither of which changes a number or a decision. A persona reading this handoff gets the right answer with a clear reason behind it, which is what this box is actually asking for.
+This is a complete, largely disciplined deliverable. Every endpoint is traced and costed, the totals reconcile cleanly at every rollup level, and the one judgment call this task is really testing, whether a slow endpoint without a real opportunity earns a ticket, gets the correct answer instead of a ticket filed on latency alone. The channel notification and the diagnostic ticket both read cleanly and match the sheet. The real open question is the screening count. This run reports one fewer excluded call than a clean pass over the same window should produce, so a row that likely should have dropped out may still be sitting in these totals, and the writeup never settles it either way. A persona reading this gets a strong result, with one real number worth double checking before treating it as final.

@@ -28,20 +28,20 @@ Profile Improvements, Google Tasks, 5 tasks total: Upwork fix reviews, Upwork fi
 
 **Rating:** 2/7
 
-The Upwork numbers that are here check out, the section scores, the median comparisons, and the overall average all reconcile correctly. The problem is what's missing. The task defines done as both platforms scored across all six sections, and the Fiverr half of the dashboard is entirely blank, not a thin section, an absent one. On top of that, this run never addresses the same historical-date question that a same-day search raises, it reads today's Upwork results without ever stating whether that satisfies the requested 28 July benchmark. A correct half of the job plus an unaddressed dating question on the half that got done is a real, not cosmetic, accuracy problem.
+The Upwork numbers that are here check out, the section scores, the median comparisons, and the overall average all reconcile correctly. The problem is what is missing. The task defines done as both platforms scored across all six sections, and the Fiverr half of the dashboard is entirely blank, an absent section rather than a thin one. On top of that, this run never addresses the same historical date question that a same day search raises, it reads today's Upwork results without ever stating whether that satisfies the requested 28 July benchmark. A correct half of the job plus an unaddressed dating question on the half that got done adds up to a real accuracy problem rather than a cosmetic one.
 
 ## 3. Efficiency
 
 **Rating:** 2/7
 **End-to-end time (minutes):** 23 (2m 39s + 47s + 10s + 18m 54s across four segments)
-**Wrong actions / recovery:** repeated Fiverr verification blocks across three separate attempts, one browser-session disconnect after a handoff that needed reconnecting, and the run never returned to a working Fiverr path before the pass ended
-**Commentary:** Four separate worked segments spread across real back-and-forth is not a single continuous pass, it's a run that kept hitting the same wall and needed outside help to move past it, help that in the end didn't actually get it past that wall. The session disconnect after the verification handoff added a further reconnect step on top of the repeated blocks. None of that time bought a working Fiverr result, the run closed out with half the requested scope simply not attempted, which makes the real cost here worse than the raw minutes suggest.
+**Wrong actions / recovery:** repeated Fiverr verification blocks across three separate attempts, one browser session disconnect after a handoff that needed reconnecting, and the run never returned to a working Fiverr path before the pass ended
+**Commentary:** Four separate worked segments spread across real back and forth is not a single continuous pass, it is a run that kept hitting the same wall and needed outside help to move past it, help that in the end did not actually get it past that wall. The session disconnect after the verification handoff added a further reconnect step on top of the repeated blocks. None of that time bought a working Fiverr result, the run closed out with half the requested scope simply not attempted, which makes the real cost here worse than the raw minutes suggest.
 
 ## 4. Writing quality
 
 **Rating:** 3/7
 
-The Upwork section itself is clean, specific figures, a clear median comparison, and two concrete recommendations rather than vague advice. The problem is the deliverable as a whole. A reader opening the Doc or the dashboard after being told the job covers both platforms finds one of them simply absent with no explanation inside the artifact itself, only in the run's own narration outside it. A finished-looking document that quietly leaves out half its stated scope reads as more complete than it is.
+The Upwork section itself is clean, specific figures, a clear median comparison, and two concrete recommendations rather than vague advice. The problem is the deliverable as a whole. A reader opening the Doc or the dashboard after being told the job covers both platforms finds one of them simply absent with no explanation inside the artifact itself, only in the run's own narration outside it. A finished looking document that quietly leaves out half its stated scope reads as more complete than it is.
 
 ## 5. Instruction following
 
@@ -53,14 +53,14 @@ The explicit definition of done for this task is both platforms, all six section
 
 **Rating:** 2/7
 **Steering needed:** three separate interventions, two requests to continue past a blocked step and one explicit instruction to drop Fiverr and finish Upwork only
-**Additional editing before I'd use it:** I'd want Fiverr actually attempted again and the leftover task-list entries that don't match this run's own dashboard cleaned up before treating this as usable
-**Commentary:** This is a run that needed real, repeated help to get anywhere, not a single brief check-in but three separate moments of intervention, ending in an explicit instruction to abandon half the task. The closing summary then reports the Upwork half as complete without ever flagging that the task list it left behind still carries entries, a portfolio task and two Fiverr items, that don't correspond to anything in this run's own finished dashboard. Confirming that the Upwork rows are correct is not the same as checking whether the full deliverable, including what's sitting untouched around it, actually makes sense together.
+**Additional editing before I'd use it:** I'd want Fiverr actually attempted again and the leftover task list entries that don't match this run's own dashboard cleaned up before treating this as usable
+**Commentary:** This is a run that needed real, repeated help to get anywhere, three separate moments of intervention rather than one brief check in, ending in an explicit instruction to abandon half the task. The closing summary then reports the Upwork half as complete without ever flagging that the task list it left behind still carries entries, a portfolio task and two Fiverr items, that do not correspond to anything in this run's own finished dashboard. Confirming that the Upwork rows are correct is not the same as checking whether the full deliverable, including what is sitting untouched around it, actually makes sense together.
 
 ## 7. Citation quality
 
 **Rating:** 2/7
 
-The Upwork figures that exist are specific and traceable, real character counts and item counts set against a stated competitor median. The real problem is a genuine reconciliation failure sitting in this run's own output: the task list it left behind includes an entry for a portfolio fix, but this same run's own dashboard scores Upwork portfolio as fine, not a gap. That's not a citation that's merely shallow, it's a citation trail that contradicts the source sitting right next to it, and nothing in the run catches or explains the mismatch.
+The Upwork figures that exist are specific and traceable, real character counts and item counts set against a stated competitor median. The real problem is a genuine reconciliation failure sitting in this run's own output. The task list it left behind includes an entry for a portfolio fix, but this same run's own dashboard scores Upwork portfolio as fine rather than a gap. This is not a citation that is merely shallow, it is a citation trail that contradicts the source sitting right next to it, and nothing in the run catches or explains the mismatch.
 
 ## 8. GUI action correctness
 

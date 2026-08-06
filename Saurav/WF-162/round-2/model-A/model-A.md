@@ -26,50 +26,50 @@ Profile Improvements, Google Tasks, 7 tasks, each with a due date and a recommen
 
 ## 2. Task accuracy, ignoring speed
 
-**Rating:** 5/7
+**Rating:** 6/7
 
-Every number reconciles: the seven gap rows match the seven tasks exactly, the two overall scores average their own six section scores correctly, and both platforms get a full six-section read with empty sections correctly scored zero rather than skipped. The run also caught the real trap in this task, that a live search on the run date would return today's rankings rather than the requested 28 July first page, and used an archived capture instead of silently substituting a current search. What keeps this short of a higher mark is that the archive itself gets only a passing mention rather than a stated source or date, so I have to take on faith that it genuinely reflects the requested date rather than seeing where it came from.
+Every number reconciles, the seven gap rows match the seven tasks exactly, the two overall scores average their own six section scores correctly, and both platforms get a full six section read with empty sections correctly scored zero rather than skipped. The run also caught the real trap in this task, that a live search on the run date would return today's rankings rather than the requested 28 July first page, and used an archived capture instead of silently substituting a current search. The one thing keeping this from a higher mark is that the archive itself gets only a passing mention rather than a stated source or date, so I have to take on faith that it genuinely reflects the requested date.
 
 ## 3. Efficiency
 
-**Rating:** 5/7
+**Rating:** 6/7
 **End-to-end time (minutes):** 20 (19m 48s)
-**Wrong actions / recovery:** one early document write was rejected for an overly broad date-chip format and retried successfully with the supported format, no other recovery needed
-**Commentary:** Twenty minutes for both platforms, a two-part competitor benchmark, a full write-up, fourteen dashboard rows, and seven tasks is a tight single pass, and the run reads as continuous with no repeated steps. The one real hiccup, a rejected document write over a date-format mismatch, resolved itself in the same pass without needing a second attempt at anything else. That is about as clean a run as this scope allows, which is why this sits near the top of the band rather than at it.
+**Wrong actions / recovery:** one early document write was rejected for an overly broad date chip format and retried successfully with the supported format, no other recovery needed
+**Commentary:** Twenty minutes for both platforms, a two part competitor benchmark, a full write up, fourteen dashboard rows, and seven tasks is a tight single pass, and the run reads as continuous with no repeated steps. The one thing keeping this from a higher mark is a rejected document write over a date format mismatch, which resolved itself in the same pass without needing a second attempt at anything else, real friction but a small and self corrected amount of it.
 
 ## 4. Writing quality
 
-**Rating:** 5/7
+**Rating:** 6/7
 
-The dashboard reads cleanly, exact counts against exact competitor medians with nothing left approximate, and the task notes carry concrete recommended changes rather than generic advice. What holds this back is that the closing summary states the archive-based approach as settled fact without walking through why it satisfies the historical-date requirement, so a reader has to trust the conclusion rather than follow the reasoning that produced it.
+The dashboard reads cleanly, exact counts against exact competitor medians with nothing left approximate, and the task notes carry concrete recommended changes rather than generic advice. The one thing keeping this from a higher mark is that the closing summary states the archive based approach as settled fact without walking through why it satisfies the historical date requirement, so a reader has to trust the conclusion rather than follow the reasoning that produced it.
 
 ## 5. Instruction following
 
 **Rating:** 5/7
 
-Both platforms are scored across all six sections, empty sections are recorded and scored zero rather than skipped, the anonymization rule is followed with no competitor names or links anywhere, and the re-run safety rule is satisfied since every row and task maps to a real gap with nothing duplicated. The one place this doesn't fully show its work is the tie-break and archive-provenance reasoning, both real judgment calls this task asks for, which land correctly but without the explicit walkthrough that would let me confirm the reasoning rather than just the result.
+Both platforms are scored across all six sections, empty sections are recorded and scored zero rather than skipped, the anonymization rule is followed with no competitor names or links anywhere, and the re run safety rule is satisfied since every row and task maps to a real gap with nothing duplicated. Two judgment calls this task asks for do not fully show their work. The tie break reasoning behind the ranked gaps lands correctly but without an explicit walkthrough, and the same is true of why the archived benchmark satisfies the historical date requirement, both correct results without the reasoning that produced them.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** 5/7
+**Rating:** 6/7
 **Steering needed:** none, the run completed unattended from the access gate through the final readback
 **Additional editing before I'd use it:** none, the deliverables are usable as delivered
-**Commentary:** This ran the whole pipeline without needing me to step in, and it made a real judgment call correctly, choosing an archived benchmark over a same-day live search rather than quietly treating today's results as the requested historical page. The verification pass checked the live rendered sheet in addition to the connector-level write, a real content check rather than just confirming an action fired. What keeps this from a higher mark is that the archive decision itself never gets surfaced as something worth flagging or confirming, it's just applied and reported after the fact.
+**Commentary:** This ran the whole pipeline without needing me to step in, and it made a real judgment call correctly, choosing an archived benchmark over a same day live search rather than quietly treating today's results as the requested historical page. The verification pass checked the live rendered sheet in addition to the connector level write, a real content check rather than just confirming an action fired. The one thing keeping this from a higher mark is that the archive decision itself never gets surfaced as something worth flagging or confirming, it is just applied and reported after the fact.
 
 ## 7. Citation quality
 
 **Rating:** 4/7
 
-Every dashboard figure is specific, exact character counts, exact item counts, exact medians, rather than rounded approximations, and the numbers trace cleanly from the sheet into the task notes built on top of them. What keeps this from a higher mark is that the one figure I'd most want a real source for, the archived competitor capture standing in for a same-day search, is never named or dated anywhere in the deliverable, so I can't trace that specific input back to anything concrete.
+Every dashboard figure is specific, exact character counts, exact item counts, exact medians, rather than rounded approximations, and the numbers trace cleanly from the sheet into the task notes built on top of them. What keeps this from a higher mark is that the one figure I would most want a real source for, the archived competitor capture standing in for a same day search, is never named or dated anywhere in the deliverable, so I cannot trace that specific input back to anything concrete.
 
 ## 8. GUI action correctness
 
 **Rating:** 4/7
 
-There's real on-screen verification here, the run checked the live-rendered Scores tab visually in addition to the connector write, and the access gate itself was confirmed through the actual signed-in browser session rather than assumed. What keeps this from a higher mark is that the visual check here was a single rendered look rather than a fuller page-by-page review, so I'm trusting a meaningful share of the final layout on the connector's word rather than a direct look at every page.
+There is real on screen verification here, the run checked the live rendered Scores tab visually in addition to the connector write, and the access gate itself was confirmed through the actual signed in browser session rather than assumed. What keeps this from a higher mark is that the visual check here was a single rendered look rather than a fuller page by page review, so I am trusting a meaningful share of the final layout on the connector's word rather than a direct look at every page.
 
 ## 1. Overall task success
 
 **Rating:** 5/7
 
-Both platforms are fully scored, every gap has a matching task, every task lands on the right due date, and the run correctly avoided the trap of treating a same-day search as a historical benchmark. That is a complete, reconciled deliverable built on a real correct judgment call. What keeps this from a higher mark is that the reasoning behind that judgment call, and the provenance of the archived data it rests on, never gets surfaced for me to check, so I'm trusting the conclusion rather than following the work that produced it.
+Both platforms are fully scored, every gap has a matching task, every task lands on the right due date, and the run correctly avoided the trap of treating a same day search as a historical benchmark. That is a complete, reconciled deliverable built on a real correct judgment call. What keeps this from a higher mark is that the reasoning behind that judgment call, and the provenance of the archived data it rests on, never gets surfaced for me to check, so I am trusting the conclusion rather than following the work that produced it.
