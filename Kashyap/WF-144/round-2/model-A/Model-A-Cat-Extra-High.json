@@ -21,7 +21,7 @@
       "rating": 6,
       "end_to_end_time_minutes": "25",
       "wrong_actions_recovery": "none stated beyond the expected Chrome fallback for Jira attachments, needed because the standard connector doesn't expose a way to upload attachments directly",
-      "commentary": "Twenty five minutes for a full architecture read, a document with nine tabs, four tickets with attachments, and a Teams post is a tight runtime for this scope, and the run reads as one continuous pass with real visual verification built in rather than skipped. The one small thing is that the image review happens across five separate batches, three images, then six, six, five, and five, rather than one consolidated pass, a minor structural inefficiency even though every batch does get checked."
+      "commentary": "25 minutes for a full architecture read, a document with nine tabs, four tickets with attachments, and a Teams post is a tight runtime for this scope, and the run reads as one continuous pass with real visual verification built in rather than skipped. The one small thing is that the image review happens across five separate batches, three images, then six, six, five, and five, rather than one consolidated pass, a minor structural inefficiency even though every batch does get checked."
     },
     "writing_quality": {
       "rating": 4,

@@ -17,7 +17,7 @@
       "rating": 3,
       "end_to_end_time_minutes": "21",
       "wrong_actions_recovery": "LinkedIn composer failed outright requiring a full retry through an alternate composer route, a first Teams payload was rejected and had to be resent without the link, four separate user replies needed to reach completion.",
-      "commentary": "Twenty one minutes across four worked segments includes a full composer failure that required a complete restart rather than a fix within the same pass, plus a rejected first Teams payload that had to be stripped down and resent. Reaching the end also took four separate rounds of user input, prompting the connector, approving the Marketing destination, telling the run to retry the post, and finally overriding a second confirmation request before the final publish would proceed. Each individual recovery was handled competently once it started, but the number of distinct stops and restarts needed to get there is real, substantial drag for a task meant to complete in a single unattended pass."
+      "commentary": "21 minutes across four worked segments includes a full composer failure that required a complete restart rather than a fix within the same pass, plus a rejected first Teams payload that had to be stripped down and resent. Reaching the end also took four separate rounds of user input, prompting the connector, approving the Marketing destination, telling the run to retry the post, and finally overriding a second confirmation request before the final publish would proceed. Each individual recovery was handled competently once it started, but the number of distinct stops and restarts needed to get there is real, substantial drag for a task meant to complete in a single unattended pass."
     },
     "writing_quality": {
       "rating": 5,
@@ -25,13 +25,13 @@
     },
     "instruction_following": {
       "rating": 3,
-      "commentary": "Every literal field requirement is satisfied, the right hashtag count, a correct draft ID, both notifications sent, and a fully reconciled Issues entry. But this run needed real live steering to finish, four separate rounds of user input including one moment where the user had to explicitly say post it without asking me after the run stopped a second time for the same confirmation it had already been granted once. The prompt's second sentence is unambiguous about no human in the loop, and a run that has to be told twice to stop asking has not internalized that instruction even once it finally complies."
+      "commentary": "Every literal field requirement is satisfied, the right hashtag count, a correct draft ID, both notifications sent, and a fully reconciled Issues entry. But this run needed real live steering to finish, four separate rounds of input from me including one moment where I had to explicitly say post it without asking again after the run stopped a second time for the same confirmation it had already been granted once. The prompt's second sentence is unambiguous about no human in the loop, and a run that has to be told twice to stop asking has not internalized that instruction even once it finally complies."
     },
     "collaboration_autonomy_verification": {
       "rating": 3,
-      "steering_needed": "four separate user replies required, including one explicit override of a repeated publish confirmation request.",
+      "steering_needed": "four separate replies from me required, including one explicit override of a repeated publish confirmation request.",
       "additional_editing": "none, delivered values are usable as is.",
-      "commentary": "The clearest problem here is that the confirmation gate fired twice in the same run, once before the first attempt and again before the retry, even though the user had already made clear the run should proceed without asking. That is a real autonomy failure, needing the same override applied twice rather than just needing help once. Verification is a genuine bright spot by comparison, the run explicitly reconciles the Issues tab language after each Teams outcome and correctly distinguishes the failure heads up from the eventual success heads up rather than leaving stale status text behind, a specific and demonstrated check rather than an assumed one."
+      "commentary": "The clearest problem here is that the confirmation gate fired twice in the same run, once before the first attempt and again before the retry, even though I had already made clear the run should proceed without asking. That is a real autonomy failure, needing the same override applied twice rather than just needing help once. Verification is a genuine bright spot by comparison, the run explicitly reconciles the Issues tab language after each Teams outcome and correctly distinguishes the failure heads up from the eventual success heads up rather than leaving stale status text behind, a specific and demonstrated check rather than an assumed one."
     },
     "citation_quality": {
       "rating": 6,

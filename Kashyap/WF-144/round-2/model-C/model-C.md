@@ -41,7 +41,7 @@ The rule to match an existing issue before creating a new one is applied correct
 
 **Rating:** 5/7
 
-The ticket structure is clear and consistent, a phase, explicit dependencies and evidence, a scoped list, and a done/acceptance section that reads as genuinely checkable rather than aspirational. Attaching each relevant tab as its own file rather than a merged bundle means a reviewer opens exactly the section that matters. The Teams message is notably careful, it explicitly states this is a draft plan and nothing has shipped, which is the kind of plainly stated framing a reader skimming a channel actually benefits from. The attachment layout rework needed along the way, while ultimately resolved, is the one sign that the first pass at this document's formatting wasn't fully solid.
+The ticket structure is clear and consistent, a phase, explicit dependencies and evidence, a scoped list, and a done section that reads as genuinely checkable rather than aspirational. Attaching each relevant tab as its own file rather than a merged bundle means a reviewer opens exactly the section that matters. The Teams message is notably careful, it explicitly states this is a draft plan and nothing has shipped, which is the kind of plainly stated framing a reader skimming a channel actually benefits from. The attachment layout rework needed along the way, while ultimately resolved, is the one sign that the first pass at this document's formatting wasn't fully solid.
 
 ## 5. Instruction following
 

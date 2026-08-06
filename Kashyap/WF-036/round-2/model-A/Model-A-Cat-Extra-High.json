@@ -7,7 +7,7 @@
   "boxes": {
     "overall_task_success": {
       "rating": 3,
-      "commentary": "Reaching Teams was the real drag on this run. It worked through a desktop app path that never actually got the notification through before finally trying the connector that had been available from the start, and it also stopped partway through before picking back up on its own to close out the remaining notification. The topic, agentic containment failures and the guardrails they demand, is timely and relevant, and the post made it all the way to a live LinkedIn publish with the log and both notifications eventually confirmed. The citation behind that topic quietly treats two separate companies' incidents as one confirmed trend, and that flaw combines with the Teams drag to cap this below what the topic and writing earned on their own."
+      "commentary": "Reaching Teams was the real drag on this run. It worked through a desktop app path that never actually got the notification through before finally trying the connector that had been available from the start, and it also stopped partway through before picking back up on its own to close out the remaining notification. The topic, agentic containment failures and the guardrails they demand, is timely and relevant, and the post made it all the way to a live LinkedIn publish with the log and both notifications eventually confirmed. The citation behind that topic quietly treats two separate companies' incidents as one confirmed trend, and that flaw combines with the Teams drag to settle this at 3/7 despite the topic and writing being genuinely strong on their own."
     },
     "task_accuracy": {
       "rating": 4,
@@ -29,7 +29,7 @@
     },
     "collaboration_autonomy_verification": {
       "rating": 5,
-      "steering_needed": "none required from the user, though the run experienced an unexplained interruption and had to resume on its own.",
+      "steering_needed": "none required from me, though the run experienced an unexplained interruption and had to resume on its own.",
       "additional_editing": "none, delivered values are usable as is.",
       "commentary": "No live approval was requested anywhere in this run, which is a real strength for a task defined around unattended completion. But the run was not actually one clean unattended pass either. It stopped mid stream with the notification step still unresolved and had to pick back up in a second worked segment to finish reconciling the row, and nothing in the log explains what caused that stop. Verification is also thin at the close, the final summary states that the content log was updated and notifications sent without demonstrating that the logged post text matches what was actually typed into LinkedIn. Two separate gaps in an otherwise steering free run."
     },
