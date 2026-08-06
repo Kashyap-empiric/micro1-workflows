@@ -106,7 +106,7 @@ Grafton incident / privacy and security team
 
 **Rating:** 5
 
-The substance here checks out row for row. I traced the person counts, the file paths, and the regime math against the source documents myself and none of it was off, including the harder calls like the Singapore store meeting the harm limb despite missing the scale limb, and Brazil staying open instead of getting filled in from outside knowledge. Two things stop me from going higher. The register's own reason text for each row doesn't carry the point in time everything else hangs off, so a reader has to go find the matching Gmail draft to see what the clock actually started from. And the Acme row buries the one fact that makes the processor notice apply, the customer's own EU establishment, inside a parenthetical in the jurisdiction cell instead of the reasoning itself.
+The substance here checks out row for row. Tracing the person counts, file paths, and regime math against the source myself, none of it was off, including Singapore meeting the harm limb despite missing the scale limb, and Brazil staying open rather than filled in from outside knowledge. Two things stop me from going higher. The register's own reason text for each row doesn't carry the point in time everything else hangs off, so a reader has to open the matching Gmail draft to see what the clock started from. The Acme row buries the one fact that makes the processor notice apply, the customer's own EU establishment, inside a parenthetical in the jurisdiction cell instead of the reasoning itself.
 
 ## 3. Efficiency
 
@@ -119,13 +119,13 @@ The substance here checks out row for row. I traced the person counts, the file 
 
 **Rating:** 4
 
-The drafts themselves read cleanly, with a clear notice structure and no wasted sentences. The Teams post is where this loses ground. It gives a full one line reason for every store that isn't notifiable and for the one left open, then gives the three notifiable stores nothing beyond a recipient and a date, so the section a legal reader would care about most is the thinnest part of the post. The Gmail drafts also stay in continuous paragraph form the whole way through, with no bullet breakdown for the enumerable facts like affected counts or remediation steps, which makes the denser paragraphs slower to scan than they need to be for a document meant for a quick legal read.
+The drafts themselves read cleanly, with a clear notice structure and no wasted sentences. The Teams post is where this loses ground. It gives a full one line reason for every store that isn't notifiable and for the one left open, then gives the three notifiable stores nothing beyond a recipient and a date, so the section a legal reader would care about most is the thinnest part of the post. The Gmail drafts also stay in continuous paragraph form the whole way through, with no bullet breakdown for enumerable facts like affected counts or remediation steps, making the denser paragraphs slower to scan than a quick legal read should require.
 
 ## 5. Instruction following
 
 **Rating:** 5
 
-Every literal constraint I checked line by line is met. The blank regulator To fields carry the required note about needing a verified address, the customer notice uses the DPA's own address, and the notifiable stores are ordered by whichever deadline comes first. The one place it only half followed through is the one line reason requirement itself. The prompt's spirit is that every store gets a reason a reader can act on, and it delivered that fully for the not notifiable and open stores but not at all for the three notifiable ones, so the post's most urgent section is also its least substantiated one. That leaves the single most safety critical part of the post resting entirely on trust in a deadline and a name with no visible reasoning behind it.
+Every literal constraint I checked line by line is met. The blank regulator To fields carry the required note about needing a verified address, the customer notice uses the DPA's own address, and the notifiable stores are ordered by whichever deadline comes first. The one gap is the one line reason requirement itself. The prompt's spirit is that every store gets a reason a reader can act on, and it delivered that fully for the not notifiable and open stores but not at all for the three notifiable ones, so the post's most urgent section is also its least substantiated one. That leaves the most safety critical part resting on trust in a deadline and a name alone.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -144,10 +144,10 @@ Every draft opens with a labeled regime line naming the exact row of the sheet i
 
 **Rating:** 5
 
-Navigation here was mostly clean. It worked out which of three identically named Teams channels was the real one before posting rather than guessing, and the register landed in the correct shared workspace. One of the captured Gmail drafts shows an action undone notice sitting over the compose window, a leftover trace of some undo cycle during the session that never got explained or cleared before the screenshot was taken, and the body text reads intact so nothing looks actually broken, but it's a loose end in an otherwise finished screen. The register verification also has a thinner on screen trail than the drafts do, with the log stating six pages were created and checked without showing that check happening the way the rest of the session is narrated.
+Navigation here was mostly clean. It worked out which of three identically named Teams channels was the real one before posting rather than guessing, and the register landed in the correct shared workspace. One of the captured Gmail drafts shows an action undone notice sitting over the compose window, a leftover trace of some undo cycle that never got explained or cleared, and though the body text reads intact, it's a loose end in an otherwise finished screen. The register verification also has a thinner on screen trail than the drafts do, with the log stating six pages were created and checked without showing that check happening the way the rest of the session is narrated.
 
 ## 1. Overall task success
 
 **Rating:** 5
 
-The core deliverable is right and it is sitting where it should be. Six correct positions in the shared register, a Teams post that matches those positions, and three unsent drafts with the right addresses and the right gaps left open for legal to fill in. What keeps this from going higher is that the parts a legal reader would lean on hardest, the reasoning behind the three most urgent calls, only show up in the drafts and never make it into the post meant to summarize the position at a glance. Add a verification trail that asserts more than it shows, and this is a genuinely usable result that still needs the Teams post filled in before I'd call it finished.
+The core deliverable is right and it is sitting where it should be. Six correct positions in the shared register, a Teams post that matches those positions, and three unsent drafts with the right addresses and the right gaps left open for legal to fill in. What keeps this from going higher is that the parts a legal reader would lean on hardest, the reasoning behind the three most urgent calls, only show up in the drafts and never make it into the post meant to summarize the position at a glance. Add a verification trail that asserts more than it shows, and this is usable but still needs the Teams post filled in before I'd call it finished.
