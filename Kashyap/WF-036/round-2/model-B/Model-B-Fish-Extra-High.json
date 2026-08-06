@@ -17,7 +17,7 @@
       "rating": 5,
       "end_to_end_time_minutes": "15",
       "wrong_actions_recovery": "composer bulk paste rejected, Teams web login unexpectedly required credentials, both resolved inline in the same pass.",
-      "commentary": "Fifteen minutes in a single continuous pass with two recoveries handled inline is a genuinely tight run. The composer rejected bulk paste and the run switched to a browser native keystroke path without pausing or asking for help. Teams then asked for credentials unexpectedly and the run resolved it through the connected integration in the same breath. Neither recovery required a retry loop or a stop for input, both are described and resolved in the same one or two log entries. The only mark against this box is that two separate platform frictions still had to be worked around at all in what should be a routine publish and notify sequence."
+      "commentary": "15 minutes in a single continuous pass with two recoveries handled inline is a genuinely tight run. The composer rejected bulk paste and the run switched to a browser native keystroke path without pausing or asking for help. Teams then asked for credentials unexpectedly and the run resolved it through the connected integration in the same breath. Neither recovery required a retry loop or a stop for input, both are described and resolved in the same one or two log entries. The only mark against this box is that two separate platform frictions still had to be worked around at all in what should be a routine publish and notify sequence."
     },
     "writing_quality": {
       "rating": 5,
