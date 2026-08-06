@@ -1,0 +1,621 @@
+Set up a fixed test workspace for a payroll garnishment task. All invented for testing. If a
+Google Drive folder called "Withholding Orders - PP15" already exists from a past run, or a Google
+Sheet called "Havelock Payroll - Pay Period 15", or either of the Google Docs called "Wage
+Withholding Rules Pack - July 2026" or "Havelock Regional Services - Payroll Withholding
+Procedure", move the old ones to trash first and build clean copies. Then build everything below
+exactly as written.
+
+Everything below is invented for testing: the employer, the employees, the courts, the agencies,
+the creditors and the states (Calderon, Marran, Vestry, Norling) are all made up, there are no
+real people and no real personal data anywhere in it, and no real statute is cited. The rule
+structure is real because it is the rulebook. Build it exactly as written; the text and the
+numbers are the fixture.
+
+1) Make a folder in my Google Drive called "Withholding Orders - PP15" and put twelve PDFs in it,
+one per order, each named after its order number (ORD-2041.pdf and so on). Each PDF holds exactly
+the text given for it, laid out as a plain one-page order.
+
+ORD-2041.pdf:
+"DISTRICT COURT OF CALDERON COUNTY, STATE OF CALDERON
+WRIT OF CONTINUING GARNISHMENT
+Order number: ORD-2041
+Date issued: 1 July 2026
+Received by employer: 6 July 2026
+Garnishee: Havelock Regional Services
+Judgment creditor: Redlaw Recovery Partners
+Judgment debtor and employee: Marisol Devereux, employee number EMP-2196
+Judgment debt: 9,412.00 on one judgment, case CC-26-0417
+The garnishee shall withhold from the earnings of the judgment debtor each pay period the maximum
+the law allows and pay it to the clerk of this court until the judgment is satisfied or this writ is
+released. The garnishee shall file its answer with the clerk within 20 days of service."
+
+ORD-2042.pdf:
+"FEDERAL REVENUE AGENCY
+NOTICE OF LEVY ON WAGES, SALARY AND OTHER INCOME
+Order number: ORD-2042
+Date issued: 30 June 2026
+Received by employer: 2 July 2026
+Employer: Havelock Regional Services
+Taxpayer and employee: Osric Vandermeer, employee number EMP-2214
+Unpaid tax, penalty and interest: 41,806.22
+Tax periods: 2022, 2023
+The employer shall pay over the employee's wages, salary and other income, less the amount exempt
+from levy, for every pay period until this levy is released.
+Exemption statement served with this notice. Returned by the employee on 6 July 2026: filing status
+married filing jointly, 3 dependents claimed.
+The employer shall return its acknowledgement to the agency within 10 days."
+
+ORD-2043.pdf:
+"FEDERAL REVENUE AGENCY
+NOTICE OF LEVY ON WAGES, SALARY AND OTHER INCOME
+Order number: ORD-2043
+Date issued: 26 June 2026
+Received by employer: 1 July 2026
+Employer: Havelock Regional Services
+Taxpayer and employee: Beatriz Halloran, employee number EMP-2287
+Unpaid tax, penalty and interest: 6,239.55
+Tax periods: 2024
+The employer shall pay over the employee's wages, salary and other income, less the amount exempt
+from levy, for every pay period until this levy is released.
+Exemption statement served with this notice. Not returned by the employee as at 13 July 2026.
+The employer shall return its acknowledgement to the agency within 10 days."
+
+ORD-2044.pdf:
+"VESTRY COUNTY SUPERIOR COURT, STATE OF VESTRY
+INCOME WITHHOLDING FOR SUPPORT
+Order number: ORD-2044
+Date issued: 24 June 2026
+Received by employer: 3 July 2026
+Employer and income withholder: Havelock Regional Services
+Employee and obligor: Idris Kovalenko, employee number EMP-2301
+Custodial party: T. Kovalenko
+Child: one child, date of birth 4 March 2007
+Case: VS-19-2288
+Withhold for current support: 780.00 per biweekly pay period
+Arrears: none. Not 12 weeks or more in arrears.
+This order is issued under the law of Vestry and is regular on its face. Begin withholding on the
+first pay date after receipt and remit to the Vestry State Disbursement Unit.
+The employer shall return its acknowledgement to this court within 14 days."
+
+ORD-2045.pdf:
+"MARRAN FAMILY COURT, FOURTH DISTRICT, STATE OF MARRAN
+INCOME WITHHOLDING FOR SUPPORT
+Order number: ORD-2045
+Date issued: 29 June 2026
+Received by employer: 3 July 2026
+Employer and income withholder: Havelock Regional Services
+Employee and obligor: Thaddeus Oyelaran, employee number EMP-2318
+Custodial party: R. Oyelaran
+Children: two
+Case: MF-24-1093
+Withhold for current support: 900.00 per biweekly pay period
+Withhold toward arrears: 700.00 per biweekly pay period
+Arrears: 14,300.00, more than 12 weeks in arrears.
+Total to withhold each pay period: 1,600.00, or the maximum the law allows if that is less.
+The employer shall return its acknowledgement to this court within 14 days."
+
+ORD-2046.pdf:
+"DISTRICT COURT OF CALDERON COUNTY, STATE OF CALDERON
+WRIT OF CONTINUING GARNISHMENT
+Order number: ORD-2046
+Date issued: 2 July 2026
+Received by employer: 6 July 2026
+Garnishee: Havelock Regional Services
+Judgment creditor: Ambervale Credit Union
+Judgment debtor and employee: Solveig Adeyemi, employee number EMP-2340
+Judgment debt: 5,880.00 on one judgment, case CC-26-0433
+The garnishee shall withhold from the earnings of the judgment debtor each pay period the maximum
+the law allows and pay it to the clerk of this court until the judgment is satisfied or this writ is
+released. The garnishee shall file its answer with the clerk within 20 days of service, stating what
+it has withheld and, if it has withheld nothing, why."
+
+ORD-2047.pdf:
+"FEDERAL STUDENT AID AGENCY
+ORDER OF WITHHOLDING FROM EARNINGS
+Order number: ORD-2047
+Date issued: 26 June 2026
+Received by employer: 1 July 2026
+Employer: Havelock Regional Services
+Employee: Corentin Baptiste, employee number EMP-2355
+Defaulted loan balance: 18,244.10 on account SL-4471-926
+Withhold the amount the law allows on a defaulted student loan each pay period and remit to this
+agency. The employer shall complete and return the employer certification to this agency within 20
+days, whether or not it withholds."
+
+ORD-2048.pdf:
+"FEDERAL STUDENT AID AGENCY
+ORDER OF WITHHOLDING FROM EARNINGS
+Order number: ORD-2048
+Date issued: 26 June 2026
+Received by employer: 1 July 2026
+Employer: Havelock Regional Services
+Employee: Ottoline Marsh, employee number EMP-2362
+Defaulted loan balance: 9,905.00 on account SL-4471-931
+Withhold the amount the law allows on a defaulted student loan each pay period and remit to this
+agency. The employer shall complete and return the employer certification to this agency within 20
+days, whether or not it withholds."
+
+ORD-2049.pdf:
+"DISTRICT COURT OF CALDERON COUNTY, STATE OF CALDERON
+WRIT OF CONTINUING GARNISHMENT
+Order number: ORD-2049
+Date issued: 3 July 2026
+Received by employer: 7 July 2026
+Garnishee: Havelock Regional Services
+Judgment creditor: Pellonby Medical Billing Services
+Judgment debtor and employee: Ephraim Nwachukwu, employee number EMP-2377
+Judgment debt: 3,150.00 on one judgment, case CC-26-0441
+The garnishee shall withhold 450.00 from the earnings of the judgment debtor each pay period, or the
+maximum the law allows if that is less, and pay it to the clerk of this court until the judgment is
+satisfied. The garnishee shall file its answer with the clerk within 20 days of service."
+
+ORD-2050.pdf:
+"DISTRICT COURT OF CALDERON COUNTY, STATE OF CALDERON
+WRIT OF CONTINUING GARNISHMENT
+Order number: ORD-2050
+Date issued: 2 July 2026
+Received by employer: 6 July 2026
+Garnishee: Havelock Regional Services
+Judgment creditor: Redlaw Recovery Partners
+Judgment debtor and employee: Peregrine Ashworth, employee number EMP-2388
+Judgment debt: 2,410.00 on one judgment, case CC-26-0435
+The garnishee shall withhold 200.00 from the earnings of the judgment debtor each pay period, or the
+maximum the law allows if that is less, and pay it to the clerk of this court. The garnishee shall
+file its answer with the clerk within 20 days of service."
+
+ORD-2051.pdf:
+"DISTRICT COURT OF CALDERON COUNTY, STATE OF CALDERON
+WRIT OF CONTINUING GARNISHMENT
+Order number: ORD-2051
+Date issued: 2 July 2026
+Received by employer: 6 July 2026
+Garnishee: Havelock Regional Services
+Judgment creditor: Corvane Retail Finance
+Judgment debtor and employee: Hester Lindqvist, employee number EMP-2394
+Judgment debt: 7,020.00 on one judgment, case CC-26-0436
+The garnishee shall withhold 600.00 from the earnings of the judgment debtor each pay period, or the
+maximum the law allows if that is less, and pay it to the clerk of this court. The garnishee shall
+file its answer with the clerk within 20 days of service."
+
+ORD-2052.pdf:
+"CALDERON FAMILY COURT, SECOND DISTRICT, STATE OF CALDERON
+INCOME WITHHOLDING FOR SUPPORT
+Order number: ORD-2052
+Date issued: 6 July 2026
+Received by employer: 8 July 2026
+Employer and income withholder: Havelock Regional Services
+Employee and obligor: Osric Vandermeer, employee number EMP-2214
+Custodial party: L. Vandermeer
+Child: one child, date of birth 11 September 2014
+Case: CF-26-0771
+Withhold for current support: 900.00 per biweekly pay period
+Arrears: none. Not 12 weeks or more in arrears.
+The employer shall return its acknowledgement to this court within 14 days."
+
+2) Make a Google Sheet called "Havelock Payroll - Pay Period 15" in my Google Drive with four tabs.
+
+Tab one is called "Earnings" with these columns in this order: Employee, Employee ID, Work state,
+Job title, Gross earnings this period. Put in exactly these 22 rows:
+
+Anwen Fairclough | EMP-2402 | Calderon | Scheduler | 2300.00
+Bartholomew Nkemdirim | EMP-2411 | Calderon | Depot supervisor | 3400.00
+Beatriz Halloran | EMP-2287 | Calderon | Claims assistant | 2000.00
+Clementine Rasmussen | EMP-2419 | Marran | Fleet clerk | 1950.00
+Corentin Baptiste | EMP-2355 | Calderon | Groundskeeper | 1800.00
+Desmond Achterberg | EMP-2426 | Calderon | Maintenance lead | 2750.00
+Elowen Castellanos | EMP-2433 | Norling | Contracts analyst | 3100.00
+Ephraim Nwachukwu | EMP-2377 | Calderon | Route planner | 2800.00
+Fitzgerald Mbeki | EMP-2440 | Calderon | Yard hand | 1700.00
+Guinevere Solberg | EMP-2448 | Calderon | Division manager | 4600.00
+Hester Lindqvist | EMP-2394 | Calderon | Billing coordinator | 2500.00
+Horatio Delacroix | EMP-2455 | Vestry | Site clerk | 2150.00
+Idris Kovalenko | EMP-2301 | Calderon | Vehicle technician | 2600.00
+Ingrid Oyelowo | EMP-2463 | Calderon | Safety officer | 2900.00
+Jarrah Whitcombe | EMP-2470 | Marran | Stores assistant | 1880.00
+Katarzyna Nwosu | EMP-2478 | Calderon | Facilities engineer | 3250.00
+Marisol Devereux | EMP-2196 | Calderon | Transit coordinator | 2400.00
+Osric Vandermeer | EMP-2214 | Calderon | Programme director | 4200.00
+Ottoline Marsh | EMP-2362 | Calderon | Dispatch assistant | 2000.00
+Peregrine Ashworth | EMP-2388 | Calderon | Cleaner, part time | 620.00
+Solveig Adeyemi | EMP-2340 | Calderon | Warehouse operative | 2200.00
+Thaddeus Oyelaran | EMP-2318 | Marran | Crew chief | 3000.00
+
+Tab two is called "Deductions" with these columns in this order: Employee ID, Employee, Deduction
+line, Plan or authority, Amount, Type. Put in exactly these 94 rows, in this order:
+
+EMP-2196 | Marisol Devereux | Federal income tax | Federal withholding | 288.00 | Statutory
+EMP-2196 | Marisol Devereux | Calderon income tax | Calderon withholding | 96.00 | Statutory
+EMP-2196 | Marisol Devereux | Federal payroll tax | Federal payroll tax | 183.60 | Statutory
+EMP-2196 | Marisol Devereux | Retirement contribution | Calderon Public Employees Retirement System, mandatory for staff of Havelock's county services division | 132.00 | Statutory
+EMP-2196 | Marisol Devereux | Retirement contribution | Havelock Choice 401 plan, employee elected | 132.00 | Voluntary
+EMP-2196 | Marisol Devereux | Health plan premium | Havelock Choice health, employee elected | 165.00 | Voluntary
+EMP-2196 | Marisol Devereux | Union dues | Local 219, employee authorised | 22.00 | Voluntary
+EMP-2214 | Osric Vandermeer | Federal income tax | Federal withholding | 638.00 | Statutory
+EMP-2214 | Osric Vandermeer | Calderon income tax | Calderon withholding | 172.10 | Statutory
+EMP-2214 | Osric Vandermeer | Federal payroll tax | Federal payroll tax | 321.30 | Statutory
+EMP-2214 | Osric Vandermeer | Health plan premium | Havelock Choice health, employee elected | 210.00 | Voluntary
+EMP-2214 | Osric Vandermeer | Retirement contribution | Havelock Choice 401 plan, employee elected | 336.00 | Voluntary
+EMP-2287 | Beatriz Halloran | Federal income tax | Federal withholding | 240.00 | Statutory
+EMP-2287 | Beatriz Halloran | Calderon income tax | Calderon withholding | 80.00 | Statutory
+EMP-2287 | Beatriz Halloran | Federal payroll tax | Federal payroll tax | 153.00 | Statutory
+EMP-2287 | Beatriz Halloran | Health plan premium | Havelock Choice health, employee elected | 148.00 | Voluntary
+EMP-2301 | Idris Kovalenko | Federal income tax | Federal withholding | 312.00 | Statutory
+EMP-2301 | Idris Kovalenko | Calderon income tax | Calderon withholding | 104.10 | Statutory
+EMP-2301 | Idris Kovalenko | Federal payroll tax | Federal payroll tax | 198.90 | Statutory
+EMP-2301 | Idris Kovalenko | Retirement contribution | Havelock Choice 401 plan, employee elected | 130.00 | Voluntary
+EMP-2301 | Idris Kovalenko | Health plan premium | Havelock Choice health, employee elected | 155.00 | Voluntary
+EMP-2318 | Thaddeus Oyelaran | Federal income tax | Federal withholding | 360.00 | Statutory
+EMP-2318 | Thaddeus Oyelaran | Marran income tax | Marran withholding | 90.50 | Statutory
+EMP-2318 | Thaddeus Oyelaran | Federal payroll tax | Federal payroll tax | 229.50 | Statutory
+EMP-2318 | Thaddeus Oyelaran | Health plan premium | Havelock Choice health, employee elected | 175.00 | Voluntary
+EMP-2340 | Solveig Adeyemi | Federal income tax | Federal withholding | 264.00 | Statutory
+EMP-2340 | Solveig Adeyemi | Calderon income tax | Calderon withholding | 87.70 | Statutory
+EMP-2340 | Solveig Adeyemi | Federal payroll tax | Federal payroll tax | 168.30 | Statutory
+EMP-2340 | Solveig Adeyemi | Health plan premium | Havelock Choice health, employee elected | 152.00 | Voluntary
+EMP-2355 | Corentin Baptiste | Federal income tax | Federal withholding | 216.00 | Statutory
+EMP-2355 | Corentin Baptiste | Calderon income tax | Calderon withholding | 72.30 | Statutory
+EMP-2355 | Corentin Baptiste | Federal payroll tax | Federal payroll tax | 137.70 | Statutory
+EMP-2362 | Ottoline Marsh | Federal income tax | Federal withholding | 240.00 | Statutory
+EMP-2362 | Ottoline Marsh | Calderon income tax | Calderon withholding | 80.00 | Statutory
+EMP-2362 | Ottoline Marsh | Federal payroll tax | Federal payroll tax | 153.00 | Statutory
+EMP-2377 | Ephraim Nwachukwu | Federal income tax | Federal withholding | 336.00 | Statutory
+EMP-2377 | Ephraim Nwachukwu | Calderon income tax | Calderon withholding | 111.80 | Statutory
+EMP-2377 | Ephraim Nwachukwu | Federal payroll tax | Federal payroll tax | 214.20 | Statutory
+EMP-2377 | Ephraim Nwachukwu | Health plan premium | Havelock Choice health, employee elected | 168.00 | Voluntary
+EMP-2388 | Peregrine Ashworth | Federal income tax | Federal withholding | 62.00 | Statutory
+EMP-2388 | Peregrine Ashworth | Calderon income tax | Calderon withholding | 24.60 | Statutory
+EMP-2388 | Peregrine Ashworth | Federal payroll tax | Federal payroll tax | 47.40 | Statutory
+EMP-2394 | Hester Lindqvist | Federal income tax | Federal withholding | 300.00 | Statutory
+EMP-2394 | Hester Lindqvist | Calderon income tax | Calderon withholding | 98.75 | Statutory
+EMP-2394 | Hester Lindqvist | Federal payroll tax | Federal payroll tax | 191.25 | Statutory
+EMP-2394 | Hester Lindqvist | Health plan premium | Havelock Choice health, employee elected | 160.00 | Voluntary
+EMP-2402 | Anwen Fairclough | Federal income tax | Federal withholding | 276.00 | Statutory
+EMP-2402 | Anwen Fairclough | Calderon income tax | Calderon withholding | 90.90 | Statutory
+EMP-2402 | Anwen Fairclough | Federal payroll tax | Federal payroll tax | 175.95 | Statutory
+EMP-2402 | Anwen Fairclough | Retirement contribution | Havelock Choice 401 plan, employee elected | 115.00 | Voluntary
+EMP-2411 | Bartholomew Nkemdirim | Federal income tax | Federal withholding | 510.00 | Statutory
+EMP-2411 | Bartholomew Nkemdirim | Calderon income tax | Calderon withholding | 138.60 | Statutory
+EMP-2411 | Bartholomew Nkemdirim | Federal payroll tax | Federal payroll tax | 260.10 | Statutory
+EMP-2411 | Bartholomew Nkemdirim | Retirement contribution | Calderon Public Employees Retirement System, mandatory for staff of Havelock's county services division | 187.00 | Statutory
+EMP-2411 | Bartholomew Nkemdirim | Health plan premium | Havelock Choice health, employee elected | 190.00 | Voluntary
+EMP-2419 | Clementine Rasmussen | Federal income tax | Federal withholding | 234.00 | Statutory
+EMP-2419 | Clementine Rasmussen | Marran income tax | Marran withholding | 58.50 | Statutory
+EMP-2419 | Clementine Rasmussen | Federal payroll tax | Federal payroll tax | 149.18 | Statutory
+EMP-2419 | Clementine Rasmussen | Health plan premium | Havelock Choice health, employee elected | 140.00 | Voluntary
+EMP-2426 | Desmond Achterberg | Federal income tax | Federal withholding | 330.00 | Statutory
+EMP-2426 | Desmond Achterberg | Calderon income tax | Calderon withholding | 110.40 | Statutory
+EMP-2426 | Desmond Achterberg | Federal payroll tax | Federal payroll tax | 210.38 | Statutory
+EMP-2426 | Desmond Achterberg | Retirement contribution | Havelock Choice 401 plan, employee elected | 137.50 | Voluntary
+EMP-2426 | Desmond Achterberg | Union dues | Local 219, employee authorised | 22.00 | Voluntary
+EMP-2433 | Elowen Castellanos | Federal income tax | Federal withholding | 465.00 | Statutory
+EMP-2433 | Elowen Castellanos | Norling income tax | Norling withholding | 124.00 | Statutory
+EMP-2433 | Elowen Castellanos | Federal payroll tax | Federal payroll tax | 237.15 | Statutory
+EMP-2433 | Elowen Castellanos | Health plan premium | Havelock Choice health, employee elected | 180.00 | Voluntary
+EMP-2440 | Fitzgerald Mbeki | Federal income tax | Federal withholding | 204.00 | Statutory
+EMP-2440 | Fitzgerald Mbeki | Calderon income tax | Calderon withholding | 66.30 | Statutory
+EMP-2440 | Fitzgerald Mbeki | Federal payroll tax | Federal payroll tax | 130.05 | Statutory
+EMP-2448 | Guinevere Solberg | Federal income tax | Federal withholding | 736.00 | Statutory
+EMP-2448 | Guinevere Solberg | Calderon income tax | Calderon withholding | 193.20 | Statutory
+EMP-2448 | Guinevere Solberg | Federal payroll tax | Federal payroll tax | 351.90 | Statutory
+EMP-2448 | Guinevere Solberg | Retirement contribution | Calderon Public Employees Retirement System, mandatory for staff of Havelock's county services division | 253.00 | Statutory
+EMP-2448 | Guinevere Solberg | Retirement contribution | Havelock Choice 401 plan, employee elected | 230.00 | Voluntary
+EMP-2448 | Guinevere Solberg | Health plan premium | Havelock Choice health, employee elected | 215.00 | Voluntary
+EMP-2455 | Horatio Delacroix | Federal income tax | Federal withholding | 258.00 | Statutory
+EMP-2455 | Horatio Delacroix | Vestry income tax | Vestry withholding | 75.25 | Statutory
+EMP-2455 | Horatio Delacroix | Federal payroll tax | Federal payroll tax | 164.48 | Statutory
+EMP-2455 | Horatio Delacroix | Health plan premium | Havelock Choice health, employee elected | 145.00 | Voluntary
+EMP-2463 | Ingrid Oyelowo | Federal income tax | Federal withholding | 348.00 | Statutory
+EMP-2463 | Ingrid Oyelowo | Calderon income tax | Calderon withholding | 116.00 | Statutory
+EMP-2463 | Ingrid Oyelowo | Federal payroll tax | Federal payroll tax | 221.85 | Statutory
+EMP-2463 | Ingrid Oyelowo | Retirement contribution | Havelock Choice 401 plan, employee elected | 145.00 | Voluntary
+EMP-2470 | Jarrah Whitcombe | Federal income tax | Federal withholding | 225.60 | Statutory
+EMP-2470 | Jarrah Whitcombe | Marran income tax | Marran withholding | 56.40 | Statutory
+EMP-2470 | Jarrah Whitcombe | Federal payroll tax | Federal payroll tax | 143.82 | Statutory
+EMP-2470 | Jarrah Whitcombe | Health plan premium | Havelock Choice health, employee elected | 138.00 | Voluntary
+EMP-2478 | Katarzyna Nwosu | Federal income tax | Federal withholding | 487.50 | Statutory
+EMP-2478 | Katarzyna Nwosu | Calderon income tax | Calderon withholding | 130.00 | Statutory
+EMP-2478 | Katarzyna Nwosu | Federal payroll tax | Federal payroll tax | 248.63 | Statutory
+EMP-2478 | Katarzyna Nwosu | Retirement contribution | Calderon Public Employees Retirement System, mandatory for staff of Havelock's county services division | 178.75 | Statutory
+EMP-2478 | Katarzyna Nwosu | Health plan premium | Havelock Choice health, employee elected | 195.00 | Voluntary
+
+Tab three is called "Roster" with these columns in this order: Employee, Employee ID, Work state,
+Hire date, Prior separation from a previous employer, Supporting another spouse or dependent child,
+Filing status on file with HR, Dependents on file with HR. Put in exactly these 22 rows:
+
+Anwen Fairclough | EMP-2402 | Calderon | 20 Apr 2026 | Voluntary | No | Single | 0
+Bartholomew Nkemdirim | EMP-2411 | Calderon | 14 Jul 2014 | n/a | Yes | Married filing jointly | 3
+Beatriz Halloran | EMP-2287 | Calderon | 8 Aug 2022 | n/a | No | Married filing jointly | 2
+Clementine Rasmussen | EMP-2419 | Marran | 2 Oct 2019 | n/a | No | Single | 0
+Corentin Baptiste | EMP-2355 | Calderon | 12 Jan 2026 | Involuntary | No | Single | 0
+Desmond Achterberg | EMP-2426 | Calderon | 6 Jun 2016 | n/a | Yes | Head of household | 2
+Elowen Castellanos | EMP-2433 | Norling | 19 Jan 2021 | n/a | No | Single | 1
+Ephraim Nwachukwu | EMP-2377 | Calderon | 30 Apr 2017 | n/a | No | Married filing jointly | 2
+Fitzgerald Mbeki | EMP-2440 | Calderon | 5 Feb 2026 | Involuntary | No | Single | 0
+Guinevere Solberg | EMP-2448 | Calderon | 11 Mar 2013 | n/a | Yes | Married filing jointly | 2
+Hester Lindqvist | EMP-2394 | Calderon | 14 Feb 2016 | n/a | No | Head of household | 1
+Horatio Delacroix | EMP-2455 | Vestry | 23 Jul 2020 | n/a | No | Single | 0
+Idris Kovalenko | EMP-2301 | Calderon | 21 Mar 2021 | n/a | No | Single | 1
+Ingrid Oyelowo | EMP-2463 | Calderon | 9 May 2019 | n/a | No | Head of household | 1
+Jarrah Whitcombe | EMP-2470 | Marran | 30 Nov 2023 | Voluntary | No | Single | 0
+Katarzyna Nwosu | EMP-2478 | Calderon | 17 Aug 2015 | n/a | Yes | Married filing jointly | 4
+Marisol Devereux | EMP-2196 | Calderon | 3 Feb 2019 | n/a | No | Single | 0
+Osric Vandermeer | EMP-2214 | Calderon | 17 Sep 2015 | n/a | Yes | Married filing jointly | 3
+Ottoline Marsh | EMP-2362 | Calderon | 2 Mar 2026 | Voluntary | No | Single | 0
+Peregrine Ashworth | EMP-2388 | Calderon | 9 Sep 2023 | n/a | No | Single | 0
+Solveig Adeyemi | EMP-2340 | Calderon | 12 Nov 2020 | n/a | No | Single | 1
+Thaddeus Oyelaran | EMP-2318 | Marran | 5 Jun 2018 | n/a | No | Head of household | 2
+
+Tab four is called "Active Orders" with these columns in this order: Order, Employee, Employee ID,
+Order type, Debt or case, Issuing court or agency, Issuing state, Received, Status, Amount ordered
+per period, Arrears 12 weeks or more, Note from the team. Put in exactly these 14 rows:
+
+ORD-1988 | Solveig Adeyemi | EMP-2340 | Support | CF-24-0912, one child | Calderon Family Court, Second District | Calderon | 14 Apr 2026 | In force, withholding since the May run | 1150.00 | Yes |
+ORD-1994 | Ephraim Nwachukwu | EMP-2377 | Creditor garnishment | CC-26-0118, Halverbrook Auto Finance | District Court of Calderon County | Calderon | 3 Mar 2026 | In force, withholding since the March run | 300.00 | |
+ORD-2041 | Marisol Devereux | EMP-2196 | Creditor garnishment | CC-26-0417, Redlaw Recovery Partners | District Court of Calderon County | Calderon | 6 Jul 2026 | New this queue, see the PDF | | |
+ORD-2042 | Osric Vandermeer | EMP-2214 | Tax levy | Tax periods 2022 and 2023 | Federal Revenue Agency | Federal | 2 Jul 2026 | New this queue, see the PDF | | |
+ORD-2043 | Beatriz Halloran | EMP-2287 | Tax levy | Tax period 2024 | Federal Revenue Agency | Federal | 1 Jul 2026 | New this queue, see the PDF | | |
+ORD-2044 | Idris Kovalenko | EMP-2301 | Support | VS-19-2288, one child | Vestry County Superior Court | Vestry | 3 Jul 2026 | New this queue, see the PDF | | | Set aside on 6 Jul pending registration in Calderon. Payroll to confirm the position before the run.
+ORD-2045 | Thaddeus Oyelaran | EMP-2318 | Support | MF-24-1093, two children | Marran Family Court, Fourth District | Marran | 3 Jul 2026 | New this queue, see the PDF | | |
+ORD-2046 | Solveig Adeyemi | EMP-2340 | Creditor garnishment | CC-26-0433, Ambervale Credit Union | District Court of Calderon County | Calderon | 6 Jul 2026 | New this queue, see the PDF | | |
+ORD-2047 | Corentin Baptiste | EMP-2355 | Student loan | SL-4471-926 | Federal Student Aid Agency | Federal | 1 Jul 2026 | New this queue, see the PDF | | |
+ORD-2048 | Ottoline Marsh | EMP-2362 | Student loan | SL-4471-931 | Federal Student Aid Agency | Federal | 1 Jul 2026 | New this queue, see the PDF | | |
+ORD-2049 | Ephraim Nwachukwu | EMP-2377 | Creditor garnishment | CC-26-0441, Pellonby Medical Billing Services | District Court of Calderon County | Calderon | 7 Jul 2026 | New this queue, see the PDF | | | Second writ on this employee. Our policy HR-14 treats a second garnishment as a termination trigger. Payroll to state the position from the rules pack before the run.
+ORD-2050 | Peregrine Ashworth | EMP-2388 | Creditor garnishment | CC-26-0435, Redlaw Recovery Partners | District Court of Calderon County | Calderon | 6 Jul 2026 | New this queue, see the PDF | | |
+ORD-2051 | Hester Lindqvist | EMP-2394 | Creditor garnishment | CC-26-0436, Corvane Retail Finance | District Court of Calderon County | Calderon | 6 Jul 2026 | New this queue, see the PDF | | | Second copy of this writ arrived by post on 9 Jul. Payroll to confirm we are not withholding twice.
+ORD-2052 | Osric Vandermeer | EMP-2214 | Support | CF-26-0771, one child | Calderon Family Court, Second District | Calderon | 8 Jul 2026 | New this queue, see the PDF | | |
+
+3) Make a Google Doc called "Wage Withholding Rules Pack - July 2026" in my Google Drive, with
+exactly this text:
+
+"WAGE WITHHOLDING RULES PACK, JULY 2026. Pulled for the Havelock queue. Fictional employer,
+fictional courts, fictional states, invented for testing. The rules and the wording below are the
+authoritative rulebook for this exercise. Treat them as correct and complete, and do not rely on
+outside knowledge of garnishment law, on any published fact sheet, or on what any real jurisdiction
+does.
+
+SECTION 1. WHAT THIS PACK COVERS, AND THE PINNED FIGURES.
+
+1.1 This pack covers every order that takes money out of an employee's pay: a creditor garnishment
+on a judgment, an order for support, a levy for a tax debt, and an administrative order for a
+defaulted student loan.
+
+1.2 Havelock pays biweekly. Every figure in this pack is stated for a biweekly pay period unless it
+says otherwise.
+
+1.3 The federal minimum hourly wage for this exercise is 7.25. Where a limit in this pack is stated
+as a multiple of the minimum hourly wage, the multiple for a biweekly period is 60, so the figure is
+435.00. For a weekly period the multiple would be 30. Use 435.00.
+
+SECTION 2. THE GENERAL LIMIT.
+
+2.1 The maximum that may be withheld under garnishment for any pay period is the LESSER of:
+(a) 25 percent of the employee's disposable earnings for that period, or
+(b) the amount by which the employee's disposable earnings for that period exceed 60 times the
+federal minimum hourly wage, which is 435.00.
+Both are computed, and the smaller of the two is the maximum. Where disposable earnings do not
+exceed 435.00, the maximum is nil and nothing may be withheld.
+
+2.2 DISPOSABLE EARNINGS means that part of the employee's earnings remaining after the deduction of
+any amounts REQUIRED BY LAW to be withheld. An amount is required by law only where the law compels
+it. An amount withheld because the employee asked for it to be withheld, elected it, authorised it
+or agreed to it is NOT required by law and is NOT deducted in arriving at disposable earnings,
+however the line is described on the earnings statement, whatever the amount, and whatever it is
+for. The character of the plan or authority behind the line decides this. The name of the line does
+not, and neither does the size of the figure.
+
+2.3 The limit in 2.1 is a limit on the TOTAL withheld against the same earnings in a pay period. It
+is not a limit per order. Every amount withheld against those earnings counts against it, including
+an amount withheld under an order that section 3 or section 4 gives a limit of its own. Where the
+amount already withheld against those earnings equals or exceeds the limit in 2.1, NOTHING FURTHER
+may be withheld under any order whose limit is 2.1, and the answer to that order says so.
+
+2.4 This section sets NO PRIORITY. It does not say which order is worked first where more than one
+reaches the same earnings, and nothing in it puts one kind of debt ahead of another. Order of
+application is section 7.
+
+SECTION 3. ORDERS FOR SUPPORT.
+
+3.1 The limit in 2.1 does not apply to an order for support. This section is its limit, subject to
+section 5.
+
+3.2 The maximum that may be withheld under an order for support is:
+(a) 50 percent of disposable earnings where the employee is supporting a spouse or dependent child
+other than the one the order is for;
+(b) 60 percent of disposable earnings where the employee is not.
+
+3.3 Add 5 percentage points to the figure in 3.2 where the withholding is for support that is 12
+weeks or more in arrears. So the figure becomes 55 percent under 3.2(a) and 65 percent under 3.2(b).
+
+3.4 Where the order demands more than the maximum, withhold the maximum. Where it demands less,
+withhold what it demands.
+
+SECTION 4. LEVY FOR A TAX DEBT.
+
+4.1 The limit in 2.1 DOES NOT APPLY AT ALL to a levy for a tax debt. Neither the percentage in
+2.1(a) nor the floor in 2.1(b) has any application to such a levy. A levy is not capped at a
+percentage of anything.
+
+4.2 On a levy for a tax debt the employer pays the employee ONLY THE EXEMPT AMOUNT from the table in
+4.4 and remits the rest of the employee's disposable earnings to the issuing agency. The figure
+withheld is therefore DISPOSABLE EARNINGS MINUS THE EXEMPT AMOUNT. The rule fixes what the employee
+keeps, not what is taken, and the higher the earnings the more the levy takes.
+
+4.3 The exempt amount is fixed by the employee's filing status and the number of dependents claimed
+ON THE EXEMPTION STATEMENT the agency serves with the levy. Where the employee does not return the
+exemption statement by the date the employer must begin withholding, the employer applies the exempt
+amount for MARRIED FILING SEPARATELY WITH NO DEPENDENTS and begins withholding. The employer does
+not wait for the statement, does not withhold nothing pending it, and does not use a filing status
+or a dependent count from its own records or its HR file in place of it. The statement is the only
+source, and its absence has an answer of its own.
+
+4.4 EXEMPT AMOUNT TABLE, BIWEEKLY, FOR 2026. This table is pinned to 2026 and is the table for this
+exercise. Do not use a figure from any other year.
+
+Filing status / 0 dependents / 1 / 2 / 3 / 4 / 5 / each dependent above 5
+Single / 620.00 / 790.00 / 960.00 / 1,130.00 / 1,300.00 / 1,470.00 / add 170.00
+Married filing jointly / 1,150.00 / 1,320.00 / 1,490.00 / 1,660.00 / 1,830.00 / 2,000.00 / add 170.00
+Head of household / 900.00 / 1,070.00 / 1,240.00 / 1,410.00 / 1,580.00 / 1,750.00 / add 170.00
+Married filing separately / 575.00 / 745.00 / 915.00 / 1,085.00 / 1,255.00 / 1,425.00 / add 170.00
+
+SECTION 5. STATE PROVISIONS AND WHICH ONE GOVERNS.
+
+5.1 Where a state provision and a limit in this pack both reach the same withholding, the one
+RESULTING IN THE SMALLER GARNISHMENT governs. A state may be narrower than this pack and often is.
+Where a state provision has nothing to say on a point, this pack governs that point.
+
+5.2 The state provisions are in section 10.
+
+SECTION 6. ORDERS FROM ANOTHER STATE.
+
+6.1 An employer that receives an income withholding order for support issued by another state shall
+apply it AS IF IT HAD BEEN ISSUED BY A COURT OF THE STATE IN WHICH THE EMPLOYEE WORKS. The employer
+SHALL NOT REQUIRE the order to be registered, domesticated, confirmed, recognised or filed in the
+employment state before withholding, and shall not return it, set it aside or delay it for any of
+those reasons. The only test the employer applies is whether the order is REGULAR ON ITS FACE.
+
+6.2 THE SPLIT. One order from another state is worked from two rulebooks.
+The law of the state of the employee's PRINCIPAL PLACE OF EMPLOYMENT governs:
+(a) the CAP on the amount withheld;
+(b) the FEE the employer may charge;
+(c) the TIMES within which the employer must begin withholding and remit;
+(d) the PRIORITIES for allocating between multiple orders.
+The law of the ISSUING state governs:
+(e) the DURATION of the support obligation, meaning how long the order runs and when it ends.
+
+6.3 PRIORITY OF SUPPORT. An order for support has priority over any OTHER LEGAL PROCESS UNDER THE
+LAW OF A STATE against the same earnings. This provision reaches process issued under the law of a
+state. It DOES NOT REACH an order of a FEDERAL AGENCY, and it does not put a support order ahead of
+one.
+
+SECTION 7. ORDER OF APPLICATION.
+
+7.1 Where more than one order reaches the same earnings, the employer applies them in the order in
+which the employer RECEIVED them, earliest first, except where 6.3 puts a support order ahead of a
+state-law process received earlier.
+
+7.2 Earnings already committed to an order applied earlier are not available to an order applied
+later.
+
+SECTION 8. DEFAULTED STUDENT LOAN.
+
+8.1 An administrative order issued by a federal agency for a defaulted student loan is limited to 15
+percent of disposable earnings, or the amount in 2.1(b), whichever is less. The rate is 15 percent.
+Any other rate is out of date, whatever a published fact sheet still prints, and 15 percent is the
+rate for this exercise.
+
+8.2 THE REEMPLOYMENT BAR. The agency may not garnish the earnings of an employee who has been
+INVOLUNTARILY SEPARATED from a previous employment until that employee has been reemployed
+continuously for 12 MONTHS. Where the employer's records show the employee was involuntarily
+separated from a previous employment and has been reemployed for less than 12 months, the employer
+WITHHOLDS NOTHING on the order and says so in its answer.
+
+8.3 The bar in 8.2 runs on an INVOLUNTARY separation only. An employee who left a previous
+employment voluntarily is not covered by it, however short the current tenure, and the ordinary rate
+in 8.1 applies to that employee.
+
+SECTION 9. EMPLOYMENT PROTECTION.
+
+9.1 No employer may discharge an employee by reason of the fact that the employee's earnings have
+been subjected to garnishment for ANY ONE INDEBTEDNESS.
+
+9.2 The protection in 9.1 reaches ONE indebtedness. It DOES NOT EXTEND to an employee whose earnings
+have been subjected to garnishment for TWO OR MORE separate indebtednesses. Where a second and
+separate indebtedness is garnished, section 9 gives the employee no protection at all and says
+nothing about what the employer may do.
+
+9.3 Separate indebtednesses are separate debts. Two orders on one debt are one indebtedness. Two
+orders on two debts are two.
+
+SECTION 10. THE STATE PROVISIONS.
+
+10.0 The employer fee in this section is charged only on a creditor garnishment or an order for
+support, and only for a pay period in which an amount is actually withheld under that order. No
+employer fee is charged on a tax levy or on a student loan order, and none is charged on an order
+under which nothing is withheld. On an order from another state the fee is the fee of the state whose
+law governs the fee under section 6.2.
+
+10.1 CALDERON.
+Creditor garnishment cap: as section 2.1. Calderon has no narrower provision.
+Support cap: as section 3. Calderon has no narrower provision.
+Employer fee: 3.00 per order for each pay period in which an amount is withheld under that order,
+deducted from the employee's earnings in addition to the amount withheld. No amount is withheld, no
+fee. The fee is not part of the amount withheld and does not count against any limit in this pack.
+Priority among orders subject to 2.1: in the order received, earliest first.
+Times: begin withholding on the first pay date falling at least 7 days after receipt; remit within 7
+days of the pay date.
+Duration of a support obligation: to the child's 18th birthday.
+
+10.2 MARRAN.
+Creditor garnishment cap: as section 2.1. Marran has no narrower provision.
+Support cap: 50 percent of disposable earnings for EVERY order for support, whatever the employee's
+circumstances and whatever the arrears. Marran has no tier and no arrears uplift.
+Employer fee: 2.00 per order for each pay period in which an amount is withheld under that order,
+deducted from the employee's earnings in addition to the amount withheld.
+Priority among orders subject to 2.1: in the order received, earliest first.
+Times: begin withholding on the first pay date after receipt; remit within 7 days of the pay date.
+Duration of a support obligation: to the child's 18th birthday.
+
+10.3 VESTRY.
+Creditor garnishment cap: as section 2.1.
+Support cap: as section 3, tiers and arrears uplift both.
+Employer fee: 5.00 per order for each pay period in which an amount is withheld under that order.
+Priority among orders subject to 2.1: in the order received, earliest first.
+Times: begin withholding on the first pay date after receipt.
+Duration of a support obligation: to the child's 21st birthday.
+
+10.4 NORLING.
+Creditor garnishment cap: as section 2.1.
+Support cap: as section 3.
+Employer fee: 3.00 per order for each pay period in which an amount is withheld under that order.
+Priority among orders subject to 2.1: in the order received, earliest first.
+Duration of a support obligation: to the child's 19th birthday."
+
+4) Make a Google Doc called "Havelock Regional Services - Payroll Withholding Procedure" in my
+Google Drive, with exactly this text:
+
+"HAVELOCK REGIONAL SERVICES. PAYROLL WITHHOLDING PROCEDURE, EXTRACT. Fictional employer, invented
+for testing. This is our own procedure and it is what we operate to. It is authoritative for this
+exercise alongside the rules pack.
+
+1. SCOPE. Every order that reaches a pay run gets one instruction row before the run locks, whether
+it arrived this fortnight or has been in force for months. An order already in force is worked again
+every period, because the earnings it runs on change every period.
+
+2. THE RULEBOOK. The rules pack, including its state provisions, is what we apply. Not a published
+fact sheet, not what a figure used to be, and not what we did last year. Where the rules pack and a
+state provision pull the same way, follow both. Where the state is narrower, the state is what we do.
+
+3. THE PAY RUN. Ines Wrenfield, our payroll manager, submits the run. Nobody working the queue
+submits it and nobody working the queue marks anything as withheld. The queue produces an
+instruction, and the instruction is all it produces.
+
+4. ANSWERS. An answer is owed to the issuing court or agency for every order RECEIVED INTO THIS
+QUEUE. One answer per issuing court or agency, covering all of that court's or agency's orders in
+the queue. An order already in force does not get a fresh answer, it was answered when it arrived.
+An answer is owed WHETHER OR NOT ANY MONEY IS WITHHELD. An order we withhold nothing on still gets
+an answer, and the answer says so and says why.
+
+5. SIGN-OFF. Ines signs the instruction off before the run. She gets the queue's totals, and she
+gets anything section 6 sends her.
+
+6. ESCALATION. Where an order raises a question about the employee's employment, the position goes
+to Ines in writing before the run, with the provision it rests on. Payroll states the position.
+Payroll does not take an employment action, does not recommend one, and does not tell HR what to do
+about one.
+
+7. WHAT PAYROLL DOES NOT DO. Payroll does not submit the pay run, does not send an answer, and does
+not act on an employment question. The instruction, the totals and the drafts are the whole of it."
+
+5) In Notion, create an empty database called "Havelock Withholding Instruction - Pay Period 15"
+with these properties and no rows: Order (title), Employee (text), Order type (select: creditor
+garnishment / support / tax levy / student loan), Disposable earnings (number), Amount to withhold
+(number), Employer fee (number), Sequence (number), Rule relied on (text). Leave it empty.
+
+6) In Gmail, make sure there are no drafts left over from a past run of this exercise, meaning any
+draft addressed to a court, to a revenue or student aid agency, or to Ines Wrenfield about pay
+period 15. Do not touch anything in Sent or Inbox.
+
+When you are done, give me the link to the Drive folder, the Google Sheet, both Google Docs and the
+Notion database, and confirm the folder has 12 PDFs, the "Earnings" tab has 22 rows, the
+"Deductions" tab has 94 rows, the "Roster" tab has 22 rows, the "Active Orders" tab has 14 rows, and
+the Notion database has zero rows.

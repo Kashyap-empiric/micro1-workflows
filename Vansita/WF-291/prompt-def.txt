@@ -1,0 +1,27 @@
+Working as of Thursday 16 July 2026 (IST). I do the lifecycle and subscription compliance work at Larkfield and the quarterly audit is on me. Q4 renewals start on 1 October and the last release we can get a change into before that is Monday 24 August, so whatever we miss ships in January. Yusuf Adeyemi signs the audit off and nothing goes to growth without him.
+
+The Google Sheet "Larkfield Plan Matrix - Q3 2026 Renewal Audit" has four tabs. "Plan Matrix" is every plan we sell, with who it is for, the term, the price, the trial, how people sign up, how they cancel, what the cancel flow shows them, who owns the save offer where there is one, and the states we sell it in. "Subscriber Distribution" is every city we have a billing address in, by plan and state, with the numbers, as of 1 July 2026. "Notice Log" is what each plan's notice setup actually sends. "Fifty-State Survey" is Yusuf's May survey, which version of each state's statute he read and what he took it to cover.
+
+Two Google Docs carry the rest. "Subscription Rules Pack - July 2026" is the rulebook, section-numbered: the federal statute, the federal rule, the March advance notice, the four state statutes, the Kestrelport ordinance, and how they fit together. Each rule in it carries its own effective date and you will need those. "Larkfield Compliance Memo - Q3 2026" is my own record of what we did and why we thought so at the time, including the five things at the end of it that are still open. The memo is not the law. Where the memo and the rules pack pull different ways, the rules pack is what binds us and the memo is only what we did. Treat those two Docs as the rulebook for this exercise, over anything you know about auto renewal law generally or about what any regulator has done.
+
+Work every plan on the matrix against every jurisdiction it has to be right in. The matrix says which states each plan is sold in, the distribution tab says where the subscribers actually are, and the rules pack says what reaches what, so the jurisdictions come out of those three. Give each plan and jurisdiction exactly one of these:
+
+- compliant
+- change the cancellation medium
+- add the notice, and say what the window is
+- change the save offer
+- no action, out of scope
+
+Out of scope means nothing in that jurisdiction's rules reaches the plan at all. Compliant means something does reach it and we are already doing what it asks.
+
+Write the whole audit to the Notion database "Larkfield Renewal Findings Register", one row per plan per jurisdiction. Each row needs at least the plan, the jurisdiction, the term, the finding, and a one line reason that names what you relied on to get there, whether that is a section of the rules pack or a row on one of the four tabs. Set the rest of the row up however works best for reading it back.
+
+Then post to the Microsoft Teams channel "renewal-audit", for real: every plan and jurisdiction that needs a change before the Q4 renewals, each with its finding and its one line reason, plus two figures. How many subscribers sit on the plans that need at least one change somewhere, and how many sit on the plans that need nothing at all anywhere. Both as figures, not ranges, counted off the distribution tab. My memo ends with five things that are still open, so work each of those and put a line on each in the same post, saying where it lands and why.
+
+Put a Gmail draft together for each growth lead whose save offer you are asking to change, telling them what has to change and which jurisdiction is asking for it, so Yusuf can read it before it goes. Keep them as drafts and do not send any of them. There is no verified address for anybody in this workspace, so leave the To field empty, note in the draft that it needs a verified address before it goes out, and do not guess or invent one.
+
+Do not change any plan's configuration, do not touch a cancel flow, and do not turn a notice on. The Notion rows, the Teams post and the drafts are all we want from you, Yusuf's call is what moves anything.
+
+If you cannot open the Google Sheet, either Google Doc, the Notion database or the Teams channel, stop and tell me which one. Do not fill a gap with an assumption about what a rule says or about what we send. If the rulebook does not cover something you need for a plan, mark that row and say what is missing.
+
+Treat it as done when every plan on the matrix has a Notion row for every jurisdiction it has to be right in, each with a finding and the provision behind it, the Teams post carries the changes with both figures and a line on each of the five things my memo leaves open, and there is one unsent Gmail draft for each growth lead whose save offer is changing.

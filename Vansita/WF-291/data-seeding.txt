@@ -1,0 +1,352 @@
+Set up a fixed test workspace for a subscription compliance task. All invented for testing. If a
+Google Sheet called "Larkfield Plan Matrix - Q3 2026 Renewal Audit" already exists from a past run, or
+either of the Google Docs called "Subscription Rules Pack - July 2026" or "Larkfield Compliance Memo -
+Q3 2026", move the old ones to trash first and build clean copies. Then build everything below exactly
+as written.
+
+Everything below is invented for testing: the business, the plans, the states, the city, the statutes,
+the ordinance, the people and the subscriber counts are all made up. There is no real business and no
+personal data anywhere in it. The rule structure is real because it is the rulebook. Build it exactly
+as written; the text and the numbers are the fixture.
+
+1) Make a Google Sheet called "Larkfield Plan Matrix - Q3 2026 Renewal Audit" in my Google Drive with
+four tabs.
+
+Tab one is called "Plan Matrix" with these columns in this order: Plan, Who it is for, Term, Price,
+Trial, How people sign up, How people cancel, What the cancel flow shows, Save offer owner, Sold in.
+Put in exactly these 8 rows:
+
+Larkfield Home Monthly | Consumers, personal use | 1 month | 9.00 per month | None | Online | Online | Cancel button on the account page, nothing else | | Calderon, Ostmark, Vantry, Selwick
+Larkfield Home Annual | Consumers, personal use | 12 months | 96.00 per year | 30 days | Online | Online | Cancel button on the account page, nothing else | | Calderon, Ostmark, Vantry, Selwick
+Larkfield Studio Annual | Consumers, personal use | 12 months | 240.00 per year | None | Online, or over the phone with our inbound sales team | Online only, since August 2025 | Cancel button on the account page, nothing else | | Calderon, Ostmark, Vantry, Selwick
+Larkfield Studio Monthly | Consumers, personal use | 1 month | 24.00 per month | None | Online | Online | Save offer, three months at half price, with the cancel button beside it on the same screen the whole time | Ravi Chandrasekar | Ostmark, Selwick
+Larkfield Plus Annual | Consumers, personal use | 12 months | 180.00 per year | 14 days | Online | Online | Save offer, 40% off three months, takes the whole screen when you start to cancel; the cancel option is on the next screen | Delia Marchetti | Ostmark, Selwick, Vantry
+Larkfield Teams | Businesses, for their own business use | 12 months | 1200.00 per year | None | Online | Online | Cancel button on the admin page, nothing else | | Calderon, Vantry
+Larkfield Voice | Consumers, personal use | 12 months | 144.00 per year | None | Over the phone with our inbound sales team, and nowhere else | Over the phone | Nothing, it is a phone call | | Calderon, Vantry
+Larkfield Home Quarterly | Consumers, personal use | 3 months | 27.00 per quarter | None | Online | Online | Cancel button on the account page, nothing else | | Calderon, Selwick
+
+Tab two is called "Subscriber Distribution" with these columns in this order: Plan, State, City,
+Subscribers. Put this note in cell A1 above the header row, or in a cell next to the header if that is
+easier: "Every city we have a billing address in, by plan and state, as of 1 July 2026. If a city is
+not on here we have no subscribers there." Put in exactly these 27 rows:
+
+Larkfield Home Monthly | Calderon | Ashe Hollow | 3100
+Larkfield Home Monthly | Calderon | Brindle | 1220
+Larkfield Home Monthly | Ostmark | Dunmere | 2460
+Larkfield Home Monthly | Vantry | Corbie Falls | 1780
+Larkfield Home Monthly | Selwick | Kestrelport | 1940
+Larkfield Home Monthly | Selwick | Aldermere | 940
+Larkfield Home Annual | Calderon | Ashe Hollow | 1650
+Larkfield Home Annual | Ostmark | Dunmere | 1120
+Larkfield Home Annual | Vantry | Corbie Falls | 880
+Larkfield Home Annual | Vantry | Tarn Reach | 410
+Larkfield Home Annual | Selwick | Marrowby | 1410
+Larkfield Studio Annual | Calderon | Ashe Hollow | 720
+Larkfield Studio Annual | Ostmark | Dunmere | 540
+Larkfield Studio Annual | Vantry | Corbie Falls | 305
+Larkfield Studio Annual | Selwick | Marrowby | 620
+Larkfield Studio Monthly | Ostmark | Dunmere | 1340
+Larkfield Studio Monthly | Selwick | Aldermere | 980
+Larkfield Plus Annual | Ostmark | Dunmere | 860
+Larkfield Plus Annual | Selwick | Marrowby | 740
+Larkfield Plus Annual | Vantry | Corbie Falls | 515
+Larkfield Teams | Calderon | Ashe Hollow | 210
+Larkfield Teams | Vantry | Corbie Falls | 145
+Larkfield Voice | Calderon | Brindle | 480
+Larkfield Voice | Vantry | Tarn Reach | 260
+Larkfield Home Quarterly | Calderon | Ashe Hollow | 900
+Larkfield Home Quarterly | Selwick | Kestrelport | 1240
+Larkfield Home Quarterly | Selwick | Marrowby | 610
+
+Tab three is called "Notice Log" with these columns in this order: Plan, Renewal notice we send,
+Trial conversion notice we send, Where these go. Put this note in cell A1 above the header row, or in
+a cell next to the header if that is easier: "What each plan's notice setup actually sends today. The
+same setup runs in every state we sell the plan in. None means we do not send it." Put in exactly
+these 8 rows:
+
+Larkfield Home Monthly | None | No trial on this plan |
+Larkfield Home Annual | 20 days before the renewal date | None | Calderon, Ostmark, Vantry, Selwick
+Larkfield Studio Annual | 40 days before the renewal date | No trial on this plan | Calderon, Ostmark, Vantry, Selwick
+Larkfield Studio Monthly | None | No trial on this plan |
+Larkfield Plus Annual | 45 days before the renewal date | 10 days before the trial converts | Ostmark, Selwick, Vantry
+Larkfield Teams | None | No trial on this plan |
+Larkfield Voice | None | No trial on this plan |
+Larkfield Home Quarterly | None | No trial on this plan |
+
+Tab four is called "Fifty-State Survey" with these columns in this order: State, Statute, Version he
+read, What he took it to cover. Put this note in cell A1 above the header row, or in a cell next to
+the header if that is easier: "Our fifty state survey. Yusuf Adeyemi read the auto renewal statute of
+every state we sell in and recorded which version he read and what he took it to cover. Signed off
+12 May 2026. Testing our plans against them is this quarter's job and it is not in here. The Plus
+Annual save offer went live after this was signed off." Put in exactly these 4 rows:
+
+Calderon | Calderon Automatic Renewal Act | As amended 1 July 2025 | Every plan we sell in Calderon
+Ostmark | Ostmark Continuous Service Act | As amended 1 January 2026 | Every plan we sell in Ostmark
+Vantry | Vantry Subscription Renewal Act | As enacted 1 September 2023 | Our consumer plans in Vantry. Teams is a business plan, so he left it out.
+Selwick | Selwick Renewal Disclosure Act | As enacted 1 May 2024 | Every plan we sell in Selwick
+
+2) Make a Google Doc called "Subscription Rules Pack - July 2026" in my Google Drive, with exactly
+this text:
+
+"SUBSCRIPTION RULES PACK, JULY 2026. Pulled for the Larkfield quarterly audit. Fictional states, a
+fictional city and a fictional business, invented for testing. The rules and the wording below are
+the authoritative rulebook for this exercise. Treat them as correct and complete, and do not rely on
+outside knowledge of any auto renewal law, any federal rule, any agency, or any court decision.
+
+SECTION 1. THE FEDERAL STATUTE, THE ONLINE RENEWAL DISCLOSURE ACT (ORDA).
+
+1.1 ORDA has been in force since 1 December 2010 and has not been amended since. It is the only
+federal statute in this pack.
+
+1.2 Its scope, in its own words. ORDA applies to 'any person who sells or offers to sell any goods or
+services through a transaction effected on the Internet'. A transaction that is not effected on the
+Internet is outside ORDA. The statute has no other scope test: it does not turn on what is sold, on
+the price, or on the length of the term.
+
+1.3 What ORDA requires of a seller inside 1.2 who charges a consumer on a negative option feature.
+(a) Clear and conspicuous disclosure of all material terms of the transaction before obtaining the
+consumer's billing information. (b) The consumer's express informed consent before the charge is
+made. (c) 'Simple mechanisms for a consumer to stop recurring charges from being placed on the
+consumer's credit card, debit card, bank account, or other financial account.'
+
+1.4 What 1.3(c) does not say, and this matters because it is often read as saying it. ORDA says
+'simple mechanism' and stops there. It does not name a medium. It does not require the mechanism to
+be in the same medium the consumer used to consent. It does not require the mechanism to be offered
+in every medium the seller accepts consent in. It does not require a renewal reminder of any kind and
+it sets no notice window.
+
+1.5 ORDA is a floor. It does not preempt a state or local rule that requires more, and compliance
+with ORDA is not compliance with anything else.
+
+In force 1 December 2010. Unamended.
+
+SECTION 2. THE PRENOTIFICATION PLAN RULE.
+
+2.1 What happened, so that it is not in doubt. A federal rule on negative option marketing was issued
+in 2024 and was VACATED IN ITS ENTIRETY on 8 July 2025. The vacatur was on a procedural ground and it
+went to the whole rule. The rule's own severability clause did not save any part of it. None of the
+2024 rule's requirements are law, and none of them appear anywhere in this pack. Do not apply any of
+them, and do not treat anything as required because that rule required it.
+
+2.2 What is in force. On 12 February 2026 the rulemaker recodified the pre-2024 rule text in full and
+unchanged, under the name the Prenotification Plan Rule. It is current, binding federal law from that
+date.
+
+2.3 The Plan Rule's scope, in its own words. The Plan Rule applies to a 'prenotification negative
+option plan', which the Rule defines as 'a plan in which the seller sends periodic announcements
+which offer merchandise to the subscriber and in which the seller sends the merchandise to, and
+creates an obligation to pay in, any subscriber who has not, by the date specified by the seller,
+returned to the seller a form requesting that the merchandise not be sent'. The definition turns on
+merchandise being sent by default after an announcement the subscriber did not decline. A plan under
+which access, a service or a licence simply continues, where nothing is announced and no merchandise
+is sent, is not a prenotification negative option plan and the Plan Rule does not reach it.
+
+2.4 What the Plan Rule requires where it reaches a plan. The seller must disclose the plan's material
+terms in its promotional material, must give the subscriber at least ten days from the announcement
+to return the form, must send the merchandise within the time it has stated, must accept a
+cancellation of the plan at any time from a subscriber who writes to the seller, and must credit a
+subscriber who returns merchandise that was sent because the seller mishandled a form.
+
+2.5 The rulemaker's own estimate, from the recodification notice. The rulemaker stated that it
+believes approximately 25 sellers nationwide operate prenotification negative option plans, and that
+the Plan Rule's compliance burden falls on those sellers.
+
+In force 12 February 2026.
+
+SECTION 3. THE MARCH 2026 ADVANCE NOTICE.
+
+3.1 On 11 March 2026 the rulemaker published an advance notice of proposed rulemaking on negative
+option marketing.
+
+3.2 What it contains. No rule text and no proposed rule. It asks questions: whether a rule beyond the
+Plan Rule is needed at all, whether the Plan Rule should be kept, narrowed or repealed, and what
+evidence there is either way.
+
+3.3 Its status. The comment period closed on 27 April 2026. As of the date of this pack no proposed
+rule has been published. An advance notice imposes nothing on anybody, and there is no text in it to
+comply with, build against, or plan to.
+
+Published 11 March 2026. Comment closed 27 April 2026. No proposed rule as of the date of this pack.
+
+SECTION 4. CALDERON, THE CALDERON AUTOMATIC RENEWAL ACT.
+
+4.1 Scope. The Act applies to an automatic renewal offered to a consumer in Calderon for goods or
+services primarily for personal, family or household purposes. A purchase by a business for its own
+business use is outside the Act. The Act does not turn on the medium the offer is made in and it
+reaches an offer made in any medium.
+
+4.2 Renewal notice. Where the term of the subscription is one year or longer, the seller must send
+the consumer a renewal notice not less than 15 days and not more than 45 days before the renewal
+date, stating the fact of the renewal, the price and how to cancel. There is no notice duty on a term
+shorter than one year, and the Act imposes no separate duty on a free trial.
+
+4.3 Cancellation. The seller must let the consumer cancel in the same medium the consumer used to
+consent to the offer. Where the seller accepts consent online, cancellation must be available online.
+Where the seller accepts consent by telephone, cancellation must be available by telephone. It is not
+enough that some other medium is offered instead.
+
+4.4 Nothing in this Act turns on a retention or save offer.
+
+In force 1 January 2019. Amended, and the amendment at 4.3 took effect 1 July 2025.
+
+SECTION 5. OSTMARK, THE OSTMARK CONTINUOUS SERVICE ACT.
+
+5.1 Scope. The Act applies to a continuous service offered to a consumer in Ostmark for personal,
+family or household purposes. A purchase by a business for its own business use is outside the Act.
+
+5.2 Renewal notice. Where the term is six months or longer, the seller must send the consumer a
+renewal notice not less than 30 days and not more than 60 days before the renewal date. There is no
+notice duty on a term shorter than six months, and the Act imposes no separate duty on a free trial.
+
+5.3 Cancellation. The seller must accept a cancellation through every medium in which the seller
+accepts consent to the offer. If the seller accepts consent online, by telephone and by post, the
+seller must accept cancellation online, by telephone and by post. This is broader than a same medium
+rule: it does not matter which medium a particular consumer used, only which media the seller takes
+consent in.
+
+5.4 Retention offers. Where the seller presents a retention offer, a discount, a pause or any other
+alternative to cancellation as part of the cancellation flow, the seller must display a link or
+button that completes the cancellation continuously and proximately to that offer, on the same
+screen, for as long as the offer is displayed. An offer that takes the consumer to a further screen
+before the cancellation is available does not satisfy this section.
+
+In force 1 March 2022. Amended, and the amendment at 5.4 took effect 1 January 2026.
+
+SECTION 6. VANTRY, THE VANTRY SUBSCRIPTION RENEWAL ACT.
+
+6.1 Scope, and it changed. As enacted, the Act applied to purchases 'primarily for personal, family
+or household purposes'. The amendment of 3 February 2026 deleted that limitation. The Act now applies
+to an automatic renewal offered to any purchaser in Vantry, for any purpose, including a purchase by
+a business for its own business use. There is no business exemption in the Act.
+
+6.2 Renewal notice. Where the term is one year or longer, the seller must send the purchaser a
+renewal notice not less than 30 days and not more than 60 days before the renewal date. There is no
+notice duty on a term shorter than one year, and the Act imposes no separate duty on a free trial.
+
+6.3 Cancellation. The seller must make cancellation available without unreasonable delay through a
+method disclosed to the purchaser at the time of the offer. The Act does not say which medium, and it
+requires no relationship between the cancellation medium and the medium the purchaser consented in.
+
+6.4 Nothing in this Act turns on a retention or save offer.
+
+In force 1 September 2023. Amended, and the amendment at 6.1 took effect 3 February 2026.
+
+SECTION 7. SELWICK, THE SELWICK RENEWAL DISCLOSURE ACT.
+
+7.1 Scope. The Act applies to an automatic renewal offered to a consumer in Selwick for personal,
+family or household purposes.
+
+7.2 Notice, and it is a narrow one. The Act requires a notice only where the subscription began with
+a free trial or a discounted introductory period that converts to a paid term. That notice must be
+sent not less than 3 days and not more than 21 days before the trial or introductory period converts.
+The Act requires no renewal notice at any term length. A subscription with no trial carries no notice
+duty under this Act however long its term is.
+
+7.3 Cancellation. The seller must make cancellation available by a method the consumer can use
+without having to speak to a person. The Act does not require the cancellation method to match the
+medium the consumer consented in, and it says nothing about telephone cancellation.
+
+7.4 Retention offers. Where the seller presents a retention offer or any other alternative to
+cancellation during the cancellation flow, a means of completing the cancellation must be
+continuously and proximately displayed alongside the offer. The consumer must not have to move to a
+further screen, or dismiss the offer, to reach it.
+
+In force 1 May 2024.
+
+SECTION 8. KESTRELPORT, A CITY IN SELWICK, THE KESTRELPORT SUBSCRIPTION RENEWAL ORDINANCE.
+
+8.1 What it is. A city ordinance, adopted by Kestrelport on 14 April 2026. It applies to renewals
+occurring on or after 1 October 2026.
+
+8.2 Who it reaches. A seller with a subscriber whose billing address is in Kestrelport, for that
+subscriber. It applies in addition to the Selwick Act. Section 7 does not preempt it, and nothing
+done under section 7 satisfies it.
+
+8.3 What it requires. Where the term is three months or longer, the seller must send the subscriber a
+renewal notice not less than 20 days and not more than 40 days before the renewal date, stating the
+renewal date, the amount and how to cancel. There is no duty on a term shorter than three months.
+
+8.4 The Ordinance says nothing about cancellation media and nothing about retention offers.
+
+Adopted 14 April 2026. Applies to renewals occurring on or after 1 October 2026.
+
+SECTION 9. HOW THESE FIT TOGETHER.
+
+9.1 Every rule in this pack has its own scope, and the scope is the first question. A rule that does
+not reach a plan imposes nothing on that plan, whatever the rule says, and whatever a rule that does
+reach it says.
+
+9.2 Where more than one rule reaches a plan, the plan has to satisfy each of them on its own terms.
+Nothing in this pack lets compliance with one rule stand in for compliance with another, and nothing
+lets the federal floor answer a state or a local question.
+
+9.3 Where two rules both require a notice, one notice satisfies both only if the notice actually sent
+falls inside both windows. A notice inside one window and outside the other satisfies only the one it
+falls inside."
+
+3) Make a Google Doc called "Larkfield Compliance Memo - Q3 2026" in my Google Drive, with exactly
+this text:
+
+"LARKFIELD. COMPLIANCE MEMO, Q3 2026. Fictional business, invented for testing. This memo is my own
+record of what we did and why we thought so at the time. It is not a statement of the law. Where this
+memo and the rules pack pull different ways, the rules pack is what binds us and this memo is only
+what we did.
+
+1. WHAT WE SELL AND WHERE. Larkfield sells subscription software to consumers, plus one plan we sell
+to businesses. The plan matrix has every plan, its term, its price, its trial, how people sign up,
+how they cancel and what the cancel flow shows them. The distribution export has where the
+subscribers are. The cancel method is disclosed at signup on every plan, online and on the phone.
+
+2. THE RENEWAL RUN. Q4 renewals start on 1 October 2026. The last release we can get a flow change or
+a notice change into before that is Monday 24 August 2026. Anything we do not catch now ships in
+January.
+
+3. WHAT WE DID IN AUGUST 2025. The federal rule that required us to make cancelling as easy as
+signing up was vacated on 8 July 2025, in its entirety. In August 2025 we relaxed Larkfield Studio
+Annual so that cancellation is online only, even though we take signups on that plan online and over
+the phone. Nobody has looked at it since.
+
+4. LARKFIELD TEAMS. Teams is our business plan. We sell it to businesses for their own business use
+and we treat it as exempt from consumer auto renewal law, so it gets no renewal notices and it is not
+in the notice log. That is how it has been set up since launch and nobody has re-opened it.
+
+5. LARKFIELD VOICE. Voice is sold over the phone by our inbound sales team and nowhere else. We
+cleared it under ORDA on 19 March 2026 and closed it out. It gets no renewal notices.
+
+6. THE SAVE OFFER. Growth added a retention offer to the Larkfield Plus Annual cancel flow on 8 June
+2026. Delia Marchetti owns it. It is a 40% off three months offer that takes the whole screen when
+someone starts to cancel, and the cancel option is on the screen after it. Nobody from our side
+reviewed it before it went live. Ravi Chandrasekar owns the older offer on Larkfield Studio Monthly,
+which keeps the cancel button on the same screen next to the offer the whole way through.
+
+7. WHO SIGNS. Yusuf Adeyemi signs the quarterly audit off. Nothing goes to growth, and no flow
+changes, without him.
+
+8. WHAT WAS LEFT OPEN LAST QUARTER. Five things, and I want a line on each of them this quarter.
+
+(a) The Prenotification Plan Rule came back in force on 12 February 2026 and nobody has re-reviewed a
+single plan against it. This is the top of the list.
+
+(b) The rulemaker published an advance notice on 11 March 2026. I think we should be building to it
+now rather than scrambling later, and I want to know what we are building.
+
+(c) We relaxed Studio Annual's cancellation in August 2025 once the federal rule went away. Is that
+still fine?
+
+(d) Growth's save offer went live on 8 June and nobody from our side looked at it.
+
+(e) The fifty state survey signed off on 12 May 2026. Delia keeps asking whether we are covered and I
+keep saying yes."
+
+4) In Notion, create an empty database called "Larkfield Renewal Findings Register" with these
+properties and no rows: Plan (title), Jurisdiction (text), Term (text), Finding (select: compliant /
+change the cancellation medium / add the notice, with the window / change the save offer / no action,
+out of scope), Reason (text). Leave it empty.
+
+5) In Microsoft Teams, make sure a channel called "renewal-audit" exists and has no audit post in it.
+Leave it empty.
+
+When you are done, give me the links to the Google Sheet, both Google Docs, the Notion database and
+the Teams channel, and confirm the "Plan Matrix" tab has 8 rows, the "Subscriber Distribution" tab
+has 27 rows, the "Notice Log" tab has 8 rows, the "Fifty-State Survey" tab has 4 rows, and the Notion
+database has zero rows.

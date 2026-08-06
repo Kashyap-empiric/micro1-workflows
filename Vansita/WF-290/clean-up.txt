@@ -1,0 +1,32 @@
+I need a test bench reset before I re-seed it. Everything here is invented test data for a payroll
+garnishment exercise, a made-up employer with made-up employees, courts, agencies and states in it, no real
+people and no real personal data, so delete freely. Do all of the below and give me a one-line status per
+app. Do not seed or create any new test data in this step, this is cleanup only.
+
+1) Notion. Open the database "Havelock Withholding Instruction - Pay Period 15" and delete every row in it
+so it is completely empty (a run writes one row per order, fourteen of them). Leave the database itself in
+place with its properties. Tell me how many rows you deleted and how many remain. If you cannot delete a
+row, say which ones are still there so I can clear them by hand.
+
+2) Gmail. In Drafts, delete the answers and the sign-off note a past run left there. There can be around
+seven of them: drafts addressed to a court or to a revenue or student aid agency about a withholding order
+or a writ of garnishment, drafts about pay period 15 with the To field left empty, and the draft to
+ines.wrenfield@havelockregional.example about the withholding instruction or the pay run. Only touch
+Drafts, do not touch anything in Sent or Inbox. Tell me how many drafts you removed.
+
+3) Google Drive, the orders. Move the folder "Withholding Orders - PP15" to trash, and move the PDFs inside
+it to trash as well, not just the folder. There are twelve of them, one per order, named ORD-2041.pdf,
+ORD-2042.pdf, ORD-2043.pdf, ORD-2044.pdf, ORD-2045.pdf, ORD-2046.pdf, ORD-2047.pdf, ORD-2048.pdf,
+ORD-2049.pdf, ORD-2050.pdf, ORD-2051.pdf and ORD-2052.pdf. If any PDF with one of those names is sitting
+somewhere else in my Drive from a past run, trash that too. Tell me how many PDFs you trashed and whether
+the folder is gone.
+
+4) Google Drive, the rest. So I can re-seed clean copies, move these to trash: the Google Sheet "Havelock
+Payroll - Pay Period 15", and the Google Docs "Wage Withholding Rules Pack - July 2026" and "Havelock
+Regional Services - Payroll Withholding Procedure". If you cannot delete one, give me its link and leave
+it, I will re-seed clean copies anyway. Tell me what you removed.
+
+When you are done, report exactly: how many rows remain in the Notion database, how many withholding drafts
+remain in Gmail, whether the orders folder and all twelve PDFs are in the trash, and whether the Sheet and
+both Docs are in the trash. If any app is not connected or you cannot reach it, say so and carry on, do not
+guess or invent anything.
