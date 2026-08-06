@@ -56,7 +56,7 @@ Source screenshot: [teams post.png](output/teams%20post.png)
 **Rating:** 5
 
 **Commentary:**
-Every one of the ten outcomes checks out against the policy, the licences, the agreement doc and the patent list, including the hardest calls, a licence with no patent clause defeating an otherwise plausible match against the patent list, and a contribution that only became a patent problem once combined with a project that already carried the matching function. The committee referral is narrowed to the single row that actually needed it, and the reasoning goes a step further by actively ruling out a second, less obvious match against that same list on a request that on its surface looked like it could carry similar risk. The real gap sits underneath the correctness rather than in it. The whole analysis rests on a copy of the source repository that never got independently confirmed as the actual connected one.
+Every one of the ten outcomes checks out against the policy, the licences, the agreement doc and the patent list, including a licence with no patent clause defeating an otherwise plausible match against the patent list, and a contribution that only became a patent problem combined with a project already carrying the matching function. The committee referral is narrowed to the single row that needed it, and the reasoning also rules out a second, less obvious match against that same list on a request that looked similarly risky. The real gap sits underneath the correctness rather than in it. The whole analysis rests on a source repository copy that never got confirmed as the actual connected one.
 
 ## 3. Efficiency
 
@@ -71,14 +71,14 @@ The stop itself was reasonable on the surface, real conflicting signals on two s
 **Rating:** 5
 
 **Commentary:**
-The layout is genuinely scannable, a real header, one request per line with a bold leading label, and the two required counts and the committee routing pulled into their own clearly separated section rather than buried in a paragraph. Two things keep it out of the top band. The extra verification detail woven into several of the per request lines, useful as it is, makes each line noticeably longer than a one line reason should be, so a genuinely clean structure still asks more of the reader per line than it needs to. There is also no short headline sentence up top stating the shape of the queue before the reader works through all eight flagged requests to reach the two counts that matter most.
+The layout is genuinely scannable, a real header, one request per line with a bold leading label, and the two required counts and the committee routing pulled into their own clearly separated section rather than buried in a paragraph. Two things keep it out of the top band. The extra verification detail woven into several of the per request lines, useful as it is, makes each line noticeably longer than a one line reason should be, so a clean structure still asks more of the reader per line than it should. There is also no short headline sentence up top stating the shape of the queue before reaching the two counts that matter most.
 
 ## 5. Instruction following
 
 **Rating:** 4
 
 **Commentary:**
-It posted live, used the required exact wording for the exemption outcome, gave both counts as fixed numbers, and worked out the patent committee question correctly. Two things fall short of the letter of the brief. The access check instruction is explicit that a genuine block gets reported rather than guessed past, and having reported the repository as unconfirmed, it then proceeded on that same unconfirmed local copy once told access was fine, closer to proceeding on an assurance than to actually confirming. Separately, the one line framing set for both the register note and the channel reason gets stretched into reasons stacking several clauses together on most rows, the same shortfall the register's own field format calls for a single line to avoid.
+It posted live, used the exact wording for the exemption outcome, gave both counts as fixed numbers, and worked out the patent committee question correctly. Two things fall short of the letter of the brief. The access check instruction is explicit that a genuine block gets reported rather than guessed past, and having reported the repository as unconfirmed, it then proceeded on that same unconfirmed local copy once told access was fine, closer to trusting an assurance than confirming. Separately, the one line framing set for both the register note and the channel reason gets stretched into reasons stacking several clauses together on most rows, the same shortfall the register's own field format calls for a single line to avoid.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -93,7 +93,7 @@ The destination check on one of the two ambiguous surfaces was genuinely rigorou
 **Rating:** 6
 
 **Commentary:**
-Every reason traces to a real source and several rows go beyond the minimum, actively naming and ruling out a second plausible match against the patent list rather than only defending the one call that mattered, and distinguishing between two separate schedule records across two different projects for the same person rather than just stating a name was missing. That is a genuinely deep sourcing habit for a single pass through this much rulebook. The one gap: the reasons still lean on citing the rulebook section number itself rather than quoting or closely paraphrasing the operative clause language, so confirming the exact wording behind a call still means opening the source document rather than reading it directly off the row.
+Every reason traces to a real source and several rows go beyond the minimum, actively naming and ruling out a second plausible match against the patent list rather than only defending the one call that mattered, and distinguishing between two separate schedule records across two different projects for the same person rather than just stating a name was missing. That is a genuinely deep sourcing habit for a single pass through this much rulebook. The one gap is that the reasons still lean on citing the rulebook section number itself rather than quoting or closely paraphrasing the operative clause language, so confirming the exact wording still means opening the source document rather than reading it off the row.
 
 ## 8. GUI action correctness
 
@@ -107,4 +107,4 @@ The one real piece of work on screen here was checking a browser tab that was al
 **Rating:** 4
 
 **Commentary:**
-The substance is right. I checked all ten outcomes against the actual source myself and the committee call and both required counts are correct, and the finished register and post are complete with the repository left untouched. What pulls this down is the run itself more than the answer. It hit a genuine access question on two fronts at once, checked one with real rigor and let the other go on a bare assurance rather than a confirmed connection, then needed a person to step in before it would finish at all. That combination, a full stop plus an unverified assumption sitting underneath every one of the ten calls, is a real cost on a task whose own brief specifically asks for confirming over guessing.
+The substance is right. I checked all ten outcomes against the actual source and the committee call and both required counts are correct, and the finished register and post are complete with the repository left untouched. What pulls this down is the run itself more than the answer. It hit a genuine access question on two fronts at once, checked one with real rigor and let the other go on a bare assurance rather than a confirmed connection, then needed a person to step in before it would finish at all. That combination, a full stop plus an unverified assumption sitting underneath all ten calls, is a real cost on a task whose brief specifically asks for confirming over guessing.

@@ -73,7 +73,7 @@ Vantridge Industries
 **Rating:** 4
 
 **Commentary:**
-The rate reductions, the travel cut, the fixed fee exemption and the research rule all landed on the correct line every time I checked them against the underlying export. The one escalated line correctly goes to the named supervisor rather than getting approved or reduced on a guess. Where this run is weaker is how it frames that escalation. The guideline itself gives the supervisor two distinct questions to weigh, whether the work was asked for before the matter closed or whether it should not have happened at all, and the post only asks the narrower question of whether the charge stays payable. It also carries the same blanket rebill request across every adjusted line that the other draft lines share, including the one line that is overhead and can never be cured by resubmission.
+The rate reductions, the travel cut, the fixed fee exemption and the research rule all landed on the correct line when checked against the export. The one escalated line goes to the named supervisor rather than getting approved or reduced on a guess. Where this run is weaker is how it frames that escalation. The guideline itself gives the supervisor two distinct questions to weigh, whether the work was authorized before the matter closed or should not have happened at all, and the post only asks the narrower question of whether the charge stays payable. It also carries the same blanket rebill request across every adjusted line, including the one that is overhead and can never be cured by resubmission.
 
 ## 3. Efficiency
 
@@ -112,11 +112,11 @@ Every adjusted line in the firm note carries its own invoice reference alongside
 
 ## 8. GUI action correctness
 
-Not applicable to this task. No on screen navigation happened in this run, it worked entirely through the connected apps.
+No on screen navigation happened in this run, it worked entirely through the connected apps, so this box does not apply.
 
 ## 1. Overall task success
 
 **Rating:** 3
 
 **Commentary:**
-The math and the line by line calls are right, and Lena could read the firm note today without needing me to fix a number. What actually worries me is what happened in Notion. Finding a second database under the exact same name and choosing to complete both instead of stopping to ask which one was supposed to be live is a real decision with consequences on a task like this, the kind that leaves a legal record sitting in two places with no note anywhere saying that happened. I would need to go check the workspace myself before I trusted this register as the one true copy, and that is real work this run should not have left for me.
+The math and the line by line calls are right, and Lena could read the firm note today without needing me to fix a number. What actually worries me is what happened in Notion. Finding a second database under the exact same name and choosing to complete both instead of stopping to ask which one was supposed to be live is a real decision with consequences, the kind that leaves a legal record sitting in two places with no note anywhere saying that happened. I would need to go check the workspace myself before I trusted this register as the one true copy, and that is real work this run should not have left for me.

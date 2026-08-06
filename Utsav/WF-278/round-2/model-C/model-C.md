@@ -66,21 +66,21 @@ Vantridge Industries
 **Rating:** 5
 
 **Commentary:**
-Every rate reduction, the travel cut, the fixed fee exemption on the block billed line, and the research rule all landed correctly when I checked them against the export and the guidelines. The held line goes to the right supervisor, and the post covering it names both halves of what that person actually has to weigh, whether the work was fair game before the matter closed or whether it should not have run at all, a more complete read than a flat payable or not question. It still carries the same blanket rebill line the firm note repeats on every adjusted item, including the one that is overhead and can never be cured by resubmission regardless of the section it sits under.
+Every rate reduction, the travel cut, the fixed fee exemption on the block billed line, and the research rule all landed correctly when I checked them against the export and the guidelines. The held line goes to the right supervisor, and the post covering it names both halves of what that person actually has to weigh, whether the work was fair game before the matter closed or should not have run at all, a more complete read than a flat payable question. It still carries the same blanket rebill line the firm note repeats on every adjusted item, including the one that is overhead and can never be cured by resubmission regardless of the section it sits under.
 
 ## 3. Efficiency
 
 **Rating:** 5
 **End-to-end time (minutes):** about 2
 **Wrong actions / recovery:** none, it went straight through without needing to redo anything
-**Commentary:** This was the quickest of anything I ran through this review and it still did not skip the check that matters, finding two databases sharing the exact register name and looking inside both before deciding which one belonged to this run. That step alone would normally slow things down and it barely shows here. The one real drag is that the comparison happened silently in the middle of the run with no flag anywhere that a second, already complete copy of the register existed elsewhere in the workspace, something I would want surfaced rather than quietly resolved on its own.
+**Commentary:** This finished fast and it still did not skip the check that matters, finding two databases sharing the exact register name and looking inside both before deciding which one belonged to this run. That step alone would normally slow things down and it barely shows here. The one real drag is that the comparison happened silently in the middle of the run with no flag anywhere that a second, already complete copy of the register existed elsewhere in the workspace, something I would want surfaced rather than quietly resolved on its own.
 
 ## 4. Writing quality
 
 **Rating:** 4
 
 **Commentary:**
-The firm note reads the best of anything I looked at, a real table with the amount, what is coming off and the full reasoning sitting in the same row, so a billing contact can scan it fast and still get the actual explanation without a follow up question. The live post covering the held line is almost as strong, stating both totals and how each one breaks down into its parts. That post runs everything into one dense paragraph with the sub totals separated only by a small mark rather than real line breaks, harder to skim in a channel than the actual content deserves.
+The firm note is the clearest document in this run, a real table with the amount, what is coming off and the full reasoning sitting in the same row, so a billing contact can scan it fast and still get the actual explanation without a follow up question. The live post covering the held line is almost as strong, stating both totals and how each one breaks down into its parts. That post runs everything into one dense paragraph with the sub totals separated only by a small mark rather than real line breaks, harder to skim in a channel than the actual content deserves.
 
 ## 5. Instruction following
 
@@ -105,11 +105,11 @@ Every line in the firm note ties its dollar figure to its own invoice number and
 
 ## 8. GUI action correctness
 
-Not applicable to this task. Everything here went through the connected apps with no screen to navigate.
+Everything here went through the connected apps with no screen to navigate, so this box does not apply.
 
 ## 1. Overall task success
 
 **Rating:** 4
 
 **Commentary:**
-This is the one I would hand to Lena with the least touch up, the register is complete and correct, the firm note is the clearest of anything I reviewed, and the one line that needed a supervisor's call is framed the way the guidelines actually ask for it to be framed. It still made a quiet decision I would want called out to me directly, choosing between two identically named databases without ever saying in its own summary that a second, already completed copy exists somewhere in the workspace. That is a small thing to fix on this run alone, but it is exactly the kind of judgment call I want flagged rather than made correctly and left for me to stumble on.
+This is the one I would hand to Lena with the least touch up, the register is complete and correct, the firm note is the clearest document in this review, and the one line that needed a supervisor's call is framed the way the guidelines ask for it. It still made a quiet decision I would want called out to me directly, choosing between two identically named databases without ever saying in its own summary that a second, already completed copy exists somewhere in the workspace. That is a small thing to fix on this run alone, but it is exactly the kind of judgment call I want flagged rather than made correctly and left for me to stumble on.
