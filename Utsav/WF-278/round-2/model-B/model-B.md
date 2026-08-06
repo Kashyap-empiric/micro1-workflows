@@ -41,7 +41,7 @@ L-17 | M-2213 — Redgate site environmental review | 1627.5 | escalate | 0 | 2.
 L-18 | M-2217 — Ohio wage and hour class action | 3060 | reject | 3060 | 5.1 | INV-40816: Preauthorise[d research, but narrative omits the approver's name and date]
 L-19 | M-2217 — Ohio wage and hour class action | 1955 | approve | 0 | 5.1 | INV-40816: Preauthorise[d research, narrative names the approving supervisor and date]
 L-20 | M-2217 — Ohio wage and hour class action | 1250 | reject | 1250 | 7.1 | INV-40816: Allocated o[nline legal research charge is non-reimbursable firm overhead]
-(Reason cells are column-truncated in the screenshot past the point shown in brackets; bracketed completions for the 6 non-approve lines and L-14/L-16 are taken from the matching Gmail draft and Teams post text. Row order in the live view is not grouped by line number. Per codexlogs.txt, this register write also went to a second, pre-existing same-named Notion database so that both exact-name registers hold the complete 20-line review — worth flagging since a duplicate destination is a real risk on a naming collision.)
+(Row order in the live view is not grouped by line number. Per codexlogs.txt, this register write also went to a second database that already carried the exact same name, so both registers ended up holding the complete 20 line review, a real risk given the naming collision.)
 Totals: 13 approve, 3 reduce ($2,160.00 + $1,593.75 + $302.50 = $4,056.25), 3 reject ($3,629.50 + $3,060.00 + $1,250.00 = $7,939.50), 1 escalate ($1,627.50 held). Total reduction $11,995.75; total held $1,627.50.
 
 --- Gmail draft, "Orbison & Slate — June 2026 invoice line adjustments | Lena Brostrom review required" ---
@@ -78,7 +78,7 @@ The rate reductions, the travel cut, the fixed fee exemption and the research ru
 ## 3. Efficiency
 
 **Rating:** 4
-**End-to-end time (minutes):** about 3
+**End-to-end time (minutes):** 3
 **Wrong actions / recovery:** one recovery, a query tool hit its usage limit partway through and it switched to a plain database view to finish checking its own write
 **Commentary:** This moved fast and stayed on a straight path through the calculation itself. The slower stretch came after the numbers were set, when it found two databases carrying the exact same register name and had to stop and look inside both before deciding where to write. That is exactly the kind of check I want it doing, so the time was not wasted, but this run was not actually as quick end to end as the raw total suggests. The usage limit it hit during verification cost a little more time again before it could confirm its own write was accurate.
 
@@ -94,21 +94,21 @@ The note to the firm is thorough. Every adjusted line gets its own paragraph wit
 **Rating:** 4
 
 **Commentary:**
-A single draft carried every adjusted line, with the recipient field left blank and a plain note that the address still needs verifying before anything goes out. The live post names the held line with both required totals, and every line on the export got a row in the register with a disposition, a figure, a section and a reason. The real slip is that it kept a second, unrelated copy of the register alive after finding it already held a complete run of its own data, when the task only ever called for the one register. That touches a resource I never asked it to touch.
+A single draft carried every adjusted line, the recipient field left blank with a note that the address still needs verifying. The live post names the held line with both required totals, and every line on the export got a row in the register with a disposition, a figure, a section and a reason. The real slip is that it kept a second, unrelated copy of the register alive after finding it already held a complete run of its own data, a resource I never asked it to touch. On top of that, the one disbursement line needing two guideline sections stacks both numbers in the same field rather than the single citation by number requested.
 
 ## 6. Collaboration, autonomy, and verification
 
 **Rating:** 3
 **Steering needed:** none, it worked through the whole review on its own
 **Additional editing before I'd use it:** I would want to decide myself whether that second populated database should be cleared before anyone mistakes it for a live record
-**Commentary:** It did verify its own write against the export line by line, which is the right instinct. But when it found a second database already sitting there with a complete run of its own, it treated that as something to accommodate rather than something to question, quietly filling in the empty one so both copies matched instead of asking whether a second copy should exist at all. It also never mentioned this discovery anywhere in its final summary to me, so I would have found two live copies of a legal billing record only by accident.
+**Commentary:** It did verify its own write against the export line by line, which is the right instinct. But when it found a second database already sitting there with a complete run of its own, it treated that as something to accommodate rather than something to question, quietly filling in the empty one so both copies matched instead of asking whether a second copy should exist at all. It also never mentioned this discovery anywhere in its final summary to me, so I would have found two live copies of a legal billing record only by accident, and I would still want to check the workspace myself before trusting either one as the record of truth.
 
 ## 7. Citation quality
 
 **Rating:** 4
 
 **Commentary:**
-Every adjusted line in the firm note carries its own invoice reference alongside the guideline section, so tracing a dollar figure back to its source invoice takes no extra step, real and checkable work. The live post states two total figures but never breaks either one into what it is made of, so a reader cannot confirm the total from the post itself without going back to open the register. The date it relies on for the one closed matter is stated plainly but never says which schedule or record actually fixes that date, so that fact rests on the post's own word rather than a named source.
+Every adjusted line in the firm note carries its own invoice reference alongside the guideline section, so tracing a dollar figure back to its source invoice takes no extra step, real and checkable work. The live post states two total figures but never breaks either one into what it is made of, so a reader cannot confirm the total from the post itself without going back to open the register. That same closed matter date shows up with nothing behind it either, no schedule or record cited, so the figure stands entirely on the post's own say so.
 
 ## 8. GUI action correctness
 

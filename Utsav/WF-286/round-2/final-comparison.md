@@ -12,8 +12,12 @@ Extra High intelligence only).
 3. Time to complete this workflow WITHOUT a model (minutes): 180
 4. Times PER MONTH I run this workflow: 4
 5. Workflow difficulty 1-7: 7
-6. Initial Codex test rating 1-7: [pending, this is my own read going into this round's specific run and should not carry over from a prior round's scored result]
-7. Notes on Codex's performance: [pending, same reason as field 6]
+6. Initial Codex test rating 1-7: N/A, this field records my own expectation going in before seeing a run, and no preliminary validation run exists for this workflow, so it is left blank rather than reconstructed after the fact.
+7. Notes on Codex's performance: N/A, same reason as field 6, no legacy preliminary validation record exists for this workflow to draw notes from.
+
+## Process notes
+
+The prompt-def worksheet for this WF has no "Planted difficulty and predicted failure modes" section, so the pre-run-prediction gate in harsh-evaluation-protocol.md section 5 (post-run scores must land at or below the pre-run prediction) could not be applied. The trap list and the flaw hunt for this round were built directly from the prompt text instead, per the protocol's own instruction to flag rather than silently skip this gate when that section does not exist.
 
 ## Readiness
 

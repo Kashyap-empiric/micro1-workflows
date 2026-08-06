@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-076",
+  "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fd13b-2a67-7b11-86c2-06642c6946f8"
+  },
+  "file": "Model-C-Dog-Extra-High.json",
+  "task": "Test Data Generation and Form Validation",
+  "run_time": "32",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 5,
+      "commentary": "The question of the ticket that already existed gets handled correctly here, and a real overlap between two of this run's own findings gets caught and folded together instead of filed twice. The report is precise and well organized, and the layout got real, repeated visual verification before being called finished. Where it falls short of a clean top score is evidence coverage, four of six findings have no visual backing at all despite the report's own claim otherwise, and one surface got a noticeably lighter test pass than the rest. I'd trust the analysis and duplicate handling without needing to redo either, but would still need to gather proof for most findings before calling the ticket set complete."
+    },
+    "task_accuracy": {
+      "rating": 6,
+      "commentary": "Severities, relationships, and every total in this run check out against each other without a mismatch I can find, and one finding that turned out to duplicate an already filed defect gets correctly folded into that existing ticket rather than filed again, exactly the behavior this kind of task is meant to reward. The one real seam is the Dataset Summary, it accounts for the 21 staging records row by row but never breaks the 91 reusable dataset rows down into the happy path, boundary, negative, regression, and UAT categories the task's own dataset instructions call for, so that categorization has to be taken on faith rather than checked directly."
+    },
+    "efficiency": {
+      "rating": 4,
+      "end_to_end_time_minutes": "32",
+      "wrong_actions_recovery": "lost a browser session partway through attaching evidence to the filed tickets, and needed to export the finished report three separate times to fix layout problems that kept surfacing on each check.",
+      "commentary": "When I check it, the core testing pass across all nine forms moved steadily with no wasted loops. The drag shows up afterward, in getting the final report to actually look right. A first export left a page nearly empty after a section break, the fix for that pushed a different note onto an extra page, and fixing that in turn forced a section header away from its supporting evidence, three separate rounds of catching and fixing the same document before it was clean. A lost browser session during the evidence attachment step added another interruption on top of that. None of it was severe on its own, but it adds up for me across one deliverable."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "Precision runs through this document from the opening scope section to the closing recommendations, and the two screenshots it does include are specific and on point rather than generic, one actually shows the injected markup rendering live and the other shows the exact bad value sitting in a saved record. Two things pull this back. One sentence describing how a ticket that was already closed got handled reads confusingly enough that I had to reread it to be sure what it meant. And the six gap write ups run in a jumbled order rather than a sequence a reader could follow at a glance, harder to scan than a report this precise should be."
+    },
+    "instruction_following": {
+      "rating": 6,
+      "commentary": "This run does the one thing the fixture is specifically built to test correctly, it checks the tickets that already existed against every new finding, states plainly why none match, and separately catches a genuine overlap between two of its own findings and folds the second in with a comment instead of filing a duplicate. Scope, the cap rule, tagging, and the split between negative and reusable data are all handled cleanly too. When I check the admin form, it gets a lighter pass than the rest, tested with a single safe change that made no actual difference rather than any real boundary or negative case, a thinner check next to how thoroughly the others got probed."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 5,
+      "steering_needed": "none beyond the same early routing note given before any obstacle came up, and the run otherwise completed the whole pipeline on its own.",
+      "additional_editing": "I'd want visual evidence added for the four findings that currently have none before treating the ticket set as fully documented.",
+      "commentary": "Layout problems on the finished report got caught and fixed across three separate passes here, and the question of the ticket that already existed got a stated, reasoned answer rather than an assumption. That is real verification. Two gaps sit next to it. The same care never got applied to closing the evidence gap on the four findings that ended up with no image at all. And the report's own rendering got three rounds of page by page review while the 91 row dataset sheet behind it never got an equivalent look, checked only through a write level confirmation rather than something I can see was actually opened and read."
+    },
+    "citation_quality": {
+      "rating": 4,
+      "commentary": "Where this report includes visual evidence, it is exactly the kind of proof I want, a specific screenshot showing the exact defect rather than a general state of the application, easy to trace straight back to the claim it is backing. The rule citations underneath every finding are just as specific, tied to an exact file and line rather than a general reference. The gap for me is coverage. Four of the six findings have no image behind them at all, resting on the written description alone, even though the document states in its own closing notes that evidence is embedded, a claim that only holds for a third of what is being reported on."
+    },
+    "gui_action_correctness": {
+      "rating": 4,
+      "commentary": "When I trace it, the live testing pass itself was clean, all nine forms worked through in the browser with a specific, checked reason given for why one flaky result was ruled a false positive rather than just retried and assumed fine. Where this drops for me is the evidence attachment step afterward, the browser session dropped partway through attaching the saved evidence to the filed tickets, and only the first attachment made it through before a permission issue blocked the rest, leaving most of the tickets without their own attached proof even though the underlying browser work to produce it had already happened, and nothing after that first block tried a different route."
+    }
+  }
+}

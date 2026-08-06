@@ -28,7 +28,7 @@ NOT NOTIFIABLE — 2 stores
 POSITION OPEN — 1 store
 • br-contractor-roster — The Regimes tab contains no row covering Brazil or Brazilian residents, so the duty, recipient and deadline remain open.
 Register count: 6 stores total = 3 notifiable + 2 not notifiable + 1 open. All three owed notices are saved as unsent Gmail drafts. The Acme notice uses the DPA address; both regulator drafts have blank To fields pending verification of the correct filing address. Nothing has been sent; filing remains subject to Legal sign-off.
-(Note: unlike model A's Teams post, this post does not restate a one-line reason next to each of the 3 notifiable stores — reasons appear only for the 2 not-notifiable and 1 open store.)
+(Note: the three notifiable stores in this post list a recipient and deadline only. The two stores that are not notifiable and the one open store each also carry a single line reason.)
 
 --- Notion database "Grafton Breach Register" (6 rows, columns: Store, Jurisdiction, Our role, Notifiable, Recipient, Deadline IST, Reason) ---
 br-contractor-roster | Brazil | controller | open | (no recipient) | (no deadline) | The Regimes tab contains no row covering Brazil or Brazilian residents, so the duty, recipient and deadline remain open.
@@ -37,7 +37,7 @@ hr-laptop-backup | European Union | controller | no | (no recipient) | (no deadl
 sg-payroll-extract | Singapore | controller | yes | The Commission | Thursday 16 July 2026, 23:59 IST | Although only 214 people are [affected, full names or identification numbers were exposed together with bank-account, salary and CPF data — cell truncated in screenshot; full wording per the matching Gmail draft: "Although the incident affects fewer than 500 people, full names or identification numbers were exposed together with bank-account information, salary, and CPF data. This meets the regime's independent significant-harm limb."]
 analytics-events | European Union | controller | yes | Lead supervisory authority of [our main establishment in the Union — cell truncated] | Thursday 16 July 2026, 09:40 IST | The attacker read both the EU[... cell truncated in screenshot; per the matching Gmail draft the substance is: "Because both the pseudonymised data and the means of reversing its protection were within the breach, the data cannot be treated as unintelligible to the unauthorized party."]
 acme-crm-mirror | European Union (Ireland; Acm[e Corp Ltd — cell truncated, exact remaining text unread]) | processor | yes | Acme Corp Ltd — privacy@ac[me.example — cell truncated] | Tuesday 14 July 2026, 09:40 IST | Confirmed access to Acme's p[ersonal data — cell truncated in screenshot, exact remaining text unread]
-(Row order as it appears in the live view: br-contractor-roster, marketing-site-drafts, hr-laptop-backup, sg-payroll-extract, analytics-events, acme-crm-mirror — not grouped by notifiability.)
+(Row order as it appears in the live view: br-contractor-roster, marketing-site-drafts, hr-laptop-backup, sg-payroll-extract, analytics-events, acme-crm-mirror. This is not grouped by notifiability.)
 
 --- Gmail draft ("gmail 1.png"), "DRAFT FOR LEGAL APPROVAL — Grafton REG-SG-2021 Commission notice (sg-payroll-extract) — due 16 July 2026, 23:59 IST" ---
 To: (intentionally blank)
@@ -100,7 +100,7 @@ At 14:00 IST on Monday 13 July 2026, Corviston revoked the exposed token, rebuil
 Corviston is notifying Acme as controller under the Acme DPA. Any onward notification to a supervisory authority, affected individuals, or other third parties remains Acme's decision and instruction, subject to any directly applicable legal obligation.
 Corviston Software Pvt Ltd
 Grafton incident / privacy and security team
-(Note: this screenshot shows an "Action undone." toast near the Send button — a leftover UI artifact from some undo action during the run. The draft body above reads intact and correctly addressed; worth a spot-check against the live draft to rule out an accidental edit.)
+(Note: this screenshot shows an action undone toast near the Send button, a leftover UI artifact from some undo action during the run. The draft body above reads intact and correctly addressed. Worth a check against the live draft to rule out an accidental edit.)
 
 ## 2. Task accuracy, ignoring speed
 
@@ -110,22 +110,22 @@ The substance here checks out row for row. Tracing the person counts, file paths
 
 ## 3. Efficiency
 
-**Rating:** 5
-**End-to-end time (minutes):** about 4 minutes
-**Wrong actions / recovery:** no wrong actions, it moved straight through the task without a retry
-**Commentary:** It moved straight from reading the source material to the final drafts with no dead ends along the way. The one real detour was resolving which of three separate teams containing an identically named channel was the right one to post to, which it did before writing anything, so the time was spent narrowing a genuine ambiguity rather than wandering. It also opened with two separate planning statements before touching a single tool, a small amount of throat clearing relative to how short the whole run ended up being. Neither cost much, which is why the total time is as tight as it is.
+**Rating:** 4
+**End-to-end time (minutes):** 4
+**Wrong actions / recovery:** one edit inside a compose window was made and then undone during the run, otherwise no retries
+**Commentary:** It moved from reading the source material to the final drafts with almost no wasted motion, and the register write went through clean on the first pass. It opened with two separate planning statements before touching a single tool, a small amount of throat clearing given how short the run ended up being. One of the captured Gmail screens also shows an action undone notice over the compose window, meaning an edit inside that draft was made and then reversed at some point, a real recovery step its own account of a clean pass doesn't own up to. Neither cost much alone, but together they hide a little more churn than the tight total first shows.
 
 ## 4. Writing quality
 
 **Rating:** 4
 
-The drafts themselves read cleanly, with a clear notice structure and no wasted sentences. The Teams post is where this loses ground. It gives a full one line reason for every store that isn't notifiable and for the one left open, then gives the three notifiable stores nothing beyond a recipient and a date, so the section a legal reader would care about most is the thinnest part of the post. The Gmail drafts also stay in continuous paragraph form the whole way through, with no bullet breakdown for enumerable facts like affected counts or remediation steps, making the denser paragraphs slower to scan than a quick legal read should require.
+The drafts themselves read cleanly, with a clear notice structure and no wasted sentences. The Gmail drafts stay in continuous paragraph form the whole way through, with no bullet breakdown for enumerable facts like affected counts or remediation steps, making the denser paragraphs slower to scan than a quick legal read should require. The three drafts also don't share one heading convention for the same sections. The consequences section is labeled three different ways across the three notices, and the affected people section gets a different heading each time too, so a reader moving between the three has to re-orient at every section break instead of recognizing a repeated shape.
 
 ## 5. Instruction following
 
-**Rating:** 5
+**Rating:** 4
 
-Every literal constraint I checked line by line is met. The blank regulator To fields carry the required note about needing a verified address, the customer notice uses the DPA's own address, and the notifiable stores are ordered by whichever deadline comes first. The one gap is the one line reason requirement itself. The prompt's spirit is that every store gets a reason a reader can act on, and it delivered that fully for the not notifiable and open stores but not at all for the three notifiable ones, so the post's most urgent section is also its least substantiated one. That leaves the most safety critical part resting on trust in a deadline and a name alone.
+Every literal constraint I checked line by line is met on the surface. The blank regulator To fields carry the required note about needing a verified address, the customer notice uses the DPA's own address, and the notifiable stores are ordered by whichever deadline comes first. The task is only done when the Teams post matches the register, and it doesn't fully. The register carries a reason for all six stores, but the post carries one only for the three that aren't urgent, leaving the notifiable entries resting on a recipient and a date alone. The Singapore reason also runs to two sentences where every other row holds to one.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -138,16 +138,16 @@ Every literal constraint I checked line by line is met. The blank regulator To f
 
 **Rating:** 5
 
-Every draft opens with a labeled regime line naming the exact row of the sheet it's standing on, so a reader can go straight to the source instead of reconstructing which row applies from the prose. The gap is that this labeling doesn't carry over into the register itself, so anyone starting from the register rather than a draft loses that shortcut. The Acme notice is also a notch less precise than it could be, citing the DPA's schedule broadly rather than naming the specific clause number that sets the 24 hour clock, a detail the underlying contract excerpt actually spells out.
+Every draft opens with a labeled regime line naming the exact row of the sheet it's standing on, so a reader can go straight to the source instead of reconstructing which row applies from the prose. The gap is that this labeling doesn't carry over into the register itself, so anyone starting from the register rather than a draft loses that shortcut. The Acme notice is also a notch less precise than it could be, citing the DPA's schedule broadly rather than naming the specific clause number that sets the notification clock, a detail the underlying contract excerpt actually spells out.
 
 ## 8. GUI action correctness
 
-**Rating:** 5
+**Rating:** 6
 
-Navigation here was mostly clean. It worked out which of three identically named Teams channels was the real one before posting rather than guessing, and the register landed in the correct shared workspace. One of the captured Gmail drafts shows an action undone notice sitting over the compose window, a leftover trace of some undo cycle that never got explained or cleared, and though the body text reads intact, it's a loose end in an otherwise finished screen. The register verification also has a thinner on screen trail than the drafts do, with the log stating six pages were created and checked without showing that check happening the way the rest of the session is narrated.
+Navigation here was clean. It worked out which of three identically named Teams channels was the real one before posting rather than guessing, and the register landed correctly in the shared workspace rather than a private one. The one loose end is that the register verification has a thinner on screen trail than the drafts do. The log states that six pages were created and checked, but it never narrates that check happening step by step the way the drafts do, so there's no way to watch the same verification play out on screen the way the log lets me watch everything else in this run happen.
 
 ## 1. Overall task success
 
-**Rating:** 5
+**Rating:** 4
 
-The core deliverable is right and it is sitting where it should be. Six correct positions in the shared register, a Teams post that matches those positions, and three unsent drafts with the right addresses and the right gaps left open for legal to fill in. What keeps this from going higher is that the parts a legal reader would lean on hardest, the reasoning behind the three most urgent calls, only show up in the drafts and never make it into the post meant to summarize the position at a glance. Add a verification trail that asserts more than it shows, and this is usable but still needs the Teams post filled in before I'd call it finished.
+The core positions are right and they sit in the shared register where they should be. Six correct calls, a Teams post that mostly reflects them, and three unsent drafts with the right addresses and the right gaps left open for legal. What keeps this from landing higher is that the post meant to be read at a glance breaks its own promise to match the register, since the three most urgent entries carry no reason at all. The run's own account undersells what happened, describing a clean pass when one of its drafts shows an edit made and undone. This is usable, but the post and the summary both need a closer look before I'd hand it to legal.

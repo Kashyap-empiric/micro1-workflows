@@ -1,0 +1,67 @@
+Worked for 3m 41s
+
+
+I’m using the Google Drive/Sheets/Docs, Notion, Teams, and Gmail workflows to trace the source material, build the jurisdiction-by-plan audit, and then make only the three authorized outputs. I’ll first confirm that all required sources and destinations open; if any one is inaccessible, I’ll stop there and identify it.
+
+
+
+
+Used Notion, Google Drive, and Microsoft Teams integrations
+
+
+All five required locations opened successfully. I’m now reconciling the matrix, actual subscriber locations, notice setup, survey vintage, and the section-specific effective dates. The key distinction will be between an applicable rule that is already satisfied and a genuinely out-of-scope plan.
+
+
+
+
+Used Notion, Google Drive, and Microsoft Teams integrations
+
+
+The Notion database itself is accessible and its schema is clear. Its SQL-style Query Data Source operation has reached the workspace plan limit, so I won’t retry that operation; I’m using the supported database-scoped search/read path to check for existing audit rows before creating the register entries. This limitation needs to be disclosed even if the remaining work succeeds.
+
+
+
+
+Used Notion integration
+
+
+The substantive reconciliation yields 33 plan–jurisdiction rows: federal for all eight plans, the 23 state combinations in the sales matrix, and the two Kestrelport combinations supported by billing addresses. Eleven combinations require a pre-Q4 change. I’m recording the precise statutory windows and distinguishing the stale Vantry survey and the prospective Kestrelport ordinance from the current setup.
+
+
+
+
+Created 33 pages
+
+
+
+
+
+The register accepted all 33 rows. The only save-offer owner requiring a draft is Delia Marchetti: Plus Annual fails the same-screen proximity rule in Ostmark and Selwick. Ravi’s Studio Monthly offer already keeps cancellation beside the offer throughout, so there is no change request or draft for him.
+
+
+
+
+Used Gmail and Microsoft Teams integrations
+
+
+The Teams post is live with all 11 change combinations, the two plan-level figures, and a disposition of each memo open item. I’m doing a final readback on the register and the unsent draft, including the deliberately blank recipient.
+
+
+
+
+Used Notion and Gmail integrations
+
+
+
+
+
+The audit outputs are in place:
+Larkfield Renewal Findings Register: 33 rows created—eight federal, 23 state, and two Kestrelport plan–jurisdiction combinations. Each has the plan, jurisdiction, term, one finding, and a provision/tab-based reason. The create response returned all 33 rows, and representative change and out-of-scope rows read back correctly.
+Teams renewal-audit post: posted for real, with all 11 pre-Q4 change combinations, their reasons and windows, the five open-item dispositions, and Yusuf’s sign-off/release gate.
+Delia Marchetti Gmail draft: created and verified as DRAFT, with an empty To field and an explicit verified-address/Yusuf-review warning. It was not sent. No Ravi draft was needed because Studio Monthly’s save offer is compliant on the proximity point.
+The plan-level distribution figures posted were 13,615 subscribers on plans needing at least one change somewhere and 13,760 subscribers on plans needing no change anywhere.
+No plan configuration, cancellation flow, or notice was altered. The connected-workspace workflows kept the source files read-only, validated the exact Teams channel, and preserved the Gmail item as an unsent draft.
+One tooling limitation to disclose: Notion’s Query Data Source operation had reached the workspace usage limit. I did not retry it; database-scoped search, the successful 33-page creation response, and targeted page readbacks were used instead. You can try that query again later, or a workspace owner can upgrade the Notion plan for unlimited querying.
+
+
+5:02 PM

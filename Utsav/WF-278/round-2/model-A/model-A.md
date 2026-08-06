@@ -42,7 +42,7 @@ L-17 | 1627.5 | escalate | M-2213 — Redgate site environmental review | Work i
 L-18 | 3060 | reject | M-2217 — Ohio wage and hour class action | Research was authorised, but[ the narrative omits the approver's name and date] | 3060 | 5.1
 L-19 | 1955 | approve | M-2217 — Ohio wage and hour class action | Narrative names matter super[visor as approver, with the date] | 0 | 5.1
 L-20 | 1250 | reject | M-2217 — Ohio wage and hour class action | Online legal research allocatio[n is non-reimbursable firm overhead] | 1250 | 7.1
-(Reason cells are column-truncated in the screenshot past the point shown in brackets; bracketed completions for the 6 non-approve lines and L-14/L-16 are taken from the matching Gmail draft and Teams post text. Row order in the live view is not grouped by line number.)
+(Row order in the live view is not grouped by line number.)
 Totals: 13 approve ($0 reduction), 3 reduce ($2,160.00 + $1,593.75 + $302.50 = $4,056.25), 3 reject ($3,629.50 + $3,060.00 + $1,250.00 = $7,939.50), 1 escalate ($1,627.50 held). Total reduction $11,995.75; total held $1,627.50.
 
 --- Gmail draft, "Orbison & Slate — June 2026 invoice line adjustments" ---
@@ -74,7 +74,7 @@ Every disposition on all five invoices landed correctly against the rate card, t
 ## 3. Efficiency
 
 **Rating:** 4
-**End-to-end time (minutes):** about 7
+**End-to-end time (minutes):** 7
 **Wrong actions / recovery:** none, it finished in one pass without needing to redo any line
 **Commentary:** This ran long for a review that turned out to have a clean rule for every line once the four source documents were read. A real chunk of the early time went into loading its own tool rules and confirming the register's schema before it touched a single invoice row, overhead that only needed to happen once. Once the calculation started it moved straight through all five invoices without repeating a line. The write, the readback, the live post and the draft each happened as their own separate pass rather than getting folded together, which is a safe order but adds a few extra round trips a tighter run would not have needed.
 
@@ -87,24 +87,24 @@ The invoice register reads cleanly and the columns are easy to scan at a glance.
 
 ## 5. Instruction following
 
-**Rating:** 5
+**Rating:** 6
 
 **Commentary:**
-It hit every requirement I actually asked for, a single draft covering every adjusted line, a blank recipient field with a plain note that the firm's billing address still needs adding, a live post naming the held line with both dollar totals, and a register entry for every line with a disposition, a dollar figure, a guideline section and a reason. The one place it drifts from the guidelines' own wording is asking the firm to rebill or correct every adjusted line, when one of those lines is overhead the guideline text itself says is never reimbursable no matter how it gets resubmitted. That is a small gap against the guidelines' own text rather than against anything I asked for.
+It hit every requirement I actually asked for, a single draft covering every adjusted line, a blank recipient field with a plain note that the firm's billing address still needs adding, a live post naming the held line with both dollar totals, and a register entry for every line with a disposition, a dollar figure, a guideline section and a reason. The only place I'd nudge it is the one disbursement line that needed two guideline rules to explain it. Both numbers sit stacked together in the same field there, where the request called for one citation by number per line.
 
 ## 6. Collaboration, autonomy, and verification
 
 **Rating:** 4
 **Steering needed:** none, it ran unassisted start to finish
 **Additional editing before I'd use it:** I would still add the actual reasoning behind each line to the firm note before Lena sends it
-**Commentary:** It read the register back after writing to confirm the rows landed, which is the right habit. What it never did was check whether the destination it wrote to was the only database carrying that exact name, the kind of confirmation I would want before trusting a legal register as the record of truth. Its own narration treats the write as settled the moment the rows come back clean, with no mention anywhere of a second copy being possible. That is a real gap in how deep the self check went, even though nothing in front of me shows the write itself landing anywhere wrong.
+**Commentary:** It read the register back after writing to confirm the rows landed, which is the right habit, and it recomputed the totals from that same readback before posting anything further. What that check never reached was whether the destination it wrote to was the only database carrying that exact name, the kind of confirmation I would want before trusting a legal register as the record of truth. Its own narration treats the write as settled the moment its rows come back clean. That recompute only checks its own output against itself. It never shows the figures checked back against the original invoice export, so an earlier math slip would have passed the same readback clean.
 
 ## 7. Citation quality
 
 **Rating:** 4
 
 **Commentary:**
-Every dollar figure I checked traces to a rate, an hour count or a fixed percentage taken straight from the guidelines, and every adjustment carries the specific section it came from. Where it falls short is the note prepared for the firm, which references a line number and a matter name but never the actual invoice number behind it, so tracing any one adjustment back to its invoice means going back to the register first. The date behind the one closed matter is also stated plainly but never says which record actually fixes that date, so a reader has to take it on faith rather than see the underlying source named.
+Every dollar figure I checked traces to a rate, an hour count or a fixed percentage taken straight from the guidelines, and every adjustment carries the specific section it came from. Where it falls short is the note prepared for the firm, which references a line number and a matter name but never the actual invoice number behind it, so tracing any one adjustment back to its invoice means going back to the register first. A second gap sits in the closed matter's date, which the note states as fact without ever naming the record that actually fixes it, leaving a reader to take that one detail on faith.
 
 ## 8. GUI action correctness
 

@@ -9,6 +9,7 @@ Codex, gpt-5.6-dog, Extra High intelligence
 
 ### Session ID
 019fd0ed-09e3-7092-891f-b4837ce6c5a0
+
 ## Logs
 
 [Codex logs](codexlogs.txt)
@@ -36,7 +37,7 @@ hr-laptop-backup | None | European Union | no | controller | REG-EU-2026's unint
 acme-crm-mirror | Tuesday 14 July 2026, 09:40 | European Union (Acme contro[ller...cell truncated]) | yes | processor | The plaintext Acme CRM repli[ca... cell truncated] | Acme Corp Ltd (controller), pr[ivacy@acme.example — cell truncated]
 br-contractor-roster | Open — no covering Regimes[- row — cell truncated] | Brazil | open | controller | The Regimes tab has no row c[overing... cell truncated] | Open — no covering Regimes[- row — cell truncated]
 marketing-site-drafts | None | Not applicable — no personal[ data — cell truncated] | no | not applicable | The inventory confirms the st[ore... cell truncated] | None
-(Row order as it appears in the live view is: sg-payroll-extract, analytics-events, hr-laptop-backup, acme-crm-mirror, br-contractor-roster, marketing-site-drafts — not grouped by notifiability and not the store order used in data-seeding.txt. The Notion sidebar lists "Grafton Breach Register" twice under Private; not confirmed from the screenshot alone whether this is a duplicate database or a pinned shortcut alongside the actual page.)
+(Row order as it appears in the live view is: sg-payroll-extract, analytics-events, hr-laptop-backup, acme-crm-mirror, br-contractor-roster, marketing-site-drafts. This is not grouped by notifiability and not the store order used in data-seeding.txt. The Notion sidebar lists the Grafton Breach Register database twice under Private. It is not confirmed from the screenshot alone whether this is a duplicate database or a pinned shortcut alongside the actual page.)
 
 --- Gmail draft ("gmail 1.png"), "DRAFT — REG-SG-2021 Commission notification — Grafton / sg-payroll-extract" ---
 To: (intentionally blank)
@@ -71,20 +72,20 @@ Likely consequences. Exposure of business contact and employer details, deal inf
 Measures taken and proposed. At containment at 14:00 IST on Monday 13 July, Corviston revoked the exposed token, rebuilt ci-runner-04 and fs-03 from clean images, rotated every secret on vault-prod-02, and blocked egress to the attacker's ranges. We propose to complete the open encryption-at-rest remediation for the replica under PLAT-2214, continue the scope and egress investigation, preserve relevant evidence, and supplement Acme without undue delay as further facts are confirmed. We will coordinate further measures and any onward communications with Acme. Under clause 3.4, we will not notify a supervisory authority, data subjects or other third parties about Acme Customer Personal Data without Acme's prior written instruction, save where required by law.
 This notice provides the information presently available within the contractual period. We will provide supplemental information without undue delay. Please direct any instructions or questions through the agreed incident contact route.
 Corviston Software Pvt Ltd
-(Note: this draft's compose window shows an active "Send" button and toolbar, unlike model A/B's dismissed-compose screenshots — the draft is open for editing/review rather than shown from the drafts list, but the To field and body are otherwise as transcribed above.)
+(Note: this screenshot was captured with the compose window open for editing, showing the active Send button and toolbar, rather than from the drafts list. The To field and body are otherwise as transcribed above.)
 
 ## 2. Task accuracy, ignoring speed
 
-**Rating:** 5
+**Rating:** 6
 
-Every position holds up against the source material. Singapore correctly leans on the harm limb rather than the scale limb it misses, the analytics store loses its unintelligibility exemption because the reversing secret sat in the same breach, and Brazil stays open instead of getting an answer borrowed from outside knowledge. Two smaller things keep this out of a higher band. The Acme row also folds the one fact triggering the processor notice, the customer's own EU establishment, into the jurisdiction cell rather than the reasoning. The closing summary asserts six verified records as a flat count rather than walking back through the recipients and deadlines its own check covered, so the confirmation reads thinner than the checking behind it.
+Every position holds up against the source material. Singapore correctly leans on the harm limb rather than the scale limb it misses, the analytics store loses its unintelligibility exemption because the reversing secret sat in the same breach, and Brazil stays open instead of getting an answer borrowed from outside knowledge. The one real gap is that its own working notes correctly place Acme's own establishment in Dublin, Ireland, the fact that grounds why this is a processor notice under the DPA, but that fact never surfaces anywhere in the Acme draft itself. Everywhere else the record traces cleanly back to what the source material actually says, matching it line for line.
 
 ## 3. Efficiency
 
 **Rating:** 4
-**End-to-end time (minutes):** about 4 minutes
+**End-to-end time (minutes):** 4
 **Wrong actions / recovery:** no wrong actions, but it had to fall back to checking the register row by row after an aggregate verification method hit a usage limit
-**Commentary:** This landed in the middle of the pack for time, close to the faster end but with two real sources of drag. The aggregate check on the register failed partway through and it had to check all six rows individually instead, which is legitimate recovery but still added a step a cleaner run wouldn't need. It also went back to Microsoft Teams for another look after already reporting the post as done, and never says in its own narration what that second look was checking for, leaving an unexplained step tacked onto an already finished task.
+**Commentary:** Two real sources of drag ate into an otherwise short 4 minute total. The aggregate check on the register failed partway through and it had to check all six rows individually instead, which is legitimate recovery but still added a step a cleaner run wouldn't need. It also went back to Microsoft Teams for another look after already reporting the post as done, and never says in its own narration what that second look was checking for, leaving an unexplained step tacked onto an already finished task, the kind of loose end a tighter close would have accounted for before calling the run done.
 
 ## 4. Writing quality
 
@@ -103,22 +104,22 @@ The constraints I can check directly are all satisfied. The regulator drafts lea
 **Rating:** 4
 **Steering needed:** none, it worked through the task without needing a nudge
 **Additional editing before I'd use it:** none of substance, though I'd want the chat summary's role and jurisdiction detail folded into the actual register fields before relying on the register alone
-**Commentary:** It gets real credit for saying plainly when its first verification method failed and switching to checking each row directly instead of quietly asserting success. Where the self checking stops short is that the richest version of the analysis, the one naming Acme's own establishment and separating role from jurisdiction cleanly, only shows up in its own closing summary, never making it into the persisted register I can reopen later. That means the detail a legal reviewer would find most useful lives in a conversation transcript rather than the durable record, and the run never flagged that gap between what it told me and what it actually wrote down.
+**Commentary:** It gets real credit for saying plainly when its first verification method failed, then switching to checking each row directly instead of quietly asserting success. The self checking still stops short in two places. The richest version of the analysis, the one naming Acme's own establishment and separating role from jurisdiction cleanly, only shows up in its closing summary and never reaches the persisted register I can reopen later. That same closing summary also asserts six verified records as a flat count rather than walking back through the specific recipients and deadlines the check actually covered, so the confirmation reads thinner than the checking behind it.
 
 ## 7. Citation quality
 
 **Rating:** 5
 
-The Teams post names the exact regime identifier and DPA clause behind the Acme notice rather than describing it only in general terms, and one of the register's own reason cells does the same thing, citing the regime by name directly in the record rather than only in a linked draft. That habit isn't consistent across all six rows though, so some reasons are traceable straight from the register and others still require pulling up the matching draft to see which regime is actually driving the call, which is the one real gap in an otherwise strong showing.
+The Teams post names the exact regime identifier and DPA clause behind the Acme notice rather than describing it only in general terms, and one of the register's own reason cells does the same for Singapore. That habit isn't consistent though. Two of the six register rows still require pulling up the matching draft to see which regime is actually driving the call. The Acme draft itself is the bigger gap. The other two drafts each open with a labeled regime line before the body starts, and the Acme draft never gets that same treatment, leaving its citation to live only in the Teams post rather than the notice a regulator or Acme would actually receive.
 
 ## 8. GUI action correctness
 
-**Rating:** 4
+**Rating:** 5
 
-Most of the navigation here was sound, including working through more than one same named candidate for both the register and the channel before settling on a target. The one clear issue is in the register screenshot itself, where the workspace sidebar lists the Grafton Breach Register twice under the same private section, and nothing in the run's closing narration acknowledges or explains the second listing before declaring the six records verified. Whether that's a genuine duplicate or just a leftover shortcut, a thorough pass over its own final screen would have caught and addressed it before calling the register done, and that's the gap that keeps this off a higher score.
+Most of the navigation here was sound, including working through more than one same named candidate for both the register and the channel before settling on a target. Two distinct loose ends survive into the final screens. The register screenshot shows the workspace sidebar listing the Grafton Breach Register twice under the same private section, never acknowledged before the run declared the records verified. Separately, the Teams sidebar shows a second channel also named grafton-legal still visible after the post went out, with no confirmation the one it posted to is the one legal actually watches, so that ambiguity carries into the delivered result.
 
 ## 1. Overall task success
 
 **Rating:** 5
 
-Six correct positions landed in the right shared register, the Teams post matches those positions with a full reason behind every row including the notifiable ones, and the three owed notices are sitting as unsent drafts with the right addresses and the right gaps left open. The citation habit of naming the actual regime behind a call is a real strength here. What holds it back from a higher rating is a pair of loose ends it never tied off itself, an unexplained duplicate in its own destination sidebar and a richer version of the analysis that only exists in the conversation rather than the record legal will actually open. It's usable, but I'd want those two things checked first.
+Six correct positions landed in the right shared register, the Teams post matches those positions with a full reason behind every row including the notifiable ones, and the three owed notices sit as unsent drafts with the right gaps left open. The citation habit of naming the actual regime behind a call is a real strength here. Two things keep this out of the top band. The register and the channel both carry an unresolved duplicate in their own sidebars that the run never flagged before calling itself done, and the fullest version of the Acme analysis lives only in a conversation summary rather than the record legal will actually open.

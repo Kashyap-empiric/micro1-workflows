@@ -45,15 +45,15 @@ Source screenshot: [teams post.png](output/teams%20post.png)
 
 ## 2. Task accuracy, ignoring speed
 
-**Rating:** 5
+**Rating:** 6
 
 **Commentary:**
-Checking the register and the post against the policy, the licences, agreement doc and patent list myself, every one of the ten filed requests lands on the right outcome, down to the two rows that turn on a licence's grant clause not reaching patents and a contribution that only becomes a problem once combined with what a project already carries. The committee referral is narrowed correctly, and the reasoning for why the other patent list rows stay out of it is sound. A tool limit forced it to confirm the ten rows one at a time near the end, and its report covers only the outcome and exemption wording, leaving the engineer, project and line count fields unmentioned.
+The two hardest calls in this queue, a licence whose grant clause doesn't reach patents and a contribution that only becomes a problem combined with what a project already carries, both land on the right outcome, and so does every other row checked against the real source. The committee referral is narrowed correctly, with solid reasoning for why the other patent list rows stay out of it. The one soft spot is on the rows gated by a corporate schedule, where project approval and schedule membership get folded into a single citation rather than shown as two conditions each confirmed on its own, so the call rests on a bundled claim instead of a visibly checked pair.
 
 ## 3. Efficiency
 
 **Rating:** 4
-**End-to-end time (minutes):** About 7, one continuous stretch with no stop.
+**End-to-end time (minutes):** 7
 **Wrong actions / recovery:** The initial repository connection and command line login both failed and had to be worked around through a browser session, and a bulk verification query hit a usage limit partway through and had to be replaced with checking rows one at a time.
 **Commentary:**
 It never stopped and never asked me anything, which is worth crediting, but it hit two separate obstacles in one run and quietly routed around both without slowing the overall shape of the work. The repository access failure alone is the kind of thing that can end a run outright, so working out an alternate path on its own is real. The second obstacle, the verification tool hitting its usage limit, meant trading one clean bulk check for ten separate smaller ones near the end, more calls for the same confidence level. Two genuine detours in a single pass is a real drag even though neither one stalled the outcome.
@@ -78,25 +78,25 @@ It posted live rather than as a draft, used the exact wording required for the a
 **Steering needed:** None, it worked through both obstacles it hit on its own and never paused to ask me anything.
 **Additional editing before I'd use it:** Light, I'd want the channel post's opening line and paragraph breaks cleaned up before sending it as is.
 **Commentary:**
-Real strength here in that it caught a genuine naming collision on its own, two records sharing the exact same title, and picked between them, then went back and confirmed all ten rows individually once its primary verification method stopped working. Both are things a careless run would have skipped. The soft spot is how it picked between the two records sharing that title, going with whichever one looked newer rather than opening each one to confirm which actually carried the exact schema value the brief required. Recency is a reasonable signal but it is not the same as checking the thing itself, and getting the destination wrong here would have meant a wasted write with real consequences.
+It caught a genuine naming collision on its own, two records sharing the exact same title, and picked between them, then went back and confirmed all ten rows individually once its primary verification method stopped working. The soft spot is how it picked between those two records, going with whichever looked newer rather than opening each to confirm which actually carried the exact value the brief required. Recency is a reasonable signal but it is not the same as checking the thing itself. Its own closing summary shows the same shallow habit elsewhere, listing only the outcome counts and the exemption wording without reconciling that summary against the fields it had just written into the register.
 
 ## 7. Citation quality
 
 **Rating:** 5
 
 **Commentary:**
-Every figure and every reason I could check traced back to a real source, a specific policy section, a licence's own clause, or a named agreement record, and nothing reads as guessed or rounded. It named the specific licence and the specific reference tab source behind more than one call rather than leaning on a bare policy citation alone, good practice here. The weak seam is the one row driven purely by size, where the reasoning cites the policy clause that makes size irrelevant but never also points at the reference tab row that actually establishes the project as approved, so that half of the call rests on the rule rather than the record backing it.
+The weak seam here is depth rather than accuracy. The row driven purely by size cites the clause that makes size irrelevant but never points back at the tab row establishing the project as approved in the first place. The schedule mismatch used to route one contributor to the corporate agreement states the negative without noting that person is also named on a different project's schedule, a near miss a full trace would surface. Past those two seams, every figure and reason I checked traced back to something real, a policy section, a licence's own clause, or a named agreement record, naming the specific licence and reference tab behind more than one call rather than a bare citation alone.
 
 ## 8. GUI action correctness
 
-**Rating:** 5
+**Rating:** 6
 
 **Commentary:**
-The one action on screen in this run mattered. After the primary connected route to the source repository failed twice, it opened an already signed in browser session and used that to reach and read the repository directly rather than giving up or guessing at the contents. That is a real, correct piece of navigation under pressure. What is not shown is any confirmation that it landed on the exact right page within that session rather than a search result pointing at it. The reads that followed clearly worked, but the run does not narrate checking that it was looking at the right spot before trusting what it read there.
+After the primary connected route to the source repository failed twice, it opened an already signed in browser session and used that to reach and read the repository directly rather than giving up or guessing at the contents, a real, correct piece of navigation under pressure. The one gap is what happened right after landing there. Nothing in the run confirms it was looking at the exact right page within that session rather than a search result pointing toward it before it started reading and trusting what was on screen. What it pulled off screen afterward clearly checked out, but that specific confirmation never gets narrated.
 
 ## 1. Overall task success
 
 **Rating:** 5
 
 **Commentary:**
-The finished register and the posted summary hold up against the actual source, all ten calls checking out, the committee routing is narrowed correctly, and the deliverable is complete with the repository left untouched. It hit two genuine obstacles, a source connection that failed outright and a verification limit partway through, and worked through both on its own, a real point in its favor. The destination got chosen on a recency signal rather than a direct check of the required value, the citations lean too heavily on the rulebook over the record, and the posted message opens with a crowded sentence and runs the flagged requests together with no separation. Solid and correct, still needs a formatting pass.
+Two genuine obstacles hit this run, a source connection that failed outright and a verification tool that reached its limit partway through, and it worked through both without stopping to ask me anything. The finished register and posted summary hold up against the source once I check them myself, all ten calls landing right and the committee routing narrowed correctly. One destination got chosen on a recency signal rather than a direct check of the required value, and the closing summary never reconciled its counts against the fields just written. The citations lean too heavily on the rulebook over the record, and the posted message opens with a crowded sentence running the flagged requests together with no separation.

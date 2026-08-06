@@ -36,7 +36,7 @@ sg-payroll-extract | Singapore | controller | yes | The Commission | 16 July 202
 marketing-site-drafts | Not applicable — no personal data [cell truncated in screenshot past this point] | not applicable | no | (no recipient) | (no deadline) | The store contains no personal data, so the attacker's read was not a personal-data breach.
 acme-crm-mirror | European Union | processor | yes | Acme Corp Ltd — privacy@acme.example | 14 July 2026, 09:40 IST | As processor, we must notify Acme without a risk threshold, and its DPA fixes a 24-hour period from confirmed access.
 br-contractor-roster | Brazil | controller | open | (no recipient) | (no deadline) | The supplied Regimes tab has no row covering Brazil or Brazil-resident individuals, so duty, recipient and deadline remain open.
-(Row order as it appears in the live view is: hr-laptop-backup, analytics-events, sg-payroll-extract, marketing-site-drafts, acme-crm-mirror, br-contractor-roster — not grouped by notifiability and not the store order used in data-seeding.txt.)
+(Row order as it appears in the live view is: hr-laptop-backup, analytics-events, sg-payroll-extract, marketing-site-drafts, acme-crm-mirror, br-contractor-roster. This is not grouped by notifiability and not the store order used in data-seeding.txt.)
 
 --- Gmail draft 1, "[UNSENT DRAFT] Grafton personal data breach notice — acme-crm-mirror" ---
 To: privacy@acme.example
@@ -123,48 +123,48 @@ GRC / Privacy
 
 **Rating:** 4
 
-The six positions are right. It caught that the pepper sitting in the same breach as the analytics data is what kills the pseudonymisation exemption, applied the Singapore harm limb correctly even though the scale limb wasn't met, and left the Brazil row open instead of reaching for outside law, the main trap in this prompt. What holds it back is where the work landed. The register sits in a personal Notion space rather than the shared workspace this fixture lives in, and the six rows there aren't demonstrably the ones legal would actually open. The Acme row's jurisdiction field also just says European Union rather than naming the customer's own establishment, the fact that actually grounds the processor notice.
+The six positions are right. It caught that the pepper sitting in the same breach as the analytics data kills the pseudonymisation exemption, applied the Singapore harm limb correctly even though the scale limb wasn't met, and left the Brazil row open instead of reaching for outside law. Where it slips is completeness. The Acme row's jurisdiction field says only European Union, missing the customer's own EU establishment, the fact that actually grounds the processor notice. The EU regulator draft goes further and names a specific overseas subsidiary and city as the relevant establishment, a detail that shows up nowhere else in the register, the Teams post, or its own reasoning.
 
 ## 3. Efficiency
 
 **Rating:** 3
-**End-to-end time (minutes):** about 11 minutes
+**End-to-end time (minutes):** 11
 **Wrong actions / recovery:** no outright wrong clicks, but it had to abandon its first Notion verification method after hitting a usage limit and go back through all six rows one by one instead
-**Commentary:** About eleven minutes is well out of proportion for six stores and three drafts covering a fixed, bounded set of facts. A real chunk of it went into working out which Notion database and which Teams channel it actually meant, since both names had more than one match in the workspace, and the resolution it landed on still isn't clearly the right one. The rest went into checking the register row by row again after its first verification attempt got blocked. None of this was a wrong click in the moment, but it's a lot of extra time for a result that still doesn't clearly sit in the correct spot.
+**Commentary:** 11 minutes is well out of proportion for six stores and three drafts covering a fixed, bounded set of facts. A real chunk of it went into working out which Notion database and which Teams channel it actually meant, since both names had more than one match in the workspace. The rest went into checking the register row by row again after its first verification attempt got blocked on a usage limit. None of this was a wrong click in the moment, but resolving one ambiguity and recovering from one blocked check are two separate costs stacked into a single run, and together they eat up most of the time this task should have taken.
 
 ## 4. Writing quality
 
 **Rating:** 5
 
-The drafts do the most work in this run. Each one breaks the facts into short labeled sections with bullet points under headings like affected data and measures taken, making a dense legal notice easy to scan in a hurry. The Teams post carries a one line reason next to every notifiable store as well as the ones that aren't, so nothing there needs a follow up question. The one place it slips is consistency across the three deliverable types. The Teams post and register rows read as flowing sentences while the Gmail drafts switch to a heavily bulleted structure, so reading all three back to back means three different formatting conventions for the same set of facts.
+The drafts do the most work in this run, breaking facts into short labeled sections under headings like affected data and measures taken, which makes a dense legal notice easy to scan in a hurry. The Teams post carries a one line reason next to every notifiable store as well as the ones that aren't, so nothing there needs a follow up question. The Teams post and register rows read as flowing sentences while the Gmail drafts switch to bullets, three formatting conventions doing the same job. That convention doesn't even hold across the drafts themselves, since the Singapore notice drops bullets entirely and runs every section as a paragraph the other two don't.
 
 ## 5. Instruction following
 
 **Rating:** 4
 
-It hits the letter of the prompt. The regulator drafts have empty To fields with an explicit note that an address needs verifying, the customer draft uses the address from the DPA excerpt, and the notifiable stores in the Teams post are ordered by whichever deadline comes first. The gap is destination fidelity. Its own narration flagged that both the register name and the channel name had more than one match in the workspace, exactly the ambiguity this prompt punishes a wrong guess on, yet it landed the register in a personal space rather than the shared one. Getting the format and ordering right doesn't make up for a real risk that the write went to the wrong destination.
+It hits most of the letter of the prompt. The regulator drafts have empty To fields with an explicit note that an address needs verifying, the customer draft uses the address from the DPA excerpt, and the notifiable stores in the Teams post are ordered by whichever deadline comes first. The EU regulator draft then names a specific overseas subsidiary as the establishment behind the notice, but signs off in the parent company's name without ever reconciling which entity is actually notifying. The three drafts also each carry a different ad hoc label in the subject line for the same unsent, sign off pending status, rather than one consistent tag across all three owed notices.
 
 ## 6. Collaboration, autonomy, and verification
 
-**Rating:** 3
+**Rating:** 6
 **Steering needed:** none, it ran unattended from start to finish
-**Additional editing before I'd use it:** I'd want to reopen the register myself and confirm it's the shared copy before anything goes to legal
-**Commentary:** It gets credit for flagging its own limitation instead of hiding it. When its first Notion verification method hit a usage limit, it said so plainly and switched to checking each of the six rows individually rather than just asserting the write worked. What it never circled back to is the ambiguity it raised for itself earlier, that both the register and the channel had more than one same named match in the workspace. It picked a destination for each and moved on without ever confirming afterward that the one it picked was the shared one everyone else would open. Flagging a data gap is worth something. Flagging a destination gap and never resolving it is a real verification hole.
+**Additional editing before I'd use it:** I'd want the missing establishment fact and the unsupported subsidiary claim checked against the source before this register goes to legal
+**Commentary:** It flagged its own limitation instead of hiding it. When its first Notion verification method hit a usage limit, it said so plainly and switched to checking each of the six rows individually rather than just asserting the write worked. That fallback confirmed the six records and three drafts existed and were readable, and it stopped there. It never went back to check whether the content inside those records was actually complete and correct, treating existence as a stand in for correctness. Running unattended without needing a nudge and disclosing a tooling limit in the open both count for something real here.
 
 ## 7. Citation quality
 
 **Rating:** 4
 
-The figures in the drafts trace cleanly back to the source material. The subject counts, file paths, and timing for each store match the incident record and the data store descriptions, checked against it myself. What's missing is any reference to which row of the regimes sheet each notice actually stands on. None of the three drafts names a regime by its identifier, so a reader checking a draft against the sheet has to reconstruct which row applies from the legal language alone instead of being pointed straight to it. The Acme row's jurisdiction field has the same problem in miniature, dropping the one fact, the customer's own EU establishment, that actually grounds the citation.
+The figures in the drafts trace cleanly back to the source material. The subject counts, file paths, and timing for each store match the incident record, checked against it myself. The regime citation habit is inconsistent though. The Singapore reason names its regime directly in both the register and the Teams post, but neither EU notice ever names its regime anywhere, not in the register, the Teams post, or the draft itself, so a reader has no pointer back to the sheet for either EU call. The Acme draft also cites a four clause range from the DPA rather than the one clause that actually fixes the notification deadline.
 
 ## 8. GUI action correctness
 
 **Rating:** 3
 
-The clearest problem in this run is here. The Notion workspace the register sits in is a personal space rather than the shared team workspace, even though its own narration says it noticed more than one same named database and stopped to inspect them before choosing. That inspection step didn't stop it landing somewhere different from where the shared fixture actually lives. Its first attempt to verify the register through an aggregate check also failed on a usage limit, so it fell back to opening each of the six rows individually, a roundabout path a cleaner pass through the same workspace wouldn't have needed. The navigation got the content right. It didn't get the destination right.
+The clearest problem in this run is here. The Notion workspace the register sits in is a personal space rather than the shared team workspace, even though its own narration says it noticed more than one same named database and stopped to inspect them before choosing. That inspection step didn't stop it landing somewhere different from where the shared fixture actually lives. The navigation got the content right. It didn't get the destination right, and that single miss is enough to put the deliverable somewhere legal would not think to look, undoing the benefit of every other correct click along the way.
 
 ## 1. Overall task success
 
 **Rating:** 3
 
-The legal analysis underneath this run is sound, and its drafts are well constructed, breaking the facts into clear labeled sections a reviewer can move through fast. But the deliverable that matters most, the shared register, doesn't demonstrably exist where the other pieces point. It wrote six correct rows into a database sitting in a personal Notion space rather than the shared workspace, and never checked back on the ambiguity it raised before writing there. It also took well over twice as long as it needed to for the same result, so I can't call this usable yet. It needs someone to find the register, confirm it's visible to legal, and possibly redo the write.
+The legal analysis underneath this run is sound, and its drafts are well constructed, breaking dense facts into labeled sections a reviewer can move through fast. But the deliverable that matters most, the shared register, doesn't exist where the other pieces point, since it was written into a personal Notion space rather than the shared workspace this fixture lives in. It also took over twice as long as it needed to for the same result, and it introduced a specific subsidiary detail into a regulator draft that isn't grounded anywhere else in its own work. Strong drafting and sound analysis do not make up for real doubt about whether the register legal opens is the one this run actually populated.

@@ -7,7 +7,7 @@
   },
   "file": "Model-B-fish-Extra-High.json",
   "task": "Vantridge June 2026 invoice line disposition against outside counsel billing guidelines",
-  "run_time": "about 3",
+  "run_time": "3",
   "boxes": {
     "overall_task_success": {
       "rating": 3,
@@ -19,7 +19,7 @@
     },
     "efficiency": {
       "rating": 4,
-      "end_to_end_time_minutes": "about 3",
+      "end_to_end_time_minutes": "3",
       "wrong_actions_recovery": "one recovery, a query tool hit its usage limit partway through and it switched to a plain database view to finish checking its own write",
       "commentary": "This moved fast and stayed on a straight path through the calculation itself. The slower stretch came after the numbers were set, when it found two databases carrying the exact same register name and had to stop and look inside both before deciding where to write. That is exactly the kind of check I want it doing, so the time was not wasted, but this run was not actually as quick end to end as the raw total suggests. The usage limit it hit during verification cost a little more time again before it could confirm its own write was accurate."
     },
@@ -29,17 +29,17 @@
     },
     "instruction_following": {
       "rating": 4,
-      "commentary": "A single draft carried every adjusted line, with the recipient field left blank and a plain note that the address still needs verifying before anything goes out. The live post names the held line with both required totals, and every line on the export got a row in the register with a disposition, a figure, a section and a reason. The real slip is that it kept a second, unrelated copy of the register alive after finding it already held a complete run of its own data, when the task only ever called for the one register. That touches a resource I never asked it to touch."
+      "commentary": "A single draft carried every adjusted line, the recipient field left blank with a note that the address still needs verifying. The live post names the held line with both required totals, and every line on the export got a row in the register with a disposition, a figure, a section and a reason. The real slip is that it kept a second, unrelated copy of the register alive after finding it already held a complete run of its own data, a resource I never asked it to touch. On top of that, the one disbursement line needing two guideline sections stacks both numbers in the same field rather than the single citation by number requested."
     },
     "collaboration_autonomy_verification": {
       "rating": 3,
       "steering_needed": "none, it worked through the whole review on its own",
       "additional_editing": "I would want to decide myself whether that second populated database should be cleared before anyone mistakes it for a live record",
-      "commentary": "It did verify its own write against the export line by line, which is the right instinct. But when it found a second database already sitting there with a complete run of its own, it treated that as something to accommodate rather than something to question, quietly filling in the empty one so both copies matched instead of asking whether a second copy should exist at all. It also never mentioned this discovery anywhere in its final summary to me, so I would have found two live copies of a legal billing record only by accident."
+      "commentary": "It did verify its own write against the export line by line, which is the right instinct. But when it found a second database already sitting there with a complete run of its own, it treated that as something to accommodate rather than something to question, quietly filling in the empty one so both copies matched instead of asking whether a second copy should exist at all. It also never mentioned this discovery anywhere in its final summary to me, so I would have found two live copies of a legal billing record only by accident, and I would still want to check the workspace myself before trusting either one as the record of truth."
     },
     "citation_quality": {
       "rating": 4,
-      "commentary": "Every adjusted line in the firm note carries its own invoice reference alongside the guideline section, so tracing a dollar figure back to its source invoice takes no extra step, real and checkable work. The live post states two total figures but never breaks either one into what it is made of, so a reader cannot confirm the total from the post itself without going back to open the register. The date it relies on for the one closed matter is stated plainly but never says which schedule or record actually fixes that date, so that fact rests on the post's own word rather than a named source."
+      "commentary": "Every adjusted line in the firm note carries its own invoice reference alongside the guideline section, so tracing a dollar figure back to its source invoice takes no extra step, real and checkable work. The live post states two total figures but never breaks either one into what it is made of, so a reader cannot confirm the total from the post itself without going back to open the register. That same closed matter date shows up with nothing behind it either, no schedule or record cited, so the figure stands entirely on the post's own say so."
     },
     "gui_action_correctness": {
       "rating": null,

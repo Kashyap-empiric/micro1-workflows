@@ -41,7 +41,7 @@ L-17 | M-2213 — Redgate site environmental review | 1627.5 | escalate | 0 | 2.
 L-18 | M-2217 — Ohio wage and hour class action | 3060 | reject | 3060 | 5.1 | INV-40816: Preapprovee[d research, but narrative omits the approver's name and date]
 L-19 | M-2217 — Ohio wage and hour class action | 1955 | approve | 0 | 5.1 | INV-40816: Preapprovee[d research, narrative names the approving supervisor and date]
 L-20 | M-2217 — Ohio wage and hour class action | 1250 | reject | 1250 | 7.1 | INV-40816: Allocated of[fline/online legal research charge is non-reimbursable firm overhead]
-(Reason cells are column-truncated in the screenshot past the point shown in brackets; bracketed completions for the 6 non-approve lines and L-14/L-16 are taken from the matching Gmail draft and Teams post text. Row order in the live view is not grouped by line number. Per codexlogs.txt, model C found the same duplicate-Notion-database-name collision as model B, but resolved it by writing only to the newer empty register created alongside this run's source set, rather than also backfilling the older namesake.)
+(Row order in the live view is not grouped by line number. Per codexlogs.txt, this run also found a second database that already carried the exact same name, and resolved it by writing only to the newer, empty register created alongside this run's own source set rather than also backfilling the older one.)
 Totals per codexlogs.txt: Approve 13 lines / $43,045.50 billed / $0 off. Reduce 3 lines / $10,962.50 billed / $4,056.25 off. Reject 3 lines / $7,939.50 billed / $7,939.50 off. Escalate 1 line / $1,627.50 billed / $0 off. Total 20 lines / $63,575.00 billed / $11,995.75 off.
 
 --- Gmail draft, "Vantridge Industries — Orbison & Slate June 2026 invoice adjustments" ---
@@ -66,42 +66,42 @@ Vantridge Industries
 **Rating:** 5
 
 **Commentary:**
-Every rate reduction, the travel cut, the fixed fee exemption on the block billed line, and the research rule all landed correctly when I checked them against the export and the guidelines. The held line goes to the right supervisor, and the post covering it names both halves of what that person actually has to weigh, whether the work was fair game before the matter closed or should not have run at all, a more complete read than a flat payable question. It still carries the same blanket rebill line the firm note repeats on every adjusted item, including the one that is overhead and can never be cured by resubmission regardless of the section it sits under.
+None of the individual dispositions needed a second look. Every guideline based call, from the rate cuts through the travel reduction, the fixed fee exemption, and the research authorization rule, checks out cleanly against the export. The held line goes to the right supervisor, and the post names both halves of what that person has to weigh rather than only the payable question. Two things hold this back. The closing line to the firm asks for corrected or rebilled entries on every adjusted item, including the one that is pure overhead and can never be cured by resubmission. And one register reason for an approved line borrows wording about an injunction unrelated to the environmental work it covers, a mismatch between claim and source.
 
 ## 3. Efficiency
 
-**Rating:** 5
-**End-to-end time (minutes):** about 2
+**Rating:** 6
+**End-to-end time (minutes):** 2
 **Wrong actions / recovery:** none, it went straight through without needing to redo anything
-**Commentary:** This finished fast and it still did not skip the check that matters, finding two databases sharing the exact register name and looking inside both before deciding which one belonged to this run. That step alone would normally slow things down and it barely shows here. The one real drag is that the comparison happened silently in the middle of the run with no flag anywhere that a second, already complete copy of the register existed elsewhere in the workspace, something I would want surfaced rather than quietly resolved on its own.
+**Commentary:** This finished in about 2 minutes without a single wasted motion on the calculation itself, moving straight through every line against four source documents and landing on the same totals I would have reached by hand. It still paused properly when it hit two databases carrying the identical register name, and that pause is exactly right given what a duplicate legal record could cost later. The one small thing I'd tighten is that it read through the full contents of both databases end to end before picking a destination, when confirming which one was newly created for this run could have settled the question faster.
 
 ## 4. Writing quality
 
-**Rating:** 4
-
-**Commentary:**
-The firm note is the clearest document in this run, a real table with the amount, what is coming off and the full reasoning sitting in the same row, so a billing contact can scan it fast and still get the actual explanation without a follow up question. The live post covering the held line is almost as strong, stating both totals and how each one breaks down into its parts. That post runs everything into one dense paragraph with the sub totals separated only by a small mark rather than real line breaks, harder to skim in a channel than the actual content deserves.
-
-## 5. Instruction following
-
 **Rating:** 5
 
 **Commentary:**
-One draft only, the recipient field genuinely blank with a note that the firm's address still needs to be added and verified, a live post naming the held line with both totals, and a complete register row for every line with a figure, a disposition, a section and a reason. It also left the other, already populated database alone instead of touching a resource nobody asked it to touch. The one place it drifts from the guidelines' own text is the closing line asking the firm to rebill every adjusted item, which does not separate the one overhead charge that can never be paid from the lines a corrected narrative could actually fix.
+The firm note lays out a real table, amount, what is coming off and the full reasoning sitting in the same row, so a billing contact can scan it fast and still get the explanation without a follow up question. The line telling the firm what to actually do with that table is vague though, folding every adjustment into one instruction to handle it through the billing adjustment or rebilling without saying plainly which lines need which action. The live post covering the held line states both totals and how each breaks into its parts, but runs everything into one dense paragraph separated only by a small mark rather than real line breaks, harder to skim than the content deserves.
+
+## 5. Instruction following
+
+**Rating:** 6
+
+**Commentary:**
+The recipient field on the one required draft is left genuinely blank, with a plain note that the firm's address still needs adding, a live post naming the held line with both totals, and a complete register row for every line carrying a figure, a disposition, a section and a reason. It left the other, already populated database alone instead of touching a resource nobody asked it to touch, real restraint on its part. There is one small thing worth naming. The disbursement line that genuinely needed two different guideline rules to explain it lists both section numbers stacked together in the same field, when the request asked for a single citation by number on each line.
 
 ## 6. Collaboration, autonomy, and verification
 
 **Rating:** 4
 **Steering needed:** none, it completed the review without asking me anything
-**Additional editing before I'd use it:** just adding the firm's billing address, the rest is close to ready to send
-**Commentary:** It made the right call when it found two databases with the same name, choosing the one tied to this run's own source files rather than touching the one that already had a finished review sitting in it, real judgment on its part. What it did not do is tell me any of that happened. My only record of a second, complete register sitting in the workspace comes from its own working notes, buried well outside anything it actually reported back to me, exactly the kind of thing I need surfaced rather than quietly handled.
+**Additional editing before I'd use it:** adding the firm's billing address and pulling the internal review banner out of the draft before it actually goes to the firm
+**Commentary:** It made the right call when it found two databases with the same name, choosing the one tied to this run's own source files instead of touching the one that already had a finished review sitting in it, the smarter of the two options. What it did not do is tell me any of that happened. My only record of a second, complete register sitting in the workspace comes from its own working notes, buried well outside anything it actually reported back to me. The draft for the firm carries an internal review banner at the top, and nothing anywhere says that banner itself needs pulling before the email leaves, so it would go out unless I caught it myself.
 
 ## 7. Citation quality
 
 **Rating:** 5
 
 **Commentary:**
-Every line in the firm note ties its dollar figure to its own invoice number and guideline section, so I can trace any adjustment back to its source without a second lookup. The live post goes a step further and shows the two totals broken into their parts, so the headline figures are checkable from the post itself rather than just asserted. The one gap left is the date behind the one closed matter, stated plainly but without naming the schedule or record that actually fixes it, so that single fact still rests on the run's own word rather than a source I can point to.
+Each adjusted line in the firm note carries its own invoice number and guideline section, so tracing a dollar figure back to its source takes no extra step. The live post goes further, breaking the two totals into their parts so the headline figures are checkable from the post itself. Two gaps remain. One of those gaps is the closed matter date, given with confidence but with no underlying schedule or record cited to back it, so it rests on the run's own word alone. And the lines approved at partner rate for being complex work cite only a section number, with nothing in the row tying that specific task to why it earned the higher rate.
 
 ## 8. GUI action correctness
 

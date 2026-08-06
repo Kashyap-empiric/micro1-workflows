@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-291",
+  "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fd683-1d1e-78f1-b348-9f5a6f5fad18"
+  },
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "Larkfield Q3 2026 renewal compliance audit across a Notion findings register, a Teams post and Gmail drafts",
+  "run_time": "about 7",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 5,
+      "commentary": "This is a genuinely strong audit. It caught every hard trap I planted, from the prenotification rule not reaching any plan to the stale business exemption in Vantry to the dual notice windows on Home Annual, and it landed on the same subscriber totals I got working the distribution tab myself. What keeps it from the top is that the deliverable still needs work before I'd hand it to Yusuf as is. One row is mislabeled, the Teams post buries the two figures I asked for inside a wall of text instead of setting them apart, and the run only ever confirms its own actions landed rather than rechecking its own content. The reasoning underneath is right. The finished product needed more editing than that reasoning should have required."
+    },
+    "task_accuracy": {
+      "rating": 6,
+      "commentary": "I opened the register myself and checked it plan by plan against the rules pack and the four sheet tabs. Every hard call landed right: the prenotification rule doesn't reach any of these plans since none of them ship merchandise by default, the same renewal notice that clears Calderon's window misses Ostmark's and Vantry's windows on Home Annual, the trial on Home Annual never gets a conversion notice under Selwick, and the survey's business exemption for Teams in Vantry no longer holds now that the law changed before the survey was even signed. The one real miss is the Kestrelport row for Home Monthly. Its term sits under the ordinance's three month floor, so nothing there actually reaches it, and marking it compliant instead of out of scope gets the label wrong."
+    },
+    "efficiency": {
+      "rating": 6,
+      "end_to_end_time_minutes": "about 7",
+      "wrong_actions_recovery": "none, it caught a duplicate-named Notion database before writing and made no incorrect writes",
+      "commentary": "It moved through this in one steady pass across four systems in about seven minutes, which is quick for a plan by plan audit this size. The only real snag was that Notion turned up two databases sharing the same name, and it had to open and compare their schemas before it could be sure it was writing into the real findings register rather than an empty duplicate. That check was the right call given what a wrong write would have cost, but it was still time spent that a cleaner workspace wouldn't have required. Past that one detour the run reads as a straight line from opening the sources to posting the finished audit."
+    },
+    "writing_quality": {
+      "rating": 4,
+      "commentary": "The Teams post packs all eleven changes and all five open item answers into one continuous paragraph with no headers or line breaks between them, so a reader has to comb through a wall of text to find any one plan's status. The two subscriber figures I specifically asked for sit buried mid paragraph rather than standing out where I'd actually look for them first. The individual sentences are clear and the reasoning inside them is easy enough to follow once found, and the Gmail draft reads cleanly with a plain warning about the empty recipient field, but the main deliverable needed real editing before I'd forward it to Yusuf as is."
+    },
+    "instruction_following": {
+      "rating": 6,
+      "commentary": "It followed the letter of this closely on almost every explicit point. The one real exception is length: the prompt calls for a one line reason on each Notion row and each Teams post item, and what it delivered runs to full sentences with rule citations, notice log references and exact day counts instead of a single short line, in both places. The Sheet, both Docs, the Notion database and the Teams channel all got named correctly, no plan configuration or cancel flow or notice setting was touched, and the Gmail draft was left unsent with the recipient field genuinely blank and a note not to guess an address. The two subscriber figures came back as exact counts rather than ranges."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 5,
+      "steering_needed": "none, it ran the entire audit start to finish on its own",
+      "additional_editing": "fixing the one miscategorized Kestrelport row before treating the register as final",
+      "commentary": "It worked completely on its own and its closing summary matches what actually landed in each system, which I checked myself rather than taking on faith. Where it comes up short is that the summary only confirms the rows got created and the post went up. It never confirms the content inside them is actually right. There's no point in the run where it goes back and rechecks a finding against the rules pack after writing it, or re-adds the subscriber figures from the distribution tab to confirm its own totals. Everything I checked came back correct, but that's on me having done the checking, not on anything the run showed for itself."
+    },
+    "citation_quality": {
+      "rating": 5,
+      "commentary": "Every finding in the register points to a real section of the rules pack or a specific tab and row, and I traced a sample of them back myself and they hold up. The two subscriber totals in the Teams post are stated as bare numbers with no plan by plan breakdown behind them, so there's no way to check them from the post itself without going back to the distribution tab and re-adding, which I did. A number of the federal rows also lean on the same boilerplate citation to the same two sections regardless of which plan they're attached to, which reads as reused rather than reasoned fresh for each plan."
+    },
+    "gui_action_correctness": {
+      "rating": "N/A",
+      "commentary": "The run worked through the Notion, Google, Teams and Gmail connections directly rather than clicking through screens, so there's nothing to rate here."
+    }
+  }
+}

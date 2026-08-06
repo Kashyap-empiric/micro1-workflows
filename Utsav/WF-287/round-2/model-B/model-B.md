@@ -29,33 +29,34 @@ Raw evidence saved at `output/`:
 
 ## 2. Task accuracy, ignoring speed
 
+**Rating:** 3
+
 The failed behavior is a confident reclassification of one prior year balance from foreign to
-domestic that the source schedule does not support and the rules never call for, since nothing in
-either rule document asks for a prior year balance already capitalized to be tested again against
-the current year's location schedule. That single call flows into two of the five headline figures the
-post had to deliver, overstating the domestic balance available for the second election by a wide
-margin and understating the foreign amortisation figure for the year. The rest of the register, the
-reduction, the credit base, and the first election's closed status all check out fine, but a wrong
-domestic balance and a wrong amortisation number are exactly the figures the controller was told to
-expect as reliable and specific, so both need to be reworked before this is usable.
+domestic that the source schedule does not support and the rules never call for. That single call
+flows into two of the five headline figures the post had to deliver, overstating the domestic
+balance for the second election and understating the foreign amortisation figure. The rest of the
+register, the reduction, the credit base, and the first election's closed status check out fine, but
+a wrong domestic balance and a wrong amortisation number are exactly the figures the controller was
+told to expect as reliable, so both need reworking.
 
 ## 3. Efficiency
 
 **Rating:** 5
-**End-to-end time (minutes):** about 6
+**End-to-end time (minutes):** 6
 **Wrong actions / recovery:** none on the mechanical steps across the four systems, it moved through
 each one in order without a dead end, though one analytical call made partway through carried
 forward uncorrected into the final figures.
 **Commentary:** The mechanical pace here was good. It moved through all four systems in order with
-no wasted steps and no retries, and it reached a finished deliverable in well under what a job
-spanning four connected systems and three dozen cost lines should reasonably take. I am not scoring
-the analytical error against this box, that belongs to accuracy rather than pace. What keeps this
-off a higher mark is where its verification time actually went: it spent that time confirming it
-could reach each system rather than sanity checking the one prior year figure that turned out to be
-wrong, which is exactly the kind of check that would have caught the problem before it reached the
-final numbers.
+no wasted steps or retries, reaching a finished deliverable well under what a job like this should
+reasonably take. What keeps this off a higher mark is where its verification time went, confirming
+it could reach each system rather than sanity checking the one prior year figure that turned out
+wrong. It also committed every row of the register in one continuous pass instead of checking any
+of them along the way, leaving the whole batch exposed until the final readback caught whatever had
+gone wrong by then.
 
 ## 4. Writing quality
+
+**Rating:** 5
 
 The prose itself is clear and reads like a professional wrote it, plain sentences and specific
 numbers throughout with no filler. Two things hold it back. The channel post is a dense unbroken
@@ -68,15 +69,16 @@ requires.
 
 ## 5. Instruction following
 
-The circular is explicit and repeated on one point, that the second election reaches only domestic
-balances and that nothing about a foreign balance can be pulled into it under any provision, no
-matter what happened to that research afterward. This run took the opposite position on one balance,
-overriding the source schedule's own foreign label on its own initiative and folding that balance
-into the domestic figure it delivered. That is a direct miss on one of the most explicit constraints
-in the rules it was given, and it happened despite the separate instruction to assume nothing about
-what is on file rather than guess. The same root cause also shows up in the foreign amortisation
-figure it posted, so this is one wrong call that broke two of the specific outputs it was asked to
-deliver.
+**Rating:** 3
+
+The circular is explicit that the second election reaches only domestic balances and nothing about
+a foreign balance can be pulled into it under any provision, no matter what happened to that
+research afterward. This run took the opposite position on one balance, overriding the source
+schedule's own foreign label on its own initiative and folding that balance into the domestic figure
+it delivered. That is a direct miss on a plainly stated constraint in the rules, and it
+happened despite the instruction to assume nothing about what is on file rather than guess. The same
+root cause shows up in the foreign amortisation figure it posted, breaking two of the specific
+outputs it was asked to deliver.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -84,38 +86,39 @@ deliver.
 **Steering needed:** none beyond the one required approval before the channel post went live.
 **Additional editing before I'd use it:** the domestic balance figure and the foreign amortisation
 figure both need to be reworked before either goes anywhere near the controller.
-**Commentary:** It ran on its own through all four systems and did one genuinely good thing along the
-way, flagging a testing cost line that did not clearly fit any of the three cost types the credit
-rule allows and saying plainly that documentation was needed before claiming credit on it. That kind
-of honest gap flagging is exactly what I want to see. But its own verification pass called the
-register independently reconciled with no missing or duplicate lines, and that check never caught
-that it had overridden a source label on its own initiative. Confirming rows exist is a different
-exercise from confirming the analysis behind them holds up, and that second exercise is where this
-run came up short.
+**Commentary:** One genuinely good thing happened here on its own. It flagged a testing cost line
+that did not clearly fit any of the three cost types the credit rule allows and said documentation
+was needed before claiming credit. That kind of honest gap flagging is exactly what I want. Its own
+verification pass called the register independently reconciled with no missing or duplicate lines,
+and that check never caught the overridden source label. The request for my approval before the live
+post repeated the figures but never mentioned that one rested on a reclassification made
+unilaterally, so I never got the chance to catch it before it went out.
 
 ## 7. Citation quality
 
+**Rating:** 3
+
 The two figures tied to the disputed balance do not trace cleanly to the source. It states as
 settled fact that the workbook's own foreign label on that balance is a mislabeling, when nothing in
-either rule document or the workbook supports overriding that label, and it never flags this as a
-judgment call, it presents the corrected figure as if it were simply the reconciled answer. Elsewhere
-in the register the citations are solid, rule numbers are specific and mostly trace back to a real
-row. A citation that confidently contradicts its own source on two of the five required figures is a
-real defect rather than a minor gap, and it caps this box regardless of how clean the rest of the
-register is.
+either rule document or the workbook supports overriding it, and it never flags this as a judgment
+call, presenting the corrected figure as if it were simply the reconciled answer. Elsewhere the
+citations are solid, rule numbers are specific and mostly trace to a real row. A citation that
+confidently contradicts its own source on two of the five required figures is a real defect, and it
+caps this box regardless of how clean the rest of the register is.
 
 ## 8. GUI action correctness
 
-Not applicable. Every system here was reached through its connected integration rather than an on
-screen interface, so there was no click path or navigation to judge here either.
+Not applicable. Every step here went through a connected integration rather than a screen, so there
+was nothing for me to assess on navigation.
 
 ## 1. Overall task success
 
-This did not land where it needed to. Most of the register is right and the mechanics all worked,
-the register populated, the draft stayed unsent with an empty recipient, and the live post went out
-with an approval step in between. But the analysis overturned the source workbook's own foreign
-label on one prior year balance and treated it as domestic without any basis for doing so in the
-rules or the schedules provided, and that single call corrupted two of the five figures the post was
-specifically asked to deliver. A preparer relying on this would hand the controller a materially
-overstated domestic balance and an understated foreign figure, both stated with full confidence.
-That sits in the core analysis rather than at the edges, so this lands at 3.
+**Rating:** 3
+
+This did not land where it needed to. Most of the register is right and the mechanics worked, the
+register populated, the draft stayed unsent, and the live post went out with an approval step in
+between. But the analysis overturned the source workbook's own foreign label on one prior year
+balance and treated it as domestic with no basis in the rules, and that single call corrupted two of
+the five figures the post was asked to deliver. A preparer relying on this would hand the controller
+a materially overstated domestic balance and an understated foreign figure, both stated with full
+confidence. That sits in the core analysis rather than at the edges, so this lands at 3.

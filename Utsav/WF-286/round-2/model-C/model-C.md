@@ -16,7 +16,7 @@ Codex, gpt-5.6-dog, Extra High intelligence
 
 ## Output
 
-Note: the Notion "Rule relied on" column is cut off by column-width ellipsis in the pasted screenshot. Rows marked "[truncated in screenshot]" below could not be captured verbatim past what's visible; the Teams message below was captured in full (expanded, not cut off by "see more").
+Note: the Notion "Rule relied on" column is cut off by column-width ellipsis in the pasted screenshot. Rows marked "[truncated in screenshot]" below could not be captured verbatim past what's visible. The Teams message below was captured in full (expanded, not cut off by "see more").
 
 --- Notion page "Halvard Outbound Contribution Register", Default view (Request / Engineer / Lines changed / Outcome / Rule relied on / Target project) ---
 RQ-2101 | Nele Vandersteen | 12 | no approval needed - exempt | Policy §§2.1–2.2 and 5.1; Ap... [truncated in screenshot] | brackwater-config
@@ -53,15 +53,15 @@ Source screenshot: [teams post.png](output/teams%20post.png)
 
 ## 2. Task accuracy, ignoring speed
 
-**Rating:** 5
+**Rating:** 6
 
 **Commentary:**
-Every one of the ten outcomes checks out against the policy, the licences, the agreement doc and the patent list, including a licence with no patent clause defeating an otherwise plausible match against the patent list, and a contribution that only became a patent problem combined with a project already carrying the matching function. The committee referral is narrowed to the single row that needed it, and the reasoning also rules out a second, less obvious match against that same list on a request that looked similarly risky. The real gap sits underneath the correctness rather than in it. The whole analysis rests on a source repository copy that never got confirmed as the actual connected one.
+Every one of the ten outcomes checks out against the policy, the licences, the agreement doc and the patent list once I check them myself, including a licence with no patent clause defeating a plausible match, and a contribution that only became a problem combined with a project's existing work. The committee referral is narrowed to the single row that needed it, and the reasoning behind it holds up under a real check of the source. The one real seam sits in the redaction call, where the register cites an extra policy section that the posted channel version drops entirely, so the two records make a slightly different case for the same outcome.
 
 ## 3. Efficiency
 
 **Rating:** 3
-**End-to-end time (minutes):** About 10 including a full stop and a wait for a reply before it would continue.
+**End-to-end time (minutes):** 10
 **Wrong actions / recovery:** It stopped completely and reported back once the repository connection and the destination database both looked ambiguous, then resumed and finished once a person replied that access was fine.
 **Commentary:**
 The stop itself was reasonable on the surface, real conflicting signals on two separate destinations at once. But it had one more diagnostic path available before giving up, the same one it used successfully a few minutes later once told to try again, and it did not reach for that path before stopping. That means part of the wait was avoidable rather than a genuine dead end, and a full stop that needs a person to notice it, read it, and type something back costs far more real time than any retry inside the run would have. The work after it resumed moved quickly and cleanly, but the stall before that point is the real efficiency cost here.
@@ -75,10 +75,10 @@ The layout is genuinely scannable, a real header, one request per line with a bo
 
 ## 5. Instruction following
 
-**Rating:** 4
+**Rating:** 6
 
 **Commentary:**
-It posted live, used the exact wording for the exemption outcome, gave both counts as fixed numbers, and worked out the patent committee question correctly. Two things fall short of the letter of the brief. The access check instruction is explicit that a genuine block gets reported rather than guessed past, and having reported the repository as unconfirmed, it then proceeded on that same unconfirmed local copy once told access was fine, closer to trusting an assurance than confirming. Separately, the one line framing set for both the register note and the channel reason gets stretched into reasons stacking several clauses together on most rows, the same shortfall the register's own field format calls for a single line to avoid.
+Most of the individual reasons on this register run two or three citations and an explanatory clause together in one dense sentence, short of the single line the brief calls for in both the register note and the channel reason. That is the one real place this run drifts from the letter of what was asked, and it shows up on request after request rather than as a single exception. Everything else lines up exactly, live posting instead of a draft, the exact wording for the exemption outcome, both counts as fixed numbers, and a patent committee routing that correctly names which flagged rows stay out of it.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -97,14 +97,14 @@ Every reason traces to a real source and several rows go beyond the minimum, act
 
 ## 8. GUI action correctness
 
-**Rating:** 5
+**Rating:** 6
 
 **Commentary:**
-The one real piece of work on screen here was checking a browser tab that was already open to work out which of several destination records sharing the same name was actually the live one, a correct and genuinely useful read that avoided guessing at the destination. The gap is that this same check only got used for one of the two ambiguous surfaces in play. The other one, the source repository, had the identical kind of open question and never got the same visual confirmation. It got resolved by assumption instead, so a verification habit that worked well once was not applied consistently to the second place it was just as needed.
+Getting to the useful read here took an extra stop first, a browser tab built into the workspace checked and found empty before switching to the signed in session that actually had the record needed. That is a small wasted step in an otherwise correct path, the kind of detour that costs a little time without changing where it ended up. Once it found the right tab, checking which of several destination records sharing the same name was actually the live one was a correct and useful read that avoided guessing at the destination, and the value it pulled off screen matched what the row needed.
 
 ## 1. Overall task success
 
 **Rating:** 4
 
 **Commentary:**
-The substance is right. I checked all ten outcomes against the actual source and the committee call and both required counts are correct, and the finished register and post are complete with the repository left untouched. What pulls this down is the run itself more than the answer. It hit a genuine access question on two fronts at once, checked one with real rigor and let the other go on a bare assurance rather than a confirmed connection, then needed a person to step in before it would finish at all. That combination, a full stop plus an unverified assumption sitting underneath all ten calls, is a real cost on a task whose brief specifically asks for confirming over guessing.
+The substance is right. I checked all ten outcomes against the actual source and the committee call, and both required counts are correct, with the register and post complete and the repository left untouched. What pulls this down is the run itself more than the answer. It hit a genuine access question on two fronts at once, checked one with real rigor by opening each record and comparing the stored value, and let the other go on a bare assurance rather than a confirmed connection, then needed a person to step in before it would finish. That combination, a full stop plus an unverified assumption, is a real cost on a task whose brief asks for confirming over guessing.

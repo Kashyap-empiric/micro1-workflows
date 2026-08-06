@@ -59,11 +59,11 @@ I checked the register and the channel post myself against the policy, licences,
 
 ## 3. Efficiency
 
-**Rating:** 5
-**End-to-end time (minutes):** About 6, one unbroken stretch.
+**Rating:** 6
+**End-to-end time (minutes):** 6
 **Wrong actions / recovery:** None, it went straight to the deliverable with no failed attempts or retries.
 **Commentary:**
-This ran clean from start to finish, with no dead ends and no backtracking. The read phase, three rulebook documents, four sheet tabs, ten patches and their upstream files, happened as one undifferentiated block before a single decision got locked in or written anywhere, so there is no visible checkpoint partway through. If any one of the ten calls had needed a correction, the whole batch would have needed checking again rather than an early row being finalized and left alone. It moved fast and straight, but a task this size with this much reference material benefits from a point where progress gets saved partway, and this one shows none until the final readback right before the post went out.
+This moved in one continuous pass, reading the rulebook documents, the reference tabs, and every patch before locking in a single decision, then writing the register and posting the summary in about 6 minutes with no dead ends and no retries. The one real limitation is how it handled its own safety net. All ten rows got committed in one block and only got checked afterward in a single bulk readback, so nothing was confirmed as correct partway through the work. A run this size benefits from at least one earlier point where a finished piece gets locked in and left alone, and this one carried that risk all the way to the very end instead.
 
 ## 4. Writing quality
 
@@ -74,10 +74,10 @@ The register cells are terse and scannable, and the channel post reads as comple
 
 ## 5. Instruction following
 
-**Rating:** 5
+**Rating:** 6
 
 **Commentary:**
-The literal requirements mostly land. It posted live rather than leaving a draft, used the exact required wording for the automatic exemption outcome, gave both required counts as fixed numbers rather than a range, and worked out the patent committee routing as asked. The one instruction it consistently bends is the "one line" framing the brief sets for both the register's own reason field and the channel post's reason per request. In both places, several of the reasons are actually two or three separate citations chained into a single sprawling sentence rather than one line naming one governing fact, so the same "one line" requirement gets stretched past what it asks for across both of those required surfaces.
+The one place it consistently bends the brief is the single line the register and the channel post each call for per request. Several of the reasons run two or three separate citations chained into one sprawling sentence instead of a single line naming one governing fact, so that requirement gets stretched past what both surfaces actually asked for. Everything else in the literal brief lands cleanly, posted live rather than left as a draft, the exact wording used for the automatic exemption outcome, both required counts given as fixed numbers rather than a range, and the patent committee routing worked out correctly.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -85,14 +85,14 @@ The literal requirements mostly land. It posted live rather than leaving a draft
 **Steering needed:** None, it ran unattended from start to finish with no stop and no question back to me.
 **Additional editing before I'd use it:** Light, mostly tightening the channel post's opening and breaking the dense paragraph into separate lines before I'd send it as is.
 **Commentary:**
-It read everything, reconciled all ten decisions, wrote the register, and read the rows back before posting, and the final counts matched what actually went out. What it did not show is any independent recheck of its two hardest calls at the very end, whether one project's licence actually carries a patent grant clause and whether a contribution's wording genuinely matches something on the patent list. The readback it narrates confirms the row exists and the value matches what it intended to write, without confirming the underlying judgment call got a second look. That is a real gap in checking its own work on exactly the two rows where being wrong would have mattered most.
+It read everything, reconciled all ten decisions, wrote the register, and read the rows back before posting, with the final counts matching what actually went out. That readback only confirmed the rows existed and matched what it intended to write. Nothing in the run shows it going back to recheck the underlying judgment on its two hardest calls once they were made. It also never applied that same discipline to the channel post. The Notion write got an explicit readback before anything else happened, and the live message went out with no equivalent confirmation that it had actually landed, a gap in the same run that otherwise verified everything else it touched.
 
 ## 7. Citation quality
 
 **Rating:** 5
 
 **Commentary:**
-Every reason I traced led back to a real source, a policy section, a licence's own grant clause, or a named tab on the reference sheet, and none of it reads as invented or eyeballed. Several rows go further than a bare policy citation and name the actual document behind the call, an agreement instrument or a specific list from the reference sheet. The gap is depth more than accuracy. On the two rows where a contribution or a project's own function happened to match something on the patent list, the reasoning states the conclusion without walking through why other, similarly plausible matches were ruled out, so confirming that negative side still means opening the list myself.
+The two rows where a contribution or a project's own function happened to match something on the patent list state their conclusion without walking through why other, similarly plausible matches were ruled out, so confirming that negative side still means opening the list myself. Everything I traced otherwise led back to something real, a policy section, a licence's own grant clause, or a named tab on the reference sheet, with nothing that reads as invented or eyeballed. Separately, the corporate agreement routing states that an individual signature carries no rights without naming the specific agreement clause that establishes it, leaning on the policy section alone for a claim the agreement terms actually decide.
 
 ## 8. GUI action correctness
 
@@ -103,4 +103,4 @@ N/A. Nothing in the run shows navigation on screen, no browser tab, no visual cl
 **Rating:** 5
 
 **Commentary:**
-I checked the finished register and the live post against the source myself and the substance is genuinely right across all ten filed requests, the two hardest calls included, and the deliverable is complete with nothing skipped. That is a strong, usable result for the person who has to stand behind it Friday. The reasoning on several rows lands on the answer without showing every alternative ground got ruled out, and those rows stack several clauses together rather than the single line the brief asked for. The post itself also opens with a repeated headline and reads as one dense paragraph rather than something built to be scanned quickly. Correct and complete, with real rough edges still needing a pass.
+All ten filed requests hold up once I check the finished register and the live post against the source myself, the two hardest calls included, a strong, usable result ahead of Friday's deadline. The reasoning on several rows lands on the answer without showing every alternative ground got ruled out, and the required one line reasons often stack several citations together instead. The post opens by repeating its own headline and reads as one dense paragraph rather than something built for a quick scan. Neither the hardest judgment calls nor the post itself got a second look before going out. Correct and complete, with real work still needed on presentation and on rechecking its own output.

@@ -1,0 +1,56 @@
+Worked for 5m 1s
+
+
+I’ll first verify access to the Google Sheet, both Google Docs, the Notion register, and the Teams channel, then reconcile the plan-level rules and subscriber counts before writing the register, posting the audit, and preparing unsent Gmail drafts. I’m applying the Google Drive, Google Sheets, Notion research, Teams messaging, and Gmail skills because this task spans those connected systems and requires verified, precisely scoped writes.
+
+
+
+
+Used Notion, Google Drive, Microsoft Teams, and Gmail integrations, ran commands
+
+
+I located all required sources and the exact Teams channel, and Gmail access is available. I’m now opening the source documents, checking the spreadsheet’s actual tab structure, and inspecting the Notion database schema before applying any rules or creating records.
+
+
+
+
+Used Notion, Microsoft Teams, and Google Drive integrations
+
+
+The source material exposes several important scope traps: the federal rule does not cover ordinary software renewals, Vantry’s business exemption was removed before the survey, and Kestrelport’s city notice becomes operative exactly when Q4 renewals begin. I’m reconciling those against the actual notice timings, cancellation methods, save-offer screens, and city-level subscriber counts.
+
+
+
+
+The audit now covers eight plans across 33 federal, state, and applicable city jurisdiction rows. I found 11 required changes affecting six plans; the subscriber totals are 13,615 on affected plans and 13,760 on plans requiring no changes, and only Delia Marchetti’s save offer requires a growth-lead draft.
+
+
+
+
+Used Notion and Gmail integrations
+
+
+All 33 Notion findings have been written and independently verified, and Delia’s single Gmail draft has been created with an empty To field and an explicit verified-address warning. I’m publishing the complete Teams audit now, including all 11 required changes, both exact subscriber totals, and resolutions for the memo’s five open questions.
+
+
+
+
+Used Notion, Microsoft Teams, and Gmail integrations
+
+
+The Teams audit is posted, and both the post and the recipient-free Gmail draft have been read back successfully. The 33 Notion rows were already independently verified; a later optional aggregate recheck encountered the workspace’s Notion query-usage limit, which does not affect the completed register.
+
+
+
+
+
+
+
+Notion findings register: 33 verified records; 11 required changes.
+Teams audit posted: 13,615 subscribers on affected plans; 13,760 on unaffected plans.
+One unsent Gmail draft prepared for Delia Marchetti; recipient intentionally blank.
+No subscription configurations were changed.
+An optional final Notion query exceeded the workspace allowance after all records were verified. Additional queries require waiting or upgrading Notion.
+
+
+6:13 PM
