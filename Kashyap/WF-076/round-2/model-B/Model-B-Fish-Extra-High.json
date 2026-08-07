@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-076",
+  "model": "B",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-fish, Extra High intelligence",
+    "session_id": "019fd11a-aa0e-71a2-ad0e-f157367b1b66"
+  },
+  "file": "Model-B-Fish-Extra-High.json",
+  "task": "Test Data Generation and Form Validation",
+  "run_time": "23",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 4,
+      "commentary": "This is a fast, accurate run. The numbers hold up everywhere I checked them, the severities are argued correctly against the specific rule each one cites, and it needed essentially nothing from me once it started. What keeps it from landing higher is that the one behavior this fixture exists to test, catching a ticket that already covers the same underlying issue before filing something new, is not demonstrated anywhere in what got delivered, and the screenshot evidence meant to back the six findings does not reliably match its own captions when I look closely. I'd trust the ticket content but would need to sort out which image belongs to which defect before treating the evidence as settled."
+    },
+    "task_accuracy": {
+      "rating": 6,
+      "commentary": "When I check it, every number here checks out, the sheet, the report, and the filed defects all agree, and the severity call on every finding matches the exact rule it ties back to, precise reasoning rather than a guess at the band. The one place I'd still flag is the overlap field, on two findings it just restates the same form the defect was already filed against rather than pointing at anything distinct, and on the pricing defect that field is missing entirely while every other finding has one, so the paperwork is not applied evenly across the six."
+    },
+    "efficiency": {
+      "rating": 5,
+      "end_to_end_time_minutes": "23",
+      "wrong_actions_recovery": "one dataset write attempt failed outright against the sheet's existing structure and had to be redone once, with no other retries needed.",
+      "commentary": "This run moved in a straight line from start to finish, one continuous pass with no wasted detours and no need for me to step back in once it got going. The one real hiccup was a first attempt to write the dataset that the existing sheet structure rejected outright, caught and corrected on the next try without losing any data. Set against a run this size, spanning nine live forms, six filed defects, and a full report, a single retried write is a small cost. What keeps this out of the top band is that the finished report never got a page by page visual check before being called done, so the layout went out unverified."
+    },
+    "writing_quality": {
+      "rating": 6,
+      "commentary": "When I read this document, it reads clean on the page, precise rule citations tied to exact code locations, a table structure that holds together, and severity language matching the requested rubric word for word. The one real seam I can find is in the Run Log itself, where the workflow stage field cuts off mid word instead of naming the notification destination in full. It is a small thing in an otherwise well laid out report, but it is the kind of loose end I wouldn't expect a finished deliverable to ship with, especially given how careful the rest of the formatting is."
+    },
+    "instruction_following": {
+      "rating": 4,
+      "commentary": "Form scope, the cap logic, negative and reusable data kept separate, unassigned tickets with the right label set, all of that is handled correctly and precisely. The one required behavior I cannot confirm anywhere in what got delivered is the check against a ticket that already existed and overlapped, the specific trap this fixture is built to test, and nothing in the report or the tickets documents that check having happened for any of the six findings. The tagging requirement also is not fully met for one record type, since it carries the run identifier only through its parent rather than on itself, something the report at least states plainly instead of leaving me to discover it."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 6,
+      "steering_needed": "essentially none, it ran the entire task unattended aside from one routing note given before it hit any actual obstacle.",
+      "additional_editing": "I'd want the mismatched evidence captions in the finished report corrected before treating that section as trustworthy.",
+      "commentary": "This one ran the whole pipeline on its own, recovered from the one failed write without needing me to intervene, and confirmed the right labels and assignment state on every filed ticket before calling the run done. The one place the checking of its own work runs thin is exactly where it matters for a report full of screenshots, it never went back to confirm that each saved image actually corresponds to the finding it is filed under, checking that six tickets existed with the right fields but not that the six pictures attached actually matched what each ticket claims."
+    },
+    "citation_quality": {
+      "rating": 3,
+      "commentary": "The written citations are genuinely strong, specific file and line references behind every rule, and the severity reasoning traces back to exactly what is cited rather than a guess. The visual evidence is where this breaks down when I check it against its own labels. One caption has no image beneath it at all, and two images that exist are captioned as evidence for a different finding than what they actually show, an order screen filed as proof of the phone issue, and a customer record filed as proof of the product markup. Strong textual sourcing next to visual evidence that does not match its own captions is not a small gap in a report built around screenshots as proof."
+    },
+    "gui_action_correctness": {
+      "rating": 6,
+      "commentary": "When the first staging address it tried got blocked, it worked out a different route on its own and kept going without needing me to point it there, a genuinely capable piece of troubleshooting. It got through all nine forms live with no wrong turns I can point to in the actual submissions themselves. The one place I'd still flag is the recording step around those actions, the screenshots meant to document specific submissions read more like a handful of generic dashboard snapshots reused across different findings than fresh, targeted screenshots taken at the moment each defect was reproduced, which is why some of them end up labeled under the wrong finding entirely."
+    }
+  }
+}

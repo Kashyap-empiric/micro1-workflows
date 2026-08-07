@@ -12,10 +12,10 @@ Extra High intelligence only).
 3. Time to complete this workflow WITHOUT a model (minutes): 120
 4. Times PER MONTH I run this workflow: 2
 5. Workflow difficulty 1-7: 6
-6. Initial Codex test rating 1-7: [pending, this is my own read going into this round's specific run and should not carry over from a prior round's scored result]
+6. Initial Codex test rating 1-7: N/A, this field records my own expectation going in before seeing a run, and none was captured at the time for this round, so it is left blank rather than reconstructed after the fact.
 7. Notes on Codex's performance:
 
-All three runs got the disposition math right on every one of the twenty lines, including the two harder calls, the block-billed line saved by the fixed-fee exemption and the line needing a supervisor's escalation because the work fell after the matter's own closure date. None of the predicted failure modes I'd have expected on a task like this showed up: nothing got approved on a guess, nothing skipped the guideline-section citation, and no invoice was paid or released. What actually separated the three was a naming collision no one asked for, a second pre-existing database sharing the exact register name. One run backfilled both copies without ever mentioning it happened, one found it and made a documented choice that stayed off the record, and one resolved it cleanly and reported nothing further. That is the finding this round actually turned on.
+All three runs got the disposition math right on every one of the twenty lines, including the two harder calls, the block billed line saved by the fixed fee exemption and the line needing a supervisor's escalation because the work fell after the matter's own closure date. None of the predicted failure modes I'd have expected on a task like this showed up. Nothing got approved on a guess, nothing skipped the required guideline citation, and no invoice was paid or released. What actually separated the three was a naming collision no one asked for, a second database that already existed and shared the exact register name. One run backfilled both copies without ever mentioning it happened, one found it and made a documented choice that stayed off the record, and the third never showed any sign of noticing the collision existed at all. That is the finding this round actually turned on.
 
 ## Readiness
 
@@ -40,10 +40,9 @@ The flaw hunt below was built directly from prompt-def.txt and data-seeding.txt 
 Model C.
 
 ### Why is the top model best, and what separates the other models?
-Model C reached the same correct dispositions as the other two on every line, including the
-correct rate reductions, the travel cut, the fixed fee exemption, the research authorization rule,
-and the one line that had to go to a supervisor because the work fell after its matter's closure
-date. It framed that escalation the way the guidelines actually ask for it to be framed, naming
+Model C reached the same correct dispositions as the other two on every line, matching every rate
+reduction, travel cut, and fee exemption call the guidelines produce, plus the one line that had to
+go to a supervisor because the work fell after its matter's closure date. It framed that escalation the way the guidelines actually ask for it to be framed, naming
 both questions the supervisor has to weigh rather than only one. Its firm note combined a scannable
 table with the full reasoning behind every adjustment, the most complete version of that document
 across the three, and it was also the fastest run without cutting the one verification step that
@@ -73,8 +72,8 @@ run sits behind the other two despite doing the underlying analysis correctly.
 ## Final sign-off
 
 - [x] All three model files contain raw Logs and Output.
-- [x] Requirements, traps, and source-of-truth checks were completed against prompt-def.txt and
-      data-seeding.txt directly (no prompt-def worksheet with a planted-trap table exists for this WF).
+- [x] Requirements, traps, and checks against the real source were completed against prompt-def.txt
+      and data-seeding.txt directly (no prompt-def worksheet with a planted trap table exists for this WF).
 - [x] Boxes 2-8 were finalized before box 1 in all three model files.
 - [x] Box 1 was derived holistically from the finalized boxes 2-8, not a fixed formula.
 - [x] Individual model files contain no visible cross-model comparison, letter, or codename.

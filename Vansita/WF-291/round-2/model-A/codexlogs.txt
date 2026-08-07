@@ -1,0 +1,60 @@
+Worked for 7m 5s
+
+
+I’m using the Google Drive/Sheets/Docs, Notion, Teams messaging, and Gmail skills because this audit crosses all four systems. I’ll first verify that every named source and destination is accessible, then derive and cross-check every finding before writing anything; if any required item cannot be opened, I’ll stop exactly as requested.
+
+
+
+
+Used Notion, Google Drive, and Microsoft Teams integrations, ran commands
+
+
+The named Sheet, both Docs, and the Teams channel are discoverable. Notion returned two databases with the exact same title, so I’m checking their schemas and contents now to identify the intended register without risking writes to the wrong one.
+
+
+
+
+Used Notion and Google Drive integrations
+
+
+All source material is now open and complete. The operative pattern is clear: 33 plan–jurisdiction rows, including Federal for every plan and Kestrelport only where the distribution tab shows a Kestrelport billing address. I’m reconciling those against the populated register now so I can avoid duplicate Notion entries and catch any stale or incomplete rows before the outbound post and drafts.
+
+
+
+
+Used Notion, Microsoft Teams, and Gmail integrations
+
+
+The Teams messaging skill resolved the exact renewal-audit channel, and it is currently empty. I’m posting the source-grounded change list there now, with 13,615 affected-plan subscribers, 13,760 no-change-plan subscribers, and one disposition for each of the memo’s five open items.
+
+
+
+
+Send channel message
+
+
+
+
+
+The Gmail skill found one affected growth lead: Delia Marchetti, because the same Plus Annual offer fails in both Ostmark and Selwick. I’m creating a single unsent draft for her with the To field intentionally empty and an explicit verified-address warning; Ravi Chandrasekar’s offer needs no change, so he gets no draft.
+
+
+
+
+Used Gmail and Microsoft Teams integrations
+
+
+
+
+
+Audit completed.
+Notion findings register: all 33 required plan–jurisdiction rows verified. I avoided the empty duplicate database with the same title.
+Teams audit post: posted with all 11 required changes, all five open-item dispositions, and the figures:Plans needing a change: 13,615 subscribers
+Plans needing nothing anywhere: 13,760 subscribers
+
+Gmail draft for Delia Marchetti: unsent, To field empty, with a verified-address warning. No draft was needed for Ravi Chandrasekar because his offer is compliant.
+No plan configuration, cancellation flow, or notice setup was changed.
+Notion’s direct database-query operation was usage-limited, so I verified every row individually through search and page reads instead. The query feature can be retried later or unlocked through Notion’s plans.
+
+
+3:36 PM

@@ -78,48 +78,48 @@ Call Details tab (raw export, 11 rows) and Non-Generative Calls tab (2 rows, emb
 
 **Rating:** 3/7
 
-This run's classification work is solid, the dependency reasoning is correct throughout, and the screening catches a genuine secondary trap that not every run this cycle caught, a call row tied to an already excluded duplicate request rather than counted on its own. The real problem sits in the token estimation choice. It uses a noticeably more aggressive characters per token divisor than the standard approximation, and that choice is what pushes one endpoint's static prompt estimate just over the provider's real caching minimum, turning an opportunity a standard estimate would rule out into one it recommends and tickets. That same divisor is also most of the reason the headline monthly spend figure lands roughly a third above a more conventional estimate. Disclosing the method does not fix the fact that a threshold call this consequential rests on a number never validated against anything real.
+The token estimation choice is the real problem here: a noticeably more aggressive characters-per-token divisor than the standard approximation, which pushes one endpoint's static prompt estimate just over the provider's real caching minimum and turns an opportunity a standard estimate would rule out into one this run tickets. That divisor is also most of why headline monthly spend lands roughly a third above a more conventional estimate, and disclosing the method doesn't make the number any more validated. Set against that, the classification and dependency reasoning is correct, and the screening picks up a quieter issue: one surviving call row belongs to a request already excluded as a duplicate, and counting it alone would inflate the total.
 
 ## 3. Efficiency
 
 **Rating:** 3/7
 **End-to-end time (minutes):** 17 (17m 5s)
-**Wrong actions / recovery:** none stated, it moved through the checks, the trace, the screening, and the report as one continuous pass
-**Commentary:** Seventeen minutes for the full route trace, both telemetry tables, seven endpoints of math, two tickets, and a channel post runs longer than a task of this shape should need. The log itself shows a real reason: three separate Jira write calls land against two tickets that only needed two writes between them, a create for the new ticket and one edit for the refreshed one, so one of those writes looks like a redo rather than a clean first pass. The scope covered is real and the work is thorough, but that extra write is a specific, named drag on top of an already long run, and it is enough to keep this out of the top band.
+**Wrong actions / recovery:** none, the pipeline ran the checks, the trace, the screening, and the report as one unbroken pass
+**Commentary:** The log points to a specific, named drag on this run's time: three separate Jira write calls land against two tickets that only needed two writes between them, one create for the new ticket and one edit for the refreshed one, so one write reads as a redo rather than a clean first pass. That extra write sits on top of a long 17 minutes covering the route trace, the two-table telemetry breakdown, the full cost and latency tally across seven endpoints, two tickets, plus the channel notification, longer than a task of this shape should need. The scope covered is real and the work underneath is thorough, but the redo alone keeps this run out of the top band.
 
 ## 4. Writing quality
 
 **Rating:** 4/7
 
-Both tickets are laid out cleanly, each stating the volume, the cost, the latency, and a single clear opportunity without padding. Two things hold the channel message back. It opens by stating its own headline and then restates the same weekly attribution line as a near duplicate second sentence before any figure appears, a repeat a reader has to read past. And the headline spend figure that follows carries no hint to the reader that it rests on a more aggressive token estimate than a standard approach would produce, so it reads as a settled number rather than the estimate dependent figure it actually is.
+Where this run's writing loosens up is the channel message, which folds the code snapshot and the screening notes into the same dense paragraph as the headline numbers with no break between them, so both ticket references end up buried in the middle instead of standing out. Before any figure lands, that same paragraph opens by restating the headline's week and topic in a longer form, so the reader hears the same fact twice. Both tickets avoid all of that: each one states the volume, the cost, the latency, and a single clear opportunity, clean and to the point with nothing extra tacked on.
 
 ## 5. Instruction following
 
 **Rating:** 3/7
 
-The explicit mechanics are followed well, non generative calls are kept separate, dead and flag disabled code is excluded and logged, and the existing ticket gets refreshed without its assignee or status touched. Two things fall short. The ticket gate itself is the bigger one. The task is explicit that a ticket needs a real opportunity attached, and the caching case behind the second ticket only clears that bar because of this run's own aggressive token estimate rather than a standard measure, close to filing a ticket on an estimate rather than a demonstrated opportunity. And the closing channel summary counts its two tickets without linking either one, leaving the reader to go find them separately.
+The bigger problem is the ticket gate. Filing is supposed to require a demonstrated opportunity, and the caching case behind the second ticket clears that bar only because of this run's own aggressive token estimate rather than a standard measure, closer to an estimate standing in for proof. That sits on top of an otherwise well-handled set of mechanics: non-generative calls stay apart from the billable ones, dead and flag-disabled code gets excluded and logged, and the refreshed ticket keeps its original assignee and status untouched. One smaller miss stacks on the bigger one: the channel summary spells out both ticket numbers as plain text instead of something a reader could click through to.
 
 ## 6. Collaboration, autonomy, and verification
 
 **Rating:** 3/7
 **Steering needed:** none, it completed the whole pipeline unattended
-**Additional editing before I'd use it:** I'd rerun the token estimate with a standard divisor before trusting either the headline spend figure or the second ticket, and I'd want the resulting cache eligibility call reconfirmed
-**Commentary:** It ran the whole thing without needing me to step in, and the telemetry screening is genuinely careful, catching a secondary exclusion trap the run could easily have missed. Where the self checking falls short is exactly where it mattered most, the token estimate that decided whether a ticket should exist at all. Nothing in the run stops to sanity check that number against a standard approximation or a real tokenizer before treating it as the basis for a filed ticket, so a choice that materially changes the outcome went out without the scrutiny a threshold call like that deserves.
+**Additional editing before I'd use it:** I'd rerun the token estimate with a standard divisor before trusting either the headline spend figure or the second ticket, and the resulting cache eligibility call needs reconfirming too
+**Commentary:** The token estimate that decided whether a ticket should exist at all is exactly the spot where this run's self-checking needed to show up and didn't. Nothing in the pass sanity-checks that number against a standard approximation or a real tokenizer before treating it as the basis for a filed ticket, so a choice that materially changes the outcome went out without the scrutiny a threshold call like that deserves. That's a real gap, because the run is otherwise capable of catching its own mistakes: it completed the whole pipeline without my having to step in, and the telemetry screening is genuinely careful, catching a secondary exclusion trap the run could easily have missed.
 
 ## 7. Citation quality
 
 **Rating:** 3/7
 
-The pricing figures themselves trace cleanly to official pages with checked dates, and that discipline is consistent across every model this run priced. The real weakness is one step upstream of the pricing, the token counts those prices get multiplied against. The headline spend figure and the second ticket's cache claim both rest on a token estimation method that was never checked against anything more concrete than its own stated divisor, so the two numbers a reader would actually want to cite from this run are one hop removed from something verifiable rather than fully traceable.
+The pricing figures themselves trace cleanly to official pages with checked dates, and that discipline is consistent across every model this run priced, extending to the cache read and write rates as well as the headline per-token prices. The real weakness is one step upstream of the pricing, the token counts those prices get multiplied against. The headline spend figure and the second ticket's cache claim both rest on a token estimation method that was never checked against anything more concrete than its own stated divisor, so the two numbers a reader would actually want to cite from this run are one hop removed from something verifiable rather than fully traceable.
 
 ## 8. GUI action correctness
 
-**Rating:** 6/7
+**Rating:** 5/7
 
-The browser check for an existing channel post reached a real conclusion, searching the window and finding no match before the message went out, a completed check rather than a stall. The one thing keeping this from a higher mark is that the run reports the negative search result without showing what the screen itself displayed, so I am taking a completed but undocumented check on trust.
+Two things keep this browser check out of the top band. What should have been one continuous look at the channel instead splits into two separate visits, one earlier in the run bundled in with unrelated repository work and another right at the end just before the send. The matching logic behind both visits was also narrow, tied to the report's sheet name and its date window rather than the substance of a post, so a differently worded duplicate about that same report could have gone unnoticed in either visit. Even so, the check itself is real and it reports back a clear finding, no active match, before the notification actually went out.
 
 ## 1. Overall task success
 
 **Rating:** 3/7
 
-The route tracing, the grouping, and the dependency calls are all correct, and the telemetry screening is genuinely careful. What caps this well below that is a single method choice, an aggressive token estimation divisor, that both inflates the headline spend figure by roughly a third and is the deciding factor in whether one endpoint earns a Jira ticket at all. That is not a cosmetic difference, it changes a real recommendation this task is specifically built to test. A persona reading this handoff would walk away with a materially higher cost estimate and an action item that a more standard measurement would not support, and neither the number nor the ticket carries any flag telling them so.
+One method choice caps this below where the reasoning would otherwise land it: an aggressive token estimation divisor that inflates the headline spend figure by roughly a third and decides whether the marginal endpoint earns a ticket at all. That's a shame, because the classification, dependency, and feature grouping calls are all correct, and the telemetry screening is careful, catching a trap a looser pass would miss. The run also takes longer than its shape calls for, carrying an extra Jira write that reads as a redo rather than a clean first pass. I'd come away from this handoff with a materially higher cost estimate and an action item a more standard measurement wouldn't support, and nothing flags either one.

@@ -7,19 +7,19 @@
   },
   "file": "Model-C-dog-Extra-High.json",
   "task": "Halvard Systems July 2026 outbound open-source contribution queue: policy, licence, and patent committee disposition",
-  "run_time": "About 10 including a full stop and a wait for a reply before it would continue.",
+  "run_time": "10",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
-      "commentary": "The substance is right. I checked all ten outcomes against the actual source and the committee call and both required counts are correct, and the finished register and post are complete with the repository left untouched. What pulls this down is the run itself more than the answer. It hit a genuine access question on two fronts at once, checked one with real rigor and let the other go on a bare assurance rather than a confirmed connection, then needed a person to step in before it would finish at all. That combination, a full stop plus an unverified assumption sitting underneath all ten calls, is a real cost on a task whose brief specifically asks for confirming over guessing."
+      "commentary": "The substance is right. I checked all ten outcomes against the actual source and the committee call, and both required counts are correct, with the register and post complete and the repository left untouched. What pulls this down is the run itself more than the answer. It hit a genuine access question on two fronts at once, checked one with real rigor by opening each record and comparing the stored value, and let the other go on a bare assurance rather than a confirmed connection, then needed a person to step in before it would finish. That combination, a full stop plus an unverified assumption, is a real cost on a task whose brief asks for confirming over guessing."
     },
     "task_accuracy": {
-      "rating": 5,
-      "commentary": "Every one of the ten outcomes checks out against the policy, the licences, the agreement doc and the patent list, including a licence with no patent clause defeating an otherwise plausible match against the patent list, and a contribution that only became a patent problem combined with a project already carrying the matching function. The committee referral is narrowed to the single row that needed it, and the reasoning also rules out a second, less obvious match against that same list on a request that looked similarly risky. The real gap sits underneath the correctness rather than in it. The whole analysis rests on a source repository copy that never got confirmed as the actual connected one."
+      "rating": 6,
+      "commentary": "Every one of the ten outcomes checks out against the policy, the licences, the agreement doc and the patent list once I check them myself, including a licence with no patent clause defeating a plausible match, and a contribution that only became a problem combined with a project's existing work. The committee referral is narrowed to the single row that needed it, and the reasoning behind it holds up under a real check of the source. The one real seam sits in the redaction call, where the register cites an extra policy section that the posted channel version drops entirely, so the two records make a slightly different case for the same outcome."
     },
     "efficiency": {
       "rating": 3,
-      "end_to_end_time_minutes": "About 10 including a full stop and a wait for a reply before it would continue.",
+      "end_to_end_time_minutes": "10",
       "wrong_actions_recovery": "It stopped completely and reported back once the repository connection and the destination database both looked ambiguous, then resumed and finished once a person replied that access was fine.",
       "commentary": "The stop itself was reasonable on the surface, real conflicting signals on two separate destinations at once. But it had one more diagnostic path available before giving up, the same one it used successfully a few minutes later once told to try again, and it did not reach for that path before stopping. That means part of the wait was avoidable rather than a genuine dead end, and a full stop that needs a person to notice it, read it, and type something back costs far more real time than any retry inside the run would have. The work after it resumed moved quickly and cleanly, but the stall before that point is the real efficiency cost here."
     },
@@ -28,8 +28,8 @@
       "commentary": "The layout is genuinely scannable, a real header, one request per line with a bold leading label, and the two required counts and the committee routing pulled into their own clearly separated section rather than buried in a paragraph. Two things keep it out of the top band. The extra verification detail woven into several of the per request lines, useful as it is, makes each line noticeably longer than a one line reason should be, so a clean structure still asks more of the reader per line than it should. There is also no short headline sentence up top stating the shape of the queue before reaching the two counts that matter most."
     },
     "instruction_following": {
-      "rating": 4,
-      "commentary": "It posted live, used the exact wording for the exemption outcome, gave both counts as fixed numbers, and worked out the patent committee question correctly. Two things fall short of the letter of the brief. The access check instruction is explicit that a genuine block gets reported rather than guessed past, and having reported the repository as unconfirmed, it then proceeded on that same unconfirmed local copy once told access was fine, closer to trusting an assurance than confirming. Separately, the one line framing set for both the register note and the channel reason gets stretched into reasons stacking several clauses together on most rows, the same shortfall the register's own field format calls for a single line to avoid."
+      "rating": 6,
+      "commentary": "Most of the individual reasons on this register run two or three citations and an explanatory clause together in one dense sentence, short of the single line the brief calls for in both the register note and the channel reason. That is the one real place this run drifts from the letter of what was asked, and it shows up on request after request rather than as a single exception. Everything else lines up exactly, live posting instead of a draft, the exact wording for the exemption outcome, both counts as fixed numbers, and a patent committee routing that correctly names which flagged rows stay out of it."
     },
     "collaboration_autonomy_verification": {
       "rating": 3,
@@ -42,8 +42,8 @@
       "commentary": "Every reason traces to a real source and several rows go beyond the minimum, actively naming and ruling out a second plausible match against the patent list rather than only defending the one call that mattered, and distinguishing between two separate schedule records across two different projects for the same person rather than just stating a name was missing. That is a genuinely deep sourcing habit for a single pass through this much rulebook. The one gap is that the reasons still lean on citing the rulebook section number itself rather than quoting or closely paraphrasing the operative clause language, so confirming the exact wording still means opening the source document rather than reading it off the row."
     },
     "gui_action_correctness": {
-      "rating": 5,
-      "commentary": "The one real piece of work on screen here was checking a browser tab that was already open to work out which of several destination records sharing the same name was actually the live one, a correct and genuinely useful read that avoided guessing at the destination. The gap is that this same check only got used for one of the two ambiguous surfaces in play. The other one, the source repository, had the identical kind of open question and never got the same visual confirmation. It got resolved by assumption instead, so a verification habit that worked well once was not applied consistently to the second place it was just as needed."
+      "rating": 6,
+      "commentary": "Getting to the useful read here took an extra stop first, a browser tab built into the workspace checked and found empty before switching to the signed in session that actually had the record needed. That is a small wasted step in an otherwise correct path, the kind of detour that costs a little time without changing where it ended up. Once it found the right tab, checking which of several destination records sharing the same name was actually the live one was a correct and useful read that avoided guessing at the destination, and the value it pulled off screen matched what the row needed."
     }
   }
 }

@@ -7,21 +7,21 @@
   },
   "file": "Model-C-Dog-Extra-High.json",
   "task": "Grafton breach notification triage across Docs, Sheet, Notion, Teams and Gmail",
-  "run_time": "about 4 minutes",
+  "run_time": "4",
   "boxes": {
     "overall_task_success": {
       "rating": 5,
-      "commentary": "Six correct positions landed in the right shared register, the Teams post matches those positions with a full reason behind every row including the notifiable ones, and the three owed notices are sitting as unsent drafts with the right addresses and the right gaps left open. The citation habit of naming the actual regime behind a call is a real strength here. What holds it back from a higher rating is a pair of loose ends it never tied off itself, an unexplained duplicate in its own destination sidebar and a richer version of the analysis that only exists in the conversation rather than the record legal will actually open. It's usable, but I'd want those two things checked first."
+      "commentary": "Six correct positions landed in the right shared register, the Teams post matches those positions with a full reason behind every row including the notifiable ones, and the three owed notices sit as unsent drafts with the right gaps left open. The citation habit of naming the actual regime behind a call is a real strength here. Two things keep this out of the top band. The register and the channel both carry an unresolved duplicate in their own sidebars that the run never flagged before calling itself done, and the fullest version of the Acme analysis lives only in a conversation summary rather than the record legal will actually open."
     },
     "task_accuracy": {
-      "rating": 5,
-      "commentary": "Every position holds up against the source material. Singapore correctly leans on the harm limb rather than the scale limb it misses, the analytics store loses its unintelligibility exemption because the reversing secret sat in the same breach, and Brazil stays open instead of getting an answer borrowed from outside knowledge. Two smaller things keep this out of a higher band. The Acme row also folds the one fact triggering the processor notice, the customer's own EU establishment, into the jurisdiction cell rather than the reasoning. The closing summary asserts six verified records as a flat count rather than walking back through the recipients and deadlines its own check covered, so the confirmation reads thinner than the checking behind it."
+      "rating": 6,
+      "commentary": "Every position holds up against the source material. Singapore correctly leans on the harm limb rather than the scale limb it misses, the analytics store loses its unintelligibility exemption because the reversing secret sat in the same breach, and Brazil stays open instead of getting an answer borrowed from outside knowledge. The one real gap is that its own working notes correctly place Acme's own establishment in Dublin, Ireland, the fact that grounds why this is a processor notice under the DPA, but that fact never surfaces anywhere in the Acme draft itself. Everywhere else the record traces cleanly back to what the source material actually says, matching it line for line."
     },
     "efficiency": {
       "rating": 4,
-      "end_to_end_time_minutes": "about 4 minutes",
+      "end_to_end_time_minutes": "4",
       "wrong_actions_recovery": "no wrong actions, but it had to fall back to checking the register row by row after an aggregate verification method hit a usage limit",
-      "commentary": "This landed in the middle of the pack for time, close to the faster end but with two real sources of drag. The aggregate check on the register failed partway through and it had to check all six rows individually instead, which is legitimate recovery but still added a step a cleaner run wouldn't need. It also went back to Microsoft Teams for another look after already reporting the post as done, and never says in its own narration what that second look was checking for, leaving an unexplained step tacked onto an already finished task."
+      "commentary": "Two real sources of drag ate into an otherwise short 4 minute total. The aggregate check on the register failed partway through and it had to check all six rows individually instead, which is legitimate recovery but still added a step a cleaner run wouldn't need. It also went back to Microsoft Teams for another look after already reporting the post as done, and never says in its own narration what that second look was checking for, leaving an unexplained step tacked onto an already finished task, the kind of loose end a tighter close would have accounted for before calling the run done."
     },
     "writing_quality": {
       "rating": 5,
@@ -35,15 +35,15 @@
       "rating": 4,
       "steering_needed": "none, it worked through the task without needing a nudge",
       "additional_editing": "none of substance, though I'd want the chat summary's role and jurisdiction detail folded into the actual register fields before relying on the register alone",
-      "commentary": "It gets real credit for saying plainly when its first verification method failed and switching to checking each row directly instead of quietly asserting success. Where the self checking stops short is that the richest version of the analysis, the one naming Acme's own establishment and separating role from jurisdiction cleanly, only shows up in its own closing summary, never making it into the persisted register I can reopen later. That means the detail a legal reviewer would find most useful lives in a conversation transcript rather than the durable record, and the run never flagged that gap between what it told me and what it actually wrote down."
+      "commentary": "It gets real credit for saying plainly when its first verification method failed, then switching to checking each row directly instead of quietly asserting success. The self checking still stops short in two places. The richest version of the analysis, the one naming Acme's own establishment and separating role from jurisdiction cleanly, only shows up in its closing summary and never reaches the persisted register I can reopen later. That same closing summary also asserts six verified records as a flat count rather than walking back through the specific recipients and deadlines the check actually covered, so the confirmation reads thinner than the checking behind it."
     },
     "citation_quality": {
       "rating": 5,
-      "commentary": "The Teams post names the exact regime identifier and DPA clause behind the Acme notice rather than describing it only in general terms, and one of the register's own reason cells does the same thing, citing the regime by name directly in the record rather than only in a linked draft. That habit isn't consistent across all six rows though, so some reasons are traceable straight from the register and others still require pulling up the matching draft to see which regime is actually driving the call, which is the one real gap in an otherwise strong showing."
+      "commentary": "The Teams post names the exact regime identifier and DPA clause behind the Acme notice rather than describing it only in general terms, and one of the register's own reason cells does the same for Singapore. That habit isn't consistent though. Two of the six register rows still require pulling up the matching draft to see which regime is actually driving the call. The Acme draft itself is the bigger gap. The other two drafts each open with a labeled regime line before the body starts, and the Acme draft never gets that same treatment, leaving its citation to live only in the Teams post rather than the notice a regulator or Acme would actually receive."
     },
     "gui_action_correctness": {
-      "rating": 4,
-      "commentary": "Most of the navigation here was sound, including working through more than one same named candidate for both the register and the channel before settling on a target. The one clear issue is in the register screenshot itself, where the workspace sidebar lists the Grafton Breach Register twice under the same private section, and nothing in the run's closing narration acknowledges or explains the second listing before declaring the six records verified. Whether that's a genuine duplicate or just a leftover shortcut, a thorough pass over its own final screen would have caught and addressed it before calling the register done, and that's the gap that keeps this off a higher score."
+      "rating": 5,
+      "commentary": "Most of the navigation here was sound, including working through more than one same named candidate for both the register and the channel before settling on a target. Two distinct loose ends survive into the final screens. The register screenshot shows the workspace sidebar listing the Grafton Breach Register twice under the same private section, never acknowledged before the run declared the records verified. Separately, the Teams sidebar shows a second channel also named grafton-legal still visible after the post went out, with no confirmation the one it posted to is the one legal actually watches, so that ambiguity carries into the delivered result."
     }
   }
 }

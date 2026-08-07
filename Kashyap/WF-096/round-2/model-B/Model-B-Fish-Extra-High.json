@@ -15,7 +15,7 @@
     },
     "task_accuracy": {
       "rating": 5,
-      "commentary": "This run treats the finalist missing a signed callback mechanism as a genuine disqualification rather than folding it quietly into a lower security number, which is the correct read of a ticket that explicitly requires authenticated callbacks. The shortlist stage is also fully shown, with computed scores for every candidate and a stated reason for how a near tie got resolved, so the path from the full field down to five finalists is auditable. The remaining softness is real though. One finalist's own descriptive paragraph reads like solid, well rounded coverage, yet its feature score sits well below platforms with a similar writeup, an unexplained gap between the prose and the number."
+      "commentary": "This run treats the finalist missing a signed callback mechanism as a genuine disqualification rather than a lower security number, which is the correct read of a ticket that explicitly requires authenticated callbacks. The shortlist stage is fully shown, with computed scores for every candidate and a stated reason for how a near tie got resolved, so the path down to five finalists is auditable. One finalist's own paragraph reads like solid coverage, yet its feature score sits well below platforms with a similar writeup. A second finalist's scalability score lands mid band even though its own writeup says that platform's throughput was never publicly documented, a number that assumes evidence the run admits it does not have."
     },
     "efficiency": {
       "rating": 6,
@@ -35,7 +35,7 @@
       "rating": 5,
       "steering_needed": "none, the run completed unattended from start to finish.",
       "additional_editing": "light, mainly reconciling one finalist's cost estimate against a plan tier that its own text says does not actually cover the ticket's retention requirement.",
-      "commentary": "Running end to end without a single live pause is a genuine strength here, and the closing summary does restate the scored numbers in a way that matches the finished document exactly, which is real self checking rather than just an assertion that things are fine. What is missing is any visual pass over the finished document itself. The run confirms the required sections and tables are present and calls that validated, but never says whether the actual rendered pages look right, only that the structure checks out. Confirming a document contains the right pieces is not the same as confirming it reads cleanly once assembled."
+      "commentary": "The closing summary restates the scored numbers in a way that matches the finished document exactly, genuine self checking rather than a bare assertion, and the whole pipeline finished without a single live pause. Two real gaps sit underneath that. The document itself never got a visual pass, the run confirms the required sections and tables are present and calls that validated, but never says whether the rendered pages look right. And the headline cost figure for one alternative platform is priced off a plan tier that its own writeup says does not include the 30 day retention window the ticket requires, a mismatch between the table number and the text beside it that nothing in the run's review caught."
     },
     "citation_quality": {
       "rating": 6,

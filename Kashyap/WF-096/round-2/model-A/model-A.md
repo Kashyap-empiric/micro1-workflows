@@ -25,7 +25,7 @@ Raw evidence saved at `output/`, referenced here, read in full during the scorin
 ## 1. Overall task success
 
 **Rating:** 3
-**Commentary:** A complete research document with correct math, undercut by a comparison table posted to the ticket as raw unformatted text instead of a real table. Two live approvals were needed mid run just to get the report uploaded at all, and an early document build attempt failed outright before producing anything, so this never ran as the single unattended pass the workflow calls for. The recommendation itself is sound and the architecture blueprint is usable, but a reader would have to manually rebuild the ticket comment's table and would be reading a run that took close to twice as long as it should have for what got delivered. Task accuracy sits at 4, and the broken required field plus the real live intervention pull overall success a point below that.
+**Commentary:** A complete research document with correct math, undercut by a comparison table posted to the ticket as raw unformatted text instead of a real table. Two live approvals were needed mid run just to get the report uploaded, and an early document build attempt failed outright before producing anything, so this never ran as the single unattended pass the workflow calls for. The recommendation itself is sound and the architecture blueprint is usable, but a reader would have to manually rebuild the ticket comment's table, and the run took close to twice as long as it should have. Task accuracy sits at 4, and the broken required field plus the real live intervention pull overall success a point below that.
 
 ## 2. Task accuracy, ignoring speed
 
@@ -37,7 +37,7 @@ Raw evidence saved at `output/`, referenced here, read in full during the scorin
 **Rating:** 3
 **End-to-end time (minutes):** 48
 **Wrong actions / recovery:** one document build attempt failed outright before any file existed, requiring a full rebuild, plus a rendering pass caught a stray blank page that needed a second export.
-**Commentary:** Forty eight minutes is a long single pass for this scope of work. A chunk of that is the failed first build, which hit a tooling limit and produced nothing, forcing a second attempt from a different script path. Another chunk is the rendering QA cycle, catching a genuine layout defect and fixing it is good practice, but it is still a second pass through export and inspection that a cleaner run would not have needed. On top of the rework, the pipeline paused twice waiting on a live approval before it could finish the upload, so a real chunk of that wall clock time is a person's response time rather than active work.
+**Commentary:** 48 minutes is a long single pass for this scope of work. A chunk of that is the failed first build, which hit a tooling limit and produced nothing, forcing a second attempt from a different script path. Another chunk is the rendering QA cycle, catching a genuine layout defect and fixing it is good practice, but it is still a second pass through export and inspection that a cleaner run would not have needed. On top of the rework, the pipeline paused twice waiting on a live approval before it could finish the upload, so a real chunk of that wall clock time is a person's response time rather than active work.
 
 ## 4. Writing quality
 

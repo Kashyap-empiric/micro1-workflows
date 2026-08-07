@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-076",
+  "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fd07e-3803-77d1-b07c-a287b032a69b"
+  },
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "Test Data Generation and Form Validation",
+  "run_time": "97",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 2,
+      "commentary": "By the end the numbers are right, the tickets are filed, and nothing orphaned got left behind, so the final content someone would use is sound. Getting there is the problem. The run gave up on a clearable blocker and reported that as finished and empty before I pushed it through three times, sending a status update into the real channel claiming a clean outcome with no defects that was actually just a stall. The evidence collected while reproducing the six defects never made it into the report or any ticket, so nothing backs up what got filed. Reading only that first update would have left me with a false picture, a cost the correct numbers don't make up for."
+    },
+    "task_accuracy": {
+      "rating": 4,
+      "commentary": "When I check it, the counts, severities, and relationships in this run all reconcile cleanly across the sheet, the report, and the tickets. Two things keep it out of the top band for me. The finding about the customer phone field is marked as having no matching open duplicate, but nothing in the record shows how that conclusion was reached against the ticket that already existed and needed to be checked. The Dataset Summary also breaks the 103 rows into the five required categories without separately calling out how many are the negative, non reusable cases versus the reusable valid ones, the exact split the task calls for keeping visibly distinct."
+    },
+    "efficiency": {
+      "rating": 2,
+      "end_to_end_time_minutes": "97",
+      "wrong_actions_recovery": "needed three separate direct pushes from me to keep retrying a browser block it had otherwise treated as final, plus two rounds of back and forth over an authorization question it raised on its own.",
+      "commentary": "The very first attempt ended with nothing submitted at all, a completely blocked pass that got reported as finished rather than retried. Getting it to actually try a different route took me telling it three separate times, and on top of that it spent real time asking permission for a Drive upload and a Teams post that the task never asked it to gate behind extra approval in the first place. Once past all of that it moved through the nine forms in one clean pass with no further stumbles. Almost the entire runtime here traces back to a blocker it invented for itself and the back and forth needed to clear it."
+    },
+    "writing_quality": {
+      "rating": 3,
+      "commentary": "The report itself is organized well, clean tables, a clear disposition summary, nothing to fault once it is finished. What drags this down is what got sent along the way. A local file path from my own machine shows up inside the run summary meant for me to read, internal detail with no business in a writeup meant for a client. Worse, one interim status update was labeled as a full results post and reported zero forms tested and zero findings, reading as a completed clean run rather than the blocked attempt it actually was. That went out before a corrected message replaced it, so the record shows three notices instead of the one summary the task called for."
+    },
+    "instruction_following": {
+      "rating": 3,
+      "commentary": "When I check it against the brief, anything resolvable on its own should get resolved automatically rather than kicked back for approval, with a stop and ask reserved for real gaps like a missing branch or staging address. This run invented a different stop, treating a routine report upload and the final notification as needing sign off for repository details, which the task never asked for. That deviation produced the false interim update and the extra back and forth. Everything else lines up for me, the branch got pinned to its commit, scope and cap logic are handled correctly, negative and reusable data stayed separated, and a record pointing to something nonexistent was left unexecuted rather than guessed at."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 2,
+      "steering_needed": "five separate messages from me across the run, three to get it to keep retrying a blocker it had treated as final, two to clear an approval question it raised on its own.",
+      "additional_editing": "I'd need to strip the leaked local file path and remove the two superseded status updates before this could go out as delivered.",
+      "commentary": "Once it got moving this run did check its own work in a real way, rendering the finished report page by page and catching an actual layout defect where a table split awkwardly across pages before fixing it. That reflects real verification rather than a formality. Set against that is a run that gave up on a recoverable browser block and reported a null result as complete, then needed repeated direct pushing from me before it would try again. A run that needs to be told three times to keep going on the one thing the whole task depends on was not working on its own, whatever care it showed once it was finally moving."
+    },
+    "citation_quality": {
+      "rating": 3,
+      "commentary": "When I check it, the severity reasoning attached to each finding cites a specific rule and stays consistent with the numbers in the sheet and the report, genuinely traceable analytical backing. Where this comes up short for me is the evidence layer. Screenshots were taken during the browser pass, but none of them made it into the finished report and none are attached to any of the six tickets, so every finding rests on the written description alone with nothing visual to check it against. The report explains why the tickets carry no attachment, a connector limitation, but that does not explain why the document itself has no evidence section either."
+    },
+    "gui_action_correctness": {
+      "rating": 3,
+      "commentary": "Once this run was actually moving, it worked through all nine forms live, and the records it created hold together with no orphaned relationships. Getting to that point is where the real weakness sits. A block on the browser's side of the local address was treated as a dead end rather than something to route around, and it took a direct suggestion from me to try a different host before it found the working path on its own very quickly after that. That is a basic browser troubleshooting step it should have reached for itself before declaring the environment unreachable, especially with a full task's worth of work sitting behind that one decision."
+    }
+  }
+}
