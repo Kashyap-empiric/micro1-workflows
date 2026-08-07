@@ -16,7 +16,7 @@ Codex, gpt-5.6-cat, Extra High intelligence
 
 ## Output
 
-The Larkfield Renewal Findings Register in Notion holds 33 rows, one per plan and jurisdiction across federal, Calderon, Ostmark, Vantry, Selwick and Kestrelport. Eleven rows carry a change: seven call to add a renewal or trial notice with its window, two call to change the cancellation medium on Larkfield Studio Annual, and two call to change the save offer on Larkfield Plus Annual. The renewal-audit Teams post carries all eleven changes with their reasons and windows, the two headline subscriber figures of 13,615 on plans needing a change and 13,760 on plans needing none, and a line on each of the five items left open in the compliance memo. One Gmail draft was created for Delia Marchetti with the To field empty and a note that a verified address is needed before it goes out, and no draft was made for Ravi Chandrasekar since his save offer already meets the proximity rule. No plan configuration, cancellation flow, or notice setup was changed.
+The Larkfield Renewal Findings Register in Notion holds 33 rows, one per plan and jurisdiction across federal, Calderon, Ostmark, Vantry, Selwick and Kestrelport. 11 rows carry a change: seven call to add a renewal or trial notice with its window, two call to change the cancellation medium on Larkfield Studio Annual, and two call to change the save offer on Larkfield Plus Annual. The renewal-audit Teams post carries all 11 changes with their reasons and windows, the two headline subscriber figures of 13,615 on plans needing a change and 13,760 on plans needing none, and a line on each of the five items left open in the compliance memo. One Gmail draft was created for Delia Marchetti with the To field empty and a note that a verified address is needed before it goes out, and no draft was made for Ravi Chandrasekar since his save offer already meets the proximity rule. No plan configuration, cancellation flow, or notice setup was changed.
 
 ## 2. Task accuracy, ignoring speed
 
@@ -35,7 +35,7 @@ I opened the register myself and checked it plan by plan against the rules pack 
 
 **Rating:** 4
 
-The Teams post packs all eleven changes and all five open item answers into one continuous paragraph with no headers or line breaks between them, so a reader has to comb through a wall of text to find any one plan's status. The two subscriber figures I specifically asked for sit buried mid paragraph rather than standing out where I'd actually look for them first. The individual sentences are clear and the reasoning inside them is easy enough to follow once found, and the Gmail draft reads cleanly with a plain warning about the empty recipient field, but the main deliverable needed real editing before I'd forward it to Yusuf as is.
+The Teams post packs all 11 changes and all five open item answers into one continuous paragraph with no headers or line breaks between them, so a reader has to comb through a wall of text to find any one plan's status. The two subscriber figures I specifically asked for sit buried mid paragraph rather than standing out where I'd actually look for them first. The individual sentences are clear and the reasoning inside them is easy enough to follow once found, and the Gmail draft reads cleanly with a plain warning about the empty recipient field, but the main deliverable needed real editing before I'd forward it to Yusuf as is.
 
 ## 5. Instruction following
 

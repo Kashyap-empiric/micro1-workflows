@@ -25,7 +25,7 @@
     },
     "writing_quality": {
       "rating": 4,
-      "commentary": "Each of the three analyst emails opens with its affected tables and lays out the figure and the reason for every change in a short list, closing with a clear instruction that nothing goes out before sign off, genuinely well built pieces on their own. The channel post is a different story. Eleven separate findings across six tables land in one continuous message with no per table breaks, so a board member skimming for one specific table has to read past everything else to find it. The three emails also end on the identical line, word for word, which reads more like a template being reused than three notes composed for three different people."
+      "commentary": "Each of the three analyst emails opens with its affected tables and lays out the figure and the reason for every change in a short list, closing with a clear instruction that nothing goes out before sign off, genuinely well built pieces on their own. The channel post is a different story. 11 separate findings across six tables land in one continuous message with no per table breaks, so a board member skimming for one specific table has to read past everything else to find it. The three emails also end on the identical line, word for word, which reads more like a template being reused than three notes composed for three different people."
     },
     "instruction_following": {
       "rating": 6,

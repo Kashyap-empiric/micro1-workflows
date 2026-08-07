@@ -234,6 +234,13 @@ the narration."
 Commentary prose, not "Twenty five minutes." This matches the End-to-end time sub-field, which is
 already numeric, and keeps the prose consistent with it.
 
+**Numbers ten and above are always numerals, everywhere in a box, not just time.** Write "14
+orders," "41 values," "11 changes," never "fourteen orders," "forty-one values," "eleven changes."
+This is how a person actually writes when they're moving fast, not spelling out every count. Numbers
+under ten may go either way, numeral or spelled out, whichever reads more natural in that sentence:
+"2 tickets" and "two tickets" are both fine. The line is ten, not some fuzzy sense of "big": 9 or
+below is a judgment call, 10 or above is always the numeral.
+
 **Final ranking field never uses "=".** Rank strictly, no ties, always.
 
 **Identical Overall/total ratings across models are also not acceptable (reviewer-mandated,

@@ -144,14 +144,14 @@ All six issuer drafts and the Ines draft confirm their "To" field is blank/popul
 
 **Rating:** 6
 
-The note explaining disposable earnings states the general rule plainly, earnings less only what is legally required, rather than leaving it implicit, and that rule holds up throughout the file. Reworking all fourteen orders against the rulebook and the payroll tabs myself, every figure ties out, including the interaction where an earlier support withholding already consumes the general limit and zeroes out a later creditor order. The one loose thread is a levy note that raises a timing concern about the agency's acknowledgement deadline without saying what the concern actually is or whether that deadline has already passed given the note itself is still unsent, which reads as flagging a problem without finishing the thought.
+The note explaining disposable earnings states the general rule plainly, earnings less only what is legally required, rather than leaving it implicit, and that rule holds up throughout the file. Reworking all 14 orders against the rulebook and the payroll tabs myself, every figure ties out, including the interaction where an earlier support withholding already consumes the general limit and zeroes out a later creditor order. The one loose thread is a levy note that raises a timing concern about the agency's acknowledgement deadline without saying what the concern actually is or whether that deadline has already passed given the note itself is still unsent, which reads as flagging a problem without finishing the thought.
 
 ## 3. Efficiency
 
 **Rating:** 5
 **End-to-end time (minutes):** 4.1
 **Wrong actions / recovery:** None, it completed in a single pass with no redo.
-**Commentary:** Before it calculated or wrote anything, the Notion search returned several identically named databases, so it had to inspect their schemas and existing rows to identify the actual seeded target rather than writing into the wrong one. It then hit a Notion tooling limit partway through and adapted by confirming the rows through a search instead of one bulk check. Neither detour visibly cost much time, and source review, calculation, the written rows and the seven drafts otherwise read as a straight line finishing in 4.1 minutes for the full fourteen order scope. Two separate real frictions on a run this size, even a fast one, is enough to keep it off the top band.
+**Commentary:** Before it calculated or wrote anything, the Notion search returned several identically named databases, so it had to inspect their schemas and existing rows to identify the actual seeded target rather than writing into the wrong one. It then hit a Notion tooling limit partway through and adapted by confirming the rows through a search instead of one bulk check. Neither detour visibly cost much time, and source review, calculation, the written rows and the seven drafts otherwise read as a straight line finishing in 4.1 minutes for the full 14 order scope. Two separate real frictions on a run this size, even a fast one, is enough to keep it off the top band.
 
 ## 4. Writing quality
 
@@ -163,7 +163,7 @@ The note to the payroll manager is genuinely well organised, it breaks the total
 
 **Rating:** 6
 
-Blank recipient fields with a note that a verified address is required sit on all six issuer drafts, nothing was sent or submitted, all fourteen orders are covered including the two carried only on the register, and the disposable earnings standard is stated once as a general rule rather than asserted per row. One note per court or agency covers everything that issuer is owed rather than splitting orders apart. The one place this is less complete than it could be is the levy note that raises a timing concern about the agency's acknowledgement deadline. Raising the question is the right instinct given the procedure's own emphasis on timing, but not carrying that thought through to an actual answer leaves the one open question in the whole file unresolved rather than stated and settled.
+Blank recipient fields with a note that a verified address is required sit on all six issuer drafts, nothing was sent or submitted, all 14 orders are covered including the two carried only on the register, and the disposable earnings standard is stated once as a general rule rather than asserted per row. One note per court or agency covers everything that issuer is owed rather than splitting orders apart. The one place this is less complete than it could be is the levy note that raises a timing concern about the agency's acknowledgement deadline. Raising the question is the right instinct given the procedure's own emphasis on timing, but not carrying that thought through to an actual answer leaves the one open question in the whole file unresolved rather than stated and settled.
 
 ## 6. Collaboration, autonomy, and verification
 

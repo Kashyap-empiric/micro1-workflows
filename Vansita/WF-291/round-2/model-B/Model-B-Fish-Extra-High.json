@@ -15,7 +15,7 @@
     },
     "task_accuracy": {
       "rating": 5,
-      "commentary": "This correctly worked out that the Kestrelport ordinance never actually reaches Home Monthly once the term falls under its three month floor, a genuinely easy distinction to miss given how narrowly the ordinance's own language is written, and it caught every one of the harder traps, including the stale Vantry business exemption and the dual notice windows on Home Annual. Where it falls down is the register itself: Larkfield Voice in Vantry got written twice as identical rows, so the register holds thirty four entries against the thirty three combinations this audit actually needed. Its own closing summary then states thirty three verified records, which isn't what the delivered register shows."
+      "commentary": "This correctly worked out that the Kestrelport ordinance never actually reaches Home Monthly once the term falls under its three month floor, a genuinely easy distinction to miss given how narrowly the ordinance's own language is written, and it caught every one of the harder traps, including the stale Vantry business exemption and the dual notice windows on Home Annual. Where it falls down is the register itself: Larkfield Voice in Vantry got written twice as identical rows, so the register holds 34 entries against the 33 combinations this audit actually needed. Its own closing summary then states 33 verified records, which isn't what the delivered register shows."
     },
     "efficiency": {
       "rating": 5,
@@ -35,7 +35,7 @@
       "rating": 4,
       "steering_needed": "none, it ran the whole audit on its own",
       "additional_editing": "deleting the duplicate row and correcting the record count stated in its own summary",
-      "commentary": "It ran start to finish without needing anything from me, and it does say plainly what got created and posted in each system. One of those claims is wrong. It reports thirty three verified records when the register it actually delivered holds thirty four, with one plan and jurisdiction pair duplicated. Beyond that specific false claim, the verification it describes only ever confirms that actions landed. Nothing in the run shows it going back to recheck a finding against the rules pack, or re-adding the subscriber totals from the distribution tab to confirm its own math. Everything else about how it handled the workspace access and the unsent draft was handled correctly and confirmed accurately."
+      "commentary": "It ran start to finish without needing anything from me, and it does say plainly what got created and posted in each system. One of those claims is wrong. It reports 33 verified records when the register it actually delivered holds 34, with one plan and jurisdiction pair duplicated. Beyond that specific false claim, the verification it describes only ever confirms that actions landed. Nothing in the run shows it going back to recheck a finding against the rules pack, or re-adding the subscriber totals from the distribution tab to confirm its own math. Everything else about how it handled the workspace access and the unsent draft was handled correctly and confirmed accurately."
     },
     "citation_quality": {
       "rating": 5,

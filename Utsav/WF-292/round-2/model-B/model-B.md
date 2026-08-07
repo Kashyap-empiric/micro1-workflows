@@ -67,7 +67,7 @@ Every held back cell in this register is the right call once I rework the 41 val
 
 **Rating:** 4
 
-The channel post is the weak point here, running eleven findings across six tables together in one continuous message with no per table breaks, so anyone scanning for a single table's outcome has to read past the rest first. That is a real contrast with the three analyst emails, which open with the affected tables, lay out the figure and the reason for every change in a short list, and close with a clear instruction that nothing is approved until Nadira signs off. Those three emails share one weakness of their own though, an identical closing line word for word, which reads like a template filled in three times rather than three notes actually composed for three different people.
+The channel post is the weak point here, running 11 findings across six tables together in one continuous message with no per table breaks, so anyone scanning for a single table's outcome has to read past the rest first. That is a real contrast with the three analyst emails, which open with the affected tables, lay out the figure and the reason for every change in a short list, and close with a clear instruction that nothing is approved until Nadira signs off. Those three emails share one weakness of their own though, an identical closing line word for word, which reads like a template filled in three times rather than three notes actually composed for three different people.
 
 ## 5. Instruction following
 
