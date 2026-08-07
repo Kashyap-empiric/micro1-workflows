@@ -191,6 +191,13 @@ output text.
 substitute for explaining the reasoning. The number may match another box. The prose explaining it
 may not lean on that other box.
 
+**The exact run-time figure belongs to box 3 only.** The decimal minute value (or its rounded
+mention in prose) is Efficiency's own sub-field and commentary, not a fact to repeat in Overall or
+any other box. Overall may still factor in that time cost as part of its holistic judgment, and its
+commentary may say a delay hurt usability or that a disclosed workaround added real time, but it
+does so without restating the number itself. Naming the same figure twice reads as copied between
+boxes even when both mentions are accurate.
+
 **Rewrite passes carry the same rules.** A re-verification pass discovers things, and the instinct
 is to narrate the discovery. The commentary is a judgment of the model's output, never a lab
 notebook of the review. If a rewritten box contains "before", "last time", "on this pass", or "I
