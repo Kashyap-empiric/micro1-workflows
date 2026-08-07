@@ -26,8 +26,18 @@ score, NOT a failing grade," not just "mixed."
 formerly-known disagreement is now resolved: this source text's "7 = flawless for this dimension,
 essentially never, only after a hard hunt turns up nothing" now matches the standing rule (updated
 2026-08-05) — a 7 is allowed, but only when the full flaw hunt for that box comes back with zero
-real, observed findings. One disagreement remains: "connector" is allowed despite still being
-listed as banned jargon here, since the client's own filled example uses it.
+real, observed findings. Remaining disagreements: "connector" is allowed despite still being listed
+as banned jargon here, since the client's own filled example uses it; naming the browser (Brave,
+Chrome) is allowed too, per the same exception documented in voice-and-format-checklist.md section 3.
+
+**Scoring from this file: read the SCORING STANCE and Rating calibration sections below once for
+orientation, then apply [harsh-evaluation-protocol.md](harsh-evaluation-protocol.md) directly.**
+That file is the fuller, current version of the same stance (the flaw-hunt procedure, the trip-wires,
+the scoring gates) and wins on any wording difference per the Authority order in
+[00-scoring-process.md](00-scoring-process.md). Do not treat the two as separate sources to
+reconcile pass by pass, that duplicates the same judgment call twice for no benefit. This file's own
+purpose is the fenced block below, pasted verbatim at the start of a fresh Codex session, not a
+second independent scoring-rules document.
 
 ---
 
@@ -307,7 +317,12 @@ one, and these are where each box usually hides it:
 - Writing quality: clarity, structure, tone of the delivered artifact. Was it well laid out and
   easy to scan? Even a clean deliverable usually has a real weakness — too long for the channel, no
   short summary up top, a buried headline, a wall of bullets, inconsistent formatting, filler.
-  Name it.
+  Name it. A Teams or chat post, or a Gmail draft, delivered as one dense, unbroken block of prose
+  covering several distinct items with no per-item breaks, no headers, and nothing to anchor the eye
+  reads as generated rather than written by a person for that channel, and is a real, nameable
+  weakness on its own, separate from and just as dockable as a wall of bullets going the other way.
+  Multiple findings or items strung together into one running paragraph is exactly this failure,
+  whether the post is a summary, an audit result, or a set of change notes.
 - Instruction following: walk the PROMPT's explicit constraints one by one (exact names, folders,
   ranges, field lists, vocab, sharing settings, target destination, caps, read-only, "no PRs", "no
   external research"). There's very often one it bent or under-met — "all X" where a couple were

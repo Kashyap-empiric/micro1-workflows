@@ -27,9 +27,9 @@ Every hard call in this register lines up once I check it against the rules pack
 ## 3. Efficiency
 
 **Rating:** 6
-**End-to-end time (minutes):** about 4
+**End-to-end time (minutes):** 3.7
 **Wrong actions / recovery:** none, the register went in as one write with no failed or repeated actions
-**Commentary:** Four minutes covered the whole audit here, with the register going into Notion in one write rather than row by row. Nothing in the path reads as wasted, retried, or backtracked. The one real limitation it worked around is the same one the workspace had been enforcing throughout the day: Notion's query tool had already hit its usage limit, so it fell back to reading rows individually to check for existing entries before writing, a slower path than the tool it would have preferred to use.
+**Commentary:** 3.7 minutes covered the whole audit here, with the register going into Notion in one write rather than row by row. Nothing in the path reads as wasted, retried, or backtracked. The one real limitation it worked around is the same one the workspace had been enforcing throughout the day: Notion's query tool had already hit its usage limit, so it fell back to reading rows individually to check for existing entries before writing, a slower path than the tool it would have preferred to use.
 
 ## 4. Writing quality
 

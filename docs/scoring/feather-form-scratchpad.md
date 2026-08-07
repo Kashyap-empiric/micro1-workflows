@@ -25,7 +25,7 @@ superseded where noted by [harsh-evaluation-protocol.md](harsh-evaluation-protoc
 
 - Self-contained per model: no comparison, no superlative/frequency language ("most X I've seen," "of the four," "in the batch," "slowest/fastest/best/strongest," "every run"), no naming another model's letter or codename, anywhere in a box or in the surrounding lead-in/closing text.
 - Never explain one box by pointing at another ("same as overall," "see box 2"). Each box's commentary stands on its own reasoning.
-- Cap every rating at 6/7, even a flawless-looking run (a hard team override on top of the source text's own "essentially never give 7"). Find the honest minor nit rather than giving a 7.
+- No hard cap at 6/7. A 7 is legitimate when the flaw hunt for that box is fully run per harsh-evaluation-protocol.md section 5 and genuinely comes back with zero real, observed findings. Run the hunt first; don't withhold a 7 that the evidence actually supports, and don't hand one out that a harder look would have denied.
 - Don't cluster every box at 5-6. Let the number track that box's own severity, down to 4/3/lower when real issues are found.
 - Any box scored 4 or 5 needs at least two distinct, concrete issues named in its commentary.
 - The flaw named in any box must be something actually observed or checked in the pasted evidence, never invented from what you couldn't see (e.g. don't dock GUI action correctness just because the click path wasn't narrated in detail, find the real in-dimension weakness instead or note there wasn't one to see). Don't recycle the same issue across multiple boxes, each box gets its own dimension-specific flaw.

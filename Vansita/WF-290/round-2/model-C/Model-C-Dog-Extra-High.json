@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-290",
+  "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fd6b7-fe91-73b1-b4ec-66baafa14b18"
+  },
+  "file": "Model-C-Dog-Extra-High.json",
+  "task": "Havelock Regional Services Pay Period 15 wage garnishment withholding queue across a payroll Sheet, order PDFs, two rules Docs, a Notion instruction register and Gmail drafts",
+  "run_time": "4.1",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 6,
+      "commentary": "This queue holds up fully against a source check I did myself, correctly computed down to the interaction that trips up a shallow read, delivered in 4.1 minutes with consistently cited reasoning throughout. The payroll manager's note is genuinely well organised and the disposable earnings standard is stated as a rule rather than left implicit. It stays at a 6 rather than climbing higher because of a few real, if modest, threads left loose. Two separate Notion detours, a duplicate-titled database and a tooling limit, both got handled cleanly but still cost real time, a raised timing concern never gets an answer, and six notes that are otherwise reasoned well all end in the identical copied signature block rather than reading as separately composed. None of that changes a figure, but a fully flawless run would have tied off all three."
+    },
+    "task_accuracy": {
+      "rating": 6,
+      "commentary": "The note explaining disposable earnings states the general rule plainly, earnings less only what is legally required, rather than leaving it implicit, and that rule holds up throughout the file. Reworking all fourteen orders against the rulebook and the payroll tabs myself, every figure ties out, including the interaction where an earlier support withholding already consumes the general limit and zeroes out a later creditor order. The one loose thread is a levy note that raises a timing concern about the agency's acknowledgement deadline without saying what the concern actually is or whether that deadline has already passed given the note itself is still unsent, which reads as flagging a problem without finishing the thought."
+    },
+    "efficiency": {
+      "rating": 5,
+      "end_to_end_time_minutes": "4.1",
+      "wrong_actions_recovery": "None, it completed in a single pass with no redo.",
+      "commentary": "Before it calculated or wrote anything, the Notion search returned several identically named databases, so it had to inspect their schemas and existing rows to identify the actual seeded target rather than writing into the wrong one. It then hit a Notion tooling limit partway through and adapted by confirming the rows through a search instead of one bulk check. Neither detour visibly cost much time, and source review, calculation, the written rows and the seven drafts otherwise read as a straight line finishing in 4.1 minutes for the full fourteen order scope. Two separate real frictions on a run this size, even a fast one, is enough to keep it off the top band."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "The note to the payroll manager is genuinely well organised, it breaks the totals, the written escalation and the exceptions carried on the register into clearly labelled sections rather than one continuous block, which is exactly what a document carrying this much information needs. Where this loses ground is the six notes to courts and agencies. Every single one closes with the identical two line signature block, prepared for review, no signature applied, copied verbatim rather than varied to fit each note. Six closings that read almost the same in a row comes across like a mail merge rather than six individually considered pieces of correspondence, even though the reasoning inside each one is genuinely tailored to that order."
+    },
+    "instruction_following": {
+      "rating": 6,
+      "commentary": "Blank recipient fields with a note that a verified address is required sit on all six issuer drafts, nothing was sent or submitted, all fourteen orders are covered including the two carried only on the register, and the disposable earnings standard is stated once as a general rule rather than asserted per row. One note per court or agency covers everything that issuer is owed rather than splitting orders apart. The one place this is less complete than it could be is the levy note that raises a timing concern about the agency's acknowledgement deadline. Raising the question is the right instinct given the procedure's own emphasis on timing, but not carrying that thought through to an actual answer leaves the one open question in the whole file unresolved rather than stated and settled."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 6,
+      "steering_needed": "None, the whole thing finished on its own without a single interruption.",
+      "additional_editing": "Light, the six issuer notes need real recipient addresses before they could go out.",
+      "commentary": "The tooling limit that got in the way partway through is named specifically, along with the workaround used instead, and the row count is confirmed coming back through that alternate path rather than just asserted as successful. That is genuinely checking its own work rather than making a bare claim. What it does not show is checking the content of the six issuer drafts against the Notion figures the same way it checked the payroll manager's own table against them, so the verification depth is genuine but concentrated on one document rather than spread evenly across everything it produced."
+    },
+    "citation_quality": {
+      "rating": 6,
+      "commentary": "Every note I could check cites the specific rule section behind its figure and the comparison that produced it, the interstate support order included. The disposable earnings standard is stated as a general rule rather than demonstrated once and left implicit elsewhere. The one gap is the levy note's timing concern, which is raised without naming the procedure or rule section it rests on, breaking what is otherwise a consistent pattern of always showing the source behind a claim."
+    },
+    "gui_action_correctness": {
+      "rating": "N/A",
+      "commentary": "Every write went through the Notion, Drive and Gmail integrations directly, with no on screen clicking involved anywhere in the run, so there is nothing here to rate."
+    }
+  }
+}

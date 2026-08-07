@@ -197,28 +197,28 @@ The log ([codexlogs.txt](codexlogs.txt)) claims: "Created and individually verif
 
 ## 2. Task accuracy, ignoring speed
 
-6
+**Rating:** 6
 
 I opened the source rulebook and the payroll tabs myself and reworked every one of the fourteen orders by hand, and every disposable earnings figure, every withheld amount and every fee it produced ties out exactly, including the one order where an earlier support withholding already ate up the entire general limit and left a later creditor order at zero. That is a genuinely hard interaction to catch and it landed correctly. What keeps this off the top is that the written explanation for the two orders touching the same employee's earnings under a federal levy states the outcome and moves on without giving the cap or exempt figure that would let a reader check the math without redoing it themselves, so a couple of the harder calculations are asserted rather than shown.
 
 ## 3. Efficiency
 
 **Rating:** 4
-**End-to-end time (minutes):** About 9.
+**End-to-end time (minutes):** 8.8
 **Wrong actions / recovery:** None, it ran straight through to the deliverable in one pass.
-**Commentary:** The run took about nine minutes for a queue of fourteen orders plus seven drafts. Partway through it found the Notion database's bulk query had hit a plan limit and switched to checking each of the fourteen rows one at a time instead of confirming them as a set. That is a real, disclosed extra step, and it adds up over fourteen rows on top of the rest of the work. Nothing else in the run meandered or repeated itself, the path was otherwise a straight line from reading the sources to writing the queue to building the drafts, but the workaround alone is enough to keep a run of this size out of the top band.
+**Commentary:** The run took 8.8 minutes for a queue of fourteen orders plus seven drafts. Before it could write anything, the Notion search turned up several databases sharing the same title, so it had to open and compare their schemas and existing rows before it could be sure it was writing into the real Pay Period 15 register rather than an empty duplicate. Partway through it then found the Notion database's bulk query had hit a plan limit and switched to checking each of the fourteen rows one at a time instead of confirming them as a set. Both are real, disclosed detours rather than one drawn-out complaint about the same friction, and together they account for a meaningful share of the runtime. Nothing else in the run meandered or repeated itself, but two separate named frictions on a run this size is enough to keep it out of the top band.
 
 ## 4. Writing quality
 
-4
+**Rating:** 4
 
-Most of the drafts are short and readable, a tight list of what is being withheld and why, which suits a quick acknowledgement. The one place this falls down is the note to the payroll manager, where the paragraph on the second garnishment against one employee reads as if payroll is meant to state a position and also recommend one, before the very next sentence clarifies that no recommendation is being made. That is exactly the kind of sentence a payroll manager reading quickly could misread on a compliance question that genuinely matters. Beyond that one paragraph, several of the shorter acknowledgements state a result, such as a figure being within a cap, without showing the comparison that produced it, so the reasoning has to be taken on faith rather than followed on the page.
+Most of the drafts are short and readable, a tight list of what is being withheld and why, which suits a quick acknowledgement. The note to the payroll manager is where this falls down, the paragraph on the second garnishment against one employee reads as if payroll is meant to state a position and also recommend one, before the very next sentence clarifies that no recommendation is being made, exactly the kind of sentence a payroll manager reading quickly could misread on a compliance question that genuinely matters. Several of the shorter acknowledgements also state a result, such as a figure being within a cap, without showing the comparison that produced it, so the reasoning has to be taken on faith. All six issuer drafts close on the identical line too, which reads more like a template reused six times than six notes actually composed for six different recipients.
 
 ## 5. Instruction following
 
-6
+**Rating:** 6
 
-Every constraint I checked against the brief held. The recipient fields on the six issuer notes are blank with a note that a verified address is needed, nothing was sent or submitted, the queue covers all fourteen orders including the two carried only on the register, and each note to a court or agency covers every order that issuer is owed an answer on rather than splitting them up. The one place instruction following slips is the same paragraph flagged under writing quality, in the note to the payroll manager. The procedure is specific that payroll states a position on an employment question and does not recommend one, and the sentence structure there momentarily blurs that exact line before resolving it, which is a real, if brief, muddying of a rule this task treats as a hard boundary.
+Every constraint I checked against the brief held. The recipient fields on the six issuer notes are blank with a note that a verified address is needed, nothing was sent or submitted, the queue covers all fourteen orders including the two carried only on the register, and each note to a court or agency covers every order that issuer is owed an answer on rather than splitting them up. The one place instruction following slips is a paragraph in the note to the payroll manager, on the second garnishment against one employee. The procedure is specific that payroll states a position on an employment question and does not recommend one, and the sentence structure there momentarily blurs that exact line before resolving it, which is a real, if brief, muddying of a rule this task treats as a hard boundary.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -229,16 +229,18 @@ Every constraint I checked against the brief held. The recipient fields on the s
 
 ## 7. Citation quality
 
-4
+**Rating:** 4
 
-The internal note to the payroll manager names the specific rule sections behind the harder calls, the reemployment bar, the interstate support split, the second garnishment question, so those figures are genuinely traceable. The six notes going to the actual courts and agencies are a different story. None of them names the section of the rulebook the figure came from, they just state the outcome. For a set of documents whose entire purpose is to show a court or agency why an amount was withheld, leaving the rule citation out of every one of them is a real gap, and it means the only fully auditable document in the set is the one that never leaves the building.
+The internal note to the payroll manager names the specific rule sections behind most of the harder calls, the reemployment bar, the interstate support split, the second garnishment question, so those figures are genuinely traceable. Not every figure in that note clears the bar. The federal levy and support pairing on one employee's earnings sits in the table with no written explanation behind it, so the cap or exempt figure that produced the withheld amount is not there to check. The six notes going to the actual courts and agencies are the larger gap. None of them names the section of the rulebook the figure came from, they just state the outcome. Leaving the rule citation out of every one of those six is a real gap for documents whose whole purpose is showing why an amount was withheld, and it means even the one document meant to be fully auditable has a hole of its own.
 
 ## 8. GUI action correctness
 
-N/A. Every write in this run went through the Notion, Drive and Gmail integrations directly rather than through navigating a screen, so there is no click path to score.
+**Rating:** N/A
+
+Every write in this run went through the Notion, Drive and Gmail integrations directly rather than through navigating a screen, so there is no click path to score.
 
 ## 1. Overall task success
 
-4
+**Rating:** 4
 
-I checked the actual queue against the source documents myself, and the substance is right. All fourteen orders are correctly computed down to the one interaction that trips up a shallow read, delivered as drafts with nothing sent or submitted. It lands at a 4 rather than higher because of where the run spent its effort. The documents a court or agency would actually read give the outcome without the rule behind it, the one paragraph carrying the most sensitive judgment call in the file momentarily contradicts itself, and the run took about nine minutes with a disclosed workaround explaining part of that time. None of that changes an answer, but together it is more than a single small flaw, and a persona relying on this would still need real work done before the drafts were ready to send.
+I checked the actual queue against the source documents myself, and the substance is right. All fourteen orders are correctly computed down to the one interaction that trips up a shallow read, delivered as drafts with nothing sent or submitted. It lands at a 4 rather than higher because of where the run spent its effort. The documents a court or agency would actually read give the outcome without the rule behind it, the one paragraph carrying the most sensitive judgment call in the file momentarily contradicts itself, and the run took 8.8 minutes with a disclosed workaround explaining part of that time. None of that changes an answer, but together it is more than a single small flaw, and a persona relying on this would still need real work done before the drafts were ready to send.

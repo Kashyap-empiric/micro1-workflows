@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-292",
+  "model": "C",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-dog, Extra High intelligence",
+    "session_id": "019fd575-dfeb-7711-bcd0-78e5ca5bf819"
+  },
+  "file": "Model-C-Dog-Extra-High.json",
+  "task": "Wrensfield Summer 2026 community health report statistical disclosure review across a Notion register, a Teams post and Gmail drafts",
+  "run_time": "3.7",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 6,
+      "commentary": "3.7 minutes was all this took to get all 41 disclosure calls right, including both of the fixture's hardest planted traps, plus one more that neither of the standard tests alone would have surfaced, that the Table F margin still exposes a failed dominance test once the surviving cell is subtracted from it. Nadira's board would get a complete, accurate review out of this run. It stays at a 6 rather than climbing further because the channel post and the three identically closed drafts both need real editing before board use, and because the verification trail behind its own hardest and most valuable finding is thinner than the confidence that finding deserves. A flawless run would have shown its work on that finding and given the channel post the same structure the analyst emails already have."
+    },
+    "task_accuracy": {
+      "rating": 6,
+      "commentary": "This register gets all 41 calls right against my own rework of the standard, catching both of the fixture's hardest traps, the Table C percentage that implies a 7 person cell and the 9 person band that only exists once the draft is set against the published Spring cohort. Where it goes further than that is Table F. It works out that subtracting the surviving Podiatry figure from the published all specialties total still hands back the combined Physiotherapy and Dietetics figure, and that combined figure fails the same dominance test at 60.13%, a genuinely deep catch. The one real softness is that this specific call rests on running the dominance test against a total that was never actually published as its own cell, an extension the standard's own text does not spell out, so the strongest defensible reading was applied rather than the only possible one."
+    },
+    "efficiency": {
+      "rating": 6,
+      "end_to_end_time_minutes": "3.7",
+      "wrong_actions_recovery": "None, it completed the whole review in a single pass.",
+      "commentary": "3.7 minutes covered all seven tables here, including the derived Table F check, with nothing repeated or backtracked that I can point to anywhere in the path. The one real thing worth naming is that the log leans almost entirely on stating conclusions rather than narrating the working, so a run this quick on arithmetic this dense leaves comparatively little disclosed trail of how each figure, especially the harder derived one, actually got checked before it was written down."
+    },
+    "writing_quality": {
+      "rating": 5,
+      "commentary": "A bulleted list carries the channel post's 12 findings instead of running them together in prose, which genuinely helps, though it is still one long message with no per table headers, so scanning for one specific table still means reading past the rest. The three analyst emails read more cleanly, each laying out the affected tables, the figure and the reason for every change before closing with an instruction that nothing goes out before sign off. Those same three emails share an identical closing line word for word though, which reads like a template reused three times rather than three notes composed for three different people."
+    },
+    "instruction_following": {
+      "rating": 6,
+      "commentary": "All three drafts sit with blank recipient fields and an instruction to add a verified address first, neither source sheet was touched anywhere in the run, all 41 values received exactly one of the five required actions, and the channel post states both counts as figures along with which table clears, matching the brief on every constraint I checked. The action label itself is the one place this falls short of the letter. The five required labels include a comma, and this register consistently substitutes a hyphen instead, so the value stored is not quite the exact wording specified even though which action was chosen is always correct."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 5,
+      "steering_needed": "None, it completed the whole review unattended in one pass.",
+      "additional_editing": "Light, restoring the literal comma in the register's action labels.",
+      "commentary": "It read the finished register back and confirmed all 41 rows with no incomplete fields, and it separately confirmed each draft carried the DRAFT label with an empty recipient field before treating the task as done. Both are real, disclosed checks rather than bare claims. Set against how sophisticated its hardest finding is, the derived Table F dominance failure, the verification trail behind that specific figure is thin. Nothing in the run shows the 60.13% recalculated a second way or checked against the register a second time, so the deepest catch in this review is also the one resting most on a single pass."
+    },
+    "citation_quality": {
+      "rating": 6,
+      "commentary": "This is the one register in front of me that states the exact dominance percentage behind Podiatry's clean pass on Table F, 34.97%, rather than leaving a passing cell's own math implicit, and nearly every other row traces cleanly to a specific numbered section too. The one real gap sits in how the derived Table F margin finding is sourced. It leans on the standard's percentages section to block a magnitude total from being reconstructed, when the standard's own magnitude section covers the underlying dominance concern more directly, so the citation given does not land in the part of the rulebook a reader tracing it would expect."
+    },
+    "gui_action_correctness": {
+      "rating": "N/A",
+      "commentary": "Every write in this run went through the Notion, Google Drive, Teams and Gmail integrations directly rather than through navigating a screen, so there is no click path to score."
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "task_id": "WF-292",
+  "task": "Aggregate Release Disclosure",
+  "section": "Final ranking",
+  "overall_ratings": { "A": 4, "B": 5, "C": 6 },
+  "boxes": [
+    {
+      "box": 1,
+      "title": "Rank all responses, best to worst",
+      "value": "C > B > A"
+    },
+    {
+      "box": 2,
+      "title": "Best model overall",
+      "value": "C"
+    },
+    {
+      "box": 3,
+      "title": "Why the top model is best, and what separates the rest",
+      "paragraphs": [
+        "C gets every one of the 41 disclosure calls right, including both of the hardest planted traps, and it is the only one of the three that also catches a magnitude total that stays disclosive after its two riskiest components are already suppressed, once the surviving sibling cell is subtracted from the grand total and the result is checked against the same dominance test on its own. It finished this review faster than either of the other two. Its real weaknesses are that the citation behind its own best catch leans on a section of the standard written for percentages rather than the one written for magnitude data, its channel post and its three analyst notes all close on an identical line, and the disclosed verification trail behind its hardest finding is thinner than the confidence that finding deserves.",
+        "B is close behind. It gets the same 41 calls right as the top model except for the one it does not reach, the derived magnitude check on the surviving Table F total, and it is the only one of the three to explain, in its own words, why a percentage's base cannot be withheld to rescue the percentage itself. Its most thoroughly disclosed strength is a two stage verification process, checking its planned decisions before writing and separately confirming the posted channel message and the three drafts afterward. What holds it back is a literal wording slip in the register's own required action labels, substituting a hyphen for the comma the brief specified, and the same identical closing line repeated across all three analyst notes.",
+        "A also gets every one of the 41 calls right, including the same two hardest traps, and it is the only one of the three to preserve the register's required action vocabulary exactly as specified, catching a Notion field limitation on its own and rebuilding the column rather than settling for a close paraphrase. It ran the slowest of the three by a wide margin, and its fix for the one small cell built from a two stage cancer staging category throws away the whole register total, when this same run had already shown three rows earlier, on a different table, that it knew how to protect a small cell without discarding the total around it."
+      ]
+    }
+  ]
+}

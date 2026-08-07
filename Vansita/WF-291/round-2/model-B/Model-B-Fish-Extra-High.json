@@ -7,7 +7,7 @@
   },
   "file": "Model-B-Fish-Extra-High.json",
   "task": "Larkfield Q3 2026 renewal compliance audit across a Notion findings register, a Teams post and Gmail drafts",
-  "run_time": "about 5",
+  "run_time": "5.0",
   "boxes": {
     "overall_task_success": {
       "rating": 4,
@@ -19,9 +19,9 @@
     },
     "efficiency": {
       "rating": 5,
-      "end_to_end_time_minutes": "about 5",
+      "end_to_end_time_minutes": "5.0",
       "wrong_actions_recovery": "one, an extra Notion page was created for a plan and jurisdiction combination that already had a row, and it was never removed",
-      "commentary": "This finished the whole four system audit in about five minutes, which is quick for a plan by plan legal audit at this scale. The bulk of that time reads as a clean, direct path from opening the sources to posting the finished work. The real drag is the redundant Notion page it left behind for Larkfield Voice in Vantry, a plan and jurisdiction pair that already had a row, which means the write phase did the same piece of work twice without noticing. It also hit the workspace's Notion query limit partway through and switched to a slower manual check instead, a reasonable adaptation but still a step a working query tool wouldn't have required."
+      "commentary": "This finished the whole four system audit in 5.0 minutes, which is quick for a plan by plan legal audit at this scale. The bulk of that time reads as a clean, direct path from opening the sources to posting the finished work. The real drag is the redundant Notion page it left behind for Larkfield Voice in Vantry, a plan and jurisdiction pair that already had a row, which means the write phase did the same piece of work twice without noticing. It also hit the workspace's Notion query limit partway through and switched to a slower manual check instead, a reasonable adaptation but still a step a working query tool wouldn't have required."
     },
     "writing_quality": {
       "rating": 4,

@@ -142,28 +142,28 @@ All six issuer drafts and the Ines draft confirm their "To" field is blank/popul
 
 ## 2. Task accuracy, ignoring speed
 
-6
+**Rating:** 6
 
 The note explaining disposable earnings states the general rule plainly, earnings less only what is legally required, rather than leaving it implicit, and that rule holds up throughout the file. Reworking all fourteen orders against the rulebook and the payroll tabs myself, every figure ties out, including the interaction where an earlier support withholding already consumes the general limit and zeroes out a later creditor order. The one loose thread is a levy note that raises a timing concern about the agency's acknowledgement deadline without saying what the concern actually is or whether that deadline has already passed given the note itself is still unsent, which reads as flagging a problem without finishing the thought.
 
 ## 3. Efficiency
 
-**Rating:** 6
-**End-to-end time (minutes):** About 4.
+**Rating:** 5
+**End-to-end time (minutes):** 4.1
 **Wrong actions / recovery:** None, it completed in a single pass with no redo.
-**Commentary:** Source review, calculation, the written rows, then the seven drafts, in a straight line with nothing repeated, finishing in about four minutes for the full fourteen order scope. It hit a Notion tooling limit partway through and adapted by confirming the rows through a search instead of one bulk check, without that visibly costing extra time. The one thing worth naming is that this workaround still meant checking rows through a second, less direct method than the tool it was originally built to use, which is a small amount of avoidable friction even in an otherwise fast run.
+**Commentary:** Before it calculated or wrote anything, the Notion search returned several identically named databases, so it had to inspect their schemas and existing rows to identify the actual seeded target rather than writing into the wrong one. It then hit a Notion tooling limit partway through and adapted by confirming the rows through a search instead of one bulk check. Neither detour visibly cost much time, and source review, calculation, the written rows and the seven drafts otherwise read as a straight line finishing in 4.1 minutes for the full fourteen order scope. Two separate real frictions on a run this size, even a fast one, is enough to keep it off the top band.
 
 ## 4. Writing quality
 
-5
+**Rating:** 5
 
 The note to the payroll manager is genuinely well organised, it breaks the totals, the written escalation and the exceptions carried on the register into clearly labelled sections rather than one continuous block, which is exactly what a document carrying this much information needs. Where this loses ground is the six notes to courts and agencies. Every single one closes with the identical two line signature block, prepared for review, no signature applied, copied verbatim rather than varied to fit each note. Six closings that read almost the same in a row comes across like a mail merge rather than six individually considered pieces of correspondence, even though the reasoning inside each one is genuinely tailored to that order.
 
 ## 5. Instruction following
 
-6
+**Rating:** 6
 
-Blank recipient fields with a note that a verified address is required sit on all six issuer drafts, nothing was sent or submitted, all fourteen orders are covered including the two carried only on the register, and the disposable earnings standard is stated once as a general rule rather than asserted per row. One note per court or agency covers everything that issuer is owed rather than splitting orders apart. The one place this is less complete than it could be is the same levy note flagged under accuracy. Raising a deadline question is the right instinct given the procedure's own emphasis on timing, but not carrying that thought through to an actual answer leaves the one open question in the whole file unresolved rather than stated and settled.
+Blank recipient fields with a note that a verified address is required sit on all six issuer drafts, nothing was sent or submitted, all fourteen orders are covered including the two carried only on the register, and the disposable earnings standard is stated once as a general rule rather than asserted per row. One note per court or agency covers everything that issuer is owed rather than splitting orders apart. The one place this is less complete than it could be is the levy note that raises a timing concern about the agency's acknowledgement deadline. Raising the question is the right instinct given the procedure's own emphasis on timing, but not carrying that thought through to an actual answer leaves the one open question in the whole file unresolved rather than stated and settled.
 
 ## 6. Collaboration, autonomy, and verification
 
@@ -174,16 +174,18 @@ Blank recipient fields with a note that a verified address is required sit on al
 
 ## 7. Citation quality
 
-6
+**Rating:** 6
 
 Every note I could check cites the specific rule section behind its figure and the comparison that produced it, the interstate support order included. The disposable earnings standard is stated as a general rule rather than demonstrated once and left implicit elsewhere. The one gap is the levy note's timing concern, which is raised without naming the procedure or rule section it rests on, breaking what is otherwise a consistent pattern of always showing the source behind a claim.
 
 ## 8. GUI action correctness
 
-N/A. Every write went through the Notion, Drive and Gmail integrations directly, with no on screen clicking involved anywhere in the run, so there is nothing here to rate.
+**Rating:** N/A
+
+Every write went through the Notion, Drive and Gmail integrations directly, with no on screen clicking involved anywhere in the run, so there is nothing here to rate.
 
 ## 1. Overall task success
 
-6
+**Rating:** 6
 
-This queue holds up fully against a source check I did myself, correctly computed down to the interaction that trips up a shallow read, delivered in about four minutes with consistently cited reasoning throughout. The payroll manager's note is genuinely well organised and the disposable earnings standard is stated as a rule rather than left implicit. It stays at a 6 rather than climbing higher because of two real, if modest, threads left hanging. A raised timing concern never gets an answer, and six notes that are otherwise reasoned well all end in the identical copied signature block rather than reading as separately composed. Neither changes a figure, but a fully flawless run would have tied off both.
+This queue holds up fully against a source check I did myself, correctly computed down to the interaction that trips up a shallow read, delivered in 4.1 minutes with consistently cited reasoning throughout. The payroll manager's note is genuinely well organised and the disposable earnings standard is stated as a rule rather than left implicit. It stays at a 6 rather than climbing higher because of a few real, if modest, threads left loose. Two separate Notion detours, a duplicate-titled database and a tooling limit, both got handled cleanly but still cost real time, a raised timing concern never gets an answer, and six notes that are otherwise reasoned well all end in the identical copied signature block rather than reading as separately composed. None of that changes a figure, but a fully flawless run would have tied off all three.

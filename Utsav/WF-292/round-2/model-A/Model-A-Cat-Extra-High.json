@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-292",
+  "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fd246-cd07-7ec3-b557-e861b4b8b9bd"
+  },
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "Wrensfield Summer 2026 community health report statistical disclosure review across a Notion register, a Teams post and Gmail drafts",
+  "run_time": "9.9",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 4,
+      "commentary": "Nadira's board would get a usable, accurate review from this run. Every one of the 41 disclosure calls is substantively correct, and both of the fixture's hardest planted traps got caught. It lands at a 4 because of where the run spent its effort and where its judgment came up short in a couple of real places. The 9.9 minute run time carries a real, disclosed cost from the schema rebuild, its Table G fix throws away the whole register total when the same run had already shown three rows earlier that it knew how to protect a small cell without doing that, and the channel post and the three identically closed drafts both need real editing before I would treat this as board ready. None of that changes an answer, but together it is more than a single small flaw."
+    },
+    "task_accuracy": {
+      "rating": 5,
+      "commentary": "Checking this against the standard myself, all 41 held back cells are the right calls, and the two hardest traps in the fixture both landed: the Table C percentage that quietly implies a 7 person cell, and the 9 person band that only surfaces once the draft is set against the already published Spring cohort. Two real gaps keep it off the top. Table G suppresses the small stage and drops the whole 224 person total, even though this same run had just shown, three rows earlier on Table D, that combining adjacent categories protects a small cell without losing the total around it. It also stops short of checking whether the two Table F suppressions still leave a disclosive figure once Podiatry is subtracted from the published all specialties total."
+    },
+    "efficiency": {
+      "rating": 4,
+      "end_to_end_time_minutes": "9.9",
+      "wrong_actions_recovery": "One, the Notion select field rejected the comma inside the required action labels and the column had to be rebuilt as plain text.",
+      "commentary": "This took 9.9 minutes for a 41 value review across seven tables, and the schema rebuild is a real, disclosed reason for a meaningful share of that time. Finding out the field could not hold the literal wording and fixing it properly rather than quietly settling for a paraphrase was the right call, but it is still added friction that a cleaner starting schema would not have cost. Past that one detour the path reads as a straight line from reading the sources to writing the register to posting the summary and the drafts."
+    },
+    "writing_quality": {
+      "rating": 4,
+      "commentary": "Each of the three analyst emails opens with its affected tables and lays out the figure and the reason for every change in a short list, closing with a clear instruction that nothing goes out before sign off, genuinely well built pieces on their own. The channel post is a different story. Eleven separate findings across six tables land in one continuous message with no per table breaks, so a board member skimming for one specific table has to read past everything else to find it. The three emails also end on the identical line, word for word, which reads more like a template being reused than three notes composed for three different people."
+    },
+    "instruction_following": {
+      "rating": 6,
+      "commentary": "This holds to every constraint I checked. The recipient fields on all three drafts are blank with a note that a verified address is needed, no draft table or the Spring sheet was touched, every one of the 41 values got exactly one of the five required actions, and the channel post carries both counts as figures along with which table clears. Where it goes beyond the brief is the schema itself. Finding that the seeded field could only hold three of the five required labels and rebuilding the whole Action column as a different field type to preserve the literal wording is a bigger structural change than was asked for, even though the reasoning behind it was sound."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 6,
+      "steering_needed": "None, it ran the whole review unattended from the request to the finished drafts.",
+      "additional_editing": "Light, correcting the Table G disposition to protect the small stage without dropping the whole register total.",
+      "commentary": "It found the missing action labels on its own, diagnosed exactly why the field rejected them, and read the finished register back against its own plan before posting anything, confirming all 41 rows landed as intended. That is real, disclosed self correction rather than a bare claim. What the run does not show is any check tying the actual posted channel message and the three drafts back to the finished register once they were written, so the only verified artifact is the register itself and the other two outputs are trusted rather than confirmed against it."
+    },
+    "citation_quality": {
+      "rating": 6,
+      "commentary": "Almost every row here traces to a specific numbered section, and checking a sample of the harder ones against the standard myself, including the Table F dominance figures and the Table E boundary comparison, they hold up. Table C is the one real gap. The note explains why the percentage is suppressed but never states the separate reason the underlying base of 34 stays safe to publish, leaving half of the same rule unstated even though the standard treats withholding a percentage's own base as its own violation."
+    },
+    "gui_action_correctness": {
+      "rating": "N/A",
+      "commentary": "Every write in this run went through the Notion, Google Drive, Teams and Gmail integrations directly rather than through navigating a screen, so there is no click path to score."
+    }
+  }
+}

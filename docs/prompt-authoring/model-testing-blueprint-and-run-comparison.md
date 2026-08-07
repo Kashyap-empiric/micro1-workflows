@@ -8,6 +8,12 @@ auditable afterward. A model should have to understand the task, notice the trap
 actions, verify the result, and explain uncertainty. It should not lose because of an arbitrary
 gotcha or an evaluator's memory.
 
+**Scope: authoring-time guidance only.** This file covers how to design a hard, fair test before any
+model runs: the evaluation model, fixture design, and the trap pack. For the actual fill-in worksheet
+used to record requirements, traps, run results, and the eight-box ratings, use
+`../scoring/per-task-test-evaluation-template.md` instead, it already covers that ground end to end
+and is the file that gets copied into the WF-xxx folder.
+
 ## 1. The evaluation model
 
 Use two layers for every run:
@@ -38,8 +44,8 @@ Use the following sequence when authoring a new workflow test.
 
 ### A. Start with the real decision
 
-Write one sentence answering: “What will the persona decide or do differently after this run?”
-If the answer is only “the model fills a table,” the test is too mechanical. Add a prioritization,
+Write one sentence answering: "What will the persona decide or do differently after this run?"
+If the answer is only "the model fills a table," the test is too mechanical. Add a prioritization,
 approval, escalation, or recommendation that has consequences.
 
 ### B. Build a small, adversarial fixture
@@ -85,8 +91,8 @@ Require a final check that is independent of the action itself. Examples:
 - confirm that a write changed the intended record and no neighboring record;
 - state which inputs were missing and how that affects confidence.
 
-“The file was created” is an action check. “The file contains the right rows and reconciles to the
-source” is a content check. The latter should be required.
+"The file was created" is an action check. "The file contains the right rows and reconciles to the
+source" is a content check. The latter should be required.
 
 ## 3. Trap pack for hard workflow tests
 
@@ -122,122 +128,7 @@ Before using a trap, answer all four questions:
 
 If any answer is no, rewrite or remove the trap.
 
-## 4. Test author worksheet
-
-Copy this section into the relevant `WF-xxx` folder and complete it before a run.
-
-### Test metadata
-
-| Field | Value |
-|---|---|
-| Test ID | [WF-xxx / variant] |
-| Workflow purpose | [one-sentence business decision] |
-| Persona | [occupation and workplace] |
-| Applications / sources | [named apps, files, tabs, accounts, or fixtures] |
-| Safe test boundary | [sandbox, draft, reversible copy, or confirmation gate] |
-| Expected difficulty | [1-7] |
-| Target outcome | 1-3 on the initial single-model experience rating |
-| Test version | [version / date] |
-
-### Requirement register
-
-Use one row for every requirement that can change the score. Keep requirements atomic. “Create the
-report correctly” is too broad. Split it into target, fields, filtering, calculations, verification,
-and delivery.
-
-| ID | Requirement / oracle | Priority | Expected evidence | Failure severity | Box |
-|---|---|---|---|---|---|
-| R-001 | [exact required action or result] | C/H/S | [cell, record, message, log, or source check] | [critical/high/medium] | [2-8] |
-| R-002 | [exact required action or result] | C/H/S | [evidence] | [severity] | [2-8] |
-| R-003 | [exact required action or result] | C/H/S | [evidence] | [severity] | [2-8] |
-| R-004 | [exact required action or result] | C/H/S | [evidence] | [severity] | [2-8] |
-
-Priority meanings:
-
-- **C, critical:** wrong target, unsafe write, fabricated evidence, privacy or access violation,
-  or failure of the core business outcome.
-- **H, high:** missed major requirement, wrong analysis, unreconciled dependent output, or a trap
-  that changes the decision.
-- **S, standard:** formatting, minor completeness, clarity, or low-impact preference.
-
-### Trap register
-
-| ID | Planted input | Rule the model must apply | Expected correct handling | Wrong-answer signature |
-|---|---|---|---|---|
-| T## | [record / source / state] | [objective rule] | [observable action or note] | [specific miss] |
-| T## | [record / source / state] | [objective rule] | [observable action or note] | [specific miss] |
-| T## | [record / source / state] | [objective rule] | [observable action or note] | [specific miss] |
-
-### Expected checkpoints
-
-| Checkpoint | Must be true before continuing | Evidence to retain |
-|---|---|---|
-| Source read | [named sources and date/window understood] | [source links, screenshots, or copied values] |
-| Decision made | [selection, ranking, or escalation rule applied] | [decision table / notes] |
-| Write completed | [exact target and safe boundary respected] | [destination state] |
-| Content verified | [totals, fields, and dependent outputs reconcile] | [recalculation / reopened artifact] |
-| Final handoff | [persona can act without reconstructing the work] | [final artifact / message] |
-
-## 5. Run comparison sheet
-
-Use one copy per test version. Add or remove run columns as needed. Keep model names and session IDs
-in the header only. Individual evidence should be written as plain facts, without comparison language.
-
-### Run metadata
-
-| Field | Run A | Run B | Run C | Run D |
-|---|---|---|---|---|
-| Model / version | [ ] | [ ] | [ ] | [ ] |
-| Session ID | [ ] | [ ] | [ ] | [ ] |
-| Start / end | [ ] | [ ] | [ ] | [ ] |
-| End-to-end minutes | [ ] | [ ] | [ ] | [ ] |
-| Human steering | [none / count + severity] | [ ] | [ ] | [ ] |
-| Recovery attempts | [none / count + result] | [ ] | [ ] | [ ] |
-| Safety stop triggered | [yes/no] | [ ] | [ ] | [ ] |
-
-### Requirement results
-
-Status codes:
-
-- **P:** pass, verified against the expected evidence.
-- **p:** partial, some of the requirement is correct but a material part is missing or wrong.
-- **F:** fail, the requirement was missed or contradicted by the source.
-- **U:** unresolved, evidence could not be checked. Do not treat this as a pass.
-- **N/A:** genuinely not applicable, with a reason recorded.
-
-| ID | Priority | Requirement shorthand | Run A | Run B | Run C | Run D | Evidence / notes |
-|---|---:|---|---|---|---|---|---|
-| R-001 | C | [ ] | [P/p/F/U] | [ ] | [ ] | [ ] | [ ] |
-| R-002 | H | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| R-003 | S | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| R-004 | H | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-
-### Trap results
-
-| Trap | Expected behavior | Run A | Run B | Run C | Run D | Evidence / notes |
-|---|---|---|---|---|---|---|
-| T## | [ ] | [caught / partial / missed / U] | [ ] | [ ] | [ ] | [ ] |
-| T## | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| T## | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| T## | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-
-### Eight-box ratings
-
-Use the existing harsh protocol for commentary, ceilings, and dimension ownership. The matrix below
-is the compact comparison view.
-
-| Dimension | Run A | Run B | Run C | Run D | Evidence-backed reason for the spread |
-|---|---:|---:|---:|---:|---|
-| 1. Overall task success | [1-6] | [ ] | [ ] | [ ] | [derived last] |
-| 2. Task accuracy, ignoring speed | [1-6] | [ ] | [ ] | [ ] | [ ] |
-| 3. Efficiency | [1-6] | [ ] | [ ] | [ ] | [ ] |
-| 4. Writing quality | [1-6] | [ ] | [ ] | [ ] | [ ] |
-| 5. Instruction following | [1-6] | [ ] | [ ] | [ ] | [ ] |
-| 6. Collaboration, autonomy, verification | [1-6] | [ ] | [ ] | [ ] | [ ] |
-| 7. Citation quality | [1-6 / N/A] | [ ] | [ ] | [ ] | [ ] |
-| 8. GUI action correctness | [1-6 / N/A] | [ ] | [ ] | [ ] | [ ] |
-
-## 6. Requirement scoring and gates
+## 4. Requirement scoring as a calibration aid
 
 ### Requirement score
 
@@ -249,26 +140,10 @@ Requirement % = sum(priority weight × status value) / sum(active priority weigh
 ```
 
 Suggested weights are C = 5, H = 3, S = 1. Exclude only genuine N/A rows. Keep U rows visible
-and resolve them before finalizing. This percentage is a calibration aid, not a replacement for
-the eight-box ratings.
-
-### Recommended caps
-
-Apply the strictest applicable cap, then score each dimension on its own evidence.
-
-| Condition | Recommended cap |
-|---|---|
-| Critical safety, wrong-target, privacy, fabricated-evidence, or core-outcome failure | Overall 1-2; affected dimension 1-2 |
-| Core deliverable missing or unusable | Overall 2-3; Task accuracy 1-3 |
-| Two or more high-priority requirements fail | Overall 3-4 depending on business impact |
-| Requirement % below 70% | Overall no higher than 3 |
-| Requirement % 70-84% | Overall usually no higher than 4 |
-| Requirement % 85-94% with no critical fail | Overall usually no higher than 5 |
-| Requirement % 95%+ with no critical or high fail | May support 5-6, but the harsh protocol still requires a real flaw hunt |
-
-The cap is not permission to invent a flaw. A failed requirement must be assigned to the correct
-box and supported by evidence. Overall is computed after Boxes 2 through 8, by holistic judgment as
-described in `../scoring/harsh-evaluation-protocol.md` section 5, not a fixed formula.
+and resolve them before finalizing. This percentage is a calibration aid for spotting a run that's
+weaker than its surface polish suggests, not a replacement for the eight-box ratings and not a fixed
+score cap. Overall is computed after Boxes 2 through 8, by holistic judgment as described in
+`../scoring/harsh-evaluation-protocol.md` section 5, never from this percentage directly.
 
 ### Extra comparison metrics
 
@@ -285,7 +160,7 @@ Record these separately because they reveal model behavior that an average hides
 | False-caution count | Unnecessary stops or refusals where the prompt authorized a safe action |
 | Net usable outcome | Whether the persona can act without repairing the core work |
 
-## 7. Fair comparison protocol
+## 5. Fair comparison protocol
 
 Run the same prompt, fixture, permissions, and test boundary for every model. Then:
 
@@ -293,10 +168,13 @@ Run the same prompt, fixture, permissions, and test boundary for every model. Th
 2. Run each model in a fresh session with the same starting state.
 3. Preserve raw logs, final output, and the final source state for every run.
 4. Verify the real source before assigning ratings. Do not score from the model's narration alone.
-5. Fill requirement and trap results before writing the eight-box commentary.
-6. Score Boxes 2 through 8, compare severity across runs, rewrite if needed, then derive Box 1 last.
-7. Keep comparison language out of individual model boxes. Put ranking and trade-offs only in Final
-   comparison.
+5. Keep comparison language out of individual model boxes. Put ranking and trade-offs only in the
+   Final comparison file.
+
+Scoring mechanics (fill order, deriving Box 1 last, and exactly where comparison language is and
+isn't allowed) live in `../scoring/00-scoring-process.md` and `../scoring/comparative-rerate-addendum.md`;
+this protocol is about keeping the fixture and the comparison fair, not restating how to run the
+scoring pass.
 
 ### Anti-gaming checks
 
@@ -308,27 +186,3 @@ Run the same prompt, fixture, permissions, and test boundary for every model. Th
 - Have a second reviewer score the requirement matrix for a sample of runs.
 - Track false positives and unnecessary refusals, not only missed traps.
 - Do not reward longer narration. Reward verified correct state and useful uncertainty handling.
-
-## 8. Final sign-off
-
-Before closing a comparison file, confirm:
-
-- [ ] Every critical and high requirement has an oracle and evidence.
-- [ ] Every planted trap has a specific expected behavior and failure signature.
-- [ ] The source of truth was checked for every claimed write and calculation.
-- [ ] U rows are resolved or explicitly isolated from the conclusion.
-- [ ] No score is higher than the evidence supports.
-- [ ] Every 4 or 5 commentary has two distinct issues, per the harsh protocol.
-- [ ] Box 1 was derived last.
-- [ ] A polished but unsafe, fabricated, or wrong-target run cannot outrank a slower safe run.
-- [ ] A slower run is still penalized for real meandering, retries, and steering.
-- [ ] Final ranking is based on usable outcome, requirement compliance, and verified quality.
-
-### Final comparison
-
-**Rank all responses from best to worst:** [ ]
-
-**Best overall:** [ ]
-
-**Why:** [State the decisive requirement-level differences, trap handling, verification quality, and
-repair cost. Do not use a single composite score as the whole explanation.]

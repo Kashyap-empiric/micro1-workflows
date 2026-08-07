@@ -7,7 +7,7 @@
   },
   "file": "Model-A-Cat-Extra-High.json",
   "task": "Larkfield Q3 2026 renewal compliance audit across a Notion findings register, a Teams post and Gmail drafts",
-  "run_time": "about 7",
+  "run_time": "7.1",
   "boxes": {
     "overall_task_success": {
       "rating": 5,
@@ -19,9 +19,9 @@
     },
     "efficiency": {
       "rating": 6,
-      "end_to_end_time_minutes": "about 7",
+      "end_to_end_time_minutes": "7.1",
       "wrong_actions_recovery": "none, it caught a duplicate-named Notion database before writing and made no incorrect writes",
-      "commentary": "It moved through this in one steady pass across four systems in about seven minutes, which is quick for a plan by plan audit this size. The only real snag was that Notion turned up two databases sharing the same name, and it had to open and compare their schemas before it could be sure it was writing into the real findings register rather than an empty duplicate. That check was the right call given what a wrong write would have cost, but it was still time spent that a cleaner workspace wouldn't have required. Past that one detour the run reads as a straight line from opening the sources to posting the finished audit."
+      "commentary": "It moved through this in one steady pass across four systems in 7.1 minutes, which is quick for a plan by plan audit this size. The only real snag was that Notion turned up two databases sharing the same name, and it had to open and compare their schemas before it could be sure it was writing into the real findings register rather than an empty duplicate. That check was the right call given what a wrong write would have cost, but it was still time spent that a cleaner workspace wouldn't have required. Past that one detour the run reads as a straight line from opening the sources to posting the finished audit."
     },
     "writing_quality": {
       "rating": 4,

@@ -162,6 +162,18 @@ checking the source. **Missing visibility is never a flaw.** Do not dock because
 not narrated, or because a mess "might" be hiding behind a terse line. There is always a real,
 visible weakness in the actual deliverable to point at instead. Go point at that.
 
+**A saved `codexlogs.txt` can itself be incomplete.** If the pasted transcript does not show a
+required step happening, that is inconclusive, not proof the run skipped it, the same "missing
+visibility is never a flaw" logic applies to the log as much as to the click path. Flag the gap for
+confirmation rather than writing a deduction off an absence in the log.
+
+**Harshness scales down once a box is already clearly below the 6/7 range.** The flaw hunt above
+exists to stop scores drifting up to 6 or 7 without a real hunt. Once a box is genuinely landing at
+2-3 or 3-4 on real, already-found evidence, do not keep stacking additional distinct issues just to
+push it lower still. Land on the anchor finding that most directly matches what was observed and
+stop. Extra harshness belongs at the ceiling, guarding against an inflated 6 or 7, not piled onto a
+score that has already earned a low number.
+
 **IN THE RIGHT BOX.** Each box gets ITS dimension's own flaw. Do not recycle one issue across
 eight boxes. A wrong number is accuracy or citation, never efficiency or GUI. Slowness is
 efficiency, never accuracy. Needing a fallback tool is efficiency, never GUI action correctness.
@@ -187,8 +199,16 @@ Run every gate before finalizing. No exceptions.
   however small, it is not a 7. Default to 6 whenever there is any doubt.
 - **A 6 requires naming the one thing.** If the one small thing cannot be named, the hunt is not
   finished and the score is not a 6, and it is certainly not a 7.
-- **A 4 or 5 requires two distinct named issues** in that box's commentary. Not one issue restated.
-  Not vague filler. If only one real issue exists, rethink whether it is actually a 6.
+- **A 4 or 5 requires two distinct named issues** in that box's commentary, as an absolute floor.
+  Not one issue restated. Not vague filler. If only one real issue exists, rethink whether it is
+  actually a 6.
+- **Reviewer-mandated minimum, first-review gate (2026-08-07).** Every rated box needs both named
+  strengths and named weaknesses, not just the floor above. Worked example given directly by the TL:
+  a 4/7 needs 2 to 3 distinct positive points and 3 or more distinct areas for improvement, each with
+  a clear explanation, not a bare list. Scale that same strengths-and-weaknesses balance to other
+  bands too, 4/7 is the given example, not the only band this applies to. A commentary that reads as
+  almost entirely positive with one or two negatives bolted on will not clear first review, whatever
+  the number attached to it says.
 - **Every rating must be reflected in the writing, in proportion to the number.** The mix of
   evidence-backed positives and negatives in a box's commentary should track its rating band, not
   just echo it in wording. A mixed-result rating carries real named strengths alongside real named
@@ -198,7 +218,16 @@ Run every gate before finalizing. No exceptions.
   positive or negative to satisfy the structure. If no genuine positive or negative exists, do not
   manufacture one, record the evidence honestly and reconsider whether the number fits.
 - **Most dimensions, examined critically, belong at 5 or below.** 6 is not a default landing spot.
+- **No target score band, ever.** Not 3-5, not 4-6, not any other range aimed for going in. Score
+  each box off its own flaw-hunt evidence and let it land wherever that evidence puts it.
 - **Ties break low.** Always.
+- **No identical Overall/total rating across models in the same round (reviewer-mandated,
+  2026-08-07).** This is stronger than the ranking-order rule in voice-and-format-checklist.md
+  section 6: it is not enough for the strict ranking text to differ while two models' Overall numbers
+  stay the same. If two models would land on the same Overall rating, the comparative severity
+  calibration in comparative-rerate-addendum.md was not carried far enough. Go back, find the real
+  gap in boxes 2-8 that separates them, and let Overall reflect it. A round with two identical Overall
+  numbers fails first review.
 - **Coupling rule.** If the commentary names a flaw, a miss, or a "would have been cleaner if", the
   number moves down for it. The reverse holds too.
 - **One real defect in the core work caps the box.** Do not average failures away.
@@ -233,7 +262,9 @@ Run every gate before finalizing. No exceptions.
 3. Is any box sitting at 6 or 7? Go back and look harder. A comfortable 6 usually means the hunt
    stopped early, and a 7 doubly so, it must survive the full flaw hunt with nothing found, not
    just a hunt that came up empty because it stopped early.
-4. Does every 4 or 5 carry two distinct named issues?
+4. Does every 4 or 5 carry two distinct named issues at minimum, and does a 4 specifically carry
+   2 to 3 named positives and 3 or more named areas for improvement with clear explanations
+   (reviewer-mandated first-review gate)?
 5. Does each box's mix of positives and negatives track its rating band, rather than just
    restating the number in words?
 6. Does each commentary's balance match its rating without invented strengths or weaknesses?
@@ -241,10 +272,12 @@ Run every gate before finalizing. No exceptions.
    evidence rather than worked out first?
 8. Does the spread reflect real differences in severity across boxes and across models?
 9. Is every flaw grounded in something checked, with nothing invented from missing visibility?
+10. Do any two models in this round share the same Overall/total rating number? If so, this fails
+    first review, go back and separate them on the evidence before presenting.
 
 Then run the standard voice pass separately (trainer first person, no em-dashes, no semicolons, no
 "X, not Y" framing, no cross-model references, no specific identifiers, no meta commentary about
-what was or was not available, roughly 100-120 words per Commentary, terse one-clause sub-fields).
+what was or was not available, roughly 100-160 words per Commentary, terse one-clause sub-fields).
 
 ---
 

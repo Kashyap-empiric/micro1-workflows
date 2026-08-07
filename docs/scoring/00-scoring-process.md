@@ -19,7 +19,7 @@ Resolve instructions in this order. Do not silently combine conflicting versions
    - [harsh-evaluation-protocol.md](harsh-evaluation-protocol.md) for flaw hunting, scoring gates, and how
      Overall gets derived.
    - [voice-and-format-checklist.md](voice-and-format-checklist.md) for wording and formatting.
-   - [comparative-rerate-addendum.md](comparative-rerate-addendum.md) for the mandatory all-four comparison
+   - [comparative-rerate-addendum.md](comparative-rerate-addendum.md) for the mandatory all-model comparison
      method used during scoring (see its 2026-08-04 sequencing note: this runs as part of the single
      scoring pass below, not as a later separate rerate).
 4. This file for round organization and file ownership.
@@ -58,6 +58,16 @@ Do not rename, split, overwrite, or mix new evaluation material into them.
 Every individual model record, including a deliberately migrated historical model record, uses the
 per-model directory structure below. A migration must preserve the main model record, move its raw
 transcript into `codexlogs.txt`, and keep any captured local artifacts in `output/`.
+
+**Retired-model archive policy.** When the active model mapping for a round drops a variant (for
+example, dropping a lower-intelligence tier partway through a round), do not delete real work already
+captured for the retired variant. Move that model's subfolder into `round-N/archive-high-tier/<codename>/`
+(keyed by codename, since the letter it used gets reassigned to a different model), preserving
+`model-X.md`, `codexlogs.txt`, and `output/` exactly as captured. A stub folder that was never captured
+(placeholder text only, no `codexlogs.txt`, no real `output/` files) has nothing worth preserving and
+can simply be reset to the current mapping without an archive step. `final-comparison.md` gets a
+one-line note recording that an archive exists and why, without re-litigating the archived scores
+anywhere in the active comparison.
 
 ## File ownership and structure
 
@@ -111,7 +121,7 @@ This is the shared round control file. It owns:
 
 - the seven-field METADATA questionnaire for the round
 - the canonical-file pointers
-- readiness status for models A through D
+- readiness status for every model in the round
 - the final strict ranking, best-overall choice, and comparison reasoning
 - the final sign-off
 
@@ -162,17 +172,18 @@ Capture evidence before resetting or deleting the test environment, including:
 - final source state used for verification
 - reset or cleanup confirmation, when applicable
 
-Update `final-comparison.md` after each model is captured:
+Update `final-comparison.md` after each model is captured, with one row per model letter that
+actually has a `round-N/model-<letter>/` directory in this round. Do not assume a fixed letter count
+or copy a prior round's row count; read it from what's actually on disk.
 
 | Model | Logs | Output | Source state | Ready |
 |---|---|---|---|---|
 | A | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | YES / NO |
 | B | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | YES / NO |
-| C | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | YES / NO |
-| D | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | PRESENT / MISSING / UNRESOLVED | YES / NO |
+| ... | ... | ... | ... | ... |
 
-Scoring starts only when all four models show `YES`. `UNRESOLVED` is not a pass. If evidence cannot
-be recovered, record the limitation and stop before finalizing the comparison.
+Scoring starts only when every model in the round shows `YES`. `UNRESOLVED` is not a pass. If
+evidence cannot be recovered, record the limitation and stop before finalizing the comparison.
 
 Whenever new files land in a model's `output/` folder (screenshots of tickets or chat posts, exported
 Sheet PDFs, and the like), read them and transcribe their actual content into that model's
@@ -183,26 +194,31 @@ format for how complete this transcription should be.
 
 ## Scoring order
 
-After all four models are ready:
+After every model in the round is ready:
 
-1. Re-read all four main model files and their `codexlogs.txt` transcripts, the prompt, the evaluation
+1. Re-read every main model file and its `codexlogs.txt` transcript, the prompt, the evaluation
    record, and the source-of-truth material in the same sitting.
 2. Build the flaw ledger before writing any rating. Walk the planted traps, requirements,
    reconciliation checks, constraint checks, verification checks, path checks, and recovery checks.
-3. Score boxes 2 through 8 dimension by dimension across models A, B, C, and D, comparing all four
-   against each other as you go, per [comparative-rerate-addendum.md](comparative-rerate-addendum.md)'s
+3. Score boxes 2 through 8 dimension by dimension across every model in the round, comparing all of
+   them against each other as you go, per [comparative-rerate-addendum.md](comparative-rerate-addendum.md)'s
    procedure. Do not score each model blind in isolation and only compare afterward: read and compare
-   all four from the start, in this one pass, and derive both the ratings and the commentary directly
-   from that comparison. Re-read the source definition for the dimension before finalizing it.
-4. Keep every model's commentary standalone in what gets written down. Internal comparison across all
-   four calibrates severity and is required, but it must never appear as visible text in the model
-   files, Logs, Output descriptions, or surrounding text (see comparative-rerate-addendum.md's hard
-   rule and voice-and-format-checklist.md section 1, both still fully in force).
-5. Only after boxes 2 through 8 are final, calculate and write box 1 for all four using the holistic
+   every model from the start, in this one pass, and derive both the ratings and the commentary directly
+   from that comparison. Re-read the source definition for the dimension before finalizing it. Run the
+   full [voice-and-format-checklist.md](voice-and-format-checklist.md) scan on each box immediately
+   after drafting it, before it is ever shown to the user, per that file's 2026-08-07 hard rule. Do not
+   wait for step 6 below to be the first time a box gets checked.
+4. Keep every model's commentary standalone in what gets written down. Internal comparison across
+   every model calibrates severity and is required, but it must never appear as visible text in the
+   model files, Logs, Output descriptions, or surrounding text (see comparative-rerate-addendum.md's
+   hard rule and voice-and-format-checklist.md section 1, both still fully in force).
+5. Only after boxes 2 through 8 are final, calculate and write box 1 for every model using the holistic
    calculation stated above.
-6. Run the harsh-evaluation and voice checks over every model file, including the section 1 cross-model
-   scan. Then complete `final-comparison.md` with the strict ranking, best-overall choice, and
-   evidence-based reasoning.
+6. Run the harsh-evaluation and voice checks again as a bulk second-net pass over every model file,
+   including the section 1 cross-model scan and the section 6.5 structural-variation scan (which only
+   works read in bulk across boxes, so it cannot happen at step 3's per-box stage). This is a safety
+   net on top of the per-box scans in step 3, not the first time any box gets checked. Then complete
+   `final-comparison.md` with the strict ranking, best-overall choice, and evidence-based reasoning.
 
 Superseded (2026-08-04 correction): scoring each model blind in isolation first, then running a
 separate later "comparative rerate" pass as a second reread. The comparison now happens once, folded

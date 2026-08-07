@@ -7,7 +7,7 @@
   },
   "file": "Model-C-Dog-Extra-High.json",
   "task": "Larkfield Q3 2026 renewal compliance audit across a Notion findings register, a Teams post and Gmail drafts",
-  "run_time": "about 4",
+  "run_time": "3.7",
   "boxes": {
     "overall_task_success": {
       "rating": 6,
@@ -19,9 +19,9 @@
     },
     "efficiency": {
       "rating": 6,
-      "end_to_end_time_minutes": "about 4",
+      "end_to_end_time_minutes": "3.7",
       "wrong_actions_recovery": "none, the register went in as one write with no failed or repeated actions",
-      "commentary": "Four minutes covered the whole audit here, with the register going into Notion in one write rather than row by row. Nothing in the path reads as wasted, retried, or backtracked. The one real limitation it worked around is the same one the workspace had been enforcing throughout the day: Notion's query tool had already hit its usage limit, so it fell back to reading rows individually to check for existing entries before writing, a slower path than the tool it would have preferred to use."
+      "commentary": "3.7 minutes covered the whole audit here, with the register going into Notion in one write rather than row by row. Nothing in the path reads as wasted, retried, or backtracked. The one real limitation it worked around is the same one the workspace had been enforcing throughout the day: Notion's query tool had already hit its usage limit, so it fell back to reading rows individually to check for existing entries before writing, a slower path than the tool it would have preferred to use."
     },
     "writing_quality": {
       "rating": 5,

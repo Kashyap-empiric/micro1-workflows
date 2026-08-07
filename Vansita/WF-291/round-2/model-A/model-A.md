@@ -27,9 +27,9 @@ I opened the register myself and checked it plan by plan against the rules pack 
 ## 3. Efficiency
 
 **Rating:** 6
-**End-to-end time (minutes):** about 7
+**End-to-end time (minutes):** 7.1
 **Wrong actions / recovery:** none, it caught a duplicate-named Notion database before writing and made no incorrect writes
-**Commentary:** It moved through this in one steady pass across four systems in about seven minutes, which is quick for a plan by plan audit this size. The only real snag was that Notion turned up two databases sharing the same name, and it had to open and compare their schemas before it could be sure it was writing into the real findings register rather than an empty duplicate. That check was the right call given what a wrong write would have cost, but it was still time spent that a cleaner workspace wouldn't have required. Past that one detour the run reads as a straight line from opening the sources to posting the finished audit.
+**Commentary:** It moved through this in one steady pass across four systems in 7.1 minutes, which is quick for a plan by plan audit this size. The only real snag was that Notion turned up two databases sharing the same name, and it had to open and compare their schemas before it could be sure it was writing into the real findings register rather than an empty duplicate. That check was the right call given what a wrong write would have cost, but it was still time spent that a cleaner workspace wouldn't have required. Past that one detour the run reads as a straight line from opening the sources to posting the finished audit.
 
 ## 4. Writing quality
 

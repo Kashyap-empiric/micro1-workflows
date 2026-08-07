@@ -3,6 +3,15 @@
 **Run this over every box before presenting it. First draft included. Every revision. Every rewrite
 pass. No exceptions.**
 
+**Hard rule (2026-08-07): run this per box, immediately after drafting it, before that box is ever
+shown to the user. Never defer the scan to a later bulk pass across the whole round.** Treating this
+as something that happens once at the end, after every box in the round is already drafted, is
+exactly the failure mode this file exists to prevent, more text has accumulated by the time anything
+gets checked, more slips through, and the user ends up catching what should have been caught here
+first. The bulk read-together pass (section 6.5, and step 7 of the run order below) still happens
+too, since a repeated skeleton across boxes only shows up read in bulk, but it is a second net, not
+the first and only check.
+
 Companion to [harsh-evaluation-protocol.md](harsh-evaluation-protocol.md). That file governs what
 the score is. This file governs how the text reads. Both run on every scoring pass.
 
@@ -71,7 +80,9 @@ checked it against the real source themselves.
 `none visible in the narration` · `the narration is high-level` · `I can't see the click path` ·
 `I can see the end states but not the path` · `I have no way to independently verify X` ·
 `I only have X in front of me` · `based on what I can check` · `the section isn't in front of me` ·
-`I'm taking this on the log's word` · `the model demonstrated` · `the assistant`
+`I'm taking this on the log's word` · `the model demonstrated` · `the assistant` · `persona` (e.g.
+"a persona acting on this report" breaks first-person voice the same way "you" does, even though it
+reads less obviously like a hedge than the phrases above)
 
 The broader pattern matters more than the exact wording. Any sentence admitting an access
 limitation the trainer would not actually have had breaks the persona, even when it is not a
@@ -102,11 +113,11 @@ Describe what happened in the apps. Skip the mechanism and the plumbing.
 `authenticated` · `pairing` · `drove the browser` / `drove X through the browser` · `extracted` ·
 `the reads` · `capture` · `roll-up screen` · `the gather step` · `populate the sheet` ·
 `built a script to populate` · `actions landed` · `wrong-property actions` / `wrong-target actions` ·
-`reproduced the views` · `source-data tab` (say "the data tabs in the sheet") · `the pull` ·
-naming the browser itself (Chrome, Brave)
+`reproduced the views` · `source-data tab` (say "the data tabs in the sheet") · `the pull`
 
 **`connector` is allowed.** Corrected 2026-07-28. The client's own official filled example uses it
-plainly. The rest of the list still stands.
+plainly. **Naming the browser itself (Chrome, Brave) is also allowed**, corrected after this was
+raised directly, same shape as the `connector` exception. The rest of the list still stands.
 
 **Product names are fine:** Search Console / GSC, GA4, Clarity, Drive, Sheets, Teams, Jira, GitHub.
 
@@ -161,8 +172,16 @@ Describe the same substance generically. "It found an existing closed ticket for
 opened a new one instead of reopening it" rather than naming the ticket.
 
 Keep the form's OWN required numeric sub-fields (End-to-end time in minutes, severity counts, rating
-numbers), since those are asked-for judgments. Even End-to-end time is a rounded estimate in the
-reviewer's own words rather than the log's quoted timestamp.
+numbers), since those are asked-for judgments.
+
+**End-to-end time (minutes) is an exact decimal number, not a rounded word estimate (2026-08-07).**
+Derive it from the log's actual start and end timestamps: convert minutes and seconds to a decimal
+minute value, for example 5 minutes 6 seconds is `5.1`, 12 minutes 30 seconds is `12.5`. If the exact
+seconds cannot be determined from the log, write the plain whole-number minute count instead, for
+example `5`, and go no more precise than the log actually supports. Never write "about", "roughly",
+"around", "approximately", or any other hedge word in this sub-field. It is a bare number, computed
+from the log's own timestamps, not the log's quoted timestamp string transcribed verbatim (that would
+violate the identifier-stripping rule above) and not a vague word estimate either.
 
 **No meta commentary.** Never reference what data or artifacts were available. The user pastes
 partial artifacts because of message-length limits, and that limitation must never surface in the
@@ -181,7 +200,7 @@ flagged", cut it. A rewrite also tends to run longer because it is justifying a 
 
 ## 6. FORMAT AND LENGTH
 
-**Commentary fields: 100 to 120 words.** Roughly 3 to 7 sentences. If a first draft runs longer,
+**Commentary fields: 100 to 160 words.** Roughly 3 to 7 sentences. If a first draft runs longer,
 cut standalone transition sentences ("Two things keep this out of the top band.") and merge short
 fragments into surrounding sentences. The named issues, the evidence, and the closing "which is why
 this lands at X/7" clause all survive the cut.
@@ -208,9 +227,15 @@ the narration."
 Commentary prose, not "Twenty five minutes." This matches the End-to-end time sub-field, which is
 already numeric, and keeps the prose consistent with it.
 
-**Final ranking field never uses "=".** Even on identical box scores, find the qualitative edge and
-rank strictly. Equal scores mean the 1-7 scale was not granular enough. (The separate "Notes on
-Codex's performance" narrative field may state a tie.)
+**Final ranking field never uses "=".** Rank strictly, no ties, always.
+
+**Identical Overall/total ratings across models are also not acceptable (reviewer-mandated,
+2026-08-07), not just the ranking-order text.** Finding "the qualitative edge" for the ranking field
+is no longer enough if it leaves two models' Overall numbers equal. Equal Overall numbers mean the
+comparative calibration in comparative-rerate-addendum.md was not carried far enough, not that the
+1-7 scale ran out of room. Go back and recalibrate boxes 2-8 until a real severity gap separates
+them, then let Overall reflect it. (The separate "Notes on Codex's performance" narrative field may
+still state a tie in prose, since it is not a scored box.)
 
 ---
 

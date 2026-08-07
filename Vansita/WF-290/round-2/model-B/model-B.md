@@ -162,26 +162,26 @@ This is a proposed pay-period instruction only. Payroll has not submitted the pa
 
 ## 2. Task accuracy, ignoring speed
 
-6
+**Rating:** 6
 
 The queue's hardest interaction, an earlier support withholding using up the entire general limit and leaving a later creditor order at zero, comes out right, and when I reworked the rest of the fourteen orders against the rulebook and the payroll tabs myself, every disposable earnings figure, withheld amount and fee matched too. It also explains the disposable earnings rule with an actual worked example, naming one deduction as legally required and a second, similarly sized one as not, exactly the kind of grounding this figure needs and most of the notes skip. The one real gap is on the interstate support order, where the note says the amount withheld is below the applicable cap without ever stating what that cap is, so on the one order where the jurisdiction split matters most, the figure that would let a reader confirm it is missing.
 
 ## 3. Efficiency
 
 **Rating:** 5
-**End-to-end time (minutes):** About 5.
+**End-to-end time (minutes):** 5.3
 **Wrong actions / recovery:** None, it went straight through without needing a redo.
-**Commentary:** The path here is clean, source review into calculation into the fourteen written rows into the seven drafts, with no repeated steps or dead ends that I can point to. The run took about five minutes for this scope of work, and nothing in what it produced points to a specific place that cost it minutes the way a disclosed tooling workaround would. That absence of a named drag is itself the limit here. A run this size almost always has some real friction point worth naming, and this one does not surface one, which keeps it out of the top band even though nothing visibly went wrong.
+**Commentary:** The run took 5.3 minutes for this scope of work. Before it calculated or wrote anything, the Notion search turned up multiple databases carrying the exact requested title, so it had to open and compare their schemas and existing contents to be sure the instructions were going into the right one rather than an identically named copy. That is a real, disclosed detour even though it was handled cleanly. Past that one check, the path reads as a straight line, source review into calculation into the fourteen written rows into the seven drafts, with no repeated steps or dead ends that I can point to, which is why one named friction on an otherwise clean run keeps this out of the top band rather than lower.
 
 ## 4. Writing quality
 
-5
+**Rating:** 5
 
-Most of the six notes to courts and agencies are well built, each one opens with the order and case reference, states the figure, and gives the reasoning in a compact paragraph, which is exactly the shape a recipient needs to act on it. The note to the payroll manager is where this gets uneven. It bundles the full fourteen row table, a written escalation on an employment question, and five separate exception notes into one long continuous message with no section breaks between them, so a reader has to hunt through a wall of text to find the one paragraph that actually needs a decision. Given how much is riding on that one message, it deserved the same clear structure the shorter notes already have.
+Most of the six notes to courts and agencies open with the order and case reference, state the figure, and give the reasoning in a compact paragraph, which is exactly the shape a recipient needs to act on it. All six close on the identical line word for word though, which reads more like a template reused six times than six notes actually composed for six different recipients. The note to the payroll manager avoids that problem entirely, its reconciled totals, its full order table, and its named exceptions each sit under their own clearly labelled heading rather than running together, genuinely well organised for a document carrying this much information. The identical closing line across the six shorter notes is the one real weakness here.
 
 ## 5. Instruction following
 
-6
+**Rating:** 6
 
 The recipient fields on the six issuer drafts are blank with a note that a verified address is required, nothing was sent or submitted, all fourteen orders are covered including the two carried only on the register, and one note per court or agency covers everything that issuer is owed rather than splitting orders across multiple notes, all of which the brief specifically asks for. It also correctly recognises that a deduction only reduces disposable earnings when it is legally required, and proves that with a concrete example on one employee. Where it falls short is applying that same distinction consistently. Several other employees in the queue have the identical mix of a required and an elected deduction, and the note explaining the standard is never repeated for them, so the rule is demonstrated once rather than shown holding across the file.
 
@@ -194,16 +194,18 @@ The recipient fields on the six issuer drafts are blank with a note that a verif
 
 ## 7. Citation quality
 
-5
+**Rating:** 5
 
 Five of the six issuer notes and the payroll manager's note cite the exact rule sections behind each figure, and one of them goes further and grounds the disposable earnings rule in an actual example rather than just asserting it, which makes those figures genuinely traceable back to the source. The interstate support note breaks that pattern completely. It has no section citation and no cap figure at all, just the bare conclusion that the amount is within the limit. On a file where every other note shows its work, having the one order with the most complicated jurisdiction split be the least documented is a real, checkable gap rather than a matter of style.
 
 ## 8. GUI action correctness
 
-N/A. Nothing in this run involved clicking through a screen, every write went through the Notion, Drive and Gmail integrations directly, so there is no path to rate.
+**Rating:** N/A
+
+Nothing in this run involved clicking through a screen, every write went through the Notion, Drive and Gmail integrations directly, so there is no path to rate.
 
 ## 1. Overall task success
 
-5
+**Rating:** 5
 
 Every figure in this queue holds up against the source, including the interaction that catches out a shallow read, and I checked that myself rather than taking the run's own totals on trust. It also explains the rule that only legally required deductions reduce disposable earnings with an actual worked example, genuinely useful grounding for a figure this central to the whole queue. It sits at a 5 rather than higher because that same rigor is not consistent. The one order with the hardest jurisdiction question is also the one with no citation and no supporting figure, the note to the payroll manager buries its own most important paragraph in a wall of text, and nothing shows how the run's own final check was carried out. A payroll manager could sign off on this, but would be trusting more of it on faith than necessary.

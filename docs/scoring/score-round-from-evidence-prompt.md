@@ -70,13 +70,17 @@ in one pass, and derive both the numbers and the commentary from that comparison
    scoring comparatively, every model's commentary text must still read as a standalone blind
    evaluation: no other model's letter, codename, or any comparison language ("unlike the other run",
    "the top model", etc.) may appear inside that model's own file. The comparison happens in your
-   judgment, not in the sentence.
+   judgment, not in the sentence. Run the full voice-and-format-checklist.md scan on each box right
+   after drafting it, before moving to the next one, per that file's 2026-08-07 hard rule, do not wait
+   until every box in the round is drafted to check the first one.
 4. Only after boxes 2 through 8 are final for every model, derive box 1 for every model by holistic
    judgment per harsh-evaluation-protocol.md section 5. Never a formula, never before boxes 2-8 are
-   locked.
-5. Run the full voice-and-format-checklist.md self-check, every scan pass in section 7, read in bulk
-   across every box of every model in the round, not one box at a time. Fix anything that fails and
-   rerun the scan until it's clean.
+   locked. Scan it with voice-and-format-checklist.md too, immediately after drafting it.
+5. Run the full voice-and-format-checklist.md self-check again as a bulk second-net pass, every scan
+   pass in section 7 read across every box of every model in the round at once, since section 6.5's
+   structural-variation check and the section 1 cross-model scan only work read in bulk. This is on
+   top of the per-box scans in steps 3 and 4, not the first time any box gets checked. Fix anything
+   that fails and rerun the scan until it's clean.
 6. Write the finished boxes directly into each model-<letter>.md, replacing only the bracketed
    placeholders under headings 1 through 8 and the Output section if it needed transcribing. Leave the
    canonical-rules pointer line, Model identity, Session ID, and the Logs link untouched.
@@ -92,7 +96,7 @@ in one pass, and derive both the numbers and the commentary from that comparison
    done.
 
 Apply every rule in the five canonical files exactly as written: the banned-word lists, the
-first-person trainer voice, the plain-prose rule, the identifier-stripping rule, and the 100 to 120
+first-person trainer voice, the plain-prose rule, the identifier-stripping rule, and the 100 to 160
 word commentary length. Do not paraphrase or relax anything to save time. If two files conflict,
 resolve it using the authority order in 00-scoring-process.md and say which one you deferred to.
 

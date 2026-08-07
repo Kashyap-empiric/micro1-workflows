@@ -8,10 +8,12 @@ because two or more models landed on the same score.
 ## When to use this
 
 [voice-and-format-checklist.md](voice-and-format-checklist.md) section 6 already states the rule:
-*"Final ranking field never uses '='. Even on identical box scores, find the qualitative edge and
-rank strictly. Equal scores mean the 1-7 scale was not granular enough."* This prompt is the
-practical fix when that rule was missed and a Reviewer catches a tie after the fact, or as a
-pre-submission check to catch it before a Reviewer has to.
+*"Final ranking field never uses '='. Rank strictly, no ties, always."* Since 2026-08-07 that rule is
+reviewer-mandated and stronger than just the ranking text: two models in the same round may not share
+an identical Overall/total rating either, an equal ranking-text edge over an equal Overall number is
+not enough to pass first review. This prompt is the practical fix when either version of that rule
+was missed and a Reviewer catches a tie after the fact, or as a pre-submission check to catch it
+before a Reviewer has to.
 
 This is a separate workflow from [comparative-rerate-addendum.md](comparative-rerate-addendum.md).
 That addendum is the mandatory in-repo rerate pass run inside this same session, across all of

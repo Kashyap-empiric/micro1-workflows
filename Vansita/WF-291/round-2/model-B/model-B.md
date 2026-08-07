@@ -27,9 +27,9 @@ This correctly worked out that the Kestrelport ordinance never actually reaches 
 ## 3. Efficiency
 
 **Rating:** 5
-**End-to-end time (minutes):** about 5
+**End-to-end time (minutes):** 5.0
 **Wrong actions / recovery:** one, an extra Notion page was created for a plan and jurisdiction combination that already had a row, and it was never removed
-**Commentary:** This finished the whole four system audit in about five minutes, which is quick for a plan by plan legal audit at this scale. The bulk of that time reads as a clean, direct path from opening the sources to posting the finished work. The real drag is the redundant Notion page it left behind for Larkfield Voice in Vantry, a plan and jurisdiction pair that already had a row, which means the write phase did the same piece of work twice without noticing. It also hit the workspace's Notion query limit partway through and switched to a slower manual check instead, a reasonable adaptation but still a step a working query tool wouldn't have required.
+**Commentary:** This finished the whole four system audit in 5.0 minutes, which is quick for a plan by plan legal audit at this scale. The bulk of that time reads as a clean, direct path from opening the sources to posting the finished work. The real drag is the redundant Notion page it left behind for Larkfield Voice in Vantry, a plan and jurisdiction pair that already had a row, which means the write phase did the same piece of work twice without noticing. It also hit the workspace's Notion query limit partway through and switched to a slower manual check instead, a reasonable adaptation but still a step a working query tool wouldn't have required.
 
 ## 4. Writing quality
 

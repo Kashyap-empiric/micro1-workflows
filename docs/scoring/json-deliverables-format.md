@@ -41,7 +41,7 @@ copied verbatim from that model's `.md` file, byte for byte, never re-summarized
     "session_id": "<verbatim from that model's .md '### Session ID' section>"
   },
   "file": "Model-A-<Codename>-Extra-High.json",
-  "task": "<WF title, from workflows.txt / final-comparison.md METADATA>",
+  "task": "<WF title from micro1_workflows/tasks.txt, the part before the trailing ' - <code>', e.g. 'Aggregate Release Disclosure' for 'WF-292: Aggregate Release Disclosure - eac9a'>",
   "run_time": "<this model's End-to-end time string from box 3>",
   "boxes": {
     "overall_task_success": { "rating": <int>, "commentary": "<box 1 commentary verbatim>" },
@@ -84,20 +84,49 @@ Notes:
 ```json
 {
   "task_id": "WF-<ID>",
-  "task": "<WF title>",
-  "models_evaluated": ["A", "B", "C"],
+  "task": "<WF title from micro1_workflows/tasks.txt, the part before the trailing ' - <code>', e.g. 'Aggregate Release Disclosure' for 'WF-292: Aggregate Release Disclosure - eac9a'>",
+  "section": "Final ranking",
   "overall_ratings": { "A": <int>, "B": <int>, "C": <int> },
-  "ranking_best_to_worst": "<e.g. 'A > C > B'>",
-  "best_overall": "<letter>",
-  "why_top_model_is_best_and_what_separates_the_others": "<all three final-comparison.md paragraphs, in ranked order, joined with a blank line (\\n\\n) between them, copied verbatim>"
+  "boxes": [
+    {
+      "box": 1,
+      "title": "Rank all responses, best to worst",
+      "value": "<e.g. 'A > C > B'>"
+    },
+    {
+      "box": 2,
+      "title": "Best model overall",
+      "value": "<letter, e.g. 'A' — bare letter only, never 'Model A' or 'Click Model A'>"
+    },
+    {
+      "box": 3,
+      "title": "Why the top model is best, and what separates the rest",
+      "paragraphs": [
+        "<final-comparison.md paragraph 1, ranked-first model, copied verbatim>",
+        "<final-comparison.md paragraph 2, ranked-second model, copied verbatim>",
+        "<final-comparison.md paragraph 3, ranked-third model, copied verbatim>"
+      ]
+    }
+  ]
 }
 ```
 
-**Hard rule, learned the hard way:** `why_top_model_is_best_and_what_separates_the_others` must contain
-the actual copied paragraph text. It must never be a pointer sentence like "See final-comparison.md in
-this round folder for the full evidence-based paragraph per model." This exact mistake shipped in
-WF-116, WF-144, WF-162, WF-187, and WF-188 at different points and had to be corrected after the fact
-each time — check this field specifically before considering any round's JSON done.
+Notes:
+- No `models_evaluated` field. `["A", "B", "C"]` is implicit in `overall_ratings`'s keys and the round
+  structure, so it isn't repeated here.
+- `task_id` and `task` are kept as top-level fields, copied verbatim from `final-comparison.md`'s
+  METADATA section — useful for identifying the round without opening the `.md` file.
+- `overall_ratings` is kept as a top-level object (each model's box-1 overall rating from its own
+  `model-<letter>.md`), copied verbatim — useful for a quick per-round score glance without opening
+  all three model files.
+- Box 2's `value` is the bare model letter (`"A"`), not `"Model A"` or `"Click Model A"`.
+
+**Hard rule, learned the hard way:** box 3's `paragraphs` array must contain the actual copied
+paragraph text, one array entry per model, in ranked order. It must never be a pointer sentence like
+"See final-comparison.md in this round folder for the full evidence-based paragraph per model." This
+exact mistake shipped in WF-116, WF-144, WF-162, WF-187, and WF-188 at different points and had to be
+corrected after the fact each time — check this field specifically before considering any round's JSON
+done.
 
 ## Generation method
 

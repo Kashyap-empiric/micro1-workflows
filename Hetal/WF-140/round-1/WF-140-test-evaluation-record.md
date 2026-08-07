@@ -43,7 +43,7 @@ compare the Teams totals to tracker totals, inspect every draft, and confirm no 
 
 ## Model run summary
 
-| Model | Requirements P/p/F/U | What it did right | What it did wrong | Repair needed | Overall 1-6 |
+| Model | Requirements P/p/F/U | What it did right | What it did wrong | Repair needed | Overall 1-7 |
 |---|---|---|---|---|---:|
 | A | [ ] | [ ] | [ ] | [ ] | [ ] |
 | B | [ ] | [ ] | [ ] | [ ] | [ ] |

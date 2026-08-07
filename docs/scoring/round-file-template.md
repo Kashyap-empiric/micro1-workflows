@@ -34,7 +34,7 @@ Canonical rules: [four canonical files listed above]
 ## Model identity
 
 ### Model
-[Current A/B/C/D mapping]
+[Current model letter mapping for this round, per feather-form-scratchpad.md]
 
 ### Session ID
 [Session ID]
@@ -108,7 +108,7 @@ Canonical rules: [four canonical files listed above]
 
 ## Readiness
 
-[Use the four-model readiness table from 00-scoring-process.md]
+[Use the readiness table from 00-scoring-process.md, one row per model actually in this round]
 
 ## Final comparison
 
@@ -123,7 +123,7 @@ Canonical rules: [four canonical files listed above]
 
 ## Final sign-off
 
-- [ ] All four model directories contain `codexlogs.txt`, a main model file, and captured Output.
+- [ ] Every model directory in this round contains `codexlogs.txt`, a main model file, and captured Output.
 - [ ] Requirements, traps, and source-of-truth checks were completed.
 - [ ] Boxes 2-8 were finalized before box 1.
 - [ ] Box 1 was derived by holistic judgment from the finalized boxes 2-8, not a fixed formula.

@@ -39,7 +39,7 @@ and reconcile corpus-gap tickets to flagged query rows.
 
 ## Model run summary
 
-| Model | Requirements P/p/F/U | What it did right | What it did wrong | Repair needed | Overall 1-6 |
+| Model | Requirements P/p/F/U | What it did right | What it did wrong | Repair needed | Overall 1-7 |
 |---|---|---|---|---|---:|
 | A | [ ] | [ ] | [ ] | [ ] | [ ] |
 | B | [ ] | [ ] | [ ] | [ ] | [ ] |

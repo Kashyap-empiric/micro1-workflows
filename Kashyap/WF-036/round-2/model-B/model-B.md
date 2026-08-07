@@ -1,6 +1,6 @@
 # WF-036 Round 2 - Model B
 
-Canonical rules: [head-to-head-07-23-template.md](../../../../head-to-head-07-23-template.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [head-to-head-comparative-rerate-addendum.md](../../../../docs/scoring/head-to-head-comparative-rerate-addendum.md)
+Canonical rules: [codex-session-context.md](../../../../docs/scoring/codex-session-context.md), [harsh-evaluation-protocol.md](../../../../docs/scoring/harsh-evaluation-protocol.md), [voice-and-format-checklist.md](../../../../docs/scoring/voice-and-format-checklist.md), [comparative-rerate-addendum.md](../../../../docs/scoring/comparative-rerate-addendum.md)
 
 ## Model identity
 

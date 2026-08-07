@@ -1,0 +1,49 @@
+{
+  "task_id": "WF-290",
+  "model": "A",
+  "model_identity": {
+    "model": "Codex, gpt-5.6-cat, Extra High intelligence",
+    "session_id": "019fd685-2ba9-7da3-8c6e-23bda55f8a51"
+  },
+  "file": "Model-A-Cat-Extra-High.json",
+  "task": "Havelock Regional Services Pay Period 15 wage garnishment withholding queue across a payroll Sheet, order PDFs, two rules Docs, a Notion instruction register and Gmail drafts",
+  "run_time": "8.8",
+  "boxes": {
+    "overall_task_success": {
+      "rating": 4,
+      "commentary": "I checked the actual queue against the source documents myself, and the substance is right. All fourteen orders are correctly computed down to the one interaction that trips up a shallow read, delivered as drafts with nothing sent or submitted. It lands at a 4 rather than higher because of where the run spent its effort. The documents a court or agency would actually read give the outcome without the rule behind it, the one paragraph carrying the most sensitive judgment call in the file momentarily contradicts itself, and the run took 8.8 minutes with a disclosed workaround explaining part of that time. None of that changes an answer, but together it is more than a single small flaw, and a persona relying on this would still need real work done before the drafts were ready to send."
+    },
+    "task_accuracy": {
+      "rating": 6,
+      "commentary": "I opened the source rulebook and the payroll tabs myself and reworked every one of the fourteen orders by hand, and every disposable earnings figure, every withheld amount and every fee it produced ties out exactly, including the one order where an earlier support withholding already ate up the entire general limit and left a later creditor order at zero. That is a genuinely hard interaction to catch and it landed correctly. What keeps this off the top is that the written explanation for the two orders touching the same employee's earnings under a federal levy states the outcome and moves on without giving the cap or exempt figure that would let a reader check the math without redoing it themselves, so a couple of the harder calculations are asserted rather than shown."
+    },
+    "efficiency": {
+      "rating": 4,
+      "end_to_end_time_minutes": "8.8",
+      "wrong_actions_recovery": "None, it ran straight through to the deliverable in one pass.",
+      "commentary": "The run took 8.8 minutes for a queue of fourteen orders plus seven drafts. Before it could write anything, the Notion search turned up several databases sharing the same title, so it had to open and compare their schemas and existing rows before it could be sure it was writing into the real Pay Period 15 register rather than an empty duplicate. Partway through it then found the Notion database's bulk query had hit a plan limit and switched to checking each of the fourteen rows one at a time instead of confirming them as a set. Both are real, disclosed detours rather than one drawn-out complaint about the same friction, and together they account for a meaningful share of the runtime. Nothing else in the run meandered or repeated itself, but two separate named frictions on a run this size is enough to keep it out of the top band."
+    },
+    "writing_quality": {
+      "rating": 4,
+      "commentary": "Most of the drafts are short and readable, a tight list of what is being withheld and why, which suits a quick acknowledgement. The note to the payroll manager is where this falls down, the paragraph on the second garnishment against one employee reads as if payroll is meant to state a position and also recommend one, before the very next sentence clarifies that no recommendation is being made, exactly the kind of sentence a payroll manager reading quickly could misread on a compliance question that genuinely matters. Several of the shorter acknowledgements also state a result, such as a figure being within a cap, without showing the comparison that produced it, so the reasoning has to be taken on faith. All six issuer drafts close on the identical line too, which reads more like a template reused six times than six notes actually composed for six different recipients."
+    },
+    "instruction_following": {
+      "rating": 6,
+      "commentary": "Every constraint I checked against the brief held. The recipient fields on the six issuer notes are blank with a note that a verified address is needed, nothing was sent or submitted, the queue covers all fourteen orders including the two carried only on the register, and each note to a court or agency covers every order that issuer is owed an answer on rather than splitting them up. The one place instruction following slips is a paragraph in the note to the payroll manager, on the second garnishment against one employee. The procedure is specific that payroll states a position on an employment question and does not recommend one, and the sentence structure there momentarily blurs that exact line before resolving it, which is a real, if brief, muddying of a rule this task treats as a hard boundary."
+    },
+    "collaboration_autonomy_verification": {
+      "rating": 6,
+      "steering_needed": "None, it ran unattended from the request to the finished drafts.",
+      "additional_editing": "Light, mainly getting real addresses onto the six unsent notes before anyone could send them, which the task itself leaves open.",
+      "commentary": "It caught its own tooling problem partway through the run, a Notion bulk check hitting a plan limit, and adapted by confirming every row individually rather than reporting a partial result or guessing at the rest. That is it correcting itself in real time, going well beyond simple recovery. What is thinner is the verification step at the end. It states a final readback happened across the rows, the drafts and the two totals, but nothing in what it produced shows the draft content actually being checked back against the Notion figures the way the fix applied row by row was shown working."
+    },
+    "citation_quality": {
+      "rating": 4,
+      "commentary": "The internal note to the payroll manager names the specific rule sections behind most of the harder calls, the reemployment bar, the interstate support split, the second garnishment question, so those figures are genuinely traceable. Not every figure in that note clears the bar. The federal levy and support pairing on one employee's earnings sits in the table with no written explanation behind it, so the cap or exempt figure that produced the withheld amount is not there to check. The six notes going to the actual courts and agencies are the larger gap. None of them names the section of the rulebook the figure came from, they just state the outcome. Leaving the rule citation out of every one of those six is a real gap for documents whose whole purpose is showing why an amount was withheld, and it means even the one document meant to be fully auditable has a hole of its own."
+    },
+    "gui_action_correctness": {
+      "rating": "N/A",
+      "commentary": "Every write in this run went through the Notion, Drive and Gmail integrations directly rather than through navigating a screen, so there is no click path to score."
+    }
+  }
+}
