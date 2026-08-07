@@ -59,7 +59,7 @@ This register gets all 41 calls right against my own rework of the standard, cat
 **Rating:** 6
 **End-to-end time (minutes):** 3.7
 **Wrong actions / recovery:** None, it completed the whole review in a single pass.
-**Commentary:** 3.7 minutes covered all seven tables here, including the derived Table F check, with nothing repeated or backtracked that I can point to anywhere in the path. The one real thing worth naming is that the log leans almost entirely on stating conclusions rather than narrating the working, so a run this quick on arithmetic this dense leaves comparatively little disclosed trail of how each figure, especially the harder derived one, actually got checked before it was written down.
+**Commentary:** 3.7 minutes covered all seven tables here, including the derived Table F check, and nothing in the log shows a step getting repeated or backtracked anywhere along the way. What keeps this from being a clean pass is how thin the record is behind that speed. The log states each finding as a settled conclusion rather than walking through the arithmetic that produced it, so a run this fast on numbers this dense reads more like a results summary than a worked calculation. That gap matters most on the harder derived figure, the one built by subtracting a surviving cell from a published total, where the underlying working is exactly what a reader would want to see and exactly what got left out. The missing trail behind that hardest number is what keeps this out of the top band despite the pace.
 
 ## 4. Writing quality
 
