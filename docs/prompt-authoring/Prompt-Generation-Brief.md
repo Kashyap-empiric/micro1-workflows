@@ -2,6 +2,8 @@
 
 Use this to turn one of my real workflows into a workflow prompt that passes the micro1 / Codex eval review on the first try. It folds together the two playbook rule sets and every reviewer lesson we've collected, so the generated prompt doesn't come back with a revision.
 
+**Scope: drafting only.** This checklist governs writing or revising a `prompt-def.txt` before it has been run against any model. Once a WF's `prompt-def.txt` already has a `round-N/` folder with model runs against it, the prompt is signed off and locked. Do not re-audit or edit its wording against this checklist at that point, even if it technically violates a rule here, unless the user explicitly asks for a revision.
+
 ---
 
 ## How to use this

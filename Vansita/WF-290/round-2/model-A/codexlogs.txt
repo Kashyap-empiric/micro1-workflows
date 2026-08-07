@@ -1,0 +1,64 @@
+Worked for 8m 47s
+
+
+I’ll read the attached request first, then I’ll carry it through and verify the result.
+
+
+
+
+Read Working as of Thursday 16 July 2026 (IST). I do the garnishment work for payrol…
+
+
+
+I’m using the Google Drive, Google Sheets, Google Docs, Notion, and Gmail skills because this job spans authoritative source documents, calculations, database writes, and unsent drafts. I’ll first inventory every source and rule, then compute and cross-check the queue before making any writes.
+
+
+
+
+Used Notion and Google Drive integrations, loaded tools, read files
+
+
+All five named source surfaces are reachable. The Notion search returned several databases with the same title, so I’m checking their schemas and existing rows to identify the seeded PP15 target without writing to the wrong copy.
+
+
+
+
+Used Google Drive and Gmail integrations
+
+
+I’ve confirmed the register has 14 orders: 12 new PDFs plus 2 continuing orders. I’m now extracting each order’s operative details, including exemption statements, arrears, face regularity, and any duplicate-copy or employment issues.
+
+
+
+
+Used Notion and Gmail integrations
+
+
+The calculations reconcile to $8,009.75 withheld and $26.00 in employer fees. I’ve also resolved all three shared-earnings sequences and the team notes; I’m writing the 14 instruction rows now, with source-specific calculation notes.
+
+
+
+
+Used Notion and Gmail integrations
+
+
+All seven Gmail items were created as unsent drafts: six issuer drafts with blank recipient fields and one addressed to Ines. I’m doing final readback now—verifying all 14 Notion properties, all draft recipients and bodies, and the two totals against the row values.
+
+
+
+
+Used Notion and Gmail integrations
+
+
+
+
+
+Done.
+Created and individually verified all 14 rows in the PP15 Notion database.
+Created 7 unsent Gmail drafts: six grouped issuer responses with blank To fields, plus Ines’s sign-off draft.
+Reconciled totals: $8,009.75 withholding, $26.00 fees, $8,035.75 total payroll impact.
+No answers were sent, no pay run was submitted, nothing was marked withheld, and no employment action was taken or recommended.
+Notion’s aggregate-query endpoint had reached its plan usage limit, so I verified every row individually instead. Aggregate querying can be retried later or enabled through a Notion plan upgrade; this did not affect the completed work.
+
+
+15:40

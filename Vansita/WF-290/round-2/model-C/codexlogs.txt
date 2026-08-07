@@ -1,0 +1,128 @@
+Worked for 4m 5s
+
+
+I’ll read the attached request and then work through the requested deliverable.
+
+
+
+
+Read Working as of Thursday 16 July 2026 (IST). I do the garnishment work for payrol…
+
+
+
+I’m using the Google Drive, Gmail, and Notion research/documentation workflows to inspect the seeded records, calculate the queue from the supplied rulebook, and create only the requested Notion rows and unsent drafts. I’ll stop if any required source is inaccessible.
+
+
+
+
+Used Notion and Google Drive integrations, loaded tools, read files, ran commands
+
+
+The required Drive items are accessible. The Notion search returned several identically named databases, so I’m inspecting their schemas and existing rows to identify the current seeded target before writing.
+
+
+
+
+Used Notion and Google Drive integrations
+
+
+I’ve read the orders and rulebook. The key interactions are the prior support consuming Solveig’s general-limit capacity, the federal levy preceding Osric’s later support order, the student-loan reemployment bar, and the interstate support split. I’m reconciling the figures and the destination’s existing state before writing.
+
+
+
+
+Used Notion integration
+
+
+The reconciled queue is 14 orders: $8,009.75 in proposed withholding and $26.00 in permitted employer fees. I’m writing those as instruction rows, with sequence and rule rationale on the multi-order employees and the team-note issues addressed explicitly.
+
+
+
+
+Created 14 pages
+
+
+
+
+
+The Notion creation returned all 14 populated rows. I’m preparing six consolidated issuer-answer drafts for the new orders only, plus Ines’s sign-off draft; the two already-in-force orders remain in the instruction queue but do not receive fresh answers under Procedure §4.
+
+
+
+
+Used Gmail integration
+
+
+All seven draft creations succeeded. I’m doing the final readback: confirming the rows and draft state, then I’ll hand over the reconciliation and links without sending or submitting anything.
+
+
+
+
+Used Notion and Gmail integrations
+
+
+
+
+
+The PP15 instruction queue is complete in Havelock Withholding Instruction – Pay Period 15. All 14 orders on the register have a row with disposable earnings, withholding, fee, sequence, and a rule/source note. Search readback returned all 14 created order pages.
+Order	Employee	Seq.	Disposable earnings	Withhold	Fee
+ORD-1988	Solveig Adeyemi	1	$1,680.00	$1,092.00	$3.00
+ORD-1994	Ephraim Nwachukwu	1	$2,138.00	$300.00	$3.00
+ORD-2041	Marisol Devereux	1	$1,700.40	$425.10	$3.00
+ORD-2042	Osric Vandermeer	1	$3,068.60	$1,408.60	$0.00
+ORD-2043	Beatriz Halloran	1	$1,527.00	$952.00	$0.00
+ORD-2044	Idris Kovalenko	1	$1,985.00	$780.00	$3.00
+ORD-2045	Thaddeus Oyelaran	1	$2,320.00	$1,160.00	$2.00
+ORD-2046	Solveig Adeyemi	2	$1,680.00	$0.00	$0.00
+ORD-2047	Corentin Baptiste	1	$1,374.00	$0.00	$0.00
+ORD-2048	Ottoline Marsh	1	$1,527.00	$229.05	$0.00
+ORD-2049	Ephraim Nwachukwu	2	$2,138.00	$234.50	$3.00
+ORD-2050	Peregrine Ashworth	1	$486.00	$51.00	$3.00
+ORD-2051	Hester Lindqvist	1	$1,910.00	$477.50	$3.00
+ORD-2052	Osric Vandermeer	2	$3,068.60	$900.00	$3.00
+Total				$8,009.75	$26.00
+
+
+Seven Gmail drafts were created and verified with the DRAFT label:
+District Court of Calderon County — ORD-2041, 2046, 2049, 2050, 2051
+Federal Revenue Agency — ORD-2042, 2043
+Vestry County Superior Court — ORD-2044
+Marran Family Court, Fourth District — ORD-2045
+Federal Student Aid Agency — ORD-2047, 2048
+Calderon Family Court, Second District — ORD-2052
+Ines sign-off draft — addressed to ines.wrenfield@havelockregional.example, with the reconciled totals, full order table, the Procedure §6 employment-position escalation for Ephraim, and the registration, duplicate-writ, priority, and zero-withholding points.
+The six issuer drafts have empty To fields and explicitly require a verified address before authorized dispatch. ORD-1988 and ORD-1994 are in the instruction queue but have no fresh issuer answer, as Procedure §4 directs for already-in-force orders.
+Nothing was sent, no pay run was submitted, no order was marked withheld, and no employment action or recommendation was made.
+One verification limitation: Notion’s Query Data Source endpoint was unavailable because the workspace usage limit was reached. The write response and a scoped Notion search nevertheless confirmed the 14 rows. If SQL-style database querying is needed, try again later or ask a workspace owner to upgrade the Notion plan.
+
+
+16:30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Full access
+
+
+
+
+
+
+
+5.3 Codex SparkExtra High5.6 DogExtra High

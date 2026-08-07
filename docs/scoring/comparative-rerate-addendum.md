@@ -1,5 +1,14 @@
 # Addendum: Full Comparative Rerate Pass
 
+**Sequencing correction (2026-08-04):** this comparison is no longer run as a later, separate reread
+after each model was already scored blind. Fold it into the single scoring pass described in
+[00-scoring-process.md](00-scoring-process.md)'s "Scoring order": read and compare all four from the
+start, in the same sitting, and derive boxes 2 through 8's ratings and commentary directly from that
+comparison. Everything below, the procedure for how to compare, and above all the hard rule that the
+comparison must never surface as visible text, still applies exactly as written. What changed is only
+that this no longer waits for a second pass; what a reader must never do (write a cross-model
+reference into a box) did not change.
+
 This is a **separate, second layer of instructions**, used together with, on top of, the REUSABLE
 CONTEXT block and Standing rules in [codex-session-context.md](codex-session-context.md) and
 [feather-form-scratchpad.md](feather-form-scratchpad.md). Nothing here replaces that context, the

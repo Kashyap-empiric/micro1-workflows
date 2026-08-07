@@ -19,7 +19,9 @@ Resolve instructions in this order. Do not silently combine conflicting versions
    - [harsh-evaluation-protocol.md](harsh-evaluation-protocol.md) for flaw hunting, scoring gates, and how
      Overall gets derived.
    - [voice-and-format-checklist.md](voice-and-format-checklist.md) for wording and formatting.
-   - [comparative-rerate-addendum.md](comparative-rerate-addendum.md) for the mandatory all-four rerate pass.
+   - [comparative-rerate-addendum.md](comparative-rerate-addendum.md) for the mandatory all-four comparison
+     method used during scoring (see its 2026-08-04 sequencing note: this runs as part of the single
+     scoring pass below, not as a later separate rerate).
 4. This file for round organization and file ownership.
 5. The WF-specific evaluation record, prompt worksheet, fixture documentation, and source files.
 6. Memory files, used for history and rationale. A memory file marked SUPERSEDED is not an active rule.
@@ -172,6 +174,13 @@ Update `final-comparison.md` after each model is captured:
 Scoring starts only when all four models show `YES`. `UNRESOLVED` is not a pass. If evidence cannot
 be recovered, record the limitation and stop before finalizing the comparison.
 
+Whenever new files land in a model's `output/` folder (screenshots of tickets or chat posts, exported
+Sheet PDFs, and the like), read them and transcribe their actual content into that model's
+`model-<letter>.md` Output section right away, proactively, not just when asked. Quote a Teams message
+verbatim, list each Sheet tab's rows, quote each ticket's fields, and link back to the source file
+(e.g. `[teams post.png](output/teams%20post.png)`). Use `round-1/model-B/model-B.md` as the reference
+format for how complete this transcription should be.
+
 ## Scoring order
 
 After all four models are ready:
@@ -180,17 +189,26 @@ After all four models are ready:
    record, and the source-of-truth material in the same sitting.
 2. Build the flaw ledger before writing any rating. Walk the planted traps, requirements,
    reconciliation checks, constraint checks, verification checks, path checks, and recovery checks.
-3. Score boxes 2 through 8 dimension by dimension across models A, B, C, and D. Re-read the source
-   definition for the dimension before finalizing that dimension.
-4. Keep every model's commentary standalone. Internal comparison may calibrate severity, but it must
-   never appear in the model files, Logs, Output descriptions, or surrounding text.
-5. When all four models have evidence, run the mandatory comparative rerate. Re-read all four raw
-   `codexlogs.txt` transcripts and Outputs, recalibrate and rewrite boxes 2 through 8 for all four,
-   and manually verify the rewritten files.
-6. Only after boxes 2 through 8 are final, calculate and write box 1 for all four using the holistic
+3. Score boxes 2 through 8 dimension by dimension across models A, B, C, and D, comparing all four
+   against each other as you go, per [comparative-rerate-addendum.md](comparative-rerate-addendum.md)'s
+   procedure. Do not score each model blind in isolation and only compare afterward: read and compare
+   all four from the start, in this one pass, and derive both the ratings and the commentary directly
+   from that comparison. Re-read the source definition for the dimension before finalizing it.
+4. Keep every model's commentary standalone in what gets written down. Internal comparison across all
+   four calibrates severity and is required, but it must never appear as visible text in the model
+   files, Logs, Output descriptions, or surrounding text (see comparative-rerate-addendum.md's hard
+   rule and voice-and-format-checklist.md section 1, both still fully in force).
+5. Only after boxes 2 through 8 are final, calculate and write box 1 for all four using the holistic
    calculation stated above.
-7. Run the harsh-evaluation and voice checks over every model file. Then complete
-   `final-comparison.md` with the strict ranking, best-overall choice, and evidence-based reasoning.
+6. Run the harsh-evaluation and voice checks over every model file, including the section 1 cross-model
+   scan. Then complete `final-comparison.md` with the strict ranking, best-overall choice, and
+   evidence-based reasoning.
+
+Superseded (2026-08-04 correction): scoring each model blind in isolation first, then running a
+separate later "comparative rerate" pass as a second reread. The comparison now happens once, folded
+into step 3 above. What did not change: the ban on cross-model text ever surfacing inside a model
+file, which stays exactly as documented in comparative-rerate-addendum.md and
+voice-and-format-checklist.md section 1.
 
 The final comparison is written last. It may compare models, but it must not introduce new facts or
 re-derive individual scores that are absent from the model files.
